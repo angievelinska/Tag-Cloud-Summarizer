@@ -39,22 +39,7 @@ public class LSA {
 
     private void initArgs(){
         ArgOptions args = new ArgOptions();
-        String[] options = {"-d",
-C:\master_thesis\SemanticSpaces\output\texts.txt
---tokenFilter
-exclude=data\english-stop-words-large.txt
--w
-true
--Z
-edu.ucla.sspace.text.EnglishStemmer
--o
-text
--S
-SVDLIBJ
-C:\master_thesis\SemanticSpaces\sspace-read-only\tools\LSA_text.sspace
--S
-SVDLIBJ
--v};
+        String[] options = {};
         args.parseOptions();
     }
 }
