@@ -1,6 +1,5 @@
 package docMachine.lsa;
 
-import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +24,7 @@ public class LSATest {
     @Test
     public void testLSA(){
         try {
-            LatentSemanticAnalysis LSA = lsa.invokeLSA();
+            lsa.runLSA();
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
