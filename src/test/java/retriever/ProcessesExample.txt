@@ -1,0 +1,104 @@
+package retriever;
+
+import com.coremedia.cap.Cap;
+import com.coremedia.cap.common.CapConnection;
+import com.coremedia.cap.workflow.Process;
+import com.coremedia.cap.workflow.WorkflowRepository;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Comparator;
+import java.util.Set;
+import com.coremedia.examples.capclient.swing.CacheBasedListModel.Getter;
+
+/**
+ * Show a simple Swing GUI that lists the currently
+ * running workflow processes.
+ */
+public class ProcessesExample implements Runnable {
+  /**
+   * the Unified API connection on which to operate
+   */
+  final CapConnection connection;
+  /**
+   * whether to sort the processes ascendingly
+   */
+  boolean ascending = true;
+
+  public static void main(String[] args) {
+    // docMachine.connect in the main method to handle error conditions immediately.
+    String url = "http://localhost:44441/coremedia/ior";
+    CapConnection connection = Cap.docMachine.connect(url, "admin", "admin");
+
+    // Do GUI work in the Swing thread to avoid concurrency problems.
+    SwingUtilities.invokeLater(new ProcessesExample(connection));
+  }
+
+  public ProcessesExample(CapConnection connection) {
+    this.connection = connection;
+  }
+
+  public void run() {
+    // Create model.
+    //com.coremedia.examples.capclient.swing.CacheBasedListModel.Getter getter = new com.coremedia.examples.capclient.swing.CacheBasedListModel.Getter() {
+        Getter getter = new Getter() {
+
+         public Set getKeys() {
+        return connection.getWorkflowRepository().getWorklistService().getProcessesRunning();
+      }
+
+      public Object getValue(Object key) {
+        com.coremedia.cap.workflow.Process process = (Process) key;
+        try {
+          return process.getDefinition().getName() + " " + process.getStartDate().getTime();
+        } catch (RuntimeException e) {
+          if (process.isDestroyed()) {
+            // The process has been destroyed.
+            // It will soon be removed from the list.
+            return "<destroyed process " + process.getId() + ">";
+          } else {
+            // The process has not yet been destroyed.
+            // Something else must have gone wrong.
+            WorkflowRepository.log.error("could not render process", e);
+            return "<unrenderable process " + process.getId() + ": " + e.getMessage() + ">";
+          }
+        }
+      }
+    };
+    final com.coremedia.examples.capclient.swing.CacheBasedListModel listModel = new com.coremedia.examples.capclient.swing.CacheBasedListModel(connection.getCache(), null, getter);
+
+    // Create GUI.
+    JFrame frame = new JFrame("Worklist");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    JButton flipButton = new JButton("flip order");
+    flipButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        ascending = !ascending;
+        listModel.setKeyComparator(ascending ? null : new Comparator() {
+          public int compare(Object o1, Object o2) {
+            // Just the other way round.
+            return ((Comparable) o2).compareTo(o1);
+          }
+        });
+      }
+    });
+    frame.getContentPane().add(flipButton, BorderLayout.NORTH);
+    JButton stopButton = new JButton("stop updating");
+    stopButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        listModel.dispose();
+      }
+    });
+    frame.getContentPane().add(stopButton, BorderLayout.SOUTH);
+    JList list = new JList(listModel);
+    JScrollPane scroller = new JScrollPane(list);
+    scroller.setPreferredSize(new Dimension(600, 400));
+    frame.getContentPane().add(scroller, BorderLayout.CENTER);
+
+    // Show GUI.
+    frame.pack();
+    frame.setVisible(true);
+  }
+}
