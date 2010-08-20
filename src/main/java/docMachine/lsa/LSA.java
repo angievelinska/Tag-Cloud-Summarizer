@@ -10,6 +10,8 @@ import java.util.Properties;
 /**
  * User: avelinsk
  * Date: 11.08.2010
+ *
+ * Class creates a Semantic Space using Latent Semantic Analysis (LSA) algo.
  */
 public class LSA {
     Properties properties;
@@ -25,9 +27,14 @@ public class LSA {
 
     protected Hashtable initProperties(){
         Hashtable props = new Hashtable();
+        props.put("docFile","C:\\master_thesis\\TagCloudSummarizer\\output\\input.txt");
         props.put(LatentSemanticAnalysis.LSA_SVD_ALGORITHM_PROPERTY,"SVDLIBJ");
         props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"300");
         props.put(LatentSemanticAnalysis.MATRIX_TRANSFORM_PROPERTY,"LogEntropyTransform");
+        props.put("outputFormat","text");
+        props.put("overwrite","true");
+        props.put("tokenFilter","exclude=data\\english-stop-words-large.txt");
+        props.put("verbose","true");
 
         return props;
     }
