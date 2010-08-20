@@ -1,9 +1,10 @@
 package docMachine.lsa;
 
-import edu.ucla.sspace.common.ArgOptions;
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +18,8 @@ import java.util.Properties;
  * Class creates a Semantic Space using Latent Semantic Analysis (LSA) algo.
  */
 public class LSA {
-    protected ArgOptions args;
+//    protected ArgOptions args;
+    private final static Log log = LogFactory.getLog(LSA.class);
 
     public LatentSemanticAnalysis invokeLSA() throws IOException{
 /*        String[] options = {"-d",
@@ -70,7 +72,7 @@ public class LSA {
         props.put(LatentSemanticAnalysis.MATRIX_TRANSFORM_PROPERTY,"edu.ucla.sspace.matrix.LogEntropyTransform");
         props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
         props.put("overwrite","true");
-        props.put("tokenFilter","exclude=data\\english-stop-words-large.txt");
+        props.put("tokenFilter","exclude=C:\\master_thesis\\TagCloudSummarizer\\stopwords\\english-stop-words-large.txt");
         props.put("verbose","true");
         props.put("","");
 
@@ -85,9 +87,12 @@ public class LSA {
     }
 
     public void runLSA() throws IOException{
+        long start = System.currentTimeMillis();
         SemanticSpace sspace = this.invokeLSA();
         File output = this.initOutputFile();
         SemanticSpaceIO.save(sspace, output);
+        long end = System.currentTimeMillis();
+        log.info("LSA used "+(end-start)+"ms to index the document collection.");
     }
 
 }
