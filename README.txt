@@ -1,8 +1,8 @@
-	<p>README</p>
+README
+------------------------------------
+Tag Cloud Summarizer
+Master Thesis Project
+Author: angievelinska
+Hamburg, 2010
 
-	<p>Tag Cloud Summarizer<br />
-Master Thesis Project<br />
-Author: angievelinska<br />
-Hamburg, 2010</p>
-
-	<p>The project implements Latent Semantic Analysis to summarize as a Tag Cloud the results from queries, set on a given document collection.</p>
+The project implements Latent Semantic Analysis to summarize as a Tag Cloud the results from queries, set on a given document collection.
