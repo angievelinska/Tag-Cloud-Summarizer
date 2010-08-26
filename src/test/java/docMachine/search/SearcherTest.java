@@ -12,7 +12,7 @@ import org.junit.Test;
 public class SearcherTest {
     @Test
     public void testSearchDocuments() throws Exception {
-        String[] args = {"C:\\master_thesis\\testConnect\\idx",
+        String[] args = {"C:\\master_thesis\\TagCloudSummarizer\\idx",
                 "content management server"};
         Searcher.searchDocuments(args);
     }
