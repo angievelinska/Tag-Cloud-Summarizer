@@ -34,7 +34,7 @@ public class LSA {
     }
 
     protected File initOutputFile() throws IOException{
-        File outputPath = new File("C:\\master_thesis\\TagCloudSummarizer\\sspace");
+        File outputPath = new File("D:\\tuhh\\ss10\\master thesis_coremedia\\projects\\Tag-Cloud-Summarizer\\sspace");
         File outputFile = new File(outputPath,"LSA.sspace");
         if (!outputFile.exists()){
             outputFile.createNewFile();
@@ -42,15 +42,12 @@ public class LSA {
         return outputFile;
     }
 
-    public void runLSA() throws IOException{
+    public void runLSA() throws IOException, InterruptedException{
         long start = System.currentTimeMillis();
         SemanticSpace sspace = this.invokeLSA();
         File output = this.initOutputFile();
         DataInputStream dis= new DataInputStream(new BufferedInputStream(new FileInputStream(output)));
-
-        Iterator<Document> iterator = this.getDocumentIterator();
-        
-
+        parseDocuments();
         SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
         long end = System.currentTimeMillis();
         log.info("-------------INFO---------------");
@@ -61,13 +58,12 @@ public class LSA {
         log.info("-------------END----------------");
     }
 
-    protected void parseDocuments() throws IOException{
-        int noThreads = Runtime.getRuntime().availableProcessors();
+    protected void parseDocuments() throws IOException, InterruptedException{
+        Iterator<Document> iter = getDocumentIterator();
+        int noOfThreads = Runtime.getRuntime().availableProcessors();
         IteratorFactory.setProperties(System.getProperties());
         SemanticSpace space = new LatentSemanticAnalysis();
-
-
-
+        parseDocsMultiThreaded(space, iter, noOfThreads);
     }
 
     protected void parseDocsMultiThreaded(final SemanticSpace space,
