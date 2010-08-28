@@ -94,10 +94,11 @@ public class LSA {
                     log.info("Document No"+number+" is parsed in "+(end-start)+"ms.");
                 }
             }
-        };
+            };
+        }
     }
 
-    protected Iterator<Document> getDocumentIterator() throws IOException{
+    protected Iterator<Document> getDocumentIterator () throws IOException{
         Properties props = System.getProperties();
         Iterator<Document> iterator = null;
         String docFile =  props.getProperty("docFile");
@@ -107,8 +108,9 @@ public class LSA {
         Collection<Iterator<Document>> docIter = new LinkedList<Iterator<Document>>();
         for (String s: fileNames){
             OneLinePerDocumentIterator lineIter = new OneLinePerDocumentIterator(docFile);
+            docIter.add(lineIter);
         }
-        iterator = new CombinedIterator<Document>(iterator);
+        iterator = new CombinedIterator<Document>(docIter);
 
         return iterator;
     }
