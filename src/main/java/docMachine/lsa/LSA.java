@@ -22,16 +22,31 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class LSA {
     private final static Log log = LogFactory.getLog(LSA.class);
 
+    /**
+     * TODO: parameterize the number of threads
+     * 
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public void runLSA() throws IOException, InterruptedException{
         long start = System.currentTimeMillis();
-        setupProperties();
+
+        Properties props = setupProperties();
         //just for info
         this.logProps();
-        
+
+        int noOfThreads = Runtime.getRuntime().availableProcessors();
+
         LatentSemanticAnalysis sspace = new LatentSemanticAnalysis();
+
+        Iterator<Document> iter = getDocumentIterator();
+
         File output = initOutputFile();
-        processDocuments();
+
+        processDocumentsAndSpace(sspace, iter, noOfThreads, props);
+
         SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+
         long end = System.currentTimeMillis();
         log.info("LSA used "+(end-start)+"ms to index the document collection.");
         log.info("Number of words in the sspace: "+sspace.getWords().size());
@@ -50,19 +65,14 @@ public class LSA {
         return outputFile;
     }
 
-    /**
-     * TODO: pass number of threads as a parameter
-     *
-     * @throws IOException
-     * @throws InterruptedException
-     */
-    protected void processDocuments() throws IOException, InterruptedException{
+    protected void processDocumentsAndSpace(SemanticSpace space,
+                                            Iterator<Document> iter,
+                                            int noOfThreads,
+                                            Properties props)
+        throws IOException, InterruptedException{
 
-        Iterator<Document> iter = getDocumentIterator();
-        int noOfThreads = Runtime.getRuntime().availableProcessors();
-        IteratorFactory.setProperties(System.getProperties());
-        LatentSemanticAnalysis space = new LatentSemanticAnalysis();
         parseDocsMultiThreaded(space, iter, noOfThreads);
+        space.processSpace(props);
     }
 
     protected void parseDocsMultiThreaded(final SemanticSpace space,
@@ -111,12 +121,7 @@ public class LSA {
     protected Iterator<Document> getDocumentIterator () throws IOException{
         Properties props = System.getProperties();
         String docFile =  props.getProperty("docFile");
-        log.info("docFile: "+docFile);
-
         Iterator<Document> lineIter = null;
-/*        Collection<Iterator<Document>> docIter = new LinkedList<Iterator<Document>>();
-        docIter.add(new OneLinePerDocumentIterator(docFile));
-        lineIter = new CombinedIterator<Document>(docIter);*/
         lineIter = new OneLinePerDocumentIterator(docFile);
         
         return lineIter;
@@ -144,7 +149,8 @@ public class LSA {
         props.put("outputFormat", "TEXT");
         props.put("overwrite","true");
         props.put("verbose","true");
-        
+
+        IteratorFactory.setProperties(props);
         return props;
     }
 
