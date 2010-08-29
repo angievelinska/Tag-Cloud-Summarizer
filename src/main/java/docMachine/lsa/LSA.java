@@ -22,47 +22,46 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class LSA {
     private final static Log log = LogFactory.getLog(LSA.class);
 
-    protected LatentSemanticAnalysis invokeLSA() throws IOException{
-        //add all documents to the semantic space and call processSpace
-        Properties props = System.getProperties();
-        props.putAll(initProperties());
-        LatentSemanticAnalysis lsa = new LatentSemanticAnalysis(props);
+    public void runLSA() throws IOException, InterruptedException{
+        long start = System.currentTimeMillis();
+        setupProperties();
         //just for info
         this.logProps();
         
-        return lsa;
+        LatentSemanticAnalysis sspace = new LatentSemanticAnalysis();
+        File output = initOutputFile();
+        processDocuments();
+        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+        long end = System.currentTimeMillis();
+        log.info("LSA used "+(end-start)+"ms to index the document collection.");
+        log.info("Number of words in the sspace: "+sspace.getWords().size());
     }
 
     protected File initOutputFile() throws IOException{
-        File outputPath = new File("D:\\tuhh\\ss10\\master thesis_coremedia\\projects\\Tag-Cloud-Summarizer\\sspace");
+        File outputPath = new File("sspace");
         File outputFile = new File(outputPath,"LSA.sspace");
+
         if (!outputFile.exists()){
             outputFile.createNewFile();
+        } else {
+            outputFile = File.createTempFile("LSA",".sspace",outputPath);
         }
+
         return outputFile;
     }
 
-    public void runLSA() throws IOException, InterruptedException{
-        long start = System.currentTimeMillis();
-        SemanticSpace sspace = this.invokeLSA();
-        File output = this.initOutputFile();
-        DataInputStream dis= new DataInputStream(new BufferedInputStream(new FileInputStream(output)));
-        parseDocuments();
-        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
-        long end = System.currentTimeMillis();
-        log.info("-------------INFO---------------");
-        log.info("LSA used "+(end-start)+"ms to index the document collection.");
-        log.info("Name of semantic algorithm:"+sspace.getSpaceName());
-        log.info("Number of words in the sspace: "+sspace.getWords().size());
-//        this.logProps();
-        log.info("-------------END----------------");
-    }
+    /**
+     * TODO: pass number of threads as a parameter
+     *
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    protected void processDocuments() throws IOException, InterruptedException{
 
-    protected void parseDocuments() throws IOException, InterruptedException{
         Iterator<Document> iter = getDocumentIterator();
         int noOfThreads = Runtime.getRuntime().availableProcessors();
         IteratorFactory.setProperties(System.getProperties());
-        SemanticSpace space = new LatentSemanticAnalysis();
+        LatentSemanticAnalysis space = new LatentSemanticAnalysis();
         parseDocsMultiThreaded(space, iter, noOfThreads);
     }
 
@@ -76,11 +75,11 @@ public class LSA {
         for (int i=0; i < noThreads; ++i){
             Thread t = new Thread(){
             public void run(){
+                log.info("process docs: "+iter.next().toString());
                 while (iter.hasNext()){
                     long start = System.currentTimeMillis();
                     Document document = iter.next();
                     int number = count.incrementAndGet();
-                    int terms = 0;
                     try {
                         space.processDocument(document.reader());
                     } catch (Throwable t) {
@@ -91,24 +90,36 @@ public class LSA {
                 }
             }
             };
+            threads.add(t);
+
         }
+
+        for (Thread t: threads)
+            t.start();
+
+        for (Thread t: threads)
+            t.join();
     }
 
+    /**
+     * Input documents are parsed in a single file,
+     * each document on a separate row.
+     *
+     * @return
+     * @throws IOException
+     */
     protected Iterator<Document> getDocumentIterator () throws IOException{
         Properties props = System.getProperties();
-        Iterator<Document> iterator = null;
         String docFile =  props.getProperty("docFile");
-        String[] fileNames = docFile.split("[\\r?\\n]+");
-        log.info("docFile: "+fileNames.length);
+        log.info("docFile: "+docFile);
 
-        Collection<Iterator<Document>> docIter = new LinkedList<Iterator<Document>>();
-        for (String s: fileNames){
-            OneLinePerDocumentIterator lineIter = new OneLinePerDocumentIterator(docFile);
-            docIter.add(lineIter);
-        }
-        iterator = new CombinedIterator<Document>(docIter);
-
-        return iterator;
+        Iterator<Document> lineIter = null;
+/*        Collection<Iterator<Document>> docIter = new LinkedList<Iterator<Document>>();
+        docIter.add(new OneLinePerDocumentIterator(docFile));
+        lineIter = new CombinedIterator<Document>(docIter);*/
+        lineIter = new OneLinePerDocumentIterator(docFile);
+        
+        return lineIter;
     }
 
     /**
@@ -116,7 +127,6 @@ public class LSA {
      */
     protected void logProps(){
         Properties sysprops = System.getProperties();
-        log.info("Properties: ");
         for(Enumeration en = sysprops.propertyNames(); en.hasMoreElements(); ){
             String key = (String) en.nextElement();
             String value = sysprops.getProperty(key);
@@ -124,20 +134,17 @@ public class LSA {
         }
     }
 
-    protected Hashtable initProperties(){
-        Hashtable props = new Hashtable();
-        props.put("docFile","C:\\master_thesis\\TagCloudSummarizer\\input\\input.txt");
-/*        props.put(LatentSemanticAnalysis.LSA_SVD_ALGORITHM_PROPERTY,"SVDLIBJ");
-        props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"300");
-        props.put(LatentSemanticAnalysis.MATRIX_TRANSFORM_PROPERTY,"edu.ucla.sspace.matrix.LogEntropyTransform");*/
+    protected Properties setupProperties(){
+        Properties props = System.getProperties();
+        props.put(IteratorFactory.COMPOUND_TOKENS_FILE_PROPERTY,"compwords\\compound-words.txt");
+        props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords\\english-stop-words-large.txt");
+        props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
+        props.put("docFile","input\\input.txt");
         props.put("svdAlgorithm","SVDLIBJ");
-        props.put("outputFormat", "text");
+        props.put("outputFormat", "TEXT");
         props.put("overwrite","true");
-        props.put("tokenFilter","exclude=C:\\master_thesis\\TagCloudSummarizer\\stopwords\\english-stop-words-large.txt");
-        props.put("stemmingAlgorithm","edu.ucla.sspace.text.EnglishStemmer");
-        props.put("compoundWords","C:\\master_thesis\\TagCloudSummarizer\\compwords\\compound-words.txt");
         props.put("verbose","true");
-
+        
         return props;
     }
 
