@@ -5,4 +5,4 @@ Master Thesis Project
 Author: angievelinska
 Hamburg, 2010
 
-The project implements Latent Semantic Analysis to summarize as a Tag Cloud the results from queries, made against a given document collection.
+The project implements Latent Semantic Analysis to summarize as a Tag Cloud the results from queries, posted on a given document collection.
