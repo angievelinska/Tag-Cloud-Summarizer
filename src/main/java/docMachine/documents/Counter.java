@@ -25,7 +25,7 @@ public class Counter {
 
             for (Content article: rootElement.getLinks("Articles")){
 
-                 log.info("element type is: wtf..."+article.getType().getName());
+                 log.info("element type is:..."+article.getType().getName());
                  log.info("name of element:"+article.getName());
                  if (article.getType().getName().equals("MLArticle")){
                      counter++;
