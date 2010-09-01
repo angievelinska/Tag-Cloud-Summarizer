@@ -6,11 +6,16 @@ import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.text.Document;
 import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
-import edu.ucla.sspace.util.CombinedIterator;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import java.io.*;
-import java.util.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Properties;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -59,7 +64,7 @@ public class LSA {
         if (!outputFile.exists()){
             outputFile.createNewFile();
         } else {
-            outputFile = File.createTempFile("LSA",".sspace",outputPath);
+            outputFile = File.createTempFile(this.getClass().getName(),".sspace",outputPath);
         }
 
         return outputFile;
