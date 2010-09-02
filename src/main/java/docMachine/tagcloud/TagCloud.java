@@ -4,7 +4,8 @@ import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
 /**
- * User: avelinsk Date: 01.09.2010
+ * User: avelinsk
+ * Date: 01.09.2010
  */
 public class TagCloud {
   public void createCloud(){

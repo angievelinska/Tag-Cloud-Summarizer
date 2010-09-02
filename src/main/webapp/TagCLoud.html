@@ -6,6 +6,7 @@
 </head>
 <body>
   <div>
+    <% import docMachine.tagcloud.TagCloud; %>
     <% for (Tag tag : cloud.tags()) { %>
     <a href="<%= tag.getLink() %>" style="font-size: <%= tag.getWeight() %>px;"%gt;<%= tag.getName() %></a>
     <% } %>
