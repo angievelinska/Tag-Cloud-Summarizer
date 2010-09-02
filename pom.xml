@@ -49,7 +49,7 @@
       <groupId>org.mcavallo.opencloud</groupId>
       <artifactId>opencloud</artifactId>
       <version>0.2</version>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
    <dependency>
      <groupId>org.mortbay.jetty</groupId>
