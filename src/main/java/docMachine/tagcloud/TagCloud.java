@@ -3,6 +3,12 @@ package docMachine.tagcloud;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 /**
  * User: avelinsk
  * Date: 01.09.2010
@@ -24,10 +30,25 @@ public class TagCloud {
     cloud.setThreshold(2.0);
   }
 
-  public static void main(String[] args){
-    TagCloud tc = new TagCloud();
-    Cloud c = tc.createCloud();
-    tc.populateCloud(c);
-    tc.orderCloud(c);
+  public void serializeCloud(Cloud cloud, String file) throws IOException {
+    FileOutputStream fos = new FileOutputStream(file);
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
+    oos.writeObject(cloud);
+    oos.close();
   }
+
+  public Cloud deSerializeCloud(String file) throws IOException, ClassNotFoundException{
+    Cloud cloud;
+    FileInputStream fis = new FileInputStream("file");
+    ObjectInputStream ois = new ObjectInputStream(fis);
+    cloud = (Cloud) ois.readObject();
+    ois.close();
+    return cloud;
+  }
+
+/*  public void serializeXML(){
+    XStream xstream = new XStream();
+    String xml = xstream.toXML(cloud);
+    Cloud c = (Cloud) xstream.fromXML(xml);
+  }*/
 }
