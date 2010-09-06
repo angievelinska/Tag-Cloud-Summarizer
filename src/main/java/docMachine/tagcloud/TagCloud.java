@@ -14,9 +14,14 @@ import java.io.ObjectOutputStream;
  * Date: 01.09.2010
  */
 public class TagCloud {
-  public Cloud createCloud(){
+  public Cloud getCloud(){
+    TagCloud tagCloud = new TagCloud();
+
     Cloud cloud = new Cloud();
     cloud.setMaxWeight(38.0);
+    tagCloud.populateCloud(cloud);
+    tagCloud.orderCloud(cloud);
+
     return cloud;
   }
 

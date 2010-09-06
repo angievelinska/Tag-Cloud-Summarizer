@@ -61,6 +61,9 @@ public class LSA {
         File outputPath = new File("sspace");
         File outputFile = new File(outputPath,"LSA.sspace");
 
+        if (!outputPath.exists()){
+          outputPath.mkdir();
+        }
         if (!outputFile.exists()){
             outputFile.createNewFile();
         } else {
