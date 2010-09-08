@@ -1,0 +1,14 @@
+TODOS
+---------------
+
+03.09.2010
+
+Project Ideas
+1. At the first login to DocMachine, a cloud with the most popular tags is displayed.
+2. I need to have a website as a frontend, where to enter any search strings, and display my results and Tag cloud.
+
+Project ToDos
+1. Investigate how to build a web-app with Maven3 (and add in the report after why you are using web-based application, and not swing-based for example).
+2. Package the app as a jar, start by starting a webapp server, deploying it, opening a browser...
+3. fix the warnings and errors displayed by sonar: mvn org.codehaus.sonar:sonar-maven3-plugin:2.2:sonar -DskipTests=true
+4. copy HF Design Patters in DropBox
