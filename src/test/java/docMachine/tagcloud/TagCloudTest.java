@@ -1,5 +1,7 @@
 package docMachine.tagcloud;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.mcavallo.opencloud.Cloud;
 
@@ -11,7 +13,7 @@ import java.io.IOException;
 public class TagCloudTest {
   TagCloud tc;
   Cloud c;
-  @Test
+  @Before
   public void init(){
     tc = new TagCloud();
     c = tc.getCloud();
@@ -37,7 +39,7 @@ public class TagCloudTest {
     }
   }
 
-  @Test
+  @After
   public void terminate(){
     tc = null;
     c = null;
