@@ -1,11 +1,1 @@
-You can use this skeleton thesis to get started with LATEX. Here are some hints:
-
-- thesis.tex is the main file. It includes the other files. You might want to consider
-  having one file per chapter.
-- Add references to the references.bib file. After you update this file, first run
-  LATEX, then bibtex, then LATEX again: 
-  latex thesis
-  bibtex thesis
-  latex thesis
-- If you are on Linux you can use ./makepdf.sh to create a PDF file with nice 
-  fonts and graphics.
+LaTeX files for master thesis report.
