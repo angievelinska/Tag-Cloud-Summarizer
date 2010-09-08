@@ -1,0 +1,13 @@
+This is TeX, Version 3.1415926 (MiKTeX 2.8) (preloaded format=tex 2010.4.14)  14 APR 2010 18:30
+**ch1
+(C:\master_thesis\thesis_report\ThesisReport\ch1
+! Undefined control sequence.
+l.1 \chapter
+            {Chapter 1}
+? 
+! Emergency stop.
+l.1 \chapter
+            {Chapter 1}
+End of file on the terminal!
+
+No pages of output.

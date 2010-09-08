@@ -1,0 +1,144 @@
+\documentclass[a4paper]{report}
+\usepackage{epsfig}
+\usepackage{moreverb}
+\usepackage{color}
+\usepackage{fancyhdr,a4wide}
+\usepackage{makeidx}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{fancyvrb}
+\usepackage{listings} 
+\usepackage[ngerman,english]{babel}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
+
+%\definecolor{darkblue}{rgb}{0,0,.5}
+%\hypersetup{pdftex=true, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, pagecolor=darkblue, urlcolor=darkblue}
+
+% don't indent new paragraphs
+\parindent 0pt
+
+\hoffset+0.3in
+\textwidth13cm
+\textheight22cm
+
+\usepackage{graphicx}
+\makeatletter
+\def\ScaleIfNeeded{%
+\ifdim\Gin@nat@width>\linewidth
+\linewidth
+\else
+\Gin@nat@width
+\fi
+}
+\makeatother
+
+\pagestyle{headings}
+\begin{document}
+\clubpenalty = 10000
+\widowpenalty = 10000 
+\displaywidowpenalty = 10000
+
+\newenvironment{summary}{\begin{quotation}\it\textbf{Summary.\space}}{\end{quotation}\vspace{0.3cm}}
+\begin{titlepage}
+\begin{minipage}{1\linewidth}
+\begin{flushright}
+\begin{minipage}[h]{0.4\linewidth}
+\includegraphics[height=2cm]{img/STSlogo}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[h]{0.4\linewidth}
+\includegraphics[height=2cm]{img/CoremediaLogo}
+\end{minipage}\\
+\bigskip
+\Huge
+\hrulefill\\
+\bigskip
+Tag Cloud Control \\by Latent Semantic Analysis\\
+\hrulefill\\ \bigskip \bigskip
+\normalsize submitted by\\
+\large
+Angelina Velinska\\
+\vspace{0.5cm}
+\end{flushright}
+\end{minipage}
+
+\vspace{5.5cm}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{flushright}
+\bigskip
+
+
+\end{flushright}
+\end{minipage}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{flushright}
+\bigskip 
+%\bigskip
+supervised by\\
+\large
+Prof. Dr. Ralf M\"oller\\
+Dipl. Ing. Sylvia Melzer\\
+
+\bigskip
+Technical University of Hamburg-Harburg\\
+Software Systems Institute (STS)\\
+\bigskip
+Dr. Michael Fritsch\\
+%\bigskip
+CoreMedia AG\\
+Hamburg\\
+\bigskip 
+\bigskip
+\end{flushright}
+\end{minipage}
+
+\end{titlepage}
+
+% include after creating the abstract
+%\input{abstract}
+
+% don't put page numbers on declaration and acknowledgement pages:
+%{\renewcommand{\thepage}{}
+%\input{declaration}
+%\input{acknowledgements}
+%}
+
+
+% make figure names bold:
+\makeatletter
+\renewcommand{\fnum@figure}{\textbf{Figure~\thefigure}}
+\makeatother
+
+\tableofcontents
+\listoffigures
+
+% put each chapter in a seperate file (makes editing easier), or split even
+% further. Add \input{FILENAME} (without the .tex extension) here as needed.
+\input{introduction}
+\input{docmanagsystem}
+\input{semanticannotation}
+\input{lsa}
+\input{implementation}
+\input{conclusion}
+
+% uncomment to include list of annexes when ready
+%\begin{appendix}
+%\input{appendices}
+%\end{appendix}
+
+% After adding new references to the "references.bib" file, first invoke latex, then
+% bibtex on the references file, then latex again:
+% latex thesis
+% bibtex thesis
+% latex thesis
+
+% number the bibliography instead of alpha-numerial abbrev.
+%\bibliographystyle{alpha} 
+\bibliographystyle{ieeetr}
+\bibliography{references}
+\end{document}

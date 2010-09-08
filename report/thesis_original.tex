@@ -1,0 +1,109 @@
+\documentclass[a4paper]{report}
+\usepackage{epsfig}
+\usepackage{moreverb}
+\usepackage{color}
+\usepackage{fancyhdr,a4wide}
+\usepackage{makeidx}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{fancyvrb}
+ \usepackage{listings} 
+
+\hoffset+0.3in
+\textwidth13cm
+\textheight22cm
+
+
+\pagestyle{headings}
+\begin{document}
+\clubpenalty = 10000
+\widowpenalty = 10000 
+\displaywidowpenalty = 10000
+
+\newenvironment{summary}{\begin{quotation}\it\textbf{Summary.\space}}{\end{quotation}\vspace{0.3cm}}
+
+\begin{titlepage}
+\begin{minipage}{1\linewidth}
+\begin{flushright}
+\begin{minipage}[h]{0.4\linewidth}
+%\centering\epsfig{figure=img/tuhh_logo.eps,height=1cm}
+\end{minipage}
+\begin{minipage}[h]{0.4\linewidth}
+%\epsfig{figure=img/sts_logo.eps,height=1cm}
+\end{minipage}\\
+\bigskip
+\Huge
+\hrulefill\\
+\bigskip
+Tag Cloud Control \\by Latent Semantic Analysis\\
+\hrulefill\\ \bigskip \bigskip
+\normalsize submitted by\\
+\large
+Angelina Velinska\\
+\vspace{0.5cm}
+\end{flushright}
+\end{minipage}
+
+\vspace{7.5cm}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{flushright}
+\bigskip
+
+
+\end{flushright}
+\end{minipage}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{flushright}
+\bigskip 
+\bigskip
+supervised by\\
+\large
+Prof. Dr. Ralf Möller\\
+Dipl. Ing. Sylvia Melzer\\
+\bigskip
+Hamburg University of Science and Technology\\
+Software Systems Institute (STS)\\
+\bigskip 
+\bigskip
+\end{flushright}
+\end{minipage}
+
+\end{titlepage}
+
+\input{abstract}
+
+% don't put page numbers on declaration and acknowledgement pages:
+{\renewcommand{\thepage}{}
+\input{declaration}
+\input{acknowledgements}
+}
+% make figure names bold:
+\makeatletter
+\renewcommand{\fnum@figure}{\textbf{Figure~\thefigure}}
+\makeatother
+
+\tableofcontents
+\listoffigures
+
+% put each chapter in a seperate file (makes editing easier), or split even
+% further. Add \input{FILENAME} (without the .tex extension) here as needed.
+\input{introduction}
+\input{latex}
+\input{ch1}
+%\input{structure}
+
+\begin{appendix}
+\input{appendices}
+\end{appendix}
+
+% After adding new references to the "references.bib" file, first invoke latex, then
+% bibtex on the references file, then latex again:
+% latex thesis
+% bibtex thesis
+% latex thesis
+\bibliographystyle{alpha} 
+\bibliography{references.bib}
+
+\end{document}

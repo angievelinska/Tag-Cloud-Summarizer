@@ -1,0 +1,108 @@
+\chapter{Latex}
+\label{sec:introduction:related.work}
+
+\section{Document setup}
+
+bla bla bla
+You include all your partial files by using the $\backslash$input command in the central file.
+
+\section{Latex tips}
+
+\hyphenation{mhe-do-phan-to-lo-gy}
+
+Latex will wrap long lines for you in the appropriate places, as is demonstrated in this paragraph which is longer than one line. Note that Latex might not know the hyphenation of a specific word, in which case you can tell it (see code).
+
+New paragaphs are indicated by empty lines. If you want an additional empty line, you can use this trick:
+
+\null
+
+Laxtex supports you in citing external references, such as this one: \cite{examplecitation}.
+You can also give references to other parts of the document (which you give names by using the $\backslash$label command). For example like this: section \ref{sec:introduction:related.work}.
+
+ Here are a couple of hints:
+\begin{itemize}
+\item This is ``how'' you do quotes
+\item You can also do formulas:
+\begin{equation}
+\label{eqn:c_min}
+c^{min}_{E}=\prod_{i=1}^{n}{c^{min}_{l_i}}\\
+\end{equation}
+\end{itemize}
+
+The items can also be numbered:
+\begin{enumerate}
+\item Here is some \textbf{bold} text
+\item Here is some \textit{italic} text
+\item Reference to equation \ref{eqn:c_min}
+\end{enumerate}
+
+See http://www.tex.ac.uk/cgi-bin/texfaq2html?label=codelist on who to typeset source code.
+
+There are also different text sizes, which you just give by name:
+
+\begin{huge}huge  - This is a sample text in of this ...\end{huge}
+
+\begin{LARGE}LARGE  - This is a sample text in of this size. To give you a better impression ...\end{LARGE}
+
+\begin{Large}Large  - This is a sample text in of this size. To give you a better impression of it, I will try to make it two lines long (at least). The number of lines certainly depends on the size used. ...\end{Large}
+
+\begin{large}large  - This is a sample text in of this size. To give you a better impression of it, I will try to make it two lines long (at least). The number of lines certainly depends on the size used. I don't know what to write any more. Hope this is enough.\end{large}
+
+\begin{normalsize}normalsize (the default)  - This is a sample text in of this size. To give you a better impression of it, I will try to make it two lines long (at least). The number of lines certainly depends on the size used. I don't know what to write any more. Hope this is enough.\end{normalsize}
+
+\begin{small}small  - This is a sample text in of this size. To give you a better impression of it, I will try to make it two lines long (at least). The number of lines certainly depends on the size used. I don't know what to write any more. Hope this is enough.\end{small}
+
+\begin{footnotesize}footnotesize  - This is a sample text in of this size. To give you a better impression of it, I will try to make it two lines long (at least). The number of lines certainly depends on the size used. I don't know what to write any more. Hope this is enough.\end{footnotesize}
+
+\begin{scriptsize}scriptsize - This is a sample text in of this size. To give you a better impression of it, I will try to make it two lines long (at least). The number of lines certainly depends on the size used. I don't know what to write any more. Hope this is enough.\end{scriptsize}
+
+\begin{tiny}tiny  - This is a sample text in of this size. To give you a better impression of it, I will try to make it two lines long (at least). 
+The number of lines certainly depends on the size used. I don't know what to write any more. Hope this is enough.\end{tiny}
+
+\section{Running Latex}
+
+How to turn you .tex files into PDFs.
+
+\section{Figure Examples}
+
+\begin{figure}
+\centering\fbox{\epsfig{figure=img/q.eps,width=5cm}}
+\caption[Text for the list of figures]{Figures caption, this can be longer than what goes into the list of figures. It is fairly easy to put a box around a figure.}
+\label{fig:example.xmas}
+\end{figure}
+
+\begin{figure}
+\begin{minipage}[b]{3.2cm}
+\centering\rotatebox{90}{\epsfig{figure=img/q.eps,height=3.7cm}}\\
+(a)
+\end{minipage}
+\begin{minipage}[b]{2.9cm}
+\centering\epsfig{figure=img/q.eps,height=3.7cm}\\
+(b)
+\end{minipage}
+\begin{minipage}[b]{3.2cm}
+\centering\rotatebox{-90}{\epsfig{figure=img/q.eps,height=3.4cm}}\\
+(c)
+\end{minipage}
+\begin{minipage}[b]{2.9cm}
+\centering\rotatebox{180}{\epsfig{figure=img/q.eps,height=3.7cm}}\\
+(d)
+\end{minipage}
+\caption[Complicated Figure]{Figures can also be much more complicated. Here you see four figures (a), (b), (c), and (d) side-by-side.}
+\label{fig:complicated}
+\end{figure}
+
+Figures are inserted using the ``figure'' environment. You can use minipages to join multiple graphics in one figure. Note that figures should be in eps format (if you use latex) or pdf format (if you use latexpdf).
+
+\section{Formatting Code}
+
+You can use the lisings package of insert code fragments\footnote{See http://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/listings/ for more information}. Here is a simple example:
+
+\lstset{language=java}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=tb}
+\lstinputlisting[caption=Simple Java test,label=lst:java]{test.java}
+
+\section{References}
+You can reference other places in your document like this: Section \ref{sec:introduction:motivation}, note that you must give them a proper name (with ``label'') first. You will also need to collect outside references (e.g. other papers, theses). These are cited like this: \cite{examplecitation}. It is a very good idea to collect all external references in a bibtex file (see ``references.bib''). You can refer to entries in that file with the ``cite'' command. After you have cited an entry, run {\tt bibtex thesis} once and then {\tt latex thesis.tex} twice to update the references.

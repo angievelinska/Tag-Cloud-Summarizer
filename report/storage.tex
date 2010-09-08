@@ -1,0 +1,141 @@
+state:\\
+- LSA has low precision performance but handles nicely synonymy problem\\
+- what is ontology, what are document annotations\\
+- what problems have dms search, lsa\\
+ - visualization by Tag Cloud \\
+
+Challenges \\
+---------------------------\\
+A drawback of the classical LSA implementation as an information retrieval method is the low precision of the returned results. A previous work by David Mugo \cite{mugo10} has investigated the improvement of LSA precision performance by annotating the document collection and including the anotations used in LSA. In his work, Mr. Mugo constructs a concept-document matrix from the annotations used, and concatenates it with the term-document matrix normally generated in LSA process. The proposed solution, however, results in a slow speed of LSA, and has left Mr. Mugo's hypothesis open. \\
+
+Objective \\
+------------------------------------\\
+The objectives of this work are to investigate how to improve the precision of LSA method by using semantic annotations, and how to adequately present the results of LSA in the form of a tag cloud. \\
+
+The current project has several objectives. It will investigate the implementation of LSA method for improving information retrieval in a domain-specific DMS with respect to context-based search. A further investigation will be made on improving the precision performance of LSA method by using semantic annotations and relevance feedback techniques. \\
+
+Semantic annotations are meta data annotations used to add information to unstructured data, in our case to the document collection. Semantic annotations are based on an ontology (what is an ontology and where am i going to describe it?), especially developed for the domain of interest - CoreMedia CMS domain. ...\\
+
+Relevance feedback is a technique from IR field, used to improve the precision of the method. (what is relevance feedback?) \\
+
+
+It will be done by annotating the document collection with semantic annotations, based on an ontology created for the specific domain. The second technique which will be used for influencing LSA precision, is relevance feedback  \\
+
+\section{Use case}
+\label{sec:introduction:usecase}
+For the purpose of the current project, the investigations introduced in Chapter \ref{sec:introduction:motandobj} will be performed in the environment of DocMachine 2.0\footnote{\url{https://documentation.coremedia.com/}}, the document management system of CoreMedia AG\footnote{\url{http://www.coremedia.com/}}, Hamburg. The system is based on CoreMedia CMS 2008, and it contains manuals and guides which document CoreMedia CMS. \\ 
+
+
+The use case investigated in the current project  includes the implementation of a domain-specific IR in a DMS. LSA will be implemented as a IR method to enable concept based search in a document management system having an implementation of full-text search on the document collection. \\
+ - enterprise IR system\\
+ - LSA implementation \\
+ - semantic annotation\\
+
+Generally, in order for the IR system to be  well-designed, the person who is deploying the system must have a good understanding of the document collection, the users, and their likely information needs and usage patterns \cite{Mann08}. \\
+
+What is semantic search?\\
+Semantic search is the application of semantic technologies to information retrieval (IR) tasks \cite{SemSearch2008}. Semantic technologies include expressive ontologies, resource description languages, scalable repositories, reasoning engines and information extraction techniques.
+The main topics in the field of semantic search are \\
+- achieve expressive description of resources using conceptual representation of the actual resources (e.g. by ontologies), and annotations by semantic web languages (e.g. OWL).\\
+- adapting IR search methods to search in RDF/OWL data, folksonomies. Search is focused on metadata (possibly linked or embedded in textual information).\\
+- complement IR systems containing document collections using semantic technologies.\\
+
+Semantic search can be divided into three main branches - expressive description of resources, IR technologies for RDF/OWL data, and semantic technologies complement existing IRsystems on document collections.\\
+
+Unsolved tasks/problems in the area of semantic search:\\
+--------------------------------------------------------\\
+- how to use semantic technologies to capture the information need of the user?\\
+- translate information need of the user to expressive formal queries, user doesn't need to know the difficult query syntax\\
+- extract expressive resource descriptions from documents \\
+- store and query efficiently expressive resource descriptions on a large scale\\
+- handle vague information needs and incomplete resource descriptions\\
+- evaluate semantic search systems and compare them to standard IR systems\\
+
+Intelligent semantic search - query expansion:\\
+In classical IR query expansion consists of two complementary steps: \\
+- query expansion ;\\
+- terma re-weighting.\\
+
+Personalized retrieval widens the notion of information need to comprise implicit user needs, not directly conveyed by the user in terms of explicit information requiests.
+Personalization is an improvement in IR and semantic search. Personalization is a means to improve the performance retrieval (e.g. measured in terms of precision and relevance)as subjectively perceived by users \cite{mica04}.
+
+What is a semantic repository:\\
+A semantic repository is an engine similar to DBMS, even though there is no agreed upon and well-defined term. Semantic repository has the following synonyms: reasoner, ontology server, semantic store, metastore, RDF database. Semantic repositories allow for storage, querying and management of 
+Semantic respositories use ontologies as semantic schemata. Semantic repositories work with flexible and generic physical datamodels (graphs). This gives the opportuntiy to easily interpret and adopt "on the fly" new ontologies or metadata schemata. Sesame is a popular semantic repository that supports RDF(S) and the major query languages related to it. OWLIM is a repository is another repository, that works with Sesame.\\
+
+Semantic search finds implementation in semantic search engines, such as Hakia\footnote{\url{www.hakia.com}} or SWSE\footnote{\url{http://swse.deri.org/}}, to name just two of them. Semantic search may be further used for personalization of search results.\\
+
+Semantic search promises to provide more precise results than present-day keyword search.
+While the definition of semantic search may vary, its goal is to provide better search results.
+Semantic search offers related search results. Semantic search engines attempt to present search results based on context.
+Semantic search implementations involve many areas, from semantic search engines llike Hakia\footnote{\url{www.hakia.com}} or SWSE\footnote{\url{http://swse.deri.org/}}, to 
+
+- an ontological semantic and natural language processing based search engine.\\
+
+What is a content management system? \\
+
+
+From Sylvia:\\
+-	There is a growing demand to find the "right" documents in Internet.\\
+-	Many new systems and technologies are developed to enable finding documents through semantic search.  Shortly present which articles exist on improving semantic search (Personalization?)… Here also explain the notion of semantic search.\\
+-	Introduce which systems are implemented for this purpose - e.g. a Document Management System. Describe shortly its structure.  (The Document Management System consists of…)\\
+-	Describe shortly CMS (only enough so that I can start something..to explain!?)\\
+
+What is semantic search?
+
+%\section{Motivation}
+%\label{sec:introduction:motivation}
+-	Improve the current Document Management System (DMS)
+-	A semantic structure is necessary so that more "correct" documents are found
+-	David Mugo[quote] showed in his work that with the help of LSA (method for indexing), more documents are found (shortly describe the work of David Mugo). (Present shortly LSA - only so much that the reader will understand later). Give reference to chapter LSA-theorietical description.
+-	Shortly explain other related works in the field.
+
+
+%\section{Challenges}
+%\label{sec:introduction:challenges}
+-	The previous works show the following deficiencies (drawbacks,problems,insufficiencies): enumerate the problems.\\
+-	Show/demonstrate what is necessary to improve the search. Here define why is the use of Tag Cloud important for the user.\\
+
+
+
+
+%\section{Objective}
+%\label{sec:introduction:objective}
+-	Solve the problems mentioned earlier.\\
+-	Structure of the work.\\
+The objective of this work is to investigate the implementation of semantic search methods into word-based search, and to offer  representation of the results via a tag cloud.\\
+
+
+CoreMedia AG\footnote{\url{https://www.coremedia.com/}} is a company situated in Hamburg, which develops a content management system named CoreMedia CMS. Documentation is an important part of the software development process, and CoreMedia has developed its own editorial system, which provides online user access to CoreMedia CMS guides. The online documentation system, or DocMachine 2.0\footnote{\url{https://documentation.coremedia.com/}}, is based on CoreMedia CMS 2008 and consists of a management or production environment, and delivery or live environment. A simplified overview of DocMachine can be seen in Figure  REMOVED.
+
+Using the editor, CMS users can create, edit or delete content, which is managed and stored by the Content Management Server. Content is presented to the end users, who can access the document collection and search through it according to their information need. CMS usually consists of an environment for content management, and an environment for content delivery or presentation. However, at this point we will only introduce the basic concepts of the system. For more detailed introduction, please refer to \\
+
+
+DocMachine uses Apache Lucene\footnote{\url{http://lucene.apache.org/}} information retrieval engine for full text indexing, and document retrieval based on full text search. However, Lucene has the limitation that it provides search based on word-matching, thus queries containing "physician" for example will not return as results documents containing "doctor". This limitation of word-matching search technique refers to "synonymy", the case when more than one term describes the same concept. To overcome such limitations and provide for a concept-based search, Information Retrieval methods can be used, such as Latent Semantic Analysis(LSA).\\
+
+Latent Semantic Analysis (LSA) is a theory and method for extracting and representing the contextual-usage meaning of words by statistical computations applied to a large corpus of text.\cite{Landauer1998} LSA is interesting with respect to document retrieval, as it allows for a search based on meaning.
+It was developed as an information retrieval technique to improve upon the common procedure of matching words of queries with words of documents. The method exploits statistical properties of term distribution among documents to overcome the common problem of word sense ambiguity. For that, the documents are mapped to vectors in a continuous vector space. Then, the dimensionality of the original data is reduced to uncover the latent semantic structure by using a linear algebra method called Singuar Value Decomposition, or SVD. The retrieval and comparison of the documents are performed on the reduced data.
+
+
+
+%\section{Problem Definition}
+%\label{sec:introduction:probdef}
+%Hier zeigt Du die Probleme auf, die es bis jetzt gibt. Hier kannst Du kurz den %Stand der Arbeit von David Mugo skizzieren. 
+%Deine Thesis soll ja auf dieser Arbeit aufbauen. Du zeigst dann die Grenzen %auf, die es bei David Mugos Arbeit gibt.
+The classical implementation of LSA as an information retrieval method has certain drawbacks. Generation of the SVD matrix is computationally expensive, and inclusion of new doocuments in the document collection requires re-generation of the term-document matrix, and re-computation of the term and document weights. Another drawback is the low precision of returned results.\\
+ 
+A previous work investigating the improvement of LSA precision performance by including document anotations in LSA method, is "Connecting people using latent semantic analysis for knowledgee sharing" by David Mugo.\cite{mugo10} In his work, Mr. Mugo constructs a concept-document matrix from the ontological annotations used in the documents, and concatenates it with the term-document matrix normally generated in LSA process. The proposed solution, however, results in slow speed of LSA, and has left Mr. Mugo's hypothesis open. 
+
+%Motivation für Deine Thesis. Was ist Zweck Deiner Arbeit?
+%\section{Motivation and objectives}
+%\label{sec:introduction:motivobject}
+%Nachdem Du die Grenzen --> Probleme aufgezeigt hast, kannst Du sagen, was Du %besser machen möchtest und kannst Deinen Ansatz vorstellen
+% objective - something toward which effort is directed : an aim, goal, or end 
+%of action
+The motivation of the current work is to investigate the improvement of DocMachine's search functionality by implementing LSA as a document retrieval technique. However, considering the low precision that LSA displays, it is worth investigating in the direction of improving LSA precision performance. Therefore, the objective of this work is to reseach the improving of LSA precision performance by applying ontology-based semantic annotations to documents, and including these annotations into LSA process. To visualize the results from LSA, a Tag cloud will be constructed from the terms in the reduced term-document matrix. This Tag cloud will enable the user to associate through drag-and-drop terms from the tag cloud with paragraphs from the documents in the document collection, thus applying higher weights to the terms used. After the user input, LSA will perform again on the document collection, and LSA precision performance will be evaluated.
+
+%This work will investigate implementation of Tag Cloud control by Latent %Semantic Analysis (LSA) algorithm, and the inclusion of document annotations %into LSA process in order to improve LSA precision performance. The Tag Cloud %will be used for visualization of LSA results and in the document annotation %process, where the terms from the Tag Cloud used for document annotation will %receive higher weights in the term-document matrix, generated by LSA.  
+
+%\section{Outline}
+% structure of the work
+The reminder of this work is organized as follows. Chapter \ref{sec:docmachine} describes in more detail DocMachine, the editorial system used at CoreMedia AG. Chapter \ref{sec:semannot} presents the basic concepts of ontologies and document annotations based on ontologies. Chapter \ref{sec:lsa} discusses Latent Semantic Analysis method, its deficiencies, and presents an approach for improving LSA's precision by including semantic annotations in the method. Chapter \ref{sec:implementation} presents the implementation and makes an evaluation of the results achieved in this work. And finally, conclusions are drawn in Chapter \ref{sec:conclusion}, along with some limitations from the current study and outlook for a future research.   \\ 
