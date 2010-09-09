@@ -22,7 +22,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * User: avelinsk
  * Date: 11.08.2010
  *
- * The class creates a Semantic Space using Latent Semantic Analysis (LSA) algorithm.
+ * Creates a Semantic Space using Latent Semantic Analysis algo.
  */
 public class LSA {
     private final static Log log = LogFactory.getLog(LSA.class);
@@ -140,6 +140,7 @@ public class LSA {
      */
     protected void logProps(){
         Properties sysprops = System.getProperties();
+      
         for(Enumeration en = sysprops.propertyNames(); en.hasMoreElements(); ){
             String key = (String) en.nextElement();
             String value = sysprops.getProperty(key);
@@ -159,6 +160,7 @@ public class LSA {
         props.put("verbose","true");
 
         IteratorFactory.setProperties(props);
+      
         return props;
     }
 

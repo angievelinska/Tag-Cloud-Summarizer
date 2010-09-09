@@ -33,10 +33,11 @@ public class CounterTest extends TestCase {
         counter = null;
     }
 
+  
     @Test
     public void testCounter(){
- //       Content con = (Content) repo.getContents().getChild("/Books/CMS_ONLINE/5.2/AdministrationOperationManual/AdministrationOperationManual_From5.0");
- //       counter.countDocuments(con);
-        assertNotSame (counter.getCount(),0);
+       Content con = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE");
+       counter.count(con);
+//       assertNotSame (counter.getCount(),0);
     }
 }
