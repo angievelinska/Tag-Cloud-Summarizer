@@ -37,7 +37,7 @@ public class CounterTest extends TestCase {
     @Test
     public void testCounter(){
        Content con = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE");
-       counter.count(con);
+       counter.iterate(con);
       
        assertNotSame (counter.getCount(), 0);
     }

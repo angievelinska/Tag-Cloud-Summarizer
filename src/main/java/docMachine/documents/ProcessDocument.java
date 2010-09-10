@@ -136,4 +136,9 @@ public class ProcessDocument extends AbstractDocuments{
        this.serializeToHTML(secContent.getId(),buf.toString());
        }
     }
+
+  @Override
+  public void getTextsForSection(Content section) {
+    //To change body of implemented methods use File | Settings | File Templates.
+  }
 }
