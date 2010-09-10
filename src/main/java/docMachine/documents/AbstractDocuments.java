@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * TODO: work more on search tree algo
+ * 
  * User: avelinsk
  * Date: 10.09.2010
  */
@@ -39,35 +41,6 @@ public abstract class AbstractDocuments {
        }
     }
 
-/*    //CMS_ONLINE
-    Set<Content> children = rootElement.getChildren();
-    log.info("Content type: "+rootElement.getType().getName());
-
-    // 5.1, 5.2, SoSo/SSE
-    for(Iterator<Content> iter = children.iterator();iter.hasNext();){
-      Content content = iter.next();
-      log.info("No of children: "+children.size());
-      
-      if (!content.getType().getName().equals("Book")){
-        Set<Content> folders = content.getChildren();
-        log.info("No of children: "+folders.size());
-
-        for (Iterator<Content> it = folders.iterator();it.hasNext();){
-          Content f = it.next();
-          Set<Content> books = f.getChildrenWithType("Book");
-
-          for(Iterator<Content> iterator = books.iterator();iterator.hasNext();){
-            Content book = iterator.next();
-            List<Content> sections = book.getLinks("Sections");
-
-            for (Iterator<Content> iterat = sections.iterator(); iterat.hasNext();){
-
-              getTextsInSection(iterat.next());
-            }
-          }
-        }
-      }
-    }*/
   }
 
   public List<Content> getBooks(Content rootElement){

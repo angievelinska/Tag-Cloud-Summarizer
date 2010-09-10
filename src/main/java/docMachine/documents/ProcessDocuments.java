@@ -49,7 +49,7 @@ public class ProcessDocuments extends AbstractDocuments{
 
 
    private void serialize(String id, String buf){
-     StringBuffer sb = new  StringBuffer(path);
+     StringBuffer sb = new  StringBuffer();
      sb.append(id.substring(id.lastIndexOf("/")+1));
      sb.append(extension);
 
@@ -74,28 +74,5 @@ public class ProcessDocuments extends AbstractDocuments{
 
      log.info("*** File created: "+sb.toString());
    }
-/*
 
-
-    *//**
-     * Retrieves document sections and serializes them.
-     *
-     * @param repository
-     *//*
-    public void callTextSerializer(ContentRepository repository){
-     Content secRoot = repository.getRoot();
-     // map of section id, section name
-     // secName            secContent
-     Map<String,String> sections = DocumentList.valueOf();
-     Iterator iter = sections.entrySet().iterator();
-     while (iter.hasNext()){
-       Map.Entry entry = (Map.Entry) iter.next();
-       String secName = (String) entry.getValue();
-       Content secContent = (Content)secRoot.getChild(secName);
-
-       buf = new StringBuffer();
-       this.getTextsInSection(secContent);
-       this.serialize(secContent.getId(),buf.toString());
-       }
-    }*/
 }
