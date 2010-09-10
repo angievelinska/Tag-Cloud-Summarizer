@@ -1,4 +1,4 @@
-package docMachine.documents;
+package docMachine.connect;
 
 import docMachine.connect.DocumentList;
 import junit.framework.Test;
@@ -7,13 +7,13 @@ import junit.framework.TestSuite;
 
 import java.util.Map;
 
-public class DocumentsTest extends TestCase {
+public class DocumentListTest extends TestCase {
 
-    public DocumentsTest(String name) {
+    public DocumentListTest(String name) {
         super(name);
     }
 
-    public void setUp() throws Exception {
+  public void setUp() throws Exception {
         super.setUp();
     }
 
@@ -28,6 +28,6 @@ public class DocumentsTest extends TestCase {
     }
 
     public static Test suite() {
-        return new TestSuite(DocumentsTest.class);
+        return new TestSuite(DocumentListTest.class);
     }
 }

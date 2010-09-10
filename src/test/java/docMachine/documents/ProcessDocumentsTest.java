@@ -1,20 +1,20 @@
-package docMachine.connect;
+package docMachine.documents;
 
 import com.coremedia.cap.content.ContentRepository;
-import docMachine.documents.ProcessDocument;
+import docMachine.connect.ConnectDocMachine;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 
-public class ProcessDocumentTest {
-    ProcessDocument pd;
+public class ProcessDocumentsTest {
+    ProcessDocuments pd;
     ConnectDocMachine cdm;
     ContentRepository repo;
 
     @Before
     public void setUp() throws Exception {
-      pd = new ProcessDocument();
+      pd = new ProcessDocuments();
       cdm = new ConnectDocMachine();
       repo = cdm.openConnection();
       pd.callTextSerializer(repo);
@@ -26,8 +26,8 @@ public class ProcessDocumentTest {
     }
 
     @Test
-    public void testCallDocumentSerializer(){
-        
+    public void testProcessDocuments(){
+
     }
    
 }

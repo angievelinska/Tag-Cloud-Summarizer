@@ -39,4 +39,5 @@ public abstract class AbstractDocuments {
   }
 
   public abstract void getTextsForSection(Content section);
+  
 }

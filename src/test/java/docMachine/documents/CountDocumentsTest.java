@@ -8,21 +8,21 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CounterTest extends TestCase {
+public class CountDocumentsTest extends TestCase {
     ConnectDocMachine conn;
     ContentRepository repo;
-    Counter counter;
+    CountDocuments counter;
 
-    public CounterTest(){
+    public CountDocumentsTest(){
         super();
     }
 
-    @Before
+  @Before
     public void setUp() throws Exception {
         super.setUp();
         conn = new ConnectDocMachine();
         repo = conn.openConnection();
-        counter = new Counter();
+        counter = new CountDocuments();
     }
 
     @After
