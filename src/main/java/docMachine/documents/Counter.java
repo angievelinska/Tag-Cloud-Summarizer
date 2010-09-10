@@ -12,7 +12,7 @@ import java.util.Set;
  *
  * TODO: refactor
  */
-public class Counter {
+public class Counter extends AbstractDocuments {
   private final static org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(Counter.class);
   private int counter = 0;
 

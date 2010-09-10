@@ -1,8 +1,8 @@
-package docMachine.connect;
+package docMachine.documents;
 
 import com.coremedia.cap.content.Content;
 import com.coremedia.cap.content.ContentRepository;
-import docMachine.documents.Documents;
+import docMachine.connect.DocumentList;
 
 import java.io.*;
 import java.util.Iterator;
@@ -13,8 +13,10 @@ import java.util.Map;
  * 
  * User: avelinsk
  * Date: 26.05.2010
+ *
+ * TODO: refactor
  */
-public class ProcessDocument {
+public class ProcessDocument extends AbstractDocuments{
     private static final String rootDir =  "/Books/CMS_ONLINE/5.2/UserManual";
     private static final String path = "output/";
     private static final String extension = ".html";
@@ -119,7 +121,7 @@ public class ProcessDocument {
     public void callTextSerializer(ContentRepository repository){
      Content secRoot = repository.getRoot();
 
-     Map<String,String> sections = Documents.valueOf();
+     Map<String,String> sections = DocumentList.valueOf();
      Iterator iter = sections.entrySet().iterator();
      while (iter.hasNext()){
        Map.Entry entry = (Map.Entry) iter.next();

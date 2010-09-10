@@ -1,6 +1,7 @@
 package docMachine.connect;
 
 import com.coremedia.cap.content.ContentRepository;
+import docMachine.documents.ProcessDocument;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

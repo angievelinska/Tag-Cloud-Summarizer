@@ -1,5 +1,6 @@
 package docMachine.documents;
 
+import docMachine.connect.DocumentList;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -21,8 +22,8 @@ public class DocumentsTest extends TestCase {
     }
 
     public void testValueOf(){
-        assertTrue(Documents.valueOf() instanceof Map);
-        assertTrue(Documents.valueOf().entrySet().size() > 0);
+        assertTrue(DocumentList.valueOf() instanceof Map);
+        assertTrue(DocumentList.valueOf().entrySet().size() > 0);
 
     }
 

@@ -1,4 +1,4 @@
-package docMachine.documents;
+package docMachine.connect;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,11 +7,11 @@ import java.util.Map;
  * Contains a static list with sections from documents in DocMachine.
  * Please, add only paths to sections, not folders.
  */
-public class Documents {
+public class DocumentList {
      static Map<String,String> docs;
     
 
-     protected Documents(){
+     protected DocumentList(){
          super();
 
          docs = new HashMap<String,String>();
@@ -42,7 +42,7 @@ public class Documents {
          docs.put("coremedia:///cap/content/242242","/Books/CMS_ONLINE/5.2/WorkflowDeveloperManual/20_20_OverviewAndNavigation/30_ContentDelivery/ContentDelivery");
 
          /******  User Manual 5.2 ******/
-         // Editor User Manual - Publication of Documents and Folders
+         // Editor User Manual - Publication of DocumentList and Folders
          docs.put("coremedia:///cap/content/254966","/Books/CMS_ONLINE/5.2/UserManual/20_0020-B-BasicKnowledge/20_0040-en-Resources-section/50_0010-en-Publication/0010-en-Publication");
 
          /******  Unified API Developer Manual 5.2  ******/
@@ -53,8 +53,8 @@ public class Documents {
          docs.put("coremedia:///cap/content/241796","/Books/CMS_ONLINE/5.2/UnifiedAPIDeveloperManual/50_Common Concepts/100_Sessions/Sessions");
        }
 
-    public static Map<String,String> valueOf(){
-        new Documents();
+  public static Map<String,String> valueOf(){
+        new DocumentList();
         return docs;
 
     }
