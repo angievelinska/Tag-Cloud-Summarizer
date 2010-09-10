@@ -3,59 +3,58 @@ package docMachine.documents;
 import com.coremedia.cap.content.Content;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 /**
  * User: avelinsk
  * Date: 02.08.2010
+ *
+ * TODO: refactor
  */
 public class Counter {
   private final static org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(Counter.class);
   private int counter = 0;
 
   public void count(Content rootElement){
-
+    //CMS_ONLINE
     Set<Content>  children = rootElement.getChildren();
-    log.info("Number of folders: "+children.size());
-    Iterator<Content> iter = children.iterator();
 
-    while(iter.hasNext()){
+    // 5.1, 5.2, SoSo/SSE
+    for(Iterator<Content> iter = children.iterator();iter.hasNext();){
       Content folder = iter.next();
       Set<Content> folders = folder.getChildren();
-      log.info("Number of folders: "+folders.size());
 
       for (Iterator<Content> it = folders.iterator();it.hasNext();){
         Content f = it.next();
-        f.getLinks("Sections");
-        Set<Content> sections = f.getChildrenWithType("Section");
-        Iterator<Content> iterator = sections.iterator();
+        Set<Content> books = f.getChildrenWithType("Book");
 
-        while(iterator.hasNext()){
-          Content section = iterator.next();
-          getDocsInSection(section);
+        for(Iterator<Content> iterator = books.iterator();iterator.hasNext();){
+          Content book = iterator.next();
+          List<Content> sections = book.getLinks("Sections");
+
+          for (Iterator<Content> iterat = sections.iterator(); iterat.hasNext();){
+
+            getDocsInSection(iterat.next());
+          }
         }
-
       }
     }
   }
 
     public void getDocsInSection(Content rootElement){
-
-     log.info("name of element: "+rootElement.getName());
-     log.info("root element type is:  "+rootElement.getType().getName());
-
-      if (rootElement.getType().getName().equals("Section")){
+    if (rootElement.getType().getName().equals("Section")){
 
         for (Content article: rootElement.getLinks("Articles")){
-           log.info("element type is:..."+article.getType().getName());
-           log.info("name of element:"+article.getName());
-           if (article.getType().getName().equals("MLArticle")){
+            if (article.getType().getName().equals("MLArticle")){
+
                counter++;
            }
         }
 
         if (rootElement.getLinks("Sections").size()>0){
           for (Content section:rootElement.getLinks("Sections")){
+
               getDocsInSection(section);
           }
         }
@@ -67,7 +66,8 @@ public class Counter {
   }
 
   public int getCount(){
-    log.info("Number of Texts published as online documentation: "+counter);
+    log.info("Number of sections/texts published as online documentation: "+counter);
+    
     return counter;
   }
 

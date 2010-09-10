@@ -1,11 +1,9 @@
 package docMachine.connect;
 
+import com.coremedia.cap.content.ContentRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import com.coremedia.cap.content.ContentRepository;
-import docMachine.connect.ConnectDocMachine;
-import docMachine.connect.ProcessDocument;
 
 
 public class ProcessDocumentTest {
@@ -15,15 +13,15 @@ public class ProcessDocumentTest {
 
     @Before
     public void setUp() throws Exception {
-        pd = new ProcessDocument();
-        cdm = new ConnectDocMachine();
-        repo = cdm.openConnection();
-        pd.callTextSerializer(repo);
+      pd = new ProcessDocument();
+      cdm = new ConnectDocMachine();
+      repo = cdm.openConnection();
+      pd.callTextSerializer(repo);
     }
 
     @After
     public void tearDown() throws Exception {
-        cdm.closeConnection();
+      cdm.closeConnection();
     }
 
     @Test

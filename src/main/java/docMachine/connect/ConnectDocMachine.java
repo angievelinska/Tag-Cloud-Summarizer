@@ -13,11 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
  * User: avelinsk
  * Date: 28.04.2010
- * Time: 18:21:10
- * To change this template use File | Settings | File Templates.
  */
 public class ConnectDocMachine {
     private CapConnection connection;
@@ -72,19 +69,4 @@ public class ConnectDocMachine {
             this.connection.close();
         }
     }
-
-
-/**
- *      docMachine.connect to DocMachine
- */
-    public static void main(String[] args){
-        ConnectDocMachine ct = new ConnectDocMachine();
-        
-        try{
-            ct.openConnection();
-        }  finally {
-            ct.closeConnection();
-        }
-    }
-
 }
