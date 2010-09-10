@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * Contains a static list with sections from documents in DocMachine.
- * Please, add only paths to sections, not folders.
+ * to be removed.
  */
 public class DocumentList {
      static Map<String,String> docs;

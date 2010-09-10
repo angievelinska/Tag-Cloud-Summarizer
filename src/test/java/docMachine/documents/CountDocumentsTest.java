@@ -11,9 +11,9 @@ import org.junit.Test;
 public class CountDocumentsTest extends TestCase {
     ConnectDocMachine conn;
     ContentRepository repo;
-    CountDocuments counter;
+    CountDocuments countDocuments;
 
-    public CountDocumentsTest(){
+  public CountDocumentsTest(){
         super();
     }
 
@@ -22,7 +22,7 @@ public class CountDocumentsTest extends TestCase {
         super.setUp();
         conn = new ConnectDocMachine();
         repo = conn.openConnection();
-        counter = new CountDocuments();
+        countDocuments = new CountDocuments();
     }
 
     @After
@@ -30,15 +30,31 @@ public class CountDocumentsTest extends TestCase {
         conn.closeConnection();
         conn = null;
         repo = null;
-        counter = null;
+        countDocuments = null;
     }
 
-  
     @Test
-    public void testCounter(){
+    public void testCounter1(){
        Content con = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE");
-       counter.iterate(con);
+       countDocuments.iterate(con);
       
-       assertNotSame (counter.getCount(), 0);
+       assertNotSame (countDocuments.getCount(), 0);
     }
+
+  @Test
+  public void testCounter2(){
+    Content content = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE/5.2/WhatsNewInCMS2008");
+    countDocuments.iterate(content);
+
+    assertNotSame(countDocuments.getCount(), 0);
+  }
+
+  @Test
+  public void testCounter3(){
+    Content content = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE/SoSo");
+    countDocuments.iterate(content);
+
+    assertNotSame(countDocuments.getCount(), 0);
+  }
+  
 }
