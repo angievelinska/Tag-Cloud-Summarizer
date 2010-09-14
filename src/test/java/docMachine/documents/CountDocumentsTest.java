@@ -33,13 +33,14 @@ public class CountDocumentsTest extends TestCase {
         countDocuments = null;
     }
 
-    @Test
+// too big, for now commented out
+/*    @Test
     public void testCounter1(){
        Content con = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE");
        countDocuments.iterate(con);
       
        assertNotSame (countDocuments.getCount(), 0);
-    }
+    }*/
 
   @Test
   public void testCounter2(){

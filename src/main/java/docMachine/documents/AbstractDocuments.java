@@ -16,21 +16,14 @@ import java.util.Set;
  * Date: 10.09.2010
  */
 public abstract class AbstractDocuments {
-    private  final static Log log = LogFactory.getLog(AbstractDocuments.class);
-  
+  private  final static Log log = LogFactory.getLog(AbstractDocuments.class);
+  List<Content> books;
+
     public final void iterate(Content rootElement){
-      List<Content> books;
-      Set<Content> children = rootElement.getChildren();
+      books = new ArrayList<Content>();
 
-      books = getBooks(rootElement);
-      log.info("Content type: "+rootElement.getType().getName());
-
-      while(books.size()==0){
-        for (Iterator<Content> it = children.iterator(); it.hasNext(); ){
-          books = getBooks(it.next());
-          log.info("No of children: "+children.size());
-        }
-      }
+      getBooks(rootElement);
+      log.info("No of books: "+books.size());
 
      for(Iterator<Content> iterator = books.iterator();iterator.hasNext();){
        Content book = iterator.next();
@@ -43,24 +36,18 @@ public abstract class AbstractDocuments {
 
   }
 
-  public List<Content> getBooks(Content rootElement){
-    List<Content> books = new ArrayList<Content>();
+  // depth first search in the document tree
+  public void getBooks(Content rootElement){
     Set<Content> children = rootElement.getChildren();
 
     if (rootElement.getType().getName().equals("Book")){
       books.add(rootElement);
-      return books;
     }
 
     for (Iterator<Content> iter = children.iterator(); iter.hasNext(); ){
       rootElement = iter.next();
-      if (rootElement.getType().getName().equals("Book")){
-        books.add(rootElement);
-      }
+      getBooks(rootElement);
     }
-
-    log.info("No of books: "+books.size());
-    return books;
   }
 
   public void getTextsInSection(Content rootElement){
