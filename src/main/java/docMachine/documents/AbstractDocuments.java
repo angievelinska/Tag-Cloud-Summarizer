@@ -17,7 +17,7 @@ import java.util.Set;
  */
 public abstract class AbstractDocuments {
   private  final static Log log = LogFactory.getLog(AbstractDocuments.class);
-  List<Content> books;
+  private List<Content> books;
 
     public final void iterate(Content rootElement){
       books = new ArrayList<Content>();
