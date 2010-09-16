@@ -13,6 +13,7 @@ again
 against
 ain't
 all
+All
 allow
 allows
 almost
@@ -27,6 +28,7 @@ among
 amongst
 an
 and
+And
 another
 any
 anybody
@@ -126,6 +128,8 @@ e
 each
 edu
 eg
+e.g.
+(e.g.
 eight
 either
 else
@@ -135,6 +139,7 @@ entirely
 especially
 et
 etc
+etc.
 even
 ever
 every
@@ -156,11 +161,13 @@ followed
 following
 follows
 for
+For
 former
 formerly
 forth
 four
 from
+From
 further
 furthermore
 g
@@ -216,9 +223,11 @@ i'm
 i've
 ie
 if
+If
 ignored
 immediate
 in
+In
 inasmuch
 inc
 indeed
@@ -233,6 +242,7 @@ inward
 is
 isn't
 it
+It
 it'd
 it'll
 it's
@@ -259,6 +269,7 @@ lest
 let
 let's
 like
+(like
 liked
 likely
 little
@@ -281,6 +292,7 @@ moreover
 most
 mostly
 much
+much.
 must
 my
 myself
@@ -300,6 +312,8 @@ new
 next
 nine
 no
+No
+No.
 nobody
 non
 none
@@ -377,6 +391,8 @@ says
 second
 secondly
 see
+(see
+See
 seeing
 seem
 seemed
@@ -398,6 +414,8 @@ shouldn't
 since
 six
 so
+so,
+So,
 some
 somebody
 somehow
@@ -429,6 +447,7 @@ thank
 thanks
 thanx
 that
+that:
 that's
 thats
 the
@@ -439,6 +458,7 @@ themselves
 then
 thence
 there
+There
 there's
 thereafter
 thereby
@@ -448,6 +468,7 @@ theres
 thereupon
 these
 they
+They
 they'd
 they'll
 they're
@@ -455,6 +476,7 @@ they've
 think
 third
 this
+This
 thorough
 thoroughly
 those
@@ -465,8 +487,11 @@ throughout
 thru
 thus
 to
+To
 together
 too
+too.
+too:
 took
 toward
 towards
@@ -509,6 +534,7 @@ was
 wasn't
 way
 we
+We
 we'd
 we'll
 we're
@@ -522,6 +548,7 @@ what
 what's
 whatever
 when
+When
 whence
 whenever
 where
@@ -559,6 +586,8 @@ y
 yes
 yet
 you
+(you
+You
 you'd
 you'll
 you're
@@ -579,3 +608,17 @@ a
 '
 "
 ;
+-
+3.
+4.2
+4.2.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9

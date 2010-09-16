@@ -10,3 +10,9 @@ Project TODOs
 2. Package the app as a jar, start by starting a webapp server, deploying it, opening a browser...
 3. fix the warnings and errors displayed by sonar: mvn org.codehaus.sonar:sonar-maven3-plugin:2.2:sonar -DskipTests=true
 4. check SVD in lsa - after decomposition there are more than 300 dimensions.
+5. install Oracle XE on personal laptop, test serverimport
+6. Normalize tokens before LSA - decapitalize
+
+Questions
+-------------
+1. How to integrate indexing in Lucene with SVD in LSA? SVD uses a matrix, no indexing, no feedables.
