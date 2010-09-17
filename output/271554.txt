@@ -1,8 +1,0 @@
-
-
-There exist various request parameters which are interpreted by different classes. The main interpreters are:
-
-ElementWorkerController  
-AbstractElementWorker 
-SeekFilter classes.
-

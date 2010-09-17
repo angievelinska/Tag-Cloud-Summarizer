@@ -1,4 +1,0 @@
-
-
- Name Description Type Default Example name unique name of the relationship type String  Friendship uri unique of the relationship type String  http://ww.coremedia.com/socialsoftware/examples/Friendship isAbstract whether this is only an abstract type boolean false false sourceRole a definition of the source role RoleAnnotation  sourceRole={@RoleAnnotation(name="user" ¿)} targetRole a definition of the target role RoleAnnotation  targetRole={@RoleAnnotation(name="friend" ¿)}
-

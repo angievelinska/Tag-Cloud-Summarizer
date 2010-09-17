@@ -1,7 +1,0 @@
-
-
-Search Engine Feeder
-
-To enable full-text search for user generated content, user profiles, and custom types stored in the repository, SSE ships with extensions to the CAE Feeder (see the Content Application Developer Manual).
-
-The CAE feeder is deployed as a separate, single component. A SSE trigger listens to repository events via the client library to send new or updated objects to the search engine indexer. Section XXX describes how to customize the SSE trigger and take control over which beans and bean properties will be indexed by an attached full-text search engine.

@@ -1,3 +1,0 @@
-
-
-The xsd files must be placed in the classpath in package baseUrl.

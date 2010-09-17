@@ -1,3 +1,0 @@
-
-
-The CascadingRules working recursivly through all dependent resources of a resource. Therefore you must handle them with care. 

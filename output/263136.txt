@@ -1,4 +1,0 @@
-
-
- Certified versions Supported versions Java 6 Update 4 (or higher update levels) 
-

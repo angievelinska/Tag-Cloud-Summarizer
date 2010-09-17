@@ -1,7 +1,0 @@
-
-
-Bean wrappers for generic elements
-
-Based on the generic core model, an application uses resources and relationships of concretely defined types. It is important to know that the repository can only store resources/relationships of concrete types. Similar to CMS Content and ContentBeans, resource and relationship instances are wrapped by strongly typed beans matching the underlying element type. These bean types extend the ResourceBean and RelationshipBean interfaces, respectively. Since strongly typed bean classes usually exist for all defined element types, in many cases an application developer can ignore the fact that the bean implementation is based on the generic core model. However, it helps to know about this layered design and understanding it is essential to a developer planning to define application specific element types.
-
-A com.coremedia.sse.beans.ElementBeanFactory is responsible for creating an ElementBean from an Element.

@@ -1,8 +1,0 @@
-
-
-The SeekAndWork Tool has different configuration hooks, this section summarizes the configuration possibilities.
-
-The ElementWorkerController is the main entry point. You might inject different ElementWorker implementations or use a request parameter (worker) to configure the ElementWorker bean which is executed.
-
-One implementation of ElementWorker is the DefaultElementWorker. You may define different configured DefaultElementWorker beans in your application context in order to do different jobs. The ElementWorker for the Destroy tool looks like the following, for example:
-

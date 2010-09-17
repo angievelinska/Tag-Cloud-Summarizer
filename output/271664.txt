@@ -1,3 +1,0 @@
-
-
-The property 'accessAllowedPredicate' defines the roles that a user must hold in order to access the view. Any person accessing a management view must hold at least one of the roles. Predicates can be defined in /spring/sse-editor/editor-authorization.xml. E.g. you could define a new custom predicate like this:

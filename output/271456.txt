@@ -1,3 +1,0 @@
-
-
-The DefaultElementWorker is an implementation of the class ElementWorker. It creates a Query for a defined resource type, extends this Query, creates a defined CommandArgument which is passed to an injected command, and finally creates a ResultObject which is passed back to the HTTP interface. The injected command (property: seekAndWorkOnElementsCommand) needs to accept the class SeekAndWorkOnElementsCommandArg as a command argument. Commands accepting SeekAndWorkOnElementsCommandArg will further be called SeekAndWork commands.

@@ -1,5 +1,0 @@
-
-
-New Component Names since Version 4.1 
-
-As product and component names underwent a thorough renaming procedure, new and old names might appear simultaneously within this manual. We try to adapt the new nomenclature as consistent as possible, but as old component names shine through in the software itself, we stick to these in case of doubt. 

@@ -1,5 +1,0 @@
-
-
-Tab Access Control
-
-Per default, the Approval Tab is accessible to users from the predefined Content Server groups 'administratoren' (the administrators group) and 'editor' (the general editors' group). The default settings are stored in spring configuration files in the coremedia-sse-editor-cms-*-config.jar. These defaults can be overwritten by providing settings in the configuration files in /spring/sse-editor. A different access control can be configured in /spring/sse-editor/editor-managementviews.xml. You can define which predicate determines access for the views approvalView, userContentView and userManagementView. The following example reduces access to the user content tab to the administrator: 

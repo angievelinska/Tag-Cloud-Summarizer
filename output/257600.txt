@@ -1,6 +1,0 @@
-
-
-Wouldn't it be nice to combine the features for your content applications from a library of pre-fabricated Plug-Ins? Newsletter, Imagemaps, Tagclouds - plugging together what you need to make it special and stunning with the least effort - that is the vision. Maybe you can buy a Plug-In from a CoreMedia partner, who already solved your requirement before, or reuse one you developed once in a project or even if there is no plug-in for your custom functionality yet, at least an clear modular development concept for your project would be desirable.
-
-With the "Modular Configuration" CoreMedia get's closer to this vision. To offer you a flexible content management system which you can easily extend, CoreMedia improved the way of configuring & structuring web applications in the Content Application Engine and the whole CMS.
-

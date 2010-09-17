@@ -1,3 +1,0 @@
-
-
-As a CommandArgument the class SeekAndWorkOnElementsCommandArg is used. It takes the collected resources coming from the executed Query, a list of CascadingResources (see the description below) and a simulate property. The list of CascadingRules is created by receiving the CascadingRules defined with the HTTP request parameters "cascading_rule" from the spring application context. Additionally, the configured defaultCascadingRules set with setDefaultCascadingDestroyRules(List) are also used. 

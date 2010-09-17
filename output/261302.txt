@@ -1,7 +1,0 @@
-
-
-The CoreMedia SSE requires a pre-installed CoreMedia CMS 2008 platform to be available.
-
-Supported versions are given in the table below.
-
-Note that an installed and configured FAST InStream search engine is also required in order to use the Social Software Feeder. This is also noted in the table below.

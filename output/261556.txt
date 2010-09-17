@@ -1,9 +1,0 @@
-
-
- NamePasswordVerifier implementation* Description PasswordCardVerifier 
-
-Searches for an existing User resource with a PasswordCard profile card and a matching password hash in the profile card's "password" property.
-
-This is the implementation class of the default "namePasswordVerifier" bean in sse-authentication.xml. LdapNamePasswordVerifier Attempts to bind to a LDAP directory server using the given name/password combination. CapConnectionAuthenticator Validates the domain/name/password combination using the #isValidLogin method of a configured CapConnection.
-
-*package com.coremedia.sseimpl.base.authentication

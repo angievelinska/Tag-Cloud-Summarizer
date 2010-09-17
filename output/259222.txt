@@ -1,7 +1,0 @@
-
-
-You do not have to define the schema of a markup property for abstract element types, but if you do so you can not override it with subtypes. Similarly, the content type of a blob property may not be changed in subtypes of the type declaring the property.
-
-The Resource interface has an additional property UUID, which is a read-only, stable, and universally unique identifier of the resource.
-
-Relationships are defined as a bidirectional link between two resources. A relationship has a source and a target, each of which is restricted to a ResourceType. In the meta model (the RelationshipType), the two endpoints of a relationship are represented as the source Role and target Role. Roles may be unspecified in abstract relationship types, but once a relationship type declares roles, they may not be overridden by subtypes.

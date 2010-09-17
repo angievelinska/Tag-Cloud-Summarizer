@@ -1,6 +1,0 @@
-
-
-Localization: Adding custom messages
-
-Custom messages keys shall be added as a resource bundle com.coremedia.sse.editor.custom.Editor, i.e. add localized resource files named Editor_en.properties, Editor_de.properties, etc. to the directory /WEB-INF/classes/com/coremedia/sse/editor/.
-

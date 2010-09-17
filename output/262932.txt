@@ -1,7 +1,0 @@
-
-
-The Recommendation Engine consists of two parts: a batch process that performs the analysis and a service for reading recommendations from the database. 
-
-While both parts are installed by default for simple setups, it is generally advisable to install the batch process part in a separate, non-delivery CAE when setting up a live deployment. In this scenario, the delivery CAEs will only contain the service part of the Recommendation Engine. Section describes how to remove the Recommendation Engine from a CAE.
-
-The sections below cover the configuration of the Recommendation Engine.

@@ -1,3 +1,0 @@
-
-
-The SSE Tools provides some common administrative tools which solve use cases like "destroy resources" or "seek and work on resources".

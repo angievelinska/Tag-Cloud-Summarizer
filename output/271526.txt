@@ -1,3 +1,0 @@
-
-
-The DestroyElementsCommand is used by the Destroy tool to finally delete collected resources and relationships from the database.

@@ -1,6 +1,0 @@
-
-
-The DefaultElementWorker implementation works on a set of elements. The initial resources are collected by creating a Query for a ResourceType defined by the HTTP parameter: resource_type. The bean property: defaultQueryResourceType is used if no resource_type parameter is defined, the default is the resource element type (the root of all resource types).
-
-The created query is then extended by calling the configured SeekFilter with the query. A list of default filters might be set with setDefaultSeekFilter(). Additionally filter bean names provided as "filter" HTTP request parameters are used to receive SeekFilter beans from the spring application context for extending the initial Query.
-

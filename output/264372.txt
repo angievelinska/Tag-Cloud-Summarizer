@@ -1,5 +1,0 @@
-
-
-You can approve any user-generated content item you have found in the User Content tab. Click on it and you will see a single approval view similar to that in the screenshot above. In the approval area to the left, the information about the current approval status of the content item is presented together with the details about the date and the name of the approver. If the approval status has been changed previously, approval history details are shown below.
-
-You can change the approval status of the chosen user-generated content item, comment your decision in the comment field, or return back to the User Content list view by clicking onto the [To list] button without changing anything.

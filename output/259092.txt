@@ -1,7 +1,0 @@
-
-
-BaseModule: the main entry point for SSE applications
-
-A set of commonly used resource and relationship types is available in the so called ¿base module¿, located in com.coremedia.sse.base and subpackages. In addition to resource and relationship types and bean classes to wrap them, the base module contains special purpose commands and queries for these types. In many cases, the types provided by the base module, will be sufficient for an application and there will be no need to extend the type model. The interface BaseModule exposes convenience methods for domain specific queries as well as convenient getters for all the ElementType and Role objects defined by the base module.
-
-Application module entry point beans, such as the implementation of BaseModule, are a good candidate for injection into ElementBeans, controllers, and other parts of an application in order to access the functionality provided by the Social Software Extension. After installation of the sse-template web application template, the BaseModule implementation is available as bean "baseModule" in the application context.

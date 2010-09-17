@@ -1,9 +1,0 @@
-
-
-The Users Tab is used for carrying out actions related to the users of your social software application.
-
-The following actions are covered in this section:
-
-Viewing user profiles
-Controlling user access (blocking and deleting users)
-Managing group membership for users
