@@ -1,5 +1,6 @@
 .idea/*
 .idea/**/*
+out/*
 target/*
-sample.*
 *.iml
+sample.*
