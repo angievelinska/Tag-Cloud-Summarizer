@@ -1,0 +1,5 @@
+
+
+It contains the default elementCollectorCommand and a custom AbstractElementWorkerCommand which destroys the collected resources and relationships.
+
+The other properties (repository, defaultQueryResourceType) of the example bean are self-explanatory.

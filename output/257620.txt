@@ -1,0 +1,6 @@
+
+
+The Web becomes alive. Most web pages are not static anymore, personalization, user generated content, tons of requests. It's hard to deliver this dynamic content in time. But apart from the ever changing personalized content, there is often a non-changing static frame of a page. Be it an image, the navigation or the like. 
+
+The new extension to the CoreMedia Content Application Engine is suited to this use case. Having a static part of a web page cached in the Http Cache for fast delivery and adding dynamic fragments directly from the CAE results in the fast delivery of mixed pages. The migration to this new feature is easy, mostly you have to replace the cm:include tag in your jsp-templates with httpcache:include.
+

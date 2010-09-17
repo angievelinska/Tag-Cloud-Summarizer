@@ -1,0 +1,8 @@
+
+
+CoreMedia SSE comes with the core client library and contains additional services, that offer you more functionality:
+
+The Recommendation Service
+Full-text search
+Authentication and session management
+RSS/Atom feeds

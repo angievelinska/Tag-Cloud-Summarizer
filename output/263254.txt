@@ -1,0 +1,6 @@
+
+
+User provider configuration
+
+Define one UserProvider instance per authentication system you would like to integrate. The default base model user provider com.coremedia.sseimpl.base.authentication.DefaultUserProvider authenticates users via a configurable NamePasswordVerifier instance and uses the request name as the User resource's name property value when you call UserProvider#createUser.
+For each DefaultUserProvider implementation, configure a suitable "namePasswordVerifier" bean (interface com.coremedia.sse.base.authentication.NamePasswordVerifier). The following verifier types are predefined:

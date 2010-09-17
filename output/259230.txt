@@ -1,0 +1,55 @@
+
+
+The CoreMedia Social Software Extension comes with pre-defined relationships, such as "Ownership" but you can define your own relationships. This comprises the the following steps:
+
+
+Define a relationship type
+
+
+Register the relationship type
+
+
+Implement the relationship bean
+
+
+Register the relationship bean
+
+As an example a Friendship relationship will be created. That is, a User can define another User as friend. The relationship will have the source role ¿user¿ with a target role ¿friend¿. You also define a property ¿since¿ for the starting date of the friendship.
+
+Define the interface
+
+Defining an own relationship is basically very similar to defining a new resource type. Of course the used annotation differ slightly. An interface to define a friendship between two users would look like this:
+
+import com.coremedia.sse.core.annotations.Property;
+import com.coremedia.sse.core.annotations
+          .RelationshipTypeAnnotation;
+import com.coremedia.sse.core.annotations.RoleAnnotation;
+/**
+ * A friendship relationship.
+ * A user can have many friends.
+ */
+@RelationshipTypeAnnotation(
+        name = "Friendship",
+        uri = "http://www.coremedia.com/socialsoftware
+                    /examples/Friendship",
+        isAbstract = false,
+        sourceRole = {@RoleAnnotation(
+                name = "user",
+                isMultiple = true,
+                resourceType = "User")},
+        targetRole = {@RoleAnnotation(
+                name = "friend",
+                isMultiple = true,
+                resourceType = "User")}
+        )
+public interface Friendship {
+  public static final String NAME="Friendship";
+  /**
+   * Friends since when?
+   * @return start of friendship
+   */
+  @Property
+  Calendar getSince();
+}
+
+You use a RelationshipTypeAnnotation, which requires the definition of roles using RoleTypeAnnotations.

@@ -1,0 +1,5 @@
+
+
+There are two views for managing user generated content. The Approval View is used to check and approve user-generated content before this content is shown on the publicly-accessible area of the site. The User Content View is used to browse through available user-generated content. 
+
+Both views are described in detail in the following sections.

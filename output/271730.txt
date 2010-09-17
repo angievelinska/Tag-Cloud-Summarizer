@@ -1,0 +1,8 @@
+
+
+Example of destroying deleted users including there ProfileCards and generated Content
+
+In order to destroy deleted users including there profile cards and the genereated content you need to define no special filters, but two additional CascadingRules: profileDetailCascadingRule and ownershipCascadingRule. See section for details. And of course we need the resource type name: User. The password is expected to be defined in the property file of the tool. 
+
+bin/cm sse-destroyresources -t User -u admin -p admin -r profileDetailCascadingRule,ownershipCascadingRule 
+-z http://hostname:25282/sse-editor/servlet/tools/seekandwork

@@ -1,0 +1,3 @@
+
+
+Custom XML grammars used in SSE element properties must be registered via spring. Do this according to the following example:

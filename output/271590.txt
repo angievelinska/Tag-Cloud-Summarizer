@@ -1,0 +1,4 @@
+
+
+ Class Parameter Description ElementWorkerController worker The worker which should be executed. AbstractElementWorker/DefaultElementWorker resource_type The ResourceType for which the initial Query should be created. LimitFilter limit Limit for setting a limit at the Query CreatedBeforeFilter created_before Creates a Criterion for all elements created before the given date to the Query ModifiedBeforeFilter modified_before Creates a Criterion for all elements modified before the given date to the Query DeletedBeforeFilter deleted_before Creates a Criterion for all elements deleted before that date to the Query  AbstractElementWorker/DefaultElementWorker filter Instantiates the provided bean names and filters the query with this beans AbstractElementWorker/DefaultElementWorker cascading_rule Instantiates the provided bean names and put them into the command args AbstractElementWorker/DefaultElementWorker simulate Set the simulate property at the command arg
+

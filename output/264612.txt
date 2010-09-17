@@ -1,0 +1,15 @@
+
+
+Taking advantage of ROME modules
+
+In the current release, com.coremedia.feeds is implemented based on ROME. ROME has an extension mechanism called "modules", which can be used by feed item data providers. In order to extend generated feed items with ROME modules, override
+
+FeedItemDataProvider#getExtension(
+   FeedContext context, Object item, 
+   Class<T> extensionType, Object extension) 
+
+and fill the properties of the extension object. Return the extension object, if the extension is supported by your provider implementation. Otherwise, return null.
+
+Feed meta data may be extended in a similar way: call FeedMetaData#setExtensionProvider to set the extension provider, which has a method with the same contract as #getExtension.
+
+Make the extension known to the FeedGeneratorImpl by registering a FeedExtensionDescriptor with the "feedExtensionsRegistration" bean in spring/sse/sse-services-example.xml.

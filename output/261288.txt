@@ -1,0 +1,54 @@
+
+
+Register the relationship type
+
+Register all relationship types by adding bean definitions to the new application context configuration file in the /spring directory, that was already created for registering resource types. Register new relationship types by adding their interface names to the list in the definition of the registry bean using a property customizer.
+
+<customize:append id="baseModuleRelationshipTypesConfig" 
+ bean="sseRelationshipTypes">
+   <list>
+     <value>com.mycompany.example.Friendship</value>
+   </list>
+</customize:append>
+
+
+
+Implement the RelationshipBean
+
+The implementation of relationship bean looks similar to implementations of resource beans, only with a different parent class.
+
+import com.coremedia.sse.base.model.AbstractBaseRelationshipBean;
+import com.coremedia.sse.base.model.User;
+import java.util.Calendar;
+
+public class FriendshipImpl extends AbstractBaseRelationshipBean 
+       implements Friendship{
+
+  public Calendar getSince() {
+    return getRelationship().getDate("since");
+  }
+
+  public User getUser() {
+    return (User) getResourceBean(getRelationship().getType()
+                  .getSourceRole());
+  }
+
+  public User getFriend() {
+    return (User) getResourceBean(getRelationship().getType()
+                  .getTargetRole());
+  }
+}
+
+Access the persisted properties using the meta-model with getRelationship(). If you want to return the resource associated to one role of a relationship, you can use the method getResourceBean(Role role). Please note, that the method already returns a Social Software bean.
+
+You might not need your own implementation of a relationship type. When you do not add additional properties to a type, you can use the same implementation of a bean for all subtypes, as you can see in the example in section.
+
+Register the RelationshipBean
+
+You need to register the implementation of the bean just like you would register an implementation of a resource type or a CMS content bean.
+
+<bean name="sseBeanFactory:Friendship" 
+        scope="prototype"   
+        class="com.coremedia.sse.examples.FriendshipImpl¿
+        parent=¿abstractBaseModuleBean"/>
+

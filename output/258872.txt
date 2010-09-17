@@ -1,0 +1,4 @@
+
+
+ Abbreviation Component ADS CoreMedia Active Delivery Server CAE CoreMedia Content Application Engine PADS CoreMedia ProActive Delivery Server SCT CoreMedia Smart Content Technology SSE Social Software Extension UGC User Generated Content WAGE Web Application Generator Extensions
+

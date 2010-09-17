@@ -1,0 +1,3 @@
+
+
+This chapter describes the steps necessary to install the CoreMedia Social Software Extension, also covering the system requirements and preliminary setup of the system.

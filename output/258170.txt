@@ -1,0 +1,3 @@
+
+
+This chapter gives an overview of the concepts and application programming interface (API) relevant to application developers who plan to integrate the Social Software Extension in their content applications. Consequently, the target audience of the following sections are application developers and it is assumed that the reader is familiar with Java, the Java Servlet API, the Spring framework, and the CoreMedia Content Application Engine.

@@ -1,0 +1,8 @@
+
+
+The Social Software Feeder requires an installed CAE Feeder template, that is part of the scope of delivery of the CoreMedia CMS. For more information on CAE Feeder technology, in particular the database and search engine configuration, see the the CoreMedia CMS Administration and Operations Manual.
+
+To install the Social Software Feeder, proceed as follows:
+Ensure that you have an installed CAE Feeder template, as noted above.
+Copy the directory sse-caefeeder from your unpacked CoreMedia SSE ZIP archive over the directory of the CAE Feeder template.
+Read section for the configuration of the Social Software Feeder.

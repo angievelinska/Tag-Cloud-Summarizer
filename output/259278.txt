@@ -1,0 +1,4 @@
+
+
+ Name Description Type Default Example name A name for the role. String  friend resourceType The type of resources which are allowed for this role. String  User isMultiple Whether more relationships of this type with the same role value are allowed. The value of "isMultiple" is purely informational. It does not define an enforced constraint. boolean  true
+

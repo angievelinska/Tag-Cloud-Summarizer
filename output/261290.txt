@@ -1,0 +1,3 @@
+
+
+The Social Software Extension provides a way to use the CoreMedia Search Engine for full text search. In section you can read about the basic configuration of the search integration. This section describes how you can adapt the search feeding process to your needs and how to actually use the search capability in your own application.

@@ -1,0 +1,4 @@
+
+
+ Product Certified Version Supported Version Solaris Sparc 10, with 32 and 64 Bit Java)  Solaris x86 10, with 32 Bit Java  Red Hat Enterprise Server 10, with 32 Bit Java  SUSE Linux Enterprise Server 10, with 32 Bit Java  IBM AIX (64Bit PowerPC) 5.3, with 64 Bit Java 6 JDK from IBM  Windows Server 2003, with 32 Bit Java 
+

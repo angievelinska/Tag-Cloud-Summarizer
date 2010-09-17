@@ -1,4 +1,5 @@
 a
+A
 a's
 able
 about
@@ -55,6 +56,7 @@ available
 away
 awfully
 b
+base
 be
 became
 because
@@ -242,6 +244,7 @@ inward
 is
 isn't
 it
+it.
 It
 it'd
 it'll
@@ -405,6 +408,8 @@ sensible
 sent
 serious
 seriously
+set,
+set.
 seven
 several
 shall
@@ -519,6 +524,7 @@ useful
 uses
 using
 usually
+(usual
 uucp
 v
 value

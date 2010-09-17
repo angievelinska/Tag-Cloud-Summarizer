@@ -1,0 +1,16 @@
+
+
+It is also possible to define a subset of possible Hibernate configuration properties in the sse.properties file. Note, however, that properties likely to cause unintended repository behavior are overwritten by the system.
+
+Improving PostgreSQL performance
+
+In order to improve the performance of a PostgreSQL database you have to change the default value of the default_statistics_target property located in the postgresql.conf file in the data/ directory of your PostgreSQL installation. This property sets the default statistics target for table columns that have not had a column-specific target set via the ALTER TABLE SET STATISTICS. A larger value increases the time needed to execute ANALYZE, but might improve the quality of the planner's estimates. That will in turn reduce the number of full table scans.
+Change the setting of default_statistics_target to a value >> 10. Try 500 for a start.
+You do not have to restart the database after the change. Execute
+
+<PostgreSQLInstDir>/binpg_ctl.exe reload -D <DataDir> 
+or
+Click Reload Configuration in the Windows PostgreSQL menu.
+3#
+Execute ANALYZE in the SQL-console. You should run ANALYZE on a regular basis, once a night for example.
+

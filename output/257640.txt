@@ -1,0 +1,14 @@
+
+
+Benefits
+
+Faster delivery of pages with mixed dynamic and static content.
+
+Features
+
+Mixing of dynamic and static fragments.
+Use of Edge-Side-Includes
+
+Further Reading
+
+Read the Http Cache section of the Content Application Engine chapter in the Content Application Developer Manual for a description of the new Http Cache features.

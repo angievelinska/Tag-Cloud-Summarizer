@@ -1,0 +1,36 @@
+
+
+Authentication
+
+A user provider (interface com.coremedia.sse.base.authentication.UserProvider) is responsible for validating login requests, mapping authenticated users to SSE User resources, and creating a Subject for the user for authorization purposes. For certain scenarios, a user provider may also support the semi-automatic creation of a User resource for users who have authenticated successfully against an external authentication system, but login for the first time and therefore do not have a corresponding User resource yet.
+
+The code fragment below shows a typical login sequence calling on both the user provider for authentication and the SessionManager to create a new UserSession:
+
+create a new authentication request object and store the given credentials (the type of the authentication request and the nature of the credentials depends on the choice of the user provider implementation). DefaultUserProvider only supports requests of type NamePasswordAuthenticationRequest
+invoke #authenticate on the respective user provider. If the authentication succeeds, "userProvider" returns an AuthenticationToken, otherwise it throws an exception
+retrieve the corresponding User resource representing the authenticated user from the "userProvider": in case of an external authentication system, such as a LDAP directory, no such resource may exist yet and it must be created first, either by guiding users through a registration process to setup their profiles (keep the authentication token to create the session later), or automatically without user intervention. In both cases, call UserProvider#createUser to allow the provider to add authentication system specific information to the user profile. If the local SSE repository is used for authentication (via PasswordCardVerifier, see below), the user resource will always exist upon successful authentication.
+let the "userProvider" create a Subject for the authenticated user and pass the User resource, the token, and the Subject to the "sessionManager" bean in order to complete the login process
+
+    // supported auth request types depend on userProvider 
+    // implementation, here: DefaultUserProvider
+    NamePasswordAuthenticationRequest request = 
+      new NamePasswordAuthenticationRequest(name, password);
+
+    AuthenticationToken token = userProvider.authenticate(request);
+
+    User user = userProvider.getUser(request, token);
+    if (user == null) {
+      // authentication successful, but no User resource yet:
+      // in this case we could present a registration dialog or
+      // transparently create the User resource 
+      // by calling userProvider.createUser(...)
+    }
+
+    ...
+
+    // assumption: user != null exists
+    Subject subject = userProvider.getSubject(token, user);
+
+    UserSession session = 
+    sessionManager.createSession(user, token, subject);
+

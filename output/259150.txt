@@ -1,0 +1,7 @@
+
+
+Repository events
+
+Like other CoreMedia repositories, the Social Software repository supports event listeners, enabling an application to receive notifications on creation, update, and deletion of repository elements. Similar to ContentRepository listeners, the com.coremedia.sse.core.model.Repository interface has methods to add a listener to the live stream of events, or to receive a replay of events from a certain Timestamp on.
+
+Application developers need to implement the RepositoryListener interface to register the listener using Repository#addRepositoryListener.

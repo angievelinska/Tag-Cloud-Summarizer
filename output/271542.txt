@@ -1,0 +1,12 @@
+
+
+The Destroy tool is derived from the SeekAndWork tool. The tool consists of spring configuration and a specific AbstractElementWorkerCommand implementation which destroys collected Elements. 
+
+The example above shows a part of the specific configuration. It shows an DefaultElementWorker configuration which consists of the following properties/beans:
+
+ defaultDestroyFilters - The bean defaultDestroyFilters is a list containing the above described default filters (deletionStateFilter, createdBeforeFilter, modifiedBeforeFilter, deletedBeforeFilter, limitFilter)
+
+seekAndDestroyElementsCommand - A custom configured SeekAndWorkOnElementsCommand bean which looks like the following definition:
+
+
+

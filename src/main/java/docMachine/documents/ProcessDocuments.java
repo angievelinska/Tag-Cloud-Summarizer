@@ -1,12 +1,14 @@
 package docMachine.documents;
 
 import com.coremedia.cap.content.Content;
+import com.coremedia.xml.Markup;
+import com.coremedia.xml.PlaintextSerializer;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Writer;
+import java.io.StringWriter;
 import java.util.List;
 
 /**
@@ -19,13 +21,14 @@ public class ProcessDocuments extends AbstractDocuments{
   private final static org.apache.commons.logging.Log log =
           org.apache.commons.logging.LogFactory.getLog(ProcessDocuments.class);
   private static final String path = "output/";
-  private static final String extension = ".html";
+  private static final String extension = ".txt"; //".html";
 
   
   @Override
   public void processText(Content article){
      StringBuffer buf = new StringBuffer();
      String id = "";
+     Markup markup = null;
 
      for (Content textElement : article.getLinks("Articles")){
 
@@ -34,22 +37,23 @@ public class ProcessDocuments extends AbstractDocuments{
 
         if (languages.size()>0 &&
                 languages.get(0).getString("Name").equalsIgnoreCase("en")){
-          String content = textElement.getMarkup("Content").asXml();
-          buf.append(content);
-          id = textElement.getId();
+          //String content = textElement.getMarkup("Content").asXml();
+          markup = textElement.getMarkup("Content");
 
-          log.info("Appended textElement to buffer: "+ content);
+          //buf.append(content);
+          id = textElement.getId();
+          serialize(id, markup);
+          //log.info("Appended textElement to buffer: "+ content);
         }
       }
     }
-
-    serialize(id, buf.toString());
   }
+
 
   /**
    * TODO: decapitalize words, remove punctuation
    */
-   private void serialize(String id, String buf){
+   private void serialize(String id, Markup markup){
      StringBuffer sb = new  StringBuffer();
      sb.append(id.substring(id.lastIndexOf("/")+1));
      sb.append(extension);
@@ -65,8 +69,9 @@ public class ProcessDocuments extends AbstractDocuments{
      }
 
      try {
-       Writer writer = new BufferedWriter(new FileWriter(outputFile));
-       writer.write(buf);
+       BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
+       String plainText = asPlainText(markup);
+       writer.write(plainText);
        writer.close();
 
      } catch (IOException ex){
@@ -75,5 +80,15 @@ public class ProcessDocuments extends AbstractDocuments{
 
      log.info("*** File created: "+sb.toString());
    }
+
+  private String asPlainText(Markup markup){
+    if (markup ==  null) return "";
+
+    StringWriter writer = new StringWriter();
+    PlaintextSerializer serializer = new PlaintextSerializer(writer);
+    markup.writeOn(serializer);
+
+    return writer.toString();
+  }
 
 }

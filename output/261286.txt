@@ -1,0 +1,46 @@
+
+
+For each property you want to persist you must add a @Property annotation. Markup properties require a schema definition. To do so, add the @Schema annotation. The id of the schema must match a defined XML schema. Predefined schemas are CoreMedia rich text (named coremedia-richtext-1.0) and XHtml (named xhtml-1.0). The registering of custom XML schemas is desribed in section. The supported property types are explained in section.
+
+Restrictions
+
+It is prohibited to change the parent of a resource or the type of a property. You can only add additional properties to existing types. 
+
+Register the Resource Type
+
+Register all resource and relationship types by adding a new application context configuration file to the /spring directory. Register new types by adding their interface names to the list in the definition of the registry bean. The configuration below uses a property customizer to add the resource type definition to the existing ones.
+
+<customize:append id="baseModuleResourceTypesConfig" 
+ bean="sseResourceTypes">
+   <list>
+     <value>com.coremedia.training.resource.MyUserContent
+     </value>
+   </list>
+ </customize:append>
+
+Implement a Resource Bean
+
+Now implement the bean. The class must extend the class AbstractResourceBean or one of its subclasses. To access the persisted properties, you use the method getResource() to access the resource first and then use the getter method for your property type to return the property's value.
+
+package com.coremedia.training.resource;
+ 
+import com.coremedia.sse.base.model.XhtmlUserContent
+import com.coremedia.xml.Markup;
+
+public class MyUserContentImpl extends UserContentImpl 
+                               implements MyUserContent {
+  public Markup getSummary() {
+    return getResource().getMarkup("text");
+  };
+}
+
+Register the Resource Bean
+
+Now register the resource bean in your new configuration file, just as you would register content beans. Define the class definition used to instantiate a resource of this type. Make sure to define that it should not be used as singleton.
+
+<bean name="sseBeanFactory:MyUserContent" 
+        scope="prototype"   
+ class="com.coremedia.training.resource.MyUserContentImpl¿
+        parent="abstractBaseModuleBean"/>
+
+Instead of defining the concrete class, you can also define a factory implementing ElementBeanFactory interface to actually create beans. An example for this is the definition of the ExternalReference bean, which is defined as a factory, which uses the id provider to really create  the bean.

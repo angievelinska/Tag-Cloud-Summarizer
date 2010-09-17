@@ -1,0 +1,10 @@
+
+
+The ElementWorkerController provides the HTTP interface of the SeekAndWork tool. It is integrated into the Management Views and uses simple HTTP authentication. The tool is accessible by users which are in the group of CMS Administrators. The HTTP interface is usually used by the Command line tools explained in section
+
+The main part of the work is delegated to an ElementWorker. The ElementWorker might be injected (Property: elementWorker of bean: elementWorkerController) or an HTTP parameter (worker) containing an ElementWorker bean name might be defined. 
+
+The result of the ElementWorker is used by ElementWorkerController to create a model which is rendered by the CAE rendering engine. 
+
+The controller is accessible over the the following path inside the Management Views application: servlet/tools/seekandwork. For example: http://localhost:8080/sse-editor/servlet/tools/seekandwork
+
