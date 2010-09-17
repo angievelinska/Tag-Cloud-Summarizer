@@ -1,0 +1,5 @@
+
+
+The SSE is provided as a ZIP archive named coremedia-sse-<version>.zip, where version is the version of the software delivered.
+
+The archive contains five directories, whose contents are described in the table below.

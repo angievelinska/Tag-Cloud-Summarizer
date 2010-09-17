@@ -1,0 +1,51 @@
+
+
+Performance Properties
+
+The remaining properties in the sse-flow.properties file are used for tuning performance and result quality for the Recommendation Engine.
+
+The properties are shown in the code block below. 
+
+recommend.flow.user.small.rating.count=25
+recommend.flow.user.moderate.correlation.count=500
+recommend.flow.user.large.rating.count=100000
+recommend.flow.user.half.correlation.count=1
+recommend.flow.user.max.similar=10
+  
+recommend.flow.item.small.rating.count=25
+recommend.flow.item.moderate.correlation.count=500
+recommend.flow.item.large.rating.count=100000
+recommend.flow.item.half.correlation.count=1
+recommend.flow.item.max.similar=10
+ 
+recommend.flow.max.recommendations=10
+ 
+recommend.flow.filepool.buckets=64
+recommend.flow.filepool.buffer=262144
+recommend.flow.execution.nthreads=4
+
+
+Increasing the *.count properties improves the quality of the generated recommendations at the cost of a prolonged running time. (There is one exception to this rule: see below.)
+
+The running time correlates roughly linearly to the sum of the following factors:
+
+(number of ratings) × (value of recommend.flow.user.small.rating.count)
+(number of users) × (value of recommend.flow.user.moderate.correlation.count)
+(number of ratings) × (value of recommend.flow.item.small.rating.count)
+(number of items) × (value of recommend.flow.item.moderate.correlation.count)
+
+The calculation running time is thus generally linear to the number of ratings. This is achieved by using a probabilistic algorithm for treating users who rate very often and for items that are very often rated.
+
+Note that the properties recommend.flow.user.large.rating.count and recommend.flow.item.large.rating.count also influence the running time by disallowing the evaluation of users who rated more often than the parameter value and items that received more ratings than the specified parameter value. However, not only are both of these occurrences rare, but the contribution of the underlying main memory algorithm to the total running time is also normally negligible. The *.large.* parameters are thus not listed above and are provided for tuning in exceptional cases only.
+
+The *.half.correlation.count properties do not influence the running time. Instead, they determine how strongly a high number of commonly rated items or commonly rating users improves the correlation between two users or items. A low number indicates that a high similarity can be achieved by a precise agreement on only a few data points.
+
+The recommend.flow.user.max.similar property defines the maximum number of users similar to the current user, which are used for generating recommendations for the current user. This number influences the recommendations calculated. The property recommend.flow.item.max.similar defines the maximum number of items calculated as similar to one item.
+
+The recommend.flow.max.recommendations properties determines the maximum number of recommendations generated and stored for a single user.
+
+The recommend.flow.filepool.* properties are used to configure how intermediate results of the Recommendation Engine are stored on disk. recommend.flow.filepool.buckets specifies the number of separate files used. This is relevant in case the amount of data that is to be stored is larger than the maximum allowed file size. recommend.flow.filepool.buffer determines the size of the i/o-Buffer used when reading from and writing to files.
+
+recommend.flow.execution.nthreads sets the maximum number of threads that are used to compute recommendations. The effect of using multiple threads is determined by the number and load of the available processors as well as the number of files used to implement pools as determined by recommend.flow.filepool.buckets - the more files there are the more data can be read and written in parallel, but if there are too many files, the i/o-overhead outweighs the gains of concurrent processing.
+
+The properties are described in more detail in the table below.

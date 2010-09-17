@@ -1,0 +1,11 @@
+
+
+The following pre-built filter beans exists:
+
+deletionStateFilter - This Filter ensures that only elements which are marked as deleted are queried
+createdBeforeFilter - This Filter looks for a request parameter "created_before" containing a date and adds a criterion for all elements created before that date to the query
+modifiedBeforeFilter - This Filter looks for a "modified_before" request parameter containing a date and adds a criterion for all elements modified before that date to the query
+deletedBeforeFilter - This Filter looks for a "deleted_before" request parameter containing a date and adds a criterion for all elements deleted before that date to the query
+limitFilter - This filter limits the query to the number of elements provided as request parameter "limit".
+
+All filter classes handling dates are using a custom DateFormater which can be injected (property: dateFormat). Alternatively, you can provide a String that defines a DateFormatPattern (property: dateFormatPattern) as required by the class java.text.SimpleDateFormat. The default pattern is the ISO-8601 dateformat: "yyyy-MM-dd", for example: 2009-02-29. 

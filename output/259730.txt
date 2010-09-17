@@ -1,0 +1,13 @@
+
+
+Since the Social Software Feeder depends on the CAE Feeder, ensure that you have also started the CAE Feeder component of your CoreMedia CMS system.
+
+A customized and configured CAE Feeder is started with the command shown in the following listing.
+
+bin/cm caefeeder start
+
+The command shown in the following listing stops the CAE Feeder.
+
+bin/cm caefeeder stop
+
+Note that on Windows, the Windows service start and stop commands must be used.

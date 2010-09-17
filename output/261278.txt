@@ -1,0 +1,22 @@
+
+
+Configuring the Social Software Feeder involves first of all configuration of a CAE Feeder. While the Social Software Feeder re-uses the same database and therefore requires no database connection of its own to be defined, you do however need to further configure the feeding of content from the Social Software Repository to a search engine in order to enable full-text search.
+
+To proceed, ensure that you have already set up the CAE Feeder with a database connection. For further information, consult the CMS Administration Manual on configuring the CAE Feeder.
+
+First, it should be noted that while the CAE Feeder can feed content to any kind of search engine, this scenario is likely to require the implementation of your own adapter, called an Indexer, which would then handle the items fed to it. This section therefore only deals with the standard supplier adapter, for the Fast Enterprise search engine. It therefore follows that you must also have a FAST Enterprise server installed in order to make use of the instructions given below. Instructions on installing this component are given in the relevant chapter of the CMS Administration and Operation Manual and the documentation provided by FAST itself.
+
+In the standard supplied configuration, CoreMedia CMS 2008 provides an implementation of an indexer for the FAST search engine supporting version 4.3 and 5.1. The Social Software Extension also provides an implementation that simplifies searching with the FAST search engine. 
+
+You configure the Social Software Repository by configuring the property file config/caefeeder/spring/sse/sse.properties as described in section.  
+
+The document types to be indexed are configured in the file sse-feeder-triggers.xml, located in the config/caefeeder/spring/sse-feeder directory. The standard configuration for CoreMedia SSE content includes the User and Group type, based on an attached VCard profile card, and the UserContent type including all subtypes. 
+
+As such, this standard configuration includes content from the CMS. The configuration of your CAE Feeder remains untouched. Consult the CoreMedia CMS Content Application Developer Manual for more information about defining feeding CMS content beans.
+
+If you do not want to index any CMS content, you need to remove some files and uncomment the bean definitions in the file config/caefeeder/spring/sse-feeder/sse-feeder-standalone.xml. The following files contain references to the CMS repository and must be deleted or otherwise adapted, e.g. if you want to keep JMX support:
+
+config/caefeeder/framework/cap-objectserver-uapi-config.jar
+config/caefeeder/framework/cap-proactiveengine-uapi-config.jar
+config/caefeeder/spring/*.xml
+

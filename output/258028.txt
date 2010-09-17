@@ -1,0 +1,3 @@
+
+
+This chapter lists the system requirements for the CoreMedia Social Software Extension.

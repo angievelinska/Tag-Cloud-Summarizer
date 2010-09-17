@@ -1,0 +1,9 @@
+
+
+As supplied, the Management Views application can be accessed using the URL given in the following listing.
+
+http://<servername>:<port>/sse-editor/servlet/console/
+
+Replace <servername> and <port> to suit your individual system setup. If the URL is invalid, contact your system administrator for your customized login URL.
+
+On accessing the URL, an authentication dialog will open up, as shown in the screenshot given below.

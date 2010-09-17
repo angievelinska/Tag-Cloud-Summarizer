@@ -1,0 +1,5 @@
+
+
+The CoreMedia SSE is Java-based and requires a Java 2 platform.
+
+Ensure that you therefore have either a Java Runtime Environment (JRE) or Java Development Kit (JDK) fully set up and installed on your system. The table below lists the supported Java versions.

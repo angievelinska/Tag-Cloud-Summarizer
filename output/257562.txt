@@ -1,0 +1,21 @@
+
+
+CoreMedia CMS 2008 is the successor to the CoreMedia CMS 2006 system, which introduced features such as:
+
+Price winning layout and usability improvements of the CoreMedia Editor and WebEditor
+Integrated analytics solution
+Dynamic, rule based content delivery
+Editing Services for JSF for easy creation of customized GUIs
+Portal integration with read and write access to the CoreMedia repository
+
+For more details please refer to What's New in CMS 2006 and the CMS 2006 Manuals
+
+CoreMedia CMS 2008 has its focus on an easy start into projects and on Web 2.0. The following new features are available:
+
+The Starter Kit for a quick and successful start with CMS 2008, using best practices for common tasks
+The Social Software Extensions to exploit the full power of today's Web 2.0 techniques with CoreMedia CMS
+An enhanced Modular Configuration to easily integrate project solutions and Plug-Ins
+Extended CoreMedia Analytics with more out-of-the-box reports, export of reports to various formats, Analytics combined with the Http Cache
+Extended CoreMedia Content Application Engine with the coupling of the Http Cache with Apache and mixing of dynamic and static fragments using the Http Cache
+
+The following figure shows an overview of the CoreMedia components, highlighting the improved and new components in red. 

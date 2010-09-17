@@ -1,0 +1,15 @@
+
+
+As you can see, there are a couple of relationship types which make use of the possibility to attach properties not only to resources, but to relationships as well.  Among these are the relationship types Tagging, Rating and Voting, which together are modeled to be some kind of Classification of a resource. 
+
+A Classification connects a user who is the creator of the given classification with the target resource which is classified this way. Since a Tagging inherits all properties from the Element base type, there is a creation date associated with every classification. This property might be used in queries to filter for classifications done in a particular time window. Tag clouds which show the most frequenty used tags within the last month are typical examples.
+
+A Tagging carries the tag which the user has chosen to label the resource with. There might be several tagging instances with the same target resource, each one carrying a different user but the same tag. 
+
+A Rating is a kind of assessment a user makes about a resource in terms of quality or quantity. It carries a double value which encodes the assessment, typically within some application dependant, continuous range. Rating is an abstract type, application programmers will have to define a concrete subtype for a specific rating domain.
+
+A Voting represents a interest or opinion a user expresses about a resource. There are typically multiple choices from which the user may choose from, although this is not required. There might be just a single choice for a concrete voting type such as "thumbs up", for example. The choice property of a Voting encodes the choice made by the user. In contrast to a ratings value, this is an integer property, reflecting the discrete nature of multiple choice questions. Similar to Rating, Voting is an abstract type. A concrete subtype has to be defined for a specific voting application. 
+
+There are two concrete voting types predefined in the base module: Complaint and Approval. A Complaint is issued by a user who discovered some kind of inappropriate content. This vote might then be exploited by some editor who is authorized to revise or delete the content. An Approval is used by the management views shipped with CoreMedia SSE where you may require a dedicated approval step by some authorized editor before a submitted user generated content might be allowed to occur on a public website.
+
+Typically, classifications are applied to resources of type UserContent. But since the resource type of the target role of Classification is the general type Resource, even users or  groups might be tagged, rated or voted upon. And, since an external content object is represented within the SSE repository as an instance of an ExternalReference resource, it is possible to classify external content as well.

@@ -1,0 +1,4 @@
+
+
+ Name Description Type Default Example name the unique name of this resource type String  MyUserContent uri the unique uri of this resource type String  http://www.coremedia.com/training/resource description a short description String  User Content with a summary isAbstract whether instances of this class are allowed or only of its subtypes boolean false false parent the parent of this type Class ResourceTypeDefinition XhtmlUserContent.class
+

@@ -1,0 +1,3 @@
+
+
+CoreMedia SSE extends applications built on top of the CoreMedia Content Application Engine (CAE). Storage of user-generated content and user profile data is achieved using a database schema independent of the CMS content repository. The extension has been designed from the ground up to scale gracefully, allowing high-end sites to support parallel, simultaneous content authoring by many individual contributors. High delivery throughput is guaranteed by the CAE caching infrastructure, and the user-generated content can be easily and rapidly searched via the integrated CoreMedia Search Engine.

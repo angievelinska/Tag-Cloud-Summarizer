@@ -1,0 +1,4 @@
+
+
+While the base module functionality should be sufficient for some basic scenarios, the Social Software Extension enables you to easily define your own resource types and the relationships among them. You can either extend pre-defined types or create your own types from scratch.
+

@@ -1,0 +1,10 @@
+
+
+A user can be a member of one or more groups. 
+
+The right part of the screenshot shown in the section on "Viewing user profiles" shows the groups for this sample user.
+
+Group actions are as follows: 
+
+Check a box to add the user to the group
+Uncheck a box to remove the user from the group

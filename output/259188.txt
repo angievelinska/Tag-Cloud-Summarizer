@@ -1,0 +1,31 @@
+
+
+If you need a summary field for your UserContent, you can extend one of the two pre-defined UserContent definitions. This comprises the following steps:
+Define a new resource type
+Register the resource type
+Implement a resource bean
+Register the resource bean
+
+In the following example, the pre-defined XhtmlUserContent will be extended with a persistent Markup property with XHTML named summary.
+
+Define a Resource Type
+
+First of all, create an interface and use annotations for defining the new resource type.
+
+@ResourceTypeAnnotation(
+  name= ¿MyUserContent¿,
+  uri=¿http://www.coremedia.com/training/resource¿,
+  description="user content with summary",
+  isAbstract = false,
+  parent = XhtmlUserContent.class)
+public interface MyUserContent extends XhtmlUserContent {
+  @Property
+  @Schema(ID="xhtml-1.0")
+  Markup getSummary();
+}
+
+
+
+
+
+Use the annotation @ResourceTypeAnnotation to define base elements like name, uri, description and the parent class. You can define a resource type as abstract, if only subtypes should be instantiated. Please note, that the parent is actually defined in the annotation and not by the interface it extends. This way possible problems with multiple inheritance are prevented. Name and Uri of a resource type definition must be unique in your environment. It is good practice to add a constant defining the type name.

@@ -1,0 +1,3 @@
+
+
+This chapter gives an introduction to Web 2.0 and lists the Web 2.0 features that the CoreMedia Social Software Extension provides to enable Web 2.0 functionality for your site (whether intranet, extranet or internet presence).

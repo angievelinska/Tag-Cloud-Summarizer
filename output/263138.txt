@@ -1,0 +1,11 @@
+
+
+To configure the database connection, edit the database properties in the sse.properties file contained in the WEB-INF/spring/sse directory. Samples properties with their values are given in the code block below. The property file corresponds to the configuration of the Social Software Core module.
+
+sse.repository.connection.driver_class=org.postgresql.Driver
+sse.repository.connection.url=jdbc:postgresql://localhost:5432/sse
+sse.repository.connection.username=sse
+sse.repository.connection.password=sse
+sse.repository.database.type=postgresql
+
+Make sure, that you have copied the JDBC-driver to the WEB-INF/lib directory.

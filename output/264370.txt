@@ -1,0 +1,3 @@
+
+
+After you set some approval status onto the current content item displayed in the Approval View you are offered the next user-generated content item - which has not yet been approved or rejected, i.e., new or marked as unclear by other editors - according to the parameters you choose in the search toolbar of the Approval tab. To select new parameters click onto the [Change] link. You can enter a text you are looking for in the user-generated content items and the order in which the items should be presented. To accept new parameters click onto [Accept].

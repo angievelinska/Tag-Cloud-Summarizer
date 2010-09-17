@@ -1,0 +1,28 @@
+
+
+Benefits
+
+Shorter project time through:
+
+High degree of pre-fabrication and ready to use best practice concepts
+Based on proven CoreMedia CMS technology
+
+Quick and Easy Extensibility:
+
+Easy integration of high-quality plug-ins and partner solutions (see also Modular Configuration)
+
+Features
+
+Predefined and extensible document types and templates for navigation, multi-lingual support, layout and standard content.
+Multilingual Support
+Multi-Site and Micro-Site support
+Predefined navigation concept with integrated Navigation Editor
+Prepared for use of CoreMedia Analytics.
+Easy integration of CoreMedia Social Software
+Human-readable and search engine optimized URLs
+Management of different layouts and styles, standard templates using YAML CSS framework
+Standard templates already integrate Preview Based Editing
+
+Further Reading
+
+Read the CoreMedia Starter Kit Manual for a comprehensive description of all features.

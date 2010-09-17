@@ -1,0 +1,38 @@
+
+
+The SeekAndWork Command line tool is the interface to the above described SeekAndWork HTTP Interface. Some properties might be configured in the property configuration file (config/sse-tools/seekandwork) for this tool. It is advisable that at least the password is configured in a property file with restrictive access rights.
+
+
+
+usage: bin/cm sse-seekandwork
+ -a,--parameter <Custom Parameter>           You may define custom
+                                             parameters which are added 
+                                             to the HTTP Request as parameter. 
+                                             The different parameter key value 
+                                             pairs are comma separated. Key 
+                                             and value are separated by '='. For 
+                                             example:
+                                             --parameter key1=val1,key2=val2
+ -r,--cascading-rule <Cascading Rule Name>   comma seperated list of
+                                             cascading rule bean names
+ -c <Created Before Date>                    destroy resources created
+                                             before the provided date
+ -d <Deleted Before Date>                    destroy resources deleted
+                                             before the provided date
+ -f,--filter <Filter Name>                   comma seperated list of
+                                             filter spring bean names.
+ -l,--limit <Query Limit>                    number of resources initially
+                                             queried
+ -m <Modified Before Date>                   destroy resources modified
+                                             before the provided date
+ -n                                          simulate destruction (nothing
+                                             will be destroyed for real)
+ -ne                                         skip export of resources to
+                                             be destroyed
+ -p,--password <Password>                    password for login
+ -t,--resourcetype <Resource Type>           resource type for resources
+                                             to be destroyed
+ -u,--user <User Name>                       user for login (required)
+ -w,--worker <worker>                        Worker bean which should be
+                                             executed
+ -z,--url <URL>                              URL to destroy controller

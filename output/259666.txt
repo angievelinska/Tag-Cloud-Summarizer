@@ -1,0 +1,7 @@
+
+
+Once the configuration has been completed in accordance with the preceding chapters, you can start the system. This involves starting a number of the CoreMedia SSE components individually 
+
+The chapters below cover the start-up for the various components of the CoreMedia SSE.
+
+Note that the order of component start is in the order given below: deviation from this order as given is not recommended.

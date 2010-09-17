@@ -1,0 +1,10 @@
+
+
+If you see an error page instead, try to troubleshoot the issue
+
+
+
+check the Tomcat logs
+consult the page with frequently asked questions, or
+contact the support if you encounter a problem you cannot solve yourself.
+

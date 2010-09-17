@@ -1,0 +1,4 @@
+
+
+ Database Value to enter PostgreSQL 8.2 postgresql Oracle 10g oracle Oracle 9i oracle9 MS SQL Server 2005 mssql DB2 8.2.4 db2
+

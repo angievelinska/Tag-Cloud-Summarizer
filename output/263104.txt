@@ -1,0 +1,6 @@
+
+
+You can run the Social Software Extension in the following servlet containers.
+
+ Product Certified Version Supported Version Tomcat 6.0  Bea WebLogic Application Server 10  IBM WebSphere Application Server 6.1 
+

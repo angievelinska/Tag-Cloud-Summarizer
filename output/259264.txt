@@ -1,0 +1,3 @@
+
+
+This section describes selected customization points of the Social Software Management Views application.

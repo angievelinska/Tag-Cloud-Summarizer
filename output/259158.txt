@@ -1,0 +1,101 @@
+
+
+Example: How to generate an Atom 1.0 feed
+
+There are several ways to put the feed generation API in an application. Depending on the application's needs and design, different approaches can be preferable. In the following example it is assumed that a CAE-style Spring controller (e.g. one extending AbstractViewController) returns a bean of type com.example.LatestContent as the model bean ("self"). LatestContent has a property items, which returns a list of objects. Feed generation in this example is implemented as a programmatic, named view of the LatestContent bean (other views may exist, such as a JSP view com/example/LatestContent.jsp).
+
+package com.example.views.FeedView;
+
+import com.coremedia.objectserver.web.ServletView;
+import com.coremedia.feeds.*;
+import com.example.LatestContent;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+
+public class FeedView implements ServletView {
+  // these are considered constant and 
+  // will be injected by the Spring bean factory
+  
+  private FeedGenerator generator;
+  private FeedFormat feedType;
+  private String title;
+  private String uri;
+  private String link;
+
+  // getters and setters not shown
+  // ...
+
+  public void render(Object self, String viewName, 
+                     HttpServletRequest request, 
+                     HttpServletResponse response) {
+
+    // get the list of objects to return as feed entries
+    LatestContent latestContent = (LatestContent) self;
+    List<?> contentList = latestContent.getItems();
+
+    try {
+      // create the output writer 
+      // feedType is assumed constant here, 
+      // but may be derived from the view name as well
+      FeedWriter feedWriter = 
+        generator.createFeedWriter(feedType, response.getWriter());
+
+      // initialize the feed meta data. only title, uri, 
+      // and link are required.
+      FeedMetaData metaData = new FeedMetaDataImpl();
+      metaData.setTitle(title);
+      metaData.setUri(uri);
+      metaData.setLink(link);
+
+      response.setHeader("content-type", "text/xml");
+
+      // create a feed context with the request and response
+      FeedContext context = generator.createFeedContext();
+      context.setAttribute(
+        FeedContext.REQUEST_ATTRIBUTE_NAME, request);
+      context.setAttribute(
+        FeedContext.RESPONSE_ATTRIBUTE_NAME, response);
+
+      // generate the feed from the item list and write the output
+      // to the response writer
+      generator.generateFeed(metaData, contentList,  feedWriter,
+                             context);
+
+    } catch (Exception e) {
+      // no user-friendly error handling in this example
+      throw new RuntimeException("Failed to generate data feed", e);
+    }
+  }
+
+}
+
+This programmatic view is registered with the view dispatcher as the view with name "atom" for beans of type LatestContent in custom/views.xml:
+
+  <bean id="programmedViews" 
+    class="org.springframework.beans.factory.config.MapFactoryBean">
+    <property name="sourceMap">
+      <map>
+        <!-- other programmatic views are here... -->
+        <entry key="com.example.LatestContent#rss" 
+               value-ref="atomFeedView"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="atomFeedView" parent="abstractFeedView"
+        class="com.example.views.FeedView">
+    <property name="feedGenerator" ref="feedGenerator"/>
+    <!-- constant from com.coremedia.feeds.FeedFormat -->
+    <property name="feedType" value="Atom_1_0"/>
+
+    <property name="title" value="Recent posts"/>
+    <!-- well known URL for this example -->
+    <property name="link" 
+              value="http://localhost:8080/servlet/latest/"/>
+    <!-- reuse the link as the URI -->
+    <property name="uri" 
+              value="http://localhost:8080/servlet/latest/"/> 
+  </bean>
+
+To generate the feed, request the URL of the controller with a view parameter of "atom". Without custom feed item data providers, the view will work for lists of UserContent objects.

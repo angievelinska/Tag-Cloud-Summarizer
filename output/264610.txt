@@ -1,0 +1,12 @@
+
+
+ Bean name Declaring file baseModule sse-basemodule.xml 
+
+sessionManager sse-sessions.xml 
+
+userProvider spring/sse/sse-authentication.xml 
+
+searchEngine sse.xml 
+
+recommendationService sse-recommend.xml
+

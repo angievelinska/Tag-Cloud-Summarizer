@@ -1,0 +1,3 @@
+
+
+The destroy tool command line interface shares the same command line arguments as the SeekAndWork command line, execpt the worker argument. The destroy command line interface uses a specific worker, the destroyElementWorker bean. The property file for configuring the tool is located in: config/sse-tools/destroyresources/

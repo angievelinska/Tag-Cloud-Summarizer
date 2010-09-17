@@ -1,0 +1,3 @@
+
+
+This new predicate allows access for the standard groups editor and administrator as well as the custom group customer.

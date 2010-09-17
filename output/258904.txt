@@ -1,0 +1,17 @@
+
+
+The batch process part of the Recommendation Engine needs to be initialized individually. Once it has run through at least once, you will have access to similar users and recommended items for each user on the system.
+
+To start the batch process, send a PUT request to the URL given in the listing below.
+
+http://localhost:8001/contentapplicationengine-template/
+servlet/flow/recommend 
+
+If a PUT request is not possible, send a GET request to the URL shown in the following listing.
+
+http://localhost:8001/contentapplicationengine-template/
+servlet/flow/recommend?method=PUT 
+
+Depending on the amount of data to be processed, it may take minutes or hours until the results are available. Note that this computation does not interfere with the recommendation service part of the Recommendation Engine, which remains usable throughout the computation process.
+
+To check progress, you can make a GET request to the URL given in the first listing above: successive GETs to this URL return the process status.

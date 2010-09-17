@@ -1,0 +1,5 @@
+
+
+This chapter describes the structure and concepts of the Social Software Repository API. It also shows you, how to use the Query API to retrieve content from the Social Software Repository.
+
+The Social Software Repository API comprises of two layers. The core model which lays the foundation for the API and the base model that offers a set of commonly used resource and relationship types. The following simplified UML diagram presents you with the types defined by both modules. 

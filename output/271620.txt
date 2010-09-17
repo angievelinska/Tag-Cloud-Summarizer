@@ -1,0 +1,6 @@
+
+
+ Parameter Description -a, --parameter You may define custom parameters which are added to the HTTP Request as parameter. The different parameter key value pairs are comma separated. Key and value are separated by '='. For example --parameter key1=val1,key2=val2 -r, --cascading-rule A comma seperated list of cascading rule bean names -c Destroy resources created before the provided date. Default date pattern is "yyyy-MM-dd". This can be configured at the DateFilterBeans. -d Destroy resources deleted before the provided date. The date pattern is the same as for parameter "-c" -m Destroy resources modified before the provided date. The date pattern is the same as for parameter "-m" -f, --filter Comma seperated list of filter spring bean names. Which are interpreted by the DefaultElementWorker -l,--limit Number of resources initially queried.  -n Simulate destruction (nothing will be destroyed for real) -ne Skip the export of resources (CURRENTLY THERE IS NO EXPORT) -p, --password Password for login -t, --resourcetype The initial resource type, the default -if nothing else is configured- is the resource element type -the root of all resource types. -u, --user User for login. -w, --worker Worker bean which should be executed.  -z, --url URL to destroy controller. For example: http://somehost:8000/sse-editor/servlet/tools/seekandwork
+
+
+
