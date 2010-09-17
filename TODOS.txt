@@ -12,6 +12,10 @@ Project TODOs
 4. check SVD in lsa - after decomposition there are more than 300 dimensions.
 5. install Oracle XE on personal laptop, test serverimport
 6. Normalize tokens before LSA - decapitalize
+7. svd
+http://code.google.com/p/airhead-research/wiki/SingularValueDecomposition
+http://code.google.com/p/airhead-research/wiki/MatrixClasses
+finish SVDImpl.java
 
 Questions
 -------------

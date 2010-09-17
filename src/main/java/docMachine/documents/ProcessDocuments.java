@@ -46,7 +46,9 @@ public class ProcessDocuments extends AbstractDocuments{
     serialize(id, buf.toString());
   }
 
-
+  /**
+   * TODO: decapitalize words, remove punctuation
+   */
    private void serialize(String id, String buf){
      StringBuffer sb = new  StringBuffer();
      sb.append(id.substring(id.lastIndexOf("/")+1));
