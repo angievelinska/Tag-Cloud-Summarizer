@@ -31,5 +31,17 @@ public class ProcessDocumentsTest {
       pd.iterate(content);
       
     }
+
+    @Test
+  public void testCounter2(){
+      Content content = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE/5.2/WhatsNewInCMS2008");
+      pd.iterate(content);
+  }
+
+  @Test
+  public void testCounter3(){
+      Content content = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE/SoSo");
+      pd.iterate(content);
+  }
    
 }

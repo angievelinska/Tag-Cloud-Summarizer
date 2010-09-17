@@ -66,7 +66,7 @@ public class ProcessDocuments extends AbstractDocuments{
 
      try {
        Writer writer = new BufferedWriter(new FileWriter(outputFile));
-       writer.write(buf.toString());
+       writer.write(buf);
        writer.close();
 
      } catch (IOException ex){

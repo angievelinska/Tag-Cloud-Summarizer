@@ -25,9 +25,11 @@ public class LSATest {
     public void testLSA(){
         try {
             lsa.runLSA();
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (InterruptedException ex){
+        }
+        catch (IOException e) {
+          e.printStackTrace();
+        }
+        catch (InterruptedException ex){
             ex.printStackTrace();
         }
     }

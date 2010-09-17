@@ -17,7 +17,7 @@ public class SVDImpl {
 
   }
 
-  public Matrix getMatrix(SemanticSpace sspace){
-    Matrix matrix = new
+  public void getMatrix(SemanticSpace sspace){
+    //Matrix matrix = new
   }
 }
