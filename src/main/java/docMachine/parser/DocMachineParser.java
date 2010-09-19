@@ -13,9 +13,9 @@ public class DocMachineParser {
 
   public void parseFiles(File dir, File outputFile){
     List files = listFiles(dir);
-
+    System.out.println("number of files: "+files.size());
     if(!outputFile.exists()){
-      outputFile = new File("output\\output.txt");
+      outputFile = new File("output\\input.txt");
       try {
         outputFile.createNewFile();
       } catch (IOException e) {
@@ -83,7 +83,9 @@ public class DocMachineParser {
   //TODO: de-capitalize, remove delimiters, remove whitespaces and newlines
   public String parseLine(String line){
     StringBuilder parsedLine = new StringBuilder("");
+    line = line.trim();
     parsedLine.append(line);
+    parsedLine.append(" ");
     return parsedLine.toString().toLowerCase();
   }
 

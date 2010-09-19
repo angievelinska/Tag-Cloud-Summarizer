@@ -154,7 +154,7 @@ public class LSA {
         props.put(IteratorFactory.COMPOUND_TOKENS_FILE_PROPERTY,"compwords\\compound-words.txt");
         props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords\\english-stop-words-large.txt");
         props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
-        props.put("docFile","input\\input.txt");
+        props.put("docFile","output\\input.txt");
         props.put("svdAlgorithm","SVDLIBJ");
         props.put("outputFormat", "TEXT");
         props.put("overwrite","true");

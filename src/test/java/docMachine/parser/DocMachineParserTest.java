@@ -30,7 +30,7 @@ public class DocMachineParserTest {
   @Test
   public void parseFilesTest(){
     File dir = new File("output");
-    File outputFile = new File("output\\output.txt");
+    File outputFile = new File("output\\input.txt");
     docParser.parseFiles(dir, outputFile);
     
 /*    List files = docParser.listFiles(dir);
