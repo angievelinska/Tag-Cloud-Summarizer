@@ -30,14 +30,17 @@ public class DocMachineParserTest {
   @Test
   public void parseFilesTest(){
     File dir = new File("output");
-    List files = docParser.listFiles(dir);
+    File outputFile = new File("output\\output.txt");
+    docParser.parseFiles(dir, outputFile);
+    
+/*    List files = docParser.listFiles(dir);
     for(Iterator iter = files.iterator(); iter.hasNext();){
       File file = (File) iter.next();
       System.out.println(file.getPath());
 
-    }
+    }*/
 
-    Assert.assertNotNull(files.size());
+    //Assert.assertNotNull(files.size());
 
   }
 }

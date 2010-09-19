@@ -68,7 +68,7 @@ public class ProcessDocuments extends AbstractDocuments{
      try {
        BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
        // TODO: to test this
-       String plainText = asPlainText(markup).toLowerCase(Locale.ENGLISH);
+       String plainText = asPlainText(markup);
        writer.write(plainText);
        writer.close();
 
