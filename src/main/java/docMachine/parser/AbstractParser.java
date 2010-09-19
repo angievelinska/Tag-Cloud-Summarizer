@@ -1,5 +1,7 @@
 package docMachine.parser;
 
+import java.io.File;
+
 /**
  * Created by IntelliJ IDEA.
  * User: avelinsk
@@ -11,5 +13,11 @@ public abstract class AbstractParser {
   protected abstract void parseDocument();
 
   protected abstract void parseDocuments();
+
+  public void parseText(File dir){
+
+  }
+
+  
 
 }

@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * 
@@ -37,13 +38,9 @@ public class ProcessDocuments extends AbstractDocuments{
 
         if (languages.size()>0 &&
                 languages.get(0).getString("Name").equalsIgnoreCase("en")){
-          //String content = textElement.getMarkup("Content").asXml();
           markup = textElement.getMarkup("Content");
-
-          //buf.append(content);
           id = textElement.getId();
           serialize(id, markup);
-          //log.info("Appended textElement to buffer: "+ content);
         }
       }
     }
@@ -70,7 +67,8 @@ public class ProcessDocuments extends AbstractDocuments{
 
      try {
        BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-       String plainText = asPlainText(markup);
+       // TODO: to test this
+       String plainText = asPlainText(markup).toLowerCase(Locale.ENGLISH);
        writer.write(plainText);
        writer.close();
 

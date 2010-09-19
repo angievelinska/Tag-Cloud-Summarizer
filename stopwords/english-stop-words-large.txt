@@ -565,6 +565,7 @@ whereby
 wherein
 whereupon
 wherever
+Whenever
 whether
 which
 while
