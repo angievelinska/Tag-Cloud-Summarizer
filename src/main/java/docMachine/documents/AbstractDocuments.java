@@ -23,7 +23,7 @@ public abstract class AbstractDocuments {
    *
    * @param rootElement
    */
-    public final void iterate(Content rootElement){
+    protected final void iterate(Content rootElement){
       books = new ArrayList<Content>();
 
       getBooks(rootElement);
@@ -41,7 +41,7 @@ public abstract class AbstractDocuments {
   /**
    * Depth first search in the documents' tree.
    */
-  public void getBooks(Content rootElement){
+  private void getBooks(Content rootElement){
     Set<Content> children = rootElement.getChildren();
 
     if (rootElement.getType().getName().equals("Book")){
@@ -54,7 +54,7 @@ public abstract class AbstractDocuments {
     }
   }
 
-  public void getTextsInSection(Content rootElement){
+  private void getTextsInSection(Content rootElement){
     if (rootElement.getType().getName().equals("Section")){
         for (Content article: rootElement.getLinks("Articles")){
             if (article.getType().getName().equals("MLArticle")){
@@ -71,6 +71,6 @@ public abstract class AbstractDocuments {
     }
   }
 
-  public abstract void processText(Content content);
+  protected abstract void processText(Content content);
 
 }

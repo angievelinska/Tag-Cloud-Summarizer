@@ -24,3 +24,4 @@ Research how parallelism can be implemented if txts are parsed in-memory. Descri
 Questions
 -------------
 1. How to integrate indexing in Lucene with SVD in LSA? SVD uses a matrix, no indexing, no feedables.
+2. WHY IS SVD NOT REDUCING DIMENSIONS TO 300 !?

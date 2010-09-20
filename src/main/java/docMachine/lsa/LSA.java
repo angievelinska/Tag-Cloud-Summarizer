@@ -3,14 +3,20 @@ package docMachine.lsa;
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
+import edu.ucla.sspace.matrix.Matrices;
+import edu.ucla.sspace.matrix.Matrix;
+import edu.ucla.sspace.matrix.MatrixIO;
 import edu.ucla.sspace.text.Document;
 import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
+import edu.ucla.sspace.vector.DoubleVector;
+import edu.ucla.sspace.vector.Vectors;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -51,6 +57,8 @@ public class LSA {
         processDocumentsAndSpace(sspace, iter, noOfThreads, props);
 
         SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+
+        saveMatrix(sspace);
 
         long end = System.currentTimeMillis();
         log.info("LSA used "+(end-start)+"ms to index the document collection.");
@@ -162,4 +170,28 @@ public class LSA {
         return props;
     }
 
+  protected void saveMatrix(SemanticSpace sspace){
+    int numVectors = sspace.getWords().size();      // ???
+    int numWords = sspace.getWords().size();
+    DoubleVector[] vectors = new DoubleVector[numVectors];
+    String[] words = new String[numWords];
+    int i = 0;
+    for (String word : sspace.getWords()){
+      words[i] = word;
+      vectors[i] = Vectors.asDouble(sspace.getVector(word));
+      i++;
+    }
+
+    Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
+    MatrixIO.Format fmt = MatrixIO.Format.DENSE_TEXT;
+    File outputMatrix = new File("sspace\\matrix.dat");
+
+    try {
+      outputMatrix.createNewFile();
+      MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
+    }
+    catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
 }

@@ -12,7 +12,7 @@ public class CountDocuments extends AbstractDocuments {
   private int counter = 0;
 
   @Override
-  public void processText(Content content){
+  protected void processText(Content content){
     counter++;
   }
   

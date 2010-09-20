@@ -10,7 +10,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * 
@@ -26,7 +25,7 @@ public class ProcessDocuments extends AbstractDocuments{
 
   
   @Override
-  public void processText(Content article){
+  protected void processText(Content article){
      StringBuffer buf = new StringBuffer();
      String id = "";
      Markup markup = null;
