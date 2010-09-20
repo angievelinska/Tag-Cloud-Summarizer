@@ -9,8 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * TODO: work more on search tree algo
- * 
+ *
  * User: avelinsk
  * Date: 10.09.2010
  */
@@ -18,6 +17,12 @@ public abstract class AbstractDocuments {
   private  final static Log log = LogFactory.getLog(AbstractDocuments.class);
   private List<Content> books;
 
+  /**
+   * Template method which retrieves the text elements
+   * from documents' tree.
+   *
+   * @param rootElement
+   */
     public final void iterate(Content rootElement){
       books = new ArrayList<Content>();
 
@@ -33,7 +38,9 @@ public abstract class AbstractDocuments {
       }
     }
 
-  // depth first search in the document tree
+  /**
+   * Depth first search in the documents' tree.
+   */
   public void getBooks(Content rootElement){
     Set<Content> children = rootElement.getChildren();
 
@@ -49,19 +56,16 @@ public abstract class AbstractDocuments {
 
   public void getTextsInSection(Content rootElement){
     if (rootElement.getType().getName().equals("Section")){
-
         for (Content article: rootElement.getLinks("Articles")){
             if (article.getType().getName().equals("MLArticle")){
                processText(article);
            }
         }
-
         if (rootElement.getLinks("Sections").size()>0){
           for (Content section:rootElement.getLinks("Sections")){
               getTextsInSection(section);
           }
         }
-
     } else if (rootElement.getType().getName().equals("MLArticle")){
         processText(rootElement);
     }

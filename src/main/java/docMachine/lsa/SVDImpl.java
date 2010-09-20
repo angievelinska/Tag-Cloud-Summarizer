@@ -11,13 +11,14 @@ import java.io.File;
  * Date: 17.09.2010
  * Time: 13:10:56
  */
-public class SVDImpl {
-
-  public void decompose(Matrix matrix, File file){
-
-  }
+public class SVDImpl{
 
   public void getMatrix(SemanticSpace sspace){
     //Matrix matrix = new
   }
+  
+  public void decompose(Matrix matrix, File file){
+
+  }
+
 }

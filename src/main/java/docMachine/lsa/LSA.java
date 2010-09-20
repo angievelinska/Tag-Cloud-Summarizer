@@ -123,9 +123,6 @@ public class LSA {
     /**
      * Input documents are parsed in a single file,
      * each document on a separate row.
-     *
-     * @return
-     * @throws IOException
      */
     protected Iterator<Document> getDocumentIterator () throws IOException{
         Properties props = System.getProperties();
@@ -153,7 +150,7 @@ public class LSA {
         Properties props = System.getProperties();
         props.put(IteratorFactory.COMPOUND_TOKENS_FILE_PROPERTY,"compwords\\compound-words.txt");
         props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords\\english-stop-words-large.txt");
-        props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
+        //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
         props.put("docFile","input\\input.txt");
         props.put("svdAlgorithm","SVDLIBJ");
         props.put("outputFormat", "TEXT");

@@ -4,18 +4,22 @@ Project Ideas
 1. At the first login to DocMachine, a cloud with the most popular tags is displayed.
 2. I need to have a website as a frontend, where to enter any search strings, and display my results and Tag cloud.
 
+
 Project TODOs
 --------------
-1. Investigate how to build a web-app with Maven3 (and add in the report after why you are using web-based application, and not swing-based for example).
+1. Investigate how to build a web-app with Maven3 (and add in the report why you are using web-based application, and not swing-based for example).
 2. Package the app as a jar, start by starting a webapp server, deploying it, opening a browser...
 3. fix the warnings and errors displayed by sonar: mvn org.codehaus.sonar:sonar-maven3-plugin:2.2:sonar -DskipTests=true
-4. check SVD in lsa - after decomposition there are more than 300 dimensions.
-5. install Oracle XE on personal laptop, test serverimport
-6. Normalize tokens before LSA - decapitalize
-7. svd
+4. install Oracle XE on personal laptop, test serverimport
+6. finish SVDImpl.java
 http://code.google.com/p/airhead-research/wiki/SingularValueDecomposition
 http://code.google.com/p/airhead-research/wiki/MatrixClasses
-finish SVDImpl.java
+7. Skip creating the input files, parse text from DocMachine directly into a single file used for LSA.
+Next step will be to parse texts from DocMachine directly into LSA.
+8. Research what can be done for scalabiilty and performance - should txts be parsed in a file, or used from memory?
+Research how parallelism can be implemented if txts are parsed in-memory. Describe this in the report.
+9. Don't stem or lemmatize the input words for LSA - they will be used later for the TagCloud generation.
+
 
 Questions
 -------------
