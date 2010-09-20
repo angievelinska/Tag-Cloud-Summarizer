@@ -91,7 +91,7 @@ public class DocMachineParser {
   public String parseLine(String line){
     StringBuilder parsedLine = new StringBuilder("");
     line = line.trim();
-    // escape all non-letter characters:
+    // remove all non-letter characters
     line=line.replaceAll("[^a-zA-Z]"," ");
     parsedLine.append(line);
     parsedLine.append(" ");
