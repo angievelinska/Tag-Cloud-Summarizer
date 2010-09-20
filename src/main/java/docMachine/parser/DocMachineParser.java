@@ -4,39 +4,45 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Created by IntelliJ IDEA.
- * User: avelinsk
- * Date: 18.09.2010
- * Time: 15:55:50
- */
+* Created by IntelliJ IDEA.
+* User: avelinsk
+* Date: 18.09.2010
+* Time: 15:55:50
+*/
 public class DocMachineParser {
 
   public void parseFiles(File dir, File outputFile){
-    List files = listFiles(dir);
+    List<File> files = listFiles(dir);
     System.out.println("number of files: "+files.size());
+
+    if (!dir.exists()){
+
+      //if no documents to parse, end
+      return;
+    }
+    
     if(!outputFile.exists()){
-      outputFile = new File("output\\input.txt");
       try {
         outputFile.createNewFile();
-      } catch (IOException e) {
+      }
+      catch (IOException e) {
         e.printStackTrace();
       }
     }
-    for (Iterator iter = files.iterator(); iter.hasNext();){
-      File file = (File) iter.next();
-        parseFile(file, outputFile);
+
+    for (File f : files){
+      parseFile(f, outputFile);
     }
   }
 
-    
-  public List listFiles(File dir){
-
+  
+  public List<File> listFiles(File dir){
     if(dir.isDirectory()){
       File[] files = dir.listFiles();
       return Arrays.asList(files);
 
     } else {
-        return new ArrayList();
+        return new ArrayList<File>();
     }
   }
 
@@ -75,18 +81,22 @@ public class DocMachineParser {
         bufw.close();
       } catch (IOException e) {
         e.printStackTrace();
+      } catch (NullPointerException ex){
+        ex.printStackTrace();
       }
     }
   }
 
 
-  //TODO: de-capitalize, remove delimiters, remove whitespaces and newlines
   public String parseLine(String line){
     StringBuilder parsedLine = new StringBuilder("");
     line = line.trim();
+    // escape all non-letter characters:
+    line=line.replaceAll("[^a-zA-Z]"," ");
     parsedLine.append(line);
     parsedLine.append(" ");
+    
     return parsedLine.toString().toLowerCase();
   }
-
 }
+

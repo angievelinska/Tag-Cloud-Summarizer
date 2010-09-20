@@ -218,6 +218,8 @@ hopefully
 how
 howbeit
 however
+http
+https
 i
 i'd
 i'll
@@ -517,6 +519,7 @@ until
 unto
 up
 upon
+url
 us
 use
 used

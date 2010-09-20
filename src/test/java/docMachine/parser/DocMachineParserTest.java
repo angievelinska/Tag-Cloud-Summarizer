@@ -1,12 +1,10 @@
 package docMachine.parser;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.io.File;
-import java.util.Iterator;
-import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -30,17 +28,8 @@ public class DocMachineParserTest {
   @Test
   public void parseFilesTest(){
     File dir = new File("output");
-    File outputFile = new File("output\\input.txt");
+    File outputFile = new File("input\\input.txt");
     docParser.parseFiles(dir, outputFile);
-    
-/*    List files = docParser.listFiles(dir);
-    for(Iterator iter = files.iterator(); iter.hasNext();){
-      File file = (File) iter.next();
-      System.out.println(file.getPath());
-
-    }*/
-
-    //Assert.assertNotNull(files.size());
-
   }
+
 }

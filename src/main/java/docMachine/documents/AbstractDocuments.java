@@ -5,7 +5,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -25,16 +24,14 @@ public abstract class AbstractDocuments {
       getBooks(rootElement);
       log.info("No of books: "+books.size());
 
-     for(Iterator<Content> iterator = books.iterator();iterator.hasNext();){
-       Content book = iterator.next();
-       List<Content> sections = book.getLinks("Sections");
+      for(Content book : books){
+        List<Content> sections = book.getLinks("Sections");
 
-       for (Iterator<Content> iterat = sections.iterator(); iterat.hasNext();){
-         getTextsInSection(iterat.next());
-       }
+        for (Content element : sections){
+          getTextsInSection(element);
+        }
+      }
     }
-
-  }
 
   // depth first search in the document tree
   public void getBooks(Content rootElement){
@@ -44,8 +41,8 @@ public abstract class AbstractDocuments {
       books.add(rootElement);
     }
 
-    for (Iterator<Content> iter = children.iterator(); iter.hasNext(); ){
-      rootElement = iter.next();
+    for (Content aChildren : children) {
+      rootElement = aChildren;
       getBooks(rootElement);
     }
   }
