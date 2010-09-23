@@ -24,13 +24,13 @@ public class TagCloudTest {
     tc.populateCloud(c);
     tc.orderCloud(c);
     try {
-      tc.serializeCloud(c, "opencloud\\cloud.txt");
+      tc.serializeCloud(c, "opencloud/cloud.txt");
     } catch (IOException e){
       e.printStackTrace();
     }
 
     try{
-      Cloud c2 = tc.deSerializeCloud("opencloud\\cloud.txt");
+      Cloud c2 = tc.deSerializeCloud("opencloud/cloud.txt");
       c2.getWordPattern();
     } catch (ClassNotFoundException e){
       e.printStackTrace();

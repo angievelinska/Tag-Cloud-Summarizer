@@ -1,3 +1,0 @@
-
-
-This manual gives an overview of all new features and major changes which have been added to CoreMedia CMS 2008.

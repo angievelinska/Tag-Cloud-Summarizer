@@ -6,6 +6,8 @@ import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.matrix.MatrixIO;
+import edu.ucla.sspace.matrix.SVD;
+import edu.ucla.sspace.matrix.YaleSparseMatrix;
 import edu.ucla.sspace.text.Document;
 import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
@@ -15,7 +17,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Enumeration;
@@ -44,7 +50,7 @@ public class LSA {
 
         Properties props = setupProperties();
         //just for info
-        this.logProps();
+        //this.logProps();
 
         int noOfThreads = Runtime.getRuntime().availableProcessors();
 
@@ -118,7 +124,6 @@ public class LSA {
             }
             };
             threads.add(t);
-
         }
 
         for (Thread t: threads)
@@ -141,34 +146,6 @@ public class LSA {
         return lineIter;
     }
 
-    /**
-     * log the system properties - just FYI
-     */
-    protected void logProps(){
-        Properties sysprops = System.getProperties();
-      
-        for(Enumeration en = sysprops.propertyNames(); en.hasMoreElements(); ){
-            String key = (String) en.nextElement();
-            String value = sysprops.getProperty(key);
-            log.info(key+" = "+value);
-        }
-    }
-
-    protected Properties setupProperties(){
-        Properties props = System.getProperties();
-        props.put(IteratorFactory.COMPOUND_TOKENS_FILE_PROPERTY,"compwords\\compound-words.txt");
-        props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords\\english-stop-words-large.txt");
-        //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
-        props.put("docFile","input\\input.txt");
-        props.put("svdAlgorithm","SVDLIBJ");
-        props.put("outputFormat", "TEXT");
-        props.put("overwrite","true");
-        props.put("verbose","true");
-
-        IteratorFactory.setProperties(props);
-      
-        return props;
-    }
 
   protected void saveMatrix(SemanticSpace sspace){
     int numVectors = sspace.getWords().size();      // ???
@@ -184,14 +161,92 @@ public class LSA {
 
     Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
     MatrixIO.Format fmt = MatrixIO.Format.DENSE_TEXT;
-    File outputMatrix = new File("sspace\\matrix.dat");
+    File outputMatrix = new File("sspace/matrix.txt");
 
     try {
       outputMatrix.createNewFile();
       MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
+      //Matrix[] matrixReduced = SVD.svd(outputMatrix, SVD.Algorithm.SVDLIBJ, fmt, 100);
+      Matrix[] matrixReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,100);
+      //saveMatrix(matrixReduced);
     }
     catch (IOException e) {
       e.printStackTrace();
     }
   }
+
+  protected void saveMatrix(Matrix[] matrix) {
+    File dir  = new File("sspace");
+    File f = null;
+    PrintWriter pw = null;
+    try {
+      f = File.createTempFile("matrixReduced",".txt", dir);
+    }
+    catch (IOException e) {
+      e.printStackTrace();
+    }
+    try {
+      pw = new PrintWriter(f);
+    }
+    catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+    FileOutputStream fos = null;
+    ObjectOutputStream oos = null;
+    try {
+      fos = new FileOutputStream(f);
+      oos = new ObjectOutputStream(fos);
+      oos.writeObject(matrix);
+      oos.flush();
+    } catch (FileNotFoundException fe){
+      fe.printStackTrace();
+    } catch (IOException ex){
+      ex.printStackTrace();
+    } finally {
+      try {
+        oos.close();
+      }
+      catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+
+    
+  }
+
+  protected Matrix[] convertSpace(SemanticSpace sspace){
+    Matrix matrix = new YaleSparseMatrix(1,1);
+    return new Matrix[1];
+  }
+
+    /**
+     * log the system properties - just FYI
+     */
+    protected void logProps(){
+        Properties sysprops = System.getProperties();
+
+        for(Enumeration en = sysprops.propertyNames(); en.hasMoreElements(); ){
+            String key = (String) en.nextElement();
+            String value = sysprops.getProperty(key);
+            log.info(key+" = "+value);
+        }
+    }
+
+    protected Properties setupProperties(){
+        Properties props = System.getProperties();
+        props.put(IteratorFactory.COMPOUND_TOKENS_FILE_PROPERTY,"compwords/compound-words.txt");
+        props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords/english-stop-words-large.txt");
+        //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
+        props.put("docFile","input/input.txt");
+        props.put("svdAlgorithm","SVDLIBJ");
+        props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"100");
+      // default format is binary
+        props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
+        props.put("overwrite","true");
+        props.put("verbose","true");
+
+        IteratorFactory.setProperties(props);
+
+        return props;
+    }
 }

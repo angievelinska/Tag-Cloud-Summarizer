@@ -40,7 +40,7 @@ public class CountDocumentsTest extends TestCase {
        countDocuments.iterate(con);
       
        assertNotSame (countDocuments.getCount(), 0);
-    }*/
+    }
 
   @Test
   public void testCounter2(){
@@ -56,6 +56,13 @@ public class CountDocumentsTest extends TestCase {
     countDocuments.iterate(content);
 
     assertNotSame(countDocuments.getCount(), 0);
+  }  */
+
+  @Test
+  public void testCounter4(){
+      Content content = (Content) repo.getRoot().getChild("/Books/CMS_ONLINE/SoSo");
+      countDocuments.iterate(content);
+    assertNotSame("Document No "+countDocuments.getCount(), countDocuments.getCount(), 0);
   }
   
 }

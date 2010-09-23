@@ -13,8 +13,8 @@ public class IndexerTest {
 
     @Test
     public void testIndexDocuments() throws Exception {
-        String[]dirs = {"C:\\master_thesis\\TagCloudSummarizer\\idx",
-                "C:\\master_thesis\\TagCloudSummarizer\\input"};
+        String[]dirs = {"C:/master_thesis/TagCloudSummarizer/idx",
+                "C:/master_thesis/TagCloudSummarizer/input"};
         Indexer.indexDocuments(dirs);
     }
 }

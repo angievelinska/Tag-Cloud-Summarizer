@@ -1,14 +1,23 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.9)  23 JUL 2010 11:37
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.9)  23 SEP 2010 10:39
 entering extended mode
 **thesis.tex
-(C:\master_thesis\thesis_report\ThesisReport\thesis.tex
+(C:\master_thesis\TagCloudSummarizer\report\thesis.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\report.cls"
-Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\size10.clo"
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.8\tex\latex\extsizes\extreport.cls"
+Document Class: extreport 1996/10/08 v1.0 Non Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\exscale.sty"
+Package: exscale 2007/10/29 v2.1h Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 52.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 52.
+\big@size=\dimen102
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -21,7 +30,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
-\bibindent=\dimen102
+\bibindent=\dimen103
 )
 ("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
@@ -47,11 +56,11 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 ("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\dvips.def"
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
-\epsfxsize=\dimen105
-\epsfysize=\dimen106
+\epsfxsize=\dimen106
+\epsfysize=\dimen107
 )
 ("C:\Program Files\MiKTeX 2.8\tex\latex\moreverb\moreverb.sty"
 Package: moreverb 2008/06/03 v2.3 `more' verbatim facilities
@@ -110,7 +119,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
 ("C:\Program Files\MiKTeX 2.8\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen107
+\bigstrutjot=\dimen108
 )
 ("C:\Program Files\MiKTeX 2.8\tex\latex\fancyvrb\fancyvrb.sty"
 Package: fancyvrb 2008/02/07
@@ -129,14 +138,14 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \lst@gtempboxa=\box27
 \lst@token=\toks18
 \lst@length=\count95
-\lst@currlwidth=\dimen108
+\lst@currlwidth=\dimen109
 \lst@column=\count96
 \lst@pos=\count97
-\lst@lostspace=\dimen109
-\lst@width=\dimen110
+\lst@lostspace=\dimen110
+\lst@width=\dimen111
 \lst@newlines=\count98
 \lst@lineno=\count99
-\lst@maxwidth=\dimen111
+\lst@maxwidth=\dimen112
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -164,7 +173,7 @@ Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
 ("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.def"
 File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count102
-\U@D=\dimen112
+\U@D=\dimen113
 )
 \l@naustrian = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 92.
@@ -200,7 +209,7 @@ O)
 ("C:\Program Files\MiKTeX 2.8\tex\latex\oberdiek\xcolor-patch.sty"
 Package: xcolor-patch 2009/10/02 xcolor patch
 ))
-\@linkdim=\dimen113
+\@linkdim=\dimen114
 \Hy@linkcounter=\count103
 \Hy@pagecounter=\count104
 
@@ -263,8 +272,8 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 )))
 \Fld@menulength=\count105
-\Field@Width=\dimen114
-\Fld@charsize=\dimen115
+\Field@Width=\dimen115
+\Fld@charsize=\dimen116
 \Field@toks=\toks19
 Package hyperref Info: Hyper figures OFF on input line 4377.
 Package hyperref Info: Link nesting OFF on input line 4382.
@@ -296,23 +305,23 @@ File: pdfmark.def 2009/10/19 v6.79b Hyperref definitions for pdfmark specials
 ("C:\Program Files\MiKTeX 2.8\tex\latex\oberdiek\hypcap.sty"
 Package: hypcap 2008/09/08 v1.10 Adjusting anchors of captions (HO)
 )
-(C:\master_thesis\thesis_report\ThesisReport\thesis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+(C:\master_thesis\TagCloudSummarizer\report\thesis.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 \c@lstlisting=\count110
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 40.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -322,43 +331,39 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count111
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
 
-(C:\master_thesis\thesis_report\ThesisReport\thesis.out)
-(C:\master_thesis\thesis_report\ThesisReport\thesis.out)
+(C:\master_thesis\TagCloudSummarizer\report\thesis.out)
+(C:\master_thesis\TagCloudSummarizer\report\thesis.out)
 \@outlinefile=\write5
 \AtBeginShipoutBox=\box30
 File: img/STSlogo.eps Graphic file (type eps)
  <img/STSlogo.eps>
-LaTeX Font Info:    Try loading font information for U+msa on input line 50.
+LaTeX Font Info:    Try loading font information for U+msa on input line 51.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 50.
+LaTeX Font Info:    Try loading font information for U+msb on input line 51.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 File: img/CoremediaLogo.eps Graphic file (type eps)
 
-<img/CoremediaLogo.eps>
-Overfull \hbox (11.38736pt too wide) in paragraph at lines 53--54
-[][][] 
- []
+<img/CoremediaLogo.eps> [1
 
-[1
-
-] (C:\master_thesis\thesis_report\ThesisReport\thesis.toc)
+]
+(C:\master_thesis\TagCloudSummarizer\report\thesis.toc)
 \tf@toc=\write6
  [1
 
 ]
-(C:\master_thesis\thesis_report\ThesisReport\thesis.lof)
+(C:\master_thesis\TagCloudSummarizer\report\thesis.lof)
 \tf@lof=\write7
 
-(C:\master_thesis\thesis_report\ThesisReport\introduction.tex [2
+(C:\master_thesis\TagCloudSummarizer\report\introduction.tex [2
 
 ]
 Chapter 1.
@@ -387,6 +392,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 ]
 File: img/cms-simplified.eps Graphic file (type eps)
  <img/cms-simplified.eps>
+
+LaTeX Warning: Reference `sec:docmanagsystem' on page 4 undefined on input line
+ 23.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
@@ -401,52 +411,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
- []
+LaTeX Warning: Reference `sec:docmanagsystem' on page 5 undefined on input line
+ 36.
 
-) (C:\master_thesis\thesis_report\ThesisReport\docmanagsystem.tex
-Underfull \hbox (badness 10000) in paragraph at lines 40--1
+) (C:\master_thesis\TagCloudSummarizer\report\lsa.tex
+Underfull \hbox (badness 10000) in paragraph at lines 36--1
 
  []
 
 [5]
 Chapter 2.
-) (C:\master_thesis\thesis_report\ThesisReport\semanticannotation.tex [6
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Overfull \hbox (7.76704pt too wide) in paragraph at lines 12--36
+\OT1/cmr/m/n/12 Library/implementation used for LSA is S-Spaces from Air-head R
+e-search project
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--36
+
+ []
+
+[6
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
+
+ []
+
+) (C:\master_thesis\TagCloudSummarizer\report\tagclouds.tex [7]
 Chapter 3.
-) (C:\master_thesis\thesis_report\ThesisReport\lsa.tex [7
+) (C:\master_thesis\TagCloudSummarizer\report\implementation.tex [8
 
 ]
 Chapter 4.
-) (C:\master_thesis\thesis_report\ThesisReport\implementation.tex [8
+) (C:\master_thesis\TagCloudSummarizer\report\conclusion.tex [9
 
 ]
 Chapter 5.
-) (C:\master_thesis\thesis_report\ThesisReport\conclusion.tex [9
-
-]
-Chapter 6.
-) (C:\master_thesis\thesis_report\ThesisReport\thesis.bbl [10
+) (C:\master_thesis\TagCloudSummarizer\report\thesis.bbl [10
 
 ]) [11
 
 ]
-(C:\master_thesis\thesis_report\ThesisReport\thesis.aux) ) 
-Here is how much of TeX's memory you used:
- 6554 strings out of 495286
- 96298 string characters out of 3180409
- 166391 words of memory out of 3000000
- 9604 multiletter control sequences out of 15000+200000
- 12088 words of font info for 46 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 38i,8n,43p,893b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+(C:\master_thesis\TagCloudSummarizer\report\thesis.aux)
 
-Output written on thesis.dvi (12 pages, 40220 bytes).
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6571 strings out of 495286
+ 98128 string characters out of 3180409
+ 166168 words of memory out of 3000000
+ 9623 multiletter control sequences out of 15000+200000
+ 11160 words of font info for 41 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 38i,6n,43p,893b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on thesis.dvi (12 pages, 36732 bytes).
