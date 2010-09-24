@@ -10,34 +10,53 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.HashMap;
 
 /**
  * User: avelinsk
  * Date: 01.09.2010
  */
 public class TagCloud {
-  public Cloud getCloud(){
-    TagCloud tagCloud = new TagCloud();
+  private Cloud cloud;
 
-    Cloud cloud = new Cloud();
-    cloud.setMaxWeight(38.0);
-    tagCloud.populateCloud(cloud);
-    tagCloud.orderCloud(cloud);
+  protected TagCloud(){
+    cloud = new Cloud();
+  }
 
+
+  protected TagCloud(double weight, int maxTags){
+    cloud = new Cloud();
+    cloud.setMaxWeight(weight);
+    cloud.setMaxTagsToDisplay(maxTags);
+  }
+  
+
+  public Cloud generateCloud(double weight, int maxTags, HashMap tags, double threshold){
+    TagCloud tagCloud = new TagCloud(weight,maxTags);
+    populateCloud(tags);
+    orderCloud(threshold);
     return cloud;
   }
 
-  public void populateCloud(Cloud cloud){
-    Tag tag = new Tag("CoreMedia", "https://www.coremedia.com/", 3.5);
-    cloud.addTag(tag);
+
+  private void populateCloud(HashMap tags){
+    String word = "";
+    for (Object o : tags.entrySet()) {
+      double weight = (Double) o;
+      word = (String) tags.get(weight);
+      Tag tag = new Tag(word, weight);
+      cloud.addTag(tag);
+    }
   }
 
-  public void orderCloud(Cloud cloud){
+
+  protected void orderCloud(double threshold){
     cloud.tags(new Tag.ScoreComparatorDesc());
-    cloud.setThreshold(2.0);
+    cloud.setThreshold(threshold);
   }
 
-  public void serializeCloud(Cloud cloud, File file){
+
+  protected void serializeCloud(Cloud cloud, File file){
     FileOutputStream fos;
     ObjectOutputStream oos = null;
     try{
@@ -51,8 +70,9 @@ public class TagCloud {
       e.printStackTrace();
     }
   }
+  
 
-  public Cloud deserializeCloud(File file) {
+  protected Cloud deserializeCloud(File file) {
     Cloud cloud = null;
     FileInputStream fis;
     ObjectInputStream ois = null;
@@ -70,7 +90,7 @@ public class TagCloud {
     return cloud;
   }
 
-/*  public void serializeXML(){
+/*  protected void serializeXML(){
     XStream xstream = new XStream();
     String xml = xstream.toXML(cloud);
     Cloud c = (Cloud) xstream.fromXML(xml);

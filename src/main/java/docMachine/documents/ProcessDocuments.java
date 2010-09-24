@@ -21,7 +21,7 @@ public class ProcessDocuments extends AbstractDocuments{
   private final static org.apache.commons.logging.Log log =
           org.apache.commons.logging.LogFactory.getLog(ProcessDocuments.class);
   private static final String path = "output/";
-  private static final String extension = ".txt"; //".html";
+  private static final String extension = ".txt"; 
 
   
   @Override
@@ -46,9 +46,6 @@ public class ProcessDocuments extends AbstractDocuments{
   }
 
 
-  /**
-   * TODO: decapitalize words, remove punctuation
-   */
    private void serialize(String id, Markup markup){
      StringBuffer sb = new  StringBuffer();
      sb.append(id.substring(id.lastIndexOf("/")+1));
@@ -66,7 +63,6 @@ public class ProcessDocuments extends AbstractDocuments{
 
      try {
        BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-       // TODO: to test this
        String plainText = asPlainText(markup);
        writer.write(plainText);
        writer.close();
@@ -78,6 +74,7 @@ public class ProcessDocuments extends AbstractDocuments{
      log.info("*** File created: "+sb.toString());
    }
 
+  
   private String asPlainText(Markup markup){
     if (markup ==  null) return "";
 

@@ -10,6 +10,8 @@ import java.io.File;
  * User: avelinsk
  * Date: 17.09.2010
  * Time: 13:10:56
+ *
+ * TODO: refactor - get classes from LSA.java
  */
 public class SVDImpl{
 

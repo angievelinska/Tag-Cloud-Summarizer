@@ -18,10 +18,22 @@ http://code.google.com/p/airhead-research/wiki/MatrixClasses
 Next step will be to parse texts from DocMachine directly into LSA.
 8. Research what can be done for scalabiilty and performance - should txts be parsed in a file, or used from memory?
 Research how parallelism can be implemented if txts are parsed in-memory. Describe this in the report.
-9. Don't stem or lemmatize the input words for LSA - they will be used later for the TagCloud generation.
-
+9. Maven + webapp + tagcloud.jsp  ???
 
 Questions
 -------------
 1. How to integrate indexing in Lucene with SVD in LSA? SVD uses a matrix, no indexing, no feedables.
-2. WHY IS SVD NOT REDUCING DIMENSIONS TO 300 !?
+
+
+Lucene queries on the document collection -> LSA on the returned docs -> tag cloud with the words ranked highest
+----------------------------------------------------------------------------------------------------------------
+1. Lucene queries on doc collection
+2. LSA on the whole doc collection
+3. LSA on a given document set
+4. Extract terms and weights from matrix
+5. Tag Cloud generation
+
+Information
+-------------
+1. implementation of LSA and Solr:
+http://www.ccri.com/blog/2010/4/2/latent-semantic-analysis-in-solr-using-clojure.html 

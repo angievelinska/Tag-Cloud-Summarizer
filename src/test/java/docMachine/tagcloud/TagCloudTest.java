@@ -17,7 +17,7 @@ public class TagCloudTest {
   @Before
   public void init(){
     tc = new TagCloud();
-    c = tc.getCloud();
+    c = tc.generateCloud();
   }
 
   @Test

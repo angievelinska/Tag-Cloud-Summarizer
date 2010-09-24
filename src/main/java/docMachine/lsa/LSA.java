@@ -27,6 +27,7 @@ import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -35,6 +36,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Date: 11.08.2010
  *
  * Creates a Semantic Space using Latent Semantic Analysis
+ *
+ * TODO: refactor
  */
 public class LSA {
     private final static Log log = LogFactory.getLog(LSA.class);
@@ -70,6 +73,10 @@ public class LSA {
         log.info("LSA used "+(end-start)+"ms to index the document collection.");
         log.info("Number of words in the sspace: "+sspace.getWords().size());
     }
+
+  public void runLSA(List<File> documents){
+
+  }
 
     protected File initOutputFile() throws IOException{
         File outputPath = new File("sspace");

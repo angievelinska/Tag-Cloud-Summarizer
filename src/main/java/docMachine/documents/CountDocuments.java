@@ -18,7 +18,6 @@ public class CountDocuments extends AbstractDocuments {
   
   public int getCount(){
     log.info("Number of sections/texts: "+counter);
-    
     return counter;
   }
 
