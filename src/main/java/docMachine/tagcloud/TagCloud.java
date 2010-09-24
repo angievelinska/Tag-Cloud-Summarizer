@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.HashMap;
+import java.util.Map;
 
 /**
  * User: avelinsk
@@ -31,19 +31,19 @@ public class TagCloud {
   }
   
 
-  public Cloud generateCloud(double weight, int maxTags, HashMap tags, double threshold){
-    TagCloud tagCloud = new TagCloud(weight,maxTags);
+  public Cloud generateCloud(double maxWeight, int maxTags, Map tags, double threshold){
+    new TagCloud(maxWeight,maxTags);
     populateCloud(tags);
     orderCloud(threshold);
     return cloud;
   }
 
 
-  private void populateCloud(HashMap tags){
+  private void populateCloud(Map<Double,String> tags){
     String word = "";
     for (Object o : tags.entrySet()) {
       double weight = (Double) o;
-      word = (String) tags.get(weight);
+      word = tags.get(weight);
       Tag tag = new Tag(word, weight);
       cloud.addTag(tag);
     }
@@ -56,7 +56,7 @@ public class TagCloud {
   }
 
 
-  protected void serializeCloud(Cloud cloud, File file){
+  protected void serializeCloud(File file){
     FileOutputStream fos;
     ObjectOutputStream oos = null;
     try{
