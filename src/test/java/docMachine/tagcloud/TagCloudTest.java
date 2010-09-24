@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mcavallo.opencloud.Cloud;
+import org.mcavallo.opencloud.Tag;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,11 +24,30 @@ public class TagCloudTest {
   }
 
   @Test
+  public void testHashMap(){
+    Map<String, Double> tags = new HashMap<String, Double>();
+    tags.put("CoreMedia", (double) 5);
+    tags.put("content", (double) 4);
+    tags.put("server", 3.5);
+
+    double weight;
+    for (Object o : tags.entrySet()) {
+      Map.Entry<String,Double> entry = (Map.Entry) o;
+      String word = entry.getKey();
+      System.out.println(word);
+      weight = entry.getValue();
+      System.out.println(weight);
+      Tag tag = new Tag(word, weight);
+    }
+  }
+
+  @Test
   public void testTagCloud(){
-    Map<Double, String> tags = new HashMap<Double, String>();
-    tags.put((double) 5, "CoreMedia");
-    tags.put((double) 4, "content");
-    tags.put(3.5, "server");
+    Map<String, Double> tags = new HashMap<String, Double>();
+    tags.put("CoreMedia", (double) 5);
+    tags.put("content", (double) 4);
+    tags.put("server", 3.5);
+
     tc.generateCloud(5.0, 20, tags, 1.0);
     
     File dir = new File("opencloud");
@@ -35,11 +55,13 @@ public class TagCloudTest {
       Assert.assertTrue(dir.mkdir());
     }
     File file = new File(dir,"cloud.html");
-    try {
-      Assert.assertTrue(file.createNewFile());
-    }
-    catch (IOException e) {
-      e.printStackTrace();
+    if (!file.exists()){
+      try {
+        Assert.assertTrue(file.createNewFile());
+      }
+      catch (IOException e) {
+        e.printStackTrace();
+      }
     }
 
     tc.serializeCloud(file);

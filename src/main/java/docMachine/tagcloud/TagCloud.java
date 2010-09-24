@@ -31,7 +31,7 @@ public class TagCloud {
   }
   
 
-  public Cloud generateCloud(double maxWeight, int maxTags, Map tags, double threshold){
+  public Cloud generateCloud(double maxWeight, int maxTags, Map<String,Double> tags, double threshold){
     new TagCloud(maxWeight,maxTags);
     populateCloud(tags);
     orderCloud(threshold);
@@ -39,11 +39,12 @@ public class TagCloud {
   }
 
 
-  private void populateCloud(Map<Double,String> tags){
-    String word = "";
+  private void populateCloud(Map<String, Double> tags){
+    double weight;
     for (Object o : tags.entrySet()) {
-      double weight = (Double) o;
-      word = tags.get(weight);
+      Map.Entry<String,Double> entry = (Map.Entry<String,Double>) o;
+      String word = entry.getKey();
+      weight = entry.getValue();
       Tag tag = new Tag(word, weight);
       cloud.addTag(tag);
     }
