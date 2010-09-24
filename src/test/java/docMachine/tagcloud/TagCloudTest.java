@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mcavallo.opencloud.Cloud;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -23,20 +24,22 @@ public class TagCloudTest {
   public void testTagCloud(){
     tc.populateCloud(c);
     tc.orderCloud(c);
+    File dir = new File("opencloud");
+    if (!dir.exists()){
+      dir.mkdir();
+    }
+    File file = new File(dir,"cloud.html");
     try {
-      tc.serializeCloud(c, "opencloud/cloud.txt");
-    } catch (IOException e){
+      file.createNewFile();
+    }
+    catch (IOException e) {
       e.printStackTrace();
     }
 
-    try{
-      Cloud c2 = tc.deSerializeCloud("opencloud/cloud.txt");
-      c2.getWordPattern();
-    } catch (ClassNotFoundException e){
-      e.printStackTrace();
-    } catch (IOException ex){
-      ex.printStackTrace();
-    }
+    tc.serializeCloud(c,file);
+
+    Cloud c2 = tc.deserializeCloud(file);
+    c2.getWordPattern();
   }
 
   @After

@@ -3,7 +3,9 @@ package docMachine.tagcloud;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -35,19 +37,36 @@ public class TagCloud {
     cloud.setThreshold(2.0);
   }
 
-  public void serializeCloud(Cloud cloud, String file) throws IOException {
-    FileOutputStream fos = new FileOutputStream(file);
-    ObjectOutputStream oos = new ObjectOutputStream(fos);
-    oos.writeObject(cloud);
-    oos.close();
+  public void serializeCloud(Cloud cloud, File file){
+    FileOutputStream fos;
+    ObjectOutputStream oos = null;
+    try{
+      fos = new FileOutputStream(file);
+      oos = new ObjectOutputStream(fos);
+      oos.writeObject(cloud);
+      oos.close();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
-  public Cloud deSerializeCloud(String file) throws IOException, ClassNotFoundException{
-    Cloud cloud;
-    FileInputStream fis = new FileInputStream("file");
-    ObjectInputStream ois = new ObjectInputStream(fis);
-    cloud = (Cloud) ois.readObject();
-    ois.close();
+  public Cloud deserializeCloud(File file) {
+    Cloud cloud = null;
+    FileInputStream fis;
+    ObjectInputStream ois = null;
+    try {
+      fis = new FileInputStream(file);
+      ois = new ObjectInputStream(fis);
+      cloud = (Cloud) ois.readObject();
+      ois.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (ClassNotFoundException e) {
+      e.printStackTrace();
+    }
+
     return cloud;
   }
 
