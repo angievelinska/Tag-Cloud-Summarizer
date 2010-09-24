@@ -5,12 +5,23 @@
 This chapter presents Latent Semantic Analysis as a method for text processing, and defining the main concepts in texts.
 \end{summary}
 
-\section{1}
-\label{sec:lsa:1}
+\nomenclature{LSA}{Latent Semantic Analysis}Latent Semantic Analysis (LSA) uses a Singular Value Decomposition (SVD) to construct a..\\
+
+at the end- improvements of lsa with the basics explained.
+why am i using lsa instead of lda for example?
+\section{plan}
+\label{sec:lsa:plan}
+1. text processing and peculiarities; stemming, lemmatization, stop-wording\\
+2. lsa and basics\\
+3. weighting functions and their effect ot LSA results \cite{Nakov_weightfunctions}. \\
+4. lsa used for information retrieval; lsa used for defining the main concepts in texts. precision vs. recall. \\
+(first explain the basics of LSA, then explain how factors can influence lsa)\\
+Several factors influence the quality of results which LSA delivers. These factors are pre-processing (removal of stop-words, stemming, lemmatization), frequency matrix transformations, choice of dimensionality, choice of similarity measure.\\
+A study by Nakov, Popova, Mateev\cite{Nakov_weightfunctions} has summarized the influence of those factors on LSA, and has concluded that...\\
 
 \section{storage}
 Text Processing and LSA\\
-\\
+
 Text processing:\\
 -	retrieve documents from DB\\
 -	tokenize texts\\

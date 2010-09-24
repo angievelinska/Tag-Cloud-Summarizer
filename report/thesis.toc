@@ -1,13 +1,14 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation and objective}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Outline}{5}{section.1.2}
-\contentsline {chapter}{\numberline {2}Latent Semantic Analysis}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}1}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}storage}{6}{section.2.2}
-\contentsline {chapter}{\numberline {3}Tag Clouds}{8}{chapter.3}
-\contentsline {section}{\numberline {3.1}1}{8}{section.3.1}
-\contentsline {chapter}{\numberline {4}Implementation and evaluation of results}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}1}{9}{section.4.1}
-\contentsline {chapter}{\numberline {5}Conclusion and outlook}{10}{chapter.5}
-\contentsline {section}{\numberline {5.1}1}{10}{section.5.1}
+\contentsline {section}{\numberline {1.1}Motivation and objective}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Outline}{6}{section.1.2}
+\contentsline {chapter}{\numberline {2}Latent Semantic Analysis}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}plan}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}storage}{8}{section.2.2}
+\contentsline {chapter}{\numberline {3}Tag Clouds}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}1}{10}{section.3.1}
+\contentsline {chapter}{\numberline {4}Implementation and evaluation of results}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}1}{12}{section.4.1}
+\contentsline {chapter}{\numberline {5}Conclusion and outlook}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}1}{13}{section.5.1}
+\contentsline {chapter}{\numberline {A}Some Code}{14}{appendix.A}

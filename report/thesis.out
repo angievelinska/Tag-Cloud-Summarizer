@@ -2,7 +2,7 @@
 \BOOKMARK [1][-]{section.1.1}{Motivation and objective}{chapter.1}
 \BOOKMARK [1][-]{section.1.2}{Outline}{chapter.1}
 \BOOKMARK [0][-]{chapter.2}{Latent Semantic Analysis}{}
-\BOOKMARK [1][-]{section.2.1}{1}{chapter.2}
+\BOOKMARK [1][-]{section.2.1}{plan}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{storage}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Tag Clouds}{}
 \BOOKMARK [1][-]{section.3.1}{1}{chapter.3}
@@ -10,3 +10,4 @@
 \BOOKMARK [1][-]{section.4.1}{1}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{Conclusion and outlook}{}
 \BOOKMARK [1][-]{section.5.1}{1}{chapter.5}
+\BOOKMARK [0][-]{appendix.A}{Some Code}{}

@@ -9,7 +9,6 @@
 \usepackage{fancyvrb}
 \usepackage{listings} 
 \usepackage[ngerman,english]{babel}
-%\usepackage[14pt]{extsizes}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{hyperref}
@@ -35,6 +34,11 @@
 \fi
 }
 \makeatother
+
+% include a list of abbreviations
+\usepackage{nomencl}
+\makenomenclature
+
 
 \pagestyle{headings}
 \begin{document}
@@ -84,10 +88,9 @@ supervised by\\
 \large
 Prof. Dr. Ralf M\"oller\\
 Dipl. Ing. Sylvia Melzer\\
-
 \bigskip
-Technical University of Hamburg-Harburg\\
 Software Systems Institute (STS)\\
+Technical University of Hamburg-Harburg\\
 \bigskip
 Dr. Michael Fritsch\\
 %\bigskip
@@ -127,10 +130,12 @@ Hamburg\\
 \input{implementation}
 \input{conclusion}
 
+\printnomenclature[2.5cm]
+
 % uncomment to include list of annexes when ready
-%\begin{appendix}
-%\input{appendices}
-%\end{appendix}
+\begin{appendix}
+\input{appendices}
+\end{appendix}
 
 % After adding new references to the "references.bib" file, first invoke latex, then
 % bibtex on the references file, then latex again:

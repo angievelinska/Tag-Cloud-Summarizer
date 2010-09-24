@@ -6,7 +6,13 @@ C.~D. Manning, P.~Raghavan, and H.~Schtze, {\em Introduction to Information
 \newblock New York, NY, USA: Cambridge University Press, 2008.
 
 \bibitem{mugo10}
-D.~M. Mugo, ``Connecting people using latent semantic analysis for knowledge
-  sharing,'' Master's thesis, Hamburg University of Technology, Jan. 2010.
+D.~M. Mugo, ``Connecting people using {L}atent {S}emantic {A}nalysis for
+  knowledge sharing,'' Master's thesis, Hamburg University of Technology, Jan.
+  2010.
+
+\bibitem{Nakov_weightfunctions}
+P.~Nakov, A.~Popova, and P.~Mateev, ``Weight functions impact on {LSA}
+  performance,'' in {\em EuroConference RANLP'2001 (Recent Advances in NLP},
+  pp.~187--193, 2001.
 
 \end{thebibliography}
