@@ -10,7 +10,7 @@
   <div>
     <% TagCloud tg = new TagCloud(); %>
     <% for (Tag tag : tg.getTagCloud().tags()) { %>
-    <a href="<%= tag.getLink() %>" style="font-size:<%= tag.getWeight() %>px;"%gt;<%= tag.getName() %></a>
+    <a href="<%= tag.getLink() %>" style="font-size:<%= tag.getWeight() %>px;"><%= tag.getName() %></a>
     <% } %>
   </div>
 

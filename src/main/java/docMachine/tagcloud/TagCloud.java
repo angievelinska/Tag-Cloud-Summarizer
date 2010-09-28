@@ -101,11 +101,9 @@ public class TagCloud {
 
   public Cloud getTagCloud(){
     Map<String, Double> tags = new HashMap<String, Double>();
-    tags.put("CoreMedia", (double) 5);
-    tags.put("content", (double) 4);
-    tags.put("server", 3.5);
-    Cloud c = generateCloud(5.0, 20, tags, 1.0);
-
-    return c;
+    tags.put("CoreMedia", (double) 30);
+    tags.put("content", (double) 20);
+    tags.put("server", 26.5);
+    return generateCloud(40, 20, tags, 10.0);
   }
 }
