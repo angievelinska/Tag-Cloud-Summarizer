@@ -43,7 +43,7 @@
       <groupId>edu.ucla.sspace</groupId>
       <artifactId>lsa</artifactId>
       <version>1.2</version>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.mcavallo.opencloud</groupId>

@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -19,12 +20,13 @@ import java.util.Map;
 public class TagCloud {
   private Cloud cloud;
 
-  protected TagCloud(){
+  public TagCloud(){
     cloud = new Cloud();
   }
 
 
   protected TagCloud(double weight, int maxTags){
+    super();
     cloud = new Cloud();
     cloud.setMaxWeight(weight);
     cloud.setMaxTagsToDisplay(maxTags);
@@ -38,7 +40,7 @@ public class TagCloud {
     return cloud;
   }
 
-
+  @SuppressWarnings("unchecked")
   private void populateCloud(Map<String, Double> tags){
     double weight;
     for (Object o : tags.entrySet()) {
@@ -96,4 +98,14 @@ public class TagCloud {
     String xml = xstream.toXML(cloud);
     Cloud c = (Cloud) xstream.fromXML(xml);
   }*/
+
+  public Cloud getTagCloud(){
+    Map<String, Double> tags = new HashMap<String, Double>();
+    tags.put("CoreMedia", (double) 5);
+    tags.put("content", (double) 4);
+    tags.put("server", 3.5);
+    Cloud c = generateCloud(5.0, 20, tags, 1.0);
+
+    return c;
+  }
 }
