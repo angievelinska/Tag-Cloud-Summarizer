@@ -4,6 +4,7 @@ import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.matrix.Matrix;
 
 import java.io.File;
+import java.util.Vector;
 
 /**
  * Created by IntelliJ IDEA.
@@ -21,6 +22,16 @@ public class SVDImpl{
   
   public void decompose(Matrix matrix, File file){
 
+  }
+
+  public static void normalize(){
+    // normalize the initial term-document matrix
+  }
+
+  public double getSimilarity(Vector vector){
+    double sim = 0.0;
+    
+    return sim;
   }
 
 }

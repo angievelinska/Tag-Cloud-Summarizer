@@ -7,8 +7,20 @@ This chapter presents Latent Semantic Analysis as a method for text processing, 
 
 \nomenclature{LSA}{Latent Semantic Analysis}Latent Semantic Analysis (LSA) uses a Singular Value Decomposition (SVD) to construct a..\\
 
-at the end- improvements of lsa with the basics explained.
-why am i using lsa instead of lda for example?
+There are three main factors that can influence the performance of LSA\cite{Nakov_weightfunctions}\cite{NakovBetterResultsLSI}:\\
+\begin{itemize}
+\item Frequency matrix transoformations (choice of weighting function)
+\item Choice of dimensionality
+\item Text preprocessing prior to SVD, choice of similarity measure (???)
+\end{itemize}
+
+Further, the choice of dimensionality is dependent upon the matrix transformations performed, as pointed out by Nakov in \cite{NakovBetterResultsLSI}.\\
+
+\section{Latest development in the field of LSA}
+LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\
+
+at the end- improvements of lsa with the basics explained.\\
+why am i using lsa instead of lda for example?\\
 \section{plan}
 \label{sec:lsa:plan}
 1. text processing and peculiarities; stemming, lemmatization, stop-wording\\
@@ -47,7 +59,13 @@ For text processing, Snowball project is used, from the laboratory of Martin Pot
 
 11818 words in word space\\
  63552ms to run LSA on 4000 documents\\
-and IDEA blocks 9\\
+and IDEA blocks \\
 \\
-Due to the problem above, the process of SVD calculation has to be performed in a multi-threaded way, and the project has to be optimized with respect to performance, in order to be able to successfully run.
+Due to the problem above, the process of SVD calculation has to be performed in a multi-threaded way, and the project has to be optimized with respect to performance, in order to be able to successfully run.\\
+Keep only wht words common to at least 2 documents???\\
+
+\section{Alternative approaches for LSA}
+\begin{enumerate}
+\item PLSA - characteristics, advantages, disadvantages
+\item LDA - characteristics, advantages, disadvantages
 

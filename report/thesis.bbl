@@ -15,4 +15,14 @@ P.~Nakov, A.~Popova, and P.~Mateev, ``Weight functions impact on {LSA}
   performance,'' in {\em EuroConference RANLP'2001 (Recent Advances in NLP},
   pp.~187--193, 2001.
 
+\bibitem{NakovBetterResultsLSI}
+P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
+  {\em In Proceedings of the Students Prenetations at ESSLLI-2000},
+  pp.~156--166, 2000.
+
+\bibitem{CrDuSh09}
+P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
+  of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
+  Analytics Science and Technology}, 2009.
+
 \end{thebibliography}

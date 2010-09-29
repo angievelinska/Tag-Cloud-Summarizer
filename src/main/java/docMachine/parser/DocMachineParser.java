@@ -90,7 +90,7 @@ public class DocMachineParser {
 
   public String parseLine(String line){
     StringBuilder parsedLine = new StringBuilder("");
-    // remove all non-letter characters
+    // replace all non-letter characters with a whitespace
     line = line.replaceAll("[^a-zA-Z]"," ");
     parsedLine.append(line);
     parsedLine.append(" ");
