@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.10)  29 SEP 2010 17:12
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.10)  30 SEP 2010 00:05
 entering extended mode
 **thesis.tex
 
@@ -630,12 +630,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6692 strings out of 495286
- 100776 string characters out of 3180426
- 167267 words of memory out of 3000000
- 9728 multiletter control sequences out of 15000+200000
+ 6694 strings out of 495286
+ 100826 string characters out of 3180426
+ 168453 words of memory out of 3000000
+ 9730 multiletter control sequences out of 15000+200000
  13027 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,8n,43p,893b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (16 pages, 60832 bytes).
+Output written on thesis.dvi (16 pages, 64064 bytes).
