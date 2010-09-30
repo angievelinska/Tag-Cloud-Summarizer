@@ -1,17 +1,12 @@
 package docMachine.tagcloud;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 /**
  * User: avelinsk
@@ -19,6 +14,7 @@ import java.util.Map;
  */
 public class TagCloud {
   private Cloud cloud;
+  private static final Log log = LogFactory.getLog(TagCloud.class);
 
   public TagCloud(){
     cloud = new Cloud();
@@ -38,6 +34,23 @@ public class TagCloud {
     populateCloud(tags);
     orderCloud(threshold);
     return cloud;
+  }
+
+  public Cloud generateCloud(double maxWeight, int maxTags, List<String> words, double threshold){
+    TagCloud tc = new TagCloud(maxWeight,maxTags);
+    populateCloud(words);
+    orderCloud(threshold);
+    return cloud;
+  }
+
+
+  private void populateCloud(List<String> words){
+     //List<Tag> tags = new ArrayList<Tag>();
+     for (String t : words){
+       Tag tag = new Tag(t);
+       cloud.addTag(tag);
+     }
+   // cloud.addTags(tags);
   }
 
   @SuppressWarnings("unchecked")
@@ -97,7 +110,7 @@ public class TagCloud {
     XStream xstream = new XStream();
     String xml = xstream.toXML(cloud);
     Cloud c = (Cloud) xstream.fromXML(xml);
-  }*/
+  }
 
   public Cloud getTagCloud(){
     Map<String, Double> tags = new HashMap<String, Double>();
@@ -106,4 +119,30 @@ public class TagCloud {
     tags.put("server", 26.5);
     return generateCloud(40, 20, tags, 10.0);
   }
+*/
+
+  public Cloud getTagCloud(){
+    File input = new File("input/input.txt");
+    log.info("file exists");
+    StringBuilder sb = new StringBuilder();
+    Scanner scanner;
+
+    try{
+      scanner = new Scanner(input);
+      while(scanner.hasNext()){
+        sb.append(scanner.nextLine());
+
+      }
+    }catch(FileNotFoundException e){
+      e.printStackTrace();
+    }
+
+    log.info(sb.toString());
+    
+    String[] words = sb.toString().split("\\s+");
+    List<String> tags = Arrays.asList(words);
+
+    return generateCloud(40,20,tags,10.0);
+  }
+
 }

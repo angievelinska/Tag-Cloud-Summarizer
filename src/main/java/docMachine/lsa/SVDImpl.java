@@ -4,10 +4,11 @@ import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.matrix.Matrix;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Vector;
 
 /**
- * Created by IntelliJ IDEA.
  * User: avelinsk
  * Date: 17.09.2010
  * Time: 13:10:56
@@ -32,6 +33,12 @@ public class SVDImpl{
     double sim = 0.0;
     
     return sim;
+  }
+
+  public Map<String,Double> getWords(Matrix svd){
+    Map<String,Double> words = new HashMap<String,Double>();
+
+    return words;
   }
 
 }

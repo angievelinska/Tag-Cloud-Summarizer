@@ -188,11 +188,10 @@ public class LSA {
     File dir  = new File("sspace");
     File f1, f2, f3;
     try {
-      f1 = File.createTempFile("matrix_U",".txt", dir);
-      f2 = File.createTempFile("matrix_S",".txt", dir);
-      f3 = File.createTempFile("matrix_V",".txt", dir);
+      f1 = new File(dir, "matrix_U.dat");
+      f2 = new File(dir, "matrix_S.dat");
+      f3 = new File(dir, "matrix_V.dat");
 
-      log.info("how many matrices: "+matrix.length);
       MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.DENSE_TEXT);
       MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.DENSE_TEXT);
       MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.DENSE_TEXT);
