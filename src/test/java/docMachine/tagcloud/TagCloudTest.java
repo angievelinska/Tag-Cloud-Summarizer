@@ -6,14 +6,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
+import org.mcavallo.opencloud.formatters.HTMLFormatter;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
- * User: avelinsk Date: 03.09.2010
+ * User: avelinsk
+ * Date: 03.09.2010
  */
 public class TagCloudTest {
   TagCloud tc;
@@ -24,6 +27,7 @@ public class TagCloudTest {
   }
 
   @Test
+  @SuppressWarnings("unchecked")
   public void testHashMap(){
     Map<String, Double> tags = new HashMap<String, Double>();
     tags.put("CoreMedia", (double) 5);
@@ -32,7 +36,7 @@ public class TagCloudTest {
 
     double weight;
     for (Object o : tags.entrySet()) {
-      Map.Entry<String,Double> entry = (Map.Entry) o;
+      Map.Entry<String,Double> entry = (Map.Entry<String,Double>) o;
       String word = entry.getKey();
       System.out.println(word);
       weight = entry.getValue();
@@ -40,6 +44,7 @@ public class TagCloudTest {
       Tag tag = new Tag(word, weight);
     }
   }
+
 
   @Test
   public void testTagCloud(){
@@ -68,6 +73,16 @@ public class TagCloudTest {
 
     Cloud c2 = tc.deserializeCloud(file);
     c2.getWordPattern();
+  }
+
+  @Test
+  public void getTagCloudTest(){
+    if (tc.getTagCloud()!=null){
+      Cloud c = tc.getTagCloud();
+      for (Tag t : c.tags()){
+        System.out.println(t.getName());
+      }
+    }
   }
 
   @After

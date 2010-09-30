@@ -7,11 +7,9 @@ import org.junit.Test;
 import java.io.IOException;
 
 /**
- * Created by IntelliJ IDEA.
  * User: ng
  * Date: 19.08.2010
  * Time: 23:05:27
- * To change this template use File | Settings | File Templates.
  */
 public class LSATest {
     LSA lsa;

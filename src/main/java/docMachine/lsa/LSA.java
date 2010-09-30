@@ -17,11 +17,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Enumeration;
@@ -43,7 +39,7 @@ public class LSA {
     private final static Log log = LogFactory.getLog(LSA.class);
 
     /**
-     * TODO: parameterize the number of threads
+     * TODO: parameterize the number of threads, more threads, faster app
      * 
      * @throws IOException
      * @throws InterruptedException
@@ -126,7 +122,7 @@ public class LSA {
                         t.printStackTrace();
                     }
                     long end = System.currentTimeMillis();
-                    log.info("Document No"+number+" is parsed in "+(end-start)+"ms.");
+                    //log.info("Document No"+number+" is parsed in "+(end-start)+"ms.");
                 }
             }
             };
@@ -139,6 +135,7 @@ public class LSA {
         for (Thread t: threads)
             t.join();
     }
+
 
     /**
      * Input documents are parsed in a single file,
@@ -155,9 +152,11 @@ public class LSA {
 
 
   protected void saveMatrix(SemanticSpace sspace){
-    int numVectors = sspace.getWords().size();      // ???
+    int numVectors = sspace.getVectorLength();
+    log.info("size of vectors: "+numVectors);
     int numWords = sspace.getWords().size();
-    DoubleVector[] vectors = new DoubleVector[numVectors];
+    log.info("number of words: "+numWords);
+    DoubleVector[] vectors = new DoubleVector[numWords];
     String[] words = new String[numWords];
     int i = 0;
     for (String word : sspace.getWords()){
@@ -168,63 +167,42 @@ public class LSA {
 
     Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
     MatrixIO.Format fmt = MatrixIO.Format.DENSE_TEXT;
-    File outputMatrix = new File("sspace/matrix.txt");
+    File outputMatrix = new File("sspace/matrix.dat");
 
     try {
       outputMatrix.createNewFile();
       MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
-      //Matrix[] matrixReduced = SVD.svd(outputMatrix, SVD.Algorithm.SVDLIBJ, fmt, 100);
-      Matrix[] matrixReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,100);
-      //saveMatrix(matrixReduced);
+      log.info("sspace saved as a matrix");
+      Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,100);
+     // Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.SVDLIBJ, MatrixIO.Format.DENSE_TEXT ,100);
+      saveMatrices(matricesReduced);
+      log.info("reduced matrices saved");
     }
     catch (IOException e) {
       e.printStackTrace();
     }
   }
 
-  protected void saveMatrix(Matrix[] matrix) {
+
+  protected void saveMatrices(Matrix[] matrix) {
     File dir  = new File("sspace");
-    File f = null;
-    PrintWriter pw = null;
+    File f1, f2, f3;
     try {
-      f = File.createTempFile("matrixReduced",".txt", dir);
+      f1 = File.createTempFile("matrix_U",".txt", dir);
+      f2 = File.createTempFile("matrix_S",".txt", dir);
+      f3 = File.createTempFile("matrix_V",".txt", dir);
+
+      log.info("how many matrices: "+matrix.length);
+      MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.DENSE_TEXT);
+
     }
     catch (IOException e) {
       e.printStackTrace();
     }
-    try {
-      pw = new PrintWriter(f);
-    }
-    catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
-    FileOutputStream fos = null;
-    ObjectOutputStream oos = null;
-    try {
-      fos = new FileOutputStream(f);
-      oos = new ObjectOutputStream(fos);
-      oos.writeObject(matrix);
-      oos.flush();
-    } catch (FileNotFoundException fe){
-      fe.printStackTrace();
-    } catch (IOException ex){
-      ex.printStackTrace();
-    } finally {
-      try {
-        oos.close();
-      }
-      catch (IOException e) {
-        e.printStackTrace();
-      }
-    }
-
-    
   }
 
-  protected Matrix[] convertSpace(SemanticSpace sspace){
-    Matrix matrix = new YaleSparseMatrix(1,1);
-    return new Matrix[1];
-  }
 
     /**
      * log the system properties - just FYI
@@ -238,6 +216,7 @@ public class LSA {
             log.info(key+" = "+value);
         }
     }
+
 
     protected Properties setupProperties(){
         Properties props = System.getProperties();
