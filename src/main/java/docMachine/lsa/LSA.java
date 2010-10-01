@@ -7,7 +7,6 @@ import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.matrix.MatrixIO;
 import edu.ucla.sspace.matrix.SVD;
-import edu.ucla.sspace.matrix.YaleSparseMatrix;
 import edu.ucla.sspace.text.Document;
 import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
@@ -17,7 +16,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
@@ -43,27 +41,26 @@ public class LSA {
     /**
      * TODO: parameterize the number of threads, more threads, faster app
      * 
-     * @throws IOException
-     * @throws InterruptedException
      */
-    public void runLSA() throws IOException, InterruptedException{
-        long start = System.currentTimeMillis();
-
+    public void runLSA(){
+        LatentSemanticAnalysis sspace = null;
         Properties props = setupProperties();
+        int noOfThreads = Runtime.getRuntime().availableProcessors();
         //just for info
         //this.logProps();
 
-        int noOfThreads = Runtime.getRuntime().availableProcessors();
-
-        LatentSemanticAnalysis sspace = new LatentSemanticAnalysis();
-
-        Iterator<Document> iter = getDocumentIterator();
-
-        File output = initOutputFile();
-
-        processDocumentsAndSpace(sspace, iter, noOfThreads, props);
-
-        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+        long start = System.currentTimeMillis();
+        try{
+          sspace = new LatentSemanticAnalysis();
+          Iterator<Document> iter = getDocumentIterator();
+          File output = initOutputFile();
+          processDocumentsAndSpace(sspace, iter, noOfThreads, props);
+          SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+        } catch (IOException e){
+          e.printStackTrace();
+        } catch (InterruptedException ex){
+          ex.printStackTrace();
+        }
 
         saveMatrix(sspace);
 
@@ -72,9 +69,9 @@ public class LSA {
         log.info("Number of words in the sspace: "+sspace.getWords().size());
     }
 
-  public void runLSA(List<File> documents){
+    public void runLSA(List<File> documents){
 
-  }
+    }
 
     protected File initOutputFile() throws IOException{
         File outputPath = new File("sspace");
@@ -232,7 +229,7 @@ public class LSA {
         props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords/english-stop-words-large.txt");
         //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
         props.put("docFile","input/input.txt");
-        props.put("svdAlgorithm","SVDLIBJ");
+       // props.put("svdAlgorithm","SVDLIBJ");
         props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"100");
       // default format is binary
         props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
