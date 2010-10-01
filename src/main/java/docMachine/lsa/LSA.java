@@ -17,7 +17,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Enumeration;
@@ -152,10 +154,7 @@ public class LSA {
 
 
   protected void saveMatrix(SemanticSpace sspace){
-    int numVectors = sspace.getVectorLength();
-    log.info("size of vectors: "+numVectors);
     int numWords = sspace.getWords().size();
-    log.info("number of words: "+numWords);
     DoubleVector[] vectors = new DoubleVector[numWords];
     String[] words = new String[numWords];
     int i = 0;
@@ -165,6 +164,18 @@ public class LSA {
       i++;
     }
 
+    try {
+      PrintWriter pw = new PrintWriter(new File("sspace/words.dat"));
+      for (int j=0; j<words.length;j++){
+        pw.write(words[j]);
+        pw.println();
+      }
+      //pw.write(words.toString());
+      pw.close();
+    } catch (IOException e){
+      e.printStackTrace();
+    }
+
     Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
     MatrixIO.Format fmt = MatrixIO.Format.DENSE_TEXT;
     File outputMatrix = new File("sspace/matrix.dat");
@@ -172,11 +183,9 @@ public class LSA {
     try {
       outputMatrix.createNewFile();
       MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
-      log.info("sspace saved as a matrix");
       Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,100);
      // Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.SVDLIBJ, MatrixIO.Format.DENSE_TEXT ,100);
       saveMatrices(matricesReduced);
-      log.info("reduced matrices saved");
     }
     catch (IOException e) {
       e.printStackTrace();
