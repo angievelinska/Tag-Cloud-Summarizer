@@ -2,6 +2,7 @@ package docMachine.lsa;
 
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
+import edu.ucla.sspace.common.Similarity;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
@@ -36,118 +37,118 @@ import java.util.concurrent.atomic.AtomicInteger;
  * TODO: refactor
  */
 public class LSA {
-    private final static Log log = LogFactory.getLog(LSA.class);
+  private final static Log log = LogFactory.getLog(LSA.class);
 
-    /**
-     * TODO: parameterize the number of threads, more threads, faster app
-     * 
-     */
-    public void runLSA(){
-        LatentSemanticAnalysis sspace = null;
-        Properties props = setupProperties();
-        int noOfThreads = Runtime.getRuntime().availableProcessors();
-        //just for info
-        //this.logProps();
+  /**
+   * TODO: parameterize the number of threads, more threads, faster app
+   *
+   */
+  public void runLSA(){
+      LatentSemanticAnalysis sspace = null;
+      Properties props = setupProperties();
+      int noOfThreads = Runtime.getRuntime().availableProcessors();
+      //just for info
+      //this.logProps();
 
-        long start = System.currentTimeMillis();
-        try{
-          sspace = new LatentSemanticAnalysis();
-          Iterator<Document> iter = getDocumentIterator();
-          File output = initOutputFile();
-          processDocumentsAndSpace(sspace, iter, noOfThreads, props);
-          SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
-        } catch (IOException e){
-          e.printStackTrace();
-        } catch (InterruptedException ex){
-          ex.printStackTrace();
-        }
+      long start = System.currentTimeMillis();
+      try{
+        sspace = new LatentSemanticAnalysis();
+        Iterator<Document> iter = getDocumentIterator();
+        File output = initOutputFile();
+        processDocumentsAndSpace(sspace, iter, noOfThreads, props);
+        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+      } catch (IOException e){
+        e.printStackTrace();
+      } catch (InterruptedException ex){
+        ex.printStackTrace();
+      }
 
-        saveMatrix(sspace);
+      saveMatrix(sspace);
 
-        long end = System.currentTimeMillis();
-        log.info("LSA used "+(end-start)+"ms to index the document collection.");
-        log.info("Number of words in the sspace: "+sspace.getWords().size());
-    }
+      long end = System.currentTimeMillis();
+      log.info("LSA used "+(end-start)+"ms to index the document collection.");
+      log.info("Number of words in the sspace: "+sspace.getWords().size());
+  }
 
-    public void runLSA(List<File> documents){
+  public void runLSA(List<File> documents){
 
-    }
+  }
 
-    protected File initOutputFile() throws IOException{
-        File outputPath = new File("sspace");
-        File outputFile = new File(outputPath,"LSA.sspace");
+  protected File initOutputFile() throws IOException{
+      File outputPath = new File("sspace");
+      File outputFile = new File(outputPath,"LSA.sspace");
 
-        if (!outputPath.exists()){
-          outputPath.mkdir();
-        }
-        if (!outputFile.exists()){
-            outputFile.createNewFile();
-        } else {
-            outputFile = File.createTempFile(this.getClass().getName(),".sspace",outputPath);
-        }
+      if (!outputPath.exists()){
+        outputPath.mkdir();
+      }
+      if (!outputFile.exists()){
+          outputFile.createNewFile();
+      } else {
+          outputFile = File.createTempFile(this.getClass().getName(),".sspace",outputPath);
+      }
 
-        return outputFile;
-    }
+      return outputFile;
+  }
 
-    protected void processDocumentsAndSpace(SemanticSpace space,
-                                            Iterator<Document> iter,
-                                            int noOfThreads,
-                                            Properties props)
-        throws IOException, InterruptedException{
+  protected void processDocumentsAndSpace(SemanticSpace space,
+                                          Iterator<Document> iter,
+                                          int noOfThreads,
+                                          Properties props)
+      throws IOException, InterruptedException{
 
-        parseDocsMultiThreaded(space, iter, noOfThreads);
-        space.processSpace(props);
-    }
-
-
-    protected void parseDocsMultiThreaded(final SemanticSpace space,
-                                          final Iterator<Document> iter,
-                                          int noThreads)
-        throws IOException, InterruptedException
-    {
-        Collection<Thread> threads = new LinkedList<Thread>();
-        final AtomicInteger count = new AtomicInteger(0);
-        for (int i=0; i < noThreads; ++i){
-            Thread t = new Thread(){
-            public void run(){
-                log.info("process docs: "+iter.next().toString());
-                while (iter.hasNext()){
-                    long start = System.currentTimeMillis();
-                    Document document = iter.next();
-                    int number = count.incrementAndGet();
-                    try {
-                        space.processDocument(document.reader());
-                    } catch (Throwable t) {
-                        t.printStackTrace();
-                    }
-                    long end = System.currentTimeMillis();
-                    //log.info("Document No"+number+" is parsed in "+(end-start)+"ms.");
-                }
-            }
-            };
-            threads.add(t);
-        }
-
-        for (Thread t: threads)
-            t.start();
-
-        for (Thread t: threads)
-            t.join();
-    }
+      parseDocsMultiThreaded(space, iter, noOfThreads);
+      space.processSpace(props);
+  }
 
 
-    /**
-     * Input documents are parsed in a single file,
-     * each document on a separate row.
-     */
-    protected Iterator<Document> getDocumentIterator () throws IOException{
-        Properties props = System.getProperties();
-        String docFile =  props.getProperty("docFile");
-        Iterator<Document> lineIter = null;
-        lineIter = new OneLinePerDocumentIterator(docFile);
-        
-        return lineIter;
-    }
+  protected void parseDocsMultiThreaded(final SemanticSpace space,
+                                        final Iterator<Document> iter,
+                                        int noThreads)
+      throws IOException, InterruptedException
+  {
+      Collection<Thread> threads = new LinkedList<Thread>();
+      final AtomicInteger count = new AtomicInteger(0);
+      for (int i=0; i < noThreads; ++i){
+          Thread t = new Thread(){
+          public void run(){
+              log.info("process docs: "+iter.next().toString());
+              while (iter.hasNext()){
+                  long start = System.currentTimeMillis();
+                  Document document = iter.next();
+                  int number = count.incrementAndGet();
+                  try {
+                      space.processDocument(document.reader());
+                  } catch (Throwable t) {
+                      t.printStackTrace();
+                  }
+                  long end = System.currentTimeMillis();
+                  //log.info("Document No"+number+" is parsed in "+(end-start)+"ms.");
+              }
+          }
+          };
+          threads.add(t);
+      }
+
+      for (Thread t: threads)
+          t.start();
+
+      for (Thread t: threads)
+          t.join();
+  }
+
+
+  /**
+   * Input documents are parsed in a single file,
+   * each document on a separate row.
+   */
+  protected Iterator<Document> getDocumentIterator () throws IOException{
+      Properties props = System.getProperties();
+      String docFile =  props.getProperty("docFile");
+      Iterator<Document> lineIter = null;
+      lineIter = new OneLinePerDocumentIterator(docFile);
+
+      return lineIter;
+  }
 
 
   protected void saveMatrix(SemanticSpace sspace){
@@ -174,7 +175,7 @@ public class LSA {
     }
 
     Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
-    MatrixIO.Format fmt = MatrixIO.Format.DENSE_TEXT;
+    MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_DENSE_TEXT;
     File outputMatrix = new File("sspace/matrix.dat");
 
     try {
@@ -198,9 +199,9 @@ public class LSA {
       f2 = new File(dir, "matrix_S.dat");
       f3 = new File(dir, "matrix_V.dat");
 
-      MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.DENSE_TEXT);
-      MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.DENSE_TEXT);
-      MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
 
     }
     catch (IOException e) {
@@ -209,35 +210,39 @@ public class LSA {
   }
 
 
-    /**
-     * log the system properties - just FYI
-     */
-    protected void logProps(){
-        Properties sysprops = System.getProperties();
+  /**
+   * log the system properties - just FYI
+   */
+  protected void logProps(){
+      Properties sysprops = System.getProperties();
 
-        for(Enumeration en = sysprops.propertyNames(); en.hasMoreElements(); ){
-            String key = (String) en.nextElement();
-            String value = sysprops.getProperty(key);
-            log.info(key+" = "+value);
-        }
-    }
+      for(Enumeration en = sysprops.propertyNames(); en.hasMoreElements(); ){
+          String key = (String) en.nextElement();
+          String value = sysprops.getProperty(key);
+          log.info(key+" = "+value);
+      }
+  }
+
+  protected double getSimilarity(double[] vect1, double[] vect2){
+    return Similarity.getSimilarity(Similarity.SimType.COSINE, vect1, vect2);
+  }
 
 
-    protected Properties setupProperties(){
-        Properties props = System.getProperties();
-        props.put(IteratorFactory.COMPOUND_TOKENS_FILE_PROPERTY,"compwords/compound-words.txt");
-        props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords/english-stop-words-large.txt");
-        //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
-        props.put("docFile","input/input.txt");
-       // props.put("svdAlgorithm","SVDLIBJ");
-        props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"100");
-      // default format is binary
-        props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
-        props.put("overwrite","true");
-        props.put("verbose","true");
+  protected Properties setupProperties(){
+      Properties props = System.getProperties();
+      props.put(IteratorFactory.COMPOUND_TOKENS_FILE_PROPERTY,"compwords/compound-words.txt");
+      props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords/english-stop-words-large.txt");
+      //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
+      props.put("docFile","input/input.txt");
+     // props.put("svdAlgorithm","SVDLIBJ");
+      props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"100");
+    // default format is binary
+      props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
+      props.put("overwrite","true");
+      props.put("verbose","true");
 
-        IteratorFactory.setProperties(props);
+      IteratorFactory.setProperties(props);
 
-        return props;
-    }
+      return props;
+  }
 }

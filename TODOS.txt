@@ -41,6 +41,7 @@ http://richardfriedman.blogspot.com/2007/06/creating-tag-cloud.html
 http://www.ccri.com/blog/2010/4/2/latent-semantic-analysis-in-solr-using-clojure.html
 4. a lot about tag clouds
 http://www.joelamantia.com/tag-clouds/text-clouds-a-new-form-of-tag-cloud
+5. S-Space, LatentRelationalAnalysis has an example with Lucene
 
 
 
