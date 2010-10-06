@@ -12,10 +12,18 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage[
+nonumberlist, %do not show page numbers
+acronym,      %generate acronym listing
+toc,          %show listings as entries in table of contents
+section]      %use section level for toc entries
+{glossaries}
 \usepackage[all]{hypcap}
 
-%\definecolor{darkblue}{rgb}{0,0,.5}
-%\hypersetup{pdftex=true, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, pagecolor=darkblue, urlcolor=darkblue}
+\makeglossaries
+\newacronym{LSA}{LSA}{Latent Semantic Analysis}
+\newacronym{LSI}{LSI}{Latent Semantic Indexing}
+
 
 % don't indent new paragraphs
 \parindent 0pt
@@ -34,11 +42,6 @@
 \fi
 }
 \makeatother
-
-% include a list of abbreviations
-\usepackage{nomencl}
-\makenomenclature
-
 
 \pagestyle{headings}
 \begin{document}
@@ -121,8 +124,6 @@ Hamburg\\
 \tableofcontents
 \listoffigures
 
-% put each chapter in a seperate file (makes editing easier), or split even
-% further. Add \input{FILENAME} (without the .tex extension) here as needed.
 \input{introduction}
 \input{lsa}
 \input{tagclouds}
@@ -130,9 +131,12 @@ Hamburg\\
 \input{implementation}
 \input{conclusion}
 
-\printnomenclature[2.5cm]
+% prints the list of acronyms
+% call: latex thesis, makeglossaries thesis, latex thesis
+%
+\printglossaries
 
-% uncomment to include list of annexes when ready
+
 \begin{appendix}
 \input{appendices}
 \end{appendix}

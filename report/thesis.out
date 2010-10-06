@@ -2,10 +2,11 @@
 \BOOKMARK [1][-]{section.1.1}{Motivation and objective}{chapter.1}
 \BOOKMARK [1][-]{section.1.2}{Outline}{chapter.1}
 \BOOKMARK [0][-]{chapter.2}{Latent Semantic Analysis}{}
-\BOOKMARK [1][-]{section.2.1}{Latest development in the field of LSA}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{plan}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{storage}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{Alternative approaches for LSA}{chapter.2}
+\BOOKMARK [1][-]{section.2.1}{Singular Value Decomposition}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Latest development in the field of LSA}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{plan}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{storage}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{Alternative approaches for LSA}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Tag Clouds}{}
 \BOOKMARK [1][-]{section.3.1}{1}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{Brainstorming}{chapter.3}
@@ -15,4 +16,5 @@
 \BOOKMARK [0][-]{chapter.5}{Conclusion and outlook}{}
 \BOOKMARK [1][-]{section.5.1}{1}{chapter.5}
 \BOOKMARK [1][-]{section.5.2}{Future Work}{chapter.5}
-\BOOKMARK [0][-]{appendix.A}{Some Code}{}
+\BOOKMARK [0][-]{section*.3}{Acronyms}{}
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}

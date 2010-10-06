@@ -5,7 +5,10 @@
 This chapter presents Latent Semantic Analysis as a method for text processing, and defining the main concepts in texts.
 \end{summary}
 
-\nomenclature{LSA}{Latent Semantic Analysis}Latent Semantic Analysis (LSA) uses a Singular Value Decomposition (SVD) to construct a..\\
+\gls{LSA} was developed at the end of 1980s to address certain deficiencies in Information Retrieval.
+\gls{LSI} refers to application of the method to indexing or information retrieval. \gls{LSA} refers to the application to other domains.\\
+
+\gls{LSA}  constructs a term-by-document matrix based on term occurrence, and uses a given similarity measure to find out the distance between vectors (documents) in the semantic space it generates.
 
 There are three main factors that can influence the performance of LSA\cite{Nakov_weightfunctions}\cite{NakovBetterResultsLSI}:\\
 \begin{itemize}
@@ -14,7 +17,10 @@ There are three main factors that can influence the performance of LSA\cite{Nako
 \item Text preprocessing prior to SVD, choice of similarity measure (???)
 \end{itemize}
 
-Further, the choice of dimensionality is dependent upon the matrix transformations performed, as pointed out by Nakov in \cite{NakovBetterResultsLSI}.\\
+Further, the choice of dimensionality is dependent upon the matrix transformations performed, as pointed out by Nakov\cite{NakovBetterResultsLSI}.\\
+
+\section{Singular Value Decomposition}
+Singular Value Decomposition (SVD)
 
 \section{Latest development in the field of LSA}
 LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\

@@ -42,7 +42,7 @@ public class SVDImpl{
   }
 
   public Vector getQuery(String query){
-    
+    return new Vector();
   }
 
 }

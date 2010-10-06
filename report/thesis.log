@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.9)  1 OCT 2010 13:01
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.9)  6 OCT 2010 18:32
 entering extended mode
-**thesis.tex
+**thesis
 (C:\master_thesis\TagCloudSummarizer\report\thesis.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
@@ -302,35 +302,129 @@ File: pdfmark.def 2009/10/19 v6.79b Hyperref definitions for pdfmark specials
 \pdf@defaulttoks=\toks22
 \Fld@listcount=\count109
 ))
+("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\base\glossaries.sty"
+Package: glossaries 2010/07/10 v2.07 (NLCT)
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.8\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+\XKV@depth=\count110
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\base\mfirstuc.sty"
+Package: mfirstuc 2009/11/03 v1.04 (NLCT)
+\@glsmfirst=\toks25
+\@glsmrest=\toks26
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\xfor\xfor.sty"
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks27
+\ex@=\dimen117
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\translator\base\translator.sty"
+Package: translator 2007/03/11 ver 1.00
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\translator\base\translator-language-map
+pings.tex"))
+\gls@level=\count111
+\@gls@tmpb=\toks28
+\gls@tmplen=\skip52
+\istfile=\write5
+\glskeylisttok=\toks29
+\glslabeltok=\toks30
+\glsshorttok=\toks31
+\glslongtok=\toks32
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\styles\glossary-hypernav.sty
+"
+Package: glossary-hypernav 2007/07/04 v1.01 (NLCT)
+) ("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\styles\glossary-list.sty"
+Package: glossary-list 2009/05/30 v2.01 (NLCT)
+\glslistdottedwidth=\skip53
+) ("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\styles\glossary-long.sty"
+Package: glossary-long 2009/05/30 v2.01 (NLCT)
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count112
+\LTcapwidth=\dimen118
+\LT@head=\box30
+\LT@firsthead=\box31
+\LT@foot=\box32
+\LT@lastfoot=\box33
+\LT@cols=\count113
+\LT@rows=\count114
+\c@LT@tables=\count115
+\c@LT@chunks=\count116
+\LT@p@ftn=\toks33
+)
+\glsdescwidth=\skip58
+\glspagelistwidth=\skip59
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\styles\glossary-super.sty"
+Package: glossary-super 2009/05/30 v2.01 (NLCT)
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\supertabular\supertabular.sty"
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count117
+\ST@wd=\dimen119
+\ST@rightskip=\skip60
+\ST@leftskip=\skip61
+\ST@parfillskip=\skip62
+\ST@pageleft=\dimen120
+\ST@headht=\dimen121
+\ST@tailht=\dimen122
+\ST@pagesofar=\dimen123
+\ST@pboxht=\dimen124
+\ST@lineht=\dimen125
+\ST@stretchht=\dimen126
+\ST@prevht=\dimen127
+\ST@toadd=\dimen128
+\ST@dimen=\dimen129
+\ST@pbox=\box34
+))
+("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\styles\glossary-tree.sty"
+Package: glossary-tree 2009/01/14 v1.01 (NLCT)
+\glstreeindent=\skip63
+))
 ("C:\Program Files\MiKTeX 2.8\tex\latex\oberdiek\hypcap.sty"
 Package: hypcap 2008/09/08 v1.10 Adjusting anchors of captions (HO)
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\nomencl\nomencl.sty"
-Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
-\nomlabelwidth=\dimen117
-\nom@tempdim=\dimen118
-\nomitemsep=\skip52
-)
-\@nomenclaturefile=\write5
+\glo@main@file=\write6
+Package glossaries Info: Writing glossary file thesis.glo on input line 18.
+\glo@acronym@file=\write7
+Package glossaries Info: Writing glossary file thesis.acn on input line 18.
 
-Writing nomenclature file thesis.nlo
 (C:\master_thesis\TagCloudSummarizer\report\thesis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-\c@lstlisting=\count110
-Package hyperref Info: Link coloring OFF on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+\c@lstlisting=\count118
+Package hyperref Info: Link coloring OFF on input line 42.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -338,23 +432,28 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.8\tex\latex\oberdiek\refcount.sty"
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count111
+\c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
 
 (C:\master_thesis\TagCloudSummarizer\report\thesis.out)
 (C:\master_thesis\TagCloudSummarizer\report\thesis.out)
-\@outlinefile=\write6
-\AtBeginShipoutBox=\box30
+\@outlinefile=\write8
+\AtBeginShipoutBox=\box35
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\glossaries\dict\glossaries-dictionary-E
+nglish.dict"
+Dictionary: glossaries-dictionary, Language: English 
+)
 File: img/STSlogo.eps Graphic file (type eps)
  <img/STSlogo.eps>
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -362,37 +461,104 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 File: img/CoremediaLogo.eps Graphic file (type eps)
 
 <img/CoremediaLogo.eps>
-Overfull \hbox (11.38736pt too wide) in paragraph at lines 58--59
-[][][] 
+Overfull \hbox (11.38736pt too wide) in paragraph at lines 56--57
+[][] 
  []
 
 [1
 
 ] (C:\master_thesis\TagCloudSummarizer\report\thesis.toc)
-\tf@toc=\write7
+\tf@toc=\write9
  [1
 
 ]
 (C:\master_thesis\TagCloudSummarizer\report\thesis.lof)
-\tf@lof=\write8
+\tf@lof=\write10
 
 (C:\master_thesis\TagCloudSummarizer\report\introduction.tex [2
 
 ]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--12
+Underfull \hbox (badness 10000) in paragraph at lines 10--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--12
+Underfull \hbox (badness 10000) in paragraph at lines 10--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--12
+Underfull \hbox (badness 10000) in paragraph at lines 10--18
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+[3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+File: img/cms-simplified.eps Graphic file (type eps)
+<img/cms-simplified.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+[5]
+
+LaTeX Warning: Reference `sec:docmanagsystem' on page 6 undefined on input line
+ 49.
+
+) (C:\master_thesis\TagCloudSummarizer\report\lsa.tex
+Underfull \hbox (badness 10000) in paragraph at lines 49--1
+
+ []
+
+[6]
+Chapter 2.
+
+Overfull \hbox (49.42467pt too wide) in paragraph at lines 8--10
+\OT1/cmr/m/n/12 dress cer-tain de-fi-cien-cies in In-for-ma-tion Re-trieval. []
+[][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Overfull \hbox (14.49214pt too wide) in paragraph at lines 13--14
+[]\OT1/cmr/m/n/12 There are three main fac-tors that can in-flu-ence the per-fo
+r-mance of LSA[[]][[]]: 
  []
 
 
@@ -400,146 +566,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[3
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-File: img/cms-simplified.eps Graphic file (type eps)
-<img/cms-simplified.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-
-LaTeX Warning: Reference `sec:docmanagsystem' on page 5 undefined on input line
- 43.
-
-) (C:\master_thesis\TagCloudSummarizer\report\lsa.tex
-Underfull \hbox (badness 10000) in paragraph at lines 43--1
-
- []
-
-[5] [6]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-
-Overfull \hbox (14.49214pt too wide) in paragraph at lines 10--11
-[][]\OT1/cmr/m/n/12 There are three main fac-tors that can in-flu-ence the per-
-for-mance of LSA[[]][[]]: 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
 ("C:\Program Files\MiKTeX 2.8\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--33
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 32--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--59
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 60--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--72
 
  []
 
@@ -584,8 +690,8 @@ LaTeX Warning: Citation `S-Space' on page 12 undefined on input line 10.
 Chapter 5.
 
 Overfull \hbox (0.83391pt too wide) in paragraph at lines 13--14
-[][]\OT1/cmr/m/n/12 Improve Tag-Cloud-Sum-ma-rizer to work also with Ger-man te
-xts
+[]\OT1/cmr/m/n/12 Improve Tag-Cloud-Sum-ma-rizer to work also with Ger-man text
+s
  []
 
 
@@ -594,15 +700,18 @@ Overfull \hbox (11.9963pt too wide) in paragraph at lines 13--14
 h..) 
  []
 
-)
-No file thesis.nls.
-(C:\master_thesis\TagCloudSummarizer\report\appendices.tex [13
+) (C:\master_thesis\TagCloudSummarizer\report\thesis.gls)
+(C:\master_thesis\TagCloudSummarizer\report\thesis.acr [13
+
+])
+(C:\master_thesis\TagCloudSummarizer\report\appendices.tex [14
+
 
 ]
 Appendix A.
-) (C:\master_thesis\TagCloudSummarizer\report\thesis.bbl [14
+) (C:\master_thesis\TagCloudSummarizer\report\thesis.bbl [15
 
-]) [15
+]) [16
 
 ]
 (C:\master_thesis\TagCloudSummarizer\report\thesis.aux)
@@ -611,12 +720,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6695 strings out of 495286
- 99936 string characters out of 3180409
- 168453 words of memory out of 3000000
- 9731 multiletter control sequences out of 15000+200000
+ 8337 strings out of 495286
+ 124974 string characters out of 3180409
+ 214399 words of memory out of 3000000
+ 11310 multiletter control sequences out of 15000+200000
  13027 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,8n,43p,893b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,8n,61p,1187b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (16 pages, 61016 bytes).
+Output written on thesis.dvi (17 pages, 59092 bytes).
