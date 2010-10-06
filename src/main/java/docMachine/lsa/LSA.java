@@ -55,7 +55,7 @@ public class LSA {
         Iterator<Document> iter = getDocumentIterator();
         File output = initOutputFile();
         processDocumentsAndSpace(sspace, iter, noOfThreads, props);
-        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.SPARSE_TEXT);
       } catch (IOException e){
         e.printStackTrace();
       } catch (InterruptedException ex){
@@ -174,7 +174,7 @@ public class LSA {
     }
 
     Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
-    MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_DENSE_TEXT;
+    MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_SPARSE_TEXT;
     File outputMatrix = new File("sspace/matrix.dat");
 
     try {
@@ -198,9 +198,9 @@ public class LSA {
       f2 = new File(dir, "matrix_S.dat");
       f3 = new File(dir, "matrix_V.dat");
 
-      MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
-      MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
-      MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.SVDLIBC_SPARSE_TEXT);
+      MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.SVDLIBC_SPARSE_TEXT);
+      MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.SVDLIBC_SPARSE_TEXT);
 
     }
     catch (IOException e) {

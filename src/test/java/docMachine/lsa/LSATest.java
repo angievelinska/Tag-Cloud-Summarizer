@@ -23,7 +23,7 @@ public class LSATest {
     @Test
     public void testLSA(){
       lsa.runLSA();
-      
+
       Assert.assertTrue((new File("sspace/LSA.sspace")).exists());
       Assert.assertTrue((new File("sspace/matrix_S.dat")).exists());
       Assert.assertTrue((new File("sspace/matrix_U.dat")).exists());
