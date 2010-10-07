@@ -41,8 +41,5 @@ public class SVDImpl{
     return words;
   }
 
-  public Vector getQuery(String query){
-    return new Vector();
-  }
 
 }

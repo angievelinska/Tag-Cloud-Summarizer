@@ -38,12 +38,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class LSA {
   private final static Log log = LogFactory.getLog(LSA.class);
-  public LatentSemanticAnalysis sspace = null;
+  private LatentSemanticAnalysis sspace = null;
   /**
    * TODO: parameterize the number of threads, more threads, faster app
    *
    */
   public void runLSA(){
+      //LatentSemanticAnalysis sspace = null;
       Properties props = setupProperties();
       int noOfThreads = Runtime.getRuntime().availableProcessors();
       //just for info

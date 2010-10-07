@@ -1,0 +1,8 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{L}\relax \glsresetentrylist %
+\glossaryentryfield{LSA}{\glsnamefont{LSA}}{Latent Semantic Analysis}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{7}}}%
+\glossaryentryfield{LSI}{\glsnamefont{LSI}}{Latent Semantic Indexing}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{7}}}%
+\end{theglossary}\glossarypostamble

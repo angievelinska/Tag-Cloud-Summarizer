@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.10)  8 OCT 2010 01:39
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.4.10)  8 OCT 2010 01:55
 entering extended mode
 **thesis.tex
 
@@ -467,22 +467,22 @@ Package glossaries Info: Writing glossary file thesis.acn on input line 19.
 
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\the
 sis.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 \c@lstlisting=\count130
-Package hyperref Info: Link coloring OFF on input line 45.
+Package hyperref Info: Link coloring OFF on input line 47.
  ("C:\Program Files\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
@@ -491,8 +491,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
 
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\the
 sis.out")
@@ -507,12 +507,12 @@ Dictionary: glossaries-dictionary, Language: English
 )
 File: img/STSlogo.eps Graphic file (type eps)
  <img/STSlogo.eps>
-LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -520,7 +520,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 File: img/CoremediaLogo.eps Graphic file (type eps)
 
 <img/CoremediaLogo.eps>
-Overfull \hbox (11.38736pt too wide) in paragraph at lines 59--60
+Overfull \hbox (11.38736pt too wide) in paragraph at lines 61--62
 [][][] 
  []
 
@@ -543,28 +543,38 @@ roduction.tex" [2
 ]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
+Underfull \hbox (badness 10000) in paragraph at lines 6--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
+Underfull \hbox (badness 10000) in paragraph at lines 6--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 6--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
 [3
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -574,40 +584,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-File: img/cms-simplified.eps Graphic file (type eps)
-<img/cms-simplified.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-[5]
-
-LaTeX Warning: Reference `sec:docmanagsystem' on page 6 undefined on input line
- 49.
+LaTeX Warning: Reference `sec:docmanagsystem' on page 5 undefined on input line
+ 29.
 
 )
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\lsa
 .tex"
-Underfull \hbox (badness 10000) in paragraph at lines 49--1
+Underfull \hbox (badness 10000) in paragraph at lines 29--1
 
  []
 
-[6]
+[5]
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -629,7 +623,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-[7
+[6
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
@@ -678,7 +672,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
- [8]
+ [7]
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
@@ -743,7 +737,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--109
 
  []
 
-[9]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 110--116
 
  []
@@ -753,9 +747,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--116
 
  []
 
-[10])
+[9])
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\tag
-clouds.tex" [11]
+clouds.tex" [10]
 Chapter 3.
 File: img/tagcloud.eps Graphic file (type eps)
 <img/tagcloud.eps>
@@ -763,7 +757,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--33
 
  []
 
-[12
+[11
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
@@ -787,11 +781,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
 )
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\imp
-lementation.tex" [13]
+lementation.tex" [12]
 Chapter 4.
 )
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\con
-clusion.tex" [14
+clusion.tex" [13
 
 ]
 Chapter 5.
@@ -811,20 +805,20 @@ h..)
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\the
 sis.gls")
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\the
-sis.acr" [15
+sis.acr" [14
 
 ])
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\app
-endices.tex" [16
+endices.tex" [15
 
 
 ]
 Appendix A.
 )
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\the
-sis.bbl" [17
+sis.bbl" [16
 
-]) [18
+]) [17
 
 ]
 ("D:\tuhh\ss10\master thesis_coremedia\projects\Tag-Cloud-Summarizer\report\the
@@ -834,12 +828,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8931 strings out of 495286
- 132792 string characters out of 3180426
- 226302 words of memory out of 3000000
- 11892 multiletter control sequences out of 15000+200000
+ 8976 strings out of 495286
+ 133390 string characters out of 3180426
+ 226886 words of memory out of 3000000
+ 11938 multiletter control sequences out of 15000+200000
  13027 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,9n,61p,1191b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (19 pages, 78168 bytes).
+Output written on thesis.dvi (18 pages, 79196 bytes).
