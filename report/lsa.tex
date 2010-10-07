@@ -2,13 +2,59 @@
 \label{sec:lsa}
 
 \begin{summary}
-This chapter presents Latent Semantic Analysis as a method for text processing, and defining the main concepts in texts.
+This chapter gives the theoretical foundations of \gls{LSA} since it is used in this project as a method for defining the main concepts in text documents.
 \end{summary}
+ 
 
-\gls{LSA} was developed at the end of 1980s to address certain deficiencies in Information Retrieval.
-\gls{LSI} refers to application of the method to indexing or information retrieval. \gls{LSA} refers to the application to other domains.\\
+\section{Overview}
 
-\gls{LSA}  constructs a term-by-document matrix based on term occurrence, and uses a given similarity measure to find out the distance between vectors (documents) in the semantic space it generates.
+
+\gls{LSA} was developed at the end of 1980s to address certain deficiencies in Information Retrieval, caused by synonymy and polysemy. Synonymy is the case when several words describe the same concept. Polysemy is when words have more than one distinct meaning. \\
+
+\gls{LSA} method is applied in four main steps. First, a words-by-documents matrix, constructed using the documents in the text collection. This matrix is sparse, as not all words occur in all documents.\\
+
+%
+% initial sparse matrix A
+%
+\begin{equation}
+A=
+\begin{bmatrix}\label{lsa:sparse_matrix_A}
+ a_{11}& a_{12}& \cdots& a_{1n} \\
+ \vdots& \vdots& \ddots& \vdots \\ 
+ a_{m1}& a_{m2}& \cdots& a_{mn}
+\end{bmatrix}\\
+\end{equation}\\
+
+Each word (or term) is a row in the matrix, and each document - a column. The size of the matrix is \text{\bf{m x n}}, where {\bf m} is the number of documents in the text collection, and {\bf n} is the number of terms. As a second step, the number of term occurences in each document is transformed into a weight using a weight function, such as entropy, term frequency, inverse document frequency. These weights are represented by the $ a_{ij} $ entries in the matrix in~\ref{lsa:sparse_matrix_A}. After the initial pre-processing, and as a third step of \gls{LSA}, the rank of the matrix is reduced by applying a method of matrix decomposition, called \gls{SVD}. The initial matrix $A$ is large and sparse, such that decomposition reduces the number of rows and columns to a certain parameter {\bf k}, defined empirically. The result from applying \gls{SVD} to the terms-by-documents matrix $A$ are tree matrices $U$, $S$ and  $V$, as in~\ref{lsa:svd}. \\
+
+%
+% SVD decomposition in three matrices
+%
+\begin{equation}\label{lsa:svd}
+A=USV^{T}\\
+\end{equation}\\
+
+$U$ is a ...\\
+ $V$ is ...\\
+and $S$ is ...\\
+After the initial matrix $A$ is decomposed by \gls{SVD}, all but the highest $k$ valued of $S$ are set to $0$. The resulting reduced matrix is the semantic space of the text collection.\\
+
+And the final step of applying \gls{LSA} is to the compute similarities between entities in the semantic space. This includes computing similarities between queries posted on the document collection, and the documents in the semantic space. In this case the query $q$ has to be ''translated'' as a document from the semantic space, by using~\ref{lsa:query}.\\
+
+%
+% Query translation for LSA
+%
+\begin{equation}\label{lsa:query}
+q = q^{T}U_{k}S_{k}^{-1}\\
+\end{equation}\\
+
+
+\section{Singular Value Decomposition}
+
+\gls{SVD} is an unique decomposition of \\
+
+
+\gls{LSA} constructs a term-by-document matrix based on term occurrence, and uses a given similarity measure to find out the distance between vectors (documents) in the semantic space it generates.\\
 
 There are three main factors that can influence the performance of LSA\cite{Nakov_weightfunctions}\cite{NakovBetterResultsLSI}:\\
 \begin{itemize}
@@ -19,8 +65,6 @@ There are three main factors that can influence the performance of LSA\cite{Nako
 
 Further, the choice of dimensionality is dependent upon the matrix transformations performed, as pointed out by Nakov\cite{NakovBetterResultsLSI}.\\
 
-\section{Singular Value Decomposition}
-Singular Value Decomposition (SVD)
 
 \section{Latest development in the field of LSA}
 LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\

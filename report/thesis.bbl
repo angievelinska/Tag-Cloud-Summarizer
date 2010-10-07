@@ -25,4 +25,10 @@ P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
   of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
   Analytics Science and Technology}, 2009.
 
+\bibitem{S-Space}
+D.~Jurgens and K.~Stevens, ``The s-space package: an open source package for
+  word space models,'' in {\em ACL '10: Proceedings of the {ACL} 2010 {S}ystem
+  {D}emonstrations}, (Morristown, NJ, USA), pp.~30--35, Association for
+  Computational Linguistics, 2010.
+
 \end{thebibliography}
