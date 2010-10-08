@@ -33,7 +33,7 @@ public class LSATest {
   @Test
   public void testSVD(){
 
-    System.out.println("vector length after reduction: "+lsa.sspace.getVectorLength());
+//    System.out.println("vector length after reduction: "+lsa.sspace.getVectorLength());
 /*    Vector v = (DoubleVector) lsa.sspace.getVector("content");
     int size = v.length();
     for (int i=0; i<size; i++){

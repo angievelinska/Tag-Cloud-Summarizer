@@ -479,6 +479,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../sspace-read-only/sspace-read-only.iml" filepath="$PROJECT_DIR$/../sspace-read-only/sspace-read-only.iml" />
       <module fileurl="file://$PROJECT_DIR$/tagcloudsummarizer.iml" filepath="$PROJECT_DIR$/tagcloudsummarizer.iml" />
     </modules>
   </component>

@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/mcavallo/opencloud/opencloud/0.2/opencloud-0.2-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../opencloud/project/src" />
     </SOURCES>
   </library>
 </component>
