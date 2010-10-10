@@ -1,19 +1,14 @@
 package docMachine.lsa;
 
-import edu.ucla.sspace.common.DocumentVectorBuilder;
-import edu.ucla.sspace.common.SemanticSpace;
-import edu.ucla.sspace.common.Similarity;
-import edu.ucla.sspace.common.WordComparator;
+import edu.ucla.sspace.common.*;
+import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.util.MultiMap;
 import edu.ucla.sspace.vector.DenseVector;
 import edu.ucla.sspace.vector.DoubleVector;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 
 /**
  * User: avelinsk
@@ -52,7 +47,7 @@ public class Query {
 
     File file_query = new File(query);
     if(!file_query.exists()){
-      log.info("no query file found. exiting...");
+      //log.info("no query file found. exiting...");
 
       try {
         throw new FileNotFoundException("no query file found. exiting...");
@@ -75,6 +70,31 @@ public class Query {
   protected MultiMap getCosineSimilarity(SemanticSpace sspace, String word, int maxResult){
     MultiMap results = wordCompare.getMostSimilar(word,sspace,maxResult, Similarity.SimType.COSINE);
     return results;
+  }
+
+  protected DoubleVector getDocument(String space, int idx ){
+    LatentSemanticAnalysis sspace = null;
+
+    try {
+      sspace= (LatentSemanticAnalysis) SemanticSpaceIO.load(space);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return sspace.getDocumentVector(idx);
+  }
+
+  protected DoubleVector getWord(String space, String word){
+    SemanticSpace sspace = null;
+
+    try{
+      sspace = SemanticSpaceIO.load(space);
+    } catch (IOException e){
+      e.printStackTrace();
+    }
+
+    return (DoubleVector) sspace.getVector(word);
+
   }
 
 }

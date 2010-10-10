@@ -52,10 +52,15 @@ public class LSA {
       long start = System.currentTimeMillis();
       try{
         sspace = new LatentSemanticAnalysis();
+
         Iterator<Document> iter = getDocumentIterator();
+
         File output = initOutputFile();
+
         processDocumentsAndSpace(sspace, iter, noOfThreads, props);
+
         SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+
       } catch (IOException e){
         e.printStackTrace();
       } catch (InterruptedException ex){
