@@ -75,6 +75,15 @@ public class QueryTest {
     }
   }
 
+  @Test
+  public void testGetWords(){
+    System.out.println("number of words: "+sspace.getWords().size());
+    for (Object o : sspace.getWords()){
+      String entry = (String) o;
+      System.out.println(entry);
+    }
+  }
+
   @After
   public void endTest(){
     sspace = null;
