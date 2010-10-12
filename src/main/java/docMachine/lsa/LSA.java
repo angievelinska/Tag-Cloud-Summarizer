@@ -57,6 +57,7 @@ public class LSA {
 
         File output = initOutputFile();
 
+        //SVD reduction
         processDocumentsAndSpace(sspace, iter, noOfThreads, props);
 
         SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
@@ -67,15 +68,12 @@ public class LSA {
         ex.printStackTrace();
       }
 
+    // extract the matrices from LSA space and save them to files
       saveMatrix(sspace);
 
       long end = System.currentTimeMillis();
       log.info("LSA used "+(end-start)+"ms to index the document collection.");
       log.info("Number of words in the sspace: "+sspace.getWords().size());
-  }
-
-  public void runLSA(List<File> documents){
-
   }
 
   protected File initOutputFile() throws IOException{
