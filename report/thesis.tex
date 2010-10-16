@@ -11,7 +11,12 @@
 \usepackage[ngerman,english]{babel}
 \usepackage{graphicx}
 \usepackage{url}
-\usepackage[pdffitwindow=true,pdfstartview=Fit]{hyperref}
+\usepackage[bookmarksnumbered,%
+            pdffitwindow=true, %
+            pdfstartview=Fit,%
+            colorlinks=false,%
+            pdfborder={0 0 0}]%
+				{hyperref}
 \usepackage{amssymb,amsmath}
 \usepackage[nonumberlist,acronym,toc]{glossaries}
 \usepackage[all]{hypcap}
@@ -51,6 +56,10 @@
 
 \newenvironment{summary}{\begin{quotation}\it\textbf{Summary.\space}}{\end{quotation}\vspace{0.3cm}}
 \begin{titlepage}
+
+% add the title page to pdf bookmarks
+\pdfbookmark[0]{Titlepage}{title}
+
 \begin{minipage}{1\linewidth}
 \begin{flushright}
 \begin{minipage}[h]{0.4\linewidth}
@@ -91,7 +100,7 @@ supervised by\\
 \large
 Prof. Dr. Ralf M\"oller\\
 Dipl. Ing. Sylvia Melzer\\
-\bigskip
+\large
 Software Systems Institute (STS)\\
 Technical University of Hamburg-Harburg\\
 \bigskip
@@ -110,10 +119,12 @@ Hamburg\\
 %\input{abstract}
 
 % don't put page numbers on declaration and acknowledgement pages:
-%{\renewcommand{\thepage}{}
-%\input{declaration}
-%\input{acknowledgements}
-%}
+{\renewcommand{\thepage}{}
+\pdfbookmark[0]{Declaration}{declaration}
+\input{declaration}
+\pdfbookmark[0]{Acknowledgements}{acknowledgements}
+\input{acknowledgements}
+}
 
 
 % make figure names bold:
@@ -121,19 +132,18 @@ Hamburg\\
 \renewcommand{\fnum@figure}{\textbf{Figure~\thefigure}}
 \makeatother
 
+\pdfbookmark[0]{Contents}{contents}
 \tableofcontents
+\pdfbookmark[0]{List of figures}{figures}
 \listoffigures
 
 \input{introduction}
 \input{lsa}
-\input{tagclouds}
-
-\input{implementation}
-\input{conclusion}
-
+% \input{tagclouds}
+% \input{implementation}
+% \input{conclusion}
 % prints the list of acronyms
 % call: latex thesis, makeglossaries thesis, latex thesis
-%
 \printglossaries
 
 
@@ -149,6 +159,9 @@ Hamburg\\
 
 % number the bibliography instead of alpha-numerial abbrev.
 %\bibliographystyle{alpha} 
+
 \bibliographystyle{ieeetr}
 \bibliography{references}
+\pdfbookmark[0]{Bibliography}{references}
+
 \end{document}

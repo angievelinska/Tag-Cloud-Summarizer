@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="737be667-6157-4d41-851d-69b903343d19" name="Default" comment="lucene indexing and retrieval">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/docMachine/lsa/LSA.java" afterPath="$PROJECT_DIR$/src/main/java/docMachine/lsa/LSA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tagcloudsummarizer.iws" afterPath="$PROJECT_DIR$/tagcloudsummarizer.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idx/segments.gen" afterPath="$PROJECT_DIR$/idx/segments.gen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODOS.txt" afterPath="$PROJECT_DIR$/TODOS.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/docMachine/lsa/SimilarityUtil.java" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -71,84 +68,91 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LSA.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/lsa/LSA.java">
+      <file leaf-file-name="RunTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/test/pitt/search/semanticvectors/RunTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="239" column="38" selection-start="7634" selection-end="7656" vertical-scroll-proportion="-23.16">
+            <state line="203" column="0" selection-start="7538" selection-end="7538" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SemanticSpaceIO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/common/SemanticSpaceIO.java">
+      <file leaf-file-name="FilePositionDoc.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/FilePositionDoc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="435" column="24" selection-start="17338" selection-end="17338" vertical-scroll-proportion="0.0">
+            <state line="13" column="13" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LatentSemanticAnalysis.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/lsa/LatentSemanticAnalysis.java">
+      <file leaf-file-name="package-info.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/package-info.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="340" column="35" selection-start="13669" selection-end="13680" vertical-scroll-proportion="-8.16">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Object.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.6.0_13/src.zip!/java/lang/Object.java">
+      <file leaf-file-name="IndexFilePositions.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/IndexFilePositions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="33" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+            <state line="19" column="13" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Query.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/lsa/Query.java">
+      <file leaf-file-name="LuceneSearch.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/LuceneSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
+            <state line="51" column="13" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimilarityUtil.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/lsa/SimilarityUtil.java">
+      <file leaf-file-name="IndexBilingualFiles.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/IndexBilingualFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="882" selection-end="882" vertical-scroll-proportion="0.6394984">
-              <folding>
-                <element signature="docComment;class#SimilarityUtil#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TODOS.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TODOS.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="29" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0">
+            <state line="57" column="29" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LatentRelationalAnalysis.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/lra/LatentRelationalAnalysis.java">
+      <file leaf-file-name="LuceneUtils.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/LuceneUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="834" column="39" selection-start="34425" selection-end="34425" vertical-scroll-proportion="0.0">
+            <state line="277" column="0" selection-start="8809" selection-end="8809" vertical-scroll-proportion="0.2313253">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Similarity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/common/Similarity.java">
+      <file leaf-file-name="TermVectorsFromLucene.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/TermVectorsFromLucene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="41" selection-start="9318" selection-end="9334" vertical-scroll-proportion="0.0">
+            <state line="124" column="0" selection-start="4622" selection-end="4622" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VectorStoreWriter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/VectorStoreWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="0" selection-start="3250" selection-end="3250" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VectorStoreWriterTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/test/pitt/search/semanticvectors/VectorStoreWriterTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="0" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -168,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/common/DocumentVectorBuilder.java" />
-        <option value="$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/common/WordComparator.java" />
         <option value="$PROJECT_DIR$/input/query.txt" />
         <option value="$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/matrix/MatrixIO.java" />
         <option value="$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/matrix/Matrices.java" />
@@ -184,6 +186,8 @@
         <option value="$PROJECT_DIR$/src/main/java/docMachine/lsa/LSA.java" />
         <option value="$PROJECT_DIR$/src/main/java/docMachine/lsa/Similarity.java" />
         <option value="$PROJECT_DIR$/src/main/java/docMachine/lsa/SimilarityUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/docMachine/LSA.java" />
+        <option value="$PROJECT_DIR$/../semanticvectors-read-only/scripts/RAMIndexTester.java" />
       </list>
     </option>
   </component>
@@ -233,7 +237,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,150 +245,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tagcloudsummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tag-Cloud-Summarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tagcloudsummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tag-Cloud-Summarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tagcloudsummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tag-Cloud-Summarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tagcloudsummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tag-Cloud-Summarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tagcloudsummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tag-Cloud-Summarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tagcloudsummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tag-Cloud-Summarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tagcloudsummarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tag-Cloud-Summarizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lsa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -405,44 +267,16 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="docMachine.lsa" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LSAapp">
-    <configuration default="false" name="QueryTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false">
-        <pattern>
-          <option name="PATTERN" value="docMachine.lsa.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="tagcloudsummarizer" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="docMachine.lsa" />
-      <option name="MAIN_CLASS_NAME" value="docMachine.lsa.QueryTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.RunTests">
     <configuration default="false" name="QueryTest.testGetDocumentVector" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false">
         <pattern>
@@ -545,6 +379,29 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="tagcloudsummarizer" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RunTests" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false">
+        <pattern>
+          <option name="PATTERN" value="pitt.search.semanticvectors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <option name="MAIN_CLASS_NAME" value="pitt.search.semanticvectors.RunTests" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="semanticvectors-read-only" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -696,11 +553,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.QueryTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.QueryTest.testGetDocumentVector" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.QueryTest.testGetWords" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LSATest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.LSAapp" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.QueryTest.testGetDocumentVector" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.QueryTest.testGetWords" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.LSATest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.LSAapp" />
+      <item index="4" class="java.lang.String" itemvalue="Application.RunTests" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -739,23 +596,23 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2633015" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983734" sideWeight="0.9317872" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15825376" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4420191" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28376535" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2700065" sideWeight="0.9317872" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18152244" sideWeight="0.627558" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09759271" sideWeight="0.8717599" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15940143" sideWeight="0.9317872" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18217306" sideWeight="0.627558" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05866303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3628922" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2633015" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -773,7 +630,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="get similar words" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -788,6 +645,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="get query results from reduced semantic space" />
     <MESSAGE value="get similar words" />
+    <MESSAGE value="small changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -797,117 +655,115 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/3.0.2/lucene-core-3.0.2.jar!/org/apache/lucene/analysis/standard/StandardAnalyzer.class">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src-ext/pitt/util/vectors/PrincipalComponents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="596" selection-end="596" vertical-scroll-proportion="-9.0">
+        <state line="6" column="11" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/search/Indexer.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/VectorStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="17" selection-start="1528" selection-end="1537" vertical-scroll-proportion="0.0">
+        <state line="48" column="17" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.54587156">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_13/src.zip!/java/net/URLClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/VectorStoreReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="0" selection-start="7620" selection-end="7620" vertical-scroll-proportion="4.244318">
+        <state line="43" column="13" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/3.0.2/lucene-core-3.0.2.jar!/org/apache/lucene/document/Field.class">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/VectorStoreSparseRAM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="1128" selection-end="1128" vertical-scroll-proportion="-8.75">
+        <state line="54" column="13" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/search/LSAapp.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/scripts/RAMIndexTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="3523" selection-end="3523" vertical-scroll-proportion="-74.12">
+        <state line="65" column="18" selection-start="267" selection-end="2343" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/lsa/Query.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/TermVectorsFromLucene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
+        <state line="124" column="0" selection-start="4622" selection-end="4622" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/util/DoubleEntry.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/test/pitt/search/semanticvectors/VectorStoreWriterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.3148148">
+        <state line="59" column="0" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODOS.txt">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/scripts/europarl/chapters-as-files-align.perl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="29" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0878906">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/lra/LatentRelationalAnalysis.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="834" column="39" selection-start="34425" selection-end="34425" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_13/src.zip!/java/lang/Object.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/IndexFilePositions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="33" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+        <state line="19" column="13" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/common/SemanticSpaceIO.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/LuceneSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="435" column="24" selection-start="17338" selection-end="17338" vertical-scroll-proportion="0.0">
+        <state line="51" column="13" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/common/SemanticSpace.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/FilePositionDoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="9" selection-start="3696" selection-end="3696" vertical-scroll-proportion="0.41379312">
+        <state line="13" column="13" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/lsa/LSA.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/lucene/IndexBilingualFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="38" selection-start="7634" selection-end="7656" vertical-scroll-proportion="-23.16">
+        <state line="57" column="29" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/lsa/LatentSemanticAnalysis.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/test/pitt/search/semanticvectors/RunTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="340" column="35" selection-start="13669" selection-end="13680" vertical-scroll-proportion="-8.16">
+        <state line="203" column="0" selection-start="7538" selection-end="7538" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sspace-read-only/src/edu/ucla/sspace/common/Similarity.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/VectorStoreWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="41" selection-start="9318" selection-end="9334" vertical-scroll-proportion="0.0">
+        <state line="79" column="0" selection-start="3250" selection-end="3250" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/docMachine/lsa/SimilarityUtil.java">
+    <entry file="file://$PROJECT_DIR$/../semanticvectors-read-only/src/pitt/search/semanticvectors/LuceneUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="882" selection-end="882" vertical-scroll-proportion="0.6394984">
-          <folding>
-            <element signature="docComment;class#SimilarityUtil#0" expanded="false" />
-          </folding>
+        <state line="277" column="0" selection-start="8809" selection-end="8809" vertical-scroll-proportion="0.2313253">
+          <folding />
         </state>
       </provider>
     </entry>

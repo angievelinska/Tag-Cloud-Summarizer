@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Mann08}
 C.~D. Manning, P.~Raghavan, and H.~Schtze, {\em Introduction to Information
@@ -9,6 +9,30 @@ C.~D. Manning, P.~Raghavan, and H.~Schtze, {\em Introduction to Information
 D.~M. Mugo, ``Connecting people using {L}atent {S}emantic {A}nalysis for
   knowledge sharing,'' Master's thesis, Hamburg University of Technology, Jan.
   2010.
+
+\bibitem{Dumais88usingLSA}
+S.~T. Dumais, G.~W. Furnas, T.~K. Landauer, S.~Deerwester, and R.~Harshman,
+  ``Using {L}atent {S}emantic {A}nalysis to improve access to textual
+  information,'' in {\em Sigchi Conference on Human Factors in Computing
+  Systems}, pp.~281--285, ACM, 1988.
+
+\bibitem{Deerw90_LSA}
+S.~Deerwester, S.~T. Dumais, G.~W. Furnas, T.~K. Landauer, and R.~Harshman,
+  ``Indexing by {L}atent {S}emantic {A}nalysis,'' {\em Journal of the American
+  Society for Information Science}, vol.~41, pp.~391--407, 1990.
+
+\bibitem{Dumais2006}
+S.~Dumais, ``{LSA} and {I}nformation {R}etrieval: {G}etting {B}ack to
+  {B}asics,'' pp.~293--321, 2007.
+
+\bibitem{Berry95usinglinear}
+M.~W. Berry, S.~Dumais, G.~O'Brien, M.~W. Berry, S.~T. Dumais, and Gavin,
+  ``Using linear algebra for intelligent information retrieval,'' {\em SIAM
+  Review}, vol.~37, pp.~573--595, 1995.
+
+\bibitem{MatrixCompGolub96}
+G.~H. Golub and C.~F. Van~Loan, {\em Matrix computations (3rd ed.)}.
+\newblock Baltimore, MD, USA: Johns Hopkins University Press, 1996.
 
 \bibitem{Nakov_weightfunctions}
 P.~Nakov, A.~Popova, and P.~Mateev, ``Weight functions impact on {LSA}
@@ -24,11 +48,5 @@ P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
 P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
   of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
   Analytics Science and Technology}, 2009.
-
-\bibitem{S-Space}
-D.~Jurgens and K.~Stevens, ``The s-space package: an open source package for
-  word space models,'' in {\em ACL '10: Proceedings of the {ACL} 2010 {S}ystem
-  {D}emonstrations}, (Morristown, NJ, USA), pp.~30--35, Association for
-  Computational Linguistics, 2010.
 
 \end{thebibliography}

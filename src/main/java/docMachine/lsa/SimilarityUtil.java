@@ -4,6 +4,7 @@ import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.Similarity;
 import edu.ucla.sspace.vector.DoubleVector;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -14,7 +15,7 @@ import java.util.Set;
  */
 public class SimilarityUtil {
   protected Set<DoubleVector> getSimilarVectors(SemanticSpace sspace, DoubleVector vector, int results){
-
+     return new HashSet<DoubleVector>();
   }
 
   protected double getSimilarityForVector(SemanticSpace sspace, DoubleVector vector){

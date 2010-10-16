@@ -5,12 +5,23 @@
 This chapter reports the implemented solution for the given thesis problem, gives discusses its advantages and disadvantages.
 \end{summary}
 
+
+The document collection consists of guides and manuals about CoreMedia \gls{CMS} 5.2.\\
+
 \section{LSA implementation}
 \label{sec:implementation:lsa_impl}
-For the implementation of LSA this work uses the open LSA library which is part of Semantic Spaces Project\cite{S-Space}. It is developed at the Natural Language Processing Group at the University of California at Berkley (UCLA)\footnote{\url{http://code.google.com/p/airhead-research/}}.
+\gls{LSA} was applied to a collection of 11818 words in 4000 documents, all of which describe CoreMedia \gls{CMS} 5.2. The algorithm took  63552 ms for preprocessing and indexing of the whole document collection. \\
 
-The real difficulty of LSA is to find out how many dimensions to remove - the problem of dimensionality.
+For the implementation of LSA this work uses the open LSA library which is part of Semantic Spaces Project\cite{S-Space}. It is developed at the Natural Language Processing Group at the University of California at Berkley (UCLA)\footnote{\url{http://code.google.com/p/airhead-research/}}.\\
+
+The real difficulty of LSA is to find out how many dimensions to remove - the problem of dimensionality.\\
 
 \section{Tag Cloud implementation}
 \label{sec:implementation:tag_cloud}
-The implemented open source library used for tag cloud generation is called Opencloud\footnote{\url{http://opencloud.mcavallo.org/}}, and is provided by Marco Cavallo.
+The implemented open source library used for tag cloud generation is called Opencloud\footnote{\url{http://opencloud.mcavallo.org/}}, and is provided by Marco Cavallo.\\
+
+\section{Tools used}
+\label{sec:implementation:tools_used}
+Airhead Research\footnote{\url{http://code.google.com/p/airhead-research/}} project was used as a semantic spaces Package which provides a java-based implementation of \gls{LSA}.\\
+
+Apache Lucene\footnote{\url{http://lucene.apache.org/java/3_0_2/}} was used as an indexing and search library.

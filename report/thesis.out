@@ -1,21 +1,19 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}
-\BOOKMARK [1][-]{section.1.1}{Motivation and objective}{chapter.1}
-\BOOKMARK [1][-]{section.1.2}{Outline}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Latent Semantic Analysis}{}
-\BOOKMARK [1][-]{section.2.1}{Overview}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{Singular Value Decomposition}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{Latest development in the field of LSA}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{plan}{chapter.2}
-\BOOKMARK [1][-]{section.2.5}{storage}{chapter.2}
-\BOOKMARK [1][-]{section.2.6}{Alternative approaches for LSA}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Tag Clouds}{}
-\BOOKMARK [1][-]{section.3.1}{1}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{Brainstorming}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{Implementation and evaluation of results}{}
-\BOOKMARK [1][-]{section.4.1}{LSA implementation}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Tag Cloud implementation}{chapter.4}
-\BOOKMARK [0][-]{chapter.5}{Conclusion and outlook}{}
-\BOOKMARK [1][-]{section.5.1}{1}{chapter.5}
-\BOOKMARK [1][-]{section.5.2}{Future Work}{chapter.5}
+\BOOKMARK [0][-]{title.0}{Titlepage}{}
+\BOOKMARK [0][-]{declaration.0}{Declaration}{}
+\BOOKMARK [0][-]{acknowledgements.0}{Acknowledgements}{}
+\BOOKMARK [0][-]{contents.0}{Contents}{}
+\BOOKMARK [0][-]{figures.0}{List of figures}{}
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivation and objective}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{1.2 Outline}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{2 Latent Semantic Analysis}{}
+\BOOKMARK [1][-]{section.2.1}{2.1 Overview}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{2.2 Text pre-processing}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{2.3 Singular Value Decomposition}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{2.4 Query mapping in the semantic space}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{2.5 Factors influencing LSA performance}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{2.6 Advantages and drawbacks}{chapter.2}
+\BOOKMARK [1][-]{section.2.7}{2.7 Latest development in the field of LSA}{chapter.2}
 \BOOKMARK [0][-]{section*.3}{Acronyms}{}
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}
+\BOOKMARK [0][-]{appendix.A}{A Appendix}{}
+\BOOKMARK [0][-]{references.0}{Bibliography}{}

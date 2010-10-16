@@ -8,6 +8,8 @@ import org.apache.lucene.document.DateTools;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
@@ -121,6 +123,17 @@ private static void indexDirectory(IndexWriter writer, File dir)
 
     writer.addDocument(doc);
   }
+
+  private static int hitCount(IndexSearcher searcher, Query query){
+    int hits = 0;
+    try{
+       hits = searcher.search(query,1).totalHits;
+     } catch (IOException e){
+       e.printStackTrace();
+     }
+    return hits;
+  }
+
 
    //sample main function
   public static void main(String[] args) {

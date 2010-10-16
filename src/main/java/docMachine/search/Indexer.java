@@ -2,7 +2,6 @@ package docMachine.search;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -70,9 +69,9 @@ public class Indexer {
         return writer.numDocs();
     }
 
-    protected Document getDocument (File f) throws Exception{
+    protected Document indexDocument(File f) throws Exception{
         Document doc = new Document ();
-        doc.add(new Field("contents", new FileReader(f)));
+        doc.add(new Field("contents", new FileReader(f), Field.TermVector.YES));
         doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
         doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
         return doc;
@@ -86,7 +85,7 @@ public class Indexer {
 
     private void indexFile (File f) throws Exception{
         log.info("Indexing "+f.getCanonicalPath());
-        Document doc = getDocument(f);
+        Document doc = indexDocument(f);
         writer.addDocument(doc);
     }
 

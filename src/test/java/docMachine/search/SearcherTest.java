@@ -1,19 +1,31 @@
 package docMachine.search;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Created by IntelliJ IDEA.
  * User: ng
  * Date: 18.08.2010
  * Time: 11:15:31
- * To change this template use File | Settings | File Templates.
  */
 public class SearcherTest {
+    Searcher searcher;
+
+    @Before
+    public void setup(){
+      searcher = new Searcher();
+    }
+
     @Test
     public void testSearchDocuments() throws Exception {
         String[] args = {"idx",
                 "content management server"};
-        Searcher.searchDocuments(args);
+        searcher.searchDocuments(args);
+    }
+
+    @After
+    public void tearDown(){
+      searcher = null;
     }
 }
