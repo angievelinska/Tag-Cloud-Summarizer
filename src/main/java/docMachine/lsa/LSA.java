@@ -61,7 +61,7 @@ public class LSA {
         //SVD reduction
         processDocumentsAndSpace(sspace, iter, noOfThreads, props);
         log.info("prepare to save semantic space after svd");
-        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.SPARSE_TEXT);
+        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
 
       } catch (IOException e){
         e.printStackTrace();
@@ -155,10 +155,12 @@ public class LSA {
 
 
   protected void saveMatrix(SemanticSpace sspace){
+    log.info("save 3 matrices");
     int numWords = sspace.getWords().size();
     DoubleVector[] vectors = new DoubleVector[numWords];
     String[] words = new String[numWords];
     int i = 0;
+    log.info("size of words in sspace: "+words.length);
     for (String word : sspace.getWords()){
       words[i] = word;
       vectors[i] = Vectors.asDouble(sspace.getVector(word));
@@ -171,6 +173,7 @@ public class LSA {
         pw.write(words[j]);
         pw.println();
       }
+      log.info("words printed to file words.dat");
       //pw.write(words.toString());
       pw.close();
     } catch (IOException e){
@@ -178,14 +181,15 @@ public class LSA {
     }
 
     Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
-    MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_SPARSE_TEXT;
+    //MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_SPARSE_TEXT;
+    MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_DENSE_TEXT;
     File outputMatrix = new File("sspace/matrix.dat");
 
     try {
       outputMatrix.createNewFile();
       MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
-      Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,100);
-     // Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.SVDLIBJ, MatrixIO.Format.DENSE_TEXT ,100);
+      //Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,10);
+      Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.SVDLIBJ, MatrixIO.Format.SVDLIBC_DENSE_TEXT,10);
       saveMatrices(matricesReduced);
     }
     catch (IOException e) {
@@ -195,6 +199,7 @@ public class LSA {
 
 
   protected void saveMatrices(Matrix[] matrix) {
+    log.info("start saving three decomposed matrices");
     File dir  = new File("sspace");
     File f1, f2, f3;
     try {
@@ -202,9 +207,9 @@ public class LSA {
       f2 = File.createTempFile("matrix_S",".txt", dir);
       f3 = File.createTempFile("matrix_V",".txt", dir);
 
-      MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.SVDLIBC_SPARSE_TEXT);
-      MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.SVDLIBC_SPARSE_TEXT);
-      MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.SVDLIBC_SPARSE_TEXT);
+      MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+      MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
 
     }
     catch (IOException e) {
@@ -237,8 +242,8 @@ public class LSA {
       props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords/english-stop-words-large.txt");
       //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
       props.put("docFile","input/input.txt");
-      props.put("svdAlgorithm","JAMA");
-      props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"180");
+      props.put("svdAlgorithm","SVDLIBJ");
+      props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"10");
     // default format is binary
       props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
       props.put("overwrite","true");

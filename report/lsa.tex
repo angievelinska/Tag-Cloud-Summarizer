@@ -6,14 +6,16 @@ The chapter gives a theoretical overview of \gls{LSA} in the context of its use 
 \end{summary}
  
 \section{Overview}
+\label{sec:lsa:overview}
 
-\gls{LSA} was first introduced in ~\cite{Dumais88usingLSA} and~\cite{Deerw90_LSA} as a technique for improving information retrieval. Most search engines work by matching words in a user's query with words in documents. Such information retrieval systems that depend on lexical matching have to deal with two problems: synonymy and polysemy. Due to the many meanings which the same word can have, also called polysemy, irrelevant information is retrieved when searching. And as there are different ways to describe the same concept, or synonymy, important information can be missed. \gls{LSA} has been proposed to address these fundamental retrieval problems, having as a key idea dimension reduction technique, which maps documents and terms into a lower dimensional semantic space. \gls{LSA} models the relationships among documents based on their constituent words, and the relationships between words based on their occurrence in documents. By using fewer dimensions that there are unique words, \gls{LSA} induces similarities among words including ones that have never occurred together~\cite{Dumais2006}. There are three basic steps to using \gls{LSA}: parsing text, computing a \gls{SVD}, and mapping queries on the generated semantic space, so that similarities between documents, or queries and documents can be computed.\\
+\gls{LSA} was first introduced in ~\cite{Dumais88usingLSA} and~\cite{Deerw90_LSA} as a technique for improving information retrieval. Most search engines work by matching words in a user's query with words in documents. Such information retrieval systems that depend on lexical matching have to deal with two problems: synonymy and polysemy. Due to the many meanings which the same word can have, also called polysemy, irrelevant information is retrieved when searching. And as there are different ways to describe the same concept, or synonymy, important information can be missed. \gls{LSA} has been proposed to address these fundamental retrieval problems, having as a key idea dimension reduction technique, which maps documents and terms into a lower dimensional semantic space. \gls{LSA} models the relationships among documents based on their constituent words, and the relationships between words based on their occurrence in documents. By using fewer dimensions that there are unique words, \gls{LSA} induces similarities among words including ones that have never occurred together~\cite{Dumais2006}. There are three basic steps to using \gls{LSA}: text pre-processing, computing \gls{SVD} and dimensionality reduction, and querying the constructed semantic space.\\
  
 \section{Text pre-processing}
+\label{sec:lsa:pre-processing}
 
-Before applying \gls{LSA}, some pre-processing to the texts in the document collection is required. The process of parsing, also called tokenization, is breaking the input text stream into useable tokens. During tokenization, filtering can be applied, i.e. removing HTML tags or other markup, as well as stop words  and punctuation marks. Stop words are such words that don't hold useful information but occur frequently in the texts, and therefore it is sensible to be removed. Examples of stop words are: $ a, an, and, any, some, that, this, to $. \\
+If we have a document collection or a text corpus, on which we want to apply \gls{LSA}, the initial step is to pre-process the texts into a suitable form for running \gls{LSA}. Pre-processing can include a number of techniques, depending on the application requirements. The process of parsing, also called tokenization, is breaking the input text stream into useable tokens. During tokenization, filtering can be applied, i.e. removing HTML tags or other markup, as well as stop-wording, and removing punctuation marks. Stop words don't convey information specific to the text corpus, but occur frequently, such as: $ a, an, and, any, some, that, this, to $. \\
 
-An important distinction has to be made between words or terms, and tokens. A term is the class which is used as a unit during parsing, and a token is each occurence of this class. For example, in the sentence: 
+A distinction has to be made between words or terms, and tokens. A term is the class which is used as a unit during parsing, and a token is each occurence of this class. For example, in the sentence: 
 
 \begin{quote}
 \textit{CoreMedia CMS is shipped with an installation program for interactive graphical installation and configuration of the software.}
@@ -21,9 +23,9 @@ An important distinction has to be made between words or terms, and tokens. A te
 
 the term $ installation $ is represented by two tokens. \\
 
-There is no universal way in which to parse a text, and the parsing decisions to address depend on the application in which the text collection will be used. All posterior processing in the following stages of \gls{LSA} will be determined by the parsing. \\
+There is no universal way in which to parse a text, and the parsing decisions to address depend on the application in which the text collection will be used. Text parsing will influence all posterior processing in the following stages of \gls{LSA}. \\
 
-After tokenization, one has to comupute a term - document matrix. Having as rows the terms, and as columns the documents, its elements are number of occurrence of each word in each document. The matrix is sparse, as not all terms occur in all documents.\\
+After tokenization, one has to construct a term-document matrix~(\ref{lsa:sparse_matrix_A}). Having as rows the terms, and as columns the documents, its elements are the occurrences of each term in a particular document, where $ a_{ij} $ denotes the frequency with which term $ i $ occurs in document $ j $. The size of the matrix is \text{\bf{m x n}}, where {\bf m} is the number of terms, and {\bf n} is the number of documents in the text collection. Since every term doesn't appear in each document, the matrix is usually sparse. \\
 
 %
 % initial sparse matrix A
@@ -38,76 +40,97 @@ A=
 \end{bmatrix}\\
 \end{equation}\\
 
-The size of the matrix is \text{\bf{m x n}}, where {\bf m} is the number of terms, and {\bf n} is the number of documents in the text collection. Then, the term occurences are transformed into weights using a weight function, such as entropy, term frequency, inverse document frequency. These weights are represented by entries in matrix~\ref{lsa:sparse_matrix_A}, where $ a_{ij} $ gives the weight of term $ i $ in document $ j $. \\
+Local and global weightings are applied to increase or decrease the importance of terms within documents. We can write
+%
+% general weighting function
+%
+\begin{equation}
+\label{lsa:global_local_weighting}
+a_{ij}=L(i,j) \times G(i),
+\end{equation}
+
+where $L(i,j)$ is the local weighting of the term $i$ in document $j$, and $G(i)$ is the global weighting for term $i$. The choice of a weight function has impact on \gls{LSA} performance, therefore in Section~\ref{sec:lsa:factors_infl_lsa} we give an overview of the most common weight functions. \\
 
 \section{Singular Value Decomposition}
+\label{sec:lsa:svd}
 
-After the initial pre-processing, the generated term-document matrix is decomposed into three matrices by a process called Singular Value Decomposition~(\gls{SVD}). It is a unique decomposition of a matrix into the product of three matrices - $U$ and $V$ are ortonormal matrices, and $S$ is a diagonal matrix with singular values on its diagonal, as in~\ref{lsa:svd}.\\
+After the initial pre-processing, the term-document matrix is decomposed into three matrices~(\ref{lsa:svd}) by applying Singular Value Decomposition~(\gls{SVD}). It is a unique decomposition of a matrix into the product of three matrices - $U$ and $V$ are ortonormal matrices, and $ \Sigma $ is a diagonal matrix having singular values on its diagonal.\\
 %
 % SVD decomposition in three matrices
 %
-\begin{equation}\label{lsa:svd}
-A=USV^{T}\\
+\begin{equation}
+\label{lsa:svd}
+A=U \Sigma V^{T}\\
 \end{equation}\\
 
-After the initial matrix $A$ is decomposed by \gls{SVD}, all but the highest $k$ valued of $S$ are set to $0$. The resulting reduced matrix is the semantic space of the text collection. A classical example from \cite{Dumais88usingLSA} presenting the truncated \gls{SVD} can be used for displaying dimensionality reduction, and how it affects all three matrices (Figure~\ref{lsa:truncated_svd}).\\
-
+After the initial matrix $A$ is decomposed, all but the highest $k$ valued of $S$ are set to $0$. The resulting reduced matrix is the semantic space of the text collection. A classical example presenting the truncated \gls{SVD}~\cite{Dumais88usingLSA}  can be used for displaying dimensionality reduction, and how it affects all three matrices.\\
 %
 % diagram of the truncated SVD
 %
+\begin{center}
 \begin{figure}[htbp]
 \label{lsa:truncated_svd}
 	\centering
 	\includegraphics[width=\ScaleIfNeeded]{img/svd} 
  % or [scale=0.5]
-	\caption{Diagram of the truncated SVD}
+	\caption[Diagram of truncated SVD]%
+           {Diagram of truncated SVD}
 \end{figure}
+%
+% description of the parameters in SVD diagram
+%
+\begin{tabular}{l l}
+$A_{k}$ - best rank-$k$ approximation of $A$ & $m$ - number of terms\\
+$U$ - term vectors & $n$ - number of documents \\
+$\Sigma$ - singular values & $k$ - number of factors \\
+$V^{T}$ - document vectors & $r$ - rank of $A$ \\
+\end{tabular}
+\end{center} 
 
-\gls{LSA} models the relationships between documents based on the words they contain, and the relationships between words based on their occurrence in the documents. By using fewer dimensions that there are unique terms, \gls{LSA} induces similarities among terms including ones that have never occurred together~\cite{Dumais2006}. \gls{SVD} is also a tool for dimensionality reduction, and hence also noise reduction, as it sets to $0$ the lowest term weights. \\
+Figure~\ref{lsa:truncated_svd} is a visual representation of \gls{SVD} as defined in equation~(\ref{lsa:svd}). $U$ and $V$ are considered as containing the term and document vectors respectively, and $\Sigma$ is constructed by the singular values of $A$. An imporant property of \gls{SVD} is that the singular values placed on the diagonal of $\Sigma$ are in decreasing order. Hence, if all but the first $k$ singular values are set to $0$, the semantic meaning in the resulting space is preserved to some approximation $k$, while noise or variability in word usage, is filtered out. Noise in this case are the terms with lowest weights which carry little meaning. By using fewer dimensions $k$, \gls{LSA} induces similarities amont terms including ones that have never occured together. Terms which occur in similar documents, for example, will be near each other in the k-dimensional space even if they never co-occur in the same document. This means that some documents which do not share any words with a users query may be near it in k-space.\\
 
-For decomposition of very large matrices, it is important to note that the run time complexity for performing \gls{SVD} is $O(n^2k^3)$, where $n$ is the number of terms, and $k$ is the number of dimensions in semantic space after dimensionality reduction. $k$ is typically a small number between 50 and 350.\\
+A factor to be considered when computing \gls{SVD} is the run-time complexity of the algorithm. For decomposition of very large matrices, it is $O(n^2k^3)$, where $n$ is the number of terms in the text corpus, and $k$ is the number of dimensions in semantic space after dimensionality reduction. Note that $k$ is typically a small number between 50 and 350.\\
 
-For more detailed information on \gls{SVD}, please refer to \cite{Berry95usinglinear} and \cite{MatrixCompGolub96}.\\
+A more detailed description of \gls{SVD} can be found in \cite{Berry95usinglinear} and \cite{MatrixCompGolub96}.\\
 
-\section{Query mapping in the semantic space}
+\section{Querying the semantic space}
+\label{lsa:querying_sspace}
 
-The final step of applying \gls{LSA} is to compute similarities between entities in the semantic space. This includes computing similarities between queries and documents in the semantic space. In this case the query $q$ has to be ''translated'' as a document from the semantic space, by using~\ref{lsa:query}.$q^{T}$ is the transposed query vector, $U_{k}$ is the reduced term matrix, and $S_{k}^{-1}$ is the reduced singular values matrix.\\
-
+In this work we are using \gls{LSA} for \gls{IR} purpose. Therefore, the final step of applying the technique is to pose queries on the constructed semantic space. A query $q$ is a set of words which must be represented as a document in the k-dimensional space, in order to be compared to other documents. The user's query can be represented by
 %
 % Query translation for LSA
 %
-\begin{equation}\label{lsa:query}
-q = q^{T}U_{k}S_{k}^{-1}\\
+\begin{equation}
+\label{lsa:query}
+q = q^{T}U_{k}\Sigma_{k}^{-1}\\
 \end{equation}\\
-
-Search in the reduced vector space after \gls{SVD} is done based on a similarity measure and coocurence of the terms within the documents. The decomposition finds the optimal projection into low-dimensional vector space.\\
+where $q$ is the set of words in the query, multiplied by the reduced term and singular values matrices. Using the transformation in~(\ref{lsa:query}), the query is ''mapped'' onto the reduced k-space. After the mapping, the resulting query vector can be compared to the documents in the k-space, and the results ranked by their similarity or nearness to the query. A common similarity measure is the cosine between the query and the document vector. From the resulting document set, the documents closest to the query above certain treshold are returned. \\
 
 \section{Factors influencing LSA performance}
+\label{sec:lsa:factors_infl_lsa}
+The effective usage of \gls{LSA} is a process of a sophisticated tuning. Several factors can influence the performance of the technique. These factors are pre-processing of texts~(removal of stop-words, filtering, stemming), frequency matrix transformations, choice of dimensionality $k$, choice of similarity measure.\\
 
-Several factors influence the quality of results which LSA delivers. These factors are pre-processing (removal of stop-words, stemming, lemmatization), frequency matrix transformations, choice of dimensionality, choice of similarity measure.\\
-A study by Nakov, Popova, Mateev\cite{Nakov_weightfunctions} has summarized the influence of those factors on LSA, and has concluded that...\\
+Dumais et al.~\cite{dumais91improving} and Nakov et al.~\cite{Nakov_weightfunctions} have carried research on \gls{LSA} performance depending on the choice of factors such as frequency matrix transformations, similarity measures, and choice of dimension reduction parameter $k$. They conclude that performance based on the choice of these factors depends on the particular text corpus, as well as on the purpose of \gls{LSA} application. However, in the case of matrix transform, log-entropy performs better as compared to other matrix transform function combinations, including the popular term frequency - inverse document frequency~($tf\times idf$). Therefore, we implement the former in this work.
+%
+% entropy frequency matrix transformation
+%
+\begin{center}
+\begin{tabular}{l l}
+Local function:  & \multirow{2}{*}{ $ L(i,j)=\log(tf(i,j)+1) $ }\\
+logarithm & \\
+Global function: & \multirow{2}{*}{ $ G(i)=1+\frac{{\Sigma_{j}p(i,j)}}{\log n} $ } \\
+entropy & \\
+\end{tabular}
+\end{center} 
+where $n$ is the number of documents in the collection.\\
 
-TODO:here give a formula for weighting function, and for similarity measure. Explain citing Nakov's paper why you are using exactly these. \\
+Further, it has been stated~(\cite{dumais91improving},\cite{NakovBetterResultsLSI}) that with respect to similarity measures used, \gls{LSA} performs optimal when cosine similarity measure is implemented to calculate the distance between vectors in the semantic space. We have therefore used it to measure the relevance between queries and documents. The cosine measure between two vectors $d_1$ and $d_2$ is given by:
+%
+% cosine similarity
+%
+\begin{equation}
+\label{lsa:cosine_measure}
+sim(d1,d2)=\frac{\overrightarrow{V}(d_1).\overrightarrow{V}(d_2)}{\left\vert \overrightarrow{V}(d_1) \right\vert.\left\vert \overrightarrow{V}(d_2)\right\vert}
+\end{equation}
 
-There are three main factors that can influence the performance of LSA\cite{Nakov_weightfunctions}\cite{NakovBetterResultsLSI}:\\
-\begin{itemize}
-\item Frequency matrix transoformations (choice of weighting function)
-\item Choice of dimensionality
-\item Text preprocessing prior to SVD, choice of similarity measure (???)
-\end{itemize}
-
-Further, the choice of dimensionality is dependent upon the matrix transformations performed, as pointed out by Nakov\cite{NakovBetterResultsLSI}.\\
-
-\section{Advantages and drawbacks}
-
-why am i using lsa instead of lda for example?\\
-
-\begin{enumerate}
-\item PLSA - characteristics, advantages, disadvantages
-\item LDA - characteristics, advantages, disadvantages
-\end{enumerate}
-
-\section{Latest development in the field of LSA}
-LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\
-
-at the end- improvements of lsa with the basics explained.\\
+Dimensionality reduction parameter $k$ is defined empirically based on the experimentation results presented in Chapter~\ref{sec:implementation}. 

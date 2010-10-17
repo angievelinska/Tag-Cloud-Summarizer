@@ -34,6 +34,11 @@ M.~W. Berry, S.~Dumais, G.~O'Brien, M.~W. Berry, S.~T. Dumais, and Gavin,
 G.~H. Golub and C.~F. Van~Loan, {\em Matrix computations (3rd ed.)}.
 \newblock Baltimore, MD, USA: Johns Hopkins University Press, 1996.
 
+\bibitem{dumais91improving}
+S.~T. Dumais, ``Improving the retrieval of information from external sources,''
+  {\em Behavior Research Methods, Instruments, \& Computers}, vol.~23,
+  pp.~229--236, 1991.
+
 \bibitem{Nakov_weightfunctions}
 P.~Nakov, A.~Popova, and P.~Mateev, ``Weight functions impact on {LSA}
   performance,'' in {\em EuroConference RANLP'2001 (Recent Advances in NLP},
@@ -43,10 +48,5 @@ P.~Nakov, A.~Popova, and P.~Mateev, ``Weight functions impact on {LSA}
 P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
   {\em In Proceedings of the Students Prenetations at ESSLLI-2000},
   pp.~156--166, 2000.
-
-\bibitem{CrDuSh09}
-P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
-  of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
-  Analytics Science and Technology}, 2009.
 
 \end{thebibliography}

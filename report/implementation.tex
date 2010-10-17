@@ -16,6 +16,8 @@ For the implementation of LSA this work uses the open LSA library which is part 
 
 The real difficulty of LSA is to find out how many dimensions to remove - the problem of dimensionality.\\
 
+TODO:test if inluding only terms that occur in more than one document improved \gls{LSA} performance with respect to generating precise tag clouds.\\
+
 \section{Tag Cloud implementation}
 \label{sec:implementation:tag_cloud}
 The implemented open source library used for tag cloud generation is called Opencloud\footnote{\url{http://opencloud.mcavallo.org/}}, and is provided by Marco Cavallo.\\
@@ -25,3 +27,26 @@ The implemented open source library used for tag cloud generation is called Open
 Airhead Research\footnote{\url{http://code.google.com/p/airhead-research/}} project was used as a semantic spaces Package which provides a java-based implementation of \gls{LSA}.\\
 
 Apache Lucene\footnote{\url{http://lucene.apache.org/java/3_0_2/}} was used as an indexing and search library.
+
+\section{Advantages and drawbacks}
+\label{sec:lsa:adv_disadv}
+
+why am i using lsa instead of lda for example?\\
+
+\begin{enumerate}
+\item PLSA - characteristics, advantages, disadvantages
+\item LDA - characteristics, advantages, disadvantages
+\end{enumerate}
+
+\section{Latest development in the field of LSA}
+\label{sec:lsa:latest}
+LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\
+
+at the end- improvements of lsa with the basics explained.\\
+
+\section{Improvements}
+only terms occuring in more than one documents have been included \\
+stop words \\
+compound words list \\
+Lanczos algorithm for computation of SVD of large sparse matrices \\
+Multi-threading computation in the project \\
