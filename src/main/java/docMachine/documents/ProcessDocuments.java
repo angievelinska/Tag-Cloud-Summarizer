@@ -12,10 +12,8 @@ import java.io.StringWriter;
 import java.util.List;
 
 /**
- * 
  * User: avelinsk
  * Date: 26.05.2010
- *
  */
 public class ProcessDocuments extends AbstractDocuments{
   private final static org.apache.commons.logging.Log log =

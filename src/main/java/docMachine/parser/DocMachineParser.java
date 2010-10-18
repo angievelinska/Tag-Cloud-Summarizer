@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 
 /**
-* Created by IntelliJ IDEA.
 * User: avelinsk
 * Date: 18.09.2010
 * Time: 15:55:50

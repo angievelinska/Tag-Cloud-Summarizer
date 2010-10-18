@@ -1,14 +1,4 @@
-\begin{thebibliography}{10}
-
-\bibitem{Mann08}
-C.~D. Manning, P.~Raghavan, and H.~Schtze, {\em Introduction to Information
-  Retrieval}.
-\newblock New York, NY, USA: Cambridge University Press, 2008.
-
-\bibitem{mugo10}
-D.~M. Mugo, ``Connecting people using {L}atent {S}emantic {A}nalysis for
-  knowledge sharing,'' Master's thesis, Hamburg University of Technology, Jan.
-  2010.
+\begin{thebibliography}{1}
 
 \bibitem{Dumais88usingLSA}
 S.~T. Dumais, G.~W. Furnas, T.~K. Landauer, S.~Deerwester, and R.~Harshman,
