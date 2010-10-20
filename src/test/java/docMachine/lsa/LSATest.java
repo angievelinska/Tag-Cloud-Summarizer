@@ -1,11 +1,9 @@
 package docMachine.lsa;
 
-import junit.framework.Assert;
+import edu.ucla.sspace.common.WordComparator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.io.File;
 
 /**
  * User: ng
@@ -40,6 +38,12 @@ public class LSATest {
       System.out.print(v.getValue(i));
     }
   }    */
+
+  @Test
+  public void getSimilarWords(){
+    WordComparator wordCmp = new WordComparator();
+    
+  }
 
     @After
     public void tearDown() throws Exception {

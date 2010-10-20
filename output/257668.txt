@@ -1,5 +1,0 @@
-
-
-CoreMedia SSE components use databases to store data and therefore require a database system to be available. This database system should be fully installed and available before beginning installation and configuration of CoreMedia SSE: component-specific configuration information is given in the Configuration chapter below.
-
-The table below lists the certified database systems for CoreMedia SSE.

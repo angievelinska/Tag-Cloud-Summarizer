@@ -1,3 +1,0 @@
-
-
-A set of default CascadingRules is defined in the file sse-tools-example.xml in your Management Views web application. As mentioned before the CascadingRules are collected and instantiated by the DefaultElementWorker. The following rules exists:

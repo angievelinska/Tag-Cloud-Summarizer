@@ -1,5 +1,0 @@
-
-
-The base module, located in com.coremedia.sse.base and subpackages, provides some common resource and relationship types which are useful for a broad range of social software applications. With the functionality provided within the base module, you can store user generated content, manage users and user profile data, organize users within groups, administer access control lists, and implement different kinds of votings and ratings. In order to support this functionality, The base module packages element types and their corresponding wrapper beans, and commands for creating, updating and deleting these elements within the repository. In addition, it provides a convenient API and caching support to perform commonly used queries. 
-
-The following picture gives an overview of the resource types provided by the base module, together with the relationships between them:

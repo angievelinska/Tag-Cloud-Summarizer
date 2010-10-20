@@ -24,7 +24,6 @@ import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -189,7 +188,7 @@ public class LSA {
       outputMatrix.createNewFile();
       MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
       //Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,10);
-      Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.SVDLIBJ, MatrixIO.Format.SVDLIBC_DENSE_TEXT,10);
+      Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.SVDLIBJ, MatrixIO.Format.SVDLIBC_DENSE_TEXT,120);
       saveMatrices(matricesReduced);
     }
     catch (IOException e) {
@@ -243,7 +242,7 @@ public class LSA {
       //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
       props.put("docFile","input/input.txt");
       props.put("svdAlgorithm","SVDLIBJ");
-      props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"10");
+      props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"120");
     // default format is binary
       props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
       props.put("overwrite","true");

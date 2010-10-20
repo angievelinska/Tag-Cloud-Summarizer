@@ -1,3 +1,0 @@
-
-
-See section for examples that demonstrate the usage of the Query API.

@@ -1,7 +1,0 @@
-
-
-After configuring the database, you can test your setup by starting your webapp: 
-Start the Tomcat installed as part of the CAE web application template.
-Navigate your browser to http://localhost:8001/contentapplicationengine-template/servlet/
-Congratulations! If you see the starting page (below) listing the configured profile card types, your setup is correct and you can start exploring the Social Software Extension deliverable by extending the minimal web application and using the documented API.
-

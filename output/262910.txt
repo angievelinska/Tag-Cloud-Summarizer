@@ -1,7 +1,0 @@
-
-
-This section covers the required configuration for the files that CoreMedia SSE adds to the Content Application Engine web application.
-
-Adding an SSE Link Scheme
-
-As an example CoreMedia SSE adds the elementBlobLinkScheme in sse-linkschemes-example.xml, located in the WEB-INF/spring/sse directory. You can remove, configure or add more customizers.

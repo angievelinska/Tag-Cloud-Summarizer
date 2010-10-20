@@ -1,4 +1,0 @@
-
-
- Version SSE 2008 End-Of-Life ? OS  Solaris 10 Sparc c (32 + 64 Bit Java) Solaris 10 x86 c (32 Bit Java)   Linux Red Hat Advanced Server 5.0 c (32 Bit Java) Linux SUSE Linux Enterprise Server 10 c (32 Bit Java)   IBM AIX 5.3 c (64 Bit Java 6)   Windows Server 2003 c (32 Bit Java) Windows Server 2008  Browser Management Views  Internet Explorer 6.0 p Internet Explorer 7, Windows XP c Internet Explorer 7, Windows Vista c   Firefox 2.0, Windows XP c Firefox 2.0, Windows Vista c Firefox 2.0, Linux c Firefox 3.0, Windows XP  Firefox 3.0, Windows Vista  Firefox 3.0, Linux  Java  6.0 Update 4+ c Database  Oracle 9i2 p Oracle 10g R2 c Oracle 11g    DB2 8.2.4  DB2 9.5    MS SQL 2005 Server c MS SQL 2008 Server    PostgreSQL 8.2.4 c PostgreSQL 8.3  Servlet Container  Tomcat 6.0 c   Bea WL 10 c   IBM WebSphere 6.1 c   Sun Application Server 9.1    JBoss Application Server 4.2  Search Engine  Fast 4.3 s Fast 5.1 
-

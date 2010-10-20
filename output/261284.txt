@@ -1,9 +1,0 @@
-
-
-Just like other parts of the Content Application Engine, classes of the Social Software Extension client library rely heavily on the dependency injection pattern and a Spring application context definition to assemble an application from loosely coupled components.
-
-A majority of the Social Software Extension can be considered a black box framework. Relevant interfaces are exposed as a public API while the implementation classes are usually not part of the public API. Implementation classes expose public properties, which will be set as part of the application context definition, and control the components' behavior.
-
-Additionally, many framework classes have extension points in the form of strategy interfaces, whose default implementation may be replaced by a custom implementation in a specific application. One example of an extension point using the strategy pattern is the AuthenticationStrategy interface called by the default user provider implementation (see Authentication and Session Management). However, in some cases, abstract base classes are provided to simplify common or complex implementation tasks (e.g. AbstractConfigurableLinkScheme, AbstractFeedItemDataProvider, AbstractUserProvider).
-
-Applications access the Social Software Extension functionality by injecting beans defined in the SSE application context definition files (see in the lib/*-config.jar files and spring/sse/sse-*.xml) into application beans, such as controllers or content beans. Depending on which functionality is needed, the following table shows some candidates for injection into application beans

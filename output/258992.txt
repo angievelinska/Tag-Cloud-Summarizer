@@ -1,7 +1,0 @@
-
-
-The Management Views component is an extensible content management application for the management of users and user-generated content.
-
-Configuring this component involves configuration of the database connection and the authentication, e.g. against a CMS Content Repository. 
-
-These configuration tasks are described in the chapters below.

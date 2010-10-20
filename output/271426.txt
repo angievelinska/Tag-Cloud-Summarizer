@@ -1,5 +1,0 @@
-
-
-You can use the SeekAndWork tool to "work" on a defined set of Resources including dependent resources. The tool consists of two parts: First, a HTTP Interface which is integrated into the SSE Management Views, and second command line tools which are using this interface.
-
-The HTTP Interface consists of a Spring Controller and a couple of Spring beans which are described below. The command line is not part of the Management Views, but could be installed with a CAE Feeder, or Content Server. The SeekAndWork tool needs a specific "worker" defined; you might want  to develop your own worker, or using the default implementation (DefaultElementWorker) with a custom spring configuration.

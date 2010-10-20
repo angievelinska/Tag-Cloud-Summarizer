@@ -1,3 +1,0 @@
-
-
-SeekFilters are used by the DefaultElementWorker to extend the created Query. SeekAndWork commands are used to do the work in a transaction context. They use a SeekAndWorkOnElementsCommandArg as data bag. A default implementation is the SeekAndWorkOnElementsCommand, which mainly connects an AbstractElementCollectorCommand and an AbstractElementWorkerCommand. 

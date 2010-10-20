@@ -1,4 +1,0 @@
-
-
- Name of the Property Value Default Description recommend.flow.source.relation   Name of the relation between users and items used for the analysis. The source of the relation must denote users, while the target must denote items. recommend.flow.source.property   Numeric property of the relation to be used as a rating
-

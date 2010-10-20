@@ -1,5 +1,0 @@
-
-
-Browser
-
-The following browsers are supported for the Management Views:

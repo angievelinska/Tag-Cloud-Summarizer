@@ -1,6 +1,0 @@
-
-
- Directory / File Contents sk-userfeedback-plugin Files to extend the Starter Kit web application with end-user feedback features based on Social Software Extension functionality sse-webapptemplate CAE web application template containing Social Software Extension configuration files sse-editor Management Views for user management and approval of user-generated content sse-caefeeder CAE feeder template containing files for feeding Social Software content sse-tools Files to extend an CAE feeder or a ContentServer installation. It provides tools for working on the SSE Repository, e.g. sse-destroyresources docs Documentation 
-
-readme.txt Information to prerequisites, deployment and configuration notes.html Release notes information file
-

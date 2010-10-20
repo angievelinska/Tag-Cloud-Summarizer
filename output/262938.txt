@@ -1,5 +1,0 @@
-
-
-If the Recommendation Engine is not desired as part of the CoreMedia SSE setup, it can be removed as follows:
-
-Remove the jar coremedia-sse-recommend-*-config.jar

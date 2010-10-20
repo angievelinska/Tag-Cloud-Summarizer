@@ -27,7 +27,7 @@ class WCCAlgorithm {
         Cluster c = getIthCluster(C, word, i);
         
         //TODO: add to vector the triplet: word, cluster, term frequency
-        T.add(new HashMap<String, <Cluster,Double>>());
+        //T.add(new HashMap<String, <Cluster,Double>>());
 
       }
     }

@@ -2,19 +2,13 @@ package docMachine.lsa;
 
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
-import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.util.MultiMap;
-import edu.ucla.sspace.vector.DoubleVector;
-import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -26,12 +20,14 @@ public class QueryTest {
   SemanticSpace sspace;
   Query query;
   MultiMap<Double,String> results;
+  long start,end;
 
 
   @Before
   public void initializeTest(){
     try {
       sspace = SemanticSpaceIO.load(new File("sspace/LSA.sspace"));
+      start = System.currentTimeMillis();
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -41,7 +37,7 @@ public class QueryTest {
 
   @Test
   public void testQuery(){
-    results = query.getCosineSimilarity(sspace, "management", 20);
+    results = query.getCosineSimilarity(sspace, "content", 20);
     Double key;
     String value;
 
@@ -53,7 +49,7 @@ public class QueryTest {
     }
   }
 
-  @Test
+/*  @Test
   public void testGetDocumentVector(){
     File fquery = new File("input/query.txt");
     try {
@@ -82,13 +78,16 @@ public class QueryTest {
       String entry = (String) o;
       System.out.println(entry);
     }
-  }
+  }*/
 
   @After
   public void endTest(){
     sspace = null;
     query = null; 
     results = null;
+    end = System.currentTimeMillis();
+    System.out.print("query took: "+(end-start));
+    
   }
 
 }

@@ -1,3 +1,0 @@
-
-
-If you intend to deploy the Social Software Extension Management Views or a CAE/SSE web application to BEA WebLogic Server, please follow the application container specific deployment instructions described in the CAE chapter of the Administration and Operation Manual.

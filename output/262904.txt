@@ -1,5 +1,0 @@
-
-
-The Management Views are a web application which is included in the Social Software Extension software distribution. 
-
-To install the web application, just copy the directory sse-editor into the application directory of your Web application container (e.g. the Jakarta Tomcat webapps directory). You also need to copy the JDBC-driver, required by the database of the Management Views, to the WEB-INF/lib directory of the sse-editor application.  Read section for the configuration of the Management Views. 

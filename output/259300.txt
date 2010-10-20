@@ -1,5 +1,0 @@
-
-
-"The Social Software Extension provides the UserProvider interface as an abstraction of user repositories for the purpose of authentication. Users from different user repositories (e.g. from a LDAP repository, from a CoreMedia CMS user repository, Social Software local user repository) can be authenticated in a single application. There is no central authentication mechanism for all user providers, since they typically require different forms of authentication. Instead, the respective user authentication scheme can be used with each user provider.
-
-Active user sessions are handled separately from authentication by the "sessionManager" bean (of type com.coremedia.sse.base.session.SessionManager). It also provides information services, e.g. on the login state of a given user and the total number of currently logged-in users.

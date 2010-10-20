@@ -1,7 +1,0 @@
-
-
-Resources and relationships: the generic core model
-
-The Social Software repository enables an application to read, write, and query generic resources and relationships between them. Similar to CMS content or document types, a resource and relationship type hierarchy defines the available properties and inheritance relationships. Resource and Relationship share the common supertype Element. All of this generic functionality is available in subpackages below com.coremedia.sse.core and is accessible via the com.coremedia.sse.core.model.Repository interface.
-
-Any element - i.e. resource or relationship - is of exactly one concrete ElementType (in particular, it is either a ResourceType or a RelationshipType). Element types are either abstract or concrete and are arranged in an inheritance hierarchy, with the predefined abstract types Element, Resource, and Relationship at the root of the hierarchy. An element type defines the set of properties each of its instance will have. Since ElementType is a com.coremedia.cap.common.CapType, it supports reflection on the type hierarchy and the properties defined by each type. The following property types are supported by element types:
