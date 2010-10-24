@@ -1,0 +1,1 @@
+cmd.exe /c perl "C:\Program Files\MiKTeX 2.8\scripts\glossaries\makeglossaries" thesis
