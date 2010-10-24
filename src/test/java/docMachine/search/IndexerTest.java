@@ -12,7 +12,7 @@ public class IndexerTest {
 
     @Test
     public void testIndexDocuments() throws Exception {
-        String[]dirs = {"idx","output"};
+        String[]dirs = {"index","output"};
         Indexer.indexDocuments(dirs);
     }
 }

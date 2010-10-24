@@ -46,7 +46,7 @@ public class LSA {
       Properties props = setupProperties();
       int noOfThreads = Runtime.getRuntime().availableProcessors();
       LatentSemanticAnalysis sspace= null;
-      //just for info
+      // FYI
       //this.logProps();
 
       long start = System.currentTimeMillis();

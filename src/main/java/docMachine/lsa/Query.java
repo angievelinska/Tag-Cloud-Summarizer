@@ -28,9 +28,10 @@ public class Query {
 
 
   public Query(SemanticSpace sspace){
+
     docBuilder = new DocumentVectorBuilder(sspace);
   /**
-   * TODO: parameterize with higher number of threads
+   * TODO: implement to run with more threads
    *
    */
     wordCompare = new WordComparator();
@@ -63,6 +64,7 @@ public class Query {
     }
 
     queryVector = docBuilder.buildVector(reader, queryVector);
+
     return queryVector;
   }
 

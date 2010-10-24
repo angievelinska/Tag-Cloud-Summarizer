@@ -6,13 +6,21 @@
   <version>1.0</version>
   <packaging>war</packaging>
   <name>TagCloudSummarizer</name>
-  
+
+
+  <repositories>
+    <repository>
+      <id>coremedia.external.releases</id>
+      <url>https://repository.coremedia.com/nexus/content/repositoreis/cms-releases</url>
+    </repository>
+  </repositories>
+    
   <!-- project dependencies -->
   <dependencies>
     <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>cap-unified-api</artifactId>
-      <version>5.2.752</version>
+      <version>5.2.452</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -62,6 +70,16 @@
      <artifactId>servlet-api-2.5</artifactId>
      <version>6.1.14</version>
      <scope>provided</scope>
+   </dependency>
+   <dependency>
+     <groupId>commons-logging</groupId>
+     <artifactId>commons-logging</artifactId>
+     <version>1.1</version>
+   </dependency>
+   <dependency>
+     <groupId>com.coremedia.commons</groupId>
+     <artifactId>xml</artifactId>
+     <version>1.0.3</version>
    </dependency>
 <!--    <dependency>
       <groupId>org.eclipse.jetty</groupId>

@@ -71,7 +71,7 @@ public class Indexer {
 
     protected Document indexDocument(File f) throws Exception{
         Document doc = new Document ();
-        doc.add(new Field("contents", new FileReader(f), Field.TermVector.YES));
+        doc.add(new Field("contents", new FileReader(f), Field.TermVector.WITH_POSITIONS));
         doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
         doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
         return doc;
