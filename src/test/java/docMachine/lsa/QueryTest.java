@@ -3,11 +3,15 @@ package docMachine.lsa;
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.util.MultiMap;
+import edu.ucla.sspace.vector.DoubleVector;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
@@ -26,18 +30,19 @@ public class QueryTest {
   @Before
   public void initializeTest(){
     try {
+      query = new Query();
       sspace = SemanticSpaceIO.load(new File("sspace/LSA.sspace"));
       start = System.currentTimeMillis();
     } catch (IOException e) {
       e.printStackTrace();
     }
 
-    query = new Query(sspace);
+    //query = new Query(sspace);
   }
 
   @Test
   public void testQuery(){
-    results = query.getCosineSimilarity(sspace, "content", 20);
+    results = query.getSimilarWords(sspace, "content", 20);
     Double key;
     String value;
 
@@ -49,7 +54,7 @@ public class QueryTest {
     }
   }
 
-/*  @Test
+  @Test
   public void testGetDocumentVector(){
     File fquery = new File("input/query.txt");
     try {
@@ -61,8 +66,7 @@ public class QueryTest {
       e.printStackTrace();
     }
 
-    DoubleVector testVector = query.getDocumentVector("input/query.txt");
-    System.out.println(testVector.toString());
+    DoubleVector testVector = query.getQueryAsVector("input/query.txt");
     Assert.assertNotNull(testVector.length());
 
     System.out.println("vector length: "+testVector.length());
@@ -78,7 +82,7 @@ public class QueryTest {
       String entry = (String) o;
       System.out.println(entry);
     }
-  }*/
+  }
 
   @After
   public void endTest(){

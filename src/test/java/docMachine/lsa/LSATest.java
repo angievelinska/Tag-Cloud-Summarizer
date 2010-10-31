@@ -1,6 +1,5 @@
 package docMachine.lsa;
 
-import edu.ucla.sspace.common.WordComparator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -39,11 +38,11 @@ public class LSATest {
     }
   }    */
 
-  @Test
+/*  @Test
   public void getSimilarWords(){
     WordComparator wordCmp = new WordComparator();
     
-  }
+  }*/
 
     @After
     public void tearDown() throws Exception {

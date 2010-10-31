@@ -187,8 +187,8 @@ public class LSA {
     try {
       outputMatrix.createNewFile();
       MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
-      //Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,10);
-      Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.SVDLIBJ, MatrixIO.Format.SVDLIBC_DENSE_TEXT,120);
+      Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,90);
+      //Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.JAMA, MatrixIO.Format.SVDLIBC_DENSE_TEXT,120);
       saveMatrices(matricesReduced);
     }
     catch (IOException e) {
@@ -200,11 +200,16 @@ public class LSA {
   protected void saveMatrices(Matrix[] matrix) {
     log.info("start saving three decomposed matrices");
     File dir  = new File("sspace");
-    File f1, f2, f3;
+    File f1 = new File(dir,"matrix_U.txt");
+    File f2 = new File(dir,"matrix_S.txt");
+    File f3 = new File(dir,"matrix_Vt.txt");
     try {
-      f1 = File.createTempFile("matrix_U",".txt", dir);
+      f1.createNewFile();
+      f2.createNewFile();
+      f3.createNewFile();
+/*      f1 = File.createTempFile("matrix_U",".txt", dir);
       f2 = File.createTempFile("matrix_S",".txt", dir);
-      f3 = File.createTempFile("matrix_V",".txt", dir);
+      f3 = File.createTempFile("matrix_V",".txt", dir);*/
 
       MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
       MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
@@ -241,8 +246,10 @@ public class LSA {
       props.put(IteratorFactory.TOKEN_FILTER_PROPERTY,"exclude=stopwords/english-stop-words-large.txt");
       //props.put(IteratorFactory.STEMMER_PROPERTY, "edu.ucla.sspace.text.EnglishStemmer");
       props.put("docFile","input/input.txt");
-      props.put("svdAlgorithm","SVDLIBJ");
-      props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"120");
+      props.put(LatentSemanticAnalysis.LSA_DIMENSIONS_PROPERTY,"90");
+      //props.put("svdAlgorithm","SVDLIBJ");
+      props.put(LatentSemanticAnalysis.LSA_SVD_ALGORITHM_PROPERTY, "SVDLIBJ");
+      props.put(LatentSemanticAnalysis.RETAIN_DOCUMENT_SPACE_PROPERTY, "true");
     // default format is binary
       props.put("outputFormat", SemanticSpaceIO.SSpaceFormat.TEXT);
       props.put("overwrite","true");
