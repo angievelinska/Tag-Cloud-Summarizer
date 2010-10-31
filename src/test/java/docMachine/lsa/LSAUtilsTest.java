@@ -1,41 +1,42 @@
 package docMachine.lsa;
 
-import org.junit.Before;
+import edu.ucla.sspace.matrix.Matrices;
+import edu.ucla.sspace.matrix.Matrix;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
- * User: avelinsk
- * Date: 25.10.2010
- * Time: 18:08:49
+ * Test results are compared to results from BlueBit Online Matrix Calculator
+ *
+ *
  */
 public class LSAUtilsTest {
-  public float[][]testMatrix =  {{2.3f, 0, 4.2f},
-                                 {0, 1.3f, 2.2f},
-                                 {3.8f, 0, 0.5f}};
-
-  public float[][] testM2 =  {{3,5,1},
-                              {2,4,5},
-                              {1,2,2}};
+  public double[][]testM1 =  {{4.648, 0.0, 0.0, 0.0},
+                              {0.0, 1.196, 0.0, 0.0},
+                              {0.0, 0.0, 0.966, 0.0},
+                              {0.0, 0.0, 0.0, 0.731}};
+  
+  public double[][] inverseM1 =  {{0.215,0.0,0.0,0.0},
+                                  {0.0,0.836,0.0,0.0},
+                                  {0.0,0.0,1.035,0.0},
+                                  {0.0,0.0,0.0,1.369}};
 
   @Test
   public void testGetMatrixInverse() {
-     float [][] result = LSAUtils.Inverse(testMatrix);
-     for (int i = 0; i < 3; i++){
-       for (int j = 0; j < 3; j++){
-         System.out.print(result[i][j]+" ");
-       }
-       System.out.println();
-     }
+    Matrix m = Matrices.create(4,4,true);
+    for (int i=0; i<4; i++){
+      m.set(i, i, testM1[i][i]);
+    }
 
-     System.out.println();
-    
-     float [][] result1 = LSAUtils.Inverse(testMatrix);
-     for (int i = 0; i < 3; i++){
-       for (int j = 0; j < 3; j++){
-         System.out.print(result1[i][j]+" ");
-       }
-       System.out.println();
-     }
+    Matrix m_inv = LSAUtils.getMatrixInverse(m);
+    for (int j = 0; j<4; j++){
+      for (int k = 0; k<4; k++){
+        System.out.print(m.get(j, k));
+        assertEquals(m_inv.get(j,k),inverseM1[j][k]);
+      }
+      System.out.println();
+    }
+
   }
 
 }

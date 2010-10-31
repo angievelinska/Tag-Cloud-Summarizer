@@ -20,7 +20,7 @@ import java.util.Random;
 public class TestCompareSvdResults {
 
   public static void testCompareSVDResults() {
-    int m = 12, n = 6;
+    int m = 7, n = 6;
 
     Random generator = new Random();
     Matrix mat = new ArrayMatrix(m, n);
@@ -33,12 +33,15 @@ public class TestCompareSvdResults {
 
     List<SVD.Algorithm> algorithms = new LinkedList<SVD.Algorithm>();
 
-    //algorithms.add(SVD.Algorithm.COLT);
+    algorithms.add(SVD.Algorithm.COLT);
     algorithms.add(SVD.Algorithm.JAMA);
     algorithms.add(SVD.Algorithm.SVDLIBJ);
 
-    File dir  = new File("sspace");
-    File f;
+    File dir  = new File("svd");
+
+    if(!dir.exists()){
+      dir.mkdir();
+    }
 
     for (SVD.Algorithm algorithm : algorithms) {
       System.out.println("Algorithm is: " + algorithm);
@@ -52,13 +55,16 @@ public class TestCompareSvdResults {
       System.out.println("V^t is:");
       System.out.println(vt.toString());
 
+      File f1 = new File(dir, algorithm+"_matrix_U.txt");
+      File f2 = new File(dir, algorithm+"_matrix_S.txt");
+      File f3 = new File(dir, algorithm+"_matrix_Vt.txt");
       try{
-        f = File.createTempFile(algorithm+"matrix_U",".txt", dir);
-        MatrixIO.writeMatrix(u, f, MatrixIO.Format.DENSE_TEXT);
-        f = File.createTempFile(algorithm+"matrix_S",".txt", dir);
-        MatrixIO.writeMatrix(s, f, MatrixIO.Format.DENSE_TEXT);
-        f = File.createTempFile(algorithm+"matrix_V",".txt", dir);
-        MatrixIO.writeMatrix(vt, f, MatrixIO.Format.DENSE_TEXT);
+        f1.createNewFile();
+        MatrixIO.writeMatrix(u, f1, MatrixIO.Format.DENSE_TEXT);
+        f2.createNewFile();
+        MatrixIO.writeMatrix(s, f2, MatrixIO.Format.DENSE_TEXT);
+        f3.createNewFile();
+        MatrixIO.writeMatrix(vt, f3, MatrixIO.Format.DENSE_TEXT);
       } catch (IOException e){
         e.printStackTrace();
       }

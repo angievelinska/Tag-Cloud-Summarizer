@@ -72,6 +72,14 @@ public class Query {
     return queryVector;
   }
 
+  /**
+   * TODO: question? should queries for documents query Sigma * V_t sspace
+   *
+   * @param query
+   * @param sspace
+   * @param noOfResults
+   * @return
+   */
    public double computeCosineSimilarity(DoubleVector query, SemanticSpace sspace, int noOfResults) {
      LatentSemanticAnalysis lsa_space = (LatentSemanticAnalysis) sspace;
      double cosineSimilarity = 0.0;
@@ -82,35 +90,6 @@ public class Query {
        
      }
 
-/*
-        double original_cosineVal = cosineSimilarity(m.getRow(getIndexOfPair(pair1, matrix_row_map)), m.getRow(getIndexOfPair(pair2, matrix_row_map)));
-        cosineVals += original_cosineVal;
-        totalVals++;
-        //System.err.println("orig cos: " + cosineVals);
-        ArrayList<String> alternates1 = original_to_alternates.get(pair1);
-        ArrayList<String> alternates2 = original_to_alternates.get(pair2);
-        for (String a : alternates1) {
-            for (String b : alternates2) {
-                int a_index = getIndexOfPair(a, matrix_row_map);
-                int b_index = getIndexOfPair(b, matrix_row_map);
-                if(a_index != -1 && b_index != -1) {
-                    double alternative_cosineVal = cosineSimilarity(m.getRow(a_index),m.getRow(b_index));
-                    //System.err.println("adding cos: " + alternative_cosineVal);
-                    if (alternative_cosineVal >= original_cosineVal) {
-                        cosineVals += alternative_cosineVal;
-                        totalVals++;
-                    }
-                }
-            }
-        }
-
-        if (totalVals > 0) {
-            return cosineVals/totalVals;
-        } else {                                                   
-            return 0.0;
-        }*/
-
-
      return cosineSimilarity;
     }    
 
@@ -118,54 +97,31 @@ public class Query {
   protected DoubleVector getQueryMappedToSSpace(DoubleVector query){
     List<DoubleVector> q = new ArrayList<DoubleVector>();
     q.add(query);
-    Matrix queryTransposed = Matrices.asMatrix(q);
-    queryTransposed = Matrices.transpose(queryTransposed);
-    Matrix queryByUMatrix = Matrices.multiply(queryTransposed,LSAUtils.getU());
-    Matrix queryMapped = Matrices.multiply(queryByUMatrix, getSInversed());
+    Matrix q_t = Matrices.asMatrix(q);
+    q_t = Matrices.transpose(q_t);
+    Matrix q_t_U = Matrices.multiply(q_t,LSAUtils.getU());
+    Matrix q_vector = Matrices.multiply(q_t_U, LSAUtils.getSInverse());
 
-    if (queryMapped.columns() > 1){
-
+    if (q_vector.columns() > 1){
+      return query;
     }
-    queryMapped.getColumnVector(0);
-    queryMapped.getRowVector(0);
+    q_vector.getColumnVector(0);
+    q_vector.getRowVector(0);
 
     return query;
   }
   
-  private Matrix getSInversed(){
-    Matrix SMatrix = LSAUtils.getS();
-    // TODO: return the inverse matrix
-    return Matrices.transpose(SMatrix);
-  }
-
   protected MultiMap getSimilarWords(SemanticSpace sspace, String word, int maxResult){
     MultiMap results = wordCompare.getMostSimilar(word,sspace,maxResult, Similarity.SimType.COSINE);
     return results;
   }
 
-  protected DoubleVector getDocument(String space, int idx ){
-    LatentSemanticAnalysis sspace = null;
-
-    try {
-      sspace= (LatentSemanticAnalysis) SemanticSpaceIO.load(space);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-
-    return sspace.getDocumentVector(idx);
+  protected DoubleVector getDocument(SemanticSpace sspace, int idx ){
+    return ((LatentSemanticAnalysis)sspace).getDocumentVector(idx);
   }
 
-  protected DoubleVector getWord(String space, String word){
-    SemanticSpace sspace = null;
-
-    try{
-      sspace = SemanticSpaceIO.load(space);
-    } catch (IOException e){
-      e.printStackTrace();
-    }
-
-    return (DoubleVector) sspace.getVector(word);
-
+  protected DoubleVector getWord(SemanticSpace space, String word){
+    return (DoubleVector) ((LatentSemanticAnalysis)sspace).getVector(word);
   }
 
 }
