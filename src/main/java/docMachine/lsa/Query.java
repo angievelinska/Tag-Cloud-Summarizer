@@ -49,20 +49,25 @@ public class Query {
     query = query;
   }
 
-  protected DoubleVector getQueryAsVector(String fquery){
+  /**
+   * TODO: ? query vector is already represented as a pseudo - document vector ?
+   * @param q_file
+   * @return
+   */
+  protected DoubleVector getQueryAsVector(String q_file){
+    File query = null;
     BufferedReader reader = null;
-    
     try{
-      File file_query = new File(fquery);
-      if(!file_query.exists()){
-        throw new FileNotFoundException("no query file found. exiting...");
+      query = new File(q_file);
+      if(!query.exists()){
+        throw new FileNotFoundException("No query file found. exiting...");
       }
     } catch (FileNotFoundException e){
       e.printStackTrace();
     }
 
     try {
-      reader = new BufferedReader(new FileReader(fquery));
+      reader = new BufferedReader(new FileReader(query));
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
@@ -73,7 +78,7 @@ public class Query {
   }
 
   /**
-   * TODO: question? should queries for documents query Sigma * V_t sspace
+   * TODO: ? should queries for documents query Sigma * V_t sspace
    *
    * @param query
    * @param sspace
@@ -97,10 +102,9 @@ public class Query {
   protected DoubleVector getQueryMappedToSSpace(DoubleVector query){
     List<DoubleVector> q = new ArrayList<DoubleVector>();
     q.add(query);
-    Matrix q_t = Matrices.asMatrix(q);
-    q_t = Matrices.transpose(q_t);
-    Matrix q_t_U = Matrices.multiply(q_t,LSAUtils.getU());
-    Matrix q_vector = Matrices.multiply(q_t_U, LSAUtils.getSInverse());
+    Matrix m_query = Matrices.asMatrix(q);
+    Matrix q_U = Matrices.multiply(m_query,LSAUtils.getU());
+    Matrix q_vector = Matrices.multiply(q_U, LSAUtils.getSInverse());
 
     if (q_vector.columns() > 1){
       return query;

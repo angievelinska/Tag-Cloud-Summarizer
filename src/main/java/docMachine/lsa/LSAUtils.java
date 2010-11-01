@@ -25,7 +25,6 @@ public class LSAUtils {
 
   private static Matrix S;
 
-  private static int iDF = 0;
   /**
    * singularity threshold
    * */
@@ -71,11 +70,16 @@ public class LSAUtils {
     return S;
   }
 
-
+  /**
+   * SVD can be used for calculating A(inverse)
+   * 
+   * A(inversed) = V * Sigma(inversed) * U(transposed)
+   *
+   * @return
+   */
   public static Matrix getAInverse(){
-    Matrix V_S_inv = Matrices.multiply(Matrices.transpose(getV_t()), getSInverse());
-    Matrix A_inv = Matrices.multiply(V_S_inv, Matrices.transpose(getU()));
-    return A_inv;
+    Matrix V_S_inv = Matrices.multiply(transpose(getV_t()), getSInverse());
+    return Matrices.multiply(V_S_inv, transpose(getU()));
   }
 
 
@@ -111,11 +115,9 @@ public class LSAUtils {
    }
 
 
-
-
 /*  **
    * Generates an identity matrix.
-   * It is used in calculating the inverse of a matrix.
+   * Used in calculating the inverse of a matrix.
    *  
    * @param dimensions
    * @return
@@ -126,5 +128,22 @@ public class LSAUtils {
       m.set(i, i, 1.0);
     }
     return m;
+  }
+
+  /**
+   * TODO: write a test for this method
+   * @param m
+   * @return
+   */
+  public static Matrix transpose(Matrix m){
+    int rows = m.rows();
+    int columns = m.columns();
+    Matrix n = Matrices.create(columns, rows, true);
+    for (int i = 0; i < rows; i++){
+      for (int j = 0; j < columns; j++){
+        n.set(i,j,m.get(j,i));
+      }
+    }
+    return n;
   }
 }
