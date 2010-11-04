@@ -16,8 +16,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * User: avelinsk
- * Date: 14.08.2010
+ * @author avelinsk
  */
 public class Indexer {
     private static final Log log = LogFactory.getLog(Indexer.class);

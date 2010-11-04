@@ -19,9 +19,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * User: ng
- * Date: 17.08.2010
- * Time: 23:33:17
+ * @author avelinsk
  */
 public class Searcher {
   private static final Log log = LogFactory.getLog(Searcher.class);

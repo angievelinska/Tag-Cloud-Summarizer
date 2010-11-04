@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User: avelinsk
- * Date: 02.10.2010
- * Time: 17:27:26
+ * @author avelinsk
  */
 public class Query {
   private static final Log log = LogFactory.getLog(Query.class);

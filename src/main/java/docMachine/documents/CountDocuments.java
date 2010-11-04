@@ -3,8 +3,7 @@ package docMachine.documents;
 import com.coremedia.cap.content.Content;
 
 /**
- * User: avelinsk
- * Date: 02.08.2010
+ * @author avelinsk
  *
  */
 public class CountDocuments extends AbstractDocuments {

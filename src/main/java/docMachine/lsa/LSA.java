@@ -28,8 +28,7 @@ import java.util.Properties;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * User: avelinsk
- * Date: 11.08.2010
+ * @author avelinsk
  *
  * Creates a Semantic Space using Latent Semantic Analysis
  *

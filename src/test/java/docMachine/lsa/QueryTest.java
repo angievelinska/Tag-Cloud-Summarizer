@@ -16,9 +16,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * User: avelinsk
- * Date: 08.10.2010
- * Time: 12:57:38
+ * @author avelinsk
  */
 public class QueryTest {
   SemanticSpace sspace;

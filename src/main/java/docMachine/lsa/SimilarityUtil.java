@@ -9,9 +9,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * User: avelinsk
- * Date: 12.10.2010
- * Time: 21:19:27
+ * @author avelinsk
  */
 public class SimilarityUtil {
   protected Set<DoubleVector> getSimilarVectors(SemanticSpace sspace, DoubleVector vector, int results){

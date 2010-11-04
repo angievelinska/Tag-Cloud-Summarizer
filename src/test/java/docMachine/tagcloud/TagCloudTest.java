@@ -6,17 +6,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
-import org.mcavallo.opencloud.formatters.HTMLFormatter;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
- * User: avelinsk
- * Date: 03.09.2010
+ * @author avelinsk
  */
 public class TagCloudTest {
   TagCloud tc;

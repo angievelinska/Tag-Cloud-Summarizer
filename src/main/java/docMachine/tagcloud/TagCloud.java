@@ -9,8 +9,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * User: avelinsk
- * Date: 01.09.2010
+ * @author avelinsk
  */
 public class TagCloud {
   private Cloud cloud;

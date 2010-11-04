@@ -13,8 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * User: avelinsk
- * Date: 28.04.2010
+ * @author avelinsk
  */
 public class ConnectDocMachine {
     private CapConnection connection;

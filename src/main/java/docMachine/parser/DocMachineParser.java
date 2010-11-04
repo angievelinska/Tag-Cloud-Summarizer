@@ -4,9 +4,7 @@ import java.io.*;
 import java.util.*;
 
 /**
-* User: avelinsk
-* Date: 18.09.2010
-* Time: 15:55:50
+* @author avelinsk
 */
 public class DocMachineParser {
 

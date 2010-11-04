@@ -13,9 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * User: avelinsk
- * Date: 15.10.2010
- * Time: 16:01:32
+ * @author avelinsk
  */
 public class TestCompareSvdResults {
 

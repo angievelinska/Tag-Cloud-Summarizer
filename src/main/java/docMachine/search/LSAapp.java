@@ -1,8 +1,5 @@
 package docMachine.search;
 
-import edu.ucla.sspace.matrix.Matrix;
-import edu.ucla.sspace.matrix.MatrixIO;
-import edu.ucla.sspace.matrix.SVD;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.DateTools;
 import org.apache.lucene.document.Document;
@@ -17,12 +14,10 @@ import org.apache.lucene.util.Version;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.Date;
 
 /**
- * User: avelinsk
- * Date: 04.10.2010
- * Time: 01:35:14
+ * @author avelinsk
  */
 
 public class LSAapp {

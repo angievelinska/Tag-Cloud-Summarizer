@@ -7,10 +7,7 @@ import org.junit.Test;
 import java.io.File;
 
 /**
- * Created by IntelliJ IDEA.
- * User: avelinsk
- * Date: 18.09.2010
- * Time: 21:51:36
+ * @author avelinsk
  */
 public class DocMachineParserTest {
     DocMachineParser docParser;

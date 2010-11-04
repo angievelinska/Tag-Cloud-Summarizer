@@ -10,8 +10,7 @@ import java.util.Set;
 
 /**
  *
- * User: avelinsk
- * Date: 10.09.2010
+ * @author avelinsk
  */
 public abstract class AbstractDocuments {
   private  final static Log log = LogFactory.getLog(AbstractDocuments.class);

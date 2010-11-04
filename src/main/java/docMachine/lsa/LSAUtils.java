@@ -11,9 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * User: avelinsk
- * Date: 25.10.2010
- * Time: 14:43:57
+ * @author avelinsk
  */
 public class LSAUtils {
 
