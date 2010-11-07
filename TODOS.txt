@@ -1,7 +1,7 @@
 Project Ideas
 --------------
 1. At the first login to DocMachine, a cloud with the most popular tags is displayed.
-2. I need to have a website as a frontend, where to enter any search strings, and display my results and Tag cloud.
+2. Have a website as a frontend, where to enter any search strings, and display my results and Tag cloud.
 
 
 Project TODOs
@@ -13,7 +13,7 @@ Project TODOs
 6. Skip creating the input files, parse text from DocMachine directly into a single file used for LSA.
 Next step will be to parse texts from DocMachine directly into LSA.
 7. Research what can be done for scalabiilty and performance - should txts be parsed in a file, or used from memory?
-Research how parallelism can be implemented if txts are parsed in-memory. Describe this in the report.
+Research how parallelism can be implemented if txts are parsed in-memory. Describe in report.
 8. Maven + webapp + tagcloud.jsp  ???
 
 Questions
@@ -22,9 +22,7 @@ Questions
 
 Report
 -------------
-1. implementation of LSA and Solr:
-http://www.ccri.com/blog/2010/4/2/latent-semantic-analysis-in-solr-using-clojure.html
-2. makecloud.com - generate tag cloud from search results
+1. makecloud.com - generate tag cloud from search results
 http://www.makecloud.com/
 
 EXAMPLES

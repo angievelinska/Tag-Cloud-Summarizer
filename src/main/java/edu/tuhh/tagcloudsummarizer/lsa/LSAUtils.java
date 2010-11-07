@@ -14,6 +14,10 @@ import java.io.IOException;
  * @author avelinsk
  */
 public class LSAUtils {
+  /**
+   * matrix Ak after SVD
+   */
+  private static Matrix A;
 
   private static Matrix U;
 
