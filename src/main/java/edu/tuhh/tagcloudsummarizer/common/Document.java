@@ -7,7 +7,8 @@ import java.util.List;
  */
 public interface Document {
 
+  public int getId();
+
   public void labelDocument(List<Tag> tags);
 
-  public double getTermFrequency(Tag word);
 }

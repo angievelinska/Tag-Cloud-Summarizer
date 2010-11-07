@@ -1,52 +1,32 @@
 package edu.tuhh.tagcloudsummarizer.common;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author avelinsk
  */
 public class DocumentImpl implements Document{
+  /**
+   *  The id is the column number
+   *  from term-document matrix constructed in LSA
+   */
   private int id;
-  private Set<Tag> words;
+
   private Document document;
-  private List<Tag> labels;
+
+  private List<Tag> label;
 
   public DocumentImpl(){
-   Document document = new DocumentImpl();
+   document = new DocumentImpl();
   }
 
-   public void labelDocument(List<Tag> labels){
-    labels = labels;
+  public int getId(){
+    return id;
   }
 
-  /**
-   * returns the term frequency of word in the document
-   * tf =
-   *
-   * log/entropy =
-   *
-   * @param word
-   * @return
-   */
-  public double getTermFrequency(Tag word){
-    double termFreq = (double)getWordOccurence(word.getTermFrequency())/getDocumentSize();
-    return termFreq;
+   public void labelDocument(List<Tag> tags){
+    label = tags;
   }
 
-  private int getDocumentSize(){
-    return words.size();
-  }
-
-  private int getWordOccurence(Tag word){
-    int occurence = 0;
-    for (Tag w : words){
-      if (w.getWord().equalsIgnoreCase(word.getWord())){
-        occurence++;
-      }
-    }
-
-    return occurence;
-  }
 }
 
