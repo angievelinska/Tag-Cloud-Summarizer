@@ -7,9 +7,15 @@ import edu.ucla.sspace.vector.Vector;
 import java.util.*;
 
 /**
- * Algorithm for terms identification based on frequency of occurrence -
+ * The algorithm identifies terms from each document in a document set,
+ * as document labels, based on term occurrence -
  * the terms that occur most frequently are nominated as document labels
- * for a set of documents returned from a search query.
+ * for the document set.
+ * 
+ * Algorithm is based on the following paper by Stein and Meyer zu Eissen:
+ * http://i-know.tugraz.at/wp-content/uploads/2008/11/40_topic-identification.pdf
+ *
+ * TODO: test it
  *
  * @author avelinsk
  */
@@ -17,8 +23,8 @@ public class TagsIdentification {
   List<Tuple> topOccurrences;
 
   /**
-   * @param tags - the set of terms in a query result
-   * @param l - how many terms make up the label for one document
+   * @param tags - the set of terms in a document set
+   * @param l - how many terms make up the label of a document
    * @param k - how often the same word may occur in the label of different documents
    */
   public void identifyTags(Set<Document> docs, Set<Tag> tags, int l, int k){
@@ -40,19 +46,21 @@ public class TagsIdentification {
     sortOccurences();
 
     for(int labelcount = 1; labelcount < l; labelcount ++){
-      // holds number of terms assigned as labels
+      
       int assigned = 0;
-      // holds number of tuples
       int j = 1;
 
       Iterator iter = topOccurrences.iterator();
       while((assigned < docs.size()) && (j <= topOccurrences.size()) && iter.hasNext()){
         Tuple tj = (Tuple) iter.next();
+        Document doc = tj.getDocument();
 
-        int docLabels = tj.getDocumentId();
+        if (doc.getLabelSize() < labelcount){
+          doc.addLabel(tj.getTag());
+          assigned++;
+        }
 
-        // check the labels for each document in docs
-        // if (labelsize < l) pop a tuple from topOccurrences and assign the Term as label to the document 
+        j++;
       }
     }
 

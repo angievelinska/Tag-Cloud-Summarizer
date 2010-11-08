@@ -4,8 +4,8 @@ import edu.tuhh.tagcloudsummarizer.common.Document;
 import edu.tuhh.tagcloudsummarizer.common.Tag;
 
 /**
- * Holds the association between a document, a term,
- * and the frequency of term occurrence in the document.
+ * Wrapper class that holds the association between a document, a term,
+ * and the term occurrence in the document.
  *
  * @author avelinsk
  */
@@ -24,8 +24,12 @@ public class Tuple implements Comparable<Tuple> {
     termfreq = tf;
   }
 
-  public int getDocumentId(){
-    return document.getId();
+  public Document getDocument(){
+    return document;
+  }
+
+  public Tag getTag(){
+    return tag;
   }
 
   public double getTermFrequency(){

@@ -12,8 +12,6 @@ public class DocumentImpl implements Document{
    */
   private int id;
 
-  //private Document document;
-
   private List<Tag> label;
 
   public DocumentImpl(int id){
@@ -29,9 +27,12 @@ public class DocumentImpl implements Document{
     return id;
   }
 
-   public void labelDocument(List<Tag> tags){
-    label = tags;
+   public void addLabel(Tag tag){
+    label.add(tag);
   }
 
+  public int getLabelSize(){
+    return label.size();
+  }
 }
 
