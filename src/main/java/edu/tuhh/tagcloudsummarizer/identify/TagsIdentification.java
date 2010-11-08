@@ -12,7 +12,8 @@ import java.util.*;
  * the terms that occur most frequently are nominated as document labels
  * for the document set.
  * 
- * Algorithm is based on the following paper by Stein and Meyer zu Eissen:
+ * Algorithm is based on the paper "Topic Identification: Framework and Application"
+ * by Stein and Meyer zu Eissen:
  * http://i-know.tugraz.at/wp-content/uploads/2008/11/40_topic-identification.pdf
  *
  * TODO: test it
