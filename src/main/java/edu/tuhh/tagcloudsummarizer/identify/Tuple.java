@@ -1,4 +1,4 @@
-package edu.tuhh.tagcloudsummarizer.indentify;
+package edu.tuhh.tagcloudsummarizer.identify;
 
 import edu.tuhh.tagcloudsummarizer.common.Document;
 import edu.tuhh.tagcloudsummarizer.common.Tag;
@@ -22,6 +22,10 @@ public class Tuple implements Comparable<Tuple> {
     document = d;
     tag = t;
     termfreq = tf;
+  }
+
+  public int getDocumentId(){
+    return document.getId();
   }
 
   public double getTermFrequency(){

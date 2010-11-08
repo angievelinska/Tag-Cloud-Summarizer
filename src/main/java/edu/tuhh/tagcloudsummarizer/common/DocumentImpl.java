@@ -12,12 +12,17 @@ public class DocumentImpl implements Document{
    */
   private int id;
 
-  private Document document;
+  //private Document document;
 
   private List<Tag> label;
 
-  public DocumentImpl(){
-   document = new DocumentImpl();
+  public DocumentImpl(int id){
+    super();
+    setId(id);
+  }
+
+  private void setId(int docId){
+    id = docId;
   }
 
   public int getId(){
