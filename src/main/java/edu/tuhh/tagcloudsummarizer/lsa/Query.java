@@ -34,10 +34,8 @@ public class Query {
     sspace = LSAUtils.getSSpace();
 
     docBuilder = new DocumentVectorBuilder(sspace);
-  /**
-   * TODO: implement to run with more threads
-   *
-   */
+
+    // TODO: implement to run with more threads
     wordCompare = new WordComparator();
 
     queryVector = new DenseVector(sspace.getVectorLength());
@@ -48,29 +46,12 @@ public class Query {
   }
 
   /**
-   * TODO: ? query vector is already represented as a pseudo - document vector ?
-   * @param q_file
+   * @param query
    * @return
    */
-  protected DoubleVector getQueryAsVector(String q_file){
-    File query = null;
-    BufferedReader reader = null;
-    try{
-      query = new File(q_file);
-      if(!query.exists()){
-        throw new FileNotFoundException("No query file found. exiting...");
-      }
-    } catch (FileNotFoundException e){
-      e.printStackTrace();
-    }
+  protected DoubleVector getQueryAsVector(String query){
 
-    try {
-      reader = new BufferedReader(new FileReader(query));
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
-
-    queryVector = docBuilder.buildVector(reader, queryVector);
+    queryVector = docBuilder.buildVector(new BufferedReader(new StringReader(query)), queryVector);
 
     return queryVector;
   }

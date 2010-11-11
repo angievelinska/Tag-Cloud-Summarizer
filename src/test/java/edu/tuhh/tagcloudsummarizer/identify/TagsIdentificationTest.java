@@ -1,7 +1,6 @@
 package edu.tuhh.tagcloudsummarizer.identify;
 
 import edu.tuhh.tagcloudsummarizer.common.Document;
-import edu.tuhh.tagcloudsummarizer.common.DocumentImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,12 +20,12 @@ public class TagsIdentificationTest {
     tid = new TagsIdentification();
 
     test = new HashMap<Double, Document>();
-    Document doc1 = new DocumentImpl(4);
+/*    Document doc1 = new DocumentImpl(4);
     Document doc2 = new DocumentImpl(5);
     Document doc3 = new DocumentImpl(1);
     test.put(new Double(1.98), doc1);
     test.put(new Double(1.95), doc2);
-    test.put(new Double(0.87), doc3);
+    test.put(new Double(0.87), doc3);   */
 
   }
 

@@ -1,6 +1,21 @@
+# exclude patterns (uncomment them if you want to use them):
 .idea/*
 .idea/**/*
 out/*
 target/*
 *.iml
 sample.*
+*.ipr
+*.iws
+.idea/
+# maven:
+target/
+overlays/
+# eclipse:
+.classpath
+.project
+.settings/
+# Logs:
+*.log
+*.err
+*.out

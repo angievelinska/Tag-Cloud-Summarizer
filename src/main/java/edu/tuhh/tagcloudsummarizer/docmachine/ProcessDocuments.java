@@ -23,7 +23,6 @@ public class ProcessDocuments extends AbstractDocuments{
   
   @Override
   protected void processText(Content article){
-     StringBuffer buf = new StringBuffer();
      String id = "";
      Markup markup = null;
 

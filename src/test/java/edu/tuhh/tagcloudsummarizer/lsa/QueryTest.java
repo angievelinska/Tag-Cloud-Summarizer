@@ -9,9 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
@@ -54,17 +52,8 @@ public class QueryTest {
 
   @Test
   public void testGetDocumentVector(){
-    File fquery = new File("input/query.txt");
-    try {
-      fquery.createNewFile();
-      BufferedWriter wr = new BufferedWriter(new FileWriter(fquery));
-      wr.write("test document vector");
-      wr.close();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
 
-    DoubleVector testVector = query.getQueryAsVector("input/query.txt");
+    DoubleVector testVector = query.getQueryAsVector("test document vector");
     Assert.assertNotNull(testVector.length());
 
     System.out.println("vector length: "+testVector.length());
@@ -88,8 +77,9 @@ public class QueryTest {
     query = null; 
     results = null;
     end = System.currentTimeMillis();
-    System.out.print("query took: "+(end-start));
+    System.out.print("query took: "+(end-start)+" ms.");
     
   }
+
 
 }

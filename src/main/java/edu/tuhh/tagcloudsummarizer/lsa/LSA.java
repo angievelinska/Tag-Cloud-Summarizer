@@ -2,7 +2,6 @@ package edu.tuhh.tagcloudsummarizer.lsa;
 
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
-import edu.ucla.sspace.common.Similarity;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
@@ -19,12 +18,7 @@ import org.apache.commons.logging.LogFactory;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Properties;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -66,9 +60,9 @@ public class LSA {
       } catch (InterruptedException ex){
         ex.printStackTrace();
       }
-      log.info("save sspace as 3 matrices");
-    // extract the matrices from LSA space and save them to files
-      saveMatrix(sspace);
+
+      // save the 3 matrices from LSA to files
+      saveMatrices(sspace);
 
       long end = System.currentTimeMillis();
       log.info("LSA used "+(end-start)+"ms to index the document collection.");
@@ -145,14 +139,13 @@ public class LSA {
   protected Iterator<Document> getDocumentIterator () throws IOException{
       Properties props = System.getProperties();
       String docFile =  props.getProperty("docFile");
-      Iterator<Document> lineIter = null;
-      lineIter = new OneLinePerDocumentIterator(docFile);
+      Iterator<Document> lineIter = new OneLinePerDocumentIterator(docFile);
 
       return lineIter;
   }
 
 
-  protected void saveMatrix(SemanticSpace sspace){
+  protected void saveMatrices(SemanticSpace sspace){
     log.info("save 3 matrices");
     int numWords = sspace.getWords().size();
     DoubleVector[] vectors = new DoubleVector[numWords];
@@ -206,16 +199,12 @@ public class LSA {
       f1.createNewFile();
       f2.createNewFile();
       f3.createNewFile();
-/*      f1 = File.createTempFile("matrix_U",".txt", dir);
-      f2 = File.createTempFile("matrix_S",".txt", dir);
-      f3 = File.createTempFile("matrix_V",".txt", dir);*/
 
       MatrixIO.writeMatrix(matrix[0], f1, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
       MatrixIO.writeMatrix(matrix[1], f2, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
       MatrixIO.writeMatrix(matrix[2], f3, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
 
-    }
-    catch (IOException e) {
+    } catch (IOException e) {
       e.printStackTrace();
     }
   }
@@ -232,10 +221,6 @@ public class LSA {
           String value = sysprops.getProperty(key);
           log.info(key+" = "+value);
       }
-  }
-
-  protected double getSimilarity(double[] vect1, double[] vect2){
-    return Similarity.getSimilarity(Similarity.SimType.COSINE, vect1, vect2);
   }
 
 

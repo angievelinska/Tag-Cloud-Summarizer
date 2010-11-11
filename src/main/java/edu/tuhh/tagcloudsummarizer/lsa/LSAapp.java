@@ -130,14 +130,6 @@ private static void indexDirectory(IndexWriter writer, File dir)
   }
 
 
-   //sample main function
-  public static void main(String[] args) {
-
-      String index= "idx";
-      String data= "output";
-      LSAapp lsa = new LSAapp(data,index,true);
-  }
-
 }
 
 

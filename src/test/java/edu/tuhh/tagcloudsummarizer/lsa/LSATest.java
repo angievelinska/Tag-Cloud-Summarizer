@@ -1,8 +1,11 @@
 package edu.tuhh.tagcloudsummarizer.lsa;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.File;
 
 /**
  * User: ng
@@ -21,10 +24,10 @@ public class LSATest {
     public void testLSA(){
       lsa.runLSA();
 
-/*      Assert.assertTrue((new File("sspace/LSA.sspace")).exists());
-      Assert.assertTrue((new File("sspace/matrix_S.dat")).exists());
-      Assert.assertTrue((new File("sspace/matrix_U.dat")).exists());
-      Assert.assertTrue((new File("sspace/matrix_V.dat")).exists());*/
+      Assert.assertTrue((new File("sspace/LSA.sspace")).exists());
+      Assert.assertTrue((new File("sspace/matrix_S.txt")).exists());
+      Assert.assertTrue((new File("sspace/matrix_U.txt")).exists());
+      Assert.assertTrue((new File("sspace/matrix_V.txt")).exists());
     }
 
 /*  @Test
@@ -37,12 +40,6 @@ public class LSATest {
       System.out.print(v.getValue(i));
     }
   }    */
-
-/*  @Test
-  public void getSimilarWords(){
-    WordComparator wordCmp = new WordComparator();
-    
-  }*/
 
     @After
     public void tearDown() throws Exception {
