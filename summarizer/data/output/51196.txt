@@ -1,0 +1,11 @@
+
+
+To put it in a nutshell, we need:
+
+
+a person in charge (ideally, the CoreMedia system administrator)
+extensive and sufficient system specifications
+detailed error description
+log files for the affected component(s)
+if required, system files
+

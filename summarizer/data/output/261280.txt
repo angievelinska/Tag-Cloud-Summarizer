@@ -1,0 +1,7 @@
+
+
+Log in with your CMS Editor credentials of username, password, and optional domain.
+
+After logging in you are automatically directed to the content approval view (see section ). You can navigate to other views by selecting the corresponding tab.
+
+The standard set of supplied tabs for views is shown in the screenshot given below.
