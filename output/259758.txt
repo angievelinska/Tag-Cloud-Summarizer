@@ -1,7 +1,0 @@
-
-
-The user management overview, shown in the screenshot below, contains a list of the users on the system. 
-
-The list is paged, meaning that not all users may be shown on one screen: to navigate to another page, use the page navigation provided at the bottom right of the overview page.
-
-Alternatively, a user can be actively searched for using the available full-text search. Enter your search term into the text field and click Search. Search results are then shown in the same way as the standard unfiltered overview.
