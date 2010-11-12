@@ -1,6 +1,7 @@
 package edu.tuhh.summarizer.lsa;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  * @author avelinsk

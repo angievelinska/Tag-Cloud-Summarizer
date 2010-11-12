@@ -12,6 +12,8 @@
   <artifactId>tagcloud</artifactId>
   <packaging>war</packaging>
 
+  <name>Tag Cloud</name>
+
   <dependencies>
     <dependency>
       <groupId>edu.tuhh</groupId>

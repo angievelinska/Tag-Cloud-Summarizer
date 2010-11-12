@@ -1,6 +1,5 @@
 package edu.tuhh.summarizer.tagcloud;
 
-import edu.tuhh.summarizer.tagcloud.TagCloud;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

@@ -12,22 +12,48 @@
   <artifactId>summarizer</artifactId>
   <packaging>jar</packaging>
 
+  <name>Summarizer</name>
+
   <dependencies>
+    <!-- lsa -->
+    <dependency>
+      <groupId>edu.ucla.sspace</groupId>
+      <artifactId>lsa</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <!-- search -->
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+
+    <!-- tagcloud -->
+    <dependency>
+      <groupId>org.mcavallo.opencloud</groupId>
+      <artifactId>opencloud</artifactId>
+      <version>0.2</version>
+    </dependency>
+    
     <!-- linear algebra -->
     <dependency>
       <groupId>jama</groupId>
       <artifactId>jama</artifactId>
       <version>1.0.2</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>cern.colt</groupId>
       <artifactId>colt</artifactId>
       <version>1.2.0</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-math</artifactId>
       <version>2.0</version>
+      <scope>provided</scope>
     </dependency>
 
     <!-- CoreMedia specific -->
@@ -35,32 +61,45 @@
       <groupId>com.coremedia.cms</groupId>
       <artifactId>cap-unified-api</artifactId>
       <version>5.2.452</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>cap-objectserver</artifactId>
       <version>5.2.752</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.coremedia.commons</groupId>
       <artifactId>dispatch</artifactId>
       <version>1.0.2</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.coremedia.commons</groupId>
       <artifactId>xml</artifactId>
       <version>1.0.3</version>
+      <scope>provided</scope>
     </dependency>
 
+     <!-- logging -->
+      <dependency>
+       <groupId>commons-logging</groupId>
+       <artifactId>commons-logging</artifactId>
+       <version>1.1</version>
+      </dependency>
+    
     <!-- testing -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.8.1</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
   <build>
+    <finalName>summarizer</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

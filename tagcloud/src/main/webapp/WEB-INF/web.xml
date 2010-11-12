@@ -7,7 +7,7 @@
 
   <servlet>
     <servlet-name>simple</servlet-name>
-    <servlet-class>edu.tuhh.summarizer.web.SimpleServlet</servlet-class>
+    <servlet-class>edu.tuhh.servlet.SimpleServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>

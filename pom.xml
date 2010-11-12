@@ -6,7 +6,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>TagCloudSummarizer</name>
+  <name>Tag Cloud Summarizer</name>
 
   <modules>
     <module>summarizer</module>
