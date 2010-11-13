@@ -9,6 +9,6 @@ The project implements Latent Semantic Analysis in order to retrieve key concept
 
 To compile the project, run
 
-  mvn install:install-file -DartifactId=name -DgroupId=group -Dversion=version -Dpackaging=jar -Dfile=lib\file
+  mvn install:install-file -DartifactId=name -DgroupId=group -Dversion=version -Dpackaging=jar -Dfile=lib\file.jar
 
 for each of the jars in lib folder.
