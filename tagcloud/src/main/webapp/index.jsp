@@ -24,13 +24,6 @@ Click on the "Clear" button to remove all tags in the cloud.
 
 <br />
 
-<%
-new TagCloudServlet();
-String command = "";
-
-command = TagCloudServlet.command;
-%>
-
 <table width="100%">
 <tr>
 <td>
