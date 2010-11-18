@@ -5,14 +5,22 @@
 <web-app>
   <display-name>Tag Cloud Summarizer</display-name>
 
-  <servlet>
+<!--  <servlet>
     <servlet-name>query</servlet-name>
     <servlet-class>edu.tuhh.servlet.QueryServlet</servlet-class>
+  </servlet>-->
+  <servlet>
+    <servlet-name>tagcloud</servlet-name>
+    <servlet-class>edu.tuhh.tagcloud.servlet.TagCloudServlet</servlet-class>
   </servlet>
 
-  <servlet-mapping>
+<!--  <servlet-mapping>
     <servlet-name>query</servlet-name>
     <url-pattern>/query</url-pattern>
+  </servlet-mapping>-->
+  <servlet-mapping>
+    <servlet-name>tagcloud</servlet-name>
+    <url-pattern>/tagcloud.do</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>

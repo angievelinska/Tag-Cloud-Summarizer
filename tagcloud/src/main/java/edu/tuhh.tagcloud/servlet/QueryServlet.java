@@ -1,4 +1,4 @@
-package edu.tuhh.servlet;
+package edu.tuhh.tagcloud.servlet;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
