@@ -22,13 +22,19 @@ public class TagCloudServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response)
           throws IOException, ServletException {
 
+    response.setContentType("text/html");
+
     String command = request.getParameter("command");
     String text = request.getParameter("text");
 
-    Cloud cloud = TagCloud.getTagCloud(command, text);
+    this.log("parameters command and text passed. command: "+command);
+    TagCloud tc = new TagCloud();
+    Cloud cloud = tc.getTagCloud(command, text);
+    this.log("Tags are : "+cloud.allTags().size());
 
     request.setAttribute("tagcloud", cloud);
-    RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+    request.setAttribute("text", text);
+    RequestDispatcher view = request.getRequestDispatcher("tagcloud.jsp");
     view.forward(request, response);
   }
 }

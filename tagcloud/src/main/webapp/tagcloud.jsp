@@ -27,10 +27,11 @@ Click on the "Clear" button to remove all tags in the cloud.
 <table width="100%">
 <tr>
 <td>
-<form name="startform" action="tagcloud.do" method="post">
-<%
-    String text ="";
-%>
+<form name="cloudform" action="tagcloud.do" method="POST">
+
+    <%
+        String text = (String)request.getAttribute("text");
+    %>
 <input type="hidden" name="command" value="">
 
 	<table width="100%">
@@ -41,10 +42,10 @@ Click on the "Clear" button to remove all tags in the cloud.
 	</tr>
 	<tr>
 	<td align="left" valign="top">
-	<input type="button" value="Clear Cloud" onclick="document.startform.command.value='CLEAR'; document.startform.submit();" />
+	<input type="button" value="Clear Cloud" onclick="document.cloudform.command.value='CLEAR'; document.cloudform.submit();" />
 	</td>
 	<td align="right" valign="top">
-	<input type="button" value="Search" onclick="document.startform.command.value='SEARCH'; document.startform.submit();" />
+	<input type="button" value="Search" onclick="document.cloudform.command.value='SEARCH'; document.cloudform.submit();" />
 	</td>
 	</tr>
 	</table>
@@ -54,7 +55,24 @@ Click on the "Clear" button to remove all tags in the cloud.
 
 <td width="100%">
 <div class="tagcloud" style="margin: auto; width: 80%;">
-    <p style="text-align: center">No tags to display.</p>
+<%
+Cloud tagcloud = (Cloud)request.getAttribute("tagcloud");
+    
+// Gets output tags
+List<Tag> tags = tagcloud.tags();
+
+if (tags.size() > 0) {
+	for (Tag tag : tags) {
+%>
+	<a class="tag_<%= tag.getWeightInt() %>" href="<%= tag.getLink() %>"><%= tag.getName() %></a>
+<%
+	}
+} else {
+%>
+	<p style="text-align: center">No tags to display.</p>
+<%
+}
+%>
 </div>
 </td>
 

@@ -5,19 +5,12 @@
 <web-app>
   <display-name>Tag Cloud Summarizer</display-name>
 
-<!--  <servlet>
-    <servlet-name>query</servlet-name>
-    <servlet-class>edu.tuhh.servlet.QueryServlet</servlet-class>
-  </servlet>-->
   <servlet>
     <servlet-name>tagcloud</servlet-name>
     <servlet-class>edu.tuhh.tagcloud.servlet.TagCloudServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
   </servlet>
 
-<!--  <servlet-mapping>
-    <servlet-name>query</servlet-name>
-    <url-pattern>/query</url-pattern>
-  </servlet-mapping>-->
   <servlet-mapping>
     <servlet-name>tagcloud</servlet-name>
     <url-pattern>/tagcloud.do</url-pattern>
@@ -26,4 +19,13 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-</web-app>
+
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/404.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.htm</location>
+  </error-page>
+</web-app>        

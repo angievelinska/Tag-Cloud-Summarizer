@@ -14,7 +14,7 @@ public class TagCloud {
     text = "";
   }
 
-  public static Cloud getTagCloud(String content, String command){
+  public Cloud getTagCloud(String content, String command){
     new TagCloud();
     // Sets the number of tag to display in the tagCloud
     cloud.setMaxTagsToDisplay(30);
