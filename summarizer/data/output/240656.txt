@@ -1,0 +1,18 @@
+
+
+The query skeleton comprises a bean type expression and one or more property value comparison expressions. 
+
+The bean type expression allows narrowing the result set to beans of either one exact bean type or beans of a bean type hierarchy (subtypes included).
+
+Property value comparison expressions can be based on bean properties or repository-implied properties. The latter are not bean properties, but provided by the respective bean repository. Typically, ID and name are repository-implied properties. The Configuration section will explain how to define repository-implied properties.
+
+Per default, all query (sub-)expressions, identified in the Bean Query Editor by names `#1¿ through `#n¿, are conjunctive terms (connected by `AND¿ operator). Change the skeleton field to introduce `OR¿ and `NOT¿ operators, optionally with parentheses.
+
+Please note that before the Bean Query Editor can be used, the bean type model, including bean types, bean properties and storage-implied properties must be setup and configured. See the Configuration section for this.
+
+
+
+
+
+
+

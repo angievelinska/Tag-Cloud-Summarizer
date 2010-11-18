@@ -1,0 +1,4 @@
+
+
+ Attribute Description name Use this attribute to enter the name of the filter. Using this name, the entry for the menu item View|Filters is looked up in the Bundle. remote Use this attribute to enter whether filtering occurs on the server ("true") or on the client. Filtering on the client must be executed with self-written filters. Default is "true". If you use filtering on client side, you have to set the attribute combineSortingAndFiltering of the <Explorer>-element to false. Remote filtering and sorting on the server is much faster than local operations which may slow down the server dramatically. So use local filtering with care.
+

@@ -1,0 +1,28 @@
+
+
+Line 1: Use the AbstractClientAction instead of the WfAction interface.
+
+Line 3 - 5: The constructor of your server stub. The constructor of the super class is called with the command as a parameter which should be executed on client side. This command is automatically included in the event send to the client.
+
+Line 7 - 12: This processes the arguments which will be included in the event. In line 10 the parameter docmentType is added to the HashMultiMap. This map already contains WfClientActionListener.GUI and WfClientActionListener.COMMAND as default entries.
+
+Line 14 - 19: This process the result that has been received from the client.
+
+Client Side
+
+The client-side must have a WfClientActionListener installed (see Example 5.4.4b) which handles the incoming action events. 
+
+
+
+The callback ID obtained by WfClientActionEvent.getCallbackId must be returned in the actions result so that the CoreMedia Workflow Server can associate request and callback.
+
+
+WfClientActionEvent.getParameters returns the call parameters as encoded by the server side stub. For the previous example, the parameters would contain the strings documentType and Article.
+
+
+The event's other methods are reserved for internal use.
+
+
+All predefined client actions use a property/value encoding for the action parameters. Everything is encoded as a java.lang.String.
+
+Note, that the CoreMedia Editor has a generic client listener, that tries to find and execute an appropriate hox.corem.editor.commands.Command. Have a look at the Editor Developer Manual for details.

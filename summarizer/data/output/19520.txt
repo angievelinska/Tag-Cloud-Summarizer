@@ -1,0 +1,3 @@
+
+
+This element is used to define, which information should be shown in the columns of the workflow list at the left side of the workflow window.

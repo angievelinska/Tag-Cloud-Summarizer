@@ -1,0 +1,3 @@
+
+
+The log consolidation phase reads data from the staging table and fills the dimension tables and the fact tables.

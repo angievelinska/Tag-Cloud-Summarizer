@@ -1,0 +1,10 @@
+
+
+This element of the XML file is used for sorting items:
+
+The document types shown when creating a new document in the CoreMedia Editor when used in <DocumentTypes>.
+The folders shown in the folder view when used in <TreeSorter>.
+The elements shown in a column of the document view, when used in <ColumnDefinition>.
+The workflow menu entries when used in <Processes>.
+The worklist when used in <ColumnDefinition> of <TableDefinition> of <Workflow>.
+

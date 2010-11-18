@@ -1,0 +1,4 @@
+
+
+Rights in a CoreMedia system are granted via group memberships. In order to obtain READ right on a resource,  the user cannot be granted this right directly but has to become a member of a group having this right.
+

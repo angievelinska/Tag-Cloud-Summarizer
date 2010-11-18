@@ -1,0 +1,3 @@
+
+
+Remember the mechanism how content ids are transformed to real instances. Each URL exactly represents one object and this leads to an essential question: How can the navigation and the title image be rendered when you call, for example, a Dish object. Should the dish template undertake this rendering? The answer is obviously "No'' because this would lead to duplicate code scattered over several templates. The correct solution is inheritance. Take a look at the following class diagram:

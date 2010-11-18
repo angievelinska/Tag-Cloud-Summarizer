@@ -1,0 +1,3 @@
+
+
+In Offline generator mode, ADS operates independently from external HTTP requests. Instead, it autonomously creates all pages transitively reachable from one or more configurable root pages. On changes to the repository, all affected pages are automatically rebuilt and published to a pluggable uploader. These pages can then be accessed as static files by a web server, can be passed to another server or another software system, or can be stored on offline media like a CD.

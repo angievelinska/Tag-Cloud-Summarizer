@@ -1,0 +1,5 @@
+
+
+Configure Batching
+
+The Search Engine Feeder sends document changes to the CoreMedia Search Engine in batches. You can configure the number of documents in a batch and when to send a batch. Batch sizes and sending rate influence the indexing speed.

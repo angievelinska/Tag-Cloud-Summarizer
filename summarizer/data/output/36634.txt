@@ -1,0 +1,3 @@
+
+
+Within this element of the editor configuration, the columns of the workflow list at the left side of the workflow window are configured. 

@@ -1,0 +1,3 @@
+
+
+The next table shows the definitions of the identifiers and literals of the query language.

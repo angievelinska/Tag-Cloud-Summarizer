@@ -1,0 +1,26 @@
+
+
+Content Blobs (except CMLinkable Blobs)
+
+   LinkScheme ContentBlobExtensionLinkScheme Controller ContentBlobExtensionController URL .../contentblob/contentId/contentName/propertyName.ext Example starterkit/servlet/contentblob/1716/big_logo/data.jpg
+for a CSS background image Description Similar to the default CAE ContentBlobLinkScheme and -ViewController but adds content name and an extension derived from the BLOB's MIME-type.
+
+
+
+CMLinkable Blobs
+
+   LinkScheme LinkableBlobExtensionLinkScheme Controller LinkableBlobExtensionController URL .../linkableblob/rootSegment/contentId/propertyName[linkableSegment[-propertyName]].ext Example /starterkit/servlet/linkableblob/core/1750/thumbnail/irchannel-thumbnail.jpg
+for a thumbnail image of CMArticle Description Adds the segment of the root navigation of this CMLinkable (or its content id if not set) to the URL. The controller validates that the CMLinkable of the requested blob is below the requested root navigation. If set, the segment property of the CMLinkable is used to create a nice file name (e.g. for download). If the CMLinkable has multiple BLOB properties, the property name is added to the file name, too. The extension is derived from the BLOB's MIME-type.
+
+CMAbstractCode
+
+   LinkScheme CodeLinkScheme Controller CodeController URL .../code/rootSegment/contentId/contentName.ext Example /starterkit/servlet/code/core/1766/style.css
+for CSS CMCSS document Description Adds the segment of the root navigation of this CMLinkable (or its content ID if not set) to the URL. The controller validates that the CMLinkable of the requested BLOB is below the requested root navigation. The content name is appended (additionally to the ID) for better readability, e.g. for CSS debugging. The extension is derived from the MIME-type of the concrete CMAbstractCode implementation.
+
+CMLinkable, CMSite and Page
+
+   LinkScheme SegmentLinkScheme Controller SegmentViewController URL .../segment/rootSegment/[channel1Segment/.../channelNSegment/][contentId/linkableSegment.ext] Example /starterkit/servlet/segment/core/press/pressreleases/1774/deloitte.html
+for a CMArticle in the CMNavigation pressreleases
+/starterkit/servlet/segment/core/investor_relations/
+for a CMNavigation below the root navigation core Description Formats URLs from the segments of the CMNavigations in the navigation path (or their content IDs if not set) up to the root navigation. If the requested CMLinkable is not itself a CMNavigation, its content ID and - if set - its segment are appended, too. The controller validates that the navigation path is valid for the requested CMLinkable. No extension is used for CMNavigation, otherwise the default extension is html. It is possible to configure different extensions based on the requested view using com.coremedia.starterkit.cae.web.ViewUriExtensions. See the Javadoc and the default configuration in custom/contentbeans-base.xml for details. The LinkScheme can format links for Page, CMLinkable, and CMSite beans. For the latter, the link is the same as for CMNavigation bean returned by CMSite#getRoot.
+

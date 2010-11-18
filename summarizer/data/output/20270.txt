@@ -1,0 +1,11 @@
+
+
+The importer is generic. Hence, before starting you have to discuss some questions with the respective developer:
+
+How are the import data provided?
+Which files in addition to the CoreMedia Installation are needed by the importer (e.g. XSLT stylesheets)?
+Which additional Java classes are required by the importer?
+
+Additional Java classes are stored easiest as JAR files in the lib directory of the CoreMedia Installation. If stored there, they are included in the classpath automatically by the cm-mechanism.
+
+In spite of the open JAXP interface (Java API for XML Processing), experience has shown that objects of different implementations do not harmonize. To avoid such conflicts we recommend the exclusive use of the JAXP-implementation as provided by CoreMedia.

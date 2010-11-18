@@ -1,0 +1,21 @@
+
+
+This is the example setup used for the error scenarios that follow:
+
+CoreMedia Content Server (with CoreMedia Editor and Active Delivery Server for preview)
+CoreMedia Master Live Server (Server)
+CoreMedia Slave Live Server 1 (Server)
+CoreMedia Slave Live Server 2 (Server)
+CoreMedia Active Delivery Server 1-1
+CoreMedia Active Delivery Server 1-2
+CoreMedia Active Delivery Server 2-1
+CoreMedia Active Delivery Server 2-2
+Database Instance of Content Server
+Database Instance of Master Live Server
+Database Instance of Live Server 1
+Database Instance of Live Server 2
+All CoreMedia components in this setup are monitored with their own Watchdog, running on the same machine as the components being monitored. Alternatively, the production system and the Master Live Server can be monitored with the High Availability Software of the operating system.
+
+You can install the production system with all its components on a single machine. As we deal with failures on the Live system, it is not affected and we only mention it for the sake of completeness. The Master Live Server and the Slave Live Servers 1 and 2 are each installed on their own machines. If one machine breaks down, only the installation on that machine is affected. Each of the two Slave Live Servers processes the requests of two ADS, which ideally should each be installed on their own machines. The ADS answers requests from a load balancing system, the latter is not covered here.
+
+The database instances ought to have their own separate installations, distribution over several computers is even more secure. Security against breakdown of the database must be guaranteed by mechanisms of the database system or operating system.

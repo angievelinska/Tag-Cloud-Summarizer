@@ -1,0 +1,10 @@
+
+
+Updating non-web applications
+
+To update the spring configuration files of non-web applications (such as the Proactive Engine and the CAE Feeder) according to the new modular configuration, apply the following tasks:
+
+Move the files from the framework directory to an config.jar file and place them below /framework/spring in this jar-file.
+Move the spring configuration files from properties/corem/<componentName> into the config/<componentName>/spring directory.
+Replace the example files with your custom configuration files.
+

@@ -1,0 +1,23 @@
+
+
+Typically you don¿t implement your own consolidators and query classes, but reuse and configure generic query classes and consolidators. Basically, three report types are distinguished:
+
+
+
+Time Series Reports show a timely-ordered data set with the x values being points in time. An example is the 'Unique Visitors' report. This type of report typically uses the predefined consolidator type TimeSeriesReport_GenericQueryResultConsolidator. The default Query type is PreAggregatedData_GenericTimeSeriesQuery. Configuration will be explained in detail in the following paragraphs.
+
+
+
+
+Category Reports show an (unordered) list of elements with x values being arbitrary objects, e.g. folders, categories, channels or sites. An example is the 'Repository Information' report, which displays information on a set of repository categories. This consolidator type CategoryReport_GenericQueryResultConsolidator" and the Query type PreConsolidatedData_GenericCategoryQuery have been defined for this type of reports.
+
+
+
+
+Ranking Category Reports show a ranked (ordered) list of elements with x values being arbitrary objects, e.g. pages, search terms. Example report: The 'Top Viewed Pages' report. The consolidator type RankingCategoryReport_GenericQueryResultConsolidator has been preconfigured for Ranking Category Reports. Two query types have been predefined: 
+
+The PreConsolidatedData_GenericCategoryQuery query type to fetch values and #
+The query type PreConsolidatedData_SingleValueQuery providing single values, e.g. total values used to compute percentages.
+
+
+

@@ -1,0 +1,3 @@
+
+
+It is possible to send search requests from custom clients directly to the CoreMedia Search Engine using the API of FAST.

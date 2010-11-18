@@ -1,0 +1,3 @@
+
+
+This will map every user to group public and also map role 'sport' to group 'sportNews' and role 'economy' to 'economyNews'.

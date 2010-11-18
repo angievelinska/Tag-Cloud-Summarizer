@@ -1,0 +1,4 @@
+
+
+ Property Value Default Description heapCacheSize int 20000000 the number of bytes to use by the main memory cache blobCacheSize int 32000000 the number of bytes to use by the disk cache blobCachePath string N/A the location of the disk cache in the file system; this property maps directly to the system property java.io.tmpdir maxCachedBlobSize int unlimited the maximum size of a blob that can be cached blobStreamingSizeThreshold int 131072 the threshold for blob sizes above which blobs are streamed instead of being completely downloaded first blobStreamingThreads int 2 the maximum number of threads that is used for streaming large blobs eventChunkSize int 1000 the maximum number of events that is fetched at once from the Content Server when attaching a listener with a historic time stamp
+

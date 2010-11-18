@@ -1,0 +1,3 @@
+
+4#
+Add an HttpContentServiceServlet to your web application (file web.xml):

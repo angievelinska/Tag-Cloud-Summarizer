@@ -1,0 +1,4 @@
+
+
+ ID string Interface Description coremedia://cap/publication/<int> Publication a publication that has been enqueued coremedia://cap/publicationtarget/<string> PublicationTarget a publication target coremedia://cap/session/<int> CapSessionInfo a session that has been opened on the Content Server coremedia://cap/service/<int> CapServiceInfo a service of the Content Server for which logins are possible
+

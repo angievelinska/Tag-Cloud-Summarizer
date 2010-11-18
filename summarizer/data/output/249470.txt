@@ -1,0 +1,13 @@
+
+
+Invariably, reports contain a temporal aspect. If they did not, they would be immutable and therefore uninteresting. Currently, reports are generated for two fundamentally different forms of timed data: event statistics and snapshot statistics.
+
+Examples of events are views of web pages, user session starts, or search engine queries. An example of a snapshot is the current state of the content repository.
+
+The basic model of events is that they happen at a fixed point of time. Events are then aggregated by filtering them according to certain criteria and either counting them or summing numerical properties associated with the events. The criteria always involve a condition that the event has occurred in a certain time interval. As a result we get numerical values that are associated with time intervals. The model for time intervals is documented in session.
+
+Snapshots are taken at a certain time. Usually it makes little sense to consolidate data from multiple snapshots. Instead, data points from a single snapshot are aggregated or counted. 
+
+Snapshots are associated with a logical time that denotes when the snapshot should have been taken. This value may be different from the time when the snapshot was actually generated, especially because a snapshot might take some time. For example, if the snapshots are supposed to be recorded every midnight, but the Report Aggregator is busy and cannot start this operation until 00:05 and does not end before 00:08, the logical time of the snapshot would still be 00:00. 
+
+This allows the easy retrieval of individual snapshots, which are always characterized using predictable values. A small delay is often unavoidable and it is generally the best solution to perform a snapshot as soon as possible after the requested time. However, if multiple snapshots were supposed to be taken until the Report Aggregator actually gets to recording even the first snapshot, only a single snapshot is actually recorded, namely the last. If we took multiple snapshots at the same time, all snapshots would look the same, which would not normally be of any help.

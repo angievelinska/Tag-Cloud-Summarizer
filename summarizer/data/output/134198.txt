@@ -1,0 +1,4 @@
+
+
+ Parameter Description -u <name> The name of the user -d <domain> The domain of the user (optional, only for LDAP-users) -p <password> The password of the user. This is optional. If you don't specify the password on the command line (e.g. because you don't want it to be stored in the shell history) the tool will prompt for it at runtime. -url <ior url> The IOR URL of the content server (optional)
+

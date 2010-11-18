@@ -1,0 +1,6 @@
+
+
+The first bean propertyConfigurer makes the CAE Feeder use the settings from the configured property files. The second bean starts the CAE Feeder when the Spring application context is created and stops it when the application context is closed. The last bean stops the Spring application context when the JVM stops. You can remove the last bean if your application closes the application context explicitly.
+
+Create a CAE Feeder with the following Java code and start it with the JVM working directory <InstallRoot>:
+

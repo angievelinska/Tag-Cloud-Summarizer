@@ -1,0 +1,5 @@
+
+
+To open a found document quickly, select it from the list and open with a double-click.
+
+The selected document can now be edited in a new Document window.

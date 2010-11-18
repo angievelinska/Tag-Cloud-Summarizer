@@ -1,0 +1,3 @@
+
+
+The Struct editor is a property editor provided by the Starter Kit, that allows easy editing of Struct fields. A Struct field resembles the RichText field but with specialized functionality. Technically speaking, it is an XML property of coremedia-struct-2008 grammar. The contextSettings property of a Channel document is an example. 

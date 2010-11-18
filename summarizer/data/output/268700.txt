@@ -1,0 +1,8 @@
+
+
+Correct spelling errors
+
+In order to correct misspelled words, you have to check-out the document and start the spellchecking. Proceed as follows:
+Left-click an underlined word. A combo box opens up and shows suggestions (if there are any).
+Click a suggestions or correct the word manually. Press the Enter-key to take the correction.
+If you do not want to correct the word, press the Esc-key.

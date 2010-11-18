@@ -1,0 +1,13 @@
+
+
+Note, that the CAE's view dispatching logic is used to find the template - just as if the exception were included with <cm:include target="${exception}" viewName="errorMessage"/>. In this example a template named PortletWindowException.errorMessage.jsp or one for a superclass of PortletWindowException would be called. Such a template can access the exception as ${self}
+
+If you omit the errorView attribute in the portal:portlet tag, the default view will be used instead. The CoreMedia Lightweight Portal includes a default view for Throwables which simply renders the exception with its stacktrace.
+
+The error codes for exceptions thrown by the portlet are documented in the API documentation. See also section 3.5.Operation and Monitoring. However, these error codes are not supposed to be used algorithmically. The codes may change at any point of time in future releases. They are solely intended for debugging and documentation purposes.
+
+If you want to render different exception types differently you should provide templates for the different exception classes. You could for example add a template PortletWindowSecurityException.jsp to handle security exceptions. PortletWindowSecurityException is a subclass of PortletWindowException. See the API documentation for details.
+
+Window Controls and Error View
+
+By default, the whole portlet tag is replaced with the error view. If some portlet window frame should still be rendered, you can set the bodyHandlesError attribute on the portlet tag. If bodyHandlesError is set to true, the body of the portlet tag will be rendered even when there is an exception. The portlet window model is available inside the tag, including the current portlet mode and window state. The portal:url tag can be used to render URLs that change the portlet mode or window state. Since there is no content to be rendered, the portal:content will invoke the error view of the exception instead.

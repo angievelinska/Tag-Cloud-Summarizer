@@ -1,0 +1,5 @@
+
+
+SkipUserTask
+
+Use this action to skip an activated user task.

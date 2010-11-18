@@ -1,0 +1,12 @@
+
+
+By default, search is performed on the full-text content of all indexed document properties. Extend the index profile of the CoreMedia Search Engine with fields for specific document properties if you want to search only in some document properties and do not want to find documents containing the search term in other properties. You can use the CoreMedia or FAST APIs to implement search functionality in specific index fields. See the CoreMedia Unified Developer Manual, Section "Search Service" of the chapter "The Content Repository" for details. Note, that the CoreMedia Editor and CoreMedia WebEditor do not support search in specific document properties.
+
+Add a field to the index profile of the CoreMedia Search Engine for each property to be searched for. See the FAST Configuration Guide for more information about the customization of the index profile.
+
+The name of the index field starts with cm followed by the name of the property in lower case. Note, that you can not use this feature with properties whose names only differ in case. The following example adds a field for a property Headline to the index profile:
+
+<field-list>
+  ...
+  <field name="cmheadline" type="string"/>
+</field-list>

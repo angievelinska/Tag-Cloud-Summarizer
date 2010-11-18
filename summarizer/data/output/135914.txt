@@ -1,0 +1,11 @@
+
+
+Element FastIndex
+
+There must be exactly one FastIndex element below the Feeder element.
+
+Parent element: Feeder
+
+Child elements: Batches, DocumentTypes, PropertyNames, PropertyTypes, Fields, IndexDocumentFilter
+
+Attributes:

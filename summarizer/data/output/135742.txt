@@ -1,0 +1,8 @@
+
+
+Administration Page
+
+Use a browser to access the administration page of the Search Engine Feeder under the URL http://localhost:44441/coremedia/feeder. Replace localhost and 44441 with the host and port of the CoreMedia Content Server of the Search Engine Feeder you want to administrate.
+
+The administration page requires HTTP authentication. The file feeder.xml configures the user and password to use in the element Administrator below the element Feeder.
+

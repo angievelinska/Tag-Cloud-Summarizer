@@ -1,0 +1,21 @@
+
+
+Passing Parameters as a URL
+
+While flexible, the creation of a map takes some lines of code, so that we provide a simple method that works in many cases. The additional parameters beside the Content Server URL are inlined as URL parameters in that URL. This permits the compact configuration via a single string.
+
+String url = "http://localhost:44441/coremedia/ior"+
+  "?user=admin&password=admin&useworkflow=false";
+CapConnection connection = Cap.connect(url);
+
+Here we have disabled the workflow component entirely by the means of useworkflow=false. This reduces the resource requirements when the workflow connection is not needed at all.
+
+Individual parameters are separated by ampersands (&), the entire set of parameters is separated from the IOR URL by a question mark (?). Possible parameters are:
+
+workflowurl, 
+user, 
+domain, 
+password, 
+useworkflow. 
+
+Note that the well-known parameters are removed from the URL before it is resolved over the network. In particular, the password is not transmitted in clear text.

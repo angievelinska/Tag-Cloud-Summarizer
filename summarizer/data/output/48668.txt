@@ -1,0 +1,13 @@
+
+
+This template first includes the necessary stylesheets: apart from the stylesheet necessary for displaying rich text, there is another one (wage.css) required for editing, e.g. for correctly displaying the WAGE toolbar.
+
+Then, the WAGE JavaScript packages that are necessary for using the WAGE FocusManager and the RichTextEditing features of WAGE are loaded.
+
+As we are using the FocusManager only within this template and therefore it hasn't been created before, we have to install a new one by calling wage_FocusManager.create().
+
+For RichText editing, commands (like bold or italic) have to be executed for the currently selected text. Allowing the user to choose these commands can be done by rendering a WAGE toolbar (see below).
+
+Then, we include the actual description property for editing.
+
+Finally, we render the usual wizard buttons.

@@ -1,0 +1,26 @@
+
+
+The folder hierarchy can determine the structure of a web site, documents contain the actual content. Therefore documents must be placed in the appropriate folders.
+
+
+To create a new document:
+
+
+
+Select the folder in which the new document should be created.
+
+
+
+There are the following possibilities of creating a document:
+
+
+
+
+Select File|Create document from the menu bar.
+
+
+
+Use the symbol on the toolbar for creating new documents (second from left in illustration)
+
+
+A dialog box prompts you to enter a name and document type for the new document:

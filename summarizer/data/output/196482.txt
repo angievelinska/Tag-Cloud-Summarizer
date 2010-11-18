@@ -1,0 +1,4 @@
+
+
+ Attribute Description ID_ Unique ID of the document. Attribute is never null. VERSION_ Version of the document. Attribute is never null. ISAPPROVED_ Marker if this version of the document is approved ("1") or not ("0"). ISPUBLISHED_ Marker if this version of the document is published ("1") or not ("0"). EDITORID_ User ID of the editor. APPROVERID_ User ID of the approver. PUBLISHERID_ User ID of the publisher. EDITIONDATE_ Date of the last change. APPROVALDATE_ Date of the approval. PUBLICATIONDATE_ Date of the publication
+

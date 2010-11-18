@@ -1,0 +1,21 @@
+
+
+If you want to create the content manually, you have to start the CoreMedia Content Server, the Active Delivery Server (ADS) and the CoreMedia Editor:
+1#
+Enter the bin directory of the CoreMedia installation and start the CoreMedia Content Server which manages the content with ./cm capserver start
+
+3* The start of the server will take some time. Please wait until the server is up (all services are enabled) before proceeding with the next steps.
+2#
+Enter the bin directory of the servlet container home directory (e.g. <InstallDirectory>/<tomcathome>). Start the CoreMedia ADS, which is needed to generate the websites using templates and content, by calling cm httpd start
+Start the CoreMedia Editor, which is needed to create the actual content, with ./cm editor. Log in as user admin with password admin.
+
+The status of the Server and Generator can be checked by using ./cm capserver status and ./cm httpd status respectively.
+
+If problems occur always look at the log files. They reside under var/logs in the appropriate directory. You can also read the troubleshooting section of this paper (Section 8.5).
+
+Since we did not start a workflow server, the editor log will include a number of harmless error messages documenting fruitless attempts to retrieve the task list etc.
+
+Now the editor with the menu bar at the top, an explorer like folder overview on the left and the document overview on the right opens. Only two directories exist: Home and System. A new directory for the contents of the MenuSite must be created.
+Click with the right mouse button on the top directory label with a single slash /. From the context menu select new|Folder. Name it MenuSite.
+Click right on the newly created folder and create three subfolders named Meat, Fish and Poultry. Your screen should look like this:
+

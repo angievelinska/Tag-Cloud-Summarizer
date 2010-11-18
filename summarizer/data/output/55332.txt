@@ -1,0 +1,13 @@
+
+
+<wage:jsObject>
+
+Defines a JavaScript objects from a given Java object. For example, "<wage:jsObject name="generator" jsObjectName="cap_generator" methods="getServerProtocol,getServerName,getServerPort" />" defines a JavaScript object "cap_generator" with methods as specified above, which will return the values from the according methods of the (Java) generator object.
+
+Attributes:
+
+name (required): name of the Java object for which a JavaScript object should be defined
+property (optional): if given, the JavaScript object is defined for the (bean) property specified with this attribute of the object set with the name attribute
+scope (optional): scope in which to look up the java object
+jsObjectName (required): name of the JavaScript object to be defined
+methods (required): names of the methods of the Java object for which JavaScript equivalents should be defined

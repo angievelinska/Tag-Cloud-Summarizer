@@ -1,0 +1,14 @@
+
+
+Since the workflow beans of a given definition are shared by all the definitions instances:
+
+
+
+No workflow bean must store any state in a local variable. State is always restricted to an instances context.
+
+
+No workflow bean must cache any objects requested from the server or client instances such as ObjectRepository, DirectoryService, CoreMedia Content Management Server Session etc. These objects may carry session specific information that is only valid to the current bean invocation.
+
+
+Every bean must be reentrant, i.e. is must be thread safe and never use nested synchronization.
+

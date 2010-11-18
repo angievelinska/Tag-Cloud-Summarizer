@@ -1,0 +1,9 @@
+
+
+Operations:
+
+
+move document doc from folder F2 to Folder F3
+
+
+Required rights:

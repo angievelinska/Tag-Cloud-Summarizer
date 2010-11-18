@@ -1,0 +1,5 @@
+
+
+Predicates for filtering documents
+
+The following filters are pre-defined and can be configured without stating the appropriate package. They can only be used for <Predicate> elements within the <Filter> element. For each predicate, you need to define an attribute name in the <Filter> element. Otherwise, no name for the filter will be shown in the View|Filter menu. You will find the names to use in the next table.

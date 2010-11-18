@@ -1,0 +1,28 @@
+
+
+ CoreMedia CMS 2008 Old versions CoreMedia Content Application Engine New component. CoreMedia Social Software Extension New component. CoreMedia Search Engine New component. CoreMedia Analytics Engine New component. CoreMedia Differencing Engine New component. CoreMedia Editing Services for JSF New part of the Content Application Engine. CoreMedia Web Editing Server 
+
+New component, partly covers old Preview Generator functionality too.
+
+CoreMedia Authoring Server 
+
+CoreMedia Web Editing Server
+
+WebDAV support 
+
+WebDAV
+
+CoreMedia File System View CoreMedia Active Delivery Server Generator CoreMedia CMS 2008 
+
+Replaces Content Application Platform, extended feature range and functionality. 
+
+CoreMedia Smart Content Infrastructure JMS Receiver CoreMedia Delivery Satellite CoreMedia Content Management Server 
+
+Production Server
+
+CoreMedia Content Server Master Live Server Live Master Server Replication Live Server 
+
+Live Slave Server
+
+Slave Live Server Content Server New naming. Covers the Content Management Server and the Live Servers. Live Server New naming. Covers the Master Live Server and the Replication Live Servers.
+

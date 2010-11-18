@@ -1,0 +1,3 @@
+
+
+Due to limitations in the Swing CSS class use only lower case letters for the names of style groups and style classes. 

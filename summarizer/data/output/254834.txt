@@ -1,0 +1,25 @@
+
+5#
+If you have made content changes and the PADS has finished, enter the notes into the copy of the PADS schema. Execute the following SQL statements:
+
+UPDATE CacheProperties SET content='<sequenceno>:<idtag>' 
+WHERE property='timestamp'
+
+e.g.
+
+UPDATE CacheProperties SET content='201:1426971868' 
+WHERE property='timestamp'
+
+This will force the PADS at the productive system to start at the very moment, at which the copy has been made.
+6#
+Execute the schema migration on the productive system.
+To migrate Slave  proceed as described in section.
+Connect the copied PADS-database to the migrated Content Servers of the productive system.
+Only the changes which appeared after the copy of the PADS database have to be processed. 
+
+Only the builders have changed
+
+If you only have changed the builders, proceed as follows:
+Install a parallel running PADS with the changed builders.
+If the PADS has finished with building objects, move the database contents of the PADS to the production system.
+

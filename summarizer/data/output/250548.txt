@@ -1,0 +1,14 @@
+
+
+With the help of the editor.xml file you can define the fields of a document type which should be displayed in the document window.
+
+You can configure the following settings:
+
+Which fields are displayed?
+Which fields can be edited?
+Which fields must be filled?
+How is the content of a field displayed?
+The initial values of the fields of a newly created document.
+How the content of a field is validated at check in.
+
+The configuration possibilities are shown using a document of type Dish. The following figure shows such a document without specially configured fields (a Dish document type could of course have completely different fields in your system, or not occur at all). The document has no fields of type blob and integer. However, the configuration of these fields can be carried out analogously to the configuration shown. The editors for these two field types can be found in Section 5.5.1.1.2.

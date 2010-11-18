@@ -1,0 +1,11 @@
+
+5#
+
+
+Edit the properties as necessary and click [Next] to complete the installation of the dashboard.
+
+
+The following properties can be configured:
+
+
+

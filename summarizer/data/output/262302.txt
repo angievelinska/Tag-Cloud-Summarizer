@@ -1,0 +1,8 @@
+
+
+Interactive Report Drill-Down
+
+This report allows you to set the following parameters:
+
+The number of entries parameter determines the number of top entries to display. 
+The time interval parameter allows a user to select the time interval. See section for a description of this parameter and for screenshots.

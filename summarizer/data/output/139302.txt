@@ -1,0 +1,3 @@
+
+
+A double-click on the selected document in the document overview (highlighted blue) opens the document in a separate window for editing:

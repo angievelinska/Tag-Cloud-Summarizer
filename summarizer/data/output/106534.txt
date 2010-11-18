@@ -1,0 +1,17 @@
+
+
+Change Set in Direct Publications
+
+When performing a direct publication, the change set is primarily based on the set of currently selected resources or on the single currently viewed resource. As the set of resources does not give enough information for all possible types of changes, three rules apply:
+
+You cannot publish movements and content changes separately. Whenever applicable, both kinds of changes are included in the change set.
+When a document is marked for deletion or for withdrawal, new versions of that document are not published.
+If the specific version to be published is not explicitly selected, the last approved resource version is included in the change set.
+
+There are also some automated extension rules for the change set, which modify the set of to-be-published resources itself. These rules can be configured in detail. Ask your Administrator about the current settings.
+
+When new or modified content is published and links to an as yet unpublished resource, the unpublished resource is included in the change set. Depending on the configuration, also recursively linked documents can be included in the change set.
+When the deletion of a folder is published, all directly and indirectly contained resources are included in the change set.
+When the withdrawal of a folder is published, all directly and indirectly contained published resources are included in the change set.
+When the creation, movement, or renaming of a resource in an unpublished parent folder is published, that folder is included in the change set.
+

@@ -1,0 +1,3 @@
+
+
+The Starter Kit solution for internationalized content has been explained in section. This section gives details that are important from a developer's point of view.

@@ -1,0 +1,4 @@
+
+
+ WfAPI name UAPI name CHECK TaskGuardsCheckedEvent ACCEPT TaskAcceptedEvent RUN TaskEnteredEvent VALIDATE TaskCompletedEvent FINISH TaskExitedEvent RESET TaskDeactivatedEvent TIMEOUT TaskTimerExpiredEvent COMPLETE TaskControlTransferredEvent
+

@@ -1,0 +1,3 @@
+
+
+Using this element of the XML file, details of the localization of the CoreMedia Editor are given. If the element is not used, the environment settings are used. As a default, this element is used in the editor-startup.xml file.

@@ -1,0 +1,5 @@
+
+
+If you need more control, you can set up a CAE Feeder without Proactive Engine and use the public API to feed the CoreMedia Search Engine. Such a setup does not require a database. It is based on the CAE Feeder template but requires some manual configuration.
+
+For wiring a Feeder without Proactive Engine, add the following Spring configuration file, e.g. as file config/caefeeder/spring/caefeeder-standalone.xml:

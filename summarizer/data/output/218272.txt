@@ -1,0 +1,7 @@
+
+
+If you want to install a Workflow Server proceed as follows:
+Select the CoreMedia Workflow Server option and press [Next].
+
+You will be asked, if you want to install the Analytics Data Aggregator. You need this component for every installation of an Analytics Engine.
+

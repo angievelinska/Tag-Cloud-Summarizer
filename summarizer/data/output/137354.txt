@@ -1,0 +1,22 @@
+
+
+A publication is initiated by the publish(...) methods. You can also request a publication preview by means of the preview(...) methods. A preview does not actually copy information to the Master Live Server, but makes all checks to determine whether a publication would be successful. Possible arguments to the publish and preview calls are a single content, a collection of contents, or a PublicationSet.
+
+When contents are given as argument, the actual publication set is determined heuristically. To this end, the publication service selects versions to be published with the content, if that is appropriate given the current marks and approvals. You can also create a publication set by providing collections of contents and versions explicitly, taking care that no versions are included whose content is marked for withdrawal or deletion.
+
+After a publication has completed successfully, a PublicationResult is returned. The publication result informs about all contents that were involved in the publication and about the actions that were performed. If the publication is unsuccessful, a PublicationFailedException is thrown, which wraps a publication result that details the cause of the error.
+
+As an example, let us look at an excerpt from the class PublicationServiceExample that is available as a source code example:
+
+PublicationService publisher = repository.getPublicationService();
+publisher.approvePlace(folder);
+publisher.publish(folder);
+publisher.toBeDeleted(folder);
+publisher.approvePlace(folder);
+publisher.publish(folder);
+
+A folder that has been created before is approved, published, marked for deletion, approved again, and deleted by publishing. This example summarizes the entire lifecycle of content publication in a few lines. Obviously, real applications will not use all of these methods in one place.
+
+The publication service also provides a means to inspect the current state of the publication queue. You can get a list of all pending publications and access a summary of each publication's characteristics. A PublicationServiceListener informs about changes to the publication queue.
+
+If you have enabled Multi-Site Management for your CoreMedia CMS, there may be more than one publication target. Each publication target represents one Master Live Server and includes any number of base folders. You can retrieve all PublicationTarget objects from the publication service. The Administration and Operation Manual provides more information on how to set up publication targets.

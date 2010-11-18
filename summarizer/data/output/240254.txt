@@ -1,0 +1,60 @@
+
+
+  Rich text element Attributes Description In-line text <span xml:lang="fr" dir="rtl"> You can use the Direction and Language fields of the style sheet attribute editor (Inline text tab) to enter the text for the dir and xml:lang attributes of the surrounding span element. Block text 
+
+xml:lang
+
+dir 
+
+You can use the Direction and Language fields of the style sheet attribute editor (Paragraph tab)to enter the text for the dir  and xml:lang attributes of the block element.
+
+Example:
+
+<p xml:lang="en" dir="rtl">My text</p>
+
+ Links 
+
+xml:lang
+
+xlink:href
+
+xlink:show
+
+xlink:role
+
+xlink:title
+
+xlink:actuate 
+
+You can use the Title field of the link attribute editor Format|External Link or Format|Internal Link to add text to the xlink:title attribute.
+
+Example:
+
+<a xml:lang="en-US" xlink:href="http://www.heise.de"
+  xlink:show="new" xlink:role="new role"
+  xlink:title="My title" xlink:actuate="onRequest">
+	link 
+</a> Images 
+
+xlink:type
+
+xlink:actuate
+
+xlink:show
+
+xlink:href
+
+alt 
+
+You can enter text for the alt attribute of the img element using the Text field of the image attribute editor. Mark the image and select Format|Insert Image.
+
+Example:
+
+<img xlink:type="simple"  xlink:actuate="onLoad"
+  xlink:show="embed" alt="New image"
+  xlink:href="coremedia:///cap/resources/98030/Image" /> Tables 
+
+summary
+
+xml:lang You can use the Summary and Language fields of the Table attribute editor to add text to the summary attribute of the table element and to the xml:lang attribute of the table, tr and td elements. Blockquotes <blockquote cite="Faust" xml:lang="en"> This element surrounds a block element with a blockquote element. You can use the style sheet attribute editor (Blockquote tab) to enter the text for the cite attribute and the language and direction. 
+

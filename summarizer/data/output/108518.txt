@@ -1,0 +1,11 @@
+
+
+Operations:
+
+
+mark document doc for deletion
+
+unmark document doc for deletion
+
+
+Required rights:

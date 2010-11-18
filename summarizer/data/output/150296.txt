@@ -1,0 +1,3 @@
+
+
+The second method sets a rating and the RatingManager must recognize if an existing rating needs an update or a new one has to be created. The next sequence diagram illustrates the details:

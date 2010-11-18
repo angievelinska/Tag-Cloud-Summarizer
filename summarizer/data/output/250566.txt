@@ -1,0 +1,31 @@
+
+
+ Step Description 1 Create the command.  
+
+public class InsertElementCommand extends TagActionCommand {
+public static String COMMAND_NAME = "insert-element";
+public InsertElementCommand() { 
+super(COMMAND_NAME);
+}
+} 2 Register the command (see section for details): 3 Create the action you want to perform. The name of the action must match the name of the command above. The following code shows an example action which inserts an image into the RichTextPane.  
+
+public class InsertElementAction extends AbstractLinkAction {  
+public InsertElementAction() {
+    super(InsertElementCommand.COMMAND_NAME);
+  }
+
+  public void actionPerformed(ActionEvent event) {
+    JEditorPane editor = getEditor(event);
+    StyledEditorKit kit = getStyledEditorKit(editor);
+    XHTMLDocument document = getXHTMLDocument(editor);
+    document.removeSelection(editor);
+    String uri = getReferenceToInternalDocument(12) + "/" + "blobDataPropertyName";
+    document.insertImage(kit, editor, uri);
+  }
+} 4 Subclass hox.corem.editor.toolkit.property.RichTextPane (e.g. as MyRichTextPane) and override the createDefaultEditorKit() method to return your own RichTextEditorKit. 5 Define your Action in the EditorKit class and override getActions to add your custom action to the action array.  
+
+private final Action insertElementAction = new InsertElementAction();
+public Action[] getActions() {
+  return TextAction.augmentList(super.getActions(), insertElementAction);
+} 6 Configure your MyRichTextPane in the editor.xml file as described in section. 
+

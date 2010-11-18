@@ -1,0 +1,5 @@
+
+
+Configure the URL of the CoreMedia Content Management Server in the file capclient.properties. Set the property cap.client.server.ior.url to the value http://<server>:<port>/coremedia/ior. 
+
+Replace <server> with the name of the host where the server runs and <port> with its port. The port must match the value of cap.server.http.port in the capserver.properties file of the Content Management Server.

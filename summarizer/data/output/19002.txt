@@ -1,0 +1,12 @@
+
+
+The start of the Active Delivery Server depends on the installed servlet container. See the respective documentation of the servlet container.
+
+For Tomcat a compatibility httpd.jpif file will be delivered. Thus the Active Delivery Server in the Tomcat servlet container can be started via:
+
+cm httpd start
+
+alternatively to startup.sh start. In a Windows environment you can optionally launch the CoreMedia Active Delivery Server from the corresponding menu item.  
+
+Like all CoreMedia services, the Active Delivery Server is controlled with cm <servicename> (start|run|restart|stop|status). 
+

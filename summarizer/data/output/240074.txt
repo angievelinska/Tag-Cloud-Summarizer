@@ -1,0 +1,46 @@
+
+
+The CoreMedia Active Delivery Server provides JMX access for management and monitoring via jmxmp.
+
+Enabling JMX-support
+
+In order to enable JMX-support you have to remove the comment tags from the following lines in the web.xml file in the <TomcatHome>/webapps/coremedia/WEB-INF directory.
+
+<init-param>
+  <param-name>AgentServiceFactory</param-name>
+    <param-value>com.coremedia.management.generator.jmx.
+    JmxGeneratorAgentServiceFactory</param-value>
+</init-param>
+<init-param>
+  <param-name>AgentFile</param-name>
+  <param-value>/WEB-INF/properties/management/jmx
+   /capgenerator-jmx-agent.xml</param-value>
+</init-param>
+<init-param>
+  <param-name>MBeanFactory</param-name>
+  <param-value>com.coremedia.management.generator.jmx.
+  JmxGeneratorMBeanFactory</param-value>
+</init-param>
+
+You can configure the default port and domain of the JMX-server in the capgenerator-jmx-agent.xml file in <TomcatHome>/webapps/coremedia/WEB-INF/properties/management/jmx:
+
+<Agent url="service:jmx:jmxmp://localhost:7011" 
+domain="com.coremedia.Generator">
+
+Starting JConsole
+
+JConsole needs the jmxremote_optional.jar file for operation. These files are installed with the CoreMedia Active Delivery Server in the <TomcatHome>/webapps/coremedia/WEB-INF/lib directory.
+Start JConsole as follows, where <JDK5InstallDir> is the installation directory of your Java 5 SDK:
+
+<JDK5InstallDir>/bin/jconsole -J-classpath 
+-J<JDK5InstallDir>/lib/jconsole.jar;
+<PathToJar>\jmxremote_optional.jar
+
+
+Select Connection|New Connection. A new windows opens up.
+Select the Advanced tab.
+Enter the URL of the connection server in the field JMX URL.
+Click [Connect]. A new console window opens.
+
+Now, you can start working.
+

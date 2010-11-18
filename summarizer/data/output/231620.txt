@@ -1,0 +1,4 @@
+
+
+ Symbol Nr. Function (1) Cuts text and moves it into the clipboard. (2) Copies text into the clipboard. (3) Pastes text at the current position. (4) Starts a newly created workflow. (5) Continues a suspended workflow. (6) Suspends a running workflow. Tasks can not be completed. (7) Aborts a workflow definitely. (8) Accepts the selected task for processing. (9) Refuses the selected task. (10) Skips the selected task and continues with the next task of the workflow. (11) Completes the work at the current task. (12) Delegates the task to another user. A dialog box opens up, where you can select a user. The selected user accepts the task automatically.  (13) Cancels an already accepted task. The task can be accepted again by other users. All changes you have made will be stored. (14) Saves the changes applied to workflow variables or documents.  (15) Shows information concerning the current task and workflow..
+

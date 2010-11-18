@@ -1,0 +1,7 @@
+
+
+TimerHandler
+
+Grammar: EMPTY
+
+The TimerHandler element is used to assign a timer handler to a timer. The handler must be defined in the same location, i.e. the process or task definition, where it's associated timer variable is defined. See chapter 4.4.2 for a list of predefined timer handlers.

@@ -1,0 +1,7 @@
+
+
+<Comparator>
+
+Child elements: %varies;
+
+Parent elements: <ColumnDefinition>, <Processes> ...

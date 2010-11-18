@@ -1,0 +1,15 @@
+
+
+Different content domains deal with different data. While a news portal consists basically of short texts, pictures and navigation structures, mobile services deal with multimedia objects like ring tones, animations and games, each for a variety of devices. Different content has different properties. E.g. an article consists of a headline, the actual text and possibly references to related subjects, whereas a multimedia object needs binary data and maybe a description.
+
+The first step in designing a CoreMedia CMS application is to define a content model which represents the particular domain. This content model is the base of the whole application. It concerns content management, delivery and persistence, and thus it affects nearly all components:
+
+the basic appearance of the editor,
+the XML format supported by the importer,
+the interface for JSP programming,
+the query facilities,
+and last but not least relationships among content objects themselves.
+
+Convenience and simplicity of further customizing as well as the efficiency of the application crucially depends on a deliberate content model. Design weaknesses may lead to vast and error prone extra effort. 
+
+See the Administration and Operation Manual for a comprehensive discussion of content modeling.

@@ -1,0 +1,12 @@
+
+
+The CoreMedia Lightweight Portal logs error situations to help administrators to analyze problems. It depends on the configuration of your web application and servlet container where log output appears. For the Starter Kit the relevant log files are: 
+
+management/jakarta-tomcat/logs/starterkit.log 
+management/jakarta-tomat/var/logs/httpd.out.
+
+Error Codes
+
+The CoreMedia Lightweight Portal uses error codes when logging exceptions. These error codes are documented in the CoreMedia API documentation and are intended for debugging purposes. However, these error codes may change at any point of time in future releases. They are solely intended for debugging and documentation purposes.
+
+Error Codes are defined in com.coremedia.cae.portletcontainer.LightweightPortalErrorCodes.

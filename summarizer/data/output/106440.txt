@@ -1,0 +1,3 @@
+
+
+The following example shows how to extend the standard configuration with two changed rules. <H1> elements will be transformed into a paragraph (<P> element) with font-size 20 and <H2> elements will be ignored. 

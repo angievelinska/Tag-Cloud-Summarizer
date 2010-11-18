@@ -1,0 +1,10 @@
+
+
+When a new document is published on the Master Live Server, the replication process receives a change event and starts to read the document data from the Master Live Server. In rare cases, situations with potentially inconsistent data can arise:
+
+In the time period between the change event and the document data transmission the relevant document is destroyed.
+3* To resolve this inconsistency the replication process waits until the destruction event for the corresponding document has arrived.
+The document does exist but in the time period between the change event and the document data transmission the relevant version was destroyed.
+3* Since there are only two document versions on a Live Server, this can only happen during a short period during publication or if a replicator which has not been running for a long period catches up. To fix this inconsistency, the replication process waits for the publication event of the new version and the deletion of the old version. 
+
+The replication process only resolves inconsistencies when the Slave Live Server is in "online" mode, since temporary inconsistencies must be avoided here.

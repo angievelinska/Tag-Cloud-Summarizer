@@ -1,0 +1,31 @@
+
+
+Enable cut, copy and paste for Firefox
+
+If you use the WebEditor with Firefox 2.0 or 3.0 and Windows XP or Vista you have to enable Cut, Copy and Paste. Modify the browser preferences as follows:
+Quit Firefox. If you have Quick Launch running (in Windows, an icon in the toolbar) quit it too.
+Find the Firefox profile directory (see http://www.firefox-browser.de/wiki/Profilordner for details). On Windows XP, it is often located in:
+
+c:\Documents and Settings\<Windows login>\Application  
+Data\Mozilla\Firefox\Profiles\<ProfileName>.
+
+On Windows Vista see,
+
+C:\Users\<Windows login>\AppData\Roaming\Mozilla\Firefox\
+Profiles\<ProfileName>
+3#
+Open the user.js file from that directory in a text editor. If no user.js file exists, create one.
+Add these lines to user.js and replace <ServerName> and <Port> with the settings of the WebEditor:
+
+user_pref("capability.policy.policynames", 
+"allowclipboard");
+user_pref("capability.policy.allowclipboard.sites", 
+"http://<ServerName>:<Port>");
+user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", 
+"allAccess");
+user_pref("capability.policy.allowclipboard.Clipboard.paste", 
+"allAccess");
+5#
+Save the file and restart Firefox.
+
+Now, Cut, Copy and Paste should work.

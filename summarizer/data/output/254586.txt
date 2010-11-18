@@ -1,0 +1,11 @@
+
+9#
+Click the [OK] button to start the installation which may take some minutes.
+
+An dialog box informs you that the installation has started. If the installation has finished another window opens up.
+10#
+Click [Finish] to finish the installation.
+
+If an error occurred during installation you might have a look in chapter for some troubleshooting.
+
+After installation you should consider installing available hotfixes for FAST. The directory hotfix in the CoreMedia Search Engine archive file contains available hotfixes and installation instructions. The directory might not exist if there are no hotfixes.

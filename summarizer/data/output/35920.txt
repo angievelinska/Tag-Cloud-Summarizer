@@ -1,0 +1,5 @@
+
+
+DeleteResource
+
+Use this action to mark a resource for deletion.

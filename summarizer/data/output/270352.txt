@@ -1,0 +1,25 @@
+
+
+The CoreMedia Editor can be configured with the settings in the XML-files (see above). Their default location is the directory <InstallDirectory>/properties/corem. Customize the editor, by adjusting the following elements:
+
+Enter an username and a password for the login. See element <Editor>.
+Select the language and country settings which should be used, preferably located in editor-startup.xml. See element <Locale>.
+Circumvent the standard login window with your own authentication factory. See element <AuthenticationFactory>.
+Determine which Web Extensions such as a preview or differencing should be used. See element <WebContext>. 
+Determine which browser should be used. See element <WebBrowser>.
+Select and configure the appearance of the fields in the document overview of the main window, of the query window and of the selection window for internal links. See element <Explorer>.
+Determine the filters used on the documents in the document overview of the main window. See element <Filter>.
+Determine the filters and sorting algorithms affecting the folders in the folder overview. See elements <TreeSorter>, <TreeFilter>.
+Set a factory for client side properties. See element <PropertyModelFactory>.
+Define multiple views for the document overview of the main window, which can be selected with the menu item View|Display. See element <Explorer>.
+Determine which fields of a document type should be shown in the document window. See element <Documents>.
+Determine which document types should be shown in File|New. See element <DocumentTypes>.
+Define initializer and validators for the fields of newly created documents. See element <DocumentTypes>.
+Set certain conditions for these fields (editable, obligatory field ... ). See element <Property>.
+Allocate certain editors to the fields and in this way, for example, define a selection field with certain preset values. See element <Property>.
+Enable or disable the spellchecker. See element <SpellChecker>.
+Configure the class for language determination of a property used by the spellchecker. See element <PropertyLanguageResolverFactory>.
+Configure the appearance of the workflow. See elements <Workflow>, <Processes>.
+Enable or disable the remote control of the editor. See element <RemoteControl>.
+
+A formal description of the syntax of this XML file can be found in the corresponding DTD in <InstallationDir>/lib/xml/coremedia-editor.dtd. The XML-files must obey the DTD, but are not validated against the DTD. An example editor.xml file follows:

@@ -1,0 +1,3 @@
+
+
+In section ConceptWeb-SiteStructureAndNavigation, you find a general introduction of how you model the Web-site structure with the Starter Kit. This section provides developer-related details on this topic.

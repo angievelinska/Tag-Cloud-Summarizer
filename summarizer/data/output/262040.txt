@@ -1,0 +1,5 @@
+
+
+Example
+
+This example, builds on the example from section.  It transfers the property attachment for the CMMedia document type into the servlet-container context. In the figure below,  you see the well known pattern of base classes and their interfaces. Corresponding to the DocTypeAspect there is the interface CMMediaAspect on the Plug-In-side declaring the access method to the attached StringProperty "copyright". On the Plug-In-host-side there is the CMMedia interface declaring only the getters to the properties its document type was designed for. 

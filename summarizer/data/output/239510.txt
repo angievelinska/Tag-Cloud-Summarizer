@@ -1,0 +1,10 @@
+
+
+ Property Description publisher.target.<n>.user The user which is used by the publisher to log in to the Master Live Server. publisher.target.<n>.domain The domain of the user which is used by the publisher to log in to the Master Live Server. publisher.target.<n>.password The password of the user which is used by the publisher to log on the Master Live Server. Make sure, that you change the password of the existing user publisher on the Master Live Server or that you newly create  this user on the Master Live Server. publisher.target.<n>.ior.url The URL where the publisher can obtain the IOR of the Master Live Server. publisher.target.<n>.name The permanent and unique name of the publication target. This name is used for target identification in the APIs and in JMX. Changing this name may lead to unexpected failures in clients that are not properly stopped, changed, and restarted. publisher.target.<n>.display.name The display name is shown to users when no localized information about a publication target is available. Display names, too, should be unique, but they may well change to better illustrate the current uses of a publication target. publisher.target.<n>.folders 
+
+The property folders typically references exactly one top-level folder, either by name or by its numerical id. If more than one site is generated from a single Live Server, multiple top-level folders may be given, separated by commas. For example, the following configuration line would be correct: 
+
+publisher.target.2.folders=internet,download,5173
+
+It specifies three folders that are mapped to a single target, one of which is the folder with ID 5173. Listing folders numerically can be helpful when a folder must be renamed, but should not leave its publication target. Once you have assigned a folder to a publication target, it must not be reassigned to another target. Doing so would result in inconsistencies between Content Mangement Server and Master Live Server.
+

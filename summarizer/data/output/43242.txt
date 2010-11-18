@@ -1,0 +1,8 @@
+
+
+One of the major advantages of XML is its extensibility. This means that you're able to supply your own formal grammar for a given document. This grammar is called a Document Type Definition (DTD). When producing XML with CoreMedia a DTD should be the first thing to agree upon within your team. With this DTD automatic validation of the generated XML becomes possible. There are two ways to do this: 
+
+Create a DTD with your XML content and use another JSP to read in and validate this content.  
+After construction of XML via the techniques described above gather the information in a java.lang.String, prepend the DTD declaration and run the string through a validating XML Parser (See the first example). 
+
+In both cases you can use the hox.log.SaxLog to report errors directly into the configured log facilities. The SaxLog implements the org.xml.sax.ErrorHandler Interface which will allow you to attach it to the parser. Errors will stand out in the logs prominently if you configure the correct log level (Use ERROR or CRITICAL). 

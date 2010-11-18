@@ -1,0 +1,4 @@
+
+
+ name type required description contentService ContentService yes A ContentService instance where all requests are delegated to. errorPagesPath String yes Path to a directory which holds the error pages.
+

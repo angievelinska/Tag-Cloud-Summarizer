@@ -1,0 +1,51 @@
+
+
+A plug-in is intended to add some self-containing functionality, which can be combined at will with other plug-ins in a CAE web application. This chapter describes a convention which should be used to structure the files of a CAE web application plug-in. The aim of the convention is twofold:
+
+Copy the parts of a plug-in into a CAE web application without conflicts with other plug-ins. 
+Keep different activated plug-ins in a CAE web application apart.
+
+The most important convention is, that all the plug-in's files have a distinct identifier in their name or path in the sense of a name space. This leads to the following structure of a plug-in:
+
+/
++- WEB-INF/
+   +- spring/
+       +- <plugin-name>/
+           +- *.xml
+           +- *.properties
+   +- dataview/
+       +- <plugin-name>.xml
+   +- templates/
+       +- <plugin-package>/
+           +- *.jsp
+   +- lib/
+       +- <plugin-name>.jar
+       +- <plugin-name>-config.jar
++- <pluginname>/
+   +- *.html
+   +- *.gif
+   +- ¿
+
+Spring Configuration
+
+Each plug-in might contain an arbitrary number of Spring configuration files (bean and property configuration). Name these files <pluginname>-<name>.xml or <pluginname>.properties and locate them in a directory with the name of the plug-in, WEB-INF/spring/myplugin/myplugin-beans.xml for example. If the plug-in contains framework configurations, locate them in a directory /framework/spring/<pluginname>/ in the configuration jar-file.
+
+Dataview configuration
+
+Locate a data view configuration of your plug-in below the directory /WEB-INF/dataview named <pluginname>.xml. If the plug-in contains a framework configuration, locate it in a file /framework/dataview/<pluginname>.xml in the configuration jar-file.
+
+JSP-templates and beans
+
+As stated above, the jsp-templates of the CAE are named according to the bean's class, namely <PackageName>/<ClassName>.jsp or <PackageName>/<ClassName>.<view>.jsp. Name the bean classes in a way that shows the name of the plug-in clearly, com.mycompany.cae.plugin.myplugin.MyBean for example. As a consequence, the templates need to be named in the same way.
+
+JAR-files
+
+Program code of a plug-in should be located in a jar-file, named like the plug-in, lib/myplugin.jar for example. If the plug-in contains some framework configurations, they should be located in a <PluginName>-config.jar file, lib/myplugin-config.jar for example.
+
+Web resources
+
+Additional web resources - such as html-files or image-files - should be located in a special directory, myplugin/ for example.
+
+web.xml
+
+A plug-in might define additional servlets, filters or the like to the ones defined in the web.xml of the CAE web application. In this case, you can create a file WEB-INF/web.xml.<PlugInName> that contains the differences to the main web.xml file. This file has to be merged manually with the main web.xml file.

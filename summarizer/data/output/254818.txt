@@ -1,0 +1,3 @@
+
+
+CoreMedia SCI includes the new ProActive Delivery Server (see Section) which offers enhanced pre-generate functionality. If you do not need to stuck to the old pre-generator because of compatibility reasons, it is recommended to use this new component.

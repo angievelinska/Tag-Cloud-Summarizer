@@ -1,0 +1,3 @@
+
+
+The cm.exe installed with SCI 4.1 automatically supports native Windows Services for starting and stopping CoreMedia. See chapter for more detailed information.

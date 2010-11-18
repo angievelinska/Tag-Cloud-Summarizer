@@ -1,0 +1,5 @@
+
+
+<Predicate>
+
+See the description in "Configuring document types" in this chapter. In contrast to this description, the sub element <DocumentType> can not be used here. 

@@ -1,0 +1,12 @@
+
+
+Section of a template which displays sorted articles of a folder
+
+
+The example uses a variant of getChildDocuments, which only delivers documents with the given document type. In this case, an array of all documents of the type "Article" in the given folder is delivered. This array is sorted according to the date of editing. For identical editing date, the priority given to the article decides. If this is equal too, the time of editing is taken into account. The order of the various criteria is governed by the created CompoundComparator. With the help of the NegatingComparator, the correct order within the criteria is ensured: higher values for the pre-defined property editionDate_ correspond to a later article which should appear further up in the list. For priority, it is exactly the opposite: Priority 1 is the most important. Further details for using ComparatorFactory can be found in javadoc.
+
+
+The sorted documents can then be output or inserted into the output of the template.
+
+
+With the help of the API, it is also possible, for example, to create a navigation bar which corresponds to the folder hierarchy in the repository. Since extensive acessing and sorting is necessary here, the use of caching is recommended. See Section 4.5 for more information on this topic.

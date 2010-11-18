@@ -1,0 +1,9 @@
+
+
+Operations:
+
+
+publish document doc
+
+
+Required rights:

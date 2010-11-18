@@ -1,0 +1,3 @@
+
+
+Why do we return the JLabel first and enter the text ("Hello") later? This is because customizeComponent will be called later, short before the rendering. It is good practice to execute "expensive" operations at this place. 

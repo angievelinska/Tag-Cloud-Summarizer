@@ -1,0 +1,5 @@
+
+
+Definition of the table column for the content of a structured text field
+3* The column should have the name "Content". The minimum width should be 250 pixels and should scale if the width of the window is increased. For a document of type "Dish", the content of the description field should be displayed; Enter the following lines in editor.xml:
+

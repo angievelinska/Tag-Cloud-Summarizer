@@ -1,0 +1,7 @@
+
+
+With the new CoreMedia WebEditor, or your own Web application based on WAGE, clients use a Web browser (HTTP) to communicate with the CoreMedia Authoring Server. Changes to CoreMedia resources are collected by the Authoring Server and only written to the Content Server when a set of changes is committed by the client.
+
+Nevertheless the client is always able to preview the result of his changes. If the result is not satisfying, the editor may also revert some or all of the changes made so far, or continue editing. And everything without actually having to write to the Content Server.
+
+The Authoring Server also needs only a single session to the Content Server and the Workflow Server, which is then used to establish lightweight sessions for the actual clients. These lightweight session require much less server resources than a normal session, therefore reducing load and further improving the scalability of the CoreMedia Smart Content Infrastructure.

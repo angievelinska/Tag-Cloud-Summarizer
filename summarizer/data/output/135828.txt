@@ -1,0 +1,26 @@
+
+
+The DocumentTypes element contains a list of IncludeDocumentType and ExcludeDocumentType subelements to include and exclude types. The order of these elements is important: the first element whose name attribute matches a document type decides whether the document should be indexed or not. You can use abstract document types and regular expressions in the name attribute. An element matches all types if no name attribute is given.
+
+The following example excludes documents of type Preferences from indexing. The IncludeDocumentType element specifies that other documents should be indexed.
+
+<FastIndex ...>
+ ...
+ <DocumentTypes>
+   <ExcludeDocumentType name="Preferences"/>
+   <IncludeDocumentType/>
+ </DocumentTypes>
+ ...
+ </FastIndex>
+
+The following second example configures only those documents for indexing which are of the abstract type AbstractText except documents of type TeaserText.
+
+<FastIndex ...>
+ ...
+ <DocumentTypes>
+   <ExcludeDocumentType name="TeaserText"/>
+   <IncludeDocumentType name="AbstractText"/>
+   <ExcludeDocumentType/>
+ </DocumentTypes>
+ ...
+ </FastIndex>

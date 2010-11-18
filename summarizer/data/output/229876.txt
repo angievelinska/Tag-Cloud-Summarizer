@@ -1,0 +1,44 @@
+
+
+The variables are defined in the map-property variables of the state model. See the following configuration example:
+
+<property name="stateModel">
+  <bean id="TopViewedPages.StateModel" 
+  class="com.coremedia.analytics.definition.report.
+    statemodel.DefaultStateModel">
+
+  ...
+
+  <property name="variables">
+  <map>
+  <entry><key><value>range</value></key>
+    <bean class="com.coremedia.analytics.definition.report.
+      statemodel.vartypes.PreConsolidatedDataTimeRangeVariable"/>
+  </entry>
+  <entry><key><value>entries</value></key>
+    <bean class="com.coremedia.analytics.definition.report.
+      statemodel.vartypes.EntryRangeVariable"/>
+  </entry>
+  <entry><key><value>site</value></key>
+    <bean class="com.coremedia.analytics.definition.report.
+      statemodel.vartypes.SiteSelectionVariable">
+      <property name="sqlStatement" value="select ID,
+        SITEID as NAME from SITEDIMENSION"/>
+      <property name="defaultSiteName" 
+        value="Core.com"/>
+    </bean>
+  </entry>
+  </map>
+  </property>
+
+  ...
+
+  </bean>
+</property>
+
+The Analytics Dashboard framework provides a generic value set variable type which can be used to create custom variable types.
+
+The generic value set variable types can be used to define a set of unrelated, disjunct, values. Values can be both static values known at configuration time or dynamic values read from the Analytics Database or a mix of both. Each value is defined as a tuple of a symbolic name and a technical identifier. The symbolic name is legible, non-localized value identifier at the user level, while the technical identifier is used within database queries.
+
+In order to define a value set variable, create a Spring bean definition with the following attributes / properties:
+

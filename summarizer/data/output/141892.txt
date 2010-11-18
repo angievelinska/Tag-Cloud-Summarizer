@@ -1,0 +1,3 @@
+
+
+The workflow window of the WebEditor will not automatically be updated. If you want to see the most current tasks and workflows, you have to click the  icon.

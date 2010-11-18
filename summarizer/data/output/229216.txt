@@ -1,0 +1,11 @@
+
+
+Report Drill-Down
+
+Per default, only existing content items are counted, regardless of whether they have been published yet. Using the content item state filter, which is the leftmost report parameter, following content item states can be selected:
+
+Existing - existing content items will be counted, deleted content items will be excluded.
+Published - only existing, published content items will be included in the report.
+Unpublished - only existing, currently non-published content items will be counted.
+Deleted - no existing, but only deleted content items will be included in the report.
+

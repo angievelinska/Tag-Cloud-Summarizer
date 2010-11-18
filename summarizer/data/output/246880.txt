@@ -1,0 +1,3 @@
+
+
+Do not run a CoreMedia CMS System with different Java versions. All components have to use the same Java version.

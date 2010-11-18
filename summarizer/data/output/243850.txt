@@ -1,0 +1,7 @@
+
+
+PreCondition
+
+Grammar: (Expression) 
+
+A PreCondition asserts a condition that must hold when the task has been accepted but before an entry action (user task) or action (automated task) has run. It is described by an expression. See Condition for details. 

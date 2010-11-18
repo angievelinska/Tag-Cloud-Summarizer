@@ -1,0 +1,7 @@
+
+
+In addition to the creation of a key for HTTPS communication some entries must be made in certain configuration files. <ServletContainerHome> stands here for the home directory of the servlet container.
+
+Entry in <TomcatHome>/conf/server.xml
+
+In the file <ServletContainerHome>/conf/server.xml you must insert the following section after the already existing <Connector> elements:

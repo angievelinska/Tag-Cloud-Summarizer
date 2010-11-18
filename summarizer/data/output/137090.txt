@@ -1,0 +1,16 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description value CDATA 
+
+#IMPLIED 
+
+the blob value in bytes mimeType CDATA #REQUIRED the blob's MimeType
+

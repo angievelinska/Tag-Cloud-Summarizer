@@ -1,0 +1,9 @@
+
+
+The view renderAll is implemented differently for various document types. Here, however, the implementation in the subtype is intended to supplement the implementation in the supertype. The code example shows how to write the super command described in Section 4.4.1.1. This command adopts the display from the view of the supertype. The implementation in the subtype can supplement this display with further outputs before and after.
+
+In the example, further table rows are inserted after the output of the super template, displaying the new properties of the particular type. The properties are in turn referenced via PropertyUris, so that the default template of the particular property type is used to display the property.
+
+Furthermore, the special type, Document, which can be used as the "virtual" supertype of all user-defined document types, should be emphasized. Views implemented for Document are available for all documents (just not for folders). This is of particular advantage when the pre-defined properties of documents should be accessed, as in the example (see Section 4.2.3.8). Analogously, the "virtual" types Resource and Folder can be used for even more general properties such as document name and ID.
+
+The extensive reuse of template code can be seen - it needs not to be repeated for the common properties of the document types. Furthermore, the division of labor between templates ensures error-free code which is easier to maintain, since each template only accesses precisely the properties of it's document type. Therefore, if the document type model is changed, it is easy to see which templates have to be adjusted.

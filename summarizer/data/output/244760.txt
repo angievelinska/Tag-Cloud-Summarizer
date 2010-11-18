@@ -1,0 +1,53 @@
+
+
+Sample Script: Creating Database and User
+
+#!/bin/bash
+database=cm
+dbadmin=db2inst1
+db2 attach to db2inst1
+db2 create database $database using codeset UTF-8 
+territory US
+
+db2 update database configuration for $database 
+using applheapsz 16384
+
+db2 update database configuration for $database 
+using stmtheap 60000
+
+db2 update database configuration for $database 
+using app_ctl_heap_sz 8192
+
+db2 update database configuration for $database 
+using logfilsiz 131072
+
+db2 update database configuration for $database 
+using maxlocks 100
+
+db2 update database configuration for $database 
+using locklist 65536
+
+db2set DB2_RR_TO_RS=yes
+
+db2 connect to $database user db2inst1 using solaris
+db2 create bufferpool bp_$database ALL DBPARTITIONNUMS 
+SIZE 50000 NUMBLOCKPAGES 0 PAGESIZE 32768
+db2 create tablespace ts_$database pagesize 32768 managed by 
+system using \(\'$HOME/tablespaces/ts_$database\'\) 
+extentsize 32 prefetchsize 64 bufferpool bp_$database
+
+db2 create system temporary tablespace tts_$database 
+pagesize 32768 managed by system using 
+\(\'$HOME/tablespaces/tts_$database\'\) 
+extentsize 32 prefetchsize 64 bufferpool
+
+bp_$database
+db2 drop tablespace userspace1
+
+db2 grant CONNECT,DBADM,BINDADD,CREATE_NOT_FENCED_ROUTINE,
+IMPLICIT_SCHEMA,LOAD,CREATE_EXTERNAL_ROUTINE,QUIESCE_CONNECT 
+on database to user %user%
+
+db2 disconnect current
+db2 detach
+

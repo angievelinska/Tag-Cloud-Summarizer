@@ -1,0 +1,3 @@
+
+
+Be careful, if you do not have the unlimited, but the single workflow edition of the CoreMedia Workflow Server, you may execute the upload only once for a publication workflow. The workflow you have chosen cannot be changed without support of CoreMedia. Please make sure to select the workflow you wish to use during the initialization.

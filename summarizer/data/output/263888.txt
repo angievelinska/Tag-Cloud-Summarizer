@@ -1,0 +1,29 @@
+
+
+To install further Slave Live Server proceed as follows:
+Run the installer to install additional Slave Live Servers with Slave Live Server licenses.
+If the size of the Master Live Server database is huge, then restore the database with the last database backup of the first Slave Live Server. If the size is quite small, you do not need the backup and go to step 3. Note that replication of huge databases takes longer than restoring a database backup.
+Configure the document types equally to the types of the Master Live Server.
+Configure the replicator in properties/corem/replicator.properties  with the IOR URL of the Master Live Server, not to go online and not to perform eventstream checks during the initial replication respectively:
+
+3* replicator.publicationIorUrl=http://<MasterLiveServerComputerName>:<port>/coremedia/ior
+3* replicator.enable=false
+3* replicator.checkStream=false
+5#
+Start the Slave Live Server  with the command: cm capserver  start
+
+The Slave Live Server  will switch to the run level administration.
+6#
+Configure the replicator in properties/corem/replicator.properties  to go online:
+
+3* replicator.enable=true
+
+The Slave Live Server  will start with the replication of the content.
+8#
+When the replication has succeeded, the server does not switch automatically to the run level online. Switch to the run level online  with the command:
+ cm runlevel -r online -g 0
+Configure the replicator in properties/corem/replicator.properties  to perform eventstream checks during replication:
+
+3* replicator.checkStream=true
+
+When you start the Slave Live Server, the changes between the time of the database backup and the current state of the Master Live Server database are automatically replicated.

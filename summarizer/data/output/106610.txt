@@ -1,0 +1,14 @@
+
+
+Withdrawing Publications and Deleting Resources
+
+There is only one fundamental difference between withdrawal of publications and deletion: an withdrawal affects only the Live Server, whereas the deletion of a resource causes the resource to be moved into the trash folder on the Content Management Server. Contrary to versions of the CoreMedia SCI before 4.2, folders are no longer destroyed, but enter the recycle bin in the same manner as documents.
+
+Before a withdrawal or deletion can be published as described before, a mark for withdrawal or for deletion must be applied using the appropriate menu entries or tool bar buttons. In the case of folders, the contained resources are affected, too. If you have marked a resource for deletion and withdrawal, then the deletion will be executed.
+
+When a folder is marked for deletion, all contained published resources are marked for deletion, too. Not published resources are immediately moved into the recycle bin without requiring to start a publication.
+When a folder is marked for withdrawal, all contained published resources are marked for withdrawal, too.
+When a mark for withdrawal or deletion of a folder is revoked, this also affects all contained resources with the same mark.
+If you use direct publication and approve a folder that is marked for withdrawal deletion, that approval is implicitly extended to the contained resources that are also marked for withdrawal or deletion.
+Disapprovals extend to contained resources in the same way.
+

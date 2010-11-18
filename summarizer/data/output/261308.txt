@@ -1,0 +1,10 @@
+
+
+The Starter Kit contains a customized ready-to-go importer (based on the generic XML importer) which imports CSS files into Starter Kit CMCSS documents. You can use this importer to add your own CI compliant CSS-files to the Starter Kit. 
+
+Configuration
+
+You have to configure the paths where the Importer finds the CSS-files and where to put the files in the CoreMedia Repository.
+
+
+

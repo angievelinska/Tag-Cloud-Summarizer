@@ -1,0 +1,6 @@
+
+
+This Section of the User Manual outlines the functionality and handling of the WebEditor.
+
+
+The WebEditor is both in interface and functionality modeled after the CoreMedia Editor. But the CoreMedia Editor is a stand-alone application (a so-called rich client) and the WebEditor is a web application which runs in the browser. Thereby, differences in the functional range, usage and performance can occur. This part of the manual focuses on these differences.

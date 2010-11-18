@@ -1,0 +1,23 @@
+
+
+Configuration of offline operation involves, above all, the following options which must be set in the config.bsh file:
+
+
+setPreGenerateRoot: the root for generation is configured with this property. The format must correspond to that of the configured ResourceUriFormat, without prefix or host/port. The root folder page as root is therefore configured as follows:
+
+3* generator.setPreGenerateRoot("/index.html");
+
+setResourceUriPrefix: the namespace of the generated pages can be freely chosen; the generated pages must only be placed appropriately in the document tree of the web server. Example: all generated URIs should begin with /Site instead of /coremedia/generator:
+
+3* generator.setResourceUriPrefix("/Site");
+
+
+For passing on the generated pages, a file uploader can be used, for example.
+
+
+setUploader: an implementation of the interface hox.corem.servlets.upload.FileUploader can take over the distribution of the generated pages to other computers:
+
+3* generator.setUploader(new MyFTPUploader("www.mysite.com", "ftp", "ftp", "/usr/share/htdocs"));
+
+
+(For more details, see the Developer Manual).

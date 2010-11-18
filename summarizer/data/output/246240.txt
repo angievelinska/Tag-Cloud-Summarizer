@@ -1,0 +1,5 @@
+
+
+Changes of the Database Schema
+
+These properties define how the Content Servers deal with document type changes. All checks and changes are performed at starting time of the Content Servers.

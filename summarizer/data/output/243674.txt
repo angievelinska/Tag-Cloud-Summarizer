@@ -1,0 +1,15 @@
+
+
+A useful notation for defining workflows are activity diagrams as specified by the Unified Modeling Language (UML). CoreMedia Workflow definitions are based on activity diagrams. They have to be converted to a CoreMedia-SCI-specific XML format for the workflow engine.
+
+After presenting a small example, the notation of activity diagrams is presented and the translation into the  CoreMedia Workflow XML is shown.
+
+Image 4.1a describes the following simple workflow with an activity diagram:
+
+A resource is created by one user (an editor) and approved and published by another user (the chief editor). More precisely, the users fill the roles editor and chief editor, respectively. The workflow "edit and publish resource" consists of the following tasks: 
+
+A user of the role editor creates and edits a document. 
+A user of the chief editor role now has to read the resulting document and judge whether to approve or disapprove it.
+If the document is approved, the chief editor is requested to publish it.
+If the resource is not approved, the resource has to be changed again by the first user.
+

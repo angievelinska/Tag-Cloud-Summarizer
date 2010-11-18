@@ -1,0 +1,9 @@
+
+
+PADS Prerequisites
+
+Database
+
+
+3* PADS uses an Oracle database for persistence, so computed entries do not need to be recomputed at system start. Please copy the database driver to WEB-INF/lib after installation.
+

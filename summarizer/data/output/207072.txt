@@ -1,0 +1,5 @@
+
+
+The values of the pages.* keys are complementary to pagecache.* key values. The latter ones (as well as pages.allocated, pages.deleted) refer to objects in the page cache; the same object may be repeatedly used for page generations and is not necessarily removed from the page cache on an invalidation --- rather it remains as "invalid" in the cache. The values of the keys pagecache.* are therefore only significant for the cache's working set (how fast are pages rotated into and out of the cache); not of the number of page generations.
+
+Page Serialization Cache

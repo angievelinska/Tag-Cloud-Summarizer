@@ -1,0 +1,3 @@
+
+
+The administrator can approve and publish resources without using a workflow. CoreMedia SCI allows to enable this feature for other users, depending on the needs of your installation. (see Image 5.4.2.3a). So, if you miss these buttons and menu items in your Editor ask your administrator for advice or skip the section. Please read section for an introduction into publication with CoreMedia SCI.

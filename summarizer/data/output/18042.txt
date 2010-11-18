@@ -1,0 +1,11 @@
+
+
+You need to have database backups to recover from database failures. The backups are created with database tools. The chronological order of the backups is crucial:
+Backup one of the Slave Live Servers.
+Backup the Master Live Server.
+
+
+Backup the Content Server.
+
+
+

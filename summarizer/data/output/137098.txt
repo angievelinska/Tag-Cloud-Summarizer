@@ -1,0 +1,14 @@
+
+
+If you want to read more about setting up and configuring the various servers with which the Unified API interacts, we propose the Administration and Operation Manual as further reading. In that manual, you will also find information on how to create users and grant the users access to the repositories.
+
+The Javadoc provides much more detailed information about the interfaces and methods that make up the Unified API. It is suggested that you use the Javadoc as a reference while programming, but it is also useful for getting a more detailed overview.
+
+Look at the class com.coremedia.cap.Cap in more detail to find out about the methods for establishing a connection. Now inspect com.coremedia.cap.common.CapConnection, but upon first reading view it solely as a means to get access to various repositories and to close() the connection after you are done.
+
+Afterwards, you should have a look at the other classes in com.coremedia.cap.common. In particular, make yourself comfortable with CapObject, CapType, CapEvent, CapListener, CapException, and the type hierarchy of Blob. The package com.coremedia.xml is also recommended for dealing with XML properties.
+
+The subsequent chapters will deal with the individual repositories and their functionality in more detail.
+
+
+

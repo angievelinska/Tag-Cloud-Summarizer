@@ -1,0 +1,6 @@
+
+
+<TreeSorter> 
+
+Child elements: <Comparator>
+ Parent elements: <Explorer>, <ResourceChooser> 

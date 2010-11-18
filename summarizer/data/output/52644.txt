@@ -1,0 +1,3 @@
+
+
+addPicturesToLinkList: For adding new entries to the LinkList, we include the addPicturesToLinkList view for the current folder. This view also defines a helper JavaScript function "addToLinkList(id)", which is used by the view "addToLinkList". It gets the currently focused editor through the FocusManager, calls the addResource() method with the resourceId of the current Picture on it if the focused editor is a LinkList editor.

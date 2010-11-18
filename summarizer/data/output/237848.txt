@@ -1,0 +1,33 @@
+
+
+This chapter describes the installation of a CoreMedia CMS system with a CoreMedia Analytics Engine. Click-tracking, In-Site and Dashboard Analytics will be covered. You might use this installation as a starting point for own customization or simply as a working example for CoreMedia Analytics.
+
+The installation covers the following steps:
+Installing the CoreMedia CMS
+Installing the CAE Menusite example
+Starting the Content Server
+Importing Menusite Content into the Content Server
+Setting up the Menusite click-tracking and in-site applications
+Configuring the Analytics Dashboard
+Starting the Data Aggregator Process
+Starting the Object Analyzer
+Starting the CAE hosting the Menusite and Analytics applications
+Verifying the Setup
+Using CoreMedia Analytics
+
+Prerequisites
+
+In order to install the example you need the following prerequisites:
+
+The CoreMedia CMS installation JAR-file (cap-<Ver.No.>.jar)
+The CoreMedia CMS examples JAR-file (cap-examples.jar)
+An Oracle database certified for use with CoreMedia CMS with an empty account
+The ant tool (ant.apache.org) reachable from the command-line prompt
+
+1. Install CoreMedia CMS
+
+The following table lists all CoreMedia CMS components you have to install. It also lists the sub components and options to choose and not to choose. Please refer to the Administration and Operations Manual for a detailed description of the installation process. 
+
+Make all components which need a database, use the predefined Oracle database account. Do not start any CoreMedia component after this installation.
+Install the following components:
+

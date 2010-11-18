@@ -1,0 +1,5 @@
+
+
+Here the definition of a workflow is shown by means of the simple publication workflow. 
+
+The routine is: An editor creates and edits a change set in the compose task. After completing the compose task, the resources will be approved and published automatically (only if the forceUser action succeeds). In Example 6.2a you find the complete XML definition of this workflow.

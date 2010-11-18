@@ -1,0 +1,3 @@
+
+
+The message-resources configuration can be taken from the standard WAGE struts-config.xml and extended by the resource bundle path and name containing the additional properties. For the new RichText editing command properties in  com/coremedia/examples/wage/wizard/wizard.properties the following configuration results:

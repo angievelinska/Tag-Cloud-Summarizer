@@ -1,0 +1,48 @@
+
+
+  Class   Description  hox.text.xml.XmlUnparser 
+
+An XmlUnparser is a SaxUnparser producing the concrete syntax of XML from a stream of Sax events efficiently. In contrast to the SgmlUnparser, there is no point in cloning an XmlUnparser, because there is no configuration: neither a character entity map nor a DTD.
+
+User-defined character entities are not needed when processing XML, so the XmlUnparser does not support them. If you need to configure  additional character entities (to support really old browsers or Sgml applications), use a SgmlUnparser instead. hox.text.xml.PrettyXmlUnparser 
+
+A PrettyXmlUnparser is an XmlUnparser producing pretty XML on a given target Writer. Since only programmers need to *read* XML this is actually a debugging tool, although there are other uses.
+
+You may customize the printing process by setting the Indenter String and specifying how many characters shall be printed in a character content line. hox.text.xml.TidyXmlUnparser 
+
+A TidyXmlUnparser is an XmlUnparser producing XML with minimal whitespace content. Whitespaces are '\040\011\015\012'.
+
+The xml:space attribute is ignored: Each occurrence of whitespace is removed or collapsed to a single space.
+
+Use this class when whitespaces are not important (ie. no Source Code content, no HTML pre Elements etc.) and size is a concern. hox.text.xml.XHtmlUnparser 
+
+An XmlUnparser producing XHTML on a given target writer. For XHTML compatibility with current HTML browsers, we insert a space before the empty tag closing delimiter, i.e. we write "<tag />".
+
+Secondly, old browsers (e.g. netscape 4.75) do not deal correctly with some empty XML tags, therefore the following tags are printed as a sequence of opening and closing tag (e.g. <textarea></textarea> instead  of <textarea />): textaraea, code, b, i, pre, script 
+
+Note that the produced XML is still well-formed, i.e. parsable, and identical in information content to the events received.
+
+The XHtmlUnparser passes all whitespace to the output unmodified. If you need human-readable output and your input does not contain appropriate whitespace, use a PrettyXHtmlUnparser.
+
+Use the XHtmlUnparser when you  need to produce machine-readable XHTML with exact whitespace. hox.text.xml.PrettyXHtmlUnparser 
+
+An XmlUnparser producing readable XHTML on a given target writer.
+
+For compatibility with old browsers, empty XML tags are treated specially: Firstly, the XHtmlUnparser always writes a space before the slash (e.g. <BR /> instead of <BR/>). Secondly, old browsers (e.g. netscape 4.75) do not deal correctly with some empty XML tags, therefore the following tags are printed as a sequence of opening  and closing tag (e.g. <textarea></textarea> instead of <textarea />): textaraea, code, b, i, script
+
+In addition, the XHtmlUnparser does some PrettyPrinting (reformatting whitespace and line breaks). It uses the same algorithm as the PrettyXmlUnparser, with the following exceptions:
+
+1. Within Anchor (<a>) elements all whitespace is removed. This will avoid the trailing lines from image elements  when viewing XHTML produced by the PrettyXmlUnparser.
+
+2. No pretty printing is done inside textarea elements.
+
+3. If a tag contains only character data, there is no newline before and after the tag.
+
+Note that the produced XML is still well-formed, i.e. parsable.
+
+Use instances when producing XHTML, which you need to read and which contains anchors and textareas. If you only need the indentation,  use the PrettyXmlUnparser. If you only need machine-readable XHTML, use the XHtmlUnparser. hox.text.xml.EscapingXmlUnparser 
+
+The EscapingXmlUnparser is an XmlUnparser that passes its output through an XmlEscapingWriter. That is, the unparsed XML is completely escaped using the minimal Xml entities and can be used as character data inside another XML document.
+
+This class is especially useful as the SGML unparser for coremedia text properties: the XML of the text properties will be escaped, so the XML for the overall  document will be valid XML even without namespaces.
+

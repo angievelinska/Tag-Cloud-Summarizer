@@ -1,0 +1,9 @@
+
+
+For editing multiple CoreMedia resources within a single HTML form, we implement our own ActionForm class (extending the WageActionForm). Alternatively, you can reuse ResourceActionForm and navigate to the other resources via Struts' nested property expressions (if possible), or reuse ResourceListActionForm and place all resources to be added in the resources property.
+
+Our ActionForm has at least to provide getter and setter methods for the properties of the main resource we work with, and getter methods for the other resources we want to access, which are possibly linked to the main resource through a LinkList property.
+
+In our example we want to edit a Dish document which has a LinkList property pictures linking to Picture documents. We want to allow editing of the Dish properties and the Picture properties (of the first linked Picture document) in a single HTML form. If there is no Picture document linked to the Dish document, a new Picture document should be created and linked to the Dish document automatically.
+
+An ActionForm with this functionality could look like this:

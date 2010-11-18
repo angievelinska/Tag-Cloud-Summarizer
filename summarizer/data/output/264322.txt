@@ -1,0 +1,20 @@
+
+
+You are free to modify the generated code. For example, you can
+
+add a new method to both the public interface and the "Impl" class
+remove a method from the public interface of a bean. It will still be available for the implementation classes but not for clients.
+combine both to implement a derived property based on the now hidden content property, possibly with a different result type
+implement additional interfaces that may cross-cut the document type hierarchy
+
+When extending, you should not declare any fields in a content bean except for read-only, immutable service references.
+
+Usage of DocTypeAspects and the Beangenerator
+
+If you intend to use the concept of DocTypeAspects to attach properties to an existing DocType-definition from a separate definition file, you have to consider two things  (see Administration Operation Manual, Section 6.2.2 "Attaching Properties to Existing Document Types"  and Starter Kit Manual, Section 6.5 "Extending Document Type Definitions") :
+
+
+DocTypeAspects were introduced to support the concept of Plug-Ins of the CoreMedia Starter Kit Plug-In API at document type level, but the use of DocTypeAspects also enables you to separate different concerns in separate doctype definition files generally.
+
+
+Similar to the startup of a Content Server the Beangenerator merges properties defined in a DocTypeAspect  with the ones defined in the TargetType before it generates the bean code of the TargetType. The generated code of the TargetType bean then contains also the methods for the attached properties. It is therefore currently not possible to generate Starter Kit AspectBeans with the Beangenerator.

@@ -1,0 +1,40 @@
+
+
+ 
+
+Service 
+
+Applications 
+
+debug 
+
+Applications used for debugging like cm dump 
+
+editor 
+
+Editor applications like CoreMedia Editor and CoreMedia WebEditor Server 
+
+filesystem 
+
+WebDAV in CoreMedia WebEditor Server 
+
+importer 
+
+CoreMedia Importer 
+
+publisher 
+
+Publisher in CoreMedia Server 
+
+replicator 
+
+Replicator in CoreMedia Replication Live Server 
+
+system 
+
+System applications like cm documentcollector 
+
+webserver 
+
+CoreMedia ADS and PADS workflow CoreMedia Workflow Server feeder Feeder for CoreMedia Search Engine
+

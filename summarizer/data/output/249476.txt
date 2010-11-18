@@ -1,0 +1,24 @@
+
+
+The following issues are important only if you will be using In-Site Analytics.
+
+
+
+Where Should the Overlay Displays Be Included?
+
+
+
+Not every page and every object needs to include an overlay of usage statistics.  For example, you may not wish to see how often a "Return to top of page" button was clicked.  By clearly identifying which pages and content objects/links/contexts are important for your editors to see, you can both save developers time and effort, and avoid a preview windows full of overlays in which it is difficult for the end users to locate useful information.
+
+The chapter provides full documentation of how tag elements should be placed to create overlays for different objects. But by reviewing your overlay requirements in advance, you can limit the effort required to provide the end users with the most useful information. 
+
+
+
+What Time Interval Should be Used for the Overlay?
+
+
+
+The overlays show line graphics representing time frames.  By default, the system shows 60 minutes of data on this graphic, but this is configurable using the overlay.default.interval property.  Based on the usage of your site and your defined session length, a smaller or larger time frame might better display the data for your end users.
+
+See section "Configuring Overlays" in the Administration and Operations Manual for discussion of the overlay.default.interval property.
+

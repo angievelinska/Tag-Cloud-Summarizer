@@ -1,0 +1,16 @@
+
+
+CoreMedia SCI supports the efficient computation of incoming or reverse links to documents as part of the Generator API. The method getLatestIncomingLinks returns an array of Documents. This feature allows a more adequate modelling of document types under certain conditions. Take for example documents that have to relate to different categories. In former releases you would probably have created a category document type with a LinkListProperty referring to the documents of a certain category. Note, that documents can be part of multiple categories. So, every time, when a document is added to or removed from a category, the category documents have to be modified. A consequence can be a large number of versions, due to frequent changes. If you want to delete a document from the repository, you also have to remove links to this document, in order to avoid dead links. If a user doesn't has the respective rights, somebody else who has these rights ought to execute this. With CM SCI the opposite approach can be chosen. Add a LinkListProperty to documents that shall be categorized. Thus the creator of a document has the ability to define the categories for a given document. Only one document has to be modified. Deleting this document automatically removes it from all categories. On the delivery side you use the new method getLatestIncomingLinks to show all documents related to a category resource.
+
+In the following example all incoming links to the current document are analysed. Incoming links are separated by the following criteria:
+
+Documents of a subtype of PageContent linking to the current document are accumulated in the ArrayList incomingContentCategories
+Documents of a subtype of Category linking to the current document with the attribute SubCategory are accumulated in the ArrayList incomingParentCategories
+
+
+Documents of a subtype of Category linking to the current document with the attribute SideCategory are accumulated in the ArrayList incomingSideCategories
+
+
+
+Note that this code can be placed in a cacheable template. If the incoming links to the current document change, the generated page will be invalidated by the CoreMedia Active Delivery Server. This  results in a rebuild of the page.
+

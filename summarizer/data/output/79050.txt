@@ -1,0 +1,5 @@
+
+
+If another user has checked-out a document it's read-only for you. You can't check it out or edit it. The  corresponding menu items and buttons are deactivated but they are not greyed-out. All other functions for editing the document are also deactivated. The document window looks as follows: 
+
+ 

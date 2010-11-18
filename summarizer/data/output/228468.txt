@@ -1,0 +1,30 @@
+
+
+In order for the report aggregator to run, the aggregation process must be uploaded and started.
+
+Uploading the Aggregation Process
+
+Before reports are generated, the aggregation process must be uploaded. The standard process is contained in the file properties/corem/data-aggregator.xml. It can be uploaded using the following command:
+
+bin/cm upload -u admin -p admin -f \
+properties/corem/data-aggregator.xml
+
+If you need a customized workflow, please refer to the Analytics Developer Manual for details of the aggregation process.
+
+Starting the Aggregation Process
+
+You can start an aggregation process using the workflow windows of the CoreMedia Editor after logging in as a member of the group administratoren. Simply start an instance of the process definition data-aggregator. A popup will appear, asking you to specify values for the variable stopAfterNextImport and dispensableLogProviders. If you want to run just a single cycle of the import loop, check the box at  stopAfterNextImport, but normally you should just continue by starting the workflow.
+
+Note that if you try to start two aggregation processes, the second process will detect this situation and terminate immediately.
+
+Monitoring the Aggregation Process
+
+By selecting the running aggregation process in the lower-left frame of the workflow window, more details about the process are shown on the right.
+
+You can use this view to set the variable stopAfterNextImport to true, terminating the process cleanly.
+
+The view shows the current value of the variable failedLogProviders. It contains a comma-separated list of identifiers of those log providers that did not answer a request for an analytics log during the last iteration or whose log was not correctly parseable. If some of these log providers are permanently disabled, you should remove them from the configuration.
+
+If there remain log providers that are configured, but that did not respond, then the aggregation process will not prepare the permanent reports for dashboard reporting. If you want to force the Analytics Data Aggregator to proceed, you may insert to the variable dispensableLogProviders a comma-separated list of identifiers of those log providers, that are down for known reasons , but that are known to have yielded all logs to the aggregator. If all failed log providers are declared dispensable, aggregation will proceed. Note that overlay reporting is not affected the unavailable log providers. Overlay data is provided on a best-effort basis.
+
+Additional read-only variables show the times up to which the various aggregation steps are currently being performed. These variables allow you to makes sure that the aggregation process is progressing properly.

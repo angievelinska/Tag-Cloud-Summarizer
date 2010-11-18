@@ -1,0 +1,5 @@
+
+
+Choice
+
+Based upon a condition, the control flow continues at exactly one of two or more follow-up tasks. This is also called an or-split, since only one task will be performed.

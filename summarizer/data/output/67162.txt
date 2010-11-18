@@ -1,0 +1,3 @@
+
+
+Queries, like all other documents, are saved as documents. Like documents, queries can be copied, renamed, moved or opened. A query will be automatically opened in the query window, not in the document window.

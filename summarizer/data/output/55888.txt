@@ -1,0 +1,19 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of one predecessor task

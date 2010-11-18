@@ -1,0 +1,35 @@
+
+
+Up to CoreMedia CMS 2006, the Content Server stored all BLOBs in one database table. This was sufficient for many cases, but there are scenarios where other solutions are preferable, for example:
+
+Different access characteristics for different BLOBs
+Very high volume of BLOBs
+Requirements on upload and play-out speed
+
+CoreMedia CMS now offers two methods to cope with different requirements for BLOB storage:
+
+Configure the table space for BLOB data as described in section
+Define different "media stores" for BLOBS, described in this section.
+
+Media Stores for BLOBs
+
+CoreMedia CMS supports different media stores for the storage of BLOBs, depending on some properties of the BLOB, such as
+
+size,
+MIME type
+target property and document type.
+
+The Media Store is only responsible for storing and retrieving the actual bytes. The MIME content type, garbage collection, and authentication is managed by the Content Server. CoreMedia CMS supports the following media stores:
+
+Storing BLOBs in files
+Storing BLOBs as zip-files
+Zip BLOBs and store them in the blobstore table
+Storing BLOBs in different database tables
+
+By default, BLOBs are still stored in the CoreMedia CMS.
+
+File-based BLOB storage
+
+As one option for a BLOB store, you can store BLOB contents on the file system reachable by the Content Server. The Content Server takes care that the number of files/subdirectories per directory does not grow too large. By default, files are stored in the blobstore/file directory below the Content Server installation.. 
+
+For consistent backup, suspend the server's Blob collector with the property sql.store.collector.suspend=true in the sql.properties file before starting the backup process.

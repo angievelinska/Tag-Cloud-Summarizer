@@ -1,0 +1,8 @@
+
+
+<Processes>
+
+
+Child elements: <Process>*, <Predicate>?, <Comparator>?
+
+Parent elements: <Editor>

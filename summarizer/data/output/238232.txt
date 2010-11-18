@@ -1,0 +1,21 @@
+
+
+ Custom  Description 
+
+This action invokes a custom watchdog action (see the JavaDoc of CustomAction for details). You have to add two nested tags - Custom and Action - into the watchdog.xml file to call the action.
+
+Example:
+
+<Custom name="my first action" timeout="10">
+ <Action class="com.customer.MyWatchDogAction" myprop="ok">
+  <MySub class="com.customer.MySub" foo="bar"/>
+  <MySub class="com.customer.MySub" foo="baz"/>
+ </Action>
+</Custom>
+
+In this example, class com.customer.MyWatchDogAction would need to implement CustomAction, would need a no-args constructor, a setter for myprop and a method addMySub accepting a MySub object. The Class com.customer.MySub would need a no-args constructor and a setter for foo. This allows for elaborate configuration. Please read the chapter "The BeanParser" of the Workflow Developer Manual for details. 
+
+Make sure that your custom action will not accumulate resources (Database, JMS connections etc.), otherwise the watchdog would itself need to be watched. In all nontrivial cases, starting an external script is strongly preferred. 
+
+The nested tags of the Action tag depend on the setters defined in your custom action class, here com.customer.MyWatchdogAction.  Attributes The Custom tag supports the general attributes for actions. All sub tags of Custom need the class attribute. All other attributes of the Action tag and its sub tags depend on the custom action. Error Codes The error codes returned from the execute() method of the custom action class.
+

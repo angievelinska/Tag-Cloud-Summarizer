@@ -1,0 +1,6 @@
+
+
+The CoreMedia Starter Kit scope of delivery contains the following files: 
+
+cap-starterkit-installer-<Vers.No.>.jar
+cap-starterkit-installer-<Vers.No.>.js

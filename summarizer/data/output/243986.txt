@@ -1,0 +1,3 @@
+
+
+Note, that you can define multiple configuration files for a specific group, which will be evaluated in a specific order. See the Editor Developer Manual for a description of the XML-element <ConfigGroups> for details.

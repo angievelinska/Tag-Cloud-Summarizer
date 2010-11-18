@@ -1,0 +1,5 @@
+
+
+Controllers handle requests and parse the requested URL into model and view. Link schemes create a URL for a linked model and view. Typically, there are corresponding controller and link scheme implementations for different model types, i.e the controller can parse the URL which was formatted by the corresponding link scheme. Controller implementations define the accepted URLs while link schemes define the formatted URLs.In general, accepted and formatted URLs are the same. (In fact these URLs may differ, for example if incoming URLs were rewritten by an Apache webserver, see section).
+
+The following table summarizes the corresponding link schemes and controllers of the Starter Kit as defined in framework/spring/starterkit-linkschemes.xml and framework/spring/starterkit-controllers.xml, respectively. See the Javadoc of the respective classes for further details.

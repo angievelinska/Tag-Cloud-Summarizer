@@ -1,0 +1,46 @@
+
+
+As mentioned in the motivation, JSF comes with a Managed Bean Creation facility that defines managed Beans through an XML syntax. This is very similar to what a Spring Bean factory does, but Spring is a more general, widely accepted IoC framework, and it is already used throughout the CAE. To not let you learn two different syntactic variants for the same thing, namely defining Beans in XML, ES allows to use Spring Bean Factories instead of the JSF Managed Bean Facility.
+
+JSF VariableResolver
+
+JSF allows to plug in a so-called VariableResolver that is responsible for looking up managed Beans. As part of its readily available JSF integration, Spring comes with a DelegatingVariableResolver that delegates lookup of JSF managed Beans to the Spring WebApplicationContext if no managed Bean is found by the original VariableResolver.
+
+Spring's DelegatingVariableResolver has two major draw-backs:
+
+It always uses the root WebApplicationContext, although Spring supports a current WebApplicationContext which may be different for different requests.
+As Spring 1.2 only supports singleton and prototype Beans, Spring-defined managed Beans can only be in scope application or none. There is no support for the standard scopes session and request, and of course not for Editing Services' custom scope pageflow (see section pageflow).
+
+Consequently, Editing Services provides a custom implementation of a JSF VariableResolver that supports these additional features, namely com.coremedia.editing.kits.jsf.util.spring.SpringVariableResolver (see API documentation).
+
+Scoped Beans in Spring 1.2
+
+The next problem is how to define scoped Beans in Spring. Spring 2.0 introduces explicit scopes, but during development of ES, it was not yet available in a final version. Thus, Editing Services uses Spring 1.2 and offers its own scoped Beans solution.
+
+In order to enable scoped Beans, you have to include a specific BeanPostProcessor into your ApplicationContext (the Editing Services Web Application Template already does this for you):
+
+<bean class="com.coremedia.editing.spring.ScopedBeansPostProcessor"/>
+
+Note that when using parent and child Bean factories, like the Editing Services Web Application Template does, you have to define this BeanPostProcessor in every Bean factory.
+
+The Bean scope of a Spring Bean is then defined by a name pattern: the scope name (request, pageflow, session, or application) is appended to the Bean name as a suffix, separated by an underscore ("_"). An example of a session scope Spring Bean is
+
+<bean id="mySessionScopeBean_session" class="com.acme.MyBeanClass"
+      singleton="false">
+  ...
+</bean>
+
+Note that all Beans that are not application scope have to be declared as prototypes (singleton="false") in order for Spring to create separate instances. ES includes the BeanPostProcesser com.coremedia.editing.spring.ScopedBeansValidatingBeanFactoryPostProcessor which validates this requirement during application startup.
+
+When the Bean mySessionScopeBean_session is retrieved from the ApplicationContext the first time, it is created and populated as usual. It is then stored in session scope under the name mySessionScopeBean (without the suffix!). Each subsequent call in the same session looks up the name mySessionScopeBean in session scope and returns the existing Bean.
+
+This means that when using a scoped Spring Bean from JSF-EL or JSTL-EL, you have to use the name without suffix, while when using it inside Spring, you have to use the full name. Also note that JSTL-EL does not know of managed Beans, so a managed Bean must be application scope or must already have been created (through JSF-EL, or through code accessing the Spring ApplicationContext directly, e.g. in some controller) before it can be retrieved by JSTL-EL.
+
+Since migration to Spring 2.0 solves the scoped Beans problem in a clean way, this feature of ES is subject to change in future versions. For later migration, you will have to refactor the Spring Bean definitions only, but not the access from JSF-EL or JSTL-EL. In the next version of Editing Services, the preferred form of the example scoped Bean given above will look like this:
+
+<bean id="mySessionScopeBean" class="com.acme.MyBeanClass"
+      scope="session">
+  ...
+</bean>
+
+The Bean can then be referenced from Spring and JSF-EL under the same name.

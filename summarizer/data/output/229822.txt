@@ -1,0 +1,15 @@
+
+
+ Variable type Aspect name(s) Aspect type Aspect description 
+
+All GenericValueSetVariable types:
+
+BrowserTypeDetailLevel 
+CategoryVariable, ContentItemStateVariable, 
+ContentTypeVariable, 
+NumberFormatVariable, 
+PageClassificationVariable, 
+PointInTimeVariable, 
+SearchTermResolutionVariable, 
+SiteSelectionVariable. valueObjectConstraint Dimension Value Object Constraint The value object constraint indicates the variable's currently selected value EntryRangeVariable rangeConstraint Dimension Range Constraint The range of relevant entries, defined by Integer upper and lower bounds. TimeRangeVariable rangeConstraint Dimension Range Constraint The selected time range, defined by Timestamp upper and lower bounds. - " - dependentResolutionConstraint Dimension Discretizer Constraint A time dimension discretizer that corresponds to the selected time range. TimeResolutionVariable resolutionConstraint Dimension Discretizer Constraint A time dimension discretizer.
+

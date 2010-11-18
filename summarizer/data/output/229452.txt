@@ -1,0 +1,12 @@
+
+
+Since Editing Services offers Beans and JSF can use Beans, we could stop here and leave wiring-up of both frameworks to customer projects. But of course there are recurring tasks when using Editing Services with JSF, and some JSF specialties that require special adapters and utilities.
+
+JSF does not provide built-in Spring ApplicationContext access, but comes with its own Managed Bean Facility. To keep things consistent and application programmers from learning two syntactic variants of declaring Beans in XML, we provide and extend utilities to use Spring Beans in JSF-EL.
+JSF-EL cannot invoke arbitrary methods. However, JSF-EL can invoke getters, indexed getters, map getters, action methods and event methods. To simulate a method call with parameters, ¿faked¿ Maps can be used that take a parameter as the key and return the function result as if it were the mapped value. Even multiple parameters are possible using ¿currying¿ (realized through Maps of Maps).
+Some JSF concepts do not consequently implement the MVC paradigm. An example is the <f:selectItems> construct, that does not separate the concerns of model (the list of Beans to select from) and view (the renderer that provides an appearance for those Beans). ES provides clean concepts and adapters for JSF.
+JSF is still quite new and lacks some important features. For example, there is no standardized file upload component, taking Beans from one view to the next requires storing them in the session, and there is no EL function to compute the length of a Collection or Array. Editing Services offers solutions for these every-day problems.
+
+If Editing Services only provided backing beans, this would in some cases lead to unnecessarily large and complex component trees. Instead, ES provides custom components that abbreviate recurring tasks, like constructing a JSF button for a given Editing Services Action. Note that you are not forced to use these special components, but you can still use JSF standard components or third party JSF components together with Editing Services Beans.
+
+The most important Editing Services for JSF extensions to JSF are described in the following sections.

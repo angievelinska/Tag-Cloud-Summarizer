@@ -1,0 +1,3 @@
+
+
+This method is part of the class Helper (package com.coremedia.examples.cae.beans). You have to extend the interface Document because a template  has access to the addressed object only. The following class diagram represents the result:

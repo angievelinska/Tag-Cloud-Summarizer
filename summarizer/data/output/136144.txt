@@ -1,0 +1,3 @@
+
+
+The following example shows how to create a new folder with a fixed name. While not interesting in itself, it contains all the steps needed to establish a connection and to perform some work.

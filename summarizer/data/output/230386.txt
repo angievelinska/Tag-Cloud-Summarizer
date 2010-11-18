@@ -1,0 +1,8 @@
+
+
+Now the files of Dashboard Analytics will be copied to the installation directory.
+
+The last window opens up and asks you to finish the installation.
+6#
+Click [Finish] to finish the installation of the Dashboard Analytics.
+

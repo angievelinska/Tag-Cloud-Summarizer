@@ -1,0 +1,9 @@
+
+
+The first backing Bean for the table is an Editing Services component of type com.coremedia.editing.BeanTable.  The contained table model is based on the specified LinkList property, and the BeanTable has a column model using the standard columns for Content objects, defaultContentColumnModel, defined in the abstract Bean abstractContentTable (for details about these Beans, see Bean documentation).
+
+The second backing Bean defines a JSF-specific controller for this BeanTable, simply by using the class com.coremedia.editing.kits.jsf.BeanTableController and referring to the first backing Bean, the LinkList's BeanTable.
+
+The Bean definitions can be placed in an arbitrary Spring XML file in /WEB-INF/spring/editing-jsf/dispatcher-servlet. The recommended name for the file containing all custom view backing Beans is editing-jsf-views.xml. The meta template that has to be instantiated for every link list property is shown in link. property and docType  are meta variables defined as before.
+
+

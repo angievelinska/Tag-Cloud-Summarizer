@@ -1,0 +1,7 @@
+
+
+<AggregationVariable>
+
+Child elements:
+
+Parent elements: <View>, <Task>

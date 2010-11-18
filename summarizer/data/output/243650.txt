@@ -1,0 +1,10 @@
+
+
+This manual provides information on the principles of the CoreMedia Workflow, on how to write own workflows and on how to develop extensions for the workflow.
+
+In Chapter 2 you will find a short introduction into the GUI and components of the Workflow.
+In Chapter 3 you will find a short survey of the pre-defined workflows delivered with CoreMedia and the publication semantics.
+In Chapter 4 you will learn how to develop your own workflow definitions. It explains the syntax of relevant XML files.
+In Chapter 6 you will learn how to implement own extensions of the workflow.
+In Chapter you will find a reference of the XML-elements existing for workflow definitions and some code examples and workflow definition examples.
+

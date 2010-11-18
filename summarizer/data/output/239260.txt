@@ -1,0 +1,11 @@
+
+
+Possible cause:
+
+Problems with the CORBA ORB.
+
+Possible Solution:
+
+Add the following line to the pre-config.jpif-file in <InstallDir>/bin  of the affected components, so that all components started from this directory (e.g. server tools) have the workaround in use:
+
+-Dcom.sun.CORBA.transport.ORBUseNIOSelectToWait=false

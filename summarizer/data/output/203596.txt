@@ -1,0 +1,3 @@
+
+
+The following code shows the XML-definition schema of data views:

@@ -1,0 +1,26 @@
+
+
+Now that we have seen what the XML representation of a resource looks like, we'll discuss the XML properties of documents which can hold arbitrary XML. This XML is usually not included "inline" by the resource XML for reasons of validation. Instead, these elements carry a "href" attribute which is a URI pointing to the actual contents of the property. If such an URI is not present the property contains no XML.
+
+By default a CoreMedia XML property contains markup conformant to
+
+$COREM_HOME/lib/xml/coremedia-richtext-1.0.dtd.
+
+This DTD offers the following benefits to you:
+
+
+
+All Elements of the coremedia-richtext-1.0.dtd can be printed out directly and can be displayed by every browser. Only Standard HTML and CSS Tags are used.
+
+
+You can edit this markup with the CoreMedia Editor which is convenient and easy.
+
+Drawbacks include:
+
+
+
+Only HTML Browsers support the Tags. You can't browse this content using a WAP Phone.
+
+
+The richness of expression is flexible yet limited.
+

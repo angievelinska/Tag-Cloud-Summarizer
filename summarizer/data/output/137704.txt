@@ -1,0 +1,10 @@
+
+
+
+7#
+
+
+Click [Browse...] to select the directory and [Next] to continue.
+
+A dialog to configure the CoreMedia Search Engine appears next. The fields have the following meaning:
+

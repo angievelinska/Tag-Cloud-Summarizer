@@ -1,0 +1,17 @@
+
+
+To start the Web Editor enter the start address in the address list of the browser. In general, this is constructed as follows:
+
+http://<host>:<port>/editor/editor.do
+
+e.g.:
+
+http://myhost:8001/editor/editor.do
+
+For <host> enter the name of the computer on which the Web Editor runs. For <port> enter the port address configured in the file server.xml.
+
+If you want to establish an encrypted connection via https, you have to perform the configuration of the servlet container as described in Section 5.7.1.8 first. Afterwards, the Web Editor can be started via:
+
+https://<host>:<secureport>/editor/editor.do
+
+For <secureport> enter the https port address configured in the file server.xml.

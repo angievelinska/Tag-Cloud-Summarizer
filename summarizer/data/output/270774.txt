@@ -1,0 +1,11 @@
+
+
+Pages are identified by three properties, as also explained in section in more detail: object, locale, and view. By using the Analytics taglib, you have full control which values are chosen for each of these properties. While the view is typically the view used by the Content Application Engine and the locale is either fixed or easily computed from the rendered content, choosing the correct object might not be as straightforward.
+
+If you are directly rendering instances of ContentBean in your web application and if you are only using information reachable through that bean, it is a good idea to use the content bean as the object identifying the page. If you are using additional information that might possibly be passed through other request attributes, you have to decide whether the content bean is properly representing the page. It might even in this case: a search result page might be based on a content bean and you want to count all accesses to the search result page jointly, so that the actual search term can be ignored.
+
+If the content bean is not sufficient for identifying the page, you should either change application to use a more complex object as the self object or you should at least pass a different object to the <analytics:pagecontext> tag as described in section. You can use the taglib functions described in section to that end, but it is also possible to use own beans.
+
+If you are choosing an object other than a content bean for identifying the page, you must provide an IdScheme that is capable of converting such objects to and from their string representation. You should also provide an ObjectIdAnalyzer as described in section and configure it in the Data Aggregator, so that categories and names are correctly computed.
+
+In any case, a SiteExtractor must be configured. It computes a site from the object and uses that as the site of the page. If you want to render one content bean in multiple sites, this means that an aggregate page object must be used, because one content bean can only be placed in one site. Choose your site computation algorithm carefully, because it is difficult to change later on as some objects have already been permanently assigned to sites.

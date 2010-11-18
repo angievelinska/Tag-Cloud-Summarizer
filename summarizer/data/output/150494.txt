@@ -1,0 +1,5 @@
+
+
+On the command line, the query string will usually be surrounded by quotes, so that the shell interprets it as a single argument. You may also have to escape quote characters inside the query string.
+
+The next code block shows the formal definition of the query language using EBNF: 

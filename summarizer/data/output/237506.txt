@@ -1,0 +1,8 @@
+
+
+For more details about actions consult the com.coremedia.editing.actions  and com.coremedia.editing.cap.actions  packages and their sub packages in the JavaDoc API. For more details on action-related classes take a look at the com.coremedia.editing.action  package JavaDoc API. The most important classes and interfaces are:
+
+com.coremedia.editing.action.CommandAction
+com.coremedia.editing.action.CommandExceptionHandler
+com.coremedia.editing.action.CommandPostProcessor
+com.coremedia.editing.action.NavigationHandler

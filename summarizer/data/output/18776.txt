@@ -1,0 +1,73 @@
+
+
+The CoreMedia Active Delivery Server serves to create web pages. With its flexible template technology it allows to create any export format (XML, WAP, PDF, etc.). 
+
+The creation of pages is done by accessing a Java API with the help of JSP templates (see Developer's Manual). The templates determine the appearance of a web page in connection with the content from the CoreMedia system.
+
+Modes of operation
+
+Three different types of operation of the Active Delivery Server are possible:
+
+
+
+Standalone operation: Since most servlet containers already contain a complete web server, they can also process HTTP requests directly beside JSP servlet execution.
+
+
+
+
+Embedded operation: The CoreMedia Active Delivery Server can be embedded in another web server (e.g. Apache) and only deliver the dynamic pages not yet in temporary storage.
+
+
+
+
+Offline operation: The CoreMedia Active Delivery Server can generate pages independently and, for example, stores these pages in the file system, from where they can be processed further by means of an independent mechanism. In this way, the generator itself receives no HTTP requests.
+
+
+
+Deployment
+
+In CoreMedia SCI the Active Delivery Server is packaged in the form of a servlet 2.3 conforming Web application (http://java.sun.com/products/servlet), running in servlet containers of various manufacturers, which means, that
+
+
+
+an Active Delivery Server instance is a self-contained web-application in a directory or .war file (web archive),
+
+
+
+
+all jar-files go to the WEB-INF/lib directory,
+
+
+all configuration and log files go to the WEB-INF/ directory,
+
+
+no system properties need to be set,
+
+
+the container's classpath need not be manipulated.
+
+
+
+The new setup causes the following improvements:
+
+
+
+It is possible to run multiple Active Delivery Server instances in the same container with diverging configurations, connected to different servers etc.
+
+
+The log configuration of one context does not interfere with others. Especially, you need not choose different log facilities for each context.
+
+
+Deployment to any standards compliant servlet container follows the standard procedures, documented in the container's manual.
+
+
+
+A few open issues remain:
+
+
+
+Mostly due to filesystem accesses the CoreMedia Active Delivery Server cannot be deployed as a .war-file unless the container internally explodes the .war-file such as Tomcat and Resin do. In other cases, you must deploy the context as a directory.
+
+
+
+The Active Delivery Server Web application is organized in the following directory tree:

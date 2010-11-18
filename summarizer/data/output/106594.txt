@@ -1,0 +1,34 @@
+
+
+ Status and action on the Content Management Server Effect on the Live Server on publication  
+
+A version of the document does not yet exist on the Live Server. The document is not marked for deletion.
+
+You approve the version. The approved version is copied to the Live Server. 
+
+The last approved version of a document already exists on the Live Server. The document is not marked for deletion.
+
+You start a new publication without any further preparation. No effect on the Live Server. 
+
+The document is published and is not marked for deletion. It therefore exists on both servers.
+
+You rename the document and approve the change. The document is renamed. 
+
+The document is published and is not marked for deletion. It therefore exists on both servers.
+
+You move the document and approve the change. The document is moved. 
+
+The document is published. It therefore exists on both servers. No links to this document exists.
+
+You mark the document for withdrawal and approve the change. The document is destroyed on the Live Server. 
+
+The document is published. It therefore exists on both servers. No links to this document exists.
+
+You mark the document for deletion and approve the change. The document is destroyed on the Live Server. The document is moved into the recycle bin on the Content Management Server. 
+
+The document is published. It therefore exists on both servers. Links to this document from other published documents exist.
+
+You mark the document for deletion and approve the change. The deletion cannot be published, since an invalid link would be created. A message is displayed in the publication window. Remove the link in the other document and publish again.
+
+
+

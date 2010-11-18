@@ -1,0 +1,23 @@
+
+
+First an ActionForm bean of type DishActionForm (in package com.coremedia.examples.wage.update) is defined under dishResourceForm. Instead of our DishActionForm class you could also have used the generic WAGE ResourceActionForm.
+
+The first action login has already been introduced in ex-prereq.
+
+The second showOverview just forwards to the overview by using a ResourceActionForward with the view renderDishes. The pattern behind this action is to always send requests to the controller, which then forwards to the view. This is a clean MVC (Model/View/Controller) solution that has the advantage that the controller can still decide to dispatch somewhere else. In the example of showOverview action, the ForwardIfLoggedInAction only forwards to the desired view if the user is logged in, to the login forward otherwise.
+
+The third and second actions showDetail and editDish follow the same pattern, just forwarding to the templates render and renderForm, respectively.
+
+Then our CommitAction is configured: The path attribute of the action tag has to match with the action attribute of the <html:form> tag in the view JSP, and the type is the name of our action class. The name attribute defines the ActionForm to be used with that action.
+
+There are also two ActionForwards used by our action:
+
+
+
+"success" of type com.coremedia.cap.wage.action.ResourceActionForward forwards to the current resource using the templateId render.
+
+
+"retry" forwards to the templateId renderForm, which results in returning to the same page. This forward is used as the input forward of the action (set in the input attribute of the action). To keep the current resource, we again use a com.coremedia.cap.wage.action.ResourceActionForward.
+"failure" is a global forward that just forwards to "/commitFailure.jsp", a generic template that is supposed to display the error.
+
+Finally, the Struts controller has to be configured. When using WAGE, the className and processorClass Attributes must always be set as in the example. Also, as mentioned above, the controller section has to specify that the input attribute of all actions is to be interpreted as the symbolic name of a forward, not as a literal path name. Otherwise, it would not be possible to use ResourceActionForwards. All other configurations just set the default values and thus could be omitted, but are provided in the example so that you can easily change the configuration.

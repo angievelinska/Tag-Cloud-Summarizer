@@ -1,0 +1,3 @@
+
+
+The following sections discusses the interaction and the typical deployment of the different components of the architecture.

@@ -1,0 +1,3 @@
+
+
+The file content.properties configures the following values:

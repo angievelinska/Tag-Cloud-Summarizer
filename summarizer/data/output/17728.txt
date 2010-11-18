@@ -1,0 +1,75 @@
+
+
+
+ 
+
+Log Name
+ 
+
+Description
+ 
+
+trace
+ 
+
+Logs sessions connnected with the server. This logging must be started using the utility program tracesession.
+ 
+
+corem.imports.serverimport
+ 
+
+Log of the server import.
+ 
+
+cap.server
+ 
+
+Main log of the server.
+ 
+
+cap.server.garbagecollector
+ 
+
+Log of the garbage collector.
+ 
+
+cap.server.license
+ 
+
+Log of the license manager.
+ 
+
+cap.server.login
+ 
+
+Log of the server login method.
+ 
+
+cap.server.publisher
+ 
+
+Log of the publisher activities on the server.
+ 
+
+cap.server.replicator
+ 
+
+Log of the replicator activities on the server.
+ 
+
+cap.server.store
+ 
+
+Log of the repository/ database.
+ 
+
+cap.server.usermanager
+ 
+
+Log of the user manager.
+ 
+
+cap.server.webstart
+ 
+
+Log of WebStart activities.

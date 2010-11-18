@@ -1,0 +1,3 @@
+
+
+This element is used to determine the class used for integrating an external dictionary in the spellchecker. As a default, the Microsoft Word dictionary will be used. Please keep in mind, that it is not possible to write from CoreMedia SCI to the Word user dictionary. If the Word user dictionary should be used for spellchecking,  you need to activate this option in Word itself (please refer to the Word documentation).

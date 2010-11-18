@@ -1,0 +1,7 @@
+
+
+Property
+
+Grammar: EMPTY 
+
+The Property element defines the properties with which a new document is created. 

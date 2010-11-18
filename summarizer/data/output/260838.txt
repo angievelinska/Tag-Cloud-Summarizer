@@ -1,0 +1,21 @@
+
+
+Adjust the configuration of the database connection. The parameters are:
+
+com.coremedia.generator.jdbc.driver: This parameter references the JDBC driver of the selected database. 
+com.coremedia.generator.jdbc.driverurl: This parameter contains the URL to connect to the database.
+com.coremedia.generator.jdbc.dbuser: Name of the database user.
+com.coremedia.generator.jdbc.dbpassword: Password of the database user
+
+The following properties only appear, when you has chosen to install the Database Message Service. They configure the database connection used by the service:
+
+dbmsgservicedriver: The driver class to connect to the database.
+dbmsgservicedriverurl: The URL used to connect to the database.
+msgdbuser: The user used to connect to the database.
+msgdbpassword: The password used to connect to the database.
+6#
+Continue by clicking [Next].
+Click [Finish] to finish the installation of the CoreMedia ProActive Delivery Server.
+
+
+

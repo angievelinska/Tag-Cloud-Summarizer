@@ -1,0 +1,15 @@
+
+3#
+In the left pane, select the folder where the channel should be created. Enter a name for the new channel into the Name field. 
+If you want to create a  new folder for the channel below the folder selected in the left pane, then check the Sub-folder check box.
+
+The new channel document is created and opens up.
+5#
+Set a title and a URI-segment for the new channel. The URI-segement is used to create URLs for the channel and its children (see section) It must not contain the "." character.
+
+
+
+
+
+
+

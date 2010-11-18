@@ -1,0 +1,20 @@
+
+
+There are some basic concepts every application designer should follow in order to implement the projects successfully:
+
+
+
+
+Gather Attributes in baskets - Use xsl:attribute-set extensively. Formatting rules often require large numbers of attributes i.e. to specify the font. If you can do so, split up the attribute-sets into small units. Since xsl:use-attribute-sets allows for multiple attribute-sets you can merge them later. If you didn't like CSS and it's unflexible mechanisms this is a feature for you. It allows you to specify  a base font and then add up more formatting rules through joining of atribute-sets.
+
+
+
+Split your stylesheets - Make use of xsl:import and xsl:include extensively. Try to group your template rules by category. Always put the formatting attributes in attribute-sets into a seperate file. What used to be formats.css is now formats.xsl .
+
+
+
+Forget about sharing template rules in stylesheets for different targets. As a rule, different target platforms want different tags. Since usually all a template rule does is emit tags, sharing these rules becomes impossible. One set of stylesheets for one target platform. This allows you to divide your stylesheets neatly.
+
+
+
+Do not forget the documentation!

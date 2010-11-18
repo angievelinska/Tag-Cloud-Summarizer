@@ -1,0 +1,3 @@
+
+
+The plug-in demonstrates the basic SSE features, but does not cover the user registration or profile editing use cases. The login functionality therefore does not really verify a password: any user and password combination will suffice to login (implemented by the ¿namePasswordVerifier¿ bean in /WEB-INF/spring/userfeedback-plugin/userfeedback-authentication.xml).

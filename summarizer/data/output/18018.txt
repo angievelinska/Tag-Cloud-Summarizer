@@ -1,0 +1,3 @@
+
+
+The file capclient.properties configures the IOR URL of the server as well as the global timezone.

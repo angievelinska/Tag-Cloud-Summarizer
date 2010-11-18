@@ -1,0 +1,32 @@
+
+
+For this use case we will create a report that displays the top N most used browsers in a selected time frame.  The browser type for each  page and content view request is stored in the analytics database schema, but is not aggregated because it is not used in the standard reports.  We will extend our reporting system to pre-aggregate this result data, and retrieve it using a custom report.                
+
+
+Determine what data you need for your report, and how it should be aggregated
+
+Your new report should retrieve its data from tables of pre-aggregated data, not directly from the dimension or fact tables. Because your desired data does not already exist in one of the standard aggregation tables, you will need to create and populate new result tables as described in a later step.
+
+Analyze the data available in the database and determine what data you will need to retrieve and aggregate to support your new report(s).  See chapter for descriptions of available data. You can formulate a SQL query to test your aggregation strategy and check that the aggregated results will be appropriate for your report.
+
+For our use case, we can find browser information in the SESSIONS fact table.  We will aggregate the number of sessions which used each browser type over all standard reporting time ranges.
+
+
+Extend Aggregator by adding custom aggregation actions.
+
+Add aggregation actions into the "Custom Start" section under the "AutomatedTask name="CustomAggregationStart" action of the data-aggregator.xml workflow definition.  Complete descriptions of the uses and configurations of predefined tasks/actions can be found in section. 
+
+These predefined actions formulate SQL that will act against existing database tables to populate new result tables. The sample SQL aggregation you formulated in step 1 should help you determine which predefined action will suit your needs.  To aggregate our browser data, we will use the AggregateIntervalsAction.  First we specify what data we want to aggregate:  configure the SESSIONS table as the sourceTableName, STARTTIME as the sourceIntervalColumnName, and BROWSER as the sourceKeyColumnNames.
+
+The output of the predefined action you choose will define what types of result tables you must create in the database schema. In our use case we will create a series of tables modelled on the standard result table schema.  These new tables will usethe prefix "TOTALBROWSERS_", and will contain columns BROWSERINTERVALSTART, BROWSER, and BROWSERCOUNT as the target values for Interval, Key, and Count respectively.
+
+Extend the Database schema
+
+
+
+
+
+
+
+
+

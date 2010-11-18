@@ -1,0 +1,9 @@
+
+
+You can insert different special characters directly into the CoreMedia Editor using the keyboard.
+
+Soft Break: Press <Ctrl> + <Enter> to insert a soft break.
+Non-breakable Space: Press <Ctrl> + <Shift> +<Space>to insert a non-breakable space. If you place the pointer behind the non-breakable space a message will be shown in the status bar.
+Other special characters: You can enter more special characters by pressing <Alt> and entering a code "0xxx" with the numeric keypad. E.g. with <Alt> + <0128> you will get the Euro symbol.
+
+As the CoreMedia Editor supports Unicode, you can insert arbitrary characters using copy and paste. Nevertheless, these characters will only be displayed correctly if the font supports them.

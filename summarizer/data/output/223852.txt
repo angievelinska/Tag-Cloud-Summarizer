@@ -1,0 +1,47 @@
+
+
+Using the <analytics:link> tag you can easily generate a link that supports click tracking. Typically you only provide the target object and optionally the target view when invoking this tag.
+
+<analytics:link object="${self.targetObject}" view="myView">
+  ...
+</analytics:link>
+
+When rendering the page, the tag is replaced by an anchor element of the form <a href="..." onclick="...">. The target URL is computed from the given object and view. The JavaScript code rendered into the onclick handler also contains a representation of the click target. 
+
+It is possible and often necessary to compute the target object using an EL expression. The given object is then processed by the configurable target object resolver, which may replace it by another object, thereby normalizing the link.
+
+The locale of the target page is also computed using the target object resolver. If the target object resolver cannot compute a locale, the source locale is used. If you want to set the target locale explicitly, you can add the locale property to the tag.
+
+<analytics:link object="..." view="..." locale="en_US">
+
+In some cases, the target URL that is rendered by the tag library is not appropriate. In this case you can explciitly pass in the URL.
+
+<analytics:link object="..." view="..." href="${theURL}">
+
+You still have to pass the object and the view, so that they can be used for the tracking mechanism, but you get the freedom to add more parameters to the URL or render a nice shortcut URL. Obviously, the URL has to resolve to the given object and view ultimately.
+
+Most HTML attributes that are allowed for the <a> element are also allowed for the link tag and normally, the same name is used. An exception is the class attribute that has to be rendered using the styleClass parameter.
+
+<analytics:link object="..." view="..." styleClass="myClass">
+
+This is rendered as:
+
+<a href="..." onclick="..." class="myClass">
+
+An onclick handler is generated automatically to support link tracking. If the onclick attribute is set explicitly in the <analytics:link> element, the given value is appended to the generated onclick handler.
+
+
+Adding parameters to analytics:link
+
+Adding URL-parameters to <analytics:link> using <cm:params> is not feasible. If you want to add link parameters to <analytics:link> you can use a workaround which employs <cm:link> and <cm:param> together with <analytics:link>. The following snippet shows how to enable URL parameters in <analytics:link>:
+
+<cm:link var="paramLink" target="${sk:page(self,self)}">
+    <cm:param name="foo" value="bar" />  
+</cm:link>
+<analytics:link object="${sk:page(self,self)}" 
+styleClass="sk_link" href="${paramLink}" />
+
+
+
+
+The following table summarizes the permissible properties.

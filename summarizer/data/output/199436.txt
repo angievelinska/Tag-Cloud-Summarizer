@@ -1,0 +1,17 @@
+
+
+A workflow definition includes actions in several places, for example as entry and exit actions of user tasks, and in automated tasks. Specific kinds of action are the so-called remote client actions. While normally actions are executed on the Workflow Server, a remote client action is invoked on the user's computer.
+
+Remote client actions can be used to invoke functionality that is not easily emulated using customized workflow variable editors. For example, a remote client action might open a publication window, it might present a modal dialog, or it might start a native application installed on the user's computer.
+
+A remote client action can only execute when a session is open from the client to the workflow server. Similar to receiving an event, the session is informed that a remote client action should be executed. Since the server needs to know which session to inform, this is only possible for task entry or exit actions. The session that accepted or completed the task is recorded and used for the following remote client action.
+
+For a remote call, the name and parameters of the action are passed to the client. There, the call is presented to each registered RemoteActionHandler in turn. If a RemoteActionHandler cannot handle the call, it returns null instead of an action result, and the next handler will be invoked. The Unified API includes a remote action handler for all predefined workflow actions. Additional handlers for custom remote client actions can be added using WorkflowRepository#addRemoteActionHandler. See the javadoc for details.
+
+Remote Actions That Are Not Remote
+
+In CoreMedia CMS 2005 as in SCT 4.x, the same XML fragments and action names used for remote action invocation can also be used in automated tasks, where no client connection is available.  In this case, the "remote" action is not actually remote, but is executed on the server, by a server-local remote action handler.
+
+Starting with CoreMedia CMS 2005, it is also possible to execute an action in the name of a user without requiring the user to be currently logged in to the workflow server. When using the XML attribute "userVariable" for an action in an automated task, a content repository session for the given user is established before invoking the server-local remote action handler. The attribute "userVariable" contains the name of a UserVariable of the task or process, which is read every time the action is executed. Note that establishing the session will consume a license for that user. In CoreMedia SCT 4.x, remote actions in automated tasks were always executed in the name of the workflow user. 
+
+In order to deploy a custom remote action handler on the Workflow Server, you need to add its class name to the property workflow.server.remoteaction.handler in the file workflowserver.properties, which contains a comma separated list of fully qualified class names. Your class should provide a public no-args constructor and should implement the RemoteActionHandler interface. The built-in remote action handler provided by CoreMedia, com.coremedia.cotopaxi.workflow.BuiltInRemoteActionHandler, should usually come last. The jar-file containing your classes must be in the workflow server's class path. New or changed server-side handlers only become effective when the server is restarted.

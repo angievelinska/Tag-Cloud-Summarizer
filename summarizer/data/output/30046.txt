@@ -1,0 +1,11 @@
+
+
+Editor Remote Control URLs
+
+Requests have to be adressed to an URL of the pattern
+
+http://localhost:<port>/coremedia/control?<parameters>
+
+The port has to be the same as in the XML configuration.
+
+The parameters determine, which command to execute and on which data to execute it. There are some well-known parameters which ease the usage:

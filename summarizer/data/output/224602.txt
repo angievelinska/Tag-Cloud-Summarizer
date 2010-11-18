@@ -1,0 +1,16 @@
+
+
+Example
+
+<Document type="Dish">
+  <Property name="pictures" editorClass="GenericLinkListEditor">
+    <DialogSettings>
+      <NewDocumentDialogSettings
+      preselectedType="Picture"
+      preselectedResource="/MenuSite/Fish"
+      rootFolder="/MenuSite"
+      upperBound="Picture"/>
+    </DialogSettings>
+  </Property>
+</Document>    
+

@@ -1,0 +1,3 @@
+
+
+Different operations are possible or mandatory during the execution of a task instance to enter or leave the different states. Which operations are allowed to a user is defined by a configurable rights policy. The following table shows how to leave or enter the different task states. A user task always requires its performing user to have the appropriate rights to perform an action which changes the state of a task.

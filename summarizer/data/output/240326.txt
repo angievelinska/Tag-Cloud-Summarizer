@@ -1,0 +1,32 @@
+
+
+The window contains four parts:
+
+(1) - Here, you choose the search options.
+(4) - Here, the conjunction of the search options is shown. You can change the conjunction, replace an AND with OR for example or negate a search term with NOT.
+(5) - Here, you can choose how to sort the results. You can combine multiple sort options. 
+(6) - Here, your search expression is shown in the format which is passed to the Content Server. 
+
+In order to create your search expression, proceed as follows:
+Choose behind resource type the document type, for which you want to create the query.
+Add search options by selecting options from the Add condition field.
+
+When you have clicked  an option, it will be shown in the Advanced Query Editor and you can configure this search option. Click the cross () in front of the search option to remove it. The number in front of the search option (e.g. #1) is used in the Connect search conditions field to mark the search terms.
+3#
+Change, if necessary, the conjunction of the search terms in the Connect search conditions field (). Replace AND conjunctions with OR and negate terms with NOT.
+
+In addition you can combine terms with parentheses. An example:
+
+#1 AND #2 AND #3 AND #4
+
+becomes
+
+#1 OR #2 AND NOT(#3 AND #4)
+4#
+If required, add sort options by selecting options from the Add sort key field.
+
+When you have selected an option, it will be shown in the advanced query window. The results will be sorted in the order of the search options. Move or delete an sort option by checking the checkbox and use one of the tools known from the link lists.
+5#
+Click OK to transfer the search string to the document and to be able to start the query.
+
+The browser window closes and the editor shows the document with the search string.

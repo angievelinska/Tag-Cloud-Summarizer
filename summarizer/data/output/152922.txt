@@ -1,0 +1,3 @@
+
+
+The changepassword tool changes the password of a user. An administrator can change the password of every other user, all other users may only change their own passwords.

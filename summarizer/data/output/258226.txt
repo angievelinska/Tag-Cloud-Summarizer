@@ -1,0 +1,232 @@
+
+
+ Section Version Description    
+
+Section 
+
+Version 5.2.158 
+
+Added the PreviewController in the CAE to make it possible to use preview functionality of the CoreMedia Editor and WebEditor with the Content Application Engine. 
+
+Section 
+
+Version 5.2.158 
+
+Added the PreviewController in the CAE to make it possible to use preview functionality of the CoreMedia Editor and WebEditor with the Content Application Engine. 
+
+Section 
+
+Version 5.2.198 
+
+Documented how to reuse templates that contain Analytics tags in a non-Analytics project. 
+
+Section 
+
+Version 5.2.226 
+
+The certified Sun Java version has been changed to Java 1.5_10 or higher due to bugs in older Java 1.5 releases affecting CoreMedia CMS operations. 
+
+Section 
+
+Version 5.2.247 
+
+Added the Search Engine Feeder's configuration attribute indexGroups to the element Feeder in the file properties/corem/feeder.xml to disable possibly expensive feeding of groups with read rights. 
+
+Section 
+
+Version 5.2.252 
+
+Documented the options for computing click statistics, especially if the standard JavaScript callback of the <analytics:link> tag is nto sufficient. Documented updated configuration options of the Data Aggregator. 
+
+Section 
+
+Version 5.2.273 
+
+Fixed wrong column name in schema migration. 
+
+Section 
+
+Version 5.2.273 
+
+Corrected documentation of deployment of the Object Analyzer in the Workflow Server. 
+
+Section 
+
+Version 5.2.277 
+
+Documented the property workflow.server.managers.aggregator.db.scripts for locating database update scripts. 
+
+Section 
+
+Version 5.2.294 
+
+Documented the flags for enabling the multi-site semantics for computing sites for Analytics (using folder immediately below the root folder as sites). 
+
+Section 
+
+Version 5.2.294 
+
+Documented the flags for enabling the multi-site semantics for computing sites for Analytics (using folder immediately below the root folder as sites). 
+
+Section 
+
+Version 5.2.294 
+
+Documented the flags for enabling the multi-site semantics for computing sites for Analytics (using folder immediately below the root folder as sites). 
+
+Section 
+
+Version 5.2.335 
+
+Added description of new Query server utility option. 
+
+Section 
+
+Version 5.2.347 
+
+The disk requirements for permanent data and for archive logs have been documented in the Analytics administration section. 
+
+Section 
+
+Version 5.2.353 
+
+Added new supported platforms 
+
+Section 
+
+Version 5.2.353 
+
+Added new supported platforms 
+
+Section 
+
+Version 5.2.353 
+
+Added the WebDAV Server's configuration option filesystem.export.<i>.emptyDocument for folder mappings. 
+
+Section 
+
+Version 5.2.353 
+
+Added new supported platforms 
+
+Section 
+
+Version 5.2.361 
+
+Some additonal attributes of the <Http> action of the watchdog were documented, now supporting HTTP basic authentication and response verification. 
+
+Section 
+
+Version 5.2.368 
+
+Documented sampling for Analytics. Sampling allows you to greatly reduce the server load due to Analytics when operation very large websites. 
+
+Section 
+
+Version 5.2.368 
+
+Documented sampling for Analytics. Sampling allows you to greatly reduce the server load due to Analytics when operation very large websites. 
+
+Section 
+
+Version 5.2.368 
+
+Documented sampling for Analytics. Sampling allows you to greatly reduce the server load due to Analytics when operation very large websites. 
+
+Section 
+
+Version 5.2.368 
+
+Documented sampling for Analytics. Sampling allows you to greatly reduce the server load due to Analytics when operation very large websites. 
+
+Section 
+
+Version 5.2.371 
+
+Documented the new configuration options for selecting the possible sizes and the default size for ranked ("top-10") Analytics reports. 
+
+Section 
+
+Version 5.2.374 
+
+It has been documented how the navigation from the single-page dashboard to the analyzed page can be configured and used in CoreMedia Analytics. 
+
+Section 
+
+Version 5.2.374 
+
+A new configuration property for In-Site Analytics has been added, which determines which mode is used for the link overlays. 
+
+Section 
+
+Version 5.2.374 
+
+A new configuration property for In-Site Analytics has been added, which determines which mode is used for the link overlays. 
+
+Section 
+
+Version 5.2.389 
+
+The limitations of the tools cm republish and cm publishall have been documented. 
+
+Section 
+
+Version 5.2.389 
+
+The limitations of the tools cm republish and cm publishall have been documented. 
+
+Section 
+
+Version 5.2.390 
+
+Documented the new Analytics property workflow.server.managers.aggregator.index.rebuild.threshold. 
+
+Section 
+
+Version 5.2.390 
+
+Documented the new Analytics property workflow.server.managers.aggregator.index.rebuild.threshold. 
+
+Section 
+
+Version 5.2.396 
+
+Added description of new JMX watchdog action 
+
+Section 
+
+Version 5.2.396 
+
+Added description of ProactiveEngine monitoring 
+
+Section 
+
+Version 5.2.443 
+
+The new automatic purge feature of the Data Aggregator has been described. This feature allows to discard unneeded fact data and old statistics. The Data Aggregator will choose times of low load to execute these potentially expensive tasks. 
+
+Section 
+
+Version 5.2.443 
+
+It was documented that the tracking multiplier should only be changed close to midnight, thereby ensuring good data quality. 
+
+Section 
+
+Version 5.2.443 
+
+The new automatic purge feature of the Data Aggregator has been described. This feature allows to discard unneeded fact data and old statistics. The Data Aggregator will choose times of low load to execute these potentially expensive tasks. 
+
+Section 
+
+Version 5.2.443 
+
+It was documented that the tracking multiplier should only be changed close to midnight, thereby ensuring good data quality. 
+
+Section 
+
+Version 5.2.443 
+
+The new automatic purge feature of the Data Aggregator has been described. This feature allows to discard unneeded fact data and old statistics. The Data Aggregator will choose times of low load to execute these potentially expensive tasks.
+

@@ -1,0 +1,3 @@
+
+
+It's possible to set multiple key/value pairs simply by using multiple preference elements. You can also omit the value in a preference to set an empty preference value. For example:

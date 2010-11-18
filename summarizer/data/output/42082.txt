@@ -1,0 +1,3 @@
+
+
+Queries are treated like documents: they are saved as documents, they can be copied, renamed, moved or opended by a doubleclick.

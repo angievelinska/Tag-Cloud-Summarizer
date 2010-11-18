@@ -1,0 +1,10 @@
+
+
+<wage:img>
+
+Renders a HTML image tag with optional tooltip etc. according to keys which can be defined in property files. If the srcKey cannot be found in any property file, this tag tries to get the image from the CoreMedia editor resources. This tag is an extension of the Struts img tag, so you can also use any other attribute allowed for the Struts tag. Attributes:
+
+srcKey (optional): key in a property file pointing to an image path (Struts tag attribute)
+large (optional): try to get large or small editor icon, only used if srcKey can't be found, true or false
+unselectable (optional): true or false, indicating if an uselectable="on" attribute should be rendered in the HTML tag, which is used to indicate to WAGE editors if this image can get the focus.
+

@@ -1,0 +1,5 @@
+
+
+JndiNameLoginPredicate 
+
+This predicate returns true if the users JNDI name or the JNDI names of his groups match a regular expression or null if not. The JNDI name is the LDAP distinguished name, i.e. the reference to the LDAP user entry:

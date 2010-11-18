@@ -1,0 +1,6 @@
+
+
+Take the blobstore-example.xml file as an example and see the javadoc of the hox.coreme.server.media package for further details. 
+
+If you want to store BLOBs in different locations, depending on some properties of the BLOB, you can add media store selectors to the Content Server. A media store selector defines under which conditions a specific blob store should be used. Figure shows the configuration of two media store selectors. One for BLOBs larger than 1000000 bytes, which are stored in the file system, and one for images smaller than 8192 bytes, which are stored in a different database table. 
+

@@ -1,0 +1,10 @@
+
+
+Copy into one cell
+
+If you copy tables or table cells into one table cell, they are inserted as a nested table. All attributes of the inserted table or table cells are conserved. Proceed as follows:
+Copy a table or table cells into the clipboard.
+Select a cell in the target table.
+Paste the data from the clipboard.
+
+An nested table appears in the target table.

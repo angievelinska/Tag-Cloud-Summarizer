@@ -1,0 +1,9 @@
+
+
+The user repository manages User objects and Group objects. A Group can contain an arbitrary number of Member objects, which may be users or groups. The Unified API distinguishes between membership and direct membership. Only the latter is directly stored, the former is computed dynamically. A Member object is a member of a certain group, if there is a chain of direct member associations that ultimately leads from the group to the member.
+
+Every member has a name and a domain. There are typically only very few domains in any given CoreMedia CMS installation, leaving the name as the main identifying feature of a member. A user is often designated in the <name>@<domain> format, e.g., joe@mydomain or admin@. As you can see, for built-in users, the domain part is left empty.
+
+The domain that is represented by the empty string provides access to the built-in user management of the Content Server. For members of this domain this is also indicated by the method isBuiltIn(). Only members of the built-in user management may be changed under direct control of the Unified API. Users of other, external domains are mapped into the system from external servers by means of the LDAP protocol. Only read access is allowed for external domains. You can access the distinguished name of an external user through the Unified API in case you need to connect back to the LDAP repository.
+
+For users of external domains, the getter methods of CapObject, which is a super interface of Member, may be used to access custom string attributes stored in the LDAP server. The built-in user management does not support member attributes. Note that there is no fixed set of CapType objects for members, because LDAP does not enforce a strict typing. Instead, there is one artificial type per member that describes the available properties for these objects.

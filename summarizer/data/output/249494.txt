@@ -1,0 +1,16 @@
+
+
+You must create tables in the database schema that support the output of your custom aggregation action. In the previous step, the AggregateIntervalsAction provides a target table parameter that specifies a prefix name for your target tables. As described in section, this particular action aggregates results over the predefined reporting system time intervals (listed in section) and inserts these values into tables with this prefix.
+
+Using the prefix "TOTALBROWSERS_", you would then need to create twelve results tables using the naming convention TOTALBROWSERS_XX, where "XX" is one of the interval type codes: TOTALBROWSERS_HH, TOTALBROWSERS_DH, etc. Their column names must agree with the names specified in the AggregateIntervalsAction target...ColumnNames parameters, and their data types must be compatible with the columns referenced by the source...ColumnNames parameters.  So each TOTALBROWSERS_XX table should contain at least the following columns:  BROWSER of type Integer/Number, BROWSERINTERVALSTART of type Timestamp/Date, and BROWSERCOUNT of type Integer/Number (actual type names will depend on which database you are using).  
+
+
+4#
+Test the new Workflow Aggregator
+
+Upload and run your new Workflow (see the Administration and Operations Manual section "CoreMedia Analytics", subsection "Running the Aggregation Process" for details). Ensure that your new results tables are populated with the expected values.
+
+
+Create a report to access the new data
+
+If you want to create a new report to access this new data follow the steps in Recipe #1. When you get to steps 5 and 6, you simply have to configure your query to retrieve data from your custom tables instead of from the default results tables.

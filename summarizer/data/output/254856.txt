@@ -1,0 +1,125 @@
+
+
+The CoreMedia Editor can be configured using different XML-files. The names of these files are defined in the editor.properties file. The files are a small bootstrap file (editor.startup.configuration) necessary for some settings before the actual start of the editor, and the XML files for the customization of the editor. The following use cases are supported:
+
+Everyone uses the same configuration file. This file is defined by the property editor.configuration.
+Everyone uses the same common configuration file with additional group (group.configuration) and/or user (user.configuration) specific configuration files.
+Each group has its own configuration files defined by group.configuration and the <ConfigGroups>-element in the editor startup file. Additional user specific configuration files can be used. The groups might share configuration files but they do not have to.
+
+If a user is member of more than one group for which specific configuration files exist, then the system chooses an arbitrary group for which the configuration file is taken. So, it's good practice, to have only one group for each user for which a configuration file exists. If this is no option, you can define your own selection scheme as described in the Editor Developer Manual.
+
+The files are evaluated in a specific order:
+
+No <ConfigGroups>-element used
+Bootstrap file defined by editor.startup.configuration, 
+Common configuration file defined by editor.configuration
+Group specific files defined by group.configuration 
+User specific files defined by user.configuration. 
+
+<ConfigGroups>-element used
+Bootstrap file defined by editor.startup.configuration, 
+Group specific files defined by group.configuration and in <ConfigGroups> in the editor-startup.xml file (see chapter for details).
+User specific files defined by user.configuration. 
+
+Be aware, that you need to define a file in editor.configuration in both cases, even if it will not be used in the second case, otherwise an error occurs.
+
+Example for a configuration without a <ConfigGroups>-element
+
+You have made the following settings in editor.properties:
+
+editor.startup.configuration=editor-startup.xml
+editor.configuration=editor.xml
+group.configuration=editor-group-{0}.xml
+user.configuration=editor-user-{0}.xml
+
+A user named "Axel" who is only member of the group "editors" logs-in and the following configuration files are applied in the shown order:
+editor-startup.xml
+editor.xml
+editor-group-editors.xml
+editor-user-Axel.xml
+
+Example for a configuration with a <ConfigGroups>-element
+
+You have made the following settings in editor.properties:
+
+editor.startup.configuration=editor-startup.xml
+editor.configuration=editor.xml
+group.configuration=editor-group-{0}.xml
+user.configuration=editor-user-{0}.xml
+
+And these settings in editor-startup.xml:
+
+<ConfigGroups>
+   <ConfigGroup name="editors">
+      <Configuration name="common"/>
+      <Configuration name="editor"/>
+   </ConfigGroup>
+</ConfigGroups>
+
+The same user as before logs-in and the following configuration files are applied in the shown order:
+editor-startup.xml
+editor-goup-common.xml
+editor-group-editor.xml
+editor-user-Axel.xml
+
+Merging of files
+
+All elements which can occur only once - due to the coremedia-editor.dtd - will be overwritten by the settings of the succeeding configuration file. The following elements use inheritance:
+
+Bundle and Explorer elements will be added. 
+Existing  Document and Process definitions of Documents and Processes elements, will be overwritten, new definitions will be added. 
+Existing DocumentType definitions of DocumentTypes elements use inheritance on the PropertyType element level. That is, existing PropertyType definitions (e.g. a Validator set for the property Name) will be overwritten and new definitions will be added.
+
+Example:
+
+The interesting parts of the editor.xml look as follows:
+
+<Bundle name="first/bundle"/>
+<SpellChecker enabled="true"/>
+<Documents>
+  <Document type="Article">
+    <Property name="Headline" editorClass="FirstClass"/>
+  </Document>
+</Documents>
+<DocumentTypes>
+  <DocumentType name="Article">
+    <PropertyType name="Editor">
+      <Validator class="NotEmpty"/>
+      <Initializer class="SetChiefEditor"/>
+    <PropertyType/>
+  </DocumentType>
+</DocumentTypes>
+
+
+The interesting parts of the group specific editor definition look as follows:
+
+<Bundle name="second/bundle"/>
+<SpellChecker enabled="false"/>
+<Documents>
+  <Document type="Image">
+    <Property name="Caption" editorClass="SecondClass"/>
+  </Document>
+</Documents>
+<DocumentTypes>
+  <DocumentType name="Article">
+    <PropertyType name="Editor">
+      <ModelClass class="MyModel"/>
+      <Initializer class="SetEditor"/>
+    <PropertyType/>
+  </DocumentType>
+</DocumentTypes>
+
+Applying both editor definitions will result in the following behaviour:
+
+Both bundles will be used.
+The spell checker will be disabled.
+Article documents will use the property editor FirstClass with the property Headline and Image documents the property editor SecondClass with the property Caption.
+Article documents will use the validator class NotEmpty, the initalizer class SetEditor and the model class MyModel with the property Editor.
+
+See chapter for a detailed description of the properties.
+
+You can either use locally stored files for each client or administrate these files centrally on the Content Server and deliver them to the clients.
+
+For locally stored files adding the path relative to <CoreMediaHome>.
+For centrally stored files adding the URL to the Content Server as described below.
+

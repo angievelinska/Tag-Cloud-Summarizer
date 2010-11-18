@@ -1,0 +1,13 @@
+
+
+Deletion of document types is best done with a mixture of server utilities and SQL commands. Proceed as follows:
+Start a query from the CoreMedia Editor to select all documents of the document type to delete.
+Mark all these documents for deletion.
+Publish all the document.
+Use the cleanrecyclebin utility to remove all the documents from the recycle bin.
+Stop the Content Management Server and the Live Servers.
+Remove the document types to delete from the document types definition files of all Content Servers.
+Verify that the table which represents the document type is empty.
+ Drop the table which represents the document type from the databases.
+Start the Content Servers again.
+

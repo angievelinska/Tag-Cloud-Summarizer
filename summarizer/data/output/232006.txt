@@ -1,0 +1,80 @@
+
+
+ Menu item Sub items Function (1) All defined fonts Select a font. (2) All defined font sizes Select a font size for your text. (3) All paragraph formats Select a paragraph format. (4)  Format text as bold (5)  Format text as italic (6) 
+
+Default
+
+Underline
+
+Strike through
+
+Subscript
+
+Superscript
+
+Background color
+
+Color
+
+Language
+
+Stylesheet attribute Format the selected text (7) 
+
+Remove alignment
+
+Align left
+
+Center
+
+Align right
+
+Justify
+
+Ordered List
+
+Unordered List
+
+Indent 
+
+Outdent
+
+Add Blockquote
+
+Remove Blockquote  Format paragraphs (8) 
+
+Link...
+
+Internal Link...
+
+Insert an image... Insert images or links (9) 
+
+Insert a table...
+
+Insert column left
+
+Add column right
+
+Select column
+
+Delete selected columns
+
+Insert row above
+
+Add row below
+
+Select row
+
+Delete selected rows
+
+Merge cells
+
+Split merged cells
+
+Split cells horizontally
+
+Split cells vertically
+
+Flatten tables
+
+Set table attributes Insert and format tables
+

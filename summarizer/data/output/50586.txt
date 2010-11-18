@@ -1,0 +1,11 @@
+
+
+Each of these chapters starts with a general window (or interface) description, followed by:
+
+
+
+
+the menu bar
+
+
+the tool bar

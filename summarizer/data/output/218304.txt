@@ -1,0 +1,6 @@
+
+6#
+Enter the ports of the Tomcat installation into the appropriate fields and click [Next].
+
+If you have chosen one of the Web application templates and/or Editing Services for JSF you have to configure the objectserver.properties file. Here you can enter the data necessary for connection with the Content Server .
+

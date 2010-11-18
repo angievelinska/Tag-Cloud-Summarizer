@@ -1,0 +1,5 @@
+
+
+Principle of assembly
+
+You can consider every jsp-template as a fragment of a complete page. If you want to combine fragments to a complete page, use our tag-library to include the fragments into other fragments. Static fragments are independently stored in the cache while sub-fragments which should be included are only stored as placeholders. These placeholders are replaced by the actual sub-fragments at delivery time. The act of combining the fragments into the page is called assembly.

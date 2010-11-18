@@ -1,0 +1,5 @@
+
+
+After you set the options for search and replace and completed this task, you are assigned the search-and-replace-task. It is automatically accepted (see Bild 3.9.3a). 
+
+This step is the processing of documents, the actual search and replace. You can choose between automatic and interactive search and replace modes.

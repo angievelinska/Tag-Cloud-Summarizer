@@ -1,0 +1,4 @@
+
+
+  Menu item  Sub items  Functions  Copy    Copies the selected resource to the clipboard. A copy will be pasted to the target position.  Select all   Select all resources.
+

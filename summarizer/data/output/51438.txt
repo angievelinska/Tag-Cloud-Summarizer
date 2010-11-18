@@ -1,0 +1,16 @@
+
+
+
+3#
+
+
+
+Configure the ADS via config.bsh to query the container-provided user information:
+
+
+
+3* generator.setPlainRoleMap(true)
+
+
+
+3* Please refer to the API documentation of Generator.set{Plain}RoleMap  for customization options.

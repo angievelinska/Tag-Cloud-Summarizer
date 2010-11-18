@@ -1,0 +1,23 @@
+
+
+In the following, you will find a discussion of full deployments that include all components of the CoreMedia Analytics Engine. For low-traffic sites, you can use the Analytics Data Aggregator simultaneously as the Workflow Server for editorial processes. For high-traffic sites, this is not recommended, because the log processing may slow down the editorial processes too much. Therefore, a standalone Analytics Data Aggregator is recommended for high-traffic sites.
+
+Standalone Deployment
+
+This deployment consists of:
+
+a Content Management Server,
+a Master Live Server,
+a Workflow Server,
+an Analytics Data Aggregator,
+an Object Analyzer,
+
+
+a preview servlet engine (for example a Tomcat), containing
+
+a preview CAE with In-Site Analytics and
+an Analytics Dashboard,
+a delivery CAE enabled for click tracking,
+databases for the servers and for the Analytics Engine.
+
+The following figure illustrates the deployment assuming a firewall between Content Management Environment and Content Delivery Environment.

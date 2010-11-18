@@ -1,0 +1,111 @@
+
+
+The previous diagram marks the fact tables by the «fact» stereotype. Dimension tables are easily recognized by their Dimension suffix.
+
+SiteDimension
+
+The SiteDimension table associates numeric ids in column id and textual ids in column siteId one-to-one.
+
+ObjectDimension
+
+The ObjectDimension table associates numeric ids in column id and textual ids in column objectId one-to-one. It also associates each object to its site using the site column.
+
+PageDimension
+
+The PageDimension table associates numeric ids in column id and triples of object, view and locale in columns pageObject, pageView and pageLocale one-to-one. It also provides a shortcut to the object's site by means of the pageSite column.
+
+ContextDimension
+
+The ContextDimension table associates numeric ids in column id and context strings in column context one-to-one.
+
+ReferrerDimension
+
+The ReferrerDimension table associates numeric ids in column id and referrer strings in column referrer one-to-one.
+
+RobotDimension
+
+The RobotDimension table associates numeric ids in column id and robot string ids in column robotId one-to-one.
+
+UserDimension
+
+The UserDimension table associates numeric ids in column id and user names in column userName one-to-one.
+
+BrowserDimension
+
+The BrowserDimension table associates numeric ids in column id and browser (user agent) names in column browser one-to-one.
+
+SearchCollectionDimension
+
+The SearchCollectioDimension table associates numeric ids in column id and search collection ids in column searchCollection one-to-one.
+
+SearchTermDimension
+
+The SearchTermDimension table associates numeric ids in column id and search terms in column searchTerm one-to-one.
+
+Sessions
+
+Each entry in the fact table Sessions represents a single session that has been open at some time in the past or that is currently open.
+
+The id column contains the numeric identifier of the session. Numeric identifiers are unique in the entire table. Numeric identifiers are used when other tables reference the Sessions table.
+The sessionId column contains the string identifier of the session. String identifiers are unique in the entire table.
+The isOpen bit determines whether the session is still open (1) or already closed (0).
+The columns startTime and startIntervalStart denote the exact start time of the session and the In-Site Analytics time interval containing the start time, respectively.
+The columns lastAccessTime and lastAccessIntervalStart denote the exact time and the interval containing the last request made using this session.
+The column currentLength denotes to total number of page views in this session so far.
+The column userId associates the session with a user.
+The column browser associates the session with a browser name.
+The column startPage associates the session with the first page viewed in the session.
+The column startSite redundantly stores the site of the first page.
+The column lastPage associates the session with the last page viewed in the session.
+The column lastSite redundantly stores the site of the last page.
+If non-null, the column lastSourceId associates the session with the page from which the click to the last viewed page in the session originated.
+If non-null, the column lastSourceContext associates the session with the context of the click from lastSourceId.
+The column multiplier denotes the sampling multiplier in effect when this event occurred. The multiplier can be used to correct statistics for the true number of events.
+
+PageViews
+
+Each entry in the fact table PageViews represents a single page view event. If possible, additional information about the origin of the page view is also recorded.
+
+The columns eventTime and eventIntervalStart denote the exact time of the page view and the In-Site Analytics time interval containing that time, respectively.
+The column pageId associates the event with the viewed page.
+The column pageSite redundantly stores the site of the viewed page.
+The column sessionId associates the event with a session.
+The column noInSession denotes the position of the event in a sequential order of events for its session. Note that due to clock synchronization issues the noInSession column does not monotonically increase with the eventTime column.
+The column contentSize contains the size of the delivered content in bytes.
+The column referrer associates the event with the referrer that was reported for this page view.
+If non-null, the column referrerSearchTerm associates the event with the search term through which this page was located.
+If non-null, the columns sourceId and sourceContext identify the page and context from which this page view was requested.
+The column multiplier denotes the sampling multiplier in effect when this event occurred. The multiplier can be used to correct statistics for the true number of events.
+
+ContextViews
+
+Each entry in the fact table ContextViews indicates that a certain part of a page was rendered.
+
+The columns eventTime and eventIntervalStart  denote the exact time of the context view and the In-Site Analytics time interval containing that time, respectively.
+The column pageId associates the event with the viewed page.
+The column pageSite redundantly stores the site of the viewed page.
+The column pageContext associates the event with the viewed context.
+The column sessionId associates the event with a session.
+The column multiplier denotes the sampling multiplier in effect when this event occurred. The multiplier can be used to correct statistics for the true number of events.
+
+InternalSearches
+
+Each entry in the fact table InternalSearches indicates that a search was performed using the CoreMedia Search Engine.
+
+The column eventTime denotes the exact time of the search.
+The column searchTerm associates the event with the used search term.
+The column searchCollection associates the event with the used search collection.
+
+RobotAccesses
+
+Each entry in the fact table RobotAccesses represents a robot site access.
+
+The column eventTime denotes the exact time of the access.
+The column site associates the event with the requested site.
+The column robotId represents the robot that requested the site.
+The column eventCount indicates how often the robot accessed the site.
+
+
+
+
+

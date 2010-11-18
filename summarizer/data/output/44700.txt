@@ -1,0 +1,7 @@
+
+
+Files which lie directly in the inbox are imported individually. If several source files should be imported in one operation, they must be combined in a subdirectory. Such subdirectories can have any desired name, only "bak" and "err" are reserved. The importer creates these two subdirectories and moves successfully imported source files and subdirectories to bak and failures to err.
+
+At the time of the import, the files must be completely ready. In particular, all files must be present in subdirectories which should be imported in one operation. Therefore, both individual files and complete subdirectories should (under Unix) only be moved to the inbox directories in one complete step with mv, not by means of successive copying or writing.
+
+If the inbox directories are empty, the importer goes to sleep. You can configure the sleeping time in seconds, using the property import.multiResultGeneratorFactory.property.sleepingSeconds. The special value "-1" means that the importer does not wait for new files, but only imports the current contents of the inbox directories once and then ends.

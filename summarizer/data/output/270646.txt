@@ -1,0 +1,67 @@
+
+
+A few manual steps are necessary to prepare a CAE application to BEA WebLogic Server 10. The exact steps differ depending on whether the application uses Editing Services for JSF (and JSTL) or only JSTL (without Editing Services for JSF). 
+
+The following CoreMedia components use Editing Services for JSF:
+
+Advanced Query Editor
+Bean Query Editor
+Differencing
+Starter Kit
+
+Other web applications provided by CoreMedia fall into the second group.
+
+Preparing a CAE Application using Editing Services for JSF for deployment in BEA WebLogic Server
+Install the JSF 1.1.1 implementation shipped with WebLogic server as a deployable library, either by using the server administration console or via the command line. The library is provided as jsf-ri-1.1.1.war in ${WL_INSTALL_ROOT}/wlserver_10.0/common/deployable-libraries. See BEA WebLogic Server 10.0 Documentation: Deploying Shared Java EE Libraries and Dependent Applications for details.
+Remove the JARs and dependencies included in jsf-ri-1.1.1.war from the web application's WEB-INF/lib directory: jsf-*.jar, jstl.jar, standard.jar, commons-collections.jar, commons-logging.jar, commons-beanutils.jar, and commons-digester.jar.
+If the web application's WEB-INF/lib directory contains a version of jtidy.jar, make sure it does not contain the packages org/xml/sax or org/w3c/dom. Delete both directories from jtidy.jar - if present - to avoid a LinkageError due to incompatible interfaces.
+In WEB-INF/log4j.properties, change the default log file path. The system property catalina.home is only defined by the Tomcat servlet container.
+Add a deployment descriptor weblogic.xml to the web application's WEB-INF directory, containing a reference to the deployed jsf-ri library and changing the class loading order to prefer libraries deployed in WEB-INF/lib over container libraries. See weblogic.xml Deployment Descriptor Elements for details.
+
+<?xml version="1.0"?>
+
+<weblogic-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://www.bea.com/ns/weblogic/90"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://www.bea.com/ns/weblogic/90
+   http://www.bea.com/ns/weblogic/90/weblogic-web-app.xsd">
+
+  <container-descriptor>
+    <prefer-web-inf-classes>true</prefer-web-inf-classes>
+  </container-descriptor>
+
+  <library-ref>
+    <library-name>jsf-ri</library-name>
+    <specification-version>1.1</specification-version>
+    <implementation-version>1.1.1</implementation-version>
+  </library-ref>
+
+</weblogic-web-app>
+
+Preparing a CAE Application without Editing Services for JSF for deployment in BEA WebLogic Server
+Install the JSTL 1.1.2 implementation shipped with WebLogic server as a deployable library, either by using the server administration console or via the command line. The library is provided as jstl-1.1.2.war in ${WL_INSTALL_ROOT}/wlserver_10.0/common/deployable-libraries. See BEA WebLogic Server 10.0 Documentation: Deploying Shared Java EE Libraries and Dependent Applications for details.
+Remove the JARs and dependencies included in jstl-1.1.2.war from the web application's WEB-INF/lib directory: jstl.jar and standard.jar.
+If the web application's WEB-INF/lib directory contains a version of jtidy.jar, make sure it does not contain the packages org/xml/sax or org/w3c/dom. Delete both directories from jtidy.jar - if present - to avoid a LinkageError due to incompatible interfaces.
+In WEB-INF/log4j.properties, change the default log file path. The system property catalina.home is only defined by the Tomcat servlet container.
+Add a deployment descriptor weblogic.xml to the web application's WEB-INF directory, containing a reference to the deployed jstl library and changing the class loading order to prefer libraries deployed in WEB-INF/lib over container libraries. See weblogic.xml Deployment Descriptor Elements for details.
+
+<?xml version="1.0"?>
+
+<weblogic-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://www.bea.com/ns/weblogic/90"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://www.bea.com/ns/weblogic/90
+   http://www.bea.com/ns/weblogic/90/weblogic-web-app.xsd">
+
+  <container-descriptor>
+    <prefer-web-inf-classes>true</prefer-web-inf-classes>
+  </container-descriptor>
+
+  <library-ref>
+    <library-name>jstl</library-name>
+    <specification-version>1.1</specification-version>
+    <implementation-version>1.1.2</implementation-version>
+  </library-ref>
+
+</weblogic-web-app>
+

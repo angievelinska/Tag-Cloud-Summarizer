@@ -1,0 +1,14 @@
+
+
+The CoreMedia JPEG Image Importer imports JPEG image files into the CoreMedia Content Management Server. In addition to the actual image information, the JPEG Image Importer also imports text information which has been saved by Adobe Photoshop in the JFIF image file, if the image file was created with this program. 
+
+This importer documentation shows how to use the Importer API which is based on the JAXP API from Sun Microsystems. JAXP allows parsing and transforming XML documents from any source. The implementation of the importer is done by transformer classes which are executed consecutively at running time. The aim of this "serial connection" is the flexible generation of XML documents in the CoreMedia XML format. From this format the importer framework creates the corresponding documents on the CoreMedia server. In order to use a transformer, you only have to add the appropriate TransformerFactory class and their configuration parameters in the configuration file.
+
+The importer is started with the command
+
+cm imageimport start
+
+Initialisation of components is described in general in Section 5.1.3.1. The name of the configuration file is imageimport.properties. In addition to the basic configuration which must be defined for every importer, it contains the configuration of the MultiResultGeneratorFactory Transformer implementation classes used.
+
+The standard class SubDirGeneratorFactory is used as the MultiResultGeneratorFactory:
+

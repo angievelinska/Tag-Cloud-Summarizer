@@ -1,0 +1,26 @@
+
+
+Open this web page by entering the following address in your browser:
+
+http://<server>:<port>/coremedia/admin
+
+For <server> you have to enter the computer name where the Active Delivery Server works and for <port> the port address on which you contact the ADS.
+
+You can choose the following options on this web page:
+
+Active Delivery Server Status and Setup: 
+3* Page for overview of the current configuration of the ADS. In addition, the number of cached pages is shown.
+View page cache: 
+3* Displays all cached pages and their dependencies. The number of pages in the cache could be very high, so the opening of the page could last. 
+Sync cached pages and filesystem: 
+3* The command leads to synchronisation of Active Delivery Server cache and database. This template should be used if cache entries have been manually deleted.
+View page dependencies: 
+3* With this page, the dependencies of a particular page can be displayed. In contrast to "view page cache" you don't have to display all pages in the cache, but you can choose the appropriate page by entering the URI in the appropriate form field. It should be noted that the URI is entered without Authority, Server names, Port and Active Delivery Server Context, e.g.: "/templateId=section-xml.jsp/id=1067".
+Browse dependencies:
+3* With this page, the dependencies of the Active Delivery Server cache can be browsed. 
+Web Container Information
+This page shows information concerning the web container in which the ADS is running.
+Java VM Information:
+3* This page shows information concerning the Java VM you are using.
+
+Last but not least, you can change from the administration page to the development page. The functionality of the development page is described in the Developer Manual.

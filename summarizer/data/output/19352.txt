@@ -1,0 +1,8 @@
+
+
+<Comparator>
+
+
+Child elements: %varies;
+
+Parent elements: <DocumentTypes>, <ColumnDefinition>, <TreeSorter>, <Processes>, <NamedDocumentVersionComparator>

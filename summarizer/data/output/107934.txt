@@ -1,0 +1,19 @@
+
+2#
+
+Enter your current password into the field Old password.
+
+Now enter the new password into the field New password.
+
+Please enter the new password once more into Repetition. This checks that the new password was entered correctly, since the entry is hidden; all characters are shown as stars.
+
+Confirm with clicking [OK].
+
+
+The password is changed. The change is effective for the next login.
+
+
+It is not possible to modify the user name.
+
+
+

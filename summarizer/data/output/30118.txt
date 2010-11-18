@@ -1,0 +1,15 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+remote 
+
+Defines whether the comparator should be used on client (false) or server side (true). Default is true. 
+
+name 
+
+Name of the comparator

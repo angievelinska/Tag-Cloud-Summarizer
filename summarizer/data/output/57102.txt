@@ -1,0 +1,3 @@
+
+
+Or, by manually constructing an (unnamed) subject consisting solely of groups:

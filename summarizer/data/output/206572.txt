@@ -1,0 +1,17 @@
+
+
+The syntax is defined in detail in the Javadoc for the Java class javax.security.auth.login.Configuration. The application name in jaas.conf is JaasCap. This value is fix and must not be changed. The ModuleClass values in jaas.conf can be one of:
+
+
+
+hox.corem.server.CapLoginModule, 
+
+
+hox.corem.login.LdapLoginModule 
+
+
+or another user-defined LoginModule. 
+
+The value of Flag is always set to sufficient. The ModuleOptions is a space separated list of login module-related arguments.
+
+The following table contains the module options of CapLoginModule:

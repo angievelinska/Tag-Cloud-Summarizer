@@ -1,0 +1,8 @@
+
+
+
+3#
+
+
+
+If a group has no READ rights on a parent folder for folder type "+", then a child folder has no READ rights at all. The READ right can only be withdrawn explicitly by a rule with empty rights.

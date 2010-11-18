@@ -1,0 +1,49 @@
+
+
+JPEG (Joint Photographic Experts Group) is a lossy compression procedure for images standardized by the ISO. The JPEG standard (ISO DIS 10918-1) also contains a structural description of the corresponding files, but this definition is rather loose, so that exchange of JPEG images between different applications and platforms does not always function without problems.
+
+Therefore, the JPEG File Interchange Format (JFIF) is a minimal standard to organise the exchange of JPEG-compressed images between different platforms and applications.
+
+A JFIF file can be divided into sections introduced by the byte 0xff and a so-called marker byte. The first section consists only of the two bytes 0xff and 0xd8. The latter byte is also known as SOI. After this, a section always follows which begins with the two bytes 0xff and 0xe0. 0ex0 is also known as APP0 marker. After this marker follows the sequence:
+Length (2 Bytes): the number of bytes of the section. The marker is not counted. The 2 bytes of this length declaration are included. The value is almost always 0x00 0x10.
+Identifier (5 Bytes): the five bytes 0x4a 0x46 0x49 0x46 0x00. The first four bytes form the word "JFIF".
+Version (2 Bytes): the two bytes 0x01 0x02, which designate Version 1.02.
+Unit (1 Byte): unit of colour density, which can be 0, 1 or 2. For the meaning, see the specification.
+X density (2 Bytes): horizontal pixel density
+Y density (2 Bytes): vertical pixel density
+X thumbnail (1 Byte): number of pixels in the X direction
+Y thumbnail (1 Byte): number of pixels in the Y direction
+(RGB)n (3n Bytes): 24 Bit RGB value for the thumbnail image; n=X thumbnail * Y thumbnail. If no thumbnail exists, the last entry does not appear and the number of bytes in the sequence above is 16 or 0x10. This is then the value of the length declaration.
+
+After the APP0 marker section, a APP13 marker section can follow, introduced by 0xff and 0xed (APP13). This section is used by Photoshop for storing metainformation, e.g. the title or the author, and consists of the following sequence:
+Length (2 Bytes): as above
+Identifier: a series of bytes representing, for example, the string "Photoshop 3.0" and ending with the zero byte 0x00.
+Unknown (12 Bytes): The contents of the Photoshop section no longer belongs to the JFIF specification and is not publicly documented in full.
+IIM Record 2: See following description.
+
+The IIM Record 2 is part of the "IPTC - NAA Information Exchange Model" (IIM) specification, which describes a model for sending files from different sources between different computer systems. The core concept of the model is the electronic envelope, which represents the seventh level of the OSI news model and can be freely used by applications. This envelope can contain data of any format, e.g. text, images, graphics, audio and video, which is described by additional information in the envelope.
+
+The electronic envelope can consist of nine so-called records, of which only six have been defined so far. Each record is numbered from 1 to 9 and contains so-called DataSets, which always consist of a unique tag and a data field. Only a few DataSets have a fixed byte length. There are two types of DataSet, Standard DataSets and Extended DataSets. The latter are used when the number of bytes in the data field exceeds 32767.
+
+The tag in the Standard DataSet consists of five bytes, which have the following meaning:
+Tag Marker: stands at the beginning of the tag and always has the value 0x1c.
+Record Number: number of the record, i.e. a byte from 0x01 to 0x09
+DataSet Number: number of the DataSet in binary form
+Data Field Octet Count: together, bytes 4 and 5 give the length of the data field. The seventh bit in byte 4 is always 0. This results in a maximum length of 32767.
+
+Record 2 contains DataSets, which contain metainformation about the news object. In the following, some DataSet numbers are listed with their meaning:
+
+Record Version (0x00): All DataSets in Record 2 are optional. However, when a DataSet does exist in Record 2, then the DataSet must also contain the number 0. The data field contains the version of the IIM specification for Record 2.
+Object Name (0x05): Short description for the object consisting of a maximum of 64 Bytes
+Special Instructions (0x28): Editorial notes which relate to the use of the message, e.g. transmission bans or warnings (max. 256 Bytes)
+Date Created (0x37): Creation date of the message in the ISO8601 format CCYYMMDD
+Time Created (0x3c): Creation time of the message in the ISO8601 format HHMMSS(+|-)HHMM
+By-line (0x50): Name of the author, photographer or graphic artist (max. 32 Bytes)
+By-line Title (0x55): Title of the author, photographer or graphic artist (max. 32 Bytes)
+City (0x5a): Location of the message (max. 32 Bytes)
+Country/Primary Location Code (0x65): 3 Byte country code according to ISO3166 or IPTC
+Headline (0x69): Headline (max. 256 Bytes)
+Credit (0x6e): Message supplier (max. 32 Bytes)
+Source (0x73): Original owner of the message content (max. 32 Bytes)
+Caption/Abstract (0x78): Textual description of the message content (max. 2000 Bytes)
+Writer/Editor (0x7a): Name of the person who was involved in editing (max. 32 Bytes)

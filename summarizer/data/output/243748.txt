@@ -1,0 +1,7 @@
+
+
+BooleanExpression
+
+Definition: Equal | NotEqual | Greater | GreaterEqual | Less | LessEqual | And | Or | Implies | Not | ForAll | Exists | Let | Get | Read | Length | IsEmpty | NotEmpty | IsFolder | IsDocument | IsDocumentVersion | IsExpired | IsEnabled
+
+The BooleanExpression parameter entity is used to define a subset of all available expressions which evaluate to a boolean value.  

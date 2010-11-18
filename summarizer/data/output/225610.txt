@@ -1,0 +1,7 @@
+
+
+The content is held in a structure made up with folders and subfolders which you can create in the overview window.  
+
+Initially, there is just the root folder with the subfolders Home, and System. These folders are created by the CoreMedia system. 
+
+ 

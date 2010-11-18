@@ -1,0 +1,77 @@
+
+
+Template Discovery
+
+In order to do an object-oriented template dispatch, a template needs to be associated with its corresponding bean class. By default this is performed through a directory layout and naming scheme. In general, a template for a class com.company.Article and view name view must be placed in /WEB-INF/templates/com.company/Article.view.jsp. That is,  the package name translates into the directory name, and the class name plus view name plus JSP extension form the file name. The Content Application Engine also supports the notion of a default view. This view is mapped to a JSP without a view name, i.e. /WEB-INF/templates/com.customer/Article.jsp in our example. We recommend that your classes always are in a package.
+
+The naming convention supports easy retrieval of the template files in an IDE. In Intellij IDEA you can easily open an Article template by invoking Find File (CTRL-SHIFT-N), typing Article. and selecting the right template from the popup list. Similar functionality is available in other IDEs as well.
+
+Note that the example template above is for a generated interface Article. Due to the OO dispatch performed by the view dispatcher it is applied to instances of ArticleImpl. It is also possible to write the template directly for ArticleImpl, but the recommended style is to apply templates to the bean¿s public interface.
+
+It is best practice to provide a fallback view in case that the required view is not available. Provide a template Object.unknown-view.jsp which renders an appropriate error message. Configure the fallback view in the spring/cae-views.xml file with a Customizer as follows:
+
+<bean id="viewDispatcher"
+class="com.coremedia.objectserver.view.RepositoryViewDispatcher">
+  <property name="fallbackView" value="unknown-view"/>
+  ...
+
+Data Access
+
+A template will mostly access objects stored in the request scope, typically using JSP expression language or custom tags. In a CoreMedia Content Application Engine template, the request scope attribute self has a special meaning: it denotes the target object on which the template was invoked. It is the equivalent of the this object reference in Java methods. A simple template to display the name property of the target object looks as follows:
+
+<%@ page contentType="text/html;charset=utf-8" session="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:out value="${self.name}"/>
+
+Template Inclusion
+
+Other JSPs can be included via <jsp:include>. In this case, the view dispatcher is not involved in the template determination process. In order to involve the view dispatcher, you need to use the "include" tag from the Content Application Engine's tag library. It needs an attribute ¿self¿ that determines the target object of the template. The following code will find the appropriate template named teaser for anObject and include its output into the current page. Inside that template, self is temporarily bound to anObject:
+
+<cm:include self="${anObject}" view="teaser"/>
+
+Assuming that anObject is of type Article, the template Article.teaser.jsp will be included. The view attribute is optional; the default template (in this example, Article.jsp) will be chosen in case it is omitted. When no template for the view name teaser is found, the search ends with a failure - the default template is not used as a fallback!
+
+A template that wants to include the teaser views of all objects in its articles property would look as follows. Within each teaser template, self will be bound to the respective article object:
+
+<c:forEach var="article" items="${self.articles}¿>
+  <cm:include self="${article}" view="teaser" />
+</c:forEach>
+
+When looking for the appropriate template, the Content Application Engine performs the same steps as in an object-oriented language. If no template is defined for a certain class, it is inherited from its super class: the CAE will look for the template upwards in the inheritance hierarchy. It also considers interfaces, so you can register templates for interfaces, too. 
+
+Rendering Markup
+
+Markup properties are also rendered by including them:
+
+<cm:include self="${aMarkup}"/>
+
+The Content Application Engine defines a default view for objects of type com.coremedia.xml.Markup that converts CoreMedia Richtext to XHTML. See section for details. 
+
+Scoped Request Attributes
+
+The CoreMedia Content Application Engine supports an auxiliary tag that allows temporarily setting a request scope attribute and having it reset to its old value after the included fragment returns:
+
+<cm:include self="${article}" view="teaser">
+  <cm:param name=¿images¿ value=¿false¿/>
+</cm:include>
+
+Within the teaser template, the request attribute images will be set to false and will revert to its original value afterwards.
+
+The param tag can only be used within an include or link tag.
+
+Linking
+
+Linking similarly works with objects. You link to an object and a view through a tag:
+
+<cm:link target="${article}" view="teaser"/>
+
+This tag consults the link formatter object and writes the formatted URL to the page. Since you probably want the output in the href-Attribute of an <a> tag, this forces you to put the link tag into the attribute so that the template is no longer well formed XML (of course, the output is!):
+
+<a href=¿<cm:link target="${article}" view="teaser"/>¿>more</a>
+
+Using JSP 2.0, a well-formed XML template can be written, if you first store the link to a variable, like with the JSTL c:url tag:
+
+<cm:link var=¿teaserLink¿ target="${article}" view="teaser" />
+<a href=¿${teaserLink}¿>more</a>
+
+The link tag uses the link formatter object (defined in the framework jar in cae-linkformat.xml) and requires a link scheme that is able to handle the class of the object. All generated content beans implement the ContentBean interface for which a link scheme exists (see linkformat.xml and WEB-INF/spring/cae-linkschemes.xml); so there is no need to implement another one. It is necessary for beans that originate from other sources.

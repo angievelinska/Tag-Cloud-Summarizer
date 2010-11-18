@@ -1,0 +1,7 @@
+
+
+CreateDocument
+
+Use this action to create a new document in a specified folder.
+
+This element may contain any number of Property elements that specify initial property values for the newly created document.

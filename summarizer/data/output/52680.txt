@@ -1,0 +1,8 @@
+
+
+<wage:menu>
+
+Drop-down menu on a WAGE menu bar. Contains menuItems. Can only be used within a WAGE menuBar. Attributes:
+
+key (required): unique key for this menu
+

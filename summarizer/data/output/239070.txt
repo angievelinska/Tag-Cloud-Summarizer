@@ -1,0 +1,3 @@
+
+
+In this context a toolbar is a HTML Element which is rendered into the markup. It contains icons which triggers the execution of actions when they are clicked by an user. The toolbar is rendered by the ToolbarRenderer. The following picture shows the default view of the rendered toolbars in an web page.

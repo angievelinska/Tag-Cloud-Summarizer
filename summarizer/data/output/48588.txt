@@ -1,0 +1,5 @@
+
+
+We are using the generic WAGE ResourceListActionForm for this example, so we only have to configure (apart from the standard WAGE and Struts configuration) the actions and the .properties file for our new RichText editing command.
+
+We have to define several actions: One to start the wizard, one for each editing step, and one to commit changes after the preview. These have to provide appropriate ActionForwards (using the WAGE ResourceActionForward) for the different forwards that can occur in each situation. Since abort is used in every action and always forwards to the same URL, it is defined as a global forward. All other forwards are defined locally for the respective action.

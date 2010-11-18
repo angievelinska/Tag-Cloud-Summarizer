@@ -1,0 +1,3 @@
+
+
+With script-based installation, all files are moved to the installation archive without checking. They will be replaced by newer versions.

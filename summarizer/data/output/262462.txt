@@ -1,0 +1,5 @@
+
+
+Hyperlinks or simply links refer from one Web page to another. In CoreMedia CMS, there are internal links between documents. When shown on a Web page, internal links become normal hyperlinks.
+
+As explained in the previous section, pages and documents are not the same thing in the Starter Kit. A document needs a navigation context to become a page. Thus, when an internal link to a document is to be shown as a hyperlink on a Web page, a navigation context has to be given or derived. This is usually done automatically by the template or the business logic code that computes a page from the referring page and the referred document. The Starter Kit provides a default strategy to use the nearest page, where the nearest navigation node that is one of the contexts of the referred document is chosen to determine the page. The nearest node is one that has the minimum distance in the current navigation tree. The nearest page strategy also takes into account the locale of the current page and the referred document and determines a "best fit". For details on the lookup algorithm, see section.

@@ -1,0 +1,11 @@
+
+
+InitialAssignment
+
+
+
+Grammar: ( (Reads | Writes)*, Validator) 
+
+An InitialAssignment element defines that a variable is 'important' to a process instance during the initial creation of the workflow before the workflow is started. This way it is possible to set initial arguments for a process instance which cannot be changed after the instance is started. 
+
+With Reads and Writes the variables are specified.  The variables can or have to be modified by a user or an external process. Thus the InitialAssignment element defines a view on the variables. The modifications of the variables may be validated by Validators.

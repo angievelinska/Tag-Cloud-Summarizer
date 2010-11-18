@@ -1,0 +1,110 @@
+
+
+The CoreMedia Editor does not start under Windows.
+
+
+Possible cause:
+
+
+When redirecting the log outputs to a file ( OUTPUT_REDIRECT=log) under Windows it can occur that the CoreMedia Editor does not start. The reason for this can be another process (CoreMedia Editor, Text Viewer or similar), which has opened the log file in the meantime. Under Windows a file can only be opened by one process at any one time. If the CoreMedia Editor cannot open and write to its log file, it does not start.
+
+
+Possible solutions:
+
+
+a) Close the program which is accessing the log file of the CM Editor . Restart the CoreMedia Editor.
+
+
+b) If it cannot be determined which program is accessing the log file, the user must log off the Windows system and log in again. Afterwards, the CoreMedia Editor can be restarted.
+
+
+After installation of the CoreMedia Editor on the client computer, only an empty root directory appears after logging in.
+
+
+Possible causes:
+
+
+a) No subfolders have been set up.
+
+
+b) The server cannot reach the client computer. The server (as well as the client) must be able to resolve the name of the computer to contact in the network.
+
+
+Possible solutions:
+
+
+a) Set up subdirectories.
+
+
+b) If you are using DNS, the correct client computer name must be entered. After this, check that the local client computer name (machine name) matches the client computer name entered in the DNS.
+
+
+How the computer name is determined depends on the operating system of the computer:
+
+
+
+
+Windows NT4 Servicepack 5:
+
+
+
+3* for DHCP: System control/Network/Protocols/TCP-IP/Properties/DNS/Host name
+
+
+
+3* for fixed IP address: System control/Network/Identification/Computer name
+
+
+
+in contrast, under e.g. Windows 98SE, the computer name is determined as follows:
+
+
+
+3* for DHCP: System control/Network/Identification/Computer name
+
+
+
+3* for fixed IP address: System control/Network/TCP-IP/DNS Configuration/Host
+
+
+If you are not using DNS, the computer name of the client must be entered in the file /etc/hosts on the server. Correspondingly, the servername must be entered under $WINNT/system32/drivers/etc/Hosts on the client.
+
+
+Publishing resources apart from workflow
+
+
+In case of emergency it might become necessary to publish documents apart from a workflow. As administrator, you can publish as follows:
+
+
+
+
+Select Publication from the File menu.
+
+
+
+Click on the publication symbol.
+
+
+
+In the Overview window or in the Publication window, select Publish from the context menu.The document has been published. The status is shown by the symbol for 'published'.
+
+
+I cannot write to the Word dictionary/the spell checker does not use my user dictionary for suggestions
+
+
+It's not possible to write from the CoreMedia Editor to the Word user-dictionary. Whether Word uses the Word user dictionary or not depends on the configuration of Microsoft Word and can not be influenced by the CoreMedia Editor. Spelling suggestions are computed by Word only using Word dictionaries.
+
+
+Cross-language installations
+
+
+If OS and Microsoft Office have been installed in different language versions, this might cause errors when using the spell checker with the CM Editor.
+
+
+Example: Your computer runs on a German Windows, your Office application is an English one - as are your CoreMedia Editor and the language of your CoreMedia project.
+
+
+Explanation: The default language had been set to German - no matter if dictionary nor grammar available - automatically due to the user profile of the German operating system. This problem can be abstracted for any cross-language installations, so proceed in analogy for other languages. It is a genuine Microsoft problem, likely to occur with both Windows XP and Windows 2000.
+
+
+Solution: It is not sufficient just to change the Language Settings within your Office application. You have to go Programs | Microsoft Office Tools | Microsoft Office Language Settings. Set the default language to English and remove German from the list of enabled languages. This does not change the installed Office components themselves.

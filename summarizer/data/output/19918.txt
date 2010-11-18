@@ -1,0 +1,23 @@
+
+
+Using the file editor.xml, you can configure the document overview  i.e. the tabular listing of documents  in four windows:
+
+The explorer view in the Explorer window.
+The query view in the Query window.
+The document overview in the selection window for internal links to resources.
+The workflows in the workflow list.
+
+Configuration is the same for all four windows. However, there is the additional possibility in the main window of filtering the documents in the document window.
+
+The example configuration described here for the query window can simply be used for the other windows. Only the enclosing element has to be changed (Query, Explorer, ResourceChooser, Search and Workflow are possible).
+
+Creating a query view in the query window
+
+You want to create a query view in the query window which displays the following information:
+
+the document type
+the document name
+the content of a structured text field
+
+These column definitions are created within the <Query> and <TableDefinition> tags. Note that the document types and fields given in the following examples do not necessarily exist in your CoreMedia installation.
+

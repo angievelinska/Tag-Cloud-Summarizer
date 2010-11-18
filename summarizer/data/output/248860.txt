@@ -1,0 +1,15 @@
+
+
+If the user is logged in by one of the methods described in chapter, the Active Delivery Server will automatically apply the rules set in the SCI server to the resources requested by  templates, i.e., it will throw an exception if the template tries to read a resource it is not allowed to read. In order to help the template programmer, folders and link lists are automatically filtered from resources the user wouldn't have access to anyway. That means, methods like Folder#getChildren may return different results for different users. As a consequence, many templates need not to care at all about rights. They only see that subset of the repository that they are allowed to see.
+
+If, for any reason, the current template must have access to resources that the logged-in user is not allowed to see, it can switch into a special, "privileged" block through an API call:  
+
+3* Context#enterPrivilegedMode 
+
+which should later be closed via
+
+3* Context#leavePrivilegedMode 
+
+using a try-finally-block. 
+
+During such a privileged block, access to any resource is possible. Needless to say that this feature should be used carefully and well-encapsulated in single templates.

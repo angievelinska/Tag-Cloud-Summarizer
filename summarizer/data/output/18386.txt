@@ -1,0 +1,3 @@
+
+
+To remove a document lock click on the appropriate [Remove lock] button. Members of the administrator group can also unlock the documents of other users. This is useful if an application has not unlocked an opened document, for example because the application has crashed. Normally, it is not necessary to unlock a document manually.

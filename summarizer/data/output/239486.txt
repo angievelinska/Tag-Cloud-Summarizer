@@ -1,0 +1,8 @@
+
+13#
+
+
+Enter the URL of the Master Live Server in replicator.publicationIorUrl. In general, you have to change the given entry. Click [Next].
+
+
+

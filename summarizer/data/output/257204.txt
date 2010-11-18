@@ -1,0 +1,27 @@
+
+
+For interactive search and replace select a document from document list. It is displayed in the document view of the workflow window. The first appearance of the search text is highlighted. (If no matches are found, nothing is highlighted).
+
+Skip Document
+
+Click [Skip document].
+3* Marks the selected document as skipped. If no document is selected, the first in document list will be skipped.
+
+Replace
+
+Click [Replace].
+3* Replaces highlighted text, highlights next text match. If no more matches appear, the document will be checked in automatically and the next document will be chosen.
+
+Replace all
+
+Click [Replace all].
+3* Replaces all
+
+Replace not and continue
+
+Click [Search].
+3* The highlighted text will not be replaced, the next match is highlighted.
+
+Search from beginning: See [Search], but starts from the beginning of the document.
+
+If not all documents from the document list have either been skipped or processed, the search-and-replace task appears again in your workflow window. You can either skip the remaining documents and so finish this workflow or delegate the task to another user (see Section 3.7.7).

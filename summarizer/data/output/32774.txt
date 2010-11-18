@@ -1,0 +1,4 @@
+
+
+The following sections discuss cornerstones and issues of project migration to CAP 4.1. A basic precondition is to meet the system requirements for SCI 4.1. See the appropriate sections in the "System Requirements" section for more information. It is crucial to update your Java Virtual Machine.
+

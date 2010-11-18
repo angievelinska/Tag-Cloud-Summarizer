@@ -1,0 +1,19 @@
+
+
+CM usedlicenses is a utility for license management. It displays and deletes entries in the SQL table cmlicenses. This table has two columns: username and servicename .
+
+
+
+username holds user IDs, 
+
+
+servicename one out of the following CoreMedia service names:
+
+
+debug, dotnetappbridge, feeder, editor, filesystem, importer, publisher, replicator, system, webserver, workflow.
+
+This utility has the following syntax:
+
+cm usedlicenses (-print|-deleteuser < userid>)
+
+The parameters have the following meaning:

@@ -1,0 +1,7 @@
+
+
+If you are using Multi-Site Management for a CoreMedia CMS installation, more than one Master Live Server may be connected to one Content Management Server. To each of the Master Live Servers a number of base-folders is assigned, i.e., folders located immediately below the root folder of the Content Management Server. When performing a publication, the target Master Live Server is determined by the base-folder that contains the resources to be published. 
+
+In this scenario, each base-folder can be thought of as an isolated single-site Content Management Server. Resources cannot be moved across boundaries of base-folders, just as they cannot be moved outside a Content Management Server. Publications can only span single base-folders and published links must always connect resources within one base-folder. This ensures that a base-folder on the Live Server can be guaranteed to be self-contained, avoiding dangling link problems during delivery.
+
+In the following we will give some hints on how to deploy Multi-Site Management in different contexts.

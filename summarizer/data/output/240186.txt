@@ -1,0 +1,12 @@
+
+
+Workflow Server Properties
+
+ Attribute Type Description AppDesc Read-only Description of the CoreMedia System. HostInfo Read-only Installation host of the Workflow Server InstDir Read-only Installation directory of the Workflow Server JavaClasspath Read-only Classpath used by the current Java installation JavaInstDir Read-only Installation directory of the used Java. JvmInfo Read-only Information about the used JVM. JvmProcessInfo Read-only Java process information, the number of threads, free memory, used memory, total memory. LogActions Read/Write Enable ("true") logging of actions. LogClientActions Read/Write Enable ("true") logging of client actions. LogContentManager Read/Write Enable ("true") logging of the ContentManager. LogErrorLog Read/Write Enable ("true") logging of ErrorLog. LogExpressions Read/Write Enable ("true") logging of expressions. LogPersistenceAdapter Read/Write Enable ("true") logging of the PersistenceAdapter. LogPolicies Read/Write Enable ("true") logging of policies. LogProcessSweeper Read/Write Enable ("true") logging of the ProcessSweeper. LogSignals Read/Write Enable ("true") logging of signals. LogTimers Read/Write Enable ("true") logging of timers. LogTransactions Read/Write Enable ("true") logging of transactions. LongActionsMax Read/Write The maximum number of long actions. OsInfo Read-only Information about the operating system of the Workflow Server host. SessionsReaperTimeout Read/Write The interval in seconds between checks for inactive sessions (see SessionTimeout). SessionTimeout Read/Write The time in seconds before an inactive session is closed. TxIdleTimeout Read/Write The time in seconds before an idle database connection is closed. TxMax Read/Write The maximum number of database connections.
+
+
+
+Workflow Server Operations
+
+ Operation Attribute Description clearCaches  Clear the caches of the Workflow Server.
+

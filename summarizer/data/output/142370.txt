@@ -1,0 +1,3 @@
+
+
+To create a new user, a new user profile is created by means of the  symbol.

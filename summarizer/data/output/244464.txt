@@ -1,0 +1,5 @@
+
+
+The Http Cache is not only able to deliver the full http response of a request from the cache, but it is also able combine static parts from the cache with dynamically generated parts from the Content Application Engine. Personalization is a good use case for this ability. 
+
+The web page might contain a frame which is the same for all users containing logos, navigation, content and a personalized part which contains the last viewed pages and favorites for example. The Http Cache is able to cache the former content and to include the latter content dynamically on every request.

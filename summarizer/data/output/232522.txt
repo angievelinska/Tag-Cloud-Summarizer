@@ -1,0 +1,4 @@
+
+
+ Abstract Type Description VARCHAR(n) strings of variable length up to a maximum of n BIT 0 or 1, often representing false and true, respectively INTEGER 32-bit signed integers LONG 64-bit signed integers TIMESTAMP a point in time, represented in the UTC time zone
+

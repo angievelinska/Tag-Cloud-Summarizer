@@ -1,0 +1,12 @@
+
+
+This section describes concepts and structure of the CoreMedia Content Rules framework. Content Rules enable editors to define (overview) web pages, which contents are not composed manually but based on rules. A typical rule would be 
+
+"10 mobile phones with either mp3-player or 2.0MP+ video camera capabilities priced between 150 and 500 euros, ordered by price and by number of screen colors"
+
+Content Rules can thus be used to replace the manual assembly of product lists, article hot lists, etc. Instead, rules automatically assemble pages from content matching their criteria.
+
+
+
+
+

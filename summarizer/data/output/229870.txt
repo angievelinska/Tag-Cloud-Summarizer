@@ -1,0 +1,25 @@
+
+
+The JSF application behaves as a factory for components, converters and validators as well as a configuration bean used to set up the JSF runtime environment. The SpringApplication class used by Editing Services for JSF performs these tasks using the Spring bean factory. In order to create components, converters and validators, the SpringApplication searches its spring application context for prototype beans prefixed as follows:
+
+component:[component-id]
+converter:[converter-id]
+converter-for:[class-name]
+validator:[validator-id]
+
+Having in mind that the SpringApplicationFactory sets up a chain of delegating application factories there are at least the following two ways to define a type specific converter - let's say for com.coremedia.xml.Markup. First the  plain JSF way of a converter definition in a JSF configuration xml:
+
+<converter>
+  <converter-for-class>
+    com.coremedia.xml.Markup
+  </converter-for-class>
+  <converter-class>
+    com.coremedia.editing.kits.jsf.converters.MarkupConverter
+  </converter-class>
+</converter>
+
+Second, the spring bean definition prefixed as mentioned above:
+
+<bean id="converter-for:com.coremedia.xml.Markup"
+class="com.coremedia.editing.kits.jsf.converters.MarkupConverter"
+      singleton="false"/>

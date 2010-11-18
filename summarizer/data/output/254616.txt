@@ -1,0 +1,34 @@
+
+
+In this chapter you will find a short description of which components must be installed and how to start them for the first time after installation.
+Create a database user on your database for each Server instance (Content Management Server, Master Live Server and each of the optional Slave Live Servers)
+Install and configure the CoreMedia components on the Content Management Environment and on the Content Delivery Environment:
+
+In the Content Management Environment: 
+You have to install at least the Content Management Server and a CoreMedia Editor or WebEditor for the differencing feature of the CoreMedia Editor you have to install the CoreMedia Differencing Service.
+If you execute your own workflows or if you do not publish directly from the Editor and the WebEditor (not directly is default configuration), you have to install the Workflow Server.
+If you want to see a resource layout preview initiated from the Editor or WebEditor, you have to install an Active Delivery Server or a Content Application Engine.
+If you want to import data you need to install a Importer.
+If you want to use Web Services you need to install the CoreMedia Web Service Engine.
+
+In the Content Delivery Environment:
+You have to install at least the Master Live Server and a Content Application Engine or an Active or ProActive Delivery Server listening to the master.
+
+
+If you install Slave Live Servers, you have to install Content Application Engines, Active or ProActive Delivery Servers listening to the slaves. In this case you may but you need not to install Delivery Servers for the Master Live Server.
+
+
+3#
+For every CoreMedia Content Server instance  copy the database driver files as described in chapter.
+If your CM Content Server instances are running on a Windows platform, register each CM Content Server as a Windows service with the command cm contentserver install [-a] [-u user -p password] as described in chapter.
+Start the CoreMedia Content Server instances with the command cm contentserver start. On Windows platforms you can alternatively launch the CM Servers from the corresponding Start menu item or from the Windows Services window (see chapter for details).
+If your Workflow Server instances are running on a Windows platform, register each Workflow Server as Windows service with the command cm workflowserver install [-a] [-u user -p password] as described in chapter.
+Start the Workflow Server instances with the command cm workflowserver start. On Windows platforms you can alternatively launch the Workflow Servers from the corresponding Start menu item or from the Windows Services window (see chapter for details).
+Now you can upload workflows using the upload utility (see section) for each Workflow Server instance. The valid names are defined in Section 5.4.1. E.g.execute cm upload -u admin -p <Password> -n three-step-publication.xml. Be careful, if you do not have the unlimited, but the single workflow edition of the Workflow Server, you can upload only one workflow. Your chosen workflow cannot be changed without support of CoreMedia. Please make sure to select the right workflow. The license restriction does not apply to the Global Search and Replace workflow. If you have chosen this workflow, you can later upload one of the other predefined CoreMedia workflows, but again only once.
+If you want to use the Global Search and Replace workflow (recommended) you have to upload the Global Search and Replace workflow with the workflowupload utility. Execute the command cm workflowupload -u <username> -p <password> -name global-search-replace.xml and replace <username> and <password> with the user name and password of the admin user (ID=0) respectively. To start this workflow a user must be member of the group composer-role. If you have purchased the Workflow Server (Unlimited Edition), you can adapt the Global Search and Replace workflow to your needs.
+11#
+If you have a Workflow Server (Unlimited Edition), you can continue uploading further workflows in the same way as described for the Global Search and Replace workflow in the previous step.
+If you want to run your Active Delivery Server in Tomcat on a Windows platform, register the Active Delivery Server as a Windows service with the command cm httpd install [-a] [-u user -p password] as described in chapter.
+If you want to run your Active Delivery Server in Tomcat (on Windows or not), start Tomcat and the Active Delivery Server from the <TomcatInstDir>/bin directory with the command cm httpd start. On a Windows platform you can alternatively launch the Active Delivery Servers from the corresponding Start menu item or in the service list window you can open with ControlPanel|Administrative Tools|Component Services|Services (Local) (see chapter for details).
+Start the Editor with the command cm editor or from the corresponding Start menu item and login as admin user. For security reasons, change the passwords of all predefined users (default settings are password=username)! Make sure to change the passwords in the property files of the affected components also (e.g. you change the password for the user importer, you have to change the property import.password in the <importer>.properties file). Be sure that the access rights for these files are set in a secure way (e.g. no read rights for group and all.
+

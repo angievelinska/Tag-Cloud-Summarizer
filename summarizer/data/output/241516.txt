@@ -1,0 +1,5 @@
+
+
+Step 2 and step 3 of our editing wizard work like step 1, only that step 2 lets you edit the description property (will be explained in detail in XXX), and step 3 renders the ingredients property for editing. The action step3 is configured to forward to the  preview view of the current Dish.
+
+As the preview should look similar to the normal render view, preview.jsp simply includes the same view renderProperties and additionally renders buttons for aborting or committing the changes made to the current resource or to go back to the previous wizard step.

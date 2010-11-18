@@ -1,0 +1,6 @@
+
+
+This example demonstrates how LinkList properties of CoreMedia documents can be edited with WAGE. A WAGE toolbar is used in this example for allowing the user to resort LinkList entries and for removing items from the LinkList. For adding new entries, this example shows how to develop templates to render all Picture documents in a folder together with appropriate JavaScript commands for adding these Pictures to the LinkList that is being edited.
+
+
+Only the view part (templates and JavaScript) of this example is explained here. You can use the standard WAGE ResourceActionForm and a simple Action for committing the changes as shown in the other examples.

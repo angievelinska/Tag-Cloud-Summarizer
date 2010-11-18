@@ -1,0 +1,5 @@
+
+
+Permalink
+
+When clicking the permalink icon, a box shows up containing a permalink for the current report. The URL in the permalink box points to the report.

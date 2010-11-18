@@ -1,0 +1,120 @@
+
+
+In this section you will find basic information about changes between CoreMedia CMS 2005 and CoreMedia CMS 2006. These changes may be a reason for a migration towards the newest version of CoreMedia CMS. It is assumed that you have a running CoreMedia CMS 2005 system with some custom enhancements which you want to migrate to CoreMedia CMS 2006.
+
+Common
+
+Although CoreMedia aims to keep backward compatibility to previous provided APIs it has been imperative to do some smaller changes. Therefore you may encounter classes or methods in CoreMedia's APIs to be changed or removed. When migrating to CoreMedia CMS 2006 you have to adapt those parts of your code which are using the mentioned API changes. Those adaptations can be done with only small effort anyway.
+
+To identify what changed in the release, you should have a look at the notes.html and apichanges.html files which are bundled with every release. In these notes you will find documentation of all API changes as well as some hints how to adapt these changes in your custom code. 
+
+
+We strongly recommend to recompile your whole custom code against the new CoreMedia CMS 2006 java libraries before deploying and running this code on a CoreMedia CMS 2006 system.  
+Don't forget to use only the new java libraries instead of their older counterpart when running your code on a CMS 2006 system. The dependencies of the java libraries among each other may have changed in the new release. Therefore the set of libraries needed by a single component may be adapted.
+
+API
+
+The deprecated interface hox.corem.common.XmlGrammar has been removed. Use com.coremedia.cap.common.XmlGrammar instead.
+
+Content Server
+
+Oracle Database Tables
+
+Some changes have been done related to the repository's database schema. The Content Server now uses Oracle BLOBs instead of LONG RAWs to store BLOB data in Oracle databases. There is an automatic migration of this schema when starting the new Content Server the first time. Be aware, that the migration process temporarily doubles the space requirements of the database. After the automatic migration has completed successfully perform the following steps:
+Stop the Content Server.
+Restart the Oracle instance.
+Start the Content Server again.
+
+When not restarting the Oracle instance, a sporadic Oracle bug may manifest which corrupts the content of random blobs. Afterwards, you should backup the table spaces, because redo logging is turned off during the migration. 
+
+Document Types
+
+In previous versions of the CoreMedia system, indices have been generated automatically for document properties. Since, CoreMedia CMS 2005 you have to set an index attribute to this document type  in order to create or keep an index. So, if you migrate from a previous version of the CoreMedia system and if you want to keep the indices, you have to add this attribute to the document types. Please see Section for details.
+
+Events
+
+There are no version approval or publication events any more on the Live Server. These events are redundant because every content on the Live Server has to be approved and published, otherwise it wouldn't be there. This change is related to the fact that the Unified API does not offer a PublicationService in the live environment, so that the approval state of content is not defined on the live system, anyway. 
+
+Publisher Licenses
+
+The publisher now requires a license for the "publisher" service for each user that performs a publication. An additional license is needed for the publisher user himself. To be on the safe side when upgrading from CoreMedia CMS 2005, get a license file containing an entry for service "publisher" where the concurrent users and/or named users are those of service "editor" plus service "importer" plus one.
+
+Workflow Server
+
+Repository
+
+An existing workflow repository needs to be migrated manually using the workflowconverter tool. Please see further description for this tool inside this manual.
+
+This is particularly true if migrating an Oracle database, because the internal definition columns will be null initially after converting the database schema to BLOBs.
+
+Content Application Engine
+
+Configuration
+
+The configuration of the CAE has slighly changed concerning LinkSchemes and Controllers: Default controllers (e.g. ContentViewController) are moved to custom/controllers.xml and framework/controllers.xml is removed completely. Default link schemes (e.g. ContentLinkScheme) and their mappings are moved from framework/linkformat.xml to custom/linkschemes.xml.
+
+Search Engine
+
+API
+
+The interfaces you use to customize the Search Engine Feeder were moved from package com.coremedia.cap.feeder to com.coremedia.cap.server.feeder. This affects the interfaces IndexDocumentFilter and IndexDocument. 
+
+Portal Integration
+
+In order to migrate the CoreMedia Portal Integration from CoreMedia CMS 2005 to CoreMedia CMS 2006 you need to change configuration on the portlet side and on portal application side. The following subsections describe the changes of both mentioned parts. 
+
+Migration of the portal frontend
+
+The portlets now use the more performant class HttpClientImpl for accessing the portal application. Therefore you have to change your contentservice.xml file to use the new HttpClientImpl bean:
+
+For example change the following entry:
+
+<bean class=
+"com.coremedia.portal.frontend.service.
+DefaultWebserviceContentService">
+  <property name="name" value="contentservice_1"/>
+  <property name="endpoint" 
+value="portalapplication.webservice.url"/>
+</bean>
+
+To:
+
+<bean class="com.coremedia.portal.frontend.service.HttpContentService">
+    <property name="endpoint" 
+     value="portalapplication.httpcontentservice.servlet.url"/>
+    [...]
+</bean>
+
+Migration of the portal application
+
+Change the webservice-servlet of your CAE portal application to the enhanced  HttpContentServiceServlet.
+
+Instead of:
+
+<servlet>
+  <servlet-name>webservice-servlet</servlet-name>
+  <servlet-class>com.systinet.transport.servlet.server.Servlet
+</servlet-class>
+  <load-on-startup>1</load-on-startup>
+</servlet>
+
+Use: 
+
+<servlet>
+  <servlet-name>httpcontentservice-servlet</servlet-name>
+   <servlet-class>com.coremedia.portal.backend.webservice.
+    HttpContentServiceServlet</servlet-class>
+    <!-- must match "dispatcher" servlet mapping -->
+    <init-param>
+      <param-name>contentServletPath</param-name>
+      <param-value>/servlet</param-value>
+    </init-param>
+    <!-- must be loaded before "dispatcher" servlet -->    
+<load-on-startup>1</load-on-startup>
+  </servlet>
+
+Change the value for the parameter contentServletPath to your dispatcher servlet mapping.
+
+Installer
+
+When using the script based installation you might have to add new information due to the added components. 

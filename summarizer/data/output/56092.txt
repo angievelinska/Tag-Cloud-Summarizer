@@ -1,0 +1,9 @@
+
+
+Every folder within the WebFolder contains an automatically generated info file containing:
+
+the user name you're logged in with
+exported document types
+file extensions necessary to determine CoreMedia document types 
+3* This determination is necessary to define which CoreMedia document type is assigned to documents created 
+

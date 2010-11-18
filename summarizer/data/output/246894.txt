@@ -1,0 +1,40 @@
+
+
+Highly Dynamic and Personalized Websites
+
+The CAE web application is the basis for all content applications. It offers in-memory caching for highly dynamic websites. You can simply integrate third-party content into the web application. An example would be a website with personalized pages which includes content from an ERP system.
+
+
+Rule-Based Content Selection
+
+For the automated population of pages, you can use the Content Rules component. It allows to create pages which contain content selected by specific rules.
+
+
+High Volume Static Content
+
+For a website that is page-oriented rather than object oriented, the Http Cache is best suited. The Http Cache is also a good choice if there are many pages, because the number of cached pages is only limited by disk space, not by main memory. For cached delivery of large computed BLOBs, such as PDFs, the Http Cache is also a better choice than the pure CAE, because pages are cached on disk, and are cached persistently even in case of a restart. Lastly, the Http Cache is the CAE interface to web caching services like Akamai, because it supports the relevant HTTP protocol headers.
+
+
+Content Push
+
+The Proactive Engine is a framework that calculates values from given objects triggered by the invalidation of this objects and that delivers these values to a receiver. Internally, the CAE Feeder uses the Proactive Engine to calculate feedables, each time the underlying objects have changed.
+
+
+Offline Web Site Generation
+
+If you need to generate a completely static web site, e.g. for upload to a very simple webserver, or for delivery on a CD, you have two options: You can either use the Http Cache together with a crawler (such as wget -rN), or you can use the Proactive Engine together with a custom content trigger that selects the pages to generate. Note that unlike its predecessor, the ADS/PADS, the CAE does not include a crawler.
+
+
+Content Indexing
+
+The CAE Feeder writes content beans to the Search Engine. You can use it for example, to make the content of a web site searchable, without indexing HTML embellishments. Internally, the CAE Feeder is based on the Proactive Engine.
+
+
+Preview-based Editing
+
+Preview-based Editing is an easy method to edit content right in the preview of the web page. It is based on Editing Services for JSF and can be extended with own commands. A use case would be editors with no CoreMedia Editor knowledge which should be enabled to easily change the text in the preview.
+
+
+Custom Content Editing UIs
+
+Editing Services for JSF is aimed at the building of interactive GUIs for content edition and creation. Use cases are wizards for content creation, simplified GUIs for specific tasks and the like. Internally, Editing Services for JSF is used for the editing functionality in the Portal Integration, for the rule editors in Content Rules and for the overlays in In-Site Analytics.

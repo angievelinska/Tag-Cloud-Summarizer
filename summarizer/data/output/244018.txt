@@ -1,0 +1,16 @@
+
+
+<Configuration>
+
+Child elements:
+
+Parent elements: <ConfigGroup>
+
+<ConfigGroups>
+   <ConfigGroup name="editor">
+      <configuration name="common">
+      <configuration name="special">
+   </ConfigGroup>
+</ConfigGroups>
+
+This element defines the name with which the placeholder in group.configuration will be replaced and the order in which multiple configuration files are applied. In the example above the placeholder will first be replaced with "common" and then with "special", if the user is member of the "editor" group. This especially means that in case of conflicting settings the settings from the special file will override the settings in the common file.

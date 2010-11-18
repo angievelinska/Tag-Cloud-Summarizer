@@ -1,0 +1,7 @@
+
+
+This chapter describes how to create a boolean expression and insert it in the workflow definition. Have a look at Example 5.5.4b for the example of a simple boolean expression which always returns "true". 
+
+Define the expression in the workflow definition
+
+You can use your expression in the workflow definition via the <Expression>-tag. See Example 5.5.4a for an expression inserted in an <If>-tag.

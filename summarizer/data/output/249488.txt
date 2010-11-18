@@ -1,0 +1,23 @@
+
+
+The first step for any reporting customization is to determine specifically what information you wish the Dashboard to display, and in what format it will be most understandable to your users. It is a good idea to review the standard reports provided by Dashboard Analytics to see if any of those could be used as a model for your new report, because there are many reusable components in all of those reports. The more of these you can use, the less development work your customization will require.
+
+
+
+Follow the steps in section. This will guide you through the most important considerations in designing your new report.
+
+
+
+Two of the most common scenarios resulting from this analysis:
+
+
+
+You wish to create a report that displays data that is already present in the result schema of the database. In this case, you should follow the steps in section below.
+
+
+You wish to create a report that displays data that can be generated from the fact and dimension tables of the analytics database, but does not exist in the result schema tables.  In this case, you should follow the steps in section below. 
+
+
+
+
+

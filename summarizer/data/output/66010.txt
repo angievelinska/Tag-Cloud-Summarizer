@@ -1,0 +1,14 @@
+
+
+The BeanParser will execute the following steps:
+Create an instance of class com.example.FirstElement.
+Call setAttribute1("Ho") on that instance.
+Create an instance of class com.example.SecondElement.
+Call setAttribute("Hi") on that second instance.
+Call firstElement.setSecondElement(secondElement), i.e. set the object created in step 3 on the object created in step 1.
+
+Advanced features:
+
+The class attribute has a special meaning as it determines the name of the class to instantiate objects from. For this attribute, no setter methods has to be defined inside the class.
+
+The BeanParser works without an XML Document Type Definition (DTD), but in connection with a DTD, it makes use of ID and IDREF feature of the XML Parsers. The object, that has been created by the element with the IDREF attribute, is substituted by the object that is defined the corresponding ID attribute. Again, no setter methods have to be defined inside the involved classes. 

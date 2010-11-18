@@ -1,0 +1,4 @@
+
+
+Danger: Database content may become invalid. Before invoking the fragment cleaner, shut down PADS. The fragment cleaner operates directly on the database and concurrent use may render the database content invalid.
+

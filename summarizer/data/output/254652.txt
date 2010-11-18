@@ -1,0 +1,12 @@
+
+
+In order to communicate with the CoreMedia Content/Live Server or Workflow Server, two open ports are required:
+
+The HTTP port to fetch the IOR,
+the CORBA port for communication.
+
+In the default configuration, the CORBA port changes with every restart of the Server which is inconvenient in case of an intermediate firewall. In this case, the port can be set to a fixed value through the property cap.server.ORBServerPort in contentserver.properties. In the following example, the ORB is configured to listen on port 55555:
+
+cap.server.ORBServerPort="55555" 
+
+If you want to access the Server from "outside" a firewall and the server IP address is not directly accessible (due to network address translation for example), it is possible to establish an SSH-tunnel. The tunnel forwards all traffic from the client to the server. Of course, the endpoint of the tunnel must be able to reach the server.  Figure shows the scenario:

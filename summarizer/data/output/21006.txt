@@ -1,0 +1,5 @@
+
+
+Between CoreMedia CAP 4.0.23 and 4.0.24 there have been some changes in the Workflow API. This chapter gives a short upgrade instruction due to the changes.
+The package names in the files workflowserver.jpif, workflowclient.properties and workflowserver.properties have changed. Merge the changes with your specific settings in the files of your previous installation.
+Prepare your workflow system as follows:

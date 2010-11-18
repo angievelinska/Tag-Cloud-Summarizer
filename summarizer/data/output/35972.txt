@@ -1,0 +1,7 @@
+
+
+ForceUser
+
+Use this action to preset a user as the performer of a task. The task will be automatically accepted by the Client GUI for the user.
+
+Example:

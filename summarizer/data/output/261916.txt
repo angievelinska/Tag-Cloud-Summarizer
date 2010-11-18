@@ -1,0 +1,6 @@
+
+3#
+Select the site. Determine the site¿s technical identifier (Integer) in the Analytics Database
+The projected value: Typically the number of events that occurred in the given interval. For Viewed Pages, this is typically the column `EVENTCOUNT¿
+The ordering of values: Expressed by the SQL ORDER BY clause. Sorting order DESC (top values first).
+The number of result entries is expressed by the SQL LIMIT clause. Since the data is pre-consolidated, no result entries need to be merged and hence the limit can be expressed in SQL.

@@ -1,0 +1,3 @@
+
+
+Further execution parameters can also be obtained from the ResourceUri stored in the context bean.

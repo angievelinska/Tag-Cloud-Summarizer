@@ -1,0 +1,6 @@
+
+
+Windows Paths in Java Properties Files
+
+
+When you configure a Windows paths in a property file, you have to escape a backslash with a second backslash in the path. This applies especially to paths for an importer inbox path. For more details about writing property values, see the Javadoc for the load() method in the java.util.Properties Java class.

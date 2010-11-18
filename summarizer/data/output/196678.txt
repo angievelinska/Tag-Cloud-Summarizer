@@ -1,0 +1,6 @@
+
+
+In order to delete properties from document types proceed as follows:
+Stop the Content Servers.
+Remove the attributes from the document types definition file.
+Delete the property data from the database as described in the following table:

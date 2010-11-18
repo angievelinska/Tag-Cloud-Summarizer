@@ -1,0 +1,5 @@
+
+
+The toolbar of the RichText-component consists of two parts, which are described in the following:
+
+Toolbar First Row

@@ -1,0 +1,3 @@
+
+
+Unlike the standard query, there are no predefined document types for the advanced query. The developers of your application are free to include it into the string property of every document, from which you can start the query.

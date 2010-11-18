@@ -1,0 +1,25 @@
+
+
+ JMX  Description 
+
+The JMX action retrieves an attribute from any component via JMX and converts the attribute's value into a watchdog code. This attribute conversion is done by one or more configured com.coremedia.watchdog.CodeConverter instances. Each configured converter might either return a watchdog code or a special "not responsible" code. The JMX action iterates over each converter until a watchdog code is returned. In case that all converter return a "not responsible" code, a configured default code is used.
+
+By default a converter com.coremedia.watchdog.NumberRangeConverter is provided which expects the JMX attribute to be a number (e.g. int, long, ...) and which returns a configured watchdog code if the number is included in a configured range of numbers.
+You might also implement a custom converter by extending com.coremedia.watchdog.CodeConverter. See the javadoc for more details. Attribute 
+
+serviceUrl
+
+A URL to connect to a JMX server
+objectName
+
+The qualified name of the MBean
+attributeName
+
+The name of the MBean's attribute
+defaultCode
+
+The watchdog code to use if none of the converters is responsible
+Nested elements
+
+Each converter needs to be specified as a <Converter> and has to provide its implementation class by "class" attribute. If the converter implementation provides additional configurable attributes ("setter methods"), these attributes might be specified as well. Error codes The error codes depend on the configured converters or the default code is returned.
+

@@ -1,0 +1,83 @@
+
+
+This example is basically the same as in the previous section. Please read section before. The only difference is the used search engine. Instead of using FAST  InStream, this example is based on the Apache Lucene framework, a well known open source search framework. The example uses Apache Lucene 2.2. The Apache Lucene integration is kept at a very basic level, because the main purpose of this example is to show the basic steps required for an integration with the CAE Feeder framework. It should not be misunderstood as best practice on how to use Apache Lucene. It is, for example, strongly recommended to reuse the  Lucene IndexSearcher component and not to open a new one for every access to the index. You can find a more sophisticated real-life example on how to integrate and use Apache Lucene in the CoreMedia contributions.
+The example is contained in the file cap-examples.jar. You can find it in the directory cae/search-lucene after unpacking the JAR file. As in the previous example, the CAE Feeder sends data of content beans to index them whenever beans are created or modified. Read the README file for requirements and necessary steps to start the example. 
+
+You can use the provided Ant build file to perform some of the tasks to get the example running. The following steps have to be performed manually before:
+Set up a CoreMedia Content Server and import the content of the New Menu Site as described in Section.
+Install Jakarta Tomcat and a CAE web application template. Configure the connection to the Content Server for the web application template . Move the web application template to a directory where it is not automatically deployed by Tomcat.
+Install a CAE Feeder template. Configure the connection to the Content Server and database for the CAE Feeder template and copy the database driver to its lib directory.
+Configure the path of Jakarta Tomcat and the parent directory of the CAE web application template using the properties tomcat.home and cae.template.dir in the file global.properties, which is located in the directory examples/cae/etc.
+Configure the path of the CAE Feeder template and the directory to use as index directory in the properties feeder.search.lucene.indexdirectory in file local.properties, which is located in the directory examples/cae/search-lucene.
+Add the Jakarta Tomcat user admin with password tomcat and role manager to the file tomcat-users.xml in the directory jakartatomcat/conf.
+Start Jakarta Tomcat.
+
+
+To start the example, execute ant first. It builds and deploys the New Menu Site web application and installs and configures the CAE Feeder in the directory examples/cae/search-lucene/output/caefeeder. Afterwards start the CAE Feeder by executing cm caefeeder run in the directory bin. The Menu Site is available at http://localhost:8001/search-lucene/servlet/. Note that it takes a little time before the dishes have been indexed and can be found on the website.
+
+Basic Steps required
+
+In order to use a different search engine for the CAE Feeder you need to implement a component for feeding and one for searching. The feeding part must either implement the interface DirectIndexer if you have fast responses when writing to your index or AsyncIndexer, if handling takes a while and the calls should be handled asynchronously and callbacks should be used instead of waiting. You should extend one of the provided base classes AsycIndexerBase or DirectIndexerBase. The part of feeding Apache Lucene is divided in three components:
+LuceneIndexer - implements the DirectIndexer interface
+InternalLuceneIndexer - for direct access to the index
+LuceneDocumentFactory - for transforming Feedables to Apache Lucene documents
+
+The LuceneIndexer is used to handle incoming requests from the CAE Feeder and uses the LuceneDocumentFactory to transform each Feedable to a format which the InternalLuceneHandler can handle.
+
+Searching is implemented in the LuceneSearchEngine which returns content beans as search results.
+
+Configuration of the Lucene integration
+
+As in the previous search example, you have only one search text field for the concatenation of the name, description and ingredients of a dish and another numeric field for its maximum price. The concatenated values are stored in Apache Lucene in a default field named textbody, which is handled specially by the CAE Feeder. Apache Lucene can dynamically add new field names to an index, so no further configuration is needed unlike the previous example using FAST Instream. All you need to configure for Apache Lucene is the directory used for its index.
+
+Configuration of the CoreMedia CAE Feeder
+
+The configuration of the CAE Feeder is basically the same as in the previous example. Please read about the configuration in section. The only difference is the configuration of the feeding component, which is done in the caefeeder/config/caefeeder/spring/feeder-indexer.xml file. It defines an indexer based on Apache Lucene and replaces the default FAST Instream indexer. A customizer is used to replace the default FAST Instream indexer:
+
+ <customize:replace bean="indexer">
+  <bean id="indexer" 
+   class="com.coremedia.examples.cae.feeder.lucene.LuceneIndexer">
+    <description>Sends data to Lucene for indexing.</description>
+    <property name="internalIndexer">
+      <bean class="com.coremedia.examples.cae.feeder.lucene.
+                   InternalLuceneIndexer">
+        <property name="indexDirectory" 
+        value="${feeder.search.lucene.indexdirectory}"/>
+      </bean>
+    </property>
+    <property name="documentFactory">
+      <bean class="com.coremedia.examples.cae.feeder.lucene.
+      LuceneDocumentFactory"/>
+    </property>
+    <property name="sendRetryDelay" value="60000"/>
+  </bean>
+  </customize:replace>
+
+A property configurer is used for resolving the necessary property feeder.lucene.directory in a file lucene.properties.
+
+Implementing search in the web application
+
+This example implements search using the Apache Lucene API. The necessary JAR file lucene.jar will be automatically copied to the lib directory of the web application. See the website http://lucene.apache.org for information about Apache Lucene and its query language. The example uses the same template and class structure as the previous search example, only the used package names differ slightly. As before, a DishSearchInterceptor, a DishFinder and the LuceneSearchEngines, for accessing the search index, are used, which are configured in the WEB-INF/spring/menusite-controllers.xml file. The value of the index directory comes from the file local.properties.
+
+ <customize:append bean="controllerInterceptors">
+    <list>
+      <bean class="com.coremedia.examples.cae.search.lucene.
+                   DishSearchInterceptor">
+                <property name="dishFinder">
+                  <bean class="com.coremedia.examples.cae.search.
+                               lucene.DishFinder">
+            <property name="searchEngine" ref="luceneSearchEngine"/>
+          </bean>
+                </property>
+      </bean>
+    </list>
+  </customize:append>   
+
+The LuceneSearchEngine performs the actual search using the Lucene query syntax. Apache Lucene is more like a search framework, not a search engine itself. The LuceneSearchEngine provides search capability and uses the IdProvider to return content beans for the found document ids. As mentioned before, this example focuses on the integration part, not on using Apache Lucene itself. The later is kept to a minimum and includes no optimizations necessary for real life usage whatsoever.
+
+The search query for for a dish with "rice" which costs less than 30 in Lucene query syntax would look like this:
+
+rice AND feederstate:SUCCESS AND documenttype:Dish AND 
+price:[0 TO 30]
+
+As you can see in the query string, the values for "feederstate" and for the restriction to a document type use capital letters. The query is passed to an analyzer, which extracts index terms from the search text and would e.g. as default transform every search word to lowercase. To prevent this the used analyzer is wrapped in a PerFieldAnalyzerWrapper, which makes sure that search terms for the fields "feederstate" and "documenttype" are not converted to lower case.

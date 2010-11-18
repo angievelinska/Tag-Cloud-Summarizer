@@ -1,0 +1,26 @@
+
+
+Drag and Drop
+
+You can move and copy text inside a RichText pane and between RichText panes using the mouse.
+
+Move text
+
+In order to move text, proceed as follows:
+Mark the text you want to move with the mouse.
+Click into the mark and leave the mouse button pressed.
+Move the cursor to the new position and release the mouse button.
+
+The text will be moved to the new position.
+
+Copy text
+
+In order to copy text, proceed as follows:
+Mark the text you want to copy with the mouse.
+Click the <Ctrl>-key.
+Click into the mark and leave the mouse button pressed.
+Move the cursor to the new position and release the mouse button.
+Release the <Ctrl>-key.
+
+The text will be copied to the new position.
+

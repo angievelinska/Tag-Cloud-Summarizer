@@ -1,0 +1,7 @@
+
+
+In the configuration panel there is a checkbox for enabling and disabling In-Site Analytics. There are also drop-down boxes for selecting one of the above mentioned overlay mode and for selecting the interval for which statistics are displayed.
+
+You can find the panel at the URL http://<host>:<port>/<application>/servlet/overlay/config where <host>, <port>, and <application> correspond to theURL components of your preview site. For example, if the preview uses the URL http://cmspreview:8001/preview/servlet/content/1, you can open the configuration panel by requestingt the URL http://cmspreview:8001/preview/servlet/overlay/config in a new browser window. As soon as a value is changed in this window, it is automatically sent to the server and used for generating overlay the next time a preview page is opened or reloaded.
+
+If Preview-Based Editing has been implemented in the preview application, there may be entries in the context menu for enabling and disabling In-Site Analytics or the satellite.

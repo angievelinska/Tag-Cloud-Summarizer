@@ -1,0 +1,15 @@
+
+
+A user must be a member of a role group to execute the respective task. The groups are automatically created when a workflow is uploaded and have no user rights. To approve or publish a user must also be a member of another group which has the rights on resources to be approved or published. E.g. to approve a document A in a workflow, the user must be a member of
+
+
+
+
+approver-role to be able to accept the approve task in the workflow and
+
+
+
+a group which has approve rights on the document A
+
+
+In an LDAP-enhanced CoreMedia system, Workflow role groups are mapped in the workflowserver.properties file. 

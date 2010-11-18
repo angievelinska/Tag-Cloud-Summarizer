@@ -1,0 +1,5 @@
+
+
+<ColumnDefinition>
+
+See the description in "Configuring windows with table views" and in Section 5.8.1.1.2. 

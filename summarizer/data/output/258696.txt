@@ -1,0 +1,5 @@
+
+
+In an Object Analyzer you can configure the same properties in the file config/objectanalyzer/spring/proactiveengine.properties that are configurable in config/proactiveengine/spring/proactiveengine.properties for a Proactive Engine. See section for details. 
+
+Note that the proactive engine's value cache is not used by the Object Analyzer. In the config/proactiveengine/spring/proactiveengine.properties, set the boolean property valuecache.enabled to false and set the property valuecache.store.directory to './var/valuecache' (default value).

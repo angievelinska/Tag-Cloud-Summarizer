@@ -1,0 +1,12 @@
+
+
+Closing a window of the WebEditor
+
+Select File|Close from the menu bar to close the current window. If there are any unsaved changes, a warning window opens up. 
+
+Terminating the WebEditor
+
+For terminating the WebEditor application, select File|Exit. If there are any unsaved changes in the current window, a warning window opens up. If there are unsaved changes in any other window than the current window, no additional warning appears. In all cases, a warning window opens up which asks if you really want to terminate  the WebEditor. 
+
+
+

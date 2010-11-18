@@ -1,0 +1,42 @@
+
+
+The previous section explained how the workflow definition for the Data Aggregator can be adapted to specific needs. Often the full expressiveness of the workflow definition is not needed, especially when it is only desired to add a few automatic actions at the standard extension points. To this end, the Data Aggregator can include add-on actions that are defined as Spring beans in bean definition files in the directory config/dataaggregator/spring. Note that this is not the configuration path for the common Spring context in the Workflow Server. These contexts have been separated to simplify future migrations.
+
+All implementations of LongAction are usable in these contexts, if they can be configured by means of the Spring framework. In the bean definition, the actions must be wrapped in a special bean that introduces the actions to a special registry. An example bean definition might look like the following:
+
+<bean id="myLongActionBean"
+      class="com.coremedia.workflow.common.util.
+RegisteringLongAction">
+  <property name="collection" value="import"/>
+  <property name="action">
+    <bean class="mypackage.MyLongAction">
+      <property name="..." value="..."/>
+      ...
+    </bean>
+  </property>
+</bean>
+
+Here the action is registered for the phase import. The other phases are extend (dimensions), consolidation, snapshot, and aggregation.  The actions configured by means of spring are executed just before the corresponding custom section in the workflow definition is reached. 
+
+The registry is a framework bean that is automatically found by the registering bean under the name longActionRegistry. The Spring context used here recognizes the interface CapConnectionAware, injecting the default connection of the Workflow Server into beans as needed.
+
+In order to ensure that some action definitely run before other actions, it is possible to specify predecessors for actions. In fact, the order is specified for the registering beans.
+
+<bean id="myOtherLongActionBean"
+      class="com.coremedia.workflow.common.util.
+RegisteringLongAction">
+  <property name="collection" value="import"/>
+  <property name="predecessors">
+    <list>
+      <ref bean="myLongActionBean"/>
+    </list>
+  </property>
+  <property name="action">
+    ...
+  </property>
+</bean>
+
+If no predecessor actions are specified, actions may or may not be executed in parallel. Predecessor actions must belong to the same collection, that is, to the same phase of the Data Aggregator workflow.
+
+The file config/dataaggregator/spring/dataaggreator-actions-example.xml contains a number of Spring XML snippets that can be copied and adapted when defining own action.
+

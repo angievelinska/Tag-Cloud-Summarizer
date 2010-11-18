@@ -1,0 +1,26 @@
+
+
+The following example configures all property types and all property names except the property Author of the document type Article for indexing. A blob property is indexed if its major MIME-type is text or its concrete MIME-type is application/pdf or application/msword and its size does not exceed the configured maximum in bytes. An XML property is indexed if its grammar is CoreMedia RichText.
+
+
+
+<FastIndex ...>
+ ...
+ <PropertyNames>
+   <ExcludeProperty doctype="Article" name="Author"/>
+   <IncludeProperty/>
+ </PropertyNames>
+
+ <PropertyTypes>
+   <Blob mimeType="text/*" maxSize="5000000"/>
+   <Blob mimeType="application/pdf" maxSize="3000000"/>
+   <Blob mimeType="application/msword" maxSize="2000000"/>
+   <Xml
+    grammar="coremedia:///cap/grammar/coremedia-richtext-1.0"/>
+   <String/>
+   <Integer/>
+   <Date/>
+   <LinkList/>
+ </PropertyTypes>
+ ...
+</FastIndex>

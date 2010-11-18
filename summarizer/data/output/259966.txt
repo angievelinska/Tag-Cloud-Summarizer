@@ -1,0 +1,5 @@
+
+5#
+Enter free ports and click Next to continue.
+
+The next window allows you to configure the database used by the Content Management Server.

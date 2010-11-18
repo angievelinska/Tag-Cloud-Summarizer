@@ -1,0 +1,5 @@
+
+
+Server-side actions
+
+While actions on the client-side deal with resources of the Content Management Server, actions on the server-side work on workflow objects in the Workflow Server.

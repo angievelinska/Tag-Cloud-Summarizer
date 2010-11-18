@@ -1,0 +1,7 @@
+
+
+The Starter Kit offers a JSP tag-library (for short: tag-lib) that complements the tag-lib of the CAE by some useful custom JSP functions.
+
+If you need any of the functions, the tag-lib can be included in your JSP like so:
+
+<%@taglib prefix="sk" uri="http://www.coremedia.com/2007/starterkit"%>

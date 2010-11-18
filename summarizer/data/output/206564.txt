@@ -1,0 +1,3 @@
+
+
+The properties/corem/jaas.conf file contains the following default configuration for login modules:

@@ -1,0 +1,10 @@
+
+
+General hints
+
+Use the SimpleValidationException instead of ValidationException since ValidationException is abstract. The constructor takes parameters for error messages and hints for problem resolution, these parameters are in fact property names for the property file bundles (see the CAP-Editor API for details).
+Don't try to change any documents in the validator. Violating this rule may lead to deadlocks, inconsistent states, swallowed events etc. since the check-in locks the proxy, which prevents events from the server to be processed. Thus, you see inconsistent states in your validator.
+
+Integrate your validator into the CoreMedia Editor using editor.xml
+
+You can integrate your validator into the CoreMedia Editor using the element Validator of the editor.xml file as shown in example. 

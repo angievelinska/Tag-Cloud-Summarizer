@@ -1,0 +1,5 @@
+
+
+There are different scenarios of internationalizing your website with the Starter Kit
+
+In a simple case, only particular documents have to be available in additional languages. Then, you can simply create localized variants of these particular documents as described in section user manual: create localized variant. In figure, you can see this situation: There is an American article that has an American navigation channel as its navigation context. The American article is also the "master" for translations. There is a French translation, which shares the same navigation channel and links the American article as its master object. On the website, the American navigation context always leads to an American page "surrounding" the article, but the article itself can be switched between the American and the French version.

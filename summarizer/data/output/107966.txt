@@ -1,0 +1,13 @@
+
+
+PADS automatically creates a dependency from the generated value to the read fragment, i.e. if the fragment changes, the generated value will be invalidated.
+
+Create a link to a top-level value
+
+A builder may also link to other top-level values. Linking to another value means to schedule its computation if it is not already computed. Even if multiple values link to one specific value, the linked value will be generated only once. The value will be computed asynchronously, i.e. the current computation doesn't have access to the computed value. A top-level value is maintained by PADS as long as it is reachable via links from one of the configured root values. If the value isn't reachable anymore, it will become subject to garbage collection, which runs before PADS sends values to the uploaders. The same applies to the values for the configured root keys: PADS deletes a value after you have removed its key from the configuration and PADS was restarted. Link cycles are supported and correctly handled by the garbage collection.
+
+Imagine a builder which computes a value for a folder. The builder creates links to values for all child documents which leads to their computation. PADS automatically establishes a dependency to the folder when reading its children. If a child document is moved to another place, PADS recomputes the value for the parent folder but this time the builder does not create a link from the newly computed value for the folder to the value for the moved document. As consequence the value for the document will be deleted by garbage collection (if there isn't another link path from a root value).
+
+The method #establish(String) of the com.coremedia.generator.GeneratorCache interface establishes a link to another value. Note, that a configured link predicate may prevent establishing this link.
+
+Example: 

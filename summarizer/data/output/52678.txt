@@ -1,0 +1,9 @@
+
+
+<wage:includeScripts>
+
+Includes CoreMedia templates defining JavaScript objects and/or loads WAGE JavaScript packages. Attributes:
+
+templates (optional): comma-separated list of CoreMedia folder templateIds, for which the URI will be included as src attribute of a <script> tag
+packages (optional): comma-separated list of WAGE JavaScript packages to load
+

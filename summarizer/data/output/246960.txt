@@ -1,0 +1,42 @@
+
+
+This section describes the operational server utilities. Before you apply these tools you should read the respective documentation thorouhgly. The operational tools perform highly privileged tasks some of which are not subject to any consistency checks. An improper usage of the tools may severely affect the performance of the CoreMedia CMS or even damage the repository. 
+
+Repository tools
+
+collectors: Delete obsolete documents and versions from the repository
+serverexport: Stores the content of the repository as XML files
+serverimport: Upload content stored by serverexport
+usedlicenses: Withdraws a license from a user
+
+Database tools
+
+sql: Provides direct access to the database
+dbindex: Creates a database index over the folder structure
+
+Server tools
+
+killsession: Kills a session
+tracesession: Causes a session to be traced
+runlevel: Changes the runlevel of the server
+unlockcontentserver: Remove a lock that stops a Content Server from starting up
+
+Workflow tools
+
+upload: Uploads a new workflow definition from an XML file
+download: Stores a workflow definition from the repository in an XML file
+enable: Enables or disables a workflow definition
+workflowconverter: Migrate process definitions to the current CoreMedia CMS version
+
+Analytics tool
+
+dataggregator: Starts, stops, and monitors the Data Aggregator process in a Workflow Server.
+
+User tools
+
+changepassword: Changes the password.
+dumpusers: Writes an XML-file containing a representation of the users defined in the internal user administration.
+restoreusers: Reads an XML-file containing a representation of the users defined in the internal user administration.
+
+Note that some of the operational tools do not access the CoreMedia CMS server but work on database level. Those tools don't support the standard options because they don't need a user to open a session.
+

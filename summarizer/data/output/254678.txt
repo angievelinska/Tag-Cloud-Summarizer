@@ -1,0 +1,18 @@
+
+
+The CoreMedia Content Server is the central component in the CoreMedia system. Among other things, it manages the content repository and the user authorization. Like all CoreMedia components it is based on Java technology. At least two CoreMedia Content Servers are required to run an online editorial system. The CoreMedia Content Management Server is the production system used to create and administrate content. In the Content Delivery Environment the Master Live Server receives the approved content from the Content Management Server and makes it available to the Active or ProActive Delivery Server or to the CAE which generate websites or documents in other formats like PDF. If you are using the CoreMedia Multi-Site Management Extension, content from different top-level folders can be published to different Master Live Servers.
+
+For highest stability and scalable performance, the Content Delivery Environment can be expanded by so called Replication Live Servers (see Chapter 2).
+
+The CoreMedia Content Servers and the other CoreMedia components communicate using CORBA. To build up a CORBA connection with the server, a client first has to send an HTTP request to the server to get the IOR, which contains the necessary connection parameters. To be able to connect, each host involved in the CORBA connection must be able to resolve the name of the other host through DNS.
+
+These property files hold the server configuration:
+
+capclient.properties (clients only)
+capserver.properties
+sql.properties
+publisher.properties (Content Management Server only)
+mime.properties
+replicator.properties (Replication Live Server only)
+
+Note: The property files may contain additional property entries which are not described in the Administration Manual. As a rule, these properties are for special, system-relevant settings which should not be adjusted by the customer.

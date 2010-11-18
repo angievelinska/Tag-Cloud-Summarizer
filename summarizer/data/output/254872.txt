@@ -1,0 +1,207 @@
+
+
+The Analytics Data Aggregator is built on top of a Workflow Server, so that all configuration options of a Workflow Server also apply to the Analytics Data Aggregator. However, there are additional options that are accessible through the analytics manager that lives inside the Workflow Server. Most of these options find their use when the aggregation process runs.
+
+About Configuring Time Intervals and Delays
+
+When configuring time intervals or delays for the Data Aggregator you can use the duration in seconds, entered as an integer value. But you can also provide a more human readable time specification by suffixing an integer with a unit. For example, 6h would mean six hours and 30m would mean 30 minutes. Supported units are s (second), m or min (minute), h (hour), d (day), w (week), and a (year). Alternatively, the English nouns may be used as units. Days are equivalent to 24 hours, years to 365 days. There is no month unit. A space may separate integer value and unit.
+
+You may concatenate multiple value/unit pairs by spaces, commas or the keyword and for more complex durations. For example, 1h 10m would be just as valid as 1 hour and 10 minutes or 1 h,10 min for representing 4200 seconds.
+
+Note that this syntax is only available for the Data Aggregator, which is the only component for which many delays must be configured.
+
+Configuring the Database
+
+The Analytics Data Aggregator needs access to a database for importing and aggregating the data. Like all configuration options, the associated configuration options can be found in the file properties/corem/workflowserver.properties. 
+
+The affected properties are
+
+workflow.server.managers.aggregator.driver, 
+workflow.server.managers.aggregator.url, 
+workflow.server.managers.aggregator.user, 
+workflow.server.managers.aggregator.password, 
+workflow.server.managers.aggregator.database. 
+
+The property values are the same that are configured for In-Site Analytics as described in section.
+
+Changes to these properties require a restart of the Analytics Data Aggregator.
+
+Configuring the Time Zone
+
+When reports for longer intervals are generated, these reports should be based on the calendar used. For example, daily reports must take the start of the day into account. Weekly reports care about the start of the week, which might be either Sunday or Monday. Therefore, the time zone, the country and the locale must be configured for the analytics to generate plausible values. This is done using the properties 
+
+workflow.server.managers.aggregator.timezone, 
+workflow.server.managers.aggregator.language,
+workflow.server.managers.aggregator.country.
+
+Once you have started the aggregator with a certain time zone, this property should never be changed again.
+
+Configuring the In-Site Analytics Granularity
+
+Page view events are processed into the In-Site Analytics tables. These tables use a very fine time resolution, which is configured using the property workflow.server.managers.aggregator.loop.duration. By default, it is set to 60 seconds, which allows finely resolved graphs for as little as 30 minutes total duration. However, you may want to set this to a higher value in order to limit the amount of disk space used for overlay reports. If you do so, make sure that the chosen interval length divides 3600 seconds evenly in order to allow correct hourly reports to be built from the overlay data.
+
+Once you have started the report generation with a certain loop duration, this property should never be changed again.
+
+Configuring Log Providers
+
+Each Content Application Engine for which tracking is enabled must be listed in the workflowserver.properties, so that the Report Data Aggregator can fetch the generated logs. For each CAE, one row of the following form is written:
+
+workflow.server.managers.aggregator.logprovider.<id>.url=
+  http://<host>:<port>/<webapp>/servlet/analyticslog
+
+Here <id> denotes an identifier for the log provider, which can be chosen arbitrarily, but which must not contain dots. The values for <host> and <port> are determined by the configuration of the servlet engine, whereas <webapp> is the name of the tracked web application.
+
+You may add, remove or change rows that specify log providers at any time. The new values will be taken into account during the next import.
+
+Configuring Aggregator Timing
+
+There are a few parameters that control at which time the aggregated data is available. With workflow.server.managers.aggregator.session.timeout you can set the session timeout in seconds. After the full hour, page view data for the entire session timeout period has to be fully available before the statistics for the previous hour can be generated. This ensures that page views can be reliably identified as last page views in their session, allowing the data aggregator to generate exit statistics.
+
+After facts data (for example representing page views) has been made available, it is kept in the fact tables for workflow.server.managers.aggregator.archive.delay seconds before being moved to the archive tables. If you want to keep the data around longer than the default of one hour plus potential leap seconds, you may increase this value.
+
+If the Data Aggregator was down for an extended period of time, it may take a long time aggregating statistics before processing the more recent data. The property workflow.server.managers.aggregator.maximum.aggregation.duration limits time for which statistics may be generated after a downtime. By default, this value is set to one week, but it may be increased to further reduce the probability of data loss.
+
+If the Data Aggregator cannot access a log provider (a Content Application Engine with tracking) for an extended period of time, it will not proceed with the computation of statistics in order to be able to fetch logs from the log provider once it is up again. After workflow.server.managers.aggregator.maximum.aggregation.delay seconds, however, statistics are generated despite a failed log provider. This ensures that best effort data is available after a while. By default, this value is set to five days, but you may lower it to a few hours, if needed. The value should always be significantly lower than the maximum aggregation duration in order to avoid data loss.
+
+Configuring Purging
+
+By default, old events and old statistics remain in the database forever. The Data Aggregator may be configured to purge old data, however. Separate configuration is possible for four groups of data: fact archive, In-Site Analytics data, event-based Dashboard Analytics data, and snapshot-based Dashboard Analytics data.
+
+The purging of the archive is controlled by the following parameters in the file workflowserver.properties, here shown with their default values:
+
+workflow.server.managers.aggregator.archive.purge.delay=0
+workflow.server.managers.aggregator.archive.purge.duration=10m
+workflow.server.managers.aggregator.archive.purge.interval=1w
+
+If the purge delay is 0 or unspecified, the archive will not be purged. Otherwise facts with the given age are purged from the archive. If archive.purge.delay is smaller than archive.delay, then facts are purged immediately without being moved into the archive first. However, normal configurations use a short archive delay and an archive purge delay that is significantly longer than the backup cycles of the Analytics database.
+
+The archive.purge.duration denotes the maximum length of a time interval that may be purged in a single transaction. Larger values result in faster processing, but increase the probability of large transactions that cannot be handled by the database. 
+
+The archive.purge.interval is set to the approximate time between two purges of the archive. As soon as half the given interval of data has accumulated since the last purge, the Data Aggregator starts to look for idle periods during which it starts with the purge. The Data Aggregator is assumed to be idle when the current iteration of the aggregation process has consumed at most 90% of the loop duration configured in the property workflow.server.managers.reporting.loop.duration. If twice the archive.purge.interval has elapsed since the last purge, data is purged immediately, even if the Data Aggregator is very busy. Because this is undesirable, the purge interval should be set large enough that an period of relative calm can be expected during that duration. The default value of one week is usually a good compromise between a timely release of disk space and good response times.
+
+If a table could not be completely purged before the Data Aggregator decides that it is too busy, the table will continue to be purged during the next iteration, if time permits. After the table has been fully purged, a table compression step is inserted for Oracle databases: the command ALTER TABLE ... SHRINK SPACE CASCADE is executed, releasing disk space of deleted rows. For other databases it is assumed that this happens automatically.
+
+In-Site Analytics data is purged according to three similar parameters:
+
+workflow.server.managers.aggregator.insite.purge.delay=0
+workflow.server.managers.aggregator.insite.purge.duration=10m
+workflow.server.managers.aggregator.insite.purge.interval=1w
+
+Again, the delay determines the amount of data that must be kept, the duration limits the transaction size, and the interval determines how often a table is purged and consequently how much data might be accumulated on top of the absolutely required data set.
+
+Even if you set the delay very low, it is ensured that at least the data that is required for computing other statistics is available. The value should be set to cover the maximum interval for which In-Site Analytics displays data, as configured in the Content Application Engine.
+
+For the snapshot data and statistics, another set of parameters applies.
+
+workflow.server.managers.aggregator.snapshot.purge.delay=0
+workflow.server.managers.aggregator.snapshot.purge.duration=23h
+workflow.server.managers.aggregator.snapshot.purge.interval=1w
+
+If these properties look familiar, that should not come as a surprise. The only major difference is that the transaction size is 23 hours by default. This ensures that even when entering daylight saving time, only one set of snapshot data is purged.
+
+Finally, the data for the Analytics Dashboard is kept in yet another set of tables, which are purged according to yet another set of properties.
+
+workflow.server.managers.aggregator.dashboard.hh.purge.delay=0
+workflow.server.managers.aggregator.dashboard.dh.purge.delay=0
+...
+workflow.server.managers.aggregator.dashboard.purge.duration=1d
+workflow.server.managers.aggregator.dashboard.purge.interval=1w
+
+While the dashboard.purge.duration and the dashboard.purge.interval control the transaction size and the cleanup frequency as for fact and In-Site tables, the delay for which data is kept is configured by multiple properties, one for each time interval type.
+
+There are twelve time interval types, which are explained in more detail in the Analytics Developer Manual: hh (data for one hour, computed every hour), dh (data for one day, computed every hour with obscure exception due to daylight saving time), dd (one day, computed every day), wd (one week, computed every day), bd (two weeks, computed every day), md (one month, computed every day unless the starting day does not correspond to a similarly numbered day in the subsequent month), ww (one week, computed every week), mm (one month, computed every month), ym (one year, computed every month), qq (one quarter, computed every quarter), ff (half a year, computed twice a year), and yy (one year, computed every year). 
+
+For each of these interval types, a different purge delay may be configured. For example, it makes sense to purge hourly data sooner or later, but it is almost certainly a bad idea to discard any of the yearly data sets. Even if you set these values very low, the corresponding data will not be purged if it might be required for reaggregation into coarser time interval types or if it might be displayed in any of the standard reports. For example, the two year reports may be shown with a resolution of one day, so that at least two years worth of the dd tables are kept.
+
+In some cases, you might not want to treat all tables of the same time interval type equally. To this end, you can configure individual delays for single tables. For example, the tables TotalViews_hh and TotalEntries_hh are required to display the report on the perfomance by the time of day. Therefore it makes sense to keep these tables for a longer time. To purge the hh tables aggressively while keeping more of the two special tables, you might set the following properties:
+
+workflow.server.managers.aggregator.dashboard.hh.purge.delay=1d
+workflow.server.managers.aggregator.dashboard.TotalViews_hh.purge.delay=1y 1h
+workflow.server.managers.aggregator.dashboard.TotalEntries_hh.purge.delay=1y 1h
+
+If multiple tables require purging, the Data Aggregator will start with the table that has the highest quotient of the elapsed time since the last purge and the configured purge interval.
+
+As a final note, remember that purged data is really gone and that it is very difficult to reconstruct even if old database backups are still available.
+
+Configuring Search Log Analysis
+
+If you operate a CoreMedia Search Engine, you can configure the Analytics Data Aggregator to fetch and import the search logs. These logs are written to the directory var/log/querylogs below the Search Engine installation home. In order to make these logs accessible to the Analytics Data Aggregator, you must create a script that moves all complete logs from the directory to a directory on the machine of the Analytics Data Aggregator. Please note that there is always one log that is currently being written. This log must not be touched.
+
+Once you have created such a script, you can configure it in the workflowserver.properties. The configuration might look as follows:
+
+workflow.server.managers.aggregator.search.log.import.
+duration=3600
+workflow.server.managers.aggregator.search.log.import.
+offset=600
+workflow.server.managers.aggregator.search.log.
+script=movesearchlogs.sh
+workflow.server.managers.aggregator.search.log.
+directory=searchlogs
+workflow.server.managers.aggregator.search.log.archive.
+directory=searchlogs/old
+
+In the example, the script movesearchlogs.sh in the installation directory of the Analytics Data Aggregator would be called every 3600 seconds, that is, every hour. It would be called 600 seconds after the full hour. The logs would be expected in the directory searchlogs after the script has run. Once the aggregator has processed the logs, they would be moved to the directory searchlogs/old. The next time that the script runs, it may optionally archive the logs that are present in searchlogs/old.
+
+If the aggregation process has to be restarted, it may happen that unprocessed logs are still present in the log directory. Such logs should not be removed, because they may have to be reimported after the next start of the aggregation process.
+
+Configuring Unique User Analysis
+
+CoreMedia Analytics offers the possibility to count unique users who visited a site. In this case, multiple visits by a single user in any given time frame are not counted twice. There are two analysis methods:
+
+Exact counting. This method yields exact numbers as far as possible. It still has to extrapolate if the user cannot be detected for some accesses. Because this method has to reevaluate the data of up to one year when creating reports, it is very resource consuming. It is not recommend if you expect more than 10 million page impressions per year.
+Approximation. In this case, the set of users is represented in a highly compact, but lossy way. This allows an estimation of the number of unique users with an error of less than 1% (and often less than 0.2%) as long as the number of users remains below or in the order of 1 billion. This method is efficient and scales very well.
+
+Generally, we recommend the approximating method. Even the counting approach cannot be fully precise unless your application can guarantee that the user can be reliably detected for all requests, so that the error during tracking the users is greater than the error incurred by the approximation during analysis. The limit to about 1 billion users should be of no significance as much higher numbers are a strong indicator of an error condition.
+
+Even if your current load is below the given limit or if you are willing to invest in hardware, there is still the risk that in the future the load will rise significantly. Therefore, the exact counting method is typically only useful in an intranet scenario.
+
+By default, the aggregation of unique user data is enabled and the approximating method is selected:
+
+workflow.server.managers.aggregator.unique.users.enable=true
+workflow.server.managers.aggregator.unique.users.approximate=true
+
+You may want to update these setting. If you keep the analysis enabled, make sure to use an appropriate UserNameExtractor plugin as described in the Analytics Developer Manual in order to get meaningful numbers for your deployment.
+
+While you may switch the analysis method after the first start of the Data Aggregator, the data for time periods that include the time of the switch will be unavailable or wrong. The same hold for enabling or disabling the aggregation.
+
+Implementing Standalone Deployment
+
+When choosing the standalone deployment of the Analytics Data Aggregator as described in section, you must perform a number of additional steps that are not necessary when the main Workflow Server is shared as the Analytics Data Aggregator:
+From the CoreMedia support, obtain a Master Live Server license file that allows the operation of a Workflow Server and of CoreMedia Analytics in the live environment. Deploy the license and restart the Master Live Server.
+Create a user workflow on the Master Live Server and put it into the group system.
+Install the Analytics Data Aggregator.
+Configure the Analytics Data Aggregator to reference the Master Live Server in its capclient.properties.
+Add the line
+
+workflow.server.allow.live=true
+
+to the file workflowserver.properties of the Analytics Data Aggregator.
+6#
+Other than that, configure the Analytics Data Aggregator as described in this manual.
+Configure the Master Live Server database for the Analytics Data Aggregator in the sql.properties.
+Configure the property
+
+cap.server.workflow.server.url=...
+
+in the file contentserver.properties of the Master Live Server using the correct IOR URL of the new Analytics Data Aggregator.
+9#
+Start and initialize the Analytics Data Aggregator.
+Upload the aggregation process using cm upload.
+Configure the Editor for the Master Live Server by adding the attribute
+
+<Editor enableLiveWorkflow="true">
+  ...
+</Editor>
+
+
+in the file editor.xml.
+12#
+Upload and start the aggregation process as usual.
+
+
+
+Tuning the Performance
+
+The property workflow.server.managers.reporting.loop.duration determines how often the Analytics Data Aggregator starts an aggregation. If you lower this value too much, the Data Aggregator will start a new loop as soon as the previous loop is finished. This will achieve the minimal latency for the reports, but it will result in a permanently high load on the servers. If you set this value too high, it will take a long time before clicks are shown in the overlay reports, so that loop durations beyond 10 minutes are usually not advisable.
+
+The property workflow.server.managers.reporting.thread.pool.size determines the number of concurrently running threads for parallelizable operations. In particular this applies to the import of logs. Increase this parameter, as long as this improves the performance. Keep in mind, that very high values might leave the JVM out of memory or out of native threads. A change of this property requires a restart of the Data Aggregator.

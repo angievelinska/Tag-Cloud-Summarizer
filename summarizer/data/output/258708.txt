@@ -1,0 +1,22 @@
+
+
+After defining profiles and views and connecting them, publish your newly created profile(s) to the Analytics Dashboard configuration in file /WEB-INF/spring/analytics/analytics-config.xml: Add your profiles to the 'dashboardViewProfiles' property. Make sure to use the profile's Spring bean id in the reference, not the profile's name.
+
+<property name="dashboardViewProfiles">
+  <list>
+  ...
+  <ref bean="DashboardViewProfile.MyProfile"/>
+  < /list>
+</property>
+
+Securing your profiles, views and report definitions
+
+Upon first access to the dashboard, a profile is selected for the user. If one or more profiles specify a role that the user assumes, the first profile of these is chosen. If no specific profile could be found, the first generic profile is chosen. A profile is said to be generic if it does not specify any roles via its 'associatedRole' property.
+
+Before any report definition is instantiated for a given user, access to the definition is checked twice: First an access control check is performed on the dashboard view (evaluating the dashboard view definition's 'requiredRole' property), then an access control check is performed on the report (checking 'requiredRoleCSV').
+
+We recommend that you set the 'associatedRoleCSV' property in each profile, thus effectively disallowing any generic profile. Leaving the 'associatedRoleCSV' property unset effectively associates the profile with any user who is not matched by any role-specific profile.
+
+Additionally, we highly recommend that you secure each dashboard view definition by setting its 'requiredRoleCSV' to the (comma-separated list of) roles that you grant access to it. As an alternative to securing your view definitions you may secure each report definition by setting its 'requiredRoleCSV' property. In most cases, a dashboard view-based access restriction makes more sense.
+
+If you secure your views and/or report definitions, make sure to configure analytics authentication (i.e., specify an interceptor configuration commented out in file /WEB-INF/spring/analytics/analytics-authentication.xml). Forgetting to do so authentication will fail and hence no user will be able to see reports defined in the views.

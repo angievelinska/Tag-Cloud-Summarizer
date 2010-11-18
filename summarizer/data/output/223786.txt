@@ -1,0 +1,44 @@
+
+
+The following code fragment shows the basic structure of a page that uses the analytics tag library.
+
+<%@ taglib prefix="analytics"
+           uri="http://www.coremedia.com/analytics-1.0-1.2"%>
+...
+<html>
+  <head>
+    ...
+    <analytics:head/>
+    ...
+  </head>
+  <body>
+    <analytics:pagecontext object="${self}" view="...">
+      ...
+      <analytics:link object="${anObject}" view="...">
+        ...
+      </analytics:link>
+      ...
+    </analytics:pagecontext>
+  </body>
+</html>
+
+Before being usable, the tag library has to be defined in the page and be associated with a namespace. The taglib's uri name pattern specifies the taglib's name, its version and the jsp version it is designed for. The current taglib's version is 1.0.
+
+JSP 1.2 vs. JSP 2.0
+
+If your application is following the JSP 1.2/Servlet 2.3/JSTL 1.0 specification, you must include the taglib for the 1.2 version of JSPs:
+
+<%@ taglib prefix="analytics"
+  uri="http://www.coremedia.com/analytics-1.0-1.2"%>
+
+If your application is following the JSP 2.0/Servlet 2.4/JSTL 1.1 specification, you must include the taglib for the 2.0 version of JSPs:
+
+<%@ taglib prefix="analytics"
+  uri="http://www.coremedia.com/analytics-1.0-2.0"%>
+
+Each html page that makes use of the taglib's functionality must define the <analytics:head/> tag in its head tag. The <analytics:head> imports the necessary JavaScript library. Next, the identity of the current page is indicated using the <analytics:pagecontext> tag. Individual links are marked using the <analytics:link> tag. The link context tag also encapsulates the invocation of the link formatter for computing the actual target URL, so that the overlay complexity of the page will hardly change.
+
+If a JSP is included in another JSP, it should not again invoke the <analytics:head> or <analytics:pagecontext> tags. You can simply use link contexts as shown above.
+
+In order to structure a page further, you can use the <analytics:objectcontext> or <analytics:namecontext> tags, which must appear inside the <analytics:pagecontext> tag. Both tags may be nested. Different contexts distinguish links to the same target, so that you only need to use object contexts or name contexts if you link to the same target page more than once on a single page.
+

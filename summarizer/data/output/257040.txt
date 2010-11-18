@@ -1,0 +1,6 @@
+
+
+To avoid confusion, no more than one folder or document with the same name are allowed to exist within a folder. If a folder or document already exists with this name, a further window appears which asks you to give the new folder a different name. If a folder is not located correctly in the folder hierarchy, you can move the folder to the correct position by cut-and-paste (see section).
+
+
+

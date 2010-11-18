@@ -1,0 +1,3 @@
+
+
+The following directory structure shows the directories located below the CoreMedia SCI root directory:

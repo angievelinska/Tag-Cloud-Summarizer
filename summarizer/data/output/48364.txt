@@ -1,0 +1,5 @@
+
+
+Database Schema
+
+The database schema for all CoreMedia Servers has slightly changed. However, the server will automatically update the schema in the database at startup. If you had set up your server with your own SQL schema scripts, adjust them accordingly.

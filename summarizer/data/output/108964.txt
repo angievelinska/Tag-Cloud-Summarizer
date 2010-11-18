@@ -1,0 +1,11 @@
+
+
+In this example PADS uses a builder of class com.coremedia.ext.pads.ExampleBuilder to compute values for all documents of type "Article" below the folder /Site. The uri attribute of the RootSelector element must contain "{0}" which is replaced by the resource id when the builder is called to compute a value. For example: If there are three documents of type Article below the folder /Site with the ids 20, 22 and 24, the builder will be called three times with the keys:
+
+com.coremedia.ext.pads.ExampleBuilder:20
+
+com.coremedia.ext.pads.ExampleBuilder:22 
+
+com.coremedia.ext.pads.ExampleBuilder:24
+
+The next table describes the attributes of the RootSelector element in detail:

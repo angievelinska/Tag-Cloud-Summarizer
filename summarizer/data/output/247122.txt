@@ -1,0 +1,3 @@
+
+
+This report displays the number of page impressions on a site in a selected category and its (cumulated) subcategories. The page impressions of the selected category are shown as the first pie section, seen from the top of the pie clockwise. The direct subcategories aggregate their subcategories' page impressions.

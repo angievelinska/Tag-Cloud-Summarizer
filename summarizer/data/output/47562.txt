@@ -1,0 +1,17 @@
+
+
+Here is a short explanation of the Struts tags used in this example:
+
+The <html:html>-tag just renders a standard HTML html tag.
+
+The <html:form>-tag outputs a standard HTML form tag, and also links the input form with a JavaBean subclassed from the Struts ActionForm object. Each field in the form corresponds to a property of the form's bean. When a field and property correspond, the bean is "populated" with the request data from the form. This means it stores the user's input when the form is submitted to the controller servlet. The name of the bean and its class can be specified as a property of the form tag, but should rather be omitted. If omitted, the ActionMappings database (loaded from the struts-config.xml file) is consulted. The form bean name is then retrieved from the corresponding action given by the form's action attribute.
+
+The <html:errors>-tag displays a set of error messages prepared by a business logic component and stored as an ActionErrors object, a String, or a String array in request scope. If such a bean is not found or the list of errors is empty, nothing will be rendered. This way it is possible to reuse an input page (like our renderLogin.jsp) to display error messages.
+
+The <html:text>-tags render standard HTML text input fields, the property attribute defining the corresponding bean attributes with which the form is first populated and which are then used to store the user's input when the form is submitted.
+
+Note that when using the generic WAGE ResourceActionForm (implementing the DynaBean interface), the property attribute has to correspond exactly with the document property as defined in the CoreMedia document type model. So if the document property is defined with an uppercase first letter in the document type model, you also have to use an uppercase first letter for the property attribute. If you develop your own ActionForm implementing specific getter and setter methods, the property attribute has to start with a lowercase first letter, as defined by the JavaBeans specification.
+
+The <html:submit>-tag renders an HTML <input> element of type submit, which is a simple submit button.
+
+For a complete reference of Struts HTML tags, please refer to the online Struts HTML Tags Reference. The Struts Bean tags can be found in the Struts Bean Tags Reference.

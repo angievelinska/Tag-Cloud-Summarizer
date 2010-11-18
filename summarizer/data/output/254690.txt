@@ -1,0 +1,3 @@
+
+
+The Search Engine Feeder of the Content Server makes documents searchable. In the Content Delivery Environment it is often required to search not only for documents but for content beans of a Content Application Engine. See Section "CAE Feeder" and the CoreMedia Content Applications Developer Manual, Section "CAE Feeder" for the description of the CAE Feeder, which supports this use case.

@@ -1,0 +1,10 @@
+
+
+The Http Cache is integrated in a Content Application Engine (CAE) web application as a servlet filter, intercepting all http requests which are sent to the CAE. The Http Cache checks a Persistent Cache whether there is already a cached http response for this request. If so, this response will be delivered to the client without asking the CAE. Conditional requests (e.g. ¿If-Modified-Since¿) are also served based on the cached response.
+
+Otherwise, if no response is cached for this request, the request will be delegated to the CAE. The CAE renders and returns a response while tracking the response¿s dependencies. This response is returned to the requesting client and additionally stored in the Persistent Cache  together with its dependencies.
+
+When a response becomes invalid due to changes of its dependencies, the response itself as well as its dependencies are removed from the  Persistent Cache . For instance, a response may have a dependency on a CoreMedia CMS content object. If this content object changes, the response becomes invalid. Furthermore, an invalidation event is sent to an optional Event Listener where custom business logic may be executed.
+
+The Persistent Cache works persistently by storing the dependencies in a database and the responses in a file system. After a restart of the Http Cache due to maintenance work or a crash, service is continued seamlessly without the need to rebuild the cache¿s entries. In addition, all invalidations which have occurred during downtime are replayed in order to assure that all invalidations are handled properly.
+

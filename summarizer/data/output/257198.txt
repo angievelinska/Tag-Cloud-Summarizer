@@ -1,0 +1,14 @@
+
+
+In order to replace text in documents from the document list automatically - without a user interacting - proceed as follows:
+
+Click the button [Automatic replace].
+A progress window (see bild) shows the total number and number of already processed documents. Documents that you are allowed to edit (have write rights on) and that are not checked out by other users will  be processed. All other documents will be skipped.
+
+Stop Automatic Search and Replace
+
+To stop automatic search and replace,
+
+Click [Stop] in the progress window. 
+3* Changes already made until stop will not be undone.
+

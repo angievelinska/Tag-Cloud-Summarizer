@@ -1,0 +1,79 @@
+
+
+ 
+
+Class 
+
+Description 
+
+DatePredicate 
+
+Filters out documents which are older than the current date minus an offset which can be set, using the attribute relativeOffset. The unit of relativeOffset is milliseconds. You have to set the name of the document property to check, using the attribute name.
+
+Example:
+
+<Explorer name="my-configurable-explorer">
+
+   <Filter name="7-days-modified-date-filter>
+
+      <Predicate class="DatePredicate" name="modificationDate_" relativeOffset="604800000"/>
+
+   </Filter>
+
+ ... 
+
+MapPredicate 
+
+Filters out specially defined documents. To do so, two sub elements of <Predicate> are provided.
+
+<FilterMap>
+
+In this element, the attribute document can be used to assign the document type which should be filtered and the attribute property can be used to assign the property which should be evaluated.
+
+<FilterSet>
+
+In this element, the attribute filter can be used to define the string which should be filtered. Only exact matches will be filtered, the check is case sensitive.
+
+Example:
+
+<Predicate class="MapPredicate">
+
+  <FilterMap document="Article" property="Headline"/>
+
+  <FilterSet filter="Sports"/>
+
+</Predicate>
+
+All documents of type "Article" with exactly the string "Sports" in the property Headline would be filtered.
+
+If you define a name for this filter in the <Filter> element, you need to create a custom bundle (see Section 5.8.1.6 for localization) containing this name. 
+
+UndeletedPredicate 
+
+Filters deleted documents.
+
+You need to set the attribute name of the <Filter> element to "undeleted-filter". 
+
+PublishedPredicate 
+
+Only displays published documents.
+
+You need to set the attribute name of the <Filter> element to "published-filter". 
+
+UnapprovedUnpublishedPredicate 
+
+Displays documents which have been neither published nor approved.
+
+You need to set the attribute name of the <Filter> element to "unapprovedunpublished-filter". 
+
+ToBeApprovedPredicate 
+
+Displays documents which have been moved, renamed, marked for deletion or where the latest version has not been approved.
+
+You need to set the attribute name of the <Filter> element to "tobeapproved-filter". 
+
+ToBePublishedPredicate 
+
+Displays documents which have been moved, renamed, marked for deletion or for which a new version exists. This has been approved but not published yet. 
+
+You need to set the attribute name of the <Filter> element to "tobepublished-filter".

@@ -1,0 +1,3 @@
+
+
+The template for rendering the HTML form for editing a Dish document and the first linked Picture uses the Struts tag library like the other examples. As we want to give the user the possibility of uploading a new image as BLOB property for the Picture document, this time the form encoding has to be set to "multipart/form-data".

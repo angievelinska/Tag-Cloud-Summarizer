@@ -1,0 +1,28 @@
+
+
+Having opened a CapConnection, all actions are executed on behalf of the single user whose credentials where provided when logging in. In some contexts, it is desirable to use different users for different tasks while maintaining a shared cache. To this end, the Unified API allows you to use multiple sessions per connection. 
+
+Every session is represented by an instance of CapSession. The session that is created while the connection is opened is also known as the connection session. Additional sessions can be opened by the connection's login methods. Having obtained a session, this session can replace the default connection session by calling the method setSession(CapSession) on the connection. Afterwards, all accesses in the same thread that set the session are performed on behalf of the new session.
+
+CapSession session = connection.login(user, password);
+connection.setSession(session);
+...
+session.close();
+
+The previous code fragment shows how a second session is created from an existing connection. Notice that the call to setSession was necessary, because the login call does not automatically set the session. Only between setSession and close we can see the newly created user as the user of the current session. In fact, in other threads the original session still applies. After closing the session, the connection session is again active.
+
+In other cases you might want to save the original session and reestablish it after the work of the second session is complete, without closing the second session. That way you can save the time that is required for opening the session. Of course, a session that is held open consumes a concurrent license all the time.
+
+All accesses to the repositories are subject to the limitations of the requested session. During reads and writes, the rights check is based on the identity of the session's user. Write rights may happen to be reduced, but it is also possible that additional rights are gained by switching to another user. However, the read rights available to any session are at most the read rights of the connection session. This is required in order to ensure efficient caching and to avoid accidental information leaks. Due to this restriction, it is recommended that the connection session's user should be allowed to read all repositories in their entirety, if additional sessions are expected to be created.
+
+When attaching a listener using the Unified API, the current session is recorded. Before events are delivered to the listener, that session is re-established as the current session. This way, listeners inherit the privileges of the code that attaches them.
+
+Note that it is always possible to reset the current session to the connection session. Therefore, setting the current session is not sufficient for enforcing access restrictions when a CapConnection object is passed to untrusted code. Multiple sessions show their greatest potential in trusted applications which receive help in restricting user views while maintaining a shared cache.
+
+Certain privileged connections have the ability to create new sessions for arbitrary users without providing a password. In particular this is true for the workflow service. In this case, logging in another session might be as simple as:
+
+User user = ...;
+CapSession session = connection.login(user);
+
+Note that it is not possible for ordinary user code to create a privileged connection. Instead, a privileged connection is returned by framework methods like WfServer.getConnection().
+

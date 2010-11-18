@@ -1,0 +1,3 @@
+
+
+This element is the same as known from the editor configuration. It defines a column in the workflow list. In the context of the workflow GUI a column in the document view is defined which shows information of the workflow instance (WfInstance).

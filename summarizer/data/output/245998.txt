@@ -1,0 +1,3 @@
+
+
+If you want to edit properties of a linked document directly in the same view, have a look at the template WEB-INF/jsp/editforms/Page.jsp from the Menu Site example, and read about how backing Beans for content objects are automatically created in section EditableBeans.

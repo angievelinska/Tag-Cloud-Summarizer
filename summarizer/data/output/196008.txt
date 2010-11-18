@@ -1,0 +1,87 @@
+
+
+Let us look at the implementation of the behaviour flags for the moveTopAction. The isAvailable() method is implemented in com.coremedia.easyedit.commands.ModifyLinkListCommand and looks like this:
+
+public boolean isAvailable() {
+  return super.isAvailable() && 
+  isUserSessionActive() && 
+  getLinkList() !=null;
+}
+
+The call to super checks if a connection to the CoreMedia server exists. There has to be a user session also, as the linklist can only be changed, if a user is logged in. Last but not least it is checked, if the attached ContextInfo bean refers to a linklist. Only if all three conditions apply does isAvailable() return true and the command is included in the menu as menu item. 
+
+When you provided a contextinfo tag in your templates the isAvailable() method will be called for every command with the current contextinfo settings. This makes the method the central place to determine which commands are actually displayed in the context menu. Often this depends on the type of the underlying content bean, e.g. a content bean of a content type PressRelease may require a totally different context menu than a content bean of type OrganizationChart. Other important dependencies are the access rights of the current user.
+
+If the command is available isEnabled() checks if it is selectable also:
+
+public boolean isEnabled() {
+  String dirId = getDirection();
+  int index = getDocumentposition();
+  if (index < 0) {
+    return false;
+  }
+  if (UP_DIRECTION.equals(dirId) || 
+      TOP_DIRECTION.equals(dirId))
+    return index>0;
+  if (DOWN_DIRECTION.equals(dirId) 
+      || BOTTOM_DIRECTION.equals(dirId))
+    return index<getLinkList().getItems().size()-1;
+  throw new IllegalArgumentException(
+              "Unknown direction id " + dirId + 
+              " in MoveLinkCommand.");
+}
+
+As the implementation of isEnabled() is used for all four move actions (up, down, top, bottom) the result depends on the direction the command was initialized with. In our case dirId was initialized with "top" which is equal to TOP_DIRECTION. This property is checked in the first if statement: If the documentposition (stored in variable index) is bigger than zero the command is enabled. This is because a documentposition of zero is already the topmost position and requires no move.
+
+You should return false in isAvailable() if a menu item shall never appear in a menu, but don't use it to switch of a menu item temporarily. This prevents a menu from changing its size on different situations. For temporary changes use isEnabled(), an example is the moveTopAction  which is usually enabled, but disabled in the case, that the current element already is on top of a list.
+
+The isReady() method looks like the following:
+
+public boolean isReady() {
+  return super.isReady() && direction!=null;
+}
+
+While the call to super checks, whether the ContextInfo holds a content, the second condition determines, if the direction field was initialized. This field is initialized with one of the four possible directions for moving in a linklist: up, down, top or bottom. For our command it was initialized with "top" as stated in the bean definition in editing-actions.xml. If direction would not have been initialized, the controller would try to open a popup request to get the information (see following chapter).
+
+All steps from above are executed before the actual business logic of the command is executed. This business logic is implemented in the internalExecute()  method of a command. In our case you find the implementation in com.coremedia.easyedit.commands.ModifyLinkListCommand:
+
+ public boolean internalExecute() {
+    if (!isEnabled())
+      return false;
+
+    Content container = getContainer();
+    try {
+      container.checkOut();
+    } catch (AlreadyCheckedOutException acoe) {
+      log.debug("Document is alread checked out: " 
+                 + container.getId());
+      // ignore
+    }
+    LinkList linkList = getLinkList();
+    modifyLinkList(linkList.getItems());
+    container.set(getProperty(), 
+                  linkList.getPropertyValue());
+    container.checkIn();
+    return true;
+  }
+
+The code checks out the container document and delegates the change of its linklist to modifyLinklist() which is implemented in com.coremedia.easyedit.commands.MoveLinkCommand:
+
+protected void modifyLinkList(List linkList) {
+    String dirId = getDirection();
+    int fromIndex = getDocumentposition();
+    int toIndex = UP_DIRECTION.equals(dirId) ? fromIndex - 1
+        : TOP_DIRECTION.equals(dirId) ? 0
+        : DOWN_DIRECTION.equals(dirId) ? fromIndex + 1
+        : /*BOTTOM_DIRECTION.equals(dirId)*/ linkList.size()-1;
+
+    if(ModifyLinkListCommand.log.isDebugEnabled()) 
+       ModifyLinkListCommand.log.debug(
+         "moving (" + fromIndex + ", " + toIndex + ")");
+    Object item = linkList.remove(fromIndex);
+    linkList.add(toIndex, item);
+  }
+
+This method removes the document from the linklist and inserts it again at the new position zero, which is the top position.
+
+If you created a new command by subclassing com.coremedia.easyedit.commands.ContextInfoCommand and provided your implementations for the above methods you should get a functioning menu item.

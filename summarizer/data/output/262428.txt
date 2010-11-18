@@ -1,0 +1,9 @@
+
+
+For example, the URL http://code.google.com/edu/ajax/index.html has the path /edu/ajax/index.html, composed of the segments edu, ajax, and index.html. The URL structure implies (but does not require!) that the following URLs also lead to pages (in fact, Google meets this assumption):
+
+http://code.google.com/edu/ajax/,
+http://code.google.com/edu/, and
+http://code.google.com/, the home page or root page of that domain.
+
+In the example, there are multiple URLs leading to the same page: The version with and without index.html. While this is a trivial example, there are more advanced use cases where the segments act as categories and an article can be placed into multiple categories. This allows content to be reused or syndicated under different URLs in different contexts.

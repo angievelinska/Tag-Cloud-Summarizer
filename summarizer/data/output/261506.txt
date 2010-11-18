@@ -1,0 +1,5 @@
+
+
+Sort search results
+
+You can use method parameters of the search and searchFAST methods to specify the sorting of the returned results. Each field with an attribute fullsort="yes" in the index profile of the CoreMedia Search Engine can be used for sorting. The search methods take the name of this field and whether sorting should be ascending or descending as parameters and return the results sorted accordingly. Sorting is handled by FAST which is much more efficient than client-side sorting could be.

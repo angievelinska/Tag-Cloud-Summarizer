@@ -1,0 +1,4 @@
+
+
+ ContextInfo.is... Description isAvailable() Determines, if a command is displayed at all in a menu. isEnabled() Determines, if a command is enabled or disabled. Disabled menu items are usually displayed in dark grey and cannot be selected. isEnablednessVolatile() Return whether the enabledness of this Command may change at any time. isReady() Determine if all data needed by the command is available. This flag should esspecially return false, if the user has to provide more information via a form. In this case you have to provide a form template and link it to the action in faces-navigation.xml
+

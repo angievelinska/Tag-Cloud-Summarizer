@@ -1,0 +1,8 @@
+
+
+If a process definition with the name of the uploaded process definition exists already, that definition is superceded by the uploaded definition. Process instances of the old definition run to completion, but additional instances are built using the new definition.
+
+If your process definition references custom Java classes, such classes are preferredly loaded from the jars located in the Workflow Server's lib directory. Only if a class with a given name is not found there, the server will read the uploaded jar.
+
+If you upload all custom classes with the process definition and refrain from deploying jars at the Workflow Server, it becomes easier to use updated versions of the classes. In this case the new classes will only be used with the new definition, while the existing definitions and instances use the original versions. Therefore it is not necessary to run the tool cm workflowconverter to resolve possible serialization issues.
+

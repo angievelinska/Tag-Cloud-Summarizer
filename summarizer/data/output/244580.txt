@@ -1,0 +1,3 @@
+
+
+The "index table space per property" feature is not supported by DB2 databases.

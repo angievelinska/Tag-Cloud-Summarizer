@@ -1,0 +1,3 @@
+
+
+Renderer classes can be used to display the content of document fields in columns of the Explorer window, Query window and Resource chooser window. The predefined renderers are listed in the next table. For own renderer classes, you need to extent the class hox.corem.editor.toolkit.table.columnrenderer.LayoutColumnRenderer.

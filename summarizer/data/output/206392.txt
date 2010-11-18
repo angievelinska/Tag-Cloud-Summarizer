@@ -1,0 +1,4 @@
+
+
+ Symbol Nr. Funktion (1) Opens the selected binary data with an external application. (2) Removes the selected binary data from the document.
+

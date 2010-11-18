@@ -1,0 +1,13 @@
+
+
+For XML properties, a Markup object is provided as the property value. A Markup represents an immutable XML document fragment. It consumes less memory than a DOM representation and can generate SAX events faster than a SAX parser. Conversion and interaction with the standard APIs SAX 2, DOM 2, JAXP, and TraX is possible.
+
+Note that while the memory footprint of a Markup is comparatively small, such objects are still kept entirely in main memory. If you handle many large XML texts, it becomes important that you make them eligible for garbage collection as soon as possible.
+
+Markup instances are read-only and encourage a functional programming style like in Markup m2 = m.transform(...). SAX-based and XSLT-based transformations are available. The class MarkupFactory allows the creation of Markup objects from an InputStream, a Reader, an InputSource, a JAXP Source, a DOM Node or a String.
+
+Markup instances carry an optional grammar identifier as a hint regarding the structure of the XML text.
+
+Note that unlike other value objects, Markups do not declare a special Object.equals(Object) method, so that they cannot be easily compared. If required, you should design your own comparison algorithm that takes the actual XML format into account.
+
+Please refer to the Javadoc of the package com.coremedia.xml for details about the Markup interface and the associated classes.

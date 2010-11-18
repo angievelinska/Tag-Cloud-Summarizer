@@ -1,0 +1,20 @@
+
+
+Structure of the Generated Code
+
+When you inspect the generated classes, you will find that three files per document type are generated: 
+
+
+
+An interface with the same name as the document type
+
+
+An abstract class ending with ¿Base¿ and 
+
+
+A concrete class ending with ¿Impl"
+
+The interface is what you should use in other classes,¿*Base¿contains the repository access code and ¿*Impl¿ is the actual class that is instantiated. This class is the place for you to modify. When a document type inherits from another type, its "*Base" class inherits the "*Impl" class of its parent. This way, it inherits the custom extensions made for the supertype. For DocumentTypes that do not have a parent, the "*Base" class inherits from a framework class AbstractContentBean that defines the underlying content bean, factory, equality and hashcode as well as a few convenience methods.
+
+
+

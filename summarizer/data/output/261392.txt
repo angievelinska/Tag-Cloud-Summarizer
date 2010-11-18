@@ -1,0 +1,5 @@
+
+
+Error during graphical installation
+
+The CoreMedia CMS installer configures and starts the FAST installer to install the Search Engine. The configuration file named CoreMediaConfig.xml is located in the directory oeminstaller (for FAST InStream 4.3) or fastinstaller (for FAST ESP 5.1.5). The CoreMedia CMS installer invokes the scripts cminstall.sh and cminstall.bat resp. to start the FAST installer. If the graphical installation fails the following error window appears:

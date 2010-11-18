@@ -1,0 +1,9 @@
+
+
+Lines 7 - 14: Here you define the workflow variables from which the action will take the information for the mail. As shown for the variable receiver, you can define default values.
+
+Lines 20 - 24: Here you define a client view which permits the performer of the task to enter the receiver, the field and the document o send of the mail.
+
+Line 25: In this line you will configure the action bean. The action bean to use is defined via the attribute class. The names of the variables are set using the attributes in the lines below. Here the component which analyzes the workflow definition (the BeanParser) will call the setReceiverVariable(), setDocumentVariable, setFieldVariable() and setSuccessVariable() of the action bean using the variable names as parameters.
+
+You will see right away in Example 5.4.6c how to prepare your action to accept these attributes. 

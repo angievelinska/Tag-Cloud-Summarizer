@@ -1,0 +1,5 @@
+
+
+The file web.xml is the J2EE deployment descriptor of the Active Delivery Server application for the container. In general, correct configuration is carried out by the CoreMedia Installer.
+
+The timespan for automatic ending of a user session can be configured in the section <webapp> behind <servlet-mapping> with the parameter session-timeout (value in minutes):

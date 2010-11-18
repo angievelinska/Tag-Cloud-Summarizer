@@ -1,0 +1,16 @@
+
+
+Run the Clean Versions using the following command line:
+
+cm cleanversions [options] [--simulate] --path | 
+--recyclebin | <id1> <id2> ...
+
+this will 
+
+keep versions not older than D days before last version's modification date.
+keep at least the N last versions
+never destroy the latest version.
+never destroy the latest published version.
+never destroy the working version
+
+of contents given by --path, --recyclebin or <id1>, <id2>, ..., <idn>. Clean Versions will be recursively performed on every document of a given folder content.

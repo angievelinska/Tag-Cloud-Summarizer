@@ -1,0 +1,19 @@
+
+
+Sometimes you need more sophisticated security mechanisms and because the owner of "Chez Andre'' does not feel to reinvent the wheel, he decided to use an existing framework for the next example. The benefits of this approach are obvious: less programming effort and more functionality. This example uses "Acegi'' (pronounced "Ah-see-gee''), a comprehensive security framework for Spring. It is open source and can be retrieved from http://acegisecurity.sourceforge.net. The following enumeration lists some features:
+
+
+
+Single sign on: Use "Central Authentication Service'' (CAS) of the University Yale to realize a enterprise-wide single sign on environment.
+Secures beans: Define "Access Control Lists'' (ACL) for your beans.
+Secures HTTP requests: Protect your HTTP requests and use regular expressions to define the URL patterns.
+Supports HTTP BASIC authentication: Allows fast and simple authentication by using the built-in browser authentication.
+Supports HTTP Digest authentication: In contrast to BASIC authentication this method never sends the password over the network making it more secure. Meanwhile, supported by all modern browsers.
+Supports X509 authentication: Use mutual authentication to demand certificates from the client.
+Form authentication: Design your own HTML forms to get an individual login mask.
+Chanel security: Enforce the use of HTTPS requests.
+Different authentication backends: Retrieve the user data from different sources, e.g. XML-file, database, LDAP or the CoreMedia CMS 2005 user repository.
+
+This flexibility, of course, has its price. You have to learn how Acegi works and you must configure a lot of objects along the way. Apparently, this example cannot cover all aspects of Acegi, hence you will miss the one or other explanation. If you need more information about a certain subject please refer to the reference documentation of Acegi, available on the mentioned website.
+
+The rest of this section focuses on the protection of HTTP requests. This example uses an HTML form and the CoreMedia CMS user repository to authenticate users. But before you get acquainted with the details you should know more about the call order of the single components. If you have read the section "Login" then you have an idea how a login can be built with Spring. The DispatcherServlet calls an interceptor before the controller, allowing you to validate the authentication. Acegi works differently because it is executed before the servlet. Following figure illustrates the resulting relations: 

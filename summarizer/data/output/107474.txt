@@ -1,0 +1,20 @@
+
+
+To end this chapter, a complete example follows which illustrates the use of the different transformers. The source documents correspond to the DTD (http://xmlnews.org/dtds/xmlnews-story.dtd) already known from previous examples. The example includes three transformers:
+
+
+A special transformer will generate the <base> element (optional according to the DTD) in each document if it does not exist.
+
+An XSLT stylesheet will transform the XMLNews-Story documents into CoreMedia XML documents of type Text.
+
+
+
+
+
+
+
+
+ 
+
+
+

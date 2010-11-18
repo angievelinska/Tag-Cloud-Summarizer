@@ -1,0 +1,19 @@
+
+
+It is important to use an individual content bean factory for each Plug-In to ensure that they can be accessed through the Plug-In bean's id or name.
+
+Example
+
+<bean id="standard" 
+class="com.coremedia.starterkit.cae.plugin.PlugIn">   
+  <property name="aspectContentBeanFactory" ref="standardFactory"/>   
+</bean>  
+
+<bean id="standardFactory" 
+class="com.coremedia.objectserver.beans.SpringContentBeanFactory"/>   
+
+<bean name="standardFactory:CMMedia"    
+      parent="abstractAspectContentBean-starterkit"    
+      class="com.coremedia.starterkit.cae.contentbeans.standard.
+             CMMediaAspectImpl"  
+      scope="prototype"/>  

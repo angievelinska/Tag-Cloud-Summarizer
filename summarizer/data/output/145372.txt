@@ -1,0 +1,16 @@
+
+
+ 
+
+Components 
+
+Required disk space 
+
+JRE 
+
+~ 38 MByte 
+
+CM Editor 
+
+~ 19 MByte
+

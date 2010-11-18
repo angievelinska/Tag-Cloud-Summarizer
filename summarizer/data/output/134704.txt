@@ -1,0 +1,3 @@
+
+
+With the destroy tool you can delete resources from the repository.

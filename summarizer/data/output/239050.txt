@@ -1,0 +1,9 @@
+
+
+The typical architecture of an Editing Service web application inside the portal consists of the following parts: 
+
+A portal with an installed portlet
+a web application container with a portal application containing the Editing Services functionality.
+Usually a Content- and a Workflowserver completes the picture.
+
+The picture below visualizes the architecture:

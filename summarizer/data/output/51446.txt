@@ -1,0 +1,10 @@
+
+
+While container-managed authentication has indisputable advantages, two major drawbacks exist when using the Active Delivery Server: 
+
+Rule inheritance between groups is not considered.
+Caching by groups (see below) does not work.
+
+In order to mitigate these problems, container-managed authentication and the Subject-in-Session-based approach can be combined. After the container has authenticated the user for the first time, the Active Delivery Server can convert the user information from the servlet request to a group based Subject.
+
+In order to do so you have to provide the Active Delivery Server with a "role  map" that constructs a Subject from the servlet request, i.e. maps  J2EE roles to SCI groups. For example:

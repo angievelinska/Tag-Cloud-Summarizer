@@ -1,0 +1,9 @@
+
+
+Variables in the task scope define the local state of a task instance. However, task variables do not have restricted visibility. A variable in a task may be referred to from other tasks by prefixing the variable name with the task name and a dot. A variable defined in the process can be referred to by simply using its name without a prefix. For the definition of variables, see section Section 4.1.5.
+
+A guard defines an expression that delays activation of a user or automated task until the expression evaluates to true. The expression is re-evaluated each time the state of process- or task instances changes or the content, name, or place of referred resources in the Content Management Server changes. Note that changes to other, external entities do not automatically trigger re-evaluation of a guard. The class AbstractHandler may be subclassed to trigger the evaluation of guards due to external events.
+
+A precondition defines requirements which have to be fulfilled before the task itself is executed. A postcondition defines requirements which will be evaluated after the exit action has been executed. If more than one precondition or postcondition is provided, then the conditions are evaluated in the order specified. The result of such an evaluation operation is equivalent to define an And expression with an ordered set of conditions.
+
+Note that violating a condition is considered an error. If you want to delay execution until a condition is true, use a guard. If you want to check a condition and allow correction of wrong data entry within a user task, use a validator (see below).

@@ -1,0 +1,30 @@
+
+
+The dimension tables shown in the previous diagram were already discussed in conjunction with the fact tables. In the following, only the actual permanent report tables are discussed, which are marked using the «permanent» stereotype.
+
+You can see that all report tables contain an XX placeholder in their name. There is one of these tables for each time interval type as described in section. In the actual table name the XX is replaced by the interval type code.
+
+PageViews_XX
+
+These tables store in the column eventCount the number of page view events of a certain page in a given interval. Page and interval are identified by the columns pageId and eventIntervalStart. The column site redundantly stores the site to which the page under examination is associated.
+
+PageEntries_XX
+
+Similarly to the tables PageViews_XX, the tables PageEntries_XX count page view events, but the count is restricted to those events for which the page view is the first event in a session.
+
+PageExits_XX
+
+Similarly to the tables PageViews_XX, the tables PageExits_XX count page view events, but the count is restricted to those events for which the page view is the last event in a session.
+
+TotalViews_XX
+
+These tables store in the column eventCount the number of page view events for a certain site in a given interval. Site and interval are identified by the columns site and eventIntervalStart.
+
+TotalEntries_XX
+
+Similarly to the tables TotalViews_XX, the tables TotalEntries_XX  count page view events, but the count is restricted to those events for which the page view is the first event in a session.
+
+TotalExits_XX
+
+Similarly to the tables TotalViews_XX, the tables TotalExits_XX count page view events, but the count is restricted to those events for which the page view is the last event in a session.
+

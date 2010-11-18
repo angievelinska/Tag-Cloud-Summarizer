@@ -1,0 +1,39 @@
+
+
+The basic unit of information that can be rendered on a web site is the object. The Analytics Engine does not assume anything about the internal structure of objects. However, it must be possible to derive a number of values from the state of an object.
+
+Identifiers
+
+Each object is represented by a string identifier. The internal structure of the id is unspecified, but because the Analytics Engine uses a CoreMedia Content Application Engine for click tracking, the same ids are used in both contexts. The most commonly used objects are content beans, whose identifiers are built from a prefix contentbean: and a numerical suffix.
+
+Sites
+
+Objects are grouped in sites. The site of an object must not change, objects are permanently bound to their site. Sites are represented by a string id. By default, the site of a content bean is computed from the content's base folder, but other schemes are possible.
+
+It is assumed that the number of sites is comparatively small, ranging from one site to about 100 sites.
+
+Types
+
+Each object must be associated to a type. The type is represented by its name. While the type assignment is typically immutable, this is not enforced. By default, the type of a content bean is the type of the content itself.
+
+Like the set of sites, the set of types is expected to be small.
+
+Categories
+
+An object is associated with a category. Categories are organized in a tree. A category can be identified by the path that connects it to the root category, where the path is a list of category names. An object may change its category. Typical ways of assigning categories to content beans use linked category documents or carefully designed folder trees.
+
+It is assumed that the set of categories is large. Both too deep (dozens of levels) and too wide (hundreds of children) hierarchies are generally not recommended, because they tend to be inefficient or difficult to understand and maintain.
+
+Age
+
+The date of the last change to an object is recorded. For the purposes of generating statistics, the duration since the last change is condensed into a small integer. First, a set of limit durations is configured. Now the numerical age of an object is n+1 if the duration since the last change is longer than n of the limit durations. 
+
+For example, the limit durations might be 1 day, 2 days, 1 week and 1 month. An object that has been changed 5 days ago would get the age of 3 because 5 days are shorter than a week (=4) and longer than 2 days, whereas an object that is already 3 months old would get an age of 5 because 3 months is bigger than 1 month.
+
+Deletion Status
+
+An object may be declared deleted. In that case it is assumed to have ended its life cycle. Content beans are considered deleted if they have entered the archive.
+
+Publication Status
+
+An object may be declared published. In that case it is assumed to be available to the general public. Content beans are considered published if they are present on the Live Server.

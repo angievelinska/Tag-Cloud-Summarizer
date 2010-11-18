@@ -1,0 +1,6 @@
+
+
+CM Editing Services for JSF, Differencing
+
+ Product Certified Version Supported Version Internet Explorer 7.0  Mozilla Firefox 2.0 3.0
+

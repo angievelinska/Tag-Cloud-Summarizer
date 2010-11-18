@@ -1,0 +1,9 @@
+
+
+Most of the CoreMedia services (including Tomcat) require full access to their installation path. Windows services run independently from the logged in user, with a Windows account specified during installation. Therefore you have to take care to grant this user the appropriate access permissions. A good practice is to install Windows services to run using a newly created, dedicated, local account such as .\coremedia. To do so pass the -u argument to cm <service> install:
+
+cm <service> install -u <COMPUTERNAME>\coremedia
+
+The account used must be granted appropriate file access permissions. However, if -u is not specified, the built-in default service account, NTAUTHORITY\LocalService, is used. This account does not usually have full access to most installation locations. If you really want to use the default account, grant full access to LocalService ("Lokaler Dienst" on German Windows installations) below the installation root.
+For security reasons, it is strongly discouraged to run services with domain user accounts, especially, if the same account is used to run services on other machines in the domain.
+

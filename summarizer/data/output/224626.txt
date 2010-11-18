@@ -1,0 +1,27 @@
+
+
+The dimension tables shown in the previous diagram were already discussed in conjunction with the fact tables. In the following, only the actual overlay report tables are discussed.
+
+OverlayPageViews
+
+This table stores in the column eventCount the number of page view events of a certain page in a given interval. Page and interval are identified by the columns pageId and eventIntervalStart. The column site redundantly stores the site to which the page under examination is associated.
+
+OverlayPageEntries
+
+Similarly to the table OverlayPageViews, the table OverlayPageEntries counts page view events, but the count is restricted to those events for which the page view is the first event in a session.
+
+OverlayPageExits
+
+Similarly to the table OverlayPageViews, the table OverlayPageExits counts page view events, but the count is restricted to those events for which the page view is the last event in a session.
+
+OverlayContextViews
+
+This table stores in the column eventCount the number of context view events of a certain context of a certain page in a given interval. Page, context and interval are identified by the columns pageId, pageContext and eventIntervalStart.
+
+OverlayTransitions
+
+This table stores in the column eventCount the number of transitions from are source page to a target page using a link in a certain context in a given interval. Source page, source context and target page are identified by the columns sourceId, sourceContext, targetId and eventIntervalStart.
+
+OverlayTransitionExits
+
+Similarly to the table OverlayTransitions, the table OverlayTransitionExits counts transitions, but the count is restricted to those events for which the transition is the last event in a session.

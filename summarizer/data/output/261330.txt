@@ -1,0 +1,3 @@
+
+
+CoreMedia CMS contains the Editor Extensions. Web applications, that can be used from the CoreMedia Editor and the CoreMedia WebEditor.

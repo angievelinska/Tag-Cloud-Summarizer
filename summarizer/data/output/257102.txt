@@ -1,0 +1,80 @@
+
+
+The RichText component adds a plethora of text formatting opportunities, such as
+
+
+
+bold (1) and italic (2)
+
+
+underlined, strikethrough, subscript and superscript (all (3))
+
+
+different fonts (6), font sizes (7)
+
+
+paragraph templates (5)
+
+
+paragraph alignment (left, center, right (all 4))
+
+
+font color and background color (3).
+
+These can be applied via tool bar, the context menu or partly using the attribute editor (see Section).
+
+Formatting text
+
+To format a text section, e.g. as italic:
+
+
+Click at the position of the text to be formatted.
+
+
+Format the text e.g. as italic by:
+
+
+
+Selecting Format|Character format||Italic from the menu bar or Character format|Italic from the Context menu.
+
+
+Clicking on the toolbar.
+
+
+Using the keyboard shortcut <Ctrl>+<Shift>+<k> .
+
+and then start typing.
+
+Alternatively, you can use the following method:
+
+
+Select the text with the mouse.
+
+
+Format the text with one of the next options:
+
+
+
+Select e.g. Format|Character format|Italic from the menu bar or Character format|Italic from the Context menu
+
+
+Click on on the toolbar.
+
+The text will be displayed in italics. Set the cursor to the required position and continue work.
+
+Undo formatting
+
+If you want to undo a particular formatting:
+
+
+Mark the text section as described above and
+
+
+format the text with one of the following methods:
+
+
+
+Select Format|Character format|Default from the menu bar or Character format|Default from the Context menu.
+
+
+

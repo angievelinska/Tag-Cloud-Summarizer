@@ -1,0 +1,19 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+timerVariable 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the variable that contains the timer that should be disabled

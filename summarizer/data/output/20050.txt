@@ -1,0 +1,15 @@
+
+
+The CoreMedia Editor is internationalized and is therefore prepared for configuration to different languages. Within a localization, program texts in menus, dialogs etc., as well as the names of the document types and properties which are shown, can be adjusted.
+
+The language and the country-specific settings which the CoreMedia Editor displays on the user interface are configured with the attributes
+
+language="en"
+
+and
+
+country="UK"
+
+of the Locale element in the file properties/corem/editor.xml. Details for configuring the language settings are given in the Administration Manual.
+
+Internationalization of the CoreMedia Editor is based on the class java.util.Locale. On program start, the default locale of the Java environment is set to the value given in the configuration file properties/corem/editor-startup.xml. For identification of the locale, the ISO 639 language codes are used (see http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt). New locales should use these language codes in order to remain compatible.

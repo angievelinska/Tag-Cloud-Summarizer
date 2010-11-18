@@ -1,0 +1,5 @@
+
+
+Guards are boolean expressions that must evaluate to "true" before the task is activated. The expression may be based on the current values of workflow variables, on resources in the Content Management Server or on external resources. A possible use of guards is to determine the resources that are required for the task. The task then is deactivated until all resources are freely available. Thus, the workflow suspends execution until the guard is fulfilled.
+
+In Example 4.1.6.3a you see a guard that checks whether the property isCheckedOut_ of the resource contained in the variable "document" (variable="document") is set to false (the stored value is negated by Not). I.e., the task continues when the document is checked in.

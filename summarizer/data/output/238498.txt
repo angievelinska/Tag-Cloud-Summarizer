@@ -1,0 +1,7 @@
+
+
+The ActionExecutionController is a Spring MVC conforming controller which executes Actions that are passed in as request parameters. It should be used as a counterpart of the ToolbarRenderer, and the ContextMenuRenderer, but could also be used standalone. The request must also contain a target on which the action is executed. For details of the required request parameter please see the JavaDoc of the class ActionExecutionController. 
+
+ModelAndView, NavigationHandler, and CommandPostProcessor
+
+The controller uses the concept of NavigationHandler and CommandPostProcessor during the execution of the action. After action execution the controller returns a Spring MVC ModelAndView to the Spring Dispatcher Servlet for further processing, usually a navigation to another page. The ModelAndView is generated using the SpringMVCNavigationHandler of the action as source for the view and the SpringMVCCommandPostProcessor of the action as source for the model.

@@ -1,0 +1,3 @@
+
+
+All interface icons display a short description on mouseover. Nevertheless, the key icons of the workflow interface are:

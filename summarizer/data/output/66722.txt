@@ -1,0 +1,3 @@
+
+
+To avoid confusion, only one resource with a given name is allowed in a folder. If a resource with the given name already exists, you will be notified on saving. You can change the name of the new resource choosing the menu item File|Rename.

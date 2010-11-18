@@ -1,0 +1,3 @@
+
+
+The license tool has only one additional option:

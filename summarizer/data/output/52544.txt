@@ -1,0 +1,8 @@
+
+
+This file is necessary for the spellchecker. It defines the mappings from Java Locale objects to Word language identifiers. E.g.
+
+de_DE=wdGerman
+
+maps the locale de_DE to the Word language identifier wdGerman. The most common European languages are covered in the default language-mapping.properties file. The locale identifier can be taken from the Locale.toString() method (see Javadoc for details) and the Word language identifiers from the WdLanguageID enumeration of the Word object type library.
+

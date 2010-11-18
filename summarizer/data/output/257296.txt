@@ -1,0 +1,6 @@
+
+
+Please make sure that the deletion of a resource does not create dead link because these lead to publication errors inevitably (see section).
+
+
+

@@ -1,0 +1,3 @@
+
+
+Many attributes cannot be changed once a group or user has been created (the domain of a user or group, the name or password of an external (LDAP) user, the flags "isContentGroup" und "isLiveGroup" of a group, the name of an external group). If a mismatch is detected, the restoreusers tool exits with an error message. In addition, the tool can only add or change rules and can only add memberships, but cannot remove them. 

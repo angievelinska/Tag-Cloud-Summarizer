@@ -1,0 +1,3 @@
+
+
+DateProperties are often used for sorting (see Section 4.2.4).

@@ -1,0 +1,34 @@
+
+
+ Product Copyright Used license by Printed License CMS 2005 CMS 2006 
+
+CMS
+
+2008 ANTLR jGuru.com Public domain x  x x ASM ASM license INRIA, France Telecom x  x x Bouncy Castle The Legion Of The Bouncy Castle The Legion Of The Bouncy Castle x x x x Bean Scripting Framework IBM IBM x    BeanShell Patrick Niemeyer 
+
+Gnu Lesser General Public License and
+
+Sun Public License x x x x Bridge2Java IBM IBM x x x x c3p0 Machinery For Change, Inc. Gnu Lesser General Public License 2.1 x  x x Central Authentication Service Yale University Yale University x x x x Cup Parser Generator Scott Hudson, Frank Flannery, C. Scott Ananian Scott Hudson, Frank Flannery, C. Scott Ananian x x x x Apache Ant, Axis, Cactus, cglib, commons-beanutils, commons-cli, commons-collections, commons-digester, commons-dbcp, commons-fileupload, commons-http, commons-httpclient, commons-javaflow, commons-lang, commons-logging, commons-net, commons-pool, Derby, fop, jakarta-bcel, jakarta-oro, jakarta-taglibs, log4J, Lucene, Struts, Tomcat, xml-commons-resolver, Xalan, Xerces, xmlbeans The Apache Software Foundation Apache Software License 1.1 und Apache License 2.0 x x x x DOM4J DOM4J license MetaStuff, Ltd. x  x x Ehcache Luck Consulting Pty Ltd Apache License 2.0 x  x x EJB Persistence Sun Microsystems Inc. Enterprise JavaBeans v.3.0 ("Specification") License x  x x util.concurrent Package Doug Lea http://gee.cs.oswego.edu/dl/ Public Domain  x x x FAST InStream 
+
+Fast Search & Transfer
+
+www.fastsearch.com 
+
+Fast Search & Transfer
+
+www.fastsearch.com  x x x FAST ESP 
+
+Fast Search & Transfer
+
+www.fastsearch.com 
+
+Fast Search & Transfer
+
+www.fastsearch.com    x Groovy Bob Mcwhirter & James Strachan Bob Mcwhirter & James Strachan, The Codehaus x  x x GIFEncoder Jef Poskanzer ACME x x x x HSQLDB Hypersonic SQL Group Hypersonic SQL Group x    Hibernate Red Hat Middleware LLC and third-party contributors Gnu Lesser General Public License 2.1 x  x x Install Toolkit Java IBM IBM x x x x iText Bruno Lowagie, Paulo Soares Gnu Lesser General Public License x  x x JasperReports 1.2.2 JasperSoft Corporation Gnu Lesser General Public License x  x x Java Architecture for XML Binding Sun Microsystems, Inc. Binary Code License Agreement x    Java API for XML Processing Sun Microsystems, Inc. Binary Code License Agreement x    Java Bean Activation Framework Sun Microsystems, Inc. Binary Code License Agreement x x x x Java Bean Calendar Control John Margaglione  Gnu Lesser General Public License x x x x Java Cryptography Extension Sun Microsystems, Inc. Binary Code License Agreement x    Java Mail Sun Microsystems, Inc. Binary Code License Agreement x x x x Java Management Extensions Sun Microsystems, Inc. Binary Code License Agreement and Supplemental License Terms x  x x Java Message Service Sun Microsystems, Inc. Binary Code License Agreement x x x x Java Server Faces Sun Microsystems, Inc. Binary Code License Agreement x x x x Java Servlet Sun Microsystems, Inc. Binary Code License Agreement x x x x Java Transaction API Sun Microsystems, Inc. Binary Code License Agreement and Supplemental License Terms x  x x Java tools.jar Sun Microsystems, Inc. Binary Code License Agreement x x x x Java WebStart Sun Microsystems, Inc. Binary Code License Agreement x    JBoss Javassist Shigeru Chiba Gnu Lesser General Public License 2.1 x  x x JBoss Common JBoss Inc. and individual contributors Gnu Lesser General Public License 2.1 x  x x jclark.jar (xp, xt) James Clark James Clark x x   Jelmer gif-plugin Jelmer Kuperus Apache License 2.0 x  x x Jetty Mortbay Apache License 2.0 x x x x JCommon Object Refinery Limited and Contributors Gnu Lesser General Public License x  x x JFreeChart Object Refinery Limited and Contributors Gnu Lesser General Public License x  x x JPython, Jython Jim Hugunin Corporation for National Research Initiatives x    JTidy World Wide Web Consortium World Wide Web Consortium x x x x Jaxen Bob Mcwhirter & James Strachan Bob Mcwhirter & James Strachan x x x x JDom Jason Hunter & Brett McLaughlin Jason Hunter & Brett McLaughlin x    joeSNM Blast Internet Services, Inc. Gnu Lesser General Public License x x x x MX4J MX4J MX4J License Version 1.0 x x x x MooTools MIT License Valerio Proietti   x x NetComponents Daniel Savarese NetComponents License x x x x org.json package JSON.org JSON License x  x x ORBacus IONA Technologies IONA Technologies     OROMatcher Daniel Savarese OROMatcher License x x x x SNMP TrapAppender Mark Masterson M2 Technologies, based on Apache Software License, Version 1.1 x x x x Sun J2RE Sun Microsystems, Inc. Binary Code License Agreement for the Java 2 Runtime Environment x x x x Thunderbird Portable All contributors Mozilla Public License 1.1 x  x x Portable Thunderbird Launcher 1.0.9 John T. Haller Gnu General Public License x  x x ROME 
+
+Alejandro Abdelnur,
+
+Patrick Chanezon,
+
+Elaine Chien Apache License 2.0    x Spring Framework All contributors Apache Software License 1.1 und Apache License 2.0 x x x x TinyMCE Moxiecode Systems AB Gnu Lesser General Public License 2.1 x  x x WASP Systinet Corporation www.systinet.com Systinet WASP License x x x x Xstream Joe Walnes XStream BSD License x  x x YAML Dirk Jesse YAML-C    x
+

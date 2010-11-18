@@ -1,0 +1,8 @@
+
+
+Workflow variables may be defined directly in the process, as well as locally in any of the tasks. While performing a task, a user needs to inspect, and possibly modify, some of those variables.  Which variables the user needs depends on the concrete task.
+
+Therefore, each task definition contains a view definition, which specifies the variables to be accessed, and the kind of access required (read or write), while performing the task. The view definitions of different task definitions may reference the same variables, for example to share a common process description, or a common list of content objects to operate on.
+
+The Unified API represents a view as a special kind of CapObject.  A view appears to have properties that can be read and written, while in fact, each of those properties is stored in some task or process. Each read and write access to a view is redirected according to the view definition.  By inspecting the view definition, which is a subclass of CapType, the available properties can be listed.
+

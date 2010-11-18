@@ -1,0 +1,28 @@
+
+
+From an administrator¿s perspective, there are two important configuration files:
+
+config/proactiveengine/log4j.properties
+config/proactiveengine/spring/proactiveengine.properties
+
+log4j.properties
+
+This is the configuration for the Apache Log4j based logging. As a default, the logging output will be written to a file var/logs/proactiveengine.log. See http://logging.apache.org/log4j/docs/documentation.html  for a documentation of Log4j and its configuration options.
+
+proactiveengine.properties
+
+This file configures the Proactive Engine's internal and external components. These components are
+
+Repository
+
+The CoreMedia CMS Repository connection is specified in the usual (see above) way and looks as follows
+
+repository.url=http://localhost:44441/coremedia/ior
+repository.user=webserver
+repository.password=webserver
+repository.domain=
+
+Database
+
+A database for the Proactive Engine's internal components needs to be specified. Before entering the database parameters, you have to create a new database user as described above. Alternatively, due to the use of different tables you may reuse the same database user which you are still using for the CMS repository. 
+

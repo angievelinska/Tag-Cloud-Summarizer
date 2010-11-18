@@ -1,0 +1,75 @@
+
+
+The workflow server supports timers, which implement a reaction when some part of the workflow takes too long.  There are system defined timers, which observe the time it takes to complete a process or a task, and the time it takes until an offered task is accepted; and there are user defined timers, which are enabled and disabled according to the process definition.
+
+At any time, a timer can be in one of three states: off, running, or suspended. A timer is initially off, and starts running when it is enabled. A running timer is suspended exactly when its containing process is suspended, and becomes running again when the process is resumed. When a running timer is disabled, it is turned off again.
+
+As long as a process is suspended, its timers cannot be enabled or disabled.  Also, suspending a timer that is off has no effect on the timer's state.
+
+In addition to its lifecycle state, a timer holds a time limit and an expiration flag. 
+
+A time limit can be given either in relative or in absolute form. The relative form indicates a time distance, represented as a number of seconds, and is used for system-defined timers, and (usually) when initializing a timer inside a process definition. The absolute form indicates a fixed point in time, represented as date and time, and makes most sense when a time limit is set interactively by a user ("We need this article by next Friday"). 
+
+When a timer first becomes running after setting a time limit, the timer's expiration date is computed, either adding the relative time limit to the current time, or directly using the absolute time limit. The expiration date remains fixed even if the process is suspended and resumed again.
+
+When a running timer reaches or exceeds its expiration date, it expires.  This has the following effects:
+
+
+
+The expiration flag is set.
+
+
+A TimerExpiredEvent is sent.
+
+
+All server-side timer handlers registered for this timer are invoked. Timer handlers are defined in the process definition.
+
+As long as the timer's expiration flag is set, no further TimerExpiredEvents or handler invocations take place. The expiration flag is cleared each time the time limit is modified.
+
+If a timer's expiration date is reached while the timer is suspended, the timer will expire as soon as the process is resumed.
+
+In the following, the different system-defined timers and the handling of user-defined timers are described.
+
+Process Completion Timer
+
+The process completion timer observes the total execution time of a process. Its relative time limit can be set in the process definition using the defaultTimeout attribute, as described in the Workflow Developer Manual. The process completion timer is enabled when the process is started, and is cleared when the process completes or is aborted.
+
+By default, the process completion timer adds a warning to the process when the timeout expires. Different handlers can be defined in the process definition.
+
+Task Completion Timer
+
+The task completion timer is defined for user tasks only, and measures the total time the task is waiting for users: from when the task is first offered, to when the task is completed by a user. The relative time limit is set using the task definition's defaultTimeout attribute.
+
+If the guard of an activated task becomes false, the task goes back to the WAITING state, and the timer is disabled.  However, the timer's expiration date is not changed.
+
+The timer is cleared when the task is completed, interrupted, or skipped, or when an alternative task in an implicit choice is accepted.
+
+By default, the task completion timer adds a warning to the task when the timeout expires, causing the task to appear on the tasks-with-warning work list. Different handlers can be defined in the process definition.
+
+Task Acceptance Timer
+
+The task acceptance timer is also specific to user tasks, and measures the time from when the task was first offered to when it is accepted. It is configured using the defaultOfferTimeout attribute in the task definition.
+
+The task acceptance timer is enabled exactly when its containing task is in the ACTIVATED state. The timer is enabled when the task first changes from WAITING to ACTIVATED. It is disabled when the task is accepted, or becomes WAITING again because the guard condition becomes false. When the task becomes ACTIVATED again (because the guard condition becomes true, or because a previously accepted task is cancelled), the timer is enabled again, and continues running with unchanged expiration date.
+
+Like the task completion timer, the timer is eventually cleared when the task is completed, interrupted, or skipped, or when an alternative task in an implicit choice is accepted.
+
+By default, the task acceptance timer adds a warning to the task when the timeout expires, causing the task to appear on the tasks-with-warning work list. Different handlers can be defined in the process definition.
+
+User-defined Timer
+
+Additional timers can be defined in the process definition, by defining a timer variable.  These timers are not enabled or disabled automatically, but need to be handled explicitly using EnableTimer and DisableTimer actions.
+
+A timer variable consists of two parts: The time limit is a value like all other property values that can be freely read and written to the containing workflow object property.  The timer object itself observes the value of this variable, and can be accessed using WorkflowObject#getTimer(name) (or #getTimers or #getTimersByName).
+
+t.get("MyTimer"); // property access
+t.getTimeLimit("MyTimer"); // typed property access
+t.getTimer("MyTimer").getLimit(); // this works, too
+
+Absolute and relative time limits are implemented using the value classes AbsoluteTimeLimit and RelativeTimeLimit, which implement the TimeLimit interface, and may be freely constructed by an application programmer:
+
+t.set("MyTimer", new RelativeTimeLimit(300));
+Calendar abs = DateConverter.convertToCalendar(
+                           "2004-09-15T21:59:00+01:00");
+t.set("MyTimer", new AbsoluteTimeLimit(abs));
+

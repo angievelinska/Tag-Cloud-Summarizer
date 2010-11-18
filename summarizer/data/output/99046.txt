@@ -1,0 +1,18 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+name
+ 
+
+The name of the document type.
+
+
+

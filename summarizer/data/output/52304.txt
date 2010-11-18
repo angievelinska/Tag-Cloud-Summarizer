@@ -1,0 +1,60 @@
+
+
+  
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+user
+
+or
+
+userId 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the name of a user
+
+or
+
+the user ID of a user 
+
+group
+
+or
+
+groupId 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the name of a group
+
+or
+
+the group ID of a group 
+
+domain 
+
+NMTOKEN 
+
+#IMPLIED 
+
+Domain of a group or user. Might be used in addition, if group or user has been chosen. 
+
+rights 
+
+CDATA 
+
+#REQUIRED 
+
+a comma-separated list of rights as specified above
+

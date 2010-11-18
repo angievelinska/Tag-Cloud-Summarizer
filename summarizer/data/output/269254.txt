@@ -1,0 +1,55 @@
+
+
+This chapter describes the examples. First, extract the jax-ws examples from cap-examples.jar to a working directory.
+
+There are two directories, etc and common, which are shared by all jax-ws examples. 
+
+"common" directory
+
+The common directory contains shared classes, especially the CapConnector which is the bridge to the CoreMedia CMS Unified API.  Edit this class, and change the iorUrl, user and password according to your CoreMedia CMS account.  The resources directory contains some icons which are used by the advanced examples.  Furthermore there are two deployment files in the directory:
+
+web.xml is a simple deployment descriptor which delegates requests to the Metro runtime  .
+sun-jaxws.xml is evaluated by the Metro runtime and specifies the endpoint of the WebService.  
+
+Since the examples do not focus on deployment issues, these descriptors are simple and identical for all the examples.
+
+"etc" directory
+
+The etc directory contains a base.xml file which is an ant build file with common targets. It is imported by the local build file of each example.  Do not try to use it standalone, it depends on some properties which are set in the local build files.  The global.properties file is included by base.xml and contains some properties concerning your CoreMedia CMS lib, Tomcat and Metro installations. If you have set up your environment exactly as described here, you don't need to change it, otherwise you have to adjust it to your system.
+
+The structure of all examples is identical. They consist of a server and a client package, a build file and a local.properties file.  These properties are "local" with respect to the particular example, not to your environment.  So you do not need to change them. Just build and execute the examples by the following steps:
+
+1.  Change into the example directory
+
+$ cd ws01-cms
+
+2.  Build and deploy the server
+
+$ ant server
+
+3.  Wait until the server web application is running in Tomcat.
+
+4.  Build and execute the client
+
+$ ant client
+
+The big targets server and client you used above, consist of several sub targets.  If you want to study the examples in detail, you can execute the sub targets one by one and explore the results.  
+
+The server target consists of four subtargets:
+
+generate-server
+compile-server
+war-server
+deploy-server
+
+generate-server invokes Metro's Apt tool which evaluates the javax.jws annotations of the application and generates the portable artifacts.  They are stored in the build/aptgen directory.  compile-server compiles all server classes, i.e. the application and the generated portable artifacts.  war-server creates the web application which includes the classes you have just compiled, the CoreMedia CMS libs and the descriptor files in the common/webinf directory.  deploy-server copies the war file into Tomcat's webapps directory.
+
+The client target consists of three subtargets:
+
+generate-client
+compile-client
+execute-client
+
+generate-client invokes Metro's Wsimport tool, which queries the WSDL of the WebService and generates the client side portable artifacts, especially the Service Endpoint Interface which is the bridge from the client code to the WebService. These artifacts are stored in the build/wsgen directory.  generate-client also compiles the portable artifacts.  compile-client simply compiles the client code.  Notice that the classpath of compile-client does not include the CoreMedia CMS libs, because the example clients are based only on the WebService.  Finally, execute-client executes the client.
+
+Every jax-ws example is self-contained and independent of the others.  Nevertheless, it is suggested that you study the examples in the order used in the manual, because not every detail is repeated in every example.

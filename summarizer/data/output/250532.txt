@@ -1,0 +1,22 @@
+
+
+ Attribute Description historyIconCount 
+
+Here you can enter the number of versions for which the status icon is shown in the version history of the document window. For example:
+
+<Document type="Link" historyIconCount="3"/>
+
+The following values are possible:
+
+-1: show the icon for all versions (not recommended)
+
+ 0: show no icons in the  version history
+
+ n: show icons for the last n versions
+
+Default value is 5
+
+Note: The value should not be chosen greater than 10 otherwise the editor slows down.
+
+ type Name of the document type for which the view is configured. viewClass Here you can enter the class which should be used for displaying the documents. Normally you would not enter anything, and therefore use the default hox.corem.editor.generic.GenericDocumentView. You can use the TabbedDocumentView class for a tabbed view of the properties (see Section 5.8.1.1.2 and the description of element Tab below). compact The order of properties of a document in the CoreMedia Editor depends per default (compact=false) on the order defined in the document-types.xml or editor.xml file. If you set compact=true properties which do not use the full window width (int, date) will be shown consecutively.  %varies; This entity stands for further configuration possibilities which depend on the API of the viewClass. The specific configuration possibilities must be obtained from your developers.
+

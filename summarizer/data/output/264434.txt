@@ -1,0 +1,5 @@
+
+
+Keep in mind, that your aspect properties (getItems()) might be cached by dataviews. If your implementation depends on content properties, such as aggregator.getMaxLength(), the dataview will automatically be invalidated whenever those property values change. However, if the dynamic content list is supposed to change over time, you should consider using a timed dependency or any other com.coremedia.cache.Cache dependency mechanism to allow the dataview to be invalidated and the dynamic content list to be refreshed periodically. If dataviews are not in use, Cache.cacheFor will have no effect.
+2#
+Register your class in your plug-in configuration file as an aspect of the CMNamedDynamicList content type.

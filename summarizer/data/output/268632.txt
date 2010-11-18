@@ -1,0 +1,23 @@
+
+
+Case Significant Database Connection Properties
+
+In CoreMedia CMS before version 5.2.304, database account names for the Content Server and Workflow Server repository were converted to the database default case. That is, the entries you made in the sql.store.user property of the  properties/corem/sql.properties file were changed for database access as follows:
+
+Oracle - converted to upper case
+DB2 - converted to upper case
+PostgreSQL - converted to lower case
+Microsoft SQL Server - no conversion
+
+Since CoreMedia CMS 5.2.353 the database user name is case sensitive for databases that support this feature. This allows to access a database user and schema whose name does not correspond to the database default case. In detail, the account names are handled as follows:
+
+Oracle - The Oracle database does not support database schema names with lowercase letters. So, for Oracle, user names continue to be converted to upper case automatically. 
+PostgreSQL - The user name is not converted. You can access a database user and schema containing upper case letters. Such a schema is created when using an administration UI, or when using double quotes on the command line.
+DB2 - The user name is not converted. You can also access a database user and schema containing lower case letters.
+Micosoft SQL Server - The user name is not converted as before. 
+
+Migration steps
+
+If you upgrade to CoreMedia CMS 5.2.353 or higher and you have used an Oracle or Microsoft SQL Server database before,  you do not have to change your old settings for the database user.
+
+If you have used a DB2 or PostgreSQL database before, you should review your database connection properties to make sure that the case of the user name in the property file matches the case of the database user name in the database. You should check the file properties/corem/sql.properties for all Content Servers and the Workflow Server. Note that password handling is not affected, and remains as case significant as before.

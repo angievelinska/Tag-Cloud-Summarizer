@@ -1,0 +1,13 @@
+
+
+Interface to implement
+
+Own performer policies must implement the interface com.coremedia.workflow.WfPerformersPolicy. The important method is calculateAssignment(WfTaskInstance taskInstance, WfUser[] permittedUsers) which is called by the CoreMedia Workflow Server. It returns a WfUserAssignment object (see the Workflow API documentation for details).
+
+Default implementation
+
+If you only want to adapt the default performer policy to your needs it would be easier to subclass the default performer policy DefaultPerformersPolicy and to override the appropriate methods.
+
+Defining the policy in the workflow definition
+
+In Example 5.7a you see how to define your own performer policy in the workflow definition.

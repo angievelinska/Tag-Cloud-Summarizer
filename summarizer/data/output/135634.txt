@@ -1,0 +1,5 @@
+
+
+Configure Properties
+
+You can restrict the indexed properties of a document by their name and type. You can further restrict the indexed XML properties by their grammar and the indexed Blob properties by their MIME-type and size.

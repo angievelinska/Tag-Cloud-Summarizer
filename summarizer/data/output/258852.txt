@@ -1,0 +1,8 @@
+
+5#
+
+
+Make JSF prefix all form keys. Place a bean customizer like the following in one of your spring configuration files under the directory spring/editing-jsf/dispatcher-servlet/:
+
+
+

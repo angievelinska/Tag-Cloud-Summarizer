@@ -1,0 +1,15 @@
+
+
+Property editors are used to edit properties in the document view of the CoreMedia Editor. There are a lot of property editors provided by CoreMedia (see Section) but sometimes it might be useful to extend the editors due to own needs.
+
+Interface to implement
+
+All property editors implement the interface PropertyEditor or one of its sub-interfaces (see Javadoc). Nevertheless, you will normaly subclass one of the existing property editors instead of implementing PropertyEditor or its sub-interfaces. If you want to support search and replace within the property, then the property editor must implement the additional interface SearchableTextComponent  and its method isSearchable()  must return true. Search and replace affects the search and replace dialogs and the Global-Search-and-Replace-Workflow. The file cap-examples.jar  contains a simple example for a property editor with search and replace functionality: BasicStringEditor.
+
+Classes to subclass
+
+The most common way to write own property editors is to subclass one of the existing editors. See Section for a list of supplied property editors.
+
+Integrate your Property Editor into the CoreMedia Editor using editor.xml
+
+You can integrate your property editor into the CoreMedia Editor using the attribute editorClass of the Property element as shown in example.

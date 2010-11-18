@@ -1,0 +1,7 @@
+
+
+These are the predefined action classes which can be performed in tasks. They can be used with the elements <Action>, <EntryAction> and <ExitAction> by specifying the name of the action class as the class attribute of the respective action element.
+
+If an action is described as applying to one resource in an atomic variable, it can be applied to a set of resources in an aggregation variable, too.
+
+All predefined action classes discussed here support the following additional attributes to be specified as part of the action element:

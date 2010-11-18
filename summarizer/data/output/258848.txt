@@ -1,0 +1,21 @@
+
+
+The next two steps describes how to enable Single-Sign-On with EditingServices in the Portal context: 
+
+1. Introduce the PortalEditingSessionInterceptor in the file: spring/editing-jsf/dispatcher-servlet/editing-jsf-controllers.xml 
+
+<bean id="editingSessionInterceptor" class=
+"com.coremedia.portal.backend.cae.PortalEditingSessionInterceptor">
+  <property name="capConnection" ref="connection"/>
+  <property name="capSessionAttributeName" value="usercontext"/>
+</bean>
+
+2. Add the above defined bean to the interceptor list of the facesControllerMapping:
+
+<customize:replace bean="facesControllerMapping" property="interceptors">
+      <list>
+        <ref bean="jsfEditingSessionInterceptor"/>
+        <ref bean="jsfEditingContextInterceptor"/>
+        <ref bean="editingSessionInterceptor"/>
+      </list>
+</customize:replace>

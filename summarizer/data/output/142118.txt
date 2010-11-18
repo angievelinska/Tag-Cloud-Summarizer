@@ -1,0 +1,9 @@
+
+
+The tool bar of the Workflow window of the WebEditor is divided in three parts:
+
+(1) The standard functions for editing.
+
+(2) The functions for the currently selected task or process.
+
+(3) The functions you can perform in the variable view.

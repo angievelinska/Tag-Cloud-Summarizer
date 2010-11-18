@@ -1,0 +1,12 @@
+
+
+Storing BLOBs in PostgreSQL largeObjects
+
+On PostgreSQL, a different storage format inside the database is used for large blobs. The native PostgreSQL largeObject format supports streaming, and will not cause the server to run out of memory on huge blobs, in contrast to PostgreSQL's bytea type used before
+
+By default, bytea is used for blobs up to 1 MB, largeObject is used for larger BLOBs. Note that largeObject storage has administrative implications:
+
+for backup, pgdump has to be invoked with special parameters
+access control for BLOBs in the DB is only possible on a per-database-level, not per schema.
+cm schemaaccess dropAll will not work, because it does not recognize blob oids
+

@@ -1,0 +1,13 @@
+
+2#
+
+
+Select the components to install and click [Next].
+
+Now you will be asked for the destination directory etc. as described in the "General Installation Information" chapter. Afterwards, you will be prompted to configure the Unified API. 
+3#
+Because there are no properties to configure, select [No].
+
+Now the files of the Unified API will be copied to the installation directory. The last window opens up and asks you to finish the installation.
+4#
+Click [Finish] to finish the installation of the Unified API.

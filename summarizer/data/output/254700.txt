@@ -1,0 +1,28 @@
+
+
+During migration, a lot of configuration information and code has to be validated or adapted to ensure that it will conform with the new repository structure. You have to test the updated configuration files and programs in a realistic environment. To that end, you have to set up a new test environment, that is converted to multi-site mode early on during the migration project. In the following you will learn how to set up such a test system. Most changes are quite similar to the actual conversion process that happens at the time of the relaunch.
+Create two new database users for a new Content Management Server and a new Master Live Server.
+Initialize the database users using consistent backups of the existing servers.
+Install a new Content Management Server and a new Master Live Server (release CoreMedia CMS 2005 or later) and configure them to use the new database users. Keep the servers in single-site mode.
+Start the servers.
+Update the folder structure of the Content Management Server. Publish the changes. (You might want to perform the required actions using an automated script, so that the script can be reused later on during relaunch.)
+Shutdown the Content Management Server.
+
+
+Run cm multisiteconverter in the Content Mangement Server installation This will automatically perform the following actions:
+
+Verifying that the Content Management Server was previously in single-site mode and that it is not currently running.
+Updating the database to include correct base folders for all resources.
+Updating the database to mark the schema as multi-site enabled.
+Changing the property cap.server.multipleLiveServers in capserver.properties to true.
+
+
+8#
+
+
+Start the Content Management Server.
+Update the file publisher.properties to include the new top-level folder as its single publication target.
+
+You may now install and use additional clients as needed.
+
+When setting up the new repository structure in step 5, the ideal way is to put all resources into a single top-level folder, except the Home and System folders (Home and System folders normally contain no published content, see section). If you decide to keep multiple top-level folders, there may remain wide links. Wide links are links from one top-level folder tree to another top-level folder tree. Because such links might potentially span multiple publication targets, leading to local dead links, they are strongly discouraged and are reported as an error during publication. Therefore you might want to execute a query for wide links in the CoreMedia Editor at this point. You might have to rethink your repository structure if wide links cannot be easily cleaned up.

@@ -1,0 +1,9 @@
+
+
+<Attribute>
+
+
+Parent element: <TransformElement>
+
+
+Use this element to define an attribute of an HTML element which should be inserted into the RichText pane. Attributes of an HTML element which are not matched by an <Attribute> element will be ignored. The only exception is the class attribute which will always be taken over.

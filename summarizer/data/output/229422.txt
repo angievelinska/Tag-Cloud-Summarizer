@@ -1,0 +1,6 @@
+
+
+The Analytics Dashboard is a stand-alone Java Web application which uses the Analytics Reporting Database as its primary data source. In its basic deployment, it connects to a CoreMedia Content Application Engine (CAE) for authentication verification.
+
+Predefined reports (see the User Manual) do not access the production system infrastructure but only use the Analytics Database. Built-in CAE connectivity allows you to create reports that merge publication system data with information from the Analytics Database.
+

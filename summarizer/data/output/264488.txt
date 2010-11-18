@@ -1,0 +1,4 @@
+
+
+ Name Value Default Description CONTENT_SERVER_URL URL string (determined heuristically) the IOR URL of the Content Server  WORKFLOW_SERVER_URL URL string (fetched from the Content Server) the IOR URL of the Workflow Server USER string N/A the name of the user to log in DOMAIN string "" the domain of the user to log in PASSWORD string N/A the password of the user to log in USE_WORKFLOW "true", "false", "" "" whether the Workflow Server should be connected; if "true", the connection is required; if "", the connection is optional; if "false", no connection attempt is made ORB a org.omg.CORBA.ORB object (created automatically) the ORB for setting up the CORBA connection CONNECTION_FACTORY_CLASS string (builtin factory) the name of a class implementing the interface CapConnection.ConnectionFactory
+

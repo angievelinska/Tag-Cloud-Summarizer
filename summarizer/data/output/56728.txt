@@ -1,0 +1,3 @@
+
+
+The Login template checks whether the user is checked in or not. If the user is not logged in, the template shows the login fields. Otherwise the user will be logged out. 

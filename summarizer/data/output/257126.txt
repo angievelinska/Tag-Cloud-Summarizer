@@ -1,0 +1,5 @@
+
+
+You may search for words or combinations of characters within a structured text field (1), and you may also search for one term and replace it by another (2).
+
+How to perform a cross-document search with the help of the Global Search and Replace workflow is described in section.

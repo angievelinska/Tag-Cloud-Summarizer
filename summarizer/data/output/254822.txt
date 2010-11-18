@@ -1,0 +1,202 @@
+
+
+ Active Delivery Server configuration options 
+
+Method: setLogFacility
+Type: String
+Default setting: "CoreMedia Active Delivery Server"
+
+
+Explanation: Identifier of the log for Active Delivery Server outputs. The physical target of the log outputs is then configured in the file
+
+WEB-INF/properties/corem/log.properties.
+
+ 
+
+Method: setResourceUriFormat
+Type: hox.corem.servlets.ResourceUriFormat
+Default setting: new hox.corem.servlets.beans.StandardResourceUriFormat()
+
+
+Explanation: The object which determines the string format of the page URIs, i.e. the appearance of embedded links in generated pages (this is also influenced by resourceUriPrefix, generateRelativeUris, generate-RelativeUriPaths). Standard-ResourceUriFormat creates URIs according to the document path in CoreMedia.
+
+ 
+
+Method: setResourceUriPrefix
+Type: String
+Default setting: context + servletPath, in general "/coremedia/generator"
+
+
+Explanation: The prefix of all generated Uris, inserted before the result of resourceUriFormat. Valid values are "", or paths which begin with "/" and end without "/". Should not be adjusted in the case of standalone configurations, since, otherwise, any links which are created do not refer back to the Active Delivery Server. In the case of an embedded configuration in a web server, the prefix can be changed, but must then be correctly reconstructed before the webserver passes the request to the container, e.g. through mod_rewrite.
+
+ 
+
+Method: setGenerateRelativeUris
+Type: boolean
+Default setting: true
+
+
+Explanation: Generation of URIs relative to docBase.
+
+ 
+
+Method: setGenerateRelativeUriPaths
+Type: boolean
+Default setting: false
+
+
+Explanation: Generation of URI paths relative to docBase; only valid with generateRelativeUris=true.
+
+ 
+
+Method: setTemplateFinder
+Type: hox.corem.servlets.TemplateFinder
+Default setting: new hox.corem.servlets.beans.StandardTemplateFinder()
+
+
+Explanation: This object implements the mapping of URIs to Templates. Here, you can select the new ViewDispatcher or the StandardTemplateFinder from previous releases. For more details, please consult the Developer's Manual.
+
+ 
+
+Method: setServerName
+Type: String
+Default setting: null
+
+
+Explanation: The hostname embedded in generated URIs. This should be the host under which the site is visible from outside. For example, this can be the name of a remote web server process which passes on requests to the Active Delivery Server. If the setting is null, the hostname is taken from the HTTP request.
+
+ 
+
+Method: setServerPort
+Type: int
+Default setting: same as generatorPort
+
+
+Explanation: Port in generated URIs. This should be the port under which the site is visible from outside. If, for example, the Active Delivery Server is configured "behind" a web server, the web server port (typically 80) should be entered here. In case of a standalone configuration, enter the load-balanced port of the servlet container here (see
+
+Section 5.7.1.5.1). If unset, the port is taken from the HTTP request.
+
+ 
+
+Method: setContextPath
+Type: String
+Default setting: none
+
+
+Explanation: This value must be set to the context path of the Active Delivery Server application, e.g. /coremedia.
+
+ 
+
+Method: setGeneratorHostName
+Type: String
+Default setting: local hostname
+
+
+Explanation: This setting denotes the hostname under which the Active Delivery Server can open HTTP connections to itself.
+
+ 
+
+Method: setGeneratorPort
+Type: int
+Default setting: none
+
+
+Explanation: This setting denotes the port under which the Active Delivery Server can open HTTP connections to itself. Use only if,
+
+
+you are not using a servlet 2.3 container,
+or you are using an autonomous application (e.g. the Lucene-Indexer).
+
+In the first case you need to set the port to the value of the unlimited thread-pool of the servlet container. 
+
+Method: setPageCacheDirectory
+Type: File
+Default setting:../coremedia/generator
+
+
+Explanation: The cache directory of the Active Delivery Server.
+
+ 
+
+Method: setCacheableDefault
+Type: boolean
+Default setting: false
+
+
+Explanation: Cacheable flag for templates without <coremedia:page cacheable="xxx"/>.
+
+ 
+
+Method: setConditionalGetSupport
+Type: boolean
+Default setting: false
+Explanation: If the page has not been modified since it was last accessed by the client, it will be read from the client's browser cache. 
+
+Method: setUser
+Type: String
+Default setting: webserver
+
+
+Explanation: Username with which the generator logs onto the CoreMedia Server.
+
+ 
+
+Method: setPassword
+Type: String
+Default setting: webserver
+
+
+Explanation: Password with which the Active Delivery Server logs onto the CoreMedia Server.
+
+ 
+
+Method: setPreGenerateRoot
+Type: String
+Default setting: not set
+
+
+Explanation: Root URI of the page tree generated in offline generation. Must be in the format created by resourceUriFormat, i.e. without ResourceUriPrefix. Can be set multiple times, so as to generate from multiple roots.
+
+ 
+
+Method: setUploader
+Type: hox.corem.servlets.uploader.FileUploader
+Default setting: not set
+
+
+Explanation: Uploader object to which page generation events are passed on, e.g. to transfer the pages to another computer.
+
+ 
+
+Method: setFolderCacheSize
+Type: int
+Default setting: 500
+
+
+Explanation: The maximum number of cached folder objects from the content server. An increased size leads to higher consumption of Java heap memory but also accelerates the access of CoreMedia documents. 
+
+ 
+
+Method: setDocumentCacheSize
+Type: int
+Default setting: 2500
+Explanation: The maximum number of cached document objects from the content server. An increased size leads to higher consumption of Java heap memory but also accelerates  the access of CoreMedia documents.  
+
+Method: setPageCacheSize
+Type: int
+Default setting: 5000
+
+
+Explanation: The maximum number of pages referenced from the page cache. The actual number of cached pages can be larger, since they "hold" other fragments through Include relations. A pregenerator ignores this setting because it generates all dependent pages which will be administrated by the dependency manager. 
+
+ 
+
+Method: setPageObjectCacheSize
+Type: int
+Default setting: 20
+
+
+Explanation: The maximum number of cached result objects in the page cache which were created by the Context#getObject functionality (see Developer's Manual). An increased size improves the performance but as this cache lies completely in the main memory it should be dimensioned carefully according to the type of objects. 
+
+
+

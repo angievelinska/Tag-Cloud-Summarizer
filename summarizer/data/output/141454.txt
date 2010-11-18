@@ -1,0 +1,3 @@
+
+
+A folder can be in different states during the editorial process. It can be opened or closed and locked and unlocked for the current user. If a folder is locked for you, the folder name is written in grey. Depending on the current state, the folder symbol indicates:

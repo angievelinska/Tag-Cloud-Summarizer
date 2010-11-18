@@ -1,0 +1,5 @@
+
+
+Example
+
+The following example shows a property editor which extends the ComboBoxStringEditor. The property editor adds all available locales to the combo box from which the user can select one.

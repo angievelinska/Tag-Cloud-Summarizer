@@ -1,0 +1,12 @@
+
+
+You can use the republish tool to publish all content and versions below a given folder which have been published in a given period. A major use case is the update of a Master Live Server which has been recovered with a backup (see section).
+
+There are certain limitations when using this tool:
+
+Because the tool spawns only a single publication, it should not be used when there are many thousands of resources to be published. In particular, for the recreation of a fresh Master Live Server from a Content Management Server the tool cm publishall described in section is more appropriate.
+The tool cannot repeat the publication of withdrawals and deletions.
+The tool cannot repeat the publication of resources that have been marked for withdrawal or deletion after being published.
+The tool cannot repeat the publication of moves and renames of resources that have been moved or renamed again after being published.
+If the publication of a new folder fails for any reason, no resources contained in the folder can be published.
+If the publication of a new document fails or any reason, no documents linking to that document can be published.

@@ -1,0 +1,6 @@
+
+
+The CoreMedia SCI scope of supply contains the documentation of the CoreMedia API in Javadoc format. In order to use this documentation you need to unzip the cap-<VersionNr.>-api.zip file in a convenient directory. Under Unix, copy the file in the directory and use the following commands:
+gzip -d cap-<Rel.No.>-api.zip
+
+This will create subdirectories for the Java API (publicapi-java), the Javascript API (publicapi-js), the taglib API (publicapi-tld), the BeanDoc (publicapi-beans) and for the error codes (errorcodes).

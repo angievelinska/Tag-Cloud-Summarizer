@@ -1,0 +1,3 @@
+
+
+The <Browser>-element is deprecated. Use <WebBrowsers> instead.

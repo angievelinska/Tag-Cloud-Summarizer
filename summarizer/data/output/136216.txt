@@ -1,0 +1,3 @@
+
+
+This ACL for a process gives the user admin the right to create, start, suspend, resume and abort the process instance. Whether the user admin is in the groups composer or suspender is not relevant. Users, that are member of the composer group, may create and start process instances. If a composer group member, is in the group suspender, too, he may suspend and resume, the process instance, too. Users that are not member of the composer or suspender group have no rights on the process instance.

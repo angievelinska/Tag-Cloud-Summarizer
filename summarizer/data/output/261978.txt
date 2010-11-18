@@ -1,0 +1,3 @@
+
+
+At the bottom of the overlay you can find a link to the single-page dashboard. This provides a number of long term reports for the current page, for example a graph describing the number of page views during the previous week. A description of the single-page dashboard can be found in section.

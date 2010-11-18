@@ -1,0 +1,13 @@
+
+
+Performer policies control to which users a task instance should be offered. A performers policy calculates this set of users based on the users which have permission to accept the task instance defined by the rights policy. The performer policy is called by the CoreMedia Workflow Server. 
+
+A performers policy may optionally support:
+
+Users who must be excluded from the offer (determined by the ExcludePerformer action).
+Users who may be preferred (determined by the PreferPerformer action).
+Groups which may be preferred.
+Users who actively reject the offered task instance.
+A single user who must perform the task (which will force an accept of the instance as soon as the user logs on to the workflow server, determined by the ForceUser action)
+
+The DefaultPerformersPolicy supports all of the options.

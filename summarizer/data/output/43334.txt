@@ -1,0 +1,3 @@
+
+
+With two InputSources: xml and xsl  you can use a javax.xml.transform.Transformer to perform the transformation. Please see the API documentation in the Java 2 SDK. A short example:

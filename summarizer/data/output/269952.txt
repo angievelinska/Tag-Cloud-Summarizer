@@ -1,0 +1,35 @@
+
+
+ Parameter Variable Description -d --document-types Name of the document types file to use The URL of the document types file to use. You need at least one file.  -baseonly  Create only the base classes, but no implementations and no interfaces. -beanmapping Name of a file The file into which the bean mapping will be written (see section). -c Name of a properties file that contains the package information. 
+
+Define specific packages for specific document types in order to organize your bean files properly. There a three possible configuration types:
+
+One package for all files of a document type
+
+Example:
+
+doctype.Image.package=com.mycompany.image
+doctype.Article.package=com.mycompany.article
+
+Different packages for the different files of a document type
+
+Example:
+
+doctype.Article.package.base=com.mycompany.base
+
+doctype.Article.package.implementation=com.mycompany.impl
+
+doctype.Article.package.interface=com.mycompany
+
+Settings for all document types
+
+Example:
+
+package=com.mycompany
+
+package.base=com.mycompany.base
+
+package.implementation=com.mycompony.impl
+
+package.interface=com.mycompany -document Document type Generate the code for the defined content type. It must be included in one of the document type files defined with the -d parameter. -e, --exclude Comma separated list of document types Exclude these types from generation process. -enc, --encoding One of the defined Java encodings Encode the output files with the defined encoding (default is Cp1252) -f  Overwrite existing files -generics  Use Java 1.5 Generics. -gensetter  Deprecated parameter. Generates code with public setter methods. -i, --include Comma separated list of document types Document types that should be included in the generation process (default is all) -noimpl  Only create base classes and interfaces but no implementations -o, -out Directory name The directory where to generate the source code into. If it does not exists it will be created. -p, --package Package name The package name used for the generated beans. A setting defined with -c overwrites the package defined with -p. To avoid confusion only use -p or -c.
+

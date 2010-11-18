@@ -1,0 +1,3 @@
+
+
+The entities are represented as beans and properties where the properties are assumed to have different costs: Some are expensive to compute while others are cheap.

@@ -1,0 +1,9 @@
+
+
+CoreMedia WAGE simplifies Web application development with content editing and workflow functionality by covering these aspects:
+
+Basic concepts of WAGE you'll have to know when developing WAGE-based Web applications are explained by use cases and an architecture overview in Chapter 2.1.
+How to access, modify, and create CoreMedia resources and workflow objects through WAGE is described in Chapter 2.2.
+How multi-tier CoreMedia Web applications can be developed with WAGE together with the Struts Web application framework is described in Chapter 2.3.
+The WAGE view components like generic CoreMedia property editors which can be used for rapid development of Web applications with content editing functionality are explained in Chapter 2.4.
+The WAGE tag library which provides a convenient way to use some of the features WAGE offers inside JSP templates, are listed in Chapter 2.5.

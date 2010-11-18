@@ -1,0 +1,14 @@
+
+
+Types of dependencies
+
+You may use any object as a dependency which is suitable as a key in a HashMap, typically by implementing the methods equals(Object) and hashCode() properly or by using the very same object as a dependency and for invalidation. 
+
+
+The class com.coremedia.cache.Cache already provides support for timed dependencies that invalidate automatically at a certain point in time. You may define these dependencies by invoking Cache#cacheUntil(Date) or Cache#cacheFor(long) during the evaluation of the cached property method. Have a look at com.coremedia.cache.Cache's javadoc for further details.
+
+
+
+Dependency tracking and ContentBeans
+
+When using ContentBeans or (more generally) the Unified API's content repository as the data source for your beans, you don't need to take care on the content's dependencies and invalidations: any access on the content repository's content objects causes appropriate dependencies to be tracked automatically. Further on, changes on the content objects leads to automatic invalidations. The only prerequisite (which is fulfilled by the default CAE configuration) is that the DataViewFactory and the Unified API share the same Cache instance. 

@@ -1,0 +1,15 @@
+
+
+This template uses the WAGE WfInstanceListAction and the WfInstanceListActionForm to iterate over all workflow instances for the current user. In a table, an icon for the state of each task or process instance (such as accepted) is shown. Then the WAGE WorkflowTemplateFinder is used to include the details of each task instance. In the third column of the table, an input field of type radio is rendered, which allows to select an instance. If the task state is running, an edit link is rendered in the last column of the table.
+
+
+The table shows all task instances for the current user plus the process instances which haven't been started yet, so only newly created processes are displayed, together with a link for editing the initial client for the process instance. Please note that the process is only created on the server when you actually start the process. You nevertheless are already able to edit its initial client.
+
+
+After all workflow instances have been rendered, four buttons are shown which allow to perform an action (such as [cancel] or [complete]) on the selected task.
+
+
+Please not that this example doesn't provide any error handling code, so for example trying to accept an already accepted task is possible and will lead to an error. For your projects you will have to provide appropriate error-handling code.
+
+
+Then we iterate over the newProcessList property of the worklistClient for rendering a button for each configured workflow, which will allow us to create a new workflow. As the content of this list depends on the user's role, these [create new workflow] buttons are only shown for users with the appropriate role (composer-role). When logged in as a composer, this is what it could look like:

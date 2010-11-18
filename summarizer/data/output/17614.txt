@@ -1,0 +1,3 @@
+
+
+This chapter covers the fundamental principles of CoreMedia system administration and operation - an overview of the directory structure of the CoreMedia system, configuration settings for internal system communication and general aspects of starting and operating CoreMedia components.

@@ -1,0 +1,7 @@
+
+
+You can directly add documents to a workflow from a query result document list. To do so:
+Select the document(s).
+Select New Workflow from the context menu and choose the appropriate workflow.
+
+3* A workflow window opens, containing the selected documents.

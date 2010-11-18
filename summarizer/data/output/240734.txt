@@ -1,0 +1,5 @@
+
+
+The Fast basic feature set
+
+The `Fast basic feature set¿ defines the default features and operators available to all properties stored in a Fast collection. This feature set is enabled per default. It defines the following operators:

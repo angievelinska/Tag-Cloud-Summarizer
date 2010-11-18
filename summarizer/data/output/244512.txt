@@ -1,0 +1,71 @@
+
+
+Assembly Modes
+
+The Http Cache supports different assembly modes, that can be classified as: 
+
+Embedded assembly
+External server-side assembly
+External client-side assembly
+
+External server-side assembly
+
+Applying this mode, an external server system, such as an Apache web server for example,  that is located in front of the Http Cache assembles the pages. The server-side-include functionality (SSI) of the Apache web server for example, is used for this task. The Http Cache delivers the placeholders in SSI-syntax (see http://httpd.apache.org/docs/2.0/howto/ssi.html). You can also integrate other systems, such as edge-side-includes or AKAMAI using a simple template-based mechanism.
+
+If the assembly system has additional web caching functionality, it can be used to reduce the load of the Http Cache.
+
+Advantages
+
+The Apache web server can be used as an additional delivery server
+
+Disadvantages
+
+
+
+Fully functional session handling can only be achieved with cookie support.
+
+URL rewriting for sessions in static fragments is not possible, therefore sessions are not reachable in sub-fragments. If you use load balancing with mod_jk, this will raise a problem, because the session ID is used to ensure, that a request is always served from the same node. 
+Request headers, defined by the <httpcache:header ...> and <httpcache:copy-headers ...> are not supported. They are not visible in sub-fragments.
+Request parameters can not be copied with <httpcache:copy-params...>
+
+External client-side assembly
+
+Applying this mode, the client's browser assembles the page. To this end, the placeholders are replaced by JavaScript code, that loads the fragments and includes it into the page. This technique is related to Ajax and is called "Asynchronous HTML and HTTP" or AHAH for short (see http://microformats.org/wiki/rest/ahah). It uses the cache of the browser to reduce http-traffic.
+
+Advantages
+
+Can be combined with an Apache web server for delivery, supporting all storage modes (see the Administration Manual for details) .
+You can use the browser cache to cache fragments.
+
+Disadvantages
+
+The web browser requires enabled JavaScript.
+
+
+The browser's cache stores dynamic fragments.
+
+The browser cache is not automatically invalidated. Therefore, the template developer has to take care, how long a fragment should be cached by the browser. You can use the response header Expires: 0, cache-control: no-store attributes in order to control the caching.
+
+
+Session URL rewriting is not supported for cached fragments.
+
+If you want to link from static fragments to dynamic fragments you have to be sure that session cookies are enabled. Otherwise you cannot use external client-side assembly.
+
+Embedded Assembly
+
+Applying this mode, the Http Cache does all the work. It is an out-of-the-box solution.
+
+Advantages
+
+
+
+Full support of http-sessions
+
+Supports coding of the session ID in URLs (session URL rewriting) in cached fragments.
+You can access the session from all dynamic fragments.
+No additional assembly server (e.g. Apache web server) is required.
+
+Disadvantages
+
+The mode can not be combined with an Apache web server as an external delivery server.
+

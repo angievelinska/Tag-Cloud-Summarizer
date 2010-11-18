@@ -1,0 +1,31 @@
+
+
+You configure a portlet application using two documents in the content repository. 
+
+CMPortletDef
+CMPortletInst
+
+Both documents are generated automatically during portlet deployment (see portlet deployment).
+
+CMPortletDef
+
+The document type CMPortletDef represents a portlet definition in the content repository. It currently consists of the application name and the portlet name, and additional information extracted from the portlet.xml.
+
+applicationName: corresponds to the name of the portlet's war file. It represents a portlet application which can contain multiple portlets.
+portletName: is taken from <portlet-name>-tag in the portlet.xml. It identifies a portlet within a portlet application.
+defaultPreferences: contains a copy of the <portlet-preferences>-tag in the portlet.xml. The default preferences are used only when a portlet instance wants to reset a preference to its default value.
+portletSupports: contains a copy of the <supports>-tag in the portlet.xml.
+
+
+title, shortTitle: is taken from the <title> and <short-title> elements in the portlet.xml.
+
+
+
+CMPortletInst
+
+The document type CMPortletInst represents a portlet instance in the content repository. A portlet instance provides one configuration of a portlet with preferences. There may be multiple portlet instances per portlet definition. The portlet instance currently consists of a link property referring to the CMPortletDef document and a markup property storing the portlet preferences.
+
+portletDefinition: contains a link to the CMPortletDef document.
+preferences: is originally taken from <portlet-preferences>-tag in the portlet.xml. It defines the preferences accessible to the portlet using the javax.portlet.PortletPreferences interface.
+
+Additional instances can be created by copying and modifying the document. For further details, read on in Configuring Portlet Preferences.

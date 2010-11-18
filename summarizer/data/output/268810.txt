@@ -1,0 +1,4 @@
+
+
+ Parameter Description cmsiorurl The IOR URL of the Content Management Server cmsuser The user on the Content Management Server to be used for reading (typically admin) cmspwd The password on the Content Management Server masteriorurl The IOR URL of the Master Live Server masteruser The user on the Master Live Server to be used for writing (typically admin) masterpwd The password on the Master Live Server
+

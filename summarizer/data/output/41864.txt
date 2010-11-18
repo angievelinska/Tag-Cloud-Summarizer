@@ -1,0 +1,26 @@
+
+3#
+You can alter the set of documents to be processed after creating the document list, add or remove documents:
+
+3* Delete document
+3* a) Select the document.
+3* b) Choose Delete in context menu.
+3* Add document
+3* a) Select one or more document(s) from document or query windows and copy documents via context menu or menu item Edit|Copy.
+3* b) Switch to the detail information window of the workflow window. Insert the selected documents via menu items or context menu items Links|Paste(before) resp. Paste(behind).
+3* Alternatively, you may insert documents directly via a dialog window:
+3* a) Select the menu or context menu item Links|Paste(with chooser).
+3* b) Browse for the document, select it and click [Choose].
+
+
+4# 
+Finish the creation of the document list via the menu item File|Complete task resp. the symbol bar item.
+
+3* The compose-task is completed and the option-task started. No changes have been made so far. If you abort the workflow up to this moment, no changes will be made to the CoreMedia Repository.
+
+
+
+
+
+
+

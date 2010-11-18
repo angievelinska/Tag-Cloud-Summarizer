@@ -1,0 +1,17 @@
+
+
+Preconditions
+
+Preconditions for a successful publication are:
+
+all path information concerning the resource has to be approved too: if the resource is located in a folder never published before, this folder has to be published with the resource. So, add it to the change set or publish the folder before.
+withdrawals and deletions must be approved before publication.
+all documents linked to from a document which is going to be published have to be already published or included in the change set. This is because a publication that would cause dead links will not be performed.
+
+
+a document which is going to be deleted must not be linked to from other documents or these documents have to be deleted during the same publication.  
+
+
+
+
+

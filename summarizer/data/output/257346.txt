@@ -1,0 +1,37 @@
+
+
+To integrate new binary data from the file system in image documents, you have the possibility of loading binary data from the file system.
+
+To do this, proceed as follows:
+
+
+Select the document, in which the binary data should be loaded.
+
+
+Open the document in the Overview window.
+
+
+Check out the document.
+
+
+Click the [Browse] button of the BLOB field [3].
+
+
+
+2* The dialog window for selecting the favored file opens.
+
+
+5#
+
+
+Select the file and click [Load].
+
+The name of the file is shown in the document window. To save the binary file to the CoreMedia repository,  you have to check-in or save it:
+
+
+Chose the MIME type of the file in the field MIME-Type [4].
+
+
+Save the document or check it in.
+
+An error message appears, if the chosen MIME type does not match the actual MIME type of the binary data (see Abbildung).

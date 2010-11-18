@@ -1,0 +1,5 @@
+
+
+The ProActive Delivery Server needs a database to maintain its persistent cache. Up to now only Oracle is supported. 
+
+Use the attributes of the <Database> element to configure the database:  

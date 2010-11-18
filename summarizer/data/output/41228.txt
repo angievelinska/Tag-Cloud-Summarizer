@@ -1,0 +1,7 @@
+
+
+To select consecutive resources:
+First, click on the first resource you want to select.
+Then hold down the <Shift> key and click the last resource in the list you want to select (all resources are highlighted). 
+
+You can also drag the mouse over the documents in the document view while holding down the left mouse button. 

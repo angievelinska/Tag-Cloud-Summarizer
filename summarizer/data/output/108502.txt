@@ -1,0 +1,15 @@
+
+
+Operations:
+
+
+rename document doc
+
+save document doc
+
+checkout document doc
+
+checkin or uncheckout document doc if the same user has checked it out before.
+
+
+Required rights:

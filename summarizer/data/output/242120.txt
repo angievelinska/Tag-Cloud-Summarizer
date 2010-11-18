@@ -1,0 +1,72 @@
+
+
+The work list service is probably the most useful part of the workflow API, as it tells a user what work there is to do for him or her.
+
+A user interacts with the Workflow Server in several ways:
+
+
+
+selecting tasks to accept
+
+
+working on, and eventually completing accepted tasks
+
+
+resolving problems, represented by escalated tasks
+
+
+starting new processes
+
+
+monitoring the started processes
+
+The work list service is implemented as a separate interface, and can be accessed using WorkflowRepository#getWorklistService(). All methods in the interface perform their computation for the current user.  See ###session for information on how to switch between different user sessions.
+
+The first request by a certain user needs some time to initialize and retrieve the required information from the server. Subsequent requests are much faster, because the work lists are cached, and updated incrementally.  The work lists are kept in memory until the user logs out, so especially when dealing with work lists, be sure to log out each user you have logged in.
+
+All methods of the work list service are cache-aware.  This means that when the work list service is accessed from within the Content Application Engine, the calling method's result will only be recomputed if the contents of the accessed work list actually changed. See the Content Application Engine section in the Delivery Developer Manual for further details.
+
+The names of user-aware methods follow the pattern "get<Objects>< Predicate>", which should be read as "return all <Objects> that fulfill the condition <Predicate> for the current user".
+
+The specific work lists available are:
+
+
+
+tasks offered
+
+Contains all tasks that the current use can accept. In order to decide which task to accept, a user might want to inspect the task's variables.
+
+
+tasks accepted
+
+Contains all tasks that the user has accepted, and is currently performing. These are the tasks whose variables a user might want to inspect and modify. The user may finish working on this task by delegating, canceling or completing it, or by aborting the whole process.  This list includes suspended tasks.
+
+
+tasks escalated
+
+Contains all tasks that are escalated, that the user might want to get running again (retry), possibly after fixing the work environment. These include the tasks that the user has performed (or was about to perform), and also all tasks in processes owned by the user.
+
+
+process definitions of which new processes may be created
+
+Contains all types of processes that the user may want to instantiate.  For example, this  list is suitable for the selection in a "create new workflow" GUI action.
+
+
+processes not started
+
+Contains all freshly created processes owned by the current user. For these processes, the user will want to fill out the initial view, before starting (or aborting) the process.
+
+
+processes running
+
+Contains all running processes owned by the current user.  This list also includes suspended processes. A user might want to inspect the process' running view in order to observe the current state of the process global variables.  Processes in this list may be suspended and resumed (or aborted) by the current user.
+
+
+tasks with warning
+
+Contains all tasks that have a warning, and whose process is owned by the current user. This aids the user in tracking the progress of his/her processes.
+
+There are some methods that may only be called by an administrator. The names of these methods look like "getAll<Objects><Predicate>". This should be read "return all <Objects> that fulfill the condition <Predicate> for any user".
+
+The administrative methods serve to give an overview of everything that is going on in the system.  However, if the system is busy, the resulting lists can be quite large, so care must be taken to access them in a suitable fashion.
+

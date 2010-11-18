@@ -1,0 +1,6 @@
+
+3#
+In the left pane, select the folder where the Article should be created. Enter a name for the new Article into the Name field.
+If you want to create a new folder for the article below the folder selected in the left pane, then check the Sub-folder check box.
+
+The Article document opens up. 

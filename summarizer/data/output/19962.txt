@@ -1,0 +1,3 @@
+
+
+3* Mostly default values are also used in this case. However, because there is no special class for displaying the document name (the StringColumn class must be used), you must make DisplayMap entries. Since the name is defined in all document types, you can enter document="*". The document name is accessed via property="name_".

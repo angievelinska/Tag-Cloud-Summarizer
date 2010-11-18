@@ -1,0 +1,4 @@
+
+
+ Attribute Description class Java class with no-arg constructor. Defaults to the value hox.corem.editor.web.SingleSignOnWebContext. Other classes must be sub classes of the class hox.corem.editor.web.WebContext. host The name of the hosting computer where the web application runs. port The port of the web application where the web extension runs. context The name of the web application where the web extension runs. For the Query Editor and differencing, the name is editor-extensions. protocol The protocol part of the URL. Defaults to `http¿. loginPort The port for the SSL connection which is used for single sign-on. This port is optional, if the web extension does not require authentication. Currently Preview does not require authentication but Difference and Query does. loginPath The path for the SSL connection which is used for single sign-on. Defaults to /servlet/login. Not needed if the web extension does not require authentication.
+

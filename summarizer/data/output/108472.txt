@@ -1,0 +1,47 @@
+
+
+A rule table is closely related to the rule table in the CM User Manager. The table is composed of the following columns:
+
+
+
+
+Group: The group, a right is assigned to. If no value is set, the value in the next column cell above is assumed.
+
+
+
+Resource: The document or folder, a right is assigned to. The table cell contains the path to the document (the name written in lowercase letters) or folder (the name starting with an uppercase letter). If no value is set, the value in the next column cell above is assumed. 
+
+
+
+Resource Type: The resource type or the folder type +, a right is assigned to.  If no value is set, the value in the next column cell above is assumed. 
+
+
+
+Right columns: reserved for rights with the following meaning:
+
+
+
+
+X: the right is set
+
+
+
+-: the right is not set
+
+
+
+no entry: the right cannot be set. FOLDER rights cannot be set if the Resource Type column contains a resource type. It can be set if the Resource Type column contains the folder type +. EDIT and DELETE rights cannot be set if the Resource Type column contains the folder type +. The two rights can be set for ordinary resource types.
+
+
+The rule table example above defines two rules for a group G and a folder F1:
+
+
+
+Group G has READ and EDIT right on the folder F1 for all documents of document type Article.
+
+
+
+Group G has READ right on the folder F1 for the folder type.
+
+
+The following section specifies in more detail what resource operations follow from a right on a document and folder.

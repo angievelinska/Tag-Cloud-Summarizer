@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+name 
+
+This attribute is used for entering the name of the field for configuration. 
+
+visible 
+
+This attribute determines whether the field is shown. Using "false", the field can be hidden. The default value is "true". 
+
+editable 
+
+This attribute determines whether the field can be edited. If "false" is entered, the field cannot be edited. The default setting is "true". 
+
+editorClass 
+
+This attribute is used for entering the class with which the field is edited. 
+
+%varies; 
+
+This entity stands for further configuration possibilities which depend on the API of the editorClass. The specific configuration possibilities must be obtained from your developers.

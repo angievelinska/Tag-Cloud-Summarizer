@@ -1,0 +1,26 @@
+
+
+This class allows you to execute SQL statements. The statements are specified through nested <Statement> elements as follows:
+
+<Action class="com.coremedia.analytics.wf.SqlAction">
+  <Statement name="purge.staging.transitions"/>
+</Action>
+
+This is the typical form in the predefined workflow, which indiates the statement by the name attribute. The name is internally resolved by means to the ReportingManager, in order to select the actual statement depending on the database used. Assuming that your own extensions are targeted at a single database, you should probably insert the SQL-statements directly into the definition:
+
+<Action class="com.coremedia.analytics.wf.SqlAction">
+  <Statement sql="DELETE FROM StagingPurchaseEvent"/>
+</Action>
+
+If you provide multiple <Statement> elements, the statements will be executed in the given order in a single transaction.
+
+You may add parameters to your queries. Parameters are specified as nested expressions in the <Statement> element. The SQL query must provide an appropriate number of question marks to accept the value.
+
+<Action class="com.coremedia.analytics.wf.SqlAction">
+  <Statement 
+  sql="DELETE FROM StagingPurchaseEvent WHERE eventTime < ?">
+    <Get variable="purchaseConsolidationLimit"/>
+  </Statement>
+</Action>
+
+The file config/dataaggregator/spring/dataaggreator-actions-example.xml contains an example that shows how to configure as an SQL statement in Spring XML. It is not possible at this time to pass parameters into statements defined in a Spring XML file.

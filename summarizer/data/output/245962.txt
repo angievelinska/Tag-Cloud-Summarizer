@@ -1,0 +1,6 @@
+
+
+In a portal environment Single Sign On (SSO) is a crucial requirement. Therefore the portal integration supports SSO for Editing Services by using Springs interceptor mechanism. How does SSO work in the portal context? The users name is encoded into the Request by the Portlet Integration. An interceptor (which is described in the next section) creates a session for this user at the contentserver. This session is used by Editing Services to change or create content.
+
+
+

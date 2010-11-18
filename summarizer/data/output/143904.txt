@@ -1,0 +1,3 @@
+
+
+The CoreMedia Editor knows how to treat XML conforming to the coremedia-richtext-1.0.dtd. If you are using a different DTD, then you cannot edit documents with the CoreMedia Editor without modifying the Editor.

@@ -1,0 +1,29 @@
+
+
+Ther Query window consists of the following components: 
+
+(1) Menu bar 
+
+You can reach (nearly) all functionality from the menu bar. The query, the search criteria, views, navigation options and access to other windows of the editor. 
+
+(2) Toolbar 
+
+You have fast access to nearly all functions - except View and window - using the tool bar.  
+
+(3) Query information 
+
+Here you will find information about the active query. 
+
+(4) Annotations to the query 
+
+You can enter annotations describing the query. 
+
+(5) + (6) List of the selected search criteria 
+
+This fields can be used to define the search criteria. You can limit the document types to be searched in, the number of hits to 25, 50, 100 or all hits (5) and you can define the search criteria (6).You can add additional search criteria to the query using the Add condition field (7).
+
+(8) Comment
+
+Add comments to the query.. 
+
+The search results will be shown in a separate window. 

@@ -1,0 +1,3 @@
+
+
+This section describes common configuration and operation tasks to integrate the CoreMedia Search Engine into the Content Server. See Section "References of the Content Server" for a description of all relevant configuration settings and Section "Search Engine Integration" for concepts of the Search Engine integration.

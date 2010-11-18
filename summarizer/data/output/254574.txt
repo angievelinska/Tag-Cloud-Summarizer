@@ -1,0 +1,8 @@
+
+
+Now you can select the ProActive Delivery Server components (see Chapter for details on this component).
+2#
+Select the component and click [Next].
+
+3* The window shown below will open. You can decide whether the default servlet engine Tomcat 5 will be installed or not.  
+

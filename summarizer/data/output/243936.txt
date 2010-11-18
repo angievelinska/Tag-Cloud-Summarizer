@@ -1,0 +1,14 @@
+
+
+Indexing
+
+If you initialize the Content Server a lot of indices are created in the database. They will speed up the operation of the server, e.g. loading of resources. Nevertheless, since CoreMedia no indices are generated for the user defined document properties by default. There are two reasons for:
+
+Indices for properties would only speed up queries.
+Indices for properties would slow down creation and changing of content.
+
+If you need to have a very fast query via the editor or the Query-API (but not the CoreMedia Search Engine) you might create indices for the DateProperty, IntProperty and StringProperty.
+
+It's possible to create these indices automatically.
+
+To create the indices automatically you have to set the attribute Index of the DocType, DateProperty, IntProperty or StringProperty element to "true". If you set Index="true" for the DocType element, indices would be created for all DateProperty, IntProperty and StringProperty fields contained in this document type. 

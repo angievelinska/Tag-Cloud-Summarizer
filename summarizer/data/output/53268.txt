@@ -1,0 +1,22 @@
+
+
+Special cases
+
+Please keep in mind that:
+
+
+
+Older versions cannot be published. 
+
+
+Example: if a version No. 4 had already been published it is not possible to publish version No. 3 thereafter. To do so, create a version No. 5 from No. 3.
+
+
+During a deletion, a resource that has not been published yet is moved to the recycle bin immediately.
+
+In addition, consult the previous tables for effects of a publication depending on the state of the resource. For all examples it is assumed that you have appropriate rights to perform the action.
+
+
+
+
+

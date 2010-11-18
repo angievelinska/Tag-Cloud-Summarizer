@@ -1,0 +1,4 @@
+
+
+User A has READ, EDIT and DELETE rights for the CoreMedia directory /News, since the rights of the groups add.
+

@@ -1,0 +1,5 @@
+
+
+The implementation stores the sessions in a HashMap.  Clients are kindly requested to close their sessions before they quit.  This is sufficient for an example, in a real WebService you must of course reckon that clients vanish unexpectedly and implement some cleanup mechanism which closes old sessions.
+
+The interface ContentMetaData has been enhanced with an editor property which holds the id of the user who has currently checked out the document.  With the getUser WebMethod the client can fetch the User object for this id, a new portable artifact which provides the name of a user.  There is another new portable artifact ContentState which holds the state of the document:

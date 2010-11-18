@@ -1,0 +1,146 @@
+
+
+The Apache web server checks if a cached response exists for each incoming request. If so, it delivers this response. If no cached response exists, the web server redirects the request to the Http Cache which processes the request, writes the response to the file system and delivers the response to the Apache web server.
+
+The Apache web server delivers the responses in two different modes:
+
+Apache standard mode: The web server delivers the files from the file system and adds http-status and -header following a specific heuristic.
+Apache mod_asis mode: mod_asis is a standard modul of the Apache web server. It enables Apache to deliver files which already contain the http meta information.
+
+In both cases, the files are stored in a structure which serves the needs of the Apache web server but which is not optimized for the Http Cache. As a result, the Http Cache  has some drawbacks if connected with the Apache web server.
+
+The Http Cache is not able to deliver different responses for different request parameters or request header information, such as ?view=pdf or Accept-Language: de respectively
+The Http Cache is not able to differentiate between different request methods, such as GET and POST. GET is used by default.
+ Synchronization problems might occur which show an http-error code such as "404" or "403". This is due to the fact, that a file might be invalidated and deleted by the Http Cache after the Apache web server has checked for the existence of the cached file but before delivery.
+Files are stored in the file system due to the URI of the request. Depending on the specific file system problems with special characters or the length or the URI might occur which prevent the reading or writing of the file.
+
+Depending on the used modus there are additional limitations:
+
+Standard modus
+
+Conditional requests (If-Modified-Since) can not be answered by the Http Cache (304 - Not modified) but only by the Apache web server.
+In order to determine the Mime-type of a cached response, all links created with the CAE need to have the appropriate file extension (.html for example). Be aware that the calculation of links might be an expensive task depending on the link scheme. So it might be better to use the mod_asis modus if you have a lot of links on a page with an expensive calculation.
+The Http-headers set by the CAE (Content-Disposition for example) are not delivered for a cached response.
+The status codes set by the CAE (302 - Temporarily Moved for example) are not delivered for a cached response. Instead, the status code 200 - OK is always delivered.
+
+Apache mod_asis modus
+
+Conditional requests  (If-Modified-Since) can not be answered by mod_asis. 
+It is not always possible to combine mod_asis with other modules (mod_ssi for example).
+
+Configuration
+
+In order to couple the Http Cache with Apache web server you have to do some configurations.
+
+Configure the Http Cache
+
+Be sure to do the following configuration with an empty Http Cache in order to avoid inconsistencies.
+Adjust the property httpcache.storage.mode in the WEB-INF/spring/httpcache/httpcache.properties file to the used mode. Set apache for the Apache standard modus and apache_modasis for the mod_asis modus.
+
+httpcache.storage.mode=apache
+
+or
+
+httpcache.storage.mode=apache_modasis
+
+
+
+2#
+
+
+Clear the complete cache after changing the mode
+
+Configure the Apache Web Server
+
+If you want to use the Http Cache with the Apache web server, make sure that all Http-requests are handled by the Apache web server. You can connect the Apache web server with the Http Cache using the mod_proxy or mod_jk module. The mod_jk module is preferable because it transmits more information to the Http Cache.
+
+Using the mod_proxy module
+
+For both modes you have to do the following configurations in the conf/httpd.conf file. 
+Enable the mod_alias, mod_rewrite and mod_proxy modules.
+
+LoadModule alias_module modules/mod_alias.so   
+LoadModule proxy_module modules/mod_proxy.so   
+LoadModule proxy_http_module modules/mod_proxy_http.so 
+LoadModule rewrite_module modules/mod_rewrite.so   
+
+2#
+Define an alias for your web application. The URL path - /my_cae in the example - matches the name of your CAE web application. The directory path has to match the path for the cached items already configured in the property valuecache.store.directory of the WEB-INF/spring/httpcache/httpcache.properties file.
+
+
+
+Alias /my_cae C:/jakarta-tomcat/var/valuecache    
+
+
+
+3#
+Add a <Location> entry containing a rewrite rule which delegates requests to your CAE web application. The host and port have to match the configuration of your servlet container, hosting the CAE.   
+
+<Location /my_cae>   
+    RewriteEngine on        
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]    
+    RewriteCond %{THE_REQUEST} !^GET(.*)    
+    RewriteRule . http://localhost:8001%{REQUEST_URI} [P]
+    allow from localhost    
+</Location>  
+
+If you want to use the standard modus you are done, otherwise you have to add the following entries to the httpd.conf file:
+Enable the mod_asis module with:
+
+LoadModule asis_module modules/mod_asis.so
+2# 
+Add the mod_asis handler to the configuration file:
+
+<Location /my_cae>
+   SetHandler send-as-is
+   ...
+</Location>
+
+Where /my_cae matches the name of the CAE's web application.
+
+Using the mod_jk module
+
+For both modes you have to do the following configurations in the conf/httpd.conf file. 
+Load the necessary modules:
+
+LoadModule alias_module modules/mod_alias.so   
+LoadModule rewrite_module modules/mod_rewrite.so   
+LoadModule jk_module modules/mod_jk.so
+2#
+Add a Location entry which delegates incoming requests to the CAE. /my_cae matches the name of the CAE web application. This location is for internal processing only.
+
+<Location /my_cae>  
+   # Set the configured JK worker's name   
+   SetEnv JK_WORKER_NAME myworker   
+   SetHandler jakarta-servlet   
+</Location>   
+  
+3#
+
+
+Add another Location which either delivers the response from the file system or delegates the request to the location configured in step 2. Be sure that the URI /my_cae_with_fs_delivery is the entry point for all incoming requests.
+
+
+
+Alias /my_cae_with_fs_delivery C:/jakarta-tomcat/var/valuecache    
+<Location /my_cae_with_fs_delivery>   
+    RewriteEngine on        
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]    
+    RewriteCond %{THE_REQUEST} !^GET(.*)    
+    RewriteRule ^C:/jakarta-tomcat/var/valuecache(.*)$ /my_cae$1 [PT]
+    allow from localhost   
+</Location>  
+
+If you want to use the standard modus, you are done, otherwise you have to add the following entries to the httpd.conf file:
+Enable the mod_asis module with:
+
+LoadModule asis_module modules/mod_asis.so
+2#
+Add the mod_asis handler to the configuration file:
+
+<Location /my_cae_with_fs_delivery>
+   SetHandler send-as-is
+   ...
+</Location>
+
+

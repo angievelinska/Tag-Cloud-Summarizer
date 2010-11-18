@@ -1,0 +1,5 @@
+
+
+The SearchService provides full-text search capabilities. You can use its methods to quickly find documents based on their current property values and some of their implied properties (e.g. document creator).
+
+Searches are routed through the CoreMedia Content Server to the CoreMedia Search Engine. The CoreMedia Search Engine is a FAST installation with CoreMedia specific adaptations. The query language of the SearchService is defined by FAST and explained below. In most cases the search functionality of the SearchService should be sufficient. Otherwise you may contact the FAST server directly using FAST APIs.

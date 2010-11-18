@@ -1,0 +1,4 @@
+
+
+ Attribute  Value  Default  Description  name document type name or regular expression .* (all types) The name of the abstract or concrete document type whose documents should not be indexed. You can specify a regular expression here to exclude all document types whose name matches this expression.
+

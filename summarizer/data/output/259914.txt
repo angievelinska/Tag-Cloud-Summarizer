@@ -1,0 +1,6 @@
+
+3#
+Check the boxes of the components you want to install and click Next to continue.
+
+If you have chosen the standard configuration, the following window opens up instead of the window above. You can select the Content Management Environment for content production, the Content Delivery Environment for content delivery or both.
+

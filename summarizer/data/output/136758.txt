@@ -1,0 +1,3 @@
+
+
+There are some other objects that are also assigned an ID, but that do not implement CapObject or CapType. Such objects implement the method getId(), but they do not provide getters and setters for properties.

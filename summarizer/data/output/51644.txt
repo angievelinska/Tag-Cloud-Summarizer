@@ -1,0 +1,3 @@
+
+
+The renderClient.jsp template for the Approve task iterates over the resources in the changeSet and renders the resource name and a checkbox for approving the resource. It also submits to the editTask action including the workflow instance id as hidden form field.

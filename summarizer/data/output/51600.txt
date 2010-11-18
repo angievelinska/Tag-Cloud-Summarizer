@@ -1,0 +1,3 @@
+
+
+The task details are rendered by the renderDetails.jsp template. As this template is included via the WorkflowTemplateFinder, it is placed in the wftemplates/processes/TwoStepApproval/_default_ directory, so it will be used for all tasks of the TwoStepApproval workflow, as long it is not overwritten in a task specific subdirectory of the TwoStepApproval directory.

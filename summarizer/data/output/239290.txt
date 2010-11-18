@@ -1,0 +1,17 @@
+
+
+ Element Attribute Description Server type 
+
+The type of the server for which the license is valid. Possible values are:
+
+production: The Content Server
+publication: The Master Live Server
+live: The Slave Live Server Property name 
+
+The aim of the property. Possible values are:
+
+licensed-to: The customer to which the system is licensed.
+workflow: Defines if the programmable workflow is licensed ("enabled").
+analytics: Defines it the Analytics Engine is licensed ("enabled").
+id: The unique ID of the license.  value The value of the property. The possible values depend on the name attribute.  Valid from The starting date of the validity of the license.  until The end date of the validity of the license.  grace The starting point of the grace period.  release The CoreMedia release for which the license is valid.  host The host name for which the license is valid.  ip The IP address for which the license is valid. License service The name of a service which might connect to the server.  concurrent-users The maximum number of simultaneously allowed sessions of this service.  named-users The maximum number of users which are allowed to be allocated to the service.  multiplicity The maximum number of sessions a user is allowed to open.
+

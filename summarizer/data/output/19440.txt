@@ -1,0 +1,8 @@
+
+
+<PropertyLanguageResolverFactory>
+
+
+Child elements:
+
+Parent elements: <Editor>

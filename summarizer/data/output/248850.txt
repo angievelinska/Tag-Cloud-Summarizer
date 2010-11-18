@@ -1,0 +1,34 @@
+
+
+ADS identifies every page through an object of class hox.corem.servlets.ResourceUri. A ResourceUri consists of the properties described in Section 4.3: 
+
+
+
+
+resource ID 
+
+
+
+template ID 
+
+
+
+parameters 
+
+
+and, optionally, 
+
+
+
+
+version number 
+
+
+
+property name. 
+
+
+When ADS generates a page, the template to be called must be determined from this information. This mapping is carried out by the implementation of the hox.corem.servlets.TemplateFinder interface in the templateFinder bean property of the generator bean. From the given ResourceUri, it calculates the path of the JSP template which should be called.
+
+
+The default ViewDispatcher configured through config.bsh is an instance of hox.corem.servlets.beans.ViewDispatcher. The ViewDispatcher implements a powerful object-oriented dispatch from the resource type hierarchy to templates, just like method dispatch in an object-oriented language. The ViewDispatcher has additional hooks and thus covers most needs. In rare cases, it is also possible to program your own implementation of the interface and to override the corresponding templateFinder bean property in the file config.bsh.

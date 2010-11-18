@@ -1,0 +1,28 @@
+
+
+The possible log actions are:
+
+
+
+StdOutAction 
+
+
+Directs log messages to the "Standard Output".
+
+
+FileAction 
+
+
+Directs log messages to a specified log file.
+
+
+MailAction 
+
+
+Sends log messages as e-mail to specified receivers.
+
+You specify log actions as values of the property log.action.<n>.class. You can configure different log actions even for the same log messages. Note that all log action properties for the same log action must have the same number <n> (see examples below).
+
+When you start a CoreMedia installation for the first time you should always configure components with log level "debug". Later the log level can be reduced to "info" or "notice". If you then detect a problem or error, you can set the log level back to debug level and analyse the logs both on client and server side before calling the CoreMedia support.
+
+If FileAction and MailAction are configured, certain arguments must be configured in the log.action.<n> .initArgs property. No additional arguments are required for StdOutAction.

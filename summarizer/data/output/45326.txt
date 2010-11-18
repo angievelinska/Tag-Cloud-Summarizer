@@ -1,0 +1,11 @@
+
+
+The first line <%-- <coremedia:page cacheable="false"/>--%> makes the images non-chacheable. This is necessary for the access control. If cacheable is set to "true" for any template and the template is changed after it was displayed in a browser, the template has to be invalidated or the old view will be displayed. 
+
+Invalidating a template is done with the developer page. Enter http://localhost:8001/coremedia/develop/ in the browser and click Invalidate Templates. Either ALL TEMPLATES or specific templates can be invalidated. If you have changed a template and nothing seems to change on the website, you probably forgot to invalidate the old template. If a new template has been added or an old template has been removed, you also have to update via http://localhost:8001/coremedia/develop/ and clicking Update Views.
+
+The next line in the JSP code import links to foreign modules. In the <jsp:useBean>-element the Java Bean is named which is used to access the context of the request. small.jsp and large.jsp then initialize the variables document and property with the document object and the content of the property name respectively. Then the HTML-tag <img ...> is output (For a full description of the code refer to a JSP manual, the Developers manual for CoreMedia CAP and the API Javadoc.)
+
+The property type Blob/image is not to be confused with the document type Picture which holds an image. Now the following template can be added as render.jsp to the template-directory for Picture:
+
+<TomcatHome>/webapps/coremedia/templates/Picture/render.jsp

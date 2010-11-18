@@ -1,0 +1,3 @@
+
+
+The StateBrowser uses the ContentState data in the enableButtons method to determine which buttons are enabled for the selected content.  E.g. if the document is checked out, the checkout button will be disabled, but the checkin and the revert button will be enabled.  Be aware that a ContentState object represents only a snapshot of the document state by the time of the request.  There is no update mechanism, so that a client action which is enabled due to the state may fail because the document has been changed by another user meanwhile.

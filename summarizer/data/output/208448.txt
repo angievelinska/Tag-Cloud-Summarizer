@@ -1,0 +1,31 @@
+
+
+All tabs of the attribute editor contain the already described attributes Direction, Background color, Color, Font, Font size and Language. In addition, you can use the following attributes: 
+
+Table tab 
+
+Attribute Summary (1): The use of this attribute is project specific. 
+
+Row tab 
+
+Attributes Vertical alignment (2), Horizontal alignment (2): The text of the table row will be respectively vertically or horizontal aligned. 
+
+Cell tab 
+
+Attribute Vertical alignment (2), Horizontal alignment (2), Abbr: (3): The text of the table row will be respectively vertically or horizontal aligned. The use of Abbr: is project specific. 
+
+ Copy tables and table cells
+
+You can copy tables and table cells into tables. There exist two variants:
+
+Copy into multiple selected cells
+Copy into one cell
+
+Copy into multiple selected cells
+
+If you copy tables or table cells into multiple selected table cells, the selected cells are merged and the cells to insert are integrated into the cell. The cell attributes of the cells to insert are conserved, table and cell attributes get lost. Proceed as follows:
+Copy a table or table cells into th clipboard.
+Select multiple cells in the target table.
+Paste the data from the clipboard.
+
+The table cells are merged and the copied cells integrated.

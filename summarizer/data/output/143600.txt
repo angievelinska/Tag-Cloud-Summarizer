@@ -1,0 +1,8 @@
+
+
+The CoreMedia Search Engine can be accessed via the generator API, presumed that the Search Engine is configured and running. The generator bean provides the necessary service via getSearchService():
+
+<jsp:useBean id="generator" type="hox.corem.servlets.Generator" scope="application"/>
+<%     SearchService sese= generator.getSearchService();  %>
+
+SearchService provides several search() methods for searching and getConnectionInfo() for information about the connection. The example contains a simple search template displaying Dishes that match to a provided search string.

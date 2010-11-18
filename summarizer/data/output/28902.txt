@@ -1,0 +1,5 @@
+
+
+An action definition is defined by the tag < <ActionType>/>. For <ActionType>, the name of the desired action is entered. A list of all possible actions is given in the table below. The action is configured with a series of attributes, as follows:
+
+General attributes

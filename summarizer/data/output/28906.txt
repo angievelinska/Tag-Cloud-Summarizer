@@ -1,0 +1,52 @@
+
+
+ 
+
+ServerQuery  
+
+Description 
+
+This action executes a database query on the CoreMedia server over the CORBA API. In this way, all integral components of the server from ORB to the database connection are checked. 
+
+Attribute 
+
+url
+
+URL where to get the IOR of the server
+
+user
+
+CoreMedia user name to log on to the server
+
+domain
+
+Domain of the user.
+
+password
+
+CoreMedia user password to log on to the server 
+
+Error Codes 
+
+0	(ok)
+
+11	(timeout)
+
+12	(error)
+
+13	(respanwing_too_fast)
+
+21	(io_error)
+
+31	(no_licenses)
+
+32	(invalid_login)
+
+33             (corba_error)
+
+41	(repository_error)
+
+51	(query_malformed)
+
+52	(query_failed)
+

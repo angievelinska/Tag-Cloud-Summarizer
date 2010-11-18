@@ -1,0 +1,12 @@
+
+
+Using the importer in order to import third party content you must basically take care for two aspects:
+
+Serve the source content
+Transform the source content into CoreMedia XML
+
+The importer framework provides an out-of-the-box solution for source content available as files. Alternatively you can implement your own factory, e.g. to serve content from a database, over some network protocol or to generate content on the fly, composed from arbitrary sources.
+
+As your source content is most probably not available in CoreMedia XML format matching your document types, you will have to transform it. The importer supports XSLT transformations (you just have to configure the stylesheet) as well as stream based cross-document transformations for arbitrary (even non-XML) sources.
+
+See the Importer Developer Manual for details.

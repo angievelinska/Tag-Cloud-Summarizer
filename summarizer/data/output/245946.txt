@@ -1,0 +1,11 @@
+
+
+Content Rules operate on CAE Content Beans, not on repository document types, and hence can make use of the enhanced domain modeling capabilities that the CAE application model provides: Content Beans are a suitable representation of business objects (entities), whose data originate from sources other than the CMS repository. For example, a Content Bean type `Product¿ may comprise properties from the content repository (description, feature set, product category), joined with information from ERP systems (e.g. availability in stock, price) and the CoreMedia Analytics (rank in products), etc. In this scenario, Content Rules may be used to populate web pages with content based on criteria like the feature set, category, price, availability in stock and relative demand.
+
+A few restrictions currently apply to the Content Rules framework:
+
+While in principal Rules work on any content bean type and any property defined by CAE Content Beans, currently a few restrictions apply regarding the supported property types and the way properties are represented. These restrictions will be detailed later.
+Rules currently do not take end users¿ information (profile information or session attributes) into account.
+No integration of CoreMedia Analytics information into CAE applications is provided out-of-the-box.
+
+The CAE example given in ### describes step-by-step how to apply Content Rules in CAE applications to dynamically populate web pages.

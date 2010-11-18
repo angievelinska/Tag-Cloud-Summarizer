@@ -1,0 +1,5 @@
+
+18#
+Enter the values for the editor configuration in the appropriate fields and click [Next].
+
+The next dialog windows configure the publisher. If you have chosen the Multi-Site server installation you will be asked for the number of publication targets. 

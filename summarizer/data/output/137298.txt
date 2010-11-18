@@ -1,0 +1,3 @@
+
+
+Both internal and target ids can be used in the attribute ID.

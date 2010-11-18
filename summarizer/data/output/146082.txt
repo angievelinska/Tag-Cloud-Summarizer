@@ -1,0 +1,13 @@
+
+
+Members of administrator groups are supposed to do administrative work in the CoreMedia system. Therefore these members have special privileges:
+
+See all workflows
+See all rules attached to a resource and differentiate between Live Server groups and Content Server groups.
+Check-in and check-out resources of all users
+Direct approval and publication
+Create new users and groups
+Create wide links in a multi-site environment
+
+Right after installation there exists only one administrator group with one user; the group administrator with the user admin. It is not possible to revoke the administrator flag from this group in order to prevent the admin user from lock-out. From all other administrator groups you are able to revoke this flag.
+

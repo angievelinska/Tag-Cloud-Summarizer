@@ -1,0 +1,7 @@
+
+
+Multiple CoreMedia Content Servers can use the same CoreMedia Search Engine but require separate collections for each feeding CoreMedia Content Server. Collections are groups of content in the index of the CoreMedia Search Engine. They are used in queries to get only search results for a specific CoreMedia Content Server.
+
+The CoreMedia Content Management Server feeds a collection which is needed for the full-text search feature in the CoreMedia Editor and CoreMedia WebEditor.
+
+To provide full-text search for documents in the Content Delivery Environment, the CoreMedia Master Live Server can be configured to feed another collection. The CoreMedia Replication Live Servers can use the same collection to serve search requests of connected clients but they do not need to feed the CoreMedia Search Engine themselves.

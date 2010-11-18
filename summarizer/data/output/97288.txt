@@ -1,0 +1,30 @@
+
+
+
+ 
+
+Menu item
+ 
+
+Sub items
+ 
+
+Functions
+ 
+
+Start query
+ 
+
+
+ 
+
+Starts the query.
+ 
+
+Stop query
+ 
+
+
+ 
+
+Stops a running query.

@@ -1,0 +1,5 @@
+
+
+CancelUserTask
+
+Use this action to cancel an activated user task.

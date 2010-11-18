@@ -1,0 +1,39 @@
+
+
+Let us look at the example line by line.
+
+String url = "http://localhost:44441/coremedia/ior";
+
+The Content Server to use is indicated by its URL. If you are connecting to a Content Server on a different host, you may want to change localhost to the name of the host and 44441 to the port configured in the file contentserver.properties,
+
+CapConnection con = Cap.connect(url, "admin", "admin");
+
+Besides the URL, only user name and password are required to log on to the server. Here we use the admin account, assuming that a test environment has been set up and left basically unchanged. A connection object is returned from the connect call.
+
+ContentRepository repository = connection.getContentRepository();
+
+The connection object is a mediator that provides access to all parts of the CoreMedia CMS. There are separate repositories for content access, user management, workflows and so on. Here we only deal with the content repository.
+
+Content root = repository.getRoot();
+
+The root folder of the content repository is retrieved and stored locally as a content object. Both folders and documents are summarized under the common concept of content. While there are some differences between folders and documents, they share many common traits, which allows to use a common abstraction in the Unified API.
+
+ContentType folderType = repository.getFolderContentType();
+
+Every content is equipped with a content type. Types of documents may be freely defined, but for folders there is a single well-known content type.
+
+folderType.create(root, "hello world");
+
+The content type is instructed to create a new instance of itself. You have to provide two arguments: the folder in which the new content is created and the new content's name.
+
+try {
+  ...
+} finally {
+  con.close();
+}
+
+Ultimately, you want to close the connection in order to free licenses that were allocated on the server and to release local resources that were obtained when opening the connection. If you had forgotten to close the connection, the program would not terminate, waiting for background threads started for the duration of the connection. 
+
+It is generally a good idea to close the connection in a try/finally block, so that it is closed in all cases. For example, run the example again and you should receive an error due to a duplicated content name. Nevertheless, the program exits cleanly.
+
+You will notice debug output on the console. Later on, in section logging will be described in more details. If the log output bothers you, redirect the standard error output stream to a file or the null device.

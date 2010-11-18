@@ -1,0 +1,7 @@
+
+
+The following table contains an overview of the end-of-life dates and operating environments of all CoreMedia CMS versions. The table contains the following symbols:
+
+c: The component is certified.
+s: The component is supported.
+d: The component is deprecated.

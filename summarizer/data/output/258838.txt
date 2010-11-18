@@ -1,0 +1,3 @@
+
+
+This manual is intended as the starting point of your journey into CoreMedia CMS, so you need not to read any other manuals before. If you have finished this book you might continue with the CoreMedia Starter Kit manual in order to set up your first application. The Administration and Operation Manual would also be a good next milestone, because it describes some more technical basics of CoreMedia CMS. 

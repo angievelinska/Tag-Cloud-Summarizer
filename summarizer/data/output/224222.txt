@@ -1,0 +1,30 @@
+
+
+CacheableRequestPredicate
+
+This component is responsible for deciding whether an incoming request should be handled as cacheable or not. A website may have some pages (or other resources) which should be cached for performance reasons while there are others which shouldn¿t. An example of the latter would be a personalized page, which would only waste storage space if stored in the common cache. If a request is determined to be non-cacheable, e.g. by examining its URI, it will be forwarded to the CAE directly without taking the Persistent Cache into account.
+
+RequestNormalizer
+
+The Http Cache defines a mapping from requests to responses: When an incoming request has passed the CacheableRequestPredicate, it has to be determined if a response to this request is already stored. In order to identify equal requests, a ¿normalization¿ needs to take place, where relevant request attributes (such as URI, headers, etc) are marked and other are discarded.
+
+For example, let¿s say that the request¿s user agent (¿browser¿) shouldn¿t play a role for the response. In this case, the user agent header should be marked as ¿not relevant¿.
+
+CacheableResponsePredicate
+
+Although the CacheableRequestPredicate provides a mechanism to differentiate between cacheable and non-cacheable responses, there may be situations where a request based decision is not sufficient. In this case, an additional response based decision is needed. As an example, caching is usually not desired if the CAE response consists of an error (e.g. a 404 ¿ Not found).
+
+The CacheableResponsePredicate is the CacheableRequestPredicate¿s counterpart: It is a customizable piece of business logic which, after rendering, decides whether the rendered response should be put into the cache or not.
+
+Persistent Cache
+
+As described above, the Persistent Cache is used for storing responses and their dependencies persistently. While the responses itself are handled by the Persistent Value Cache and stored in the file system, the dependencies are handled by the Persistent Dependency Cache and stored in a database.
+In the context of the Http Cache, the Persistent Cache is also called Content Cache.
+
+MetaCache
+
+The Meta Cache is a memory based cache which holds small bits of meta information based on the Content Cache¿s entries. This avoids expensive file system lookups when serving conditional ("If-Modified-Since") requests.
+
+EventListener
+
+The Event Listener is an optional component for further processing of invalidation events. For example, when using an additional caching infrastructure (such as Akamai), an Event Listener implementation may trigger removals from this infrastructure on incoming invalidation events.

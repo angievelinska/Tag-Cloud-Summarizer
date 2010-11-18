@@ -1,0 +1,3 @@
+
+
+The CoreMedia ContentApplicationEngine Framework is intended for developing content applications with CoreMedia CMS. Its focus is set on web applications, yet the core frameworks are usable in other environments such as standalone clients, portal containers or web service implementations. 

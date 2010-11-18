@@ -1,0 +1,12 @@
+
+
+Define free text style group
+
+If you want to define a style group without pre-defined style classes where the user can enter own text proceed as follows:
+Define a style group without style classes, eg.
+
+.freetext {background: blue;}
+2#
+Add the style group to the Content Editor as explained in chapter.
+
+This style sheet group will only appear in the attribute editors but not in the tool bar.

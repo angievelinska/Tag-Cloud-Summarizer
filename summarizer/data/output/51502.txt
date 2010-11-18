@@ -1,0 +1,17 @@
+
+
+ So far, we've only looked at resources and the current user's access. This requires all templates to be non-cacheable, because the user's servlet session must be visible. Templates marked as 'cacheable="true"', on the other hand, generate output to be reused in many sessions, so it cannot access the user's session.
+
+In order to still allow for caching, a cacheable template exhibits special behaviour:
+
+During execution, the page's template runs in a special security context that is allowed to read "any" resource. However, it remembers all resources that have been read.
+
+At delivery time, i.e. when the page is directly requested or included, access to all these resources is checked. This behavior garantuees that the client has the necessary permissions to read the content in the fragment. A special variant of the fragment inclusion API allows for "inclusion attempts". A call like:
+
+
+
+3* context.tryInclude(pageContext, article, "asTeaser")
+
+will silently skip the fragment if the user does not own the necessary permissions. But remember that in most cases the  template wouldn't encounter an unreadable 'article' document in the first place.
+
+This model implies, that 'cacheable="true"' has to be used at the granularity of your permissions. If your design foresees different visibility for single items in a list, each single item can be cached this way but the list has to be composed dynamically. However, if you arrange the content in several blocks comprising multiple content items ([public content] [vip content]),  each block can be cached.

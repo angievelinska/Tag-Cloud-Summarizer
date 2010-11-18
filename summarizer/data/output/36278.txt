@@ -1,0 +1,20 @@
+
+
+Expressions come in two variants: 
+
+generic expressions and
+
+boolean expressions.
+
+A generic expression must evaluate to a java.lang.Comparable result and can be used for example in a <Less> or <Greater> expression. A boolean expression must evaluate to a boolean result value and can be used for example in an <Condition> task.
+
+Expressions can be used for many purposes in the workflow:
+
+Guards for automated and user tasks
+Pre- and postconditions (assertions) in automated and user task
+
+
+Validators for variable assignments in client views
+Conditions for branching tasks
+Guards for actions
+

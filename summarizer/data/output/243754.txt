@@ -1,0 +1,21 @@
+
+
+Task
+
+Definition: AutomatedTask | UserTask | FlowControlTask: Choice | Fork | If | Join | JoinSubprocess | ForkSubprocess | Switch 
+
+Tasks define the steps a workflow process must complete. A task is identified by its name. Like a process is a template for concrete process instances, a task is a template for concrete task instances. Tasks refer to each others by the name(s) of their Successor(s). Each task must either have at least one successor or be final. 
+
+The description of the task is a human readable explanation about what the task does. It may be localized by the editor or used as a key for localization in the CoreMedia Editor.
+
+Tasks which finish a workflow process are declared final. There has to be at least one task in a process definition which is final. Only UserTasks and AutomatedTasks can be final. 
+
+Variables in the task scope define the local state of task instances. This does not restrict the visibility of the variables.  A variable in a task may always be referred to from other tasks by prefixing the variable name with the task name and a dot. 
+
+There are nine task types:
+
+An AutomatedTask is executed automatically.
+A UserTask has to be carried out by a user.
+
+
+The other task types are used to control the flow of execution of tasks.

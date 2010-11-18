@@ -1,0 +1,5 @@
+
+
+RenameResource
+
+Use this action to rename a resource.

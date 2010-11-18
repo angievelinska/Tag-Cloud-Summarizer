@@ -1,0 +1,3 @@
+
+
+The property db.blob.tableoptions only takes effect on the first startup of the content server.

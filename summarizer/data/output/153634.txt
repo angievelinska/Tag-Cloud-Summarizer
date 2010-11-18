@@ -1,0 +1,33 @@
+
+
+In order to secure your portal application against unauthorized access you may want to enable HTTP Basic Authentication and/or SSL on servlet container level. When using Tomcat as servlet container you have to edit
+
+Tomcat's conf/server.xml and enable the SSL connector. This is self-described in the file.
+The portal application's WEB-INF/web.xml and enable the sections <security-constraint>, <login-config> and <security-role> like
+
+<security-constraint>
+ <web-resource-collection>
+  <web-resource-name>secured portal backend</web-resource-name>
+  <url-pattern>/*</url-pattern>
+  <http-method>DELETE</http-method>
+  <http-method>GET</http-method>
+  <http-method>POST</http-method>
+  <http-method>PUT</http-method>
+ </web-resource-collection>
+
+ <auth-constraint>
+  <role-name>myPortalUserRole</role-name>
+ </auth-constraint>
+</security-constraint>
+
+<login-config>
+ <auth-method>BASIC</auth-method>
+ <realm-name>CoreMedia CMS Portal Integration</realm-name>
+</login-config>
+
+<security-role>
+ <description>Portal User</description>
+ <role-name>myPortalUserRole</role-name>
+</security-role>
+
+In addition you have to add the above referenced roles to the tomcat user database. Please see the servlet specification as well as the Tomcat documentation for further informations. 

@@ -1,0 +1,3 @@
+
+
+If you want to extend the functionality of an Uploader without writing your own implementation you can use the decorator pattern. You have to write a class which implements Uploader  and which has a method setFileUploader or setJmsUploader.

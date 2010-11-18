@@ -1,0 +1,3 @@
+
+
+The license utility prints out the license data of the CoreMedia CMS installation for each service.

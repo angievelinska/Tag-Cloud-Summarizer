@@ -1,0 +1,3 @@
+
+
+The file workflowclient.properties defines configuration options for logging (not CoreMedia Editor!), user management for the workflow client, remote action handlers and the parameters necessary to connect to the CoreMedia Workflow Server. For more information about logging see Section 4.5.

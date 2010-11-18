@@ -1,0 +1,3 @@
+
+
+If you want to view or edit the portlet preferences in the CoreMedia Editor, you must add the configuration for the plain text xml editor in management/properties/corem/editor.xml:

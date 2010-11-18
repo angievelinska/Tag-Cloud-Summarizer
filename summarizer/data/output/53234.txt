@@ -1,0 +1,12 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+class 
+
+Name of the class with the predicate for filtering. In the workflow context, there are no predefined filter classes. The default class is  GenericProcessPredicate. Own classes can be written and must implement the interface hox.util.Predicate.
+

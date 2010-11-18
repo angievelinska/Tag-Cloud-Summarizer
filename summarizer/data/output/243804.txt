@@ -1,0 +1,7 @@
+
+
+Get
+
+Grammar: EMPTY 
+
+Get evaluates to the value of a variable.  The variable can be a workflow variable (normal or aggregate) or an expression-local variable (see Let, ForAll, Exists).  If the variable is an AggregationVariable, an index can be given either as an integer constant or an integer variable in the index attribute.  For aggregation variables the Get expression evaluates to the value at this index in the aggregation, if an index is given, or to the entire aggregate otherwise.

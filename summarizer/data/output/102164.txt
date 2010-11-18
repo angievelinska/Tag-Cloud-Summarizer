@@ -1,0 +1,3 @@
+
+
+The aim of the coremedia-richtext-1.0.css file is twofold. First, it defines the look of the XML elements in the RichText pane according to the CSS definitions (see http://www.w3c.org), but secondly it is used as the definition of the possible attributes. 

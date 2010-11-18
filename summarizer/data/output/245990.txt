@@ -1,0 +1,15 @@
+
+
+Usually, JSF executes all business logic on the application server. Each <h:commandLink> triggers a round-trip and generates an event in the server-side Java code. However, some complex client-side components require client-side actions that are executed directly in the browser (and thus are implemented in JavaScript).
+
+ES provides support for client-side actions with the component <es:clientButton>, that works with Action Beans that inherit from the abstract Bean clientSideComponentAction. There are many client-side actions predefined in the default Spring configuration, namely in file framework/spring/editing-jsf/dispatcher-servlet/editing-jsf-actions.xml. The following Editing-Services-components support client-side actions: <es:inputRichText>, <diff:pane>, and <diff:container>.
+
+As the application programmer, you usually do not have to care about technical details of client-side Actions. From JSF, these Actions can be used as any other Actions, only that <es:clientButton> is used instead of <es:button>. Since client-side Actions usually need a target client-side component, a client button has an additional attribute "for" that specifies the ID of that target component, like so:
+
+<es:clientButton value="#{tagAsBoldAction}" for="textEditor"/>
+<es:inputRichText id="textEditor"
+        value="#{document.properties.text}"/>
+
+The client button component determines its appearance using the same logic just as usual buttons.
+
+See propertyEditing and DiffExample for more practical examples of using client-side Actions.

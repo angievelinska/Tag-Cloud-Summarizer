@@ -1,0 +1,3 @@
+
+
+Within this element of the XML-file, the configuration of the folder view is defined. The element has no attributes. If an <Explorer> element contains no <TreeFilter> element, the folders for which the user has no read rights are left out. In order to activate a filter class, an <TreeFilter> element with the appropriate <Predicate> element must occur.

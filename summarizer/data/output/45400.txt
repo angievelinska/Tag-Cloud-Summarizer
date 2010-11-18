@@ -1,0 +1,3 @@
+
+
+Though Folder is actually no document type, templates can be written for displaying folders and their content. In the CoreMedia Editor the main folder MenuSite and some folders for dishes (Meat, Fish and Poultry) were created in this example. The folder MenuSite holds the Page document with the "Food of the Day", which should be displayed. The dish folders hold no Page document but several dishes which should be displayed. The following template Folder/render.jsp distinguishes between these two cases. If there is a Page document in the current folder it displays its enclosed dishes via calling render() of document type Page. If no Page document exists, it displays the Dish documents in the folder.

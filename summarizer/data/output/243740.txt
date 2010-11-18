@@ -1,0 +1,13 @@
+
+
+Interface to implement
+
+Startup classes need to implement the WorkflowStartup interface (which you will find in the Editor API).
+
+Default implementation
+
+The most simple way to program own startup classes would be the extension of the predefined startup classes GenericWorkflowStartup or AutomaticSelectorWorkflowStartup. These two classes implement almost the same behavior, but AutomaticSelectorWorkflowStartup will automatically select the first task instance in the workflow view, if this task instance is automatically accepted (see the Editor API for details). 
+
+Defining the workflow startup class
+
+The workflow startup class has to be integrated with the CoreMedia Editor (or your own client implementations, see Section 5.8) in the editor.xml definition (see Example 5.10.2a). 

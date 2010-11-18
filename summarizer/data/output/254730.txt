@@ -1,0 +1,6 @@
+
+
+Start and Stop the Search Engine Feeder
+
+The Search Engine Feeder automatically start when the CoreMedia Content Server enters runlevel online if the Search Engine Feeder is enabled as described in section. To manually start and stop the Search Engine Feeder use the links on the administration page of the CoreMedia Content Server. 
+

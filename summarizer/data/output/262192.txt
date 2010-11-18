@@ -1,0 +1,61 @@
+
+
+In the CAE, document types are transformed to Java classes, so that all documents are accessible as typed content beans. The document type CMLocalized results in the interface com.coremedia.starterkit.common.contentbeans.base.CMLocalized. The interface has the following methods for the direct access to document properties:
+
+
+
+import java.util.Locale;
+
+public interface CMLocalized {
+  Locale getLocale();
+  CMLocalized getMaster();
+  int getMasterVersion();
+  ...
+} 
+
+
+Since CAE content beans always represent the current document state, the getMaster() method cannot return the exact corresponding master document version. However, this is usually what you want when using localized variants for the website. Only for the editor, the exact version matters. Still, the version number can be retrieved separately by calling getMasterVersion(). This can be used for example to check whether a localized document is up to date:
+
+
+public boolean isUpToDate(CMLocalized localized) {
+  ContentBean masterBean = (ContentBean)localized.getMaster();
+  if (masterBean!=null) {
+    Content master = masterBean.getContent();
+    Version latestMasterVersion = master.isCheckedIn() ?
+      master.getCheckedInVersion() : master.getCheckedOutVersion();
+    int latestMasterVersionId =
+      IdHelper.parseVersionId(latestMasterVersion.getId())
+    return latestMasterVersionId == localized.getMasterVersion();
+  }
+  return true;
+}
+
+
+For more details on how to handle localization and versioning, see section.
+The CMLocalized content bean contains two more methods to conveniently access localized variants:
+
+
+import java.util.Locale;
+import java.util.Map;
+import java.util.Map;
+
+public interface CMLocalized {
+  ...
+  Collection<? extends CMLocalized> getLocalizations();
+  Map<Locale,? extends CMLocalized> getVariantsByLocale();
+}
+
+
+The method getLocalizations() returns a collection of all CMLocalized content beans that represent the same content as the CMLocalized itself, that is a master and all its localized variants. If this CMLocalized is a master, the document itself and all its variants are returned. If this CMLocalized has a master, the master and all its variants are returned. More formally, compute the set of all localizations of a given document d as follows:
+Let localizations = {}.
+Add all documents to localizations for which (Unified API query syntax with meta variables) TYPE={d.type}: id={d} OR (isInProduction AND master REFERENCES {d})
+Let d = d.master.
+If d != null and d.isInProduction, go to 2.
+
+
+Return localizations.
+
+
+
+
+The algorithm takes care of the case that you model multiple levels of master relations, e.g. one locale-independent master (empty locale), localized variants for en and de, and localized variants of master en for locales en_US and en_GB and localized variants of master de for locales de_DE and de_AT . In this scenario, the method getLocalizations() returns all five documents.

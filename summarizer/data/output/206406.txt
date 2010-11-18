@@ -1,0 +1,4 @@
+
+
+ Symbol Nr. Function (1) Opens the selected document in a Document window. (2) Opens the selected document in the Overview window. (3) Opens a resource chooser, to select a document and add it to the link list. The chooser offers only documents which are allowed to add to the current field.  (4) Deletes the selected document from the link list. (5) Moves the selected document to the start of the link list. (6) Moves the selected document one position up. (7) Moves the selected document one position down. (8) Moves the selected document to the end of the link list.
+

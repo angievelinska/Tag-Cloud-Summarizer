@@ -1,0 +1,7 @@
+
+
+Some properties contain an entire list of values instead of a single value. For content objects, only lists of Content are possible. For workflow objects, all kinds of property types are also available as aggregation properties. Such properties always use implementations of java.util.List for representing values.
+
+When retrieving an aggregation from the repository, the resulting object is dead and unmodifiable: it will not change due to concurrent actions and it cannot be changed by the client. When you want to change the value of a list-valued property, you have to provide a new list with the correct state, possibly copying the previous list into a new collection.
+
+When reading a property with a typed getter, lists are automatically converted to atomic values and vice versa. Lists of different types are automatically converted by converting the individual entries. See the Javadoc of CapObject for details.

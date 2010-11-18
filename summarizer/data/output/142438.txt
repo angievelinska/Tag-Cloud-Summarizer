@@ -1,0 +1,22 @@
+
+
+Example for calling the Clean Version to simulate the cleaning of all documents beneath the root folder but the last two versions:
+
+cm cleanversions -u admin -p admin --simulate 
+    --keep-number 2 --keep-days 0 --path /
+
+Example for calling the Clean Version using a custom VersionSelector on resource with id "135"
+
+cm cleanversions -u admin -p admin 
+   --selector-class my.package.TestVersionSelector 
+   --selector-param "some parameter" 135 
+
+Performance and Workload Sharing
+
+This tool is implemented as a remote client, and needs to load each visited document from the content server.  This causes a lot of network traffic, and puts considerable load on the server, which means that cleaning will not be fast. To avoid obstruction of the regular editorial work, the tool should be run during off-hours (e.g. at night).  The workload should be partitioned so that each cleaning run finishes after a sensible time. Try running the clean versions every night and always give it a different folder to work on.
+
+Custom VersionSelectors for cleaning
+
+Using the Unified API it is possible to write your own selector mechanism for selecting document versions to be cleaned. Given a list of versions of a single document, the selector returns all versions to be destroyed. The behaviour of your class may be adjusted using command line arguments, which are passed to its constructor.
+
+The named class must be a public class implementing com.coremedia.cotopaxi.util.VersionSelector. It must either define a public no-args constructor, or a public constructor with only one argument of type java.lang.String. In the latter case, a String containing an additional parameter will passed to the constructor. Simplest example of a customized predicate:

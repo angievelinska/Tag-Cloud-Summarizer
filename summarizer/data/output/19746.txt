@@ -1,0 +1,3 @@
+
+
+Initializer fill the fields of a newly created document with default values. Thus an initializer is defined in the element <PropertyType> of the XML-Datei. A GenericInitializer is provided which fills String, Integer, Date and SGMLText fields with a default value. In addition an own initializer class can be used which must be declared via the element <Initializer>. Own initializers can be written, which must implement the interface hox.corem.editor.initialization.Initializer.

@@ -1,0 +1,15 @@
+
+
+This formatter is not suitable for real projects, because various information available in the ResourceUri object does not appear in the string representation: 
+parameters (key-value pairs) 
+template ID 
+the version of the document, for document URIs 
+the name of the property, for property URIs. 
+
+Furthermore, many browser applications assume that the URI has an extension matching the MIME type (e.g. .html for the MIME type text/html). The extension is important if the created files are transferred to a separate web server via uploader, since otherwise the information about the content type of the page is lost (for this, see the section about Active Delivery Server configuration in the Administration Manual). 
+
+Furthermore, a ResourceUriFormat which is ready for production should prevent forbidden or significant characters from appearing by mistake in URIs by using appropriate escaping of resource names, parameters and other components. 
+
+It is not allowed to print (System.out.println(URI()) a URI inside the formatResourceUri() method because this method is triggered by the toString() method. This will lead to a recursive loop and at last to a java.lang.StackOverFlowException. 
+
+The classes StandardResourceUriFormat and NumericResourceUriFormat delivered by CoreMedia in the hox.corem.servlets.beans package naturally take into account all the points mentioned above. They are delivered in full source code and can serve as the basis for project-specific configurations. Their function is documented in detail in the Java API description; broadly stated, the URIs of the StandardResourceUriFormat are based on the path of the resource in the CoreMedia repository, while the NumericResourceUriFormat explicitly writes the resource ID into the URI. 

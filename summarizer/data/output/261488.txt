@@ -1,0 +1,3 @@
+
+
+The sql.properties file contains example configurations for various database types. You can copy and adapt most these example values. The type of the database is specified in different properties in the various files:

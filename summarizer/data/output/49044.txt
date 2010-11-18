@@ -1,0 +1,10 @@
+
+
+
+
+Switch
+
+Grammar:  (Variable | AggregationVariable)*, (Case)+ )>
+
+A Switch task determines the successor based on the result of two or more 'case' conditions. The successor is defined by the first 'case' condition evaluating to true. The conditions are evaluated in sequential order of their definition. A default successor is mandatory if all given conditions evaluate to false.
+

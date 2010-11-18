@@ -1,0 +1,49 @@
+
+
+The CoreMedia CAE web application and the taglib are shipped in a version that supports the Servlet 2.4/JSP 2.0 standard. This standard is supported by Tomcat 5 and other containers and introduced a number of improvements, especially EL evaluation in JSP body content. So, it is recommended to use this version. 
+
+If you need to use CAE web applications that support the old Servlet 2.3/JSP 1.2 standard, you have to convert the web application as described below.
+
+Converting the CAE web application template to JSP1.2
+
+CoreMedia ships a taglib that supports the old JSP 1.2  standard, but you need to download the JSTL 1.0 distribution and adapt the templates manually:
+
+
+Download the JSTL 1.0 distribution from http://jakarta.apache.org/site/downloads/downloads_taglibs-standard-1.0.cgi and replace both jstl.jar and standard.jar in the WEB-INF/lib directory of the CAE web application template..
+Change the deployment descriptor WEB-INF/web.xml from:
+
+<web-app
+  xmlns="http://java.sun.com/xml/ns/j2ee"
+  version="2.4"> ...
+
+to
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems,
+Inc.//DTD Web Application 2.3//EN" 
+"http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app> ...
+
+
+3#
+
+
+In each JSP, change the taglib uris from
+
+
+
+<%@ taglib
+     prefix="c"
+     uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib
+     prefix="cm"
+     uri="http://www.coremedia.com/2004/objectserver-1.0-2.0" %>
+
+to
+
+<%@ taglib
+     prefix="c"
+     uri="http://java.sun.com/jstl/core" %>
+<%@ taglib
+     prefix="cm"
+     uri="http://www.coremedia.com/2004/objectserver-1.0-1.2" %>
+

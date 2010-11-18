@@ -1,0 +1,6 @@
+
+
+To conclude, the Starter Kit supports the following features by means of a master document linked by localized variants:
+On the website, the user can navigate between all localized variants. For the web user, there is no visible difference between master and derived variant.
+As an editor, you can also navigate between localized variants. Also, the master version number becomes important: You can not only see which documents belong together, but even track changes to the master document and integrate these into the translation(s).
+Automatic tools can be built that create reports about how many and which documents are translated, which documents have been updated since their translation, aggregate page views of content in different locales, and so on.

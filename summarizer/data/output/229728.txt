@@ -1,0 +1,4 @@
+
+
+ Property Value Default Description uriEncoding UTF-8 or  ISO-8859-1 ISO-8859-1 Neither HTTP nor WebDAV specify the encoding which has to be used to transform the URI character representation into a byte sequence before hexadecimal escaping can be done. Most of the current WebDAV applications use ISO-8859-1 (latin-1) encoding. However some clients require UTF-8 encoded URIs (for example Adobe GoLive 6.0).The behavior of the WebDAV server can be configured, using this property. The setting is valid for all applications using the WebDAV server.
+

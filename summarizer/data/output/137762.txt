@@ -1,0 +1,7 @@
+
+
+Repository Event predicates
+
+You can register repository event predicates to prevent the invalidation of computed values for certain events from the CoreMedia Content Server. For example you could ignore document saves if PADS is running at the CoreMedia Content Management Server. Repository event predicates must implement the interface com.coremedia.cap.generator.pads.RepositoryEventPredicate. They are registered with the element RepositoryEventPredicate inside the element Pads. Repository event predicates are called in order of their configuration: the decision is made by the first configured predicate which returns that an event should be used for invalidation or not.
+
+Example:

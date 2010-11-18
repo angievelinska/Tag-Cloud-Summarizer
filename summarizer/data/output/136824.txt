@@ -1,0 +1,3 @@
+
+
+Never compare two objects of the Unified API using the == operator. This operator will typically return false even though two objects refer to the same persistent entity. Always use object equality instead.

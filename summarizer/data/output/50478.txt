@@ -1,0 +1,21 @@
+
+
+ 
+
+Parameter 
+
+Type 
+
+Description 
+
+document 
+
+DocumentModel 
+
+The document which contains the property to initialize. 
+
+propertyType 
+
+PropertyTypeModel 
+
+The property to initialize.

@@ -1,0 +1,19 @@
+
+
+PostgreSQL is an open source SQL database available from http://www.postgresql.org. For the certified PostgreSQL database you need the following JDBC-driver:
+
+
+
+PostgreSQL 8.0 JDBC3 (build 311)
+
+The JDBC-driver is available from the URL http://jdbc.postgresql.org.
+
+Configure the following settings in the sql.properties file:
+
+sql.store.driver=org.postgresql.Driver
+sql.store.url=jdbc:postgresql://<host>:<port>/<databasename>
+sql.store.user=<DB-UserName>
+sql.store.password=<DB-UserPassword>
+sql.store.dbProperties=corem/postgresql
+
+In a standard PostgreSQL installation the port is 5432. So replace <port> with 5432 and <host> with the name of your PostgreSQL computer. Replace <databasename> with the name of the PostgreSQL database you created using the createdb command.

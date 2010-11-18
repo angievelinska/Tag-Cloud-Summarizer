@@ -1,0 +1,14 @@
+
+
+Basically, there are three ways to establish a subject:
+
+
+
+
+Using explicit user data in the servlet session.
+
+
+
+Container-managed authentication according to the servlet standard.
+
+A mixed scheme.

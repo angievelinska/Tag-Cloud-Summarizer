@@ -1,0 +1,6 @@
+
+
+Uploaders receive the generated top-level values and process them, e.g. by notifying a thirdparty application. Custom uploaders must implement the interface com.coremedia.generator.pads.Uploader. They should extend the abstract class com.coremedia.generator.pads.AbstractUploader which provides some methods for configuration.
+
+
+Uploaders can be attached either directly to PADS or to a JmsReceiver service. You can use a combination of JmsUploader and JmsReceiver to decouple an uploader from PADS and forward events to a different host. It makes sense to decouple an uploader from PADS, if the uploader is very slow or unreliable. If the uploader can't handle an event due to an internal error it must throw an exception which will cause a shutdown of PADS or the JmsReceiver service. If the uploader is running at the JmsReceiver, PADS can continue its work and events are buffered in a JMS queue or durable topic subscription.

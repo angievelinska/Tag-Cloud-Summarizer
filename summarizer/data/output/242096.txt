@@ -1,0 +1,6 @@
+
+
+Only documents may be checked in and out as described in Figure. Folders are always checked in.
+
+The next figures apply to the publication process, which is handled by the PublicationService as described in section. Please refer to that section for details about the mentioned methods.
+

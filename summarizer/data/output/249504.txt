@@ -1,0 +1,31 @@
+
+
+The first step when creating a new or extending an existing report is to determine what report type you want to create, what data is required. 
+
+1. Choose the type of report you want to create
+
+The report types available out-of-the-box are:
+
+Time Series reports: These reports are typically rendered as bar or line charts with the time dimension as the x-axis. An example is the `Performance¿ report included in the default dashboard view.
+Category reports: These reports map named elements, e.g. pages, content categories, to numeric values. An example is the Repository Information report in the default dashboard view. Category reports are typically rendered as a bar or pie charts.
+Ranked Category reports ("Top N elements"): These are category reports which additionally filter and sort their named elements. Examples are the Top Viewed Pages, Top Entry / Entry Pages and Search Term reports included in the predefined dashboard view. In the Top Viewed Pages report, the pages are sorted by total number of views and filtered such that only a subset, e.g. the top 10 elements, is shown.
+
+Of course you can add additional report types if necessary. As the dashboard reporting software components are based on JasperReports [http://jasperforge.org/sf/projects/jasperreports] and the JFreeChart chart library [http://www.jfree.org/jfreechart], it is simple to extend the list of report types.
+
+2. Determine the data that you want to display in the report
+
+For this, please
+
+Determine the report domain (i.e. the x-axis in a bar chart or the values represented by the slices in a pie chart).
+Determine the report range (i.e. the y-axis in a bar chart or the values annotated at slices in a pie chart).
+Identify secondary report range(s), i.e. additional dimensions that the report domain values are mapped to. Examples are flags highlighting or marking single domain values, percentage values, etc.
+Identify the report parameters that you want to provide to the report users. The parameters will allow users to dynamically choose the subset of data visualized. Parameters map to report variables in the high-level report model (state model) and to dimension constraints in the technical report model (data model).
+
+Example 1: The `Performance¿ report maps a single report domain, the `time domain¿ to two report ranges, a) the number of total page impressions per selected site and b) the number of visits per site: No additional metadata is given. Report user parameters which constrain the displayed report subset are site, time range, and time resolution.
+
+Example 2: The `Top Viewed Pages¿ report maps a single report domain, namely pages, to a single report range, the number of views. The data set is sorted: entries are ordered by highest number of views. A secondary range is the relative percentage compared to all views per site. Report user parameters which constrain the visualized data are number of entries displayed, site, and time range.
+
+3. Check whether the report domain data and range data are provided by the reporting database.
+
+Read the Analytics Database schema documentation [#ref#] to find out what publication and production system data are provided by the Analytics Database. For most reports that are purely content management system-based, the data provided out-of-the-box by the Analytics Database should be sufficient. If you intend to integrate additional third-party data sources into the database, please consult the integrating third party tools [#ref#] section.
+

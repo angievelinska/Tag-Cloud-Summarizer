@@ -1,0 +1,18 @@
+
+
+The Content Server contains an embedded web server - Jetty - that delivers the IOR of the Content Server or the manuals for example. You can also use the web server for JMX management (see section). In order to have a secure connection, configure SSL for the server as follows:
+Create a certificate using genkey as described in section for example. Make sure that the certificate name is the same as the cap.server.http.host property in contentserver.properties.
+Configure the SSL connection in the file contentserver.properties in <CoreMediaHome>/properties/corem using the following properties:
+
+cap.server.https.port - The port to use for the secure connection.
+cap.server.https.keystore - The path to the Java keystore file containing the certificate.
+cap.server.https.password - The password to the keystore.
+cap.server.https.keypassword - The password to the server's key (often the same as the keystore password).
+3#
+Restart the Content Server using cm contentserver restart
+
+Now, you can connect to the embedded web server using SSL.
+
+
+
+ 

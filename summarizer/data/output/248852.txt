@@ -1,0 +1,21 @@
+
+
+If page fragments occur within various different pages, or if parts of a page remain the same over long periods of time despite editorial work or different user settings, you can improve the performance of the site with the help of the page cache by storing the fragments in their own templates, marked as cacheable. The fragments are then only calculated once and delivered again and again from the cache instead of being generated anew on each request.
+
+
+For this, you must first identify the components worth caching - on a homepage these can be teasers for individual articles, the navigation bar, etc. In the example of the homepage, the teasers would not have to be generated again if only their order changes.
+
+
+As said before, the fragments must be suitable for storage in the cache, i.e. their content must be uniquely described by a ResourceUri. Templates cannot use any JSP mechanisms, such as request attributes, to pass parameters "round the back" to a template marked as cacheable during an include.
+
+
+If a template is created for a suitable fragment, it can be inserted into the surrounding page as described in Section 4.2.5. It is not important whether the inserting (outer) template is cacheable or non-cacheable.
+
+
+The other way round, you can also call both cacheable and non-cacheable templates from a template marked as cacheable. It is important, however, to understand the semantics of including a non-cacheable template from a cacheable template. This way the output and dependencies of the called, non-cacheable fragment are simply included into the caller. They are still cached but not in a fragment on their own. Thus, you cannot implement a personalized fragment by marking it non-cacheable and including it from a cacheable page template. To summarize, if a fragment is to be rendered dynamically with access to request and session, the whole list of including templates must be non-cacheable as well. 
+
+
+With the previous paragraph in mind, why would one want to include a non-cacheable template from a cacheable one ? The answer is, it reduces the number of fragments in the cache and may thus save on disk operations and memory. As a rule of thumb, if a fragment is included from only one other page or fragment and both fragments are most likely to be invalidated together (i.e. if they both access the same set of resources) then there is no value in making the inner template cacheable.
+
+
+With cacheable templates, the meaning of the document base is important. Normally, the document base is the uri of the top-level page and is used by the browser to resolve links with relative paths (like ../index.html). A cached fragment that is included from two different locations in the site has no well-defined document base. In this setting, it may be impossible to generate meaningful relative links. The Context#documentBase bean property behaves as follows: only if the template and all of its including templates are non-cacheable, the URI as requested by the browser is determined from the HTTP request. Otherwise, the URI of the innermost cacheable fragment is returned. It may be useful to explicitly set Context#documentBase to a different value, if you know how the document base of the outermost page looks like.

@@ -1,0 +1,55 @@
+
+
+
+ 
+
+Initializer
+ 
+
+Description
+ 
+
+GenericInitializer
+ 
+
+This initializer fills String, Integer, Date and SGMLText fields with a default value. The initializer is called implicitly, if the attribut initialValue of the element < PropertyType> is used. I.e. the initializer is not explicitly specified via the attribute class. Thus it is not allowed to use this initializer with the attribut class. If you want to initialize a Date field, you can use the following date formats:
+
+
+
+
+yyyy-MM-dd
+
+
+
+An ISO8601 format according to java.text.SimpleDateFormat.
+
+
+
+yyyy-MM-ddTHH:mm:ss
+
+
+
+An ISO8601 format according to java.text.SimpleDateFormat.
+
+
+
+dd.MM.yyyy HH.mm
+
+
+
+This format is locale dependent. It only works with a German locale.
+ 
+
+LinkListInitializer
+ 
+
+This initializer fills a LinkList field with a document. Either the document defined via the path attribute is used or - if you omit the document and enter only the folder - the first document with the appropriate document type found in the folder given via the attribute path is used.
+
+
+Example:
+
+
+<Initializer class="LinkListInitializer" path="/default"/>
+
+
+

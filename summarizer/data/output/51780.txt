@@ -1,0 +1,7 @@
+
+
+As form beans, we are using the standards WAGE WfInstanceActionForm and WfInstanceListActionForm.
+
+The WfInstanceListAction is used to perform actions on workflow instances, for example accept a task or start a process. This too is a standard WAGE class.
+
+Our CommitAction, which is configured for the path /editTask, uses the WAGE WfInstanceActionForward to forward to the renderClient view of the current workflow instance as "standard" forward, which is used when no action_ parameter is set.

@@ -1,0 +1,5 @@
+
+
+If you want to use the BEA Weblogic servlet container for your CoreMedia SCI installation you need to mind the following points.
+Extend the config.bsh by the following lines:
+

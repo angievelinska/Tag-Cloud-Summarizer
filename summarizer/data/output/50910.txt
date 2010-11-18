@@ -1,0 +1,55 @@
+
+
+ 
+
+Name 
+
+Description 
+
+CommandSequence 
+
+A command which consists of a sequence of simple commands. 
+
+CreateProcessInstance 
+
+A command which creates a new WfProcessInstance from a WfProcess. 
+
+EnumerationCommand 
+
+A command which operations on enumerations and executes the given Command 
+
+GlobalCommand 
+
+A GlobalCommand works on global, i.e. application wide targets. It provides convenience methods to allow small and simple Commands 
+
+MapCommand 
+
+A generic command which works on a map. 
+
+ResourceCommand 
+
+A command which works on resources. 
+
+ResourceEnumerationCommand 
+
+A command which works on a set of resources. 
+
+ResourceHolderCommand 
+
+A command which works on resource holders. 
+
+SearchText 
+
+A command, which searches for the text in text components 
+
+StringSelectionCommand 
+
+A command, which acts on string selections. 
+
+TextActionCommand 
+
+A command, which bridges from commands to actions on text components. 
+
+WfInstanceCommand 
+
+A command which works on a WfInstance.

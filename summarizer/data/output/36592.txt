@@ -1,0 +1,3 @@
+
+
+This element is used to define a concrete implementation for the configuration hooks, that are executed when a process is started. It is possible to prefill the variable before the user may edit them, skip the initial dialog to set the variables and perform arbitrary actions just before the process is started. If you do niot set an own startup class, the default implementation is used, which tries to assign the currently selected resources to appropriate process variables and opens a window in which all variables defined as <Write> in the <InitialClient> tag can be entered.

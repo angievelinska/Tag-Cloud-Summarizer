@@ -1,0 +1,9 @@
+
+
+In order to open the Advanced Query Window, proceed as follows:
+Choose the document, that contains a property with the advanced query and move the cursor into this field ().
+Click  in the toolbar of the property.
+
+
+
+The Advanced Query Editor opens up in a web browser.

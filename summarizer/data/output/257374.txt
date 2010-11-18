@@ -1,0 +1,95 @@
+
+
+
+Before you start the global-search-and-replace workflow, you can select documents to edit in the workflow.
+
+
+
+
+Select the documents (see Abschnitt 3.4)
+
+
+
+
+3* or
+
+
+
+
+execute an appropriate Query (see Abschnitt 3.8) and select the documents from the result.
+
+
+
+2#
+
+
+Start the workflow by chosing File|New Workflow... Select global search and replace from the opening window and press the [Start workflow] button.
+
+
+
+
+3* If the workflow window was not yet open, it will open up now with the Compose task automatically accepted by you.
+
+
+
+3#
+
+
+You can add or remove documents from the document set:
+
+
+
+
+3* Remove document
+
+
+
+
+3* a) Select the document(s). 
+
+
+
+
+3* b) Chose Edit|Cut.
+
+
+
+
+3* Add document
+
+
+
+
+3* a) Select one or more document(s) in the overview or query window and copy it using the menu item Edit|Copy or the appropriate button from the toolbar.
+
+
+
+
+3* b) Switch to the detail information window of the workflow window. Add the documents to the document set using the menu item Edit|Paste or the appropriate button.
+
+
+
+
+3* You can also add documents using the document chooser:
+
+
+
+
+3* a) Click the document chooser button from the links toolbar (the blue  magnifier).
+
+
+
+
+3* b) Select the document and click [Chose].
+
+
+
+4#
+
+
+You can complete the composing of the document set choosing the menu item File|Complete task or click the appropriate button in the toolbar.
+
+
+
+
+3* The Compose task will be completed and the Options task will be started. Up to now, no changes have been applied to the documents. So, the CoreMedia repository will not be changed if you abort the workflow at this step.  

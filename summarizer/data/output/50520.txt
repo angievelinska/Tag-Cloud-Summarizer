@@ -1,0 +1,5 @@
+
+
+Example
+
+The next example shows a predicate which simply returns "false" for all input. As a result, all items are filtered!

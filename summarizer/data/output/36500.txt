@@ -1,0 +1,17 @@
+
+
+A workflow definition is stored in the database as a stream of serialized objects. That's why your own workflow beans have to stick to the following rules:
+
+Avoid incompatible changes to classes which are already in use by a workflow definition.
+Consider using a serial UID for all your classes from the start on.
+Serialize and deserialize the object graph manually (see Suns JDK Serialization documentation for details). This gives you the most control, but the most work, too.
+Use the workflowconverter tool to reparse and rebuild definitions which are not deserializable anymore.
+New versions of a workflow bean must be compatible with all uploaded XML definitions.
+
+
+New configuration options can be added as long as they are backwards compatible with the old ones.
+
+
+Additional objects, e.g. workflow variables, introduced with a new bean and definition will never be available in any old instance.
+If semantics have to be changed you should consider writing a new bean and keeping the old one.
+

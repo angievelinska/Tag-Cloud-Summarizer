@@ -1,0 +1,36 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#IMPLIED 
+
+Name of a group. 
+
+domain 
+
+NMTOKEN 
+
+#IMPLIED 
+
+Domain of the group. Might be used in addition to name. 
+
+value 
+
+NMTOKEN 
+
+#IMPLIED 
+
+numeric ID of a group.
+

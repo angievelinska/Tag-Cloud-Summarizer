@@ -1,0 +1,7 @@
+
+
+For optimal operation, the following settings should be made in the browser:
+
+Set the memory cache to a generous value (e.g.: 3000 kB). In this way, the content of forms is not forgotten after error messages.
+The option "Compare document in cache with that in network" (Netscape) or "Search for newer version" (Internet Explorer) must be set to "at each request". Otherwise, out-of-date information may be obtained.
+

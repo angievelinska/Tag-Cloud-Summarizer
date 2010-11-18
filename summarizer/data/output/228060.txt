@@ -1,0 +1,12 @@
+
+
+The CAE Feeder template is based on the Proactive Engine to proactively feed content beans. The following components connect the Proactive Engine:
+
+The FeedableContentBeanEvaluator creates Feedables from content beans. It defines which and how properties of content beans are indexed.
+The FeedingReceiver passes Feedables and document identifiers to the CAE Feeder in order to add, update and remove documents in the index. 
+
+Follow these steps to customize the CAE Feeder for your application:
+Specify the set of indexed content beans
+Configure content bean classes
+Customize Feedables
+

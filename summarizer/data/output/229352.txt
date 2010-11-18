@@ -1,0 +1,11 @@
+
+
+Element IndexDocumentFilter
+
+There can be multiple elements IndexDocumentFilter below the element FastIndex. Each element specifies a class that implements the interface com.coremedia.cap.server.feeder.IndexDocumentFilter. These classes must be added to the classpath of the Content Server. See the API documentation for details.
+
+Parent element: FastIndex
+
+Child elements: none
+
+Attributes:

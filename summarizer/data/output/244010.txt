@@ -1,0 +1,4 @@
+
+
+ Attribute Description name The name of an existing group in the CoreMedia user management for which the configuration will be used. domain The domain of the group.
+

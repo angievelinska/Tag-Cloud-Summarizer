@@ -1,0 +1,3 @@
+
+
+Please note that it is not allowed to include group-cacheable fragments from once-cacheable fragments.

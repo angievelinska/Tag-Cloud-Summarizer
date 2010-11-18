@@ -1,0 +1,34 @@
+
+
+If you want to connect a JmsReceiver to the JMS provider (regardless of the source - topic or queue - you want to connect to) you should use a dump file with already generated values to speed up the initialization. Prerequisites are a JmsUploader at the ProActive Delivery Server and a properly configured JmsReceiver.
+
+
+Initialize a JmsReceiver connected to a topic
+
+Start the JmsReceiver with the -r option to create a durable topic subscription.
+
+
+3* bin/cm jmsreceiver run -r  
+
+3* The JmsReceiver will stop automatically after registering at the JMS provider. 
+
+2# 
+
+Create and save a dump file from the admin pages as described in chapter. You can specify the builders and a filter expression to narrow the dumped values to the interesting ones for the uploader.
+
+Start the JmsReceiver again, using the -i option and providing the dump file created in the previous step.
+
+
+3* bin/cm jmsreceiver start -i <dumpfile>
+
+
+Initialize a JmsReceiver connected to a queue
+
+Attach a new JmsUploader  to PADS and set the attribute receiveInit of the JmsUploaders to" false".
+
+Create and save a dump file from the admin pages as described in chapter. You can specify the builders and a filter expression to narrow the dumped values to the interesting ones for the uploader.
+
+Start the JmsReceiver, using the -i option and providing the dump file created in the previous step.
+
+
+3* bin/cm jmsreceiver start -i <dumpfile>

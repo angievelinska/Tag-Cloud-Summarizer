@@ -1,0 +1,7 @@
+
+
+destroy makes one best effort to withdraw the resources from the Master Live Server before it destroys them on a Content Management Server. It is tried to keep the Master Live Server remains intact, i.e. referencing documents are also withdrawn. On the Content Management Server however, the referencing documents are not destroyed, and thus dead links may arise.
+
+destroy is an emergency tool. The normal way to get rid of resources without causing dead links is to move them to trash and have them deleted by the cleaners (see section x.2.1).
+
+Concerning users and groups, destroy is not an LDAP tool. If you apply destroy to LDAP users or groups they will soon reappear in the CoreMedia CMS if the LDAP-server and the corresponding UserProvider still serve them. If you delete users and groups on the LDAP server, the CoreMedia CMS notices this automatically. So you don't need destroy in the regular case but only to fix inconsistencies caused by errors or misconfiguration of UserProviders.

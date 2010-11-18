@@ -1,0 +1,13 @@
+
+
+Assignment
+
+Grammar: ( (Reads | Writes)*, Validator) 
+
+An Assignment element determines that a variable is 'important' to a task or process instance and need to be shown. It can or has to be modified by a user or an external process. Thus it defines a view on the variables. 
+
+With Reads and Writes the variables are specified.  The modifications of the variables may be validated by Validators. 
+
+Processes have two variants of Assignment specifications, the InitialAssignment which is valid as long as the process instance is not started and the Assignment for all other instance states. This way it is possible to set initial arguments for a process instance which cannot be changed after the instance is started. 
+
+No attributes.

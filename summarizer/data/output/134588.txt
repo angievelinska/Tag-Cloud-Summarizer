@@ -1,0 +1,3 @@
+
+
+Use this utility with care! tracesession will produce additional load on the server and will slow down the system. Only use tracesession for debugging custom clients or to determine the cause for unusual peaks in the server load but not for daily logging. The output of tracesession is very technical, so you probably will only benefit from it in cooperation with a CoreMedia consultant or the CoreMedia support.

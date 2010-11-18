@@ -1,0 +1,5 @@
+
+
+As can be seen in Example 4.4.1.4b, renderSmall is implemented differently for different document types. While an Image document is displayed "small" via browser scaling, bandwidth can be saved with an ImageWithThumbnail document by using the thumbnail property for the graphics data. Therefore, a template which implements a view for a more specific document type overwrites the previous implementation.
+
+Finally, it is shown how a template can call another view and how an overwritten view can use its "old" implementation again.

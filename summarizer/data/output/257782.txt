@@ -1,0 +1,12 @@
+
+
+Elaborating on this example, a minor variant follows. SuspendMyProcesses operates only on processes that were started by a single user. More precisely, only processes of the current session's user are returned during a call to getProcessesRunning.
+
+  WorkflowRepository repository = connection.getWorkflowRepository()
+  WorklistService worklist = repository.getWorklistService();
+  Set<Process> running = worklist.getProcessesRunning();
+  for (Process process: running) {
+    process.suspend();
+  }
+
+As you can see, the processes are suspended instead of being aborted. Suspended processes keep their state and can be resumed later on.

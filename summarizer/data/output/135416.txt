@@ -1,0 +1,11 @@
+
+
+A typical HTTP request comprises the following steps:
+The request is passed from the servlet container to the Spring dispatcher servlet
+The dispatcher servlet dispatches the request to a controller, typically the ContentViewController
+The ContentViewController parses the request uri and produces a content id, a view name and possibly other parameters
+The ContentViewController maps the content id to a corresponding business object and looks up a cached version, suitable for the desired view
+The result is passed to the rendering layer
+The ViewDispatcher finds the JSP template corresponding to the bean and invokes it
+The JSP evaluates bean properties and includes fragment templates (potentially on associated beans) -> going back to step 6
+

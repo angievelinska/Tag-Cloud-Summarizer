@@ -1,0 +1,17 @@
+
+
+Some restrictions exist when using Java 5.
+
+Generally mixed usage of older Java versions and Java 5 is not supported for CMS Components. 
+
+Some of the recommended third party components only support Java 5 under certain circumstances. Hence the following restrictions exists:
+
+Oracle database is only supported for CoreMedia components, if the Oracle JDBC Driver Version 10.2.0 is used.
+Microsoft SQL Server database is only supported for CoreMedia components, if the Microsoft SQL Server 2005 JDBC Driver is used.
+
+
+
+
+
+ 
+

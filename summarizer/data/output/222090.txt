@@ -1,0 +1,7 @@
+
+
+The CoreMedia Smart Content Technology has been developed to provide a convincing and universal solution for the creation and management of content.
+
+The use of powerful development tools and open interfaces enables the system to be adapted flexibly to enterprise requirements. For this purpose, world-wide standards for information transfer, such as XML, HTML, HTTP, WebDAV, CORBA and the Java Platform are used or supported.
+
+A CoreMedia system is divided in the Content Management Environment for content creation and the Content Delivery Environment where the content is presented. The following figure provides an overview of the CoreMedia SCI components:

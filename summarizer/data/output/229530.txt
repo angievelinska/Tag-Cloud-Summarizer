@@ -1,0 +1,10 @@
+
+
+The dashboard application's central component is the report engine. The report engine manages report instances and drives the report generation / update process: it creates a report instance as needed, executes report queries against the Analytics Database and populates the report instance with the resulting query data.
+
+Report visualization and user interaction follow the Model-View-Controller pattern: The (data-populated) report instance represents the model which is rendered using report views. User interaction is handled by controllers which update report variables accordingly and request the report engine to update the model. 
+
+Report Definition and Customization
+
+A report instance (type, variables, etc.) is specified by a report definition; its appearance and level of interactivity supported can be customized using dashboard views. Different dashboard views can be associated with user groups using dashboard profiles. These concepts will be explained further in the following sections.
+

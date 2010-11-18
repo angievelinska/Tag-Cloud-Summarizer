@@ -1,0 +1,13 @@
+
+
+Your project contains graphics files. For these, a document type Picture with a field Online has been designed. This field stores the graphic file as BLOB, i.e. in a binary format.
+
+If the WebDAV Server is activated and you have the according rights on these documents, you may edit these directly in a WebDAV-enabled application such as PhotoShop. If you utilize the Windows XP Office package, the file names must not contain any umlauts or special characters.
+
+Start the application. Click the menu items in order to open the file, navigate to your WebFolder, insert user name and password for the CoreMedia system, and choose the document.
+
+After you have finished editing, just save the document. Changes are visible in the CoreMedia Editor then.
+
+The same routine goes for renaming, moving, creating, and deleting documents in CoreMedia SCI, too. However, you can only delete folders and documents which are not published. Folders and documents that have been deleted in WebDAV-enabled applications are moved to the recycle bin in the CoreMedia system.
+
+The illustration shows both the structure in the CoreMedia system and the matching view in the Windows Explorer.

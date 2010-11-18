@@ -1,0 +1,11 @@
+
+
+As long as a connection is open, it maintains an internal cache to avoid unnecessary refetches of persistent data from the servers. You can configure the size of the data that is cached in behalf of the connection by means of the connection's management bean.
+
+You are free to use the cache for your own purposes, in particular for maintaining aggregate views on persistent data. Typically, this is done using the framework of the CoreMedia Content Application Engine as described in the Delivery Developer Manual. The Content Application Engine includes code generators for the rapid implementation of custom cacheable beans. You can also access the cache directly by means of the getCache() method of the connection object. Please refer to the Javadoc of the class com.coremedia.cache.Cache for details about this class.
+
+Almost every read call is cache-aware, meaning that the cache will timely invalidate cache entries that performed some operations by means of the Unified API.
+
+There are, however, some exceptions to this rule. Results of queries or search requests will never be cacheable. Such computations are invalidated right away after being completed. Therefore, these operations tend to be relatively expensive. When accessing user data that is stored in an LDAP repository, invalidations are time-based. That is, computed values will eventually be removed from the cache, but they may be present for a while in order to improve performance. Other than that, caching and automated invalidation is fully available. 
+
+Please note that each time the connection is closed and re-opened, a new instance of the cache is build. The cache cannot be used after the connection is closed, not even for tasks unrelated to the Unified API.

@@ -1,0 +1,3 @@
+
+
+The standard JSF commandButton and commandLink components can be used to render active HTML elements such as a <a href> or a <button>-tag. The server side action to be executed may be defined by the action or actionListener attribute. The <es:button>-tag combines the JSF commandButton and commandLink tags with the <es:label>-tag. The value attribute can be used for both for localization (text, tooltip and icon) and to set up the action being executed. If the value's value evaluates to an instance of type com.coremedia.editing.Action, the button component automatically installs an JSF action listener for executing the Action. For details on actions see section.

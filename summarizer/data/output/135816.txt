@@ -1,0 +1,3 @@
+
+
+Since CoreMedia CMS 2005, you can implement the special interface ContextPropertyConverter to receive additional context information, namely the Bean and the property name that contain the value to be converted. This information is needed by some converters, e.g. to behave differently depending on the Bean's type. For details, see the WAGE API JavaDoc of the interface com.coremedia.cap.wage.ContextPropertyConverter.

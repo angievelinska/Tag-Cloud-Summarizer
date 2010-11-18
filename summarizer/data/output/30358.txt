@@ -1,0 +1,62 @@
+
+
+ 
+
+Comparator 
+
+Sort order 
+
+BlobComparator 
+
+Size of file, if equal the mime-type. 
+
+BooleanComparator 
+
+True > false 
+
+DateComparator 
+
+Chronological 
+
+DocumentVersionComparator 
+
+Version 
+
+IdComparator 
+
+Numeric 
+
+IntegerComparator 
+
+Numeric 
+
+LinkListComparator 
+
+Document type in alphabetic order, if equal the number of list entries. 
+
+NameComparator 
+
+Alphabetical 
+
+DocumentPathComparator 
+
+Alphabetical 
+
+ResourceDisplacementComparator 
+
+Sort order:
+Published and deleted
+Published and moved
+Published and removed
+New and marked for deletion
+Moved out of trash
+New
+All others, if equal document type 
+
+StringComparator 
+
+Alphabetical 
+
+DocumentTypeComparator 
+
+Alphabetical

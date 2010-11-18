@@ -1,0 +1,5 @@
+
+10#
+Enter the properties and click Next to proceed.
+
+As a last step, configure the database of the CAE Feeder used in your Content Delivery Environment for full-text search. The CAE Feeder needs its own database user but the properties have the same meaning as for the Content Management Server's database configuration described above.

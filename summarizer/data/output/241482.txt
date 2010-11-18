@@ -1,0 +1,54 @@
+
+
+Like the ViewDispatcher is the default implementation is the Generator's TemplateFinder interface, there is an object-oriented implementation of the WorkflowTemplateFinder interface called WorkflowViewDispatcher. While the ViewDispatcher is public API and provided as source-code, the WorkflowViewDispatcher is not yet part of the public API, i.e. can only be used as-is.
+
+The "classes" used by this object-oriented template finder are of course not resource types, but are constructed from the workflow definitions. For each workflow definition, there is a type for its initial and running state. Both inherit from an abstract process type of that definition, which again inherits from an overall abstract process type.
+
+Each user task defines a type that inherits from the abstract task type of the process definition, which again inherits from an overall abstract task type.
+
+Variable templates are looked up using the type of the context (task or process instance) in which they are accessed. However, if no template is found, the look-up is continued into types corresponding to the variable's data type. There is a "most general" variable type from which all other types inherit. All this corresponds to the ViewDispatcher's property views. Note that aggegations and atomic types are distinguished and there is another abstract type from which all aggregation types inherit.
+
+This may sound very complicated, but results in a fairly simple lookup sequence implemented by the WorkflowViewDispatcher.
+
+The result of WorkflowViewDispatcher.getPath(templateId, nestedPropertyName, index, params) is determined like follows.
+
+All paths in the lists below are given relative to the templateRootUri as set (default: /wftemplates, change in config.bsh, see xxx).
+As soon as under a path in the lookup sequence, a template is found, the template path is prefixed by the templateRootUri. If the nestedPropertyName was set, it is complemented by the parameters VARIABLE_NAME_PARAMETER, VARIABLE_TYPE_PARAMETER, and AGGREGATE_INDEX_PARAMETER (see above). Finally, the path is complemented by the explicit parameters from params and returned.
+If no template is found, null is returned.
+
+Let processName be the name of the current WfInstance's process.
+
+Let variableName be the nestedPropertyName without the prefix (getVariableName(nestedPropertyName)).
+
+Let clientName be "_initial_" or "_process_" if the current WfInstance is a process instance, depending on the state of that process instance, or the name of the corresponding task, if the current WfInstance is a task instance.
+
+If nestedPropertyName is empty:
+processes/processName/clientName/templateId.jsp
+if the current WfInstance is a task instance:
+processes/processName/_task_/templateId.jsp
+processes/processName/_default_/templateId.jsp
+processes/_Process_/clientName/templateId.jsp
+if the current WfInstance is a task instance:
+processes/_Process_/_task_/templateId.jsp
+processes/_Process_/_default_/templateId.jsp
+
+If nestedPropertyName is non-empty:
+
+Let variableTypeName be the name of the variable's type. This is the name in the first column of table-workflow-types. For aggregation variables, use the name of the component type, prefixed by aggregates/, e.g. aggregates/Resource.
+processes/processName/clientName/variableName/templateId.jsp
+if the current WfInstance is a task instance:
+processes/processName/_task_/variableName/templateId.jsp
+processes/processName/_default_/variableName/templateId.jsp
+processes/_Process_/clientName/variableName/templateId.jsp
+if the current WfInstance is a task instance:
+processes/_Process_/_task_/variableName/templateId.jsp
+processes/_Process_/_default_/variableName/templateId.jsp
+vartypes/variableTypeName/templateId.jsp
+if variableTypeName is Document or Folder:
+vartypes/Resource/templateId.jsp
+if variableTypeName is aggregates/Document or aggregates/Folder:
+vartypes/aggregates/Resource/templateId.jsp
+if the variable's type is an aggregation:
+vartypes/aggregates/templateId.jsp
+vartypes/templateId.jsp
+

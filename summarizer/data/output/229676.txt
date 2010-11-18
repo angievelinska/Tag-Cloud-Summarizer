@@ -1,0 +1,22 @@
+
+
+WebDAV exports resources in a way very similar to a file system: as folders and files. WebDAV folders are also called collections. The contents in the CoreMedia Content Management Server are folders and documents. The mapping from CoreMedia folders to WebDAV folders is quite obvious. For CoreMedia documents however, there are two supported mappings: 
+
+export as files 
+export as folders
+
+Export as files
+
+A document which is exported as a file is easy to create and edit but has the restriction that only one field of the document is exported and editable with WebDAV. If you have more than one BLOB field in your document type which you want to edit via WebDAV you have to export the document as folders.
+
+Export as folders
+
+A document is exported as a WebDAV folder which contains files for each exported property of the document. This export is more flexible than the export as files but it might be more confusing for users because you have WebDAV folders for CoreMedia folders and documents.
+
+You can configure the mapping of documents to files or folders in the webdav.properties file.
+
+WebDAV folders and files always have the same names as the folders and documents in the CoreMedia Content Server. By default, no additional extensions are appended. You can configure the WebDAV Server to append a file type extension for all documents that are exported as file. The extension is derived from the MIME-type of the exported field and must be configured in the file mime.properties.
+
+When you create a new document with WebDAV, the WebDAV Server gets the document type from the name of the created folder or file. Therefore a mapping from name extensions to document types is configured. You can use WebDAV to rename the documents after its creation, which of cause does not change the type of an already created document. The configured extension mapping is only used for the creation of documents. When you use the folder mapping for documents, Windows creates a "New Folder" first before you can specify the name of the folder. This leads to the creation of a CoreMedia folder with the same name. If you immediately rename the still empty folder to a name with an extension that is mapped to a document type, then the empty CoreMedia folder is deleted and a document of the wanted type is created instead. You can also configure the catch-all extension * for one document type to create documents of that type for all names which do not match another configured extension. Note, that if you configure such an extension for a document type which uses the folder mapping, you will not be able to create CoreMedia folders with WebDAV.
+
+With the folder mapping, document fields are exported as files in the folder that represents the document. The files are named after the names of the document fields. You can localize the field names as known from the CoreMedia Editor. The WebDAV Server appends extensions to the files depending on the type of the field. The extension for binary fields matches the MIME-type of their data as configured in the file mime.properties.

@@ -1,0 +1,5 @@
+
+
+This chapter contains details on how to configure the components described in the previous chapter.
+
+For configuring of actions please refer to ES Chapter.

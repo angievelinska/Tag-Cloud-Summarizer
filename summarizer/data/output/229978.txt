@@ -1,0 +1,4 @@
+
+
+With the result consolidation step finished, you now have a state model, data model, and queries defined. These components allow to fetch report data. In the next step, you will learn how to visualize the report data.
+

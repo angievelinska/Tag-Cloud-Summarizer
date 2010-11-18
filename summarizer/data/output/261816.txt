@@ -1,0 +1,8 @@
+
+
+ Token Replacement @LONG@ an SQL type that can contain at least signed 64-bit integers @INTEGER@ an SQL type that can contain at least signed 32-bit integers @VARCHAR@ an SQL type that, when suffixed by a number in parentheses, can contain strings with the given number of characters @TIMESTAMP@ an SQL type that can contain timestamps consisting of a date and a time, preferably with millisecond precision @BIT@ an SQL type that can contain at least the numbers 0 and 1 @BLOB@ an SQL type that can contain binary data @SYSDATE@ an SQL expression for the current date and time @ADDCOLUMN@ 
+
+an SQL fragment that allows to add columns to existing tables in the following way:
+
+ALTER TABLE <TableName> @ADDCOLUMN@ <ColumnName> <TypeName>;
+

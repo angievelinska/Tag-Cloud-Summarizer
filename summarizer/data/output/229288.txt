@@ -1,0 +1,3 @@
+
+
+The site parameter determines the site for which the repository information report is generated. Please note that the categories available differ from site to site, thus a category which exists in a Site A does not necessarily exist in a Site B or may be empty. In the case that the currently selected category does not contain any data, a message indicating that the report is empty will be displayed. If you encounter such message, coarsen your category selection (navigate up) or select a different site.

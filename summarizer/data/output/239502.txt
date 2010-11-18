@@ -1,0 +1,11 @@
+
+3#
+Select [Yes] or [No].
+
+If you choose
+Yes:
+Tomcat will be installed and the portal template and development tools will be installed into the /webapps directory of the Tomcat installation.
+No:
+Only the portal template and developer tools context will be installed. You have to integrate it into the servlet engine of your choice manually.
+
+

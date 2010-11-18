@@ -1,0 +1,3 @@
+
+
+First a template rendering the form for editing the document containing the LinkList property is needed:

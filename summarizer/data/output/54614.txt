@@ -1,0 +1,14 @@
+
+
+ 
+
+ ADS Failure  
+
+Error behavior 
+
+Requests which were active at the time of failure are cancelled. Later requests are refused. In both cases a browser displays an error page.  
+
+Error correction 
+
+The watchdog of the ADS detects the failure and restarts the ADS. In the cluster system, the load balancer must remove the failed ADS from its list of active webservers.
+

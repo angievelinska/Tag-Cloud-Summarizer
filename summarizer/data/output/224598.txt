@@ -1,0 +1,7 @@
+
+
+For the <NewDocumentDialogSettings> element you can also use the following 
+two attributes:
+
+ Attribute Value Default Description resourceName Name  The name of the new document. If no resource name is defined, the name field will be empty. For all subsequent calls, the previously entered name will be used. openDocument true, false true Defines the state of the Open document check box in the dialog. If true, the newly created document will automatically be opened.
+

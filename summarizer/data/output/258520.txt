@@ -1,0 +1,3 @@
+
+
+The following chapter relies on the Spring MVC architecture which is the basis of the CAE web application. So, you should be familiar with the basic principles. See http://static.springframework.org/spring/docs/2.5.x/reference/mvc.html for example.

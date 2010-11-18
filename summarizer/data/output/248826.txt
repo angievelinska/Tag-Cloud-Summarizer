@@ -1,0 +1,25 @@
+
+
+Here, the toString method of the URI object delivered by Resource#getUri is implicitly called. 
+
+The result of the ResourceUri#toString method is calculated in several steps. The intermediate results are demonstrated using an example URI: 
+The URI object is passed to the formatResourceUri method of the configured ResourceUriFormat. The copy of the hox.corem.servlets.beans.StandardResourceUriFormat class installed as standard constructs the URI based on the path of the resource in the repository. ("/Sport/index.html") 
+The value of the resourceUriPrefix bean property of the generator bean is placed in front of the URI. The preset value is the precise path of the CoreMedia Active Delivery Server servlet within the servlet engine, consisting of context path (/coremedia) and servlet path (/generator). This guarantees that delivered URIs refer back to the ADS. ("/coremedia/generator/Sport/index.html") 
+Depending on the value of the generateRelativeUris and generateRelativeUriPaths bean properties, the result is either absolute ("http://www.x-zeitung.de/coremedia/generator/Sport/index.html"), relative to the server ("/coremedia/generator/Sport/index.html") or relative to the page just created ("../Sport/index.html"). The result of Context#getDocumentBase is used as the basis for relative URIs, and in turn corresponds to the string representation of the absolute ResourceUri for the current calculated page. Protocol, hostname and port of the absolute URIs come from the serverProtocol, serverName and serverPort bean properties of the generator bean. If the properties are not set there, the values from the current HTTP request are used. 
+The calculated value is returned from ResourceUri#toString(). 
+
+This means that you have the following possibilities to influence the result: 
+
+Set a value for Generator#serverName, #serverPort and possibly #serverProtocol. This makes sense, if the official server address is different from the local hostname or the HTTP port of the servlet engine. 
+Change the value of Generator#resourceUriPrefix. This is useful, if the generator servlet is visible under a different path in a web server, i.e. remapped using Apache's mod_rewrite. 
+Change the document base by setting Context#documentBase in the template. 
+Select between absolute, server-relative or relative URIs by setting Generator#generateRelativeUris and possibly Generator#generateRelativeUriPaths. The default setting (true, false) is most useful because you neither have to worry about the host and port settings nor the document base in combination with cached fragments. 
+Install your own Generator#resourceUriFormat. 
+
+The first three points are particularly interesting when the web pages produced by the ADS are not delivered directly to the user but are called up via a pre-connected web server. In this case, the links contained in the delivered pages must point back to the pre-connected web server. In addition, it is possible to insert the pages produced by the ADS at any position on the openly visible web server; for this purpose the configurable prefix is useful. 
+
+A user-defined URI format can also be used for holding session information and other parameters in the path of the delivered URI. This opens an interesting perspective in connection with relative links and the cache. 
+
+The bean properties serverProtocol, serverName and serverPort should not be confused with generatorProtocol, generatorName and generatorPort. The latter only play a part in connection with caching (see Section 4.5): due to a weakness in the current servlet specification it is necessary for the ADS to place an HTTP request to itself when recalculating a page. The URI required for this is constructed from the bean properties mentioned. With future versions of the servlet API, the bootstrap URI and these bean properties are expected to be superfluous. 
+
+In relation to caching, other subtleties should be noted when creating relative URIs (see Section 4.5). 

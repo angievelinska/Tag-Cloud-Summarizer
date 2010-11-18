@@ -1,0 +1,3 @@
+
+
+However the creation of the key in the above example is error-prone. A better practice is to introduce a static helper method in the target builder which validates arguments when constructing keys. You should also avoid class names in string constants because errors aren't detected at compile time. Instead we introduce a method key in class ExampleFragmentBuilder: 

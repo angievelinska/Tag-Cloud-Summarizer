@@ -1,0 +1,8 @@
+
+
+The diagram follows a tabular structure: 
+
+The leftmost column displays the page rank. Pages with an identical number of requests will display the same rank. 
+The name column shows the page display name or, if no display name is available, the page technical id.
+To the right of the name column the number of total absolute requests of the object is shown. Additionally, this number is visualized with a horizontal bar displayed behind the name column.
+The rightmost column indicates the relative proportion of all page requests during the selected time interval for the given site.

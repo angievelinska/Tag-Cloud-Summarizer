@@ -1,0 +1,9 @@
+
+
+Due to a bug in Microsoft SQL Server, it is not possible to perform certain necessary schema updates automatically when migrating between CoreMedia CAP 4.1 or earlier and CoreMedia SCI 4.2 or later.
+
+After a CoreMedia Content Server has been started with CoreMedia SCI 4.2 or a later version for the first time, it must be stopped again immediately. Afterwards, issue the following SQL command:
+
+alter table Resources drop column isMarkedForUnpublication_
+
+Finally, the server can be restarted.

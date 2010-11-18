@@ -1,0 +1,21 @@
+
+
+The internal procedure in the Active Delivery Server while processing an HTTP request is divided into the following steps:
+The resources and (if given) their version, the template, and template parameters are extracted from the requested URL. This process is configurable and will be described in more detail in Section 4.3.
+If the page is declared as cacheable and the page contents have already been generated and are still valid, the page is delivered directly from the cache. For this, see Section 4.5
+Otherwise, new page contents must be generated. First, the template to be used is determined as described in Section 4.4.
+The selected JSP template is executed with the parameters determined in step 1. The Java code contained in the JSP page can access content from the CoreMedia system with the help of the CoreMedia Generator API, in order to generate appropriate output.
+The generated content is either delivered directly to the user or first stored in a cache file and delivered from there.
+
+It is best to read the sections of this chapter in parallel with the delivered Java API documentation. The documentation generated with javadoc is more detailed and more complete, while this manual can give the central themes and a better overview. For this reason, you will often find references in the text to fully qualified class names and method names, which you can take as suggestions for further reading.
+
+To be able to configure and use the CoreMedia Active Delivery Server (ADS) successfully, you should be familiar with the following technologies:
+
+The Java programming language (http://java.sun.com): The CoreMedia Active Delivery Server (ADS), and therefore also its API, are completely written in Java; you require knowledge of Java to understand the interfaces and to program your own code.
+JSP 1.2: For the production of web pages, etc., Java Server Pages are used (http://java.sun.com/products/jsp/).
+The Servlet 2.3 specification (http://java.sun.com/products/servlet): JSP technology is based on this, and it is also helpful for understanding page fragments ( include) as well as the cache used by CoreMedia SCI.
+HTTP (RFC 2616) (http://www.rfc-editor.org/): Everyone who constructs a website should know the fundamentals of the HTTP protocol (request, response, header, content type); but such knowledge is also useful when producing other formats, since the servlet standard is based on HTTP.
+HTML, WML, FO, etc.: According to the type of output which the Active Delivery Server (ADS) should create, you must of course know a lot about the output format, so as to be able to create the templates for parameterization - HTML for a website, WML for WAP, FO (Formatting Objects) for generation of PDF or other printed formats, etc.
+The Multipurpose Internet Mail Extensions MIME (RFC 2046): The media types defined in this standard are used in the HTTP standard for describing the content type of an HTTP response; in the CoreMedia system, MIME types describe the format of stored binary data (Blobs).
+The Document Object Model Level 1 DOM (http://www.w3.org/DOM/): This recommendation of the W3 Consortium is used by CoreMedia for representing XML and SGML texts. Access occurs through the standardized Java API (Package org.w3c.dom ).
+The Simple API for XML SAX 1.0 (http://www.saxproject.org/): This quasi-standard is used for connecting XML parsers created by third-parties and for stream-oriented transfer of XML documents (Packet org.xml.sax ).

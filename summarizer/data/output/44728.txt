@@ -1,0 +1,6 @@
+
+
+The class SubDirGeneratorFactory creates generators which implement the file logic described in the previous section. SubDirGeneratorFactory is included with the delivery of the importer and is preset in the example configuration file properties/corem/cm-xmlimport.properties. Instead, you can use your own MultiResultGeneratorFactory.
+
+The class is instantiated by the importer with java.beans.Beans.instantiate. If the class supports Properties in the sense of java.beans.BeanInfo (see Sun JavaBeans API Specification), these properties can be specified in the configuration file and are then set by the importer. For example, SubDirGeneratorFactory requires the properties inbox and sleepingSeconds:
+

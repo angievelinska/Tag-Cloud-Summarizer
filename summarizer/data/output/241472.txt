@@ -1,0 +1,6 @@
+
+
+ActionForward: WAGE provides you with two ActionForwards:
+
+The ResourceActionForward (com.coremedia.cap.wage.action.ResourceActionForward) forwards a request to a CoreMedia resource, for example after an action has been completed. It combines static ResourceUri information from struts-config.xml (i.e. the templateId set with the "path" attribute of the forward definition) with the ResourceUri information from the current context. So if you are editing a CoreMedia resource in a "renderForm.jsp" template, which submits to a Struts Action, you could define an ActionForward of type ResourceActionForward for this Action, with the "path" attribute set to "render". This will forward you to the "render" view for the resource you have been editing after the Action has been completed. The ResourceActionForward uses the CoreMedia ViewDispatcher to find the appropriate template.
+Similarly, the WfInstanceActionForward (com.coremedia.cap.wage.action.WfInstanceActionForward) can be used to forward to a specific view (configured in struts-config.xml) of the current CoreMedia workflow instance. In this case, the WorkflowTemplateFinder will be used to find the corresponding template (see wf-template-finder).

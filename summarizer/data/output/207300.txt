@@ -1,0 +1,5 @@
+
+
+The following configuration deals with the preparation and transformation of source documents. Both are generic, thanks to the importer API. Since this part of the configuration depends on the source format, this part of the configuration should be conducted by the respective developer himself.
+
+The log.action entries concern the amount and format of the log outputs. The DEBUG output of the importer is voluminous and should only be activated for analysis of problems. For normal use, the level INFO is convenient.

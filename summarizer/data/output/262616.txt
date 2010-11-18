@@ -1,0 +1,26 @@
+
+
+If you want to create a new site, you have to use the WebEditor or the CoreMedia Editor. Proceed as follows:
+Open the editor; in the Folders section select the folder "Sites" and press the  toolbar button.
+
+A dialog box opens up. 
+2#
+Enter the name of the new site and press Create.
+
+In the Explorer window, the newly created folder is already selected.
+3#
+Click the  toolbar button in order to create a new channel document.
+
+A new dialog box opens up.
+4#
+Select "Channel" in the type combo box and enter a name for the Channel document in the Name field below and click Create.
+
+A document window opens up, showing the empty Channel document. The Title property is already initialized with the name of the Channel document. The most important properties are Language, segment and Title. Language defines the language, Title defines the name shown in the website navigation and segment defines the specific part of the URL. 
+5#
+Enter at least a language and title (or leave the predefined title). If you leave the segment field empty, the content of the Title field will be used. Click the Check in button and close the document window.
+Select the newly created Channel document in the Explorer window and click . This copies the document to the clipboard, you will need it later.
+Click  the  toolbar button in order to create a new document.
+Select "Site Indicator" in the type combo box and enter a name for the document in the Name field. Click Create.
+
+A document window opens up, showing the empty "Site Indicator"-document.
+

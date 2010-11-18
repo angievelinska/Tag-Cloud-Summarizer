@@ -1,0 +1,11 @@
+
+
+The most common kind of task is the user task, which is executed by participants of the workflow.
+
+When defining a user task, first consider the rule that selects which users to offer the task. Usually, the appropriate users are selected from their groups. For each group, a list of rights on the task is given, where accept is the most important one for user tasks. For special requirements, you can implement your own business logic in a WfPerformersPolicy.
+
+For a user task a client view has to be given. A client defines a view on the variables of the workflow that may be read and/or modified. For resource variables, you can additionally determine whether the referred content may be editable.
+
+To make workflow more convenient for the participants, user task's actions have access to various functions of the CoreMedia Editor. While an automated task can change resources (e.g. check out a document), a user task can even open a document view or start a publication with graphical feedback. For a list of possible actions, see Section 6.1 and Section 4.4.
+
+Validators (see Section 4.1.6.4) have a special feature in the context of a client view. If a validator fails and provides a description, it is displayed as an error message in a client view. Like task descriptions, validator error messages may be localized (see Section 4.1.3.1).

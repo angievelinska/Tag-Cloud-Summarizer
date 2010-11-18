@@ -1,0 +1,3 @@
+
+
+The first property configures the UserProvider class. The second property refers to a property file holding the provider configuration. Further providers can be added by incrementing the index value in the property keys. The following example shows the configuration of two providers:

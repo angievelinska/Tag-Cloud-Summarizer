@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+folderVariable 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the variable that contains the existing folder in which the new folder should be created 
+
+nameVariable 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the string variable that contains the name to be used

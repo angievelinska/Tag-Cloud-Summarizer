@@ -1,0 +1,11 @@
+
+
+Element Xml
+
+Xml elements specify the grammar of XML properties to be indexed. There can be multiple Xml elements for different grammars below the element PropertyTypes. If the PropertyTypes element does not contain an Xml element, XML properties are not indexed.
+
+Parent element: PropertyTypes
+
+Child elements: none
+
+Attributes:

@@ -1,0 +1,15 @@
+
+
+The pages offer the following options:
+
+Invalidate templates
+3* If you have changed a template, you can remove all depending pages from the cache using this page. 
+Configure Link Visibility
+3* Using this page, you can enable or disable content links and template links. See chapter for details on the usage of content and template links.
+Browse Document Model
+3* Using this page, you can browse the document model of your CoreMedia installation. See the Administration and Operation Manual for details.
+Browse Property Model
+3* Using this page, you can browse the property model of your CoreMedia installation. That is, you see the property types of the document properties.
+Update Views
+3* If you have added a new view to the system (see chapter for details on document views) you can update the ViewDispatcher to use the new view.
+

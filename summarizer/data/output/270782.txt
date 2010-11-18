@@ -1,0 +1,11 @@
+
+
+If your application is following the JSP 2.0/Servlet 2.4/JSTL 1.1 specification, the Analytics taglib provides taglib functions for building a compound page object. Those functions are normally used nested in the <analytics:pagecontext> tag. All argument to these functions must be instances of ContentBean.
+
+The function analytics:compound0(...) takes two arguments: from the first argument a SiteExtractor will compute the site of the page. The second object will be placed into a category by the Object Analyzer and that category will also be used for the page.
+
+The functions analytics:compound1(...) to analytics:compound3(...) take one to three additional content beans that can further differentiate the identity of the page and that will be used to determine a name for the page later on.
+
+An object that fulfils multiple functions in a page may be passed into the compound functions multiple times, for example when one object represents the site and the category. Also, the object that determines the category may or may not be appropriate for acting as a name object.
+
+These taglib functions generate instances of the class com.coremedia.analytics.compound.CompoundBean using the static methods defined in the class. For this class, an IdScheme and an ObjectIdAnalyzer are already preconfigured.

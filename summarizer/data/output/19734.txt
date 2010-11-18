@@ -1,0 +1,5 @@
+
+
+This element of the XML file is used to define custom comparators. It defines if a comparator should be used on client or server side. If you combine a client side comparator with a server side filter,  the attribute combineSortingAndFiltering of the Explorer element must be "false". 
+
+Be aware that combined client and server filtering and sorting may slow down the server dramatically. 

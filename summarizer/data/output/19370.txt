@@ -1,0 +1,6 @@
+
+
+This element of the XML file is used to specify  a class which implements the interface PropertyModelFactory and which should be used in the CoreMedia Editor. Here an own PropertyModelFactoryclass can be programmed (see the API documentation) and  invoked by the attribute class.
+
+
+

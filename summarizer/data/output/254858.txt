@@ -1,0 +1,17 @@
+
+
+Defining the XML-configuration files
+Enter the name of the XML-file with the path relative to <CoreMediaHome> into the appropriate properties.
+
+editor.startup.configuration
+editor.configuration
+
+Define user or group specific configuration files
+Enter the name of the XML-files with the path relative to <CoreMediaHome> into the appropriate properties.
+
+group.configuration
+user.configuration
+
+You must add the wildcard {0} to the name of the XML-file. This wildcard will be replaced by the group name or the user name of the user. If the user belongs to multiple groups, the system will choose an arbitrary group.
+2#
+If required configure the <ConfigGroups>-element in the editor startup file as described in section.

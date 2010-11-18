@@ -1,0 +1,18 @@
+
+
+The goal of multi-tier applications is to separate presentation, business objects, and business logic of an application.
+
+For a Web application based on WAGE, this can be a CoreMedia resource (business object) that is displayed as an HTML form (presentation). On submitting the form, some action (business logic) is performed, e.g. to update the CoreMedia resource with the data submitted.
+
+This mapping from Web form to CoreMedia resource doesn't have to be a one-to-one mapping. This means that on the one hand a single Web form should be able to write content to different data sources (these can be multiple CoreMedia resources). On the other hand, not all properties of a CoreMedia resource have to be edited in one form but may be distributed to several forms in a wizard-like fashion.
+
+As there are already many general purpose Web application frameworks available, we didn't want to develop yet another one and therefore decided to let WAGE extend Struts.
+
+Some of the advantages of Struts are:
+
+clean Model - View - Controller design
+usage of JavaServerPages (JSP) for templating
+open source
+widely in use
+
+The following chapter gives a short overview of the Struts Web application framework. It can't replace the Struts documentation, but explains the basic concepts you'll need when developing WAGE based Web applications. For further details on Struts, please refer to the Struts User and Development Guides.

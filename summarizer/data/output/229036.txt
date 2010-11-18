@@ -1,0 +1,27 @@
+
+
+While the CAE (CAE) is tailored for building highly dynamic Web sites (delivery), it offers no special support for interactive Web applications that have to provide a graphical user interface (GUI) for content entry. It can be argued that any Web view framework such as Spring MVC, Struts, or JSF can be used together with the Unified API to achieve this goal with the CAE. But there are recurring problems when building GUIs that would have to be solved over and over again in each project or at least for each view technology and building content applications is more than assembling some GUI widgets, but needs lots of services, models, and glue code that are domain specific.
+
+Editing Services for JSF is a subcomponent of the CAE that is aimed at exactly that use case: building interactive GUIs for custom content applications that support content entry. It offers a large set of ready-to-use services, models, utilities, and UI components ("widgets"). Predefined Cascading Style Sheets (CSS) together with examples and a guideline make it easy to implement the appearance of the CoreMedia Software Style.
+
+For the end user (for example, the editor), applications built with ES provide enhanced usability:
+
+Special use cases can be presented through a custom GUI that reflects the business logic, not the generic approach used to model the domain. Examples are wizards, custom browsers, custom layout forms, and specific compound actions ("macros").
+The CoreMedia Software Style offers a modern, and consistent look and feel.
+All standard Content actions, table columns, types etc. are localized (currently: English and German), are visualized through an icon, and, where reasonable, offer a descriptive tooltip.
+
+For the project manager, realizing a project with ES means:
+
+reducing development cost (see below),
+reducing total cost of ownership, easing deployment and improving maintainability by using a Web application approach,
+a safe investment in standard, scalable products and technologies like J2EE, JSF, Spring, CoreMedia CMS, and
+getting early visual feed-back on the project status, since an iterative approach is supported.
+
+For the application programmer, ES provide ease of development:
+
+Typical simple content application UIs can be created by editing and creating XML configuration files and JSP Templates (no Java programming necessary)
+Localization and appearance of all standard actions, table columns, types etc. has already been taken care of.
+The time, effort, and skill set needed to create the application is reduced dramatically, compared to building a CoreMedia Content Application UI ¿from scratch¿, using e.g. Unified API / CAE and Spring MVC. The application programmer can build an interactive, modern Web-UI without caring about HTML, CSS, or JavaScript.
+Widely known and accepted standards are adopted: if you are familiar with the model-view-controller (MVC) paradigm, JSF, and Spring, you will have a quick start.
+
+This ease of development is achieved by providing reusable services, models, utilities, and UI components.

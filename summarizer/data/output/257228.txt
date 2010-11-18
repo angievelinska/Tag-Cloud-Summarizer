@@ -1,0 +1,5 @@
+
+
+To fill your project with content such as texts, images, tables, links, etc., and to keep this content up-to-date, you edit the documents. 
+
+You can edit documents in the detail view section of the CoreMedia Editor user interface, or open them in an extra document window with a double click  on them in the document overview (see section).

@@ -1,0 +1,30 @@
+
+
+ 
+
+option A 
+
+option B 
+
+option C 
+
+option D 
+
+The user accepts and finishes th task and approves the resource(s). 
+
+The user accepts and finishes th task but does not approve the resource(s). 
+
+The user rejects the task. 
+
+The user accepts the task but delegates it to somebody else.  
+
+The task 'Publication' is offered to all members of the group publisher-role. 
+
+The change set is sent back to the last editor, if suitable with comments. 
+
+The task is offered all other members of the group approver-role. 
+
+The task is automatically accepted by this user.
+
+
+

@@ -1,0 +1,5 @@
+
+
+Server side comparators for sorting rows
+
+For rows, there exists no default comparator. A row can be sorted according to the different columns which are shown. Own comparators must implement hox.corem.editor.toolkit.table.NamedDocumentVersionComparator. The following table shows the predefined column comparators which are implicitly used by the provided column classes.

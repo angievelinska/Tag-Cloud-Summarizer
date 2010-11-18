@@ -1,0 +1,20 @@
+
+
+Comparators for sorting folders
+
+ 
+
+Default comparator 
+
+Sorted objects 
+
+Description 
+
+GenericTreeComparator 
+
+Folders:
+
+hox.corem.editor.proxy.ResourceHolder 
+
+The default comparator sorts the folders in alphabetic order. Own comparators must implement java.util.Comparator.
+

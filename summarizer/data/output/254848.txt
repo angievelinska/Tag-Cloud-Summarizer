@@ -1,0 +1,7 @@
+
+
+This section describes common configuration tasks. See Section "Reference" for a detailed description of configuration settings. Configuration is done in the files caefeeder.properties and log4j.properties, which are both contained in the directory <InstallRoot>/config/.
+
+Configure the Content Server
+
+The CAE Feeder can be used to index content beans for contents from the CoreMedia Content Management Server or a Live Server. Configure the Content Server in the file caefeeder.properties as in the following example:

@@ -1,0 +1,20 @@
+
+
+Title bar (1)
+The title bar displays the name of window, path and selected resource as well as the sequential number of the window.
+Menu bar (2)
+The menu bar contains the menus as they are available according to the chosen resource and the user's rights. Basically, they provide access to all CoreMedia Editor editing functionalities and allow to open other windows.
+Tool bar (3)
+The tool bar lets you access the most common features via icons.
+Folder overview (4)
+In the folder overview the folder hierarchy of the project can be viewed and modified. A plus in front of the folder means that the folder may contain subfolders, but it must not. You have to check by clicking the plus symbol.
+Bookmark overview (5)
+The Bookmark overview shows the selected bookmarks. You can follow a bookmark from this view.
+Document overview (6)
+It displays the documents (but not subfolders) of the selected folder. These can be sorted by document type, document name, date of creation, and version, all ascending or descending (5). A double-click on the document opens the document window, a separate, resizable window for editing.
+Full text search (7)
+The full text search allows direct search in the CoreMedia repository.
+Detail view (8)
+
+Shows the document chosen in (6) with all its fields and contents in the chosen version. A toolbar for editing (9) is shown. 
+

@@ -1,0 +1,7 @@
+
+7# 
+If the default destination directory matches your installation directory, simply click [Next]. If not, click [Browse]. A window opens where you can choose the directory. If you have chosen a directory, click [Next]. The directory name and path must not contain spaces. 
+
+3* If the chosen target directory does not exist on the hard disk it will be created by the installation program. 
+
+In the following Folder dialog box set the program folder name to appear in the Windows Start Menu. This folder will contain links to the CoreMedia programs. (This dialog box only appears in installation under Windows.) 

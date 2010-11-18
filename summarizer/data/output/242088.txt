@@ -1,0 +1,5 @@
+
+
+In figure you can see an UML class diagram of the connection and all repositories and services that are reachable through the session.
+
+See chapter, chapter, and chapter for detailed discussions of the individual repositories. The services are also described in the chapter that is devoted to their repository.

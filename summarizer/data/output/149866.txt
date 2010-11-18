@@ -1,0 +1,10 @@
+
+
+Embedding the Active Delivery Server in the Apache web server (embedded operation) has the advantage that cached pages from the Active Delivery Server can be delivered directly by the web server. Furthermore, standard log files can be obtained in this way for evaluation.
+
+This behaviour is achieved as follows:
+
+The DocumentRoot of the web server must point to $CM/jakarta-tomcat/webapps/. Alternatively, e.g. $CM/jakarta-tomcat/webapps/coremedia/generator can be linked to the corresponding position in the document tree of the web server. The directory tag must point to the same directory.
+The Active Delivery Server properties serverName and serverPort refer to the Apache.
+Cache lookup and possible forwarding to the Active Delivery Server are implemented by inserting a rewrite module rule in the Apache httpd.conf. The modules mod_rewrite and mod_proxy are attached and configured as follows:
+

@@ -1,0 +1,14 @@
+
+
+The predefined publication workflows have some features in common, which are described in the following:
+
+Users and Groups
+
+In order to execute tasks within workflows, users have to be assigned to special groups. In the predefined publication workflows, these are the following:
+composer-role: to be able to create (and start) a publication workflow and compose a change set
+approver-role: to be able to approve the resources in the change set
+publisher-role: to be able to publish the resources in the change set
+
+Special groups can be defined and linked to the workflow via the Grant element in the workflow definition file. Read more about users, groups and administration in the Administration Manual.
+
+Note that, when all eligible users for a task reject that task, the task is again offered to all eligible users. So if you are the only user for a approver-role group and you start a publication workflow, the second step of the workflow will be escalated. That is because you cannot be the composer and the approver of a resource - and there is no other user than you.

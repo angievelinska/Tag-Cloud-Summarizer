@@ -1,0 +1,9 @@
+
+
+If you want to install a CoreMedia Active Delivery Server (ADS) proceed as follows:
+Select the CoreMedia Active Delivery Server option and press [Next].
+
+3* The window shown below will open. You can decide whether the default servlet engine Tomcat should be installed or not.  
+
+
+

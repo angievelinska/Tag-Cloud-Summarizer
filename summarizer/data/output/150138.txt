@@ -1,0 +1,3 @@
+
+
+First, it retrieves a process definition for a workflow with the name "fourEyesDemo''. You can find the definition of this workflow in the folder misc of the example. The resulting process object is filled with the entered data and started. Because the "Compose'' task is already done it is convenient for the users to accept and complete it automatically. For more information about workflows please refer to the manual of the Unified API.

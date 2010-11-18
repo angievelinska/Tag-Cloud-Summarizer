@@ -1,0 +1,5 @@
+
+
+The editing of RichText tables is similar in both CoreMedia Editor and WebEditor. Only the dialog for table size has been omitted. In the WebEditor you will always get a 4*3 table which you can shape to your needs using the appropriate tools. Please have a look at Sectin. 
+
+That's how tables look like in the WebEditor.

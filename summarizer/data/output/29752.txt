@@ -1,0 +1,13 @@
+
+
+The configuration of CoreMedia components as Windows Services has two parts:
+
+
+
+
+Configure service names
+
+
+Configure event logging
+
+

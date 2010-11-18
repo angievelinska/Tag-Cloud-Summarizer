@@ -1,0 +1,9 @@
+
+
+The DBMessageServiceServlet is an interface to the services of the Database Message Service. It takes http requests and answers with a http response. It contains requested data or just a http status code indicating whether a request was successful or not. Customized clients can use this servlet as an access point to the Database Message Service. 
+
+The url for accessing the servlet is formed as follows:
+
+<serverurl>/<pathToWebApp>?command=<command>[&parameter=<parameterValue>]
+
+The DBMessageServiceServlet offers the following commands:

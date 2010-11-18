@@ -1,0 +1,11 @@
+
+
+Operations:
+
+
+read fields of document doc
+
+read implied properties of document doc like date of last modification
+
+
+Required rights:

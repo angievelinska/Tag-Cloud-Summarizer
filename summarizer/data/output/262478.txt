@@ -1,0 +1,3 @@
+
+
+The website structure of the Starter Kit emerges from a linked document structure, not from a hierarchical folder structure. In order to enable easy navigation and editing of the content, the Starter Kit enhances the WebEditor with the Navigation Explorer.

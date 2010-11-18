@@ -1,0 +1,6 @@
+
+
+If you want to install a CoreMedia Editor Extensions Engine that serves the Advanced Query Editor, the Bean Query Editor and the Differencing Engine, proceed as follows:
+Select the CoreMedia Editor Extensions option and press [Next].
+
+The window shown below will open. You can decide whether the default servlet engine Tomcat should be installed or not.

@@ -1,0 +1,5 @@
+
+
+This section offers a use-case oriented approach to help you implementing typical custom Content Editing application requirements. Editing Services for JSF offers predefined building blocks to help you with both functionality and presentation. These building blocks are introduced as needed. For a complete reference, see section reference and the Bean documentation, component Tag-Lib documentation, and API documentation of ES.
+
+This section uses examples that can be built using predefined building blocks, Spring configuration, and JSF view definitions (JSF-JSPs) only. There are advanced concepts of ES like extending the framework that require Java programming. These advanced concepts are out of scope for this manual. If you need to extend the framework, consult the documentation mentioned above, consider booking a CoreMedia training, or call in CoreMedia Professional Services.

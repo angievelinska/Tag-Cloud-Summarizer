@@ -1,0 +1,3 @@
+
+
+The Master Live Server has no information about the connected Slave Live Servers. A Slave Live Server can simply be stopped and de-installed.

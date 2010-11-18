@@ -1,0 +1,4 @@
+
+
+ Parameter Description -t The paths of the resources to be destroyed -f Force the destruction of non-empty folders, which is normally forbidden due to safety considerations
+

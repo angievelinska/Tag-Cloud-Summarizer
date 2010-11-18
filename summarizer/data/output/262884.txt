@@ -1,0 +1,12 @@
+
+
+In addition, the Starter Kit supports the editor with the Navigation Explorer. A WebEditor window that reflects the structure of the website (see section).
+
+Internationalization
+
+The Starter Kit supports internationalization through the separation of content and structure of a website. Therefore, different versions of a website may not only differ in language but also in structure. The system is able to keep track of changes in variants of a document, supporting the translation workflow.
+
+Simple, search-optimized URLs
+
+The Starter Kit supports easy, human-readable and search machine optimized URLs.
+

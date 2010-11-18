@@ -1,0 +1,11 @@
+
+
+Now you can start tracesession, e.g. a user's editor session which you found with the sessions tool:
+
+> cm tracesession -u admin -p admin -s coremedia:///cap/session/14
+
+Traces started by ID and by type are independent of each other. I.e. you cannot stop tracing the above session with
+
+> cm tracesession -u admin -p admin -t editor -q
+
+although it is an editor session. You can only stop it by ID, just like you started it.

@@ -1,0 +1,85 @@
+
+
+CoreMedia Analytics uses a relational database for storing all data that is generated during the aggregation process. Depending on the number of page views that you want to analyze, the load on this database can be very high. Some recommendations for improving database performance can be found in the following.
+
+When sizing the database machines, you should estimate the amount of data that will need to be stored.
+
+By default, every page view is stored permanently and requires about 100 bytes on disk. Assuming 1 billion page impressions per year, this will lead to 1 TByte over 10 years.
+By default, information on every session is stored permanently and requires about 200 bytes on disk. For short sessions this might yield another 1 TByte over 10 years.
+Daily snapshots of the content meta-data are made. For 1 million content objects at about 100 bytes per object, we get 300 GBytes over 10 years.
+The other tables are expected to be smaller than that, but might produce another 1 or 2 TBytes in total.
+
+Of course, the exact values for the storage requirements may vary depending of the typical access pattern for the site. An automatic purge procedure can be configured to discard historic facts and statistics as described in section, if that is desired.
+
+CoreMedia Analytics generates a continuous load. After a downtime, CoreMedia Analytics will need to catch up with the events that were generated during the downtime. It can take longer than the original downtime before the latency is back to normal.
+
+A scheduled downtime should therefore happen at times of low load.
+Unscheduled downtimes should be avoided by using fault tolerant hardware, in particular by using a RAID.
+If you oversize the hardware for normal operation, it can recover faster after a downtime.
+
+CoreMedia Analytics creates a high write load.
+
+If a single disk or a RAID 1 does not handle the writes, you should add further disks, choosing a RAID level that is optimized for this case.
+A hardware RAID controller with write caches will improve performance.
+
+While some of the tables are used only temporarily, much disk space is required for storing the processed fact data.
+
+Depending on the access characteristics and on the tracking configuration, a few hundred bytes will be permanently stored in the database per page view, possibly totaling many GBytes of required disk space.
+If it is known for sure that the individual events will not be needed for future analysis, it is possible to truncate the archive tables like PageViewsArchive.
+
+CoreMedia Analytics uses transactions affecting very many rows. When aggregating yearly statistics or when making snapshots, more than a million rows may be written in a single transaction. To this end, some configuration parameters might have to be tuned.
+
+Make sure the database's transaction log is large enough to account for such transactions. Transaction logs of 256 Mbyte or more are recommended.
+You should make sure that the redo logs of the database are placed on very fast disks.
+The transaction log should be rotated at most once in five minutes. Otherwise, it needs increasing.
+
+Many databases support the concept of an archive log, which allows to replay the transactions that were completed since the last backup.
+
+Each page view will result in the creation of about 10 kByte of log data, depending on the database product used.
+Archive logs should be kept until the next successful backup has been performed. Assuming a typical backup frequency of 1 day, the archive logs might still get ten of GByte large, so that appropriate disk storage has to be provided.
+If the database is well protected by means of regular backups and a RAID system and if the potential loss of a day of analytics data seems acceptable, it is a valid option to deploy Analytics in a database with disabled archive logging.
+Because the database will be busy for a long time after a restore of an earlier backup, Analytics might take a long time to catch up with the recent events.
+
+While CoreMedia Analytics performs many read requests, these requests typically refer to data that was written shortly before. The database should be able to answer these requests without performing disk I/O.
+
+If you experience a significant amount of disk reads, increase the main memory allocated to the database, possibly putting in more hardware memory.
+
+Modern databases generate execution plans for queries based on statistics on the database contents.
+
+In some cases, CoreMedia Analytics gives hints to the database on how to optimize queries. Still it is a good idea to keep the database statistics up to date.
+Because CoreMedia Analytics uses some tables that get filled and then almost emptied, it is a good idea to stop the aggregation process gently at the end of an iteration before generating the statistics and restarting the process in the Data Aggregator. As most tables get emptied at the start of an aggregation process iteration, this is the time when the most useful statistics can be generated.
+As long as CoreMedia Analytics runs smoothly, it is not normally necessary to generate statistics over and over again.
+
+The transactions of the aggregation process will run in the isolation level Read Committed. This ensures a robust operation at the minimal operational cost.
+
+By default, all tables and indices are defined in the default table space. In order to distribute the load across multiple disks, you may want to move some of the tables to other table spaces. If you do so, the staging tables and the fact tables Sessions and PageViews would be obvious candidates for a special treatment. To this end, please see the Analytics Developer Manual for details about the database schema.
+
+Indices, too, may become faster if they are not written to the same disk that also holds the indexed table itself.
+
+If you provide multiple webapps and multiple Live Servers, each of which serves a single site, you may use a single Analytics Data Aggregator to aggregate logs from all sites into a single database. This results in a comparatively simple setup that allows global reports to be defined. But if you aim for very high loads, you might find it beneficial to split individual sites or portals as far as possible. To that end, you would use separate aggregators and separate databases.
+
+Hints for DB2
+
+In order to provide good support for row-level locking, set the parameter MAXLOCKS to 100 and LOCKLIST to a sufficiently high value. The exact value for LOCKLIST depends on the available memory, but 65536 may be a good start.
+
+You must provide both a tablespace and a temporary tablespace with a block size of at least 16 kByte.
+
+Other than that, the general recommendations for setting up the database and tablespace as described in section apply.
+
+Hints for Oracle
+
+In order to speed up the import of event logs, CoreMedia Analytics disables indices on staging tables while bulk data is written. This will result in warning messages in the Oracle log, complaining about unusable indices. While this is a normal condition, it may appear disturbing. By setting
+
+workflow.server.managers.aggregator.index.rebuild.threshold=0
+
+in the file workflowserver.properties, you can ensure that indices are never disabled.
+
+Hints for PostgresQL
+
+It is advisable to enable the auto-vacuum and auto-analyze daemons.
+
+Hints for Non-Oracle Databases
+
+It is assumed that disk space that was used by deleted rows will become reusable automatically. If necessary, appropriate database processes have to be started. For example, for PostgresQL the usage of the auto-vacuum daemon is strongly recommended.
+
+This applies to non-Oracle databases. For Oracle the most frequently used tables are compressed using ALTER TABLE ... SHRINK SPACE CASCADE at appropriate times.

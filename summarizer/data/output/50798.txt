@@ -1,0 +1,42 @@
+
+
+ Menu Item Sub Items Function Reverse sort order  reverses sort order (ascending or descending) of active sort options (displayed in status bar) Sort 
+
+State
+
+Name
+
+Date
+
+Version
+
+Type
+
+ sets the property or document type as criteria to sort by, in combination with Reverse sort order Filter 
+
+No filter
+
+Undeleted
+
+Unprocessed
+
+
+
+To approve
+
+To publish
+
+Published 
+
+displays all documents (default setting)
+
+all documents not marked for deletion
+
+all documents  approved nor published (checked-out/checked in)
+
+ On folder changes jump to begin  
+
+focus jumps to the very first resource in a folder automatically
+
+(of not active, the last item in the list is displayed) Maintain clipping  if activated, the list of resources in the overview window (see Explorer window description) is not automatically updated Display Configurable allows to modify the display of document properties 
+

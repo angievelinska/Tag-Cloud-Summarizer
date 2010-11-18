@@ -1,0 +1,32 @@
+
+
+You can start the JmsReceiver from the command line:
+
+
+bin/cm jmsreceiver start [options]
+
+
+or to start the JmsReceiver as foreground process:
+
+
+bin/cm jmsreceiver run [options]
+
+
+The following options are supported:
+
+
+-p <property.bundle>: 
+
+3* Use a different configuration bundle for the JmsReceiver. Default is corem/jmsreceiver (which corresponds to properties/corem/jmsreceiver.properties).
+
+-d: 
+
+3* Do not buffer events. Without this option the uploader gets events not until a commit message marking a consistent state was received.
+
+-r: 
+
+3* Register a receiver but stop the service without receiving. This can be used to create a durable topic subscription only.
+
+-i <file>: 
+
+3* Initialize the attached uploader with all values contained in the given file before receiving starts.

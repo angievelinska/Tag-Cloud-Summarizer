@@ -1,0 +1,9 @@
+
+
+This Importer Developer's Manual provides CoreMedia know-how about the Importer and:
+
+In Chapter 2 you will find a CoreMedia System Overview,
+Chapter 3 introduces the different Importers which can be used with CoreMedia CMS 2006.
+In Chapter 3.1 you will find a description of the universal XML importer which you can use to import arbitrary XML-files.
+In Chapter 3.2 you will find a description of the JPEG importer which you can use to import JPEG images.
+

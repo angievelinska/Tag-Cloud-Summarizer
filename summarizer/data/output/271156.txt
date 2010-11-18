@@ -1,0 +1,5 @@
+
+
+Handling the Maximized Portlet Window
+
+If you want to retrieve the maximized portlet of a page you can use the getMaximizedPortlet tag. This tag retrieves the maximized portlet of the current page and binds it to the specified var name in the given scope. If there is no maximized portlet the result will be null. The usage of this tag is shown below.

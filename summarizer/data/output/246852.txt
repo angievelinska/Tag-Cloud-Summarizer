@@ -1,0 +1,8 @@
+
+
+The Content Application Engine (CAE) is a framework for the development of content applications - but what is a content application? A content application as defined by CoreMedia is an application that takes content from several sources, transforms this content and delivers it to a target. This is a wide definition and comprises the "classical" task of a website delivered to a client, but also the editing and storing of content of the Content Management System.
+
+The CAE is build in a modular manner and offers components for different use cases. The following table lists all components of the CAE framework and compares some of their main features.
+
+
+

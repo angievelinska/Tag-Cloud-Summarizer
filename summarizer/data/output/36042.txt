@@ -1,0 +1,9 @@
+
+
+RunActionTimerHandler
+
+This timer handler runs one or more actions on expiration. The actions can be defined using the sub element Action.
+
+SkipUserTaskTimerHandler
+
+This timer handler aborts the activated user task on expiration. It does not work with a task if it is not activated.

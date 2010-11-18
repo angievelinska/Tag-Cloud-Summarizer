@@ -1,0 +1,46 @@
+
+
+The standard way to specify a resource to be dumped is its ID.  E.g. to dump the root folder you call
+
+> cm dump -u admin -p admin 1
+
+and get a result like 
+
+content: coremedia:///cap/content/1
+  type: Folder (coremedia:///cap/contenttype/Folder_)
+  path: /
+  created by: admin (coremedia:///cap/user/0), creation date:
+    2004-12-20T07:57:19+00:00
+  modified by: admin (coremedia:///cap/user/0), 
+    modification date: 2004-12-20T07:59:48+00:00
+  is place approved: true, place approved by: -, 
+    place approval date: 2004-12-20T07:57:19+00:00
+  is published: true, published by: -, publication date: 
+    2004-12-20T07:57:19+00:00
+  to be deleted: false, to be withdrawn: false
+  is checked out: false, current editor: -
+  children: 
+    /Home (coremedia:///cap/content/5)
+    /Inbox (coremedia:///cap/content/3)
+    /System (coremedia:///cap/content/9)
+    /work (coremedia:///cap/content/13)
+    /work2 (coremedia:///cap/content/15)
+
+The result for a document looks similar; instead of the children you get detailed information about all versions of the document. If you don't know the IDs of the resources you want to dump, you can alternatively specify their paths with the -t option, e.g.
+
+> cm dump -u admin -p admin -t /work/article1 /work/image1
+
+You can dump users and groups by specifying their names with the -n option, e.g.
+
+> cm dump -u admin -p admin -un publisher -gn system
+
+dumps the user publisher and the group system. 
+
+However, all these examples are only special convenient variants of invoking the dump tool. As you can see in the very first line of the result of dumping the root folder, the actual ID of the root folder is not 1, but coremedia:///cap/content/1, and this format is the general way to use dump: 
+
+> cm dump -u admin -p admin coremedia:///cap/content/1
+
+Each CoreMedia CMS object has such an ID and can be dumped. Try the above example for dumping users and groups, and you will get IDs like coremedia:///cap/user/5 and coremedia:///cap/group/1. You will obtain IDs of other objects (e.g. running processes) by the other server tools.
+
+
+

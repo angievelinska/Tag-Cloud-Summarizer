@@ -1,0 +1,102 @@
+
+
+
+ 
+
+Menu Item
+ 
+
+Sub Items
+ 
+
+Function
+ 
+
+Character format
+ 
+
+Default, Bold, Italic, Underline, Strike through, Subscript, Superscript
+ 
+
+Formats the selected text.
+ Paragraph format
+ All defined paragraph formats
+ Formats the current paragraph with the selected paragraph format.
+ Background color
+ All defined background colors
+ Sets the selected background color for the text.
+ Color
+ All defined font colors
+ Sets the selected color for the text.
+ Font
+ All defined fonts
+ Sets the selected font for the text.
+ Font size
+ All defined font sizes
+ Sets the selected font size for the text.
+ Language
+ All defined languages
+ Sets the selected language for the text.
+ 
+
+Stylesheet attribute
+ 
+
+
+ 
+
+Enter style sheet value in a dialog box (project-specific)
+ 
+
+Internal link
+ 
+
+
+ 
+
+Insert a link to a document within your project (opens explorer window for selection)
+ 
+
+Link
+ 
+
+
+ 
+
+Dialog box for (external) WWW links and target frame (leave empty or insert "_blank" for new browser window)
+ 
+
+Insert an image
+ 
+
+
+ 
+
+Inserts an image at current cursor position. A dialog box opens up in which you can select a document containing the image.
+ Lists
+ Ordered List, Unordered List, Indent, Outdent
+ Edit lists.
+ Add Blockguote
+ 
+ A paragraph is marked and formatted as blockquote.
+ Remove Blockquote
+ 
+ Removes the mark as blockquote.
+ Text alignment
+ Align left, Center, Align right, Justify, Remove alignment
+ Defines the alignment of paragraphs.
+ Table
+ All functions for editing tables (Insert row ...).
+ Inserts a table at current cursor position. A dialog box opens up in which you can define the table size.
+ 
+
+Horizontal scrollbar
+ 
+
+
+ 
+
+Adds a scrollbar if the text in a RichText field exceeds the visible area.
+
+
+

@@ -1,0 +1,9 @@
+
+
+This manual provides information on the customizing of the CoreMedia Editor.
+
+Chapter 2 outlines a CoreMedia Editor overview,
+Chapter 3 describes the customization of the editor using the XML configuration files,
+Chapter 4 shows how to use the editor API for own extensions,
+Chapter 5 contains a reference of all XML elements and delivered classes for customization.
+

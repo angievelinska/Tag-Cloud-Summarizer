@@ -1,0 +1,8 @@
+
+
+<CustomDictionary>
+
+
+Child elements: 
+
+Parent elements: <SpellChecker>

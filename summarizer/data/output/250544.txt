@@ -1,0 +1,15 @@
+
+
+ 
+
+Attributes 
+
+Description 
+
+editorClass 
+
+Editor class to be used for showing the variable. See Section 5.8.1.1.2 for a listing of the editor classes. 
+
+name 
+
+Name of the variable to be shown, as defined in the workflow definiton.

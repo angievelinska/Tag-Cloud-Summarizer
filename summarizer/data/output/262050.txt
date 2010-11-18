@@ -1,0 +1,12 @@
+
+
+The Spring configuration of a Plug-In consist of three parts:
+
+A Plug-In bean 
+A bean defining the Plug-In's content bean factory.
+Aspect content bean definitions. 
+
+At the latter one the Plug-In has to register all of its aspect beans to their corresponding aggregator beans. The Plug-In bean serves as a marker bean in the sense, that the Plug-In registry is able to find all Plug-Ins and register them with all aggregator beans at initialization time. The registration of aspects is similar to the registration of content beans with the difference, that it must use the Plug-In specific content bean factory. This is necessary to have a link from the aggregating content bean to its aspects. 
+
+Similar to content beans, aspect content beans declare an inheritance relationship to the common aspect content bean abstractAspectContentBean-starterkit. This inheritance ensures the backlink navigation, since this bean defines a property where the Starter Kit content bean factory for all content beans is injected. 
+

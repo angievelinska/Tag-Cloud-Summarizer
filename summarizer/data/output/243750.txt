@@ -1,0 +1,7 @@
+
+
+Expression
+
+Definition: Expression | Equal | NotEqual | Greater | GreaterEqual | Less | LessEqual | And | Or | Implies | Not | ForAll | Exists | Let | Get | Read | Length | IsEmpty | NotEmpty | IsFolder | IsDocument | IsDocumentVersion | IsExpired | AddLatestVersion | Value: Blob | Boolean | Content | ContentType | Date | Document | Folder | Group | Integer | String | Timer | User
+
+The Expression parameter entity is used to define all available expressions. You can use the predefined expressions listed above or implement your own expressions, using the Expression element. 

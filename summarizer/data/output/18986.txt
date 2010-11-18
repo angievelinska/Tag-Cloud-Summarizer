@@ -1,0 +1,7 @@
+
+
+The generator can pre-generate the complete content or parts of it in the desired format determined by the templates, for example to burn it onto CD or transfer it to an external web server.
+
+For this purpose, it can be configured so that the full transitive envelope, starting from a configurable root, is generated, independent from external requests. On changes to the repository only the affected parts are updated.
+
+If it is a non-personalised site, high-performance delivery by a web server of all content is possible this way, like a static site; the intelligent dependence administration of the generator continually ensures rapid and precise updating of the site.

@@ -1,0 +1,13 @@
+
+
+Using the file WEB-INF/config.bsh, various options of the Active Delivery Server context can be configured. The config.bsh page is executed once when the Active Delivery Server starts and therefore behaves like a flexible configuration file. On changes to the configuration of the particular Active Delivery Server context, the Active Delivery Server must be restarted so that the changed configuration becomes active.
+
+Using Java syntax and method commands of the generator API, options of the Active Delivery Server can be set, or extensions (Java Beans) integrated.
+
+In general, property allocation occurs via bean setter methods:
+
+<BeanName>.set<PropertyName>(<Value>);
+
+i.e. 
+
+generator.setResourceUriFormat(new NumericResourceUriFormat());

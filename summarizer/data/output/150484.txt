@@ -1,0 +1,7 @@
+
+
+The following example shows the output of a query which searches for all documents below the /MenuSite/Fish folder:
+
+cm query -u admin -p admin -q "BELOW PATH '/MenuSite/Fish'"
+
+The result shows the ID, the type and the path/name of the found documents.

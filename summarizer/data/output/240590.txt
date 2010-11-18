@@ -1,0 +1,3 @@
+
+
+By default, the JMX-connection to the CoreMedia components is not secured. Be sure to use a firewall to protect the connection port when using jmxmp, or use the Hessian protocol with authentication, which may be encrypted using SSL.

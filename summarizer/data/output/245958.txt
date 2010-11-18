@@ -1,0 +1,18 @@
+
+
+An action is an executable entity which is triggered by an user interaction. The action is working upon an injected target. An example for an action is a "Move Up" action used inside pbe. In that case the action is triggered by the user clicking the "Move Up" entry in a pbe context menu. The action takes care of modifying the order of the link list in which the content object is linked. Details can be found in chapter.
+
+The action might have a CommandPostProcessor and a NavigationHandler.
+
+CommandPostProcessor
+
+A CommandPostProcessor is executed after execution of the action. The use case is to modify the action or the target of the action in order to retrieve the commands return value. It is not only the return value, but also preparative actions which are done for following components. 
+
+NavigationHandler
+
+An action might have an NavigationHandler. This NavigationHandler takes care of navigation after executing the action. For example a NavigationHandler may redirect the user to a result page which shows the result of the executed action.
+
+
+
+
+

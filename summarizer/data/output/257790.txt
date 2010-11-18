@@ -1,0 +1,93 @@
+
+
+ RightsPolicy
+
+In the following, we will present the Unified API half of a custom rights policy. That policy assigns rights to exactly that user who created a process and grants rights for the creation of new processes to all members of a single group. 
+
+The server half, as presented in the Workflow Manual, is only sufficient for use in the Workflow Server, for the editor, and for ADS-based applications. The Unified API needs its own implementation. You can find the complete source code in the examples distribution.
+
+First, we need some code to deal with serialization and configuration.
+
+public class OnlyOwnerRightsPolicy implements RightsPolicy {
+  private static final long serialVersionUID = 
+   7465148942676430339L;
+  private Group group = null;
+  public void setGroup(Group group) {
+    this.group = group;
+  }
+  public Group getGroup() {
+    return group;
+  }
+  public void setGroup(String groupAtDomain) 
+  throws WfException {
+    UserRepository userRepository = WfServer.getConnection().
+     getUserRepository();
+    Group group = userRepository.getGroupByName(groupAtDomain);
+    if (group == null) {
+      throw new RuntimeException("Could not find 
+      group "+groupAtDomain);
+    }
+    setGroup(group);
+  }
+
+The last method is called only in the Workflow Server while an XML process definition using the new policy is parsed. We are therefore allowed to obtain the server's Unified API connection through the WfServer singleton.
+
+Now we can look at some of the methods that compute the rights of individual users.
+
+  private User getOwner(WorkflowObject workflowObject) {
+    if (workflowObject instanceof Task) {
+      workflowObject = 
+       ((Task)workflowObject).getContainingProcess();
+    }
+    return ((Process)workflowObject).getOwner();
+  }
+  public boolean mayPerform(WorkflowObject workflowObject,
+    Right right, User user)
+  {
+    if (user.isSuperUser()) return true;
+    User owner = getOwner(workflowObject);
+    return owner != null && owner.equals(user);
+  }
+  public boolean mayPerform(WorkflowObjectDefinition
+    definition, Right right, User user)
+  {
+    return user.isMemberOf(group);
+  }
+  ...
+
+Skipping some parts of the code that are very similar to the server-side code as presented in the Workflow Manual, we observe that there is also a weight method that estimates the main memory size of the policy in bytes. It is used for caching policies. Here we estimate 12 bytes for the policy and 16 bytes for the referenced group.
+
+  public int getWeight() {
+    return 28;
+  }
+
+Finally, there is the unmarshalling process that is needed to create a policy instance in the client VM.
+
+  public RightsPolicyMarshaller getMarshaller() {
+    return new OnlyOwnerRightsPolicyMarshaller();
+  }
+}
+
+The marshaller itself resides in yet another class. Let us look at the unmarshal method, only.
+
+public class OnlyOwnerRightsPolicyMarshaller 
+implements RightsPolicyMarshaller {
+  ...
+  public RightsPolicy unmarshal(CapConnection connection, 
+    byte[] data)
+  {
+    OnlyOwnerRightsPolicy result = new OnlyOwnerRightsPolicy();
+    if (data[4] == 1) {
+      int groupId = (data[0] & 0x000000ff) +
+        (data[1]<<8 & 0x0000ff00) +
+        (data[2]<<16 & 0x00ff0000) +
+        (data[3]<<24);
+      result.setGroup(connection.getUserRepository().
+        getGroup(IdHelper.formatGroupId(groupId)));
+    }
+    return result;
+  }
+  ...
+}
+
+Notice how a connection is passed into the unmarshaller, so that it can be used to build Unified API objects for use in the policy.

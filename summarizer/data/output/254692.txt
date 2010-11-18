@@ -1,0 +1,5 @@
+
+
+The database must be accessible over the network and should be enabled for the Unicode character set. Each Content Server and Live Server requires a different database user account. The database users must be able to create and delete tables and indexes in their schema. (For Oracle, see Example 5.2.3.1a and Example 5.2.3.1b)
+
+Manual creation of tables is not necessary. A Content Server automatically creates tables, the first time it is started. The standard settings of the database or the standard values defined for the database user are used as default for the tables and indexes created, e.g. the initial reserved memory.

@@ -1,0 +1,11 @@
+
+
+A form bean with the name loginForm is defined, using the DynaActionForm class, which allows us to define an ActionForm with own properties without having to write an own ActionForm class. In this case, the form has the three properties username, domain, and password of type String.
+
+We define a global forward for the login page, so that it can be reused in any action forward.
+
+Then the action is configured: The path attribute has to match with the action attribute used in the loginForm.jsp <html:form> tag (there, the extension .do can be omitted). The type attribute specifies the class name of our action, which must be an Action subclass. The name attribute defines the form bean to be used, so here we use the loginForm defined above. The input attribute points to the global login forward defined above. For this to work, the Struts controller must be configured to interpret the input attribute as a forward name, not a concrete path. See the complete configuration example in xxx on how to do that. We also have to define a forward with the name "success" (as used in the LoginAction class), which points to a path we want to be forwarded to if the login was successful.
+
+Instead of writing an own LoginAction, you can also reuse the predefined WAGE LoginAction (com.coremedia.cap.wage.actions.LoginAction). See XXX for an example on how to use this Action.
+
+As you will need something like this LoginAction for all examples to work, the login part won't be explained anymore for the following examples.

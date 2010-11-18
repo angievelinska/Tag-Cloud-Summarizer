@@ -1,0 +1,3 @@
+
+
+If you have defined your style groups you need to add them to the CoreMedia Editor. The right place is the editor.xml file using the attribute addStyleSheetGroups of the Property element. The following example shows how to add your newly defined style group inlineformat and the predefined style group list-item to the property RichText of the "Article" document:

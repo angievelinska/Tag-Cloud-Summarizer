@@ -1,0 +1,9 @@
+
+
+Use XSL Transformations to
+
+generate different representations from the same content. I.e. it is possible to compute both HTML and WML from the same content base.
+convert XML files from one format to another. For example: A given system needs XML input conformant to some DTD A. However the available XML is only conformant to DTD B. The solution is to write a style sheet that translates instances of DTD A to instances of DTD B. The CoreMedia SCI XML importer component makes heavy use of style sheets.
+present information using a Web Browser. For example: Data is available in an "information-only" format. By writing a style sheet developers can enrich this data with formatting information. It is possible to construct XHTML tables etc. Thereby the data becomes readable and understandable. Using the CoreMedia ADS developers can enrich the default XML Layer with formatting tags to produce aesthetic layouts.
+translate existing XML data into legacy data formats. For example: XML data can be transformed into simple text files which could then be read by a desktop publishing software to produce a catalog.
+

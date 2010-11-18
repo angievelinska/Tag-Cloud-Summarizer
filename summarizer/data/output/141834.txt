@@ -1,0 +1,14 @@
+
+
+In order to use a query more often, you can set up the query and save it as a document in a suitable place.
+To do this, select File|New|Query from the menu bar.
+Name the query.
+
+Define as many search criteria as necessary in your query.
+3#
+Save the query:
+
+Select Save from the File menu.
+Click .
+
+If the query was just opened with New Query window from the Window menu and saved by using Save from the File menu is is saved in the user folder. Changing the default name MyQuery creates a second Query document and does not overwrite the previous version.

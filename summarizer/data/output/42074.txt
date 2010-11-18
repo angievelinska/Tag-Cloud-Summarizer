@@ -1,0 +1,8 @@
+
+
+Besides fully user-defined queries, there is the possibility of using predefined queries:
+
+Navigation|Links of a document: This query gives an overview of all links which point from this document to other documents.
+Navigation|Links to a document: A Query window is opened which lists the links from other documents to this one.
+Navigation|Checked out documents in the Overview window. You can use this query if you want an overview of all documents which you still have checked out.
+Navigation|To be published: A Query window is opened which lists all documents which needs to be published.

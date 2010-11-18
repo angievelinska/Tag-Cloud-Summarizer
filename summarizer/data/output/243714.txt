@@ -1,0 +1,5 @@
+
+
+This chapter describes how to create an action which sends a mail to a receiver. The receiver and the document to send can be passed to the action using the CoreMedia Editor. You will learn how to pass variables to the action, how to return variables and how to access the CoreMedia Content Management Server and the CoreMedia Workflow Server.
+
+For clarity some methods or variable definitions are removed from the following excerpts.You will find the complete code of the action in Section 6.3. 

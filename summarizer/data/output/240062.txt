@@ -1,0 +1,43 @@
+
+
+Starting JConsole
+
+JConsole needs the jmxremote_optional.jar file and some files for the Hessian protocol for operation. These files are installed with the CoreMedia Content Server in the lib directory.
+Start JConsole as follows, replace <PathToJava>, <PathToJar> and <PathToKeystore> with the paths to your Java installation, to the lib directory of your Content Server installation and to the keystore for the SSL connection respectively. You might define environment variables for these paths for your convenience.
+
+For jmxmp only:
+
+<PathToJava>/bin/jconsole -J-classpath 
+-J<PathToJava>/lib/jconsole.jar;
+<PathToJar>\jmxremote_optional.jar
+
+For Hessian:
+
+<PathToJava>/bin/jconsole -J-classpath 
+-J<PathToJava>/lib/jconsole.jar;
+<PathToJar>/mx4j.jar;
+<PathToJar>/mx4j-remote.jar;
+<PathToJar>/mx4j-tools.jar;
+<PathToJar>/hessian.jar;<PathToJar>/jmxremote_optional.jar
+
+For Hessian with SSL:
+
+<PathToJava>/bin/jconsole 
+-J-Djavax.net.ssl.trustStore=<PathToKeystore> 
+-J-classpath 
+-J<PathToJava>/lib/jconsole.jar;
+<PathToJar>/mx4j.jar;
+<PathToJar>/mx4j-remote.jar;
+<PathToJar>/mx4j-tools.jar;
+<PathToJar>/hessian.jar;<PathToJar>/jmxremote_optional.jar
+
+
+2#
+Select Connection|New Connection. A new windows opens up.
+Select the Advanced tab.
+Enter the URL of the connection server in the field JMX URL.
+If you use Hessian you have to enter the user name of an CoreMedia administrator in the field User Name. If the user is not in the empty domain you have to add an "@" and the domain name to the user name (e.g. admin@coremedia). If you want to allow non administrators, you have to change the value of the property workflow.server.management.admins.only in the file workflowserver.properties to "false".
+If you use Hessian enter the user's password into the field Password.
+Click Connect. A new console window opens.
+
+Now, you can start working.

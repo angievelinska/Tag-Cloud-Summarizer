@@ -1,0 +1,140 @@
+
+
+This example is based on the New Menu Site example and adds search functionality for dishes. Please read section before. In this example, an input field is added to search for dishes which contain a given term in their title, description or ingredients. For example, a user can enter the word "rice" in the search field if he is interested in dishes with rice. A second input field can be used to specify the maximum price of the dishes.
+
+The CoreMedia CAE Feeder and the CoreMedia Search Engine make it possible to search for content beans like the Dish beans of the New Menu Site. The CAE Feeder sends data of content beans to the Search Engine as soon as the underlying contents are created or modified. The Search Engine indexes the received data and provides interfaces for searching. See the CoreMedia Administration and Operation Manual for information about the CoreMedia Search Engine and chapter for more about the CAE Feeder.
+
+As always, the example is contained in the file cap-examples.jar. You can find it in the directory examples/cae/search after unpacking the JAR file. Requirements and necessary steps to start the example are briefly described in the file README. This section describes the example in detail. This includes configuration of the CoreMedia Search Engine and CoreMedia CAE Feeder for the example as well as the implementation of the search functionality in the New Menu Site web application.
+
+You can use the provided Ant build file to perform some of the tasks to get the example running. The following steps have to be performed manually before:
+
+Set up a CoreMedia Content Server and import the content of the New Menu Site as described in section.
+Install a CoreMedia Search Engine as described in the CoreMedia Administration and Operation Manual.
+Install Jakarta Tomcat and a CAE web application template. Configure the connection to the Content Server for the web application template . Move the web application template to a directory where it is not automatically deployed by Tomcat.
+Install a CAE Feeder template. Configure the connection to the Content Server, Search Engine and database for the CAE Feeder template and copy the database driver to its lib directory.
+
+Configure the path of Jakarta Tomcat and the parent directory of the CAE web application template using the properties tomcat.home and cae.template.dir in the file global.properties, which is located in the directory  examples/cae/etc.
+Configure the path of the CAE Feeder template, the URL to the FAST Query and Result Server and the name of the FAST collection in the properties caefeeder.template.path, search.qrserver and search.collection in file local.properties, which is located in the directory examples/cae/search.
+Add the Jakarta Tomcat user admin with password tomcat and role manager to the file tomcat-users.xml, which is located in the directory jakarta-tomcat/conf.
+Start Jakarta Tomcat.
+
+To start the example, execute ant first. It builds and deploys the Menu Site web application  and installs and configures the CAE Feeder in the directory examples/cae/search/output/caefeeder. Afterwards start the CAE Feeder by executing cm caefeeder run in the directory bin. The Menu Site is available at http://localhost:8001/search/servlet/. Note that it takes some minutes before the dishes have been indexed and can be found on the website.
+
+Configuration of the CoreMedia Search Engine
+
+Users of the New Menu Site want to search for dishes which contain a search term in their name, description or ingredients. They want to search for dishes with a price below or equal a specified maximum. And they want to combine these conditions. Therefore you need at least two fields in the index of the CoreMedia Search Engine for the values of Dish bean properties:
+a text field for the concatenation of name, description and ingredients
+a numeric field for the price
+
+Instead of a single text field you can also use three separate fields for name, description and ingredients and perform the search against all fields. For simplicity this example uses the field textbody of the default index profile and stores the whole text of the dish in it. The field textbody is handled specially by the CAE Feeder. It contains the concatenation of multiple bean property values. The field for the price is a numeric field to support range queries such as a query for all dishes with a price less than a given one.
+
+The default index profile of the CoreMedia Search Engine already contains the price field for this example. The index profile defines - among other things - a list of supported index fields. For more information about the index profile see the FAST Configuration Guide. The CoreMedia Search Engine comes with a default index profile, which contains the field inside the XML element <field-list>:
+
+<field name="price" type="int32" fullsort="yes"/>
+
+
+If you need other fields in the index profile or want to remove unused fields, you can change the index profile before installing the CoreMedia Search Engine or afterwards by deploying a new changed index profile in a running CoreMedia Search Engine. To change it before installation, edit the file index-profile-coremedia.xml in the directory oeminstaller/config/index-profiles (for FAST InStream 4.3) or fastinstaller/coremedia/config/index-profiles (for FAST ESP 5.1) after extracting the CoreMedia Search Engine archive file. To change it after installation, follow the instructions from section "Updating the Index Profile" in the FAST Configuration Guide. The default index profile conains comments which indicate if a field is required for operation.
+
+Feeder applications such as the CAE Feeder and the Search Engine Feeder of the CoreMedia Content Server require separate FAST collections. Searches specify a collection to get results for the specific application only. Use the FAST administration page to create a new and empty collection for this example. The name of the collection must match the one configured for the CAE Feeder. The administration pages of FAST with default base port (13000) are available at http://<hostname>:16000/admin. See section "CoreMedia Search Engine Operation" in the CoreMedia Administration and Operation Manual for the steps to create a collection.
+
+Configuration of the CoreMedia CAE Feeder
+
+The CoreMedia CAE Feeder requires a connection to the CoreMedia Content Server, the CoreMedia Search Engine and a database to store its state persistently. These connections can be configured during installation of the CAE Feeder template and are described in the CoreMedia Administration and Operation Manual. Additional configuration is required to specify which and how content beans are sent to the CoreMedia Search Engine. These additional configuration tasks are described in this section. The included Ant build file creates a CAE Feeder with the described configuration from the CAE Feeder template automatically when ant first is invoked. The CAE Feeder directory is examples/cae/search/output/caefeeder.
+
+First, specify the set of indexed content beans as described in section. For this example, content beans for documents of type Dish below the folder MenuSite will be sent to the Search Engine for indexing. The content type and base folder are configured with the properties feeder.contentSelector.contentTypes and feeder.contentSelector.basePath in the file caefeeder.properties in the directory config/caefeeder/spring/ below the CAE Feeder installation directory:
+
+feeder.contentSelector.contentTypes=Dish
+feeder.contentSelector.basePath=/MenuSite
+
+Next, configure the content bean class for Dish documents as described in section. The Dish content bean class must be added to the classpath of the CAE Feeder and registered in the file cae-contentbeans-example.xml in the directory config/caefeeder/spring: After building the application with ant, you will find the pre-configured file menusite-contentbeans.xml in this directory.
+
+<beans>
+  <bean name="contentBeanFactory:Dish" scope="prototype" 
+  class="com.coremedia.examples.cae.beans.DishImpl"/>
+</beans>
+
+Both the classes and the cae-contentbeans-example.xml can be reused from the CAE web application. The web application defines additional content beans, which are ignored by the CAE Feeder because feeding was restricted to content beans for type Dish. Note that the Dish content bean class is exactly the same as in the original New Menu Site example. No code changes are required to make it searchable.
+
+The last step is to configure which properties of the Dish content bean are stored in which fields of the index. The CAE Feeder creates a so-called Feedable which consists of elements with data from the content bean and is then sent to the CoreMedia Search Engine, which stores the data in fields of the index. See section for details. In this example, the properties name, description and ingredients are stored as concatenation in the field textbody. This can be achieved with the following configuration in the file caefeeder.properties in directory config/caefeeder/spring:
+
+feeder.beanMapping.com.coremedia.examples.cae.beans.Dish=
+  name,description,ingredients
+
+This configures the CAE Feeder to create a Feedable with the elements name, description and ingredients for a content bean of class com.coremedia.examples.cae.beans.Dish. The element values of the Feedable are retrieved from the properties of the content bean. If the index profile defines fields with equal names, the fields will be set to the respective values. In fact, there is a string field name in the default index profile, which will be set to the name of the dish. The description and ingredients are not stored in separate fields because there are no such fields in the index profile. But their values are stored together with the name in the special index field textbody. It does not matter if there is a field with the name of the property to store it in the field textbody.
+
+If you add the property price to the above list, then it will be stored in both the field price and the field textbody. In this example the price should only be stored in the price field and not in the textbody field to avoid that users find dishes by their price when entering a number in the search field. This can be achieved by using a more verbose configuration syntax in the file caefeeder-mappings.xml in the directory config/caefeeder/spring. Add the following BeanFeedableMapping bean definition to the list of bean mappings in the property beanMappings of the bean BeanMappingFeedablePopulator:
+
+<bean class=
+  "com.coremedia.cap.feeder.bean.BeanMappingFeedablePopulator">
+  ...
+  <property name="beanMappings">
+    <list>
+    ...
+    <!-- add more beans here -->
+    <!-- START example configuration -->
+    <bean class=
+      "com.coremedia.cap.feeder.bean.BeanFeedableMapping">
+      <property name="beanClass" 
+                value="com.coremedia.examples.cae.beans.Dish"/>
+      <property name="beanPropertyMappings">
+        <list>
+         <bean class="com.coremedia.cap.feeder.bean.
+           BeanPropertyFeedableElementMapping">
+           <property name="beanProperty" value="price"/>
+           <property name="textBody" value="false"/>
+         </bean>
+        </list>
+      </property>
+    </bean>
+    <!-- END example configuration -->
+    </list>
+  </property>
+</bean>
+
+This configures the bean property price of Dish beans but excludes its value from the textbody field by setting textBody to false. The configuration in caefeeder-mappings.xml is merged with the configuration in caefeeder.properties and the CAE Feeder will feed the Search Engine with name, description, ingredients and price.
+
+Implementing search in the web application
+
+This example implements search using the FAST API. Therefore the JAR files dsapi.jar and xmlrpc.jar must be copied to WEB-INF/lib. These files can be retrieved from the directoy lib of the CAE Feeder installation or from the FAST API archive file dsapi-java-InStream.4.3.0.zip. The file also contains the Javadoc documentation of the FAST API. The usage is described in the FAST Query Integration Guide. The Query language is described in the FAST Query Language and Parameters Guide.
+
+The template Document.jsp, which renders header and navigation, was extended with a HTML form with input fields for query string and maximum price. The input fields appear on the left of the page below the navigation. If the user performs a search, the request parameters query and maxprice will be included in the request URI. The Spring HandlerInterceptor DishSearchInterceptor retrieves these request parameters and will add a DishSearchBean with query and maximum price to the model if the request parameters are set. The DishSearchInterceptor is registered in WEB-INF/spring/menusite-controllers.xml. 
+
+If a DishSearchBean appears in the model, the search results will be displayed in the content area. Therefore the template Document.jsp checks if the model contains a DishSearchBean and includes it if present. If there is no DishSearchBean, the render view of the document will be included as always. The template DishSearchBean.jsp renders the search result by including the teaser view for each of the found dishes. The template gets these dishes by calling getDishes() of the DishSearchBean.
+
+The DishSearchBean uses a DishFinder to perform the actual search. The DishFinder uses the FAST API for searching and is configured as property of the DishSearchInterceptor in WEB-INF/spring/menusite-controllers.xml. The configuration includes the URL to the FAST Query & Result Server and collection. The configured IdScheme is required to create Dish content beans from the IDs returned by FAST:
+
+ ...
+<customize:append bean="controllerInterceptors">
+      <list>
+        <bean class="com.coremedia.examples.cae.search.
+                     DishSearchInterceptor">
+        <property name="dishFinder">
+          <bean class="com.coremedia.examples.cae.search.
+                       DishFinder">
+            <property name="collection"
+                      value="menusite"/>
+            <property name="qrServerUrl"
+                      value="http://localhost:15100"/>
+            <property name="idScheme"
+                      ref="contentBeanIdScheme"/>
+          </bean>
+        </property>
+      </bean>
+      </list>
+</customize:append>
+
+The DishFinder creates a FAST Query Language (FQL) query from the user query and maximum price. It is important to add the condition feederstate:SUCCESS to every query. It restricts the result to successfully indexed FAST documents. The index field feederstate is a special field which can contain other values such as ERROR and INTERNAL for documents which could not be indexed successfully or are used internally by the CAE Feeder. The query is furthermore restricted to the configured collection and to the type Dish. The type condition is optional in this example because the CAE Feeder was configured to index Dish content beans only. For example, the FQL query for the user query rice and maximum price of 30 is:
+
+and(
+  and(
+    filter(and(
+      meta.collection:menusite,
+      feederstate:SUCCESS,
+      documenttype:Dish
+    )),
+    string("rice",model="simpleall")
+  ),
+  price:range(min,30,to="LE")
+)
+
+The FAST API executes the query and returns the IDs of the matching dishes. The DishFinder uses the method parseId of the configured ContentBeanIdScheme to create a Dish content bean for each of the returned IDs. These content beans are then returned and rendered.

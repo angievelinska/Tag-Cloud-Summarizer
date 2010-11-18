@@ -1,0 +1,30 @@
+
+
+ 
+
+Directory/File 
+
+description 
+
+jakarta-tomcat/ 
+
+installation Directory 
+
+jakarta-tomcat/bin/ 
+
+start/stop scripts 
+
+jakarta-tomcat/conf/server.xml 
+
+main server configuration (ports...) 
+
+jakarta-tomcat/common/lib Runtime resources 
+
+jakarta-tomcat/logs 
+
+Tomcat logs 
+
+jakarta-tomcat/webapps 
+
+auto-deployed webapps
+

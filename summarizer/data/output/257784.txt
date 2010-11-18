@@ -1,0 +1,54 @@
+
+
+This section provides some examples of various types of plugins. All classes must be deployed on the Workflow Server in order to become functional.
+
+Expression
+
+The first example show how to create a reusable expression for performing queries in the Content Server. The full source code of the class QueryExpression is available in the examples jar. The expression starts by extracting the Unified API connection from the argument workflow object. (Alternatively, the connection could have been injected by implementing the CapConnectionAware interface)
+
+public Object evaluate(WorkflowObject wo,
+  Map<String,Object> localVariables)
+{
+  CapConnection connection = wo.getRepository().getConnection();
+  QueryService queryService = connection.getContentRepository()
+    .getQueryService();
+
+Afterwards, all subexpressions are evaluated. Note that we are passing the localVariables to the subexpression unchanged.
+
+  Object[] parameters = new Object[expressions.size()];
+  for (int i = 0; i < parameters.length; i++) {
+    Expression expression = expressions.get(i);
+    parameters[i] = expression.evaluate(object, localVariables);
+  }
+
+Lastly, we can pose the actual query.
+
+  return new ArrayList<Content>(queryService.
+    poseContentQuery(query, parameters));
+}
+
+
+In the XML definition, the subexpressions occur as XML subelements and the query as an attribute of the <Expression> element.
+
+<Expression class="com.coremedia.examples.plugin.QueryExpression"
+  query="REFERENCED BY ?0">
+  <Get variable="document"/>
+</Expression>
+
+The query string is passed into the QueryExpression object by means of a specific setter setQuery(String). The subexpression Get is parsed and handed to the example expression and stored in a list named expressions  by means of the following method:
+
+public void add(Object o) {
+  if (o instanceof Expression) {
+    expressions.add((Expression)o);
+  } else {
+    throw new RuntimeException("don't know how to add "+o);
+  }
+}
+
+Even if you do not intend to use subexpressions, you might want to implement a similar method when requiring a highly flexible configuration mechanism. Every nested XML element that cannot be handled by a more specific setter method is passed to the set(Object) method.
+
+This example expression is used in a process definition that can be found in the file find-linked.xml, which is distributed with the examples. You can upload the definition jointly with the prepackaged example classes by using a command like this:
+
+cm upload -u admin -f find-linked.xml -j cap-plugin.jar
+
+Log in as user admin to run the uploaded workflow.

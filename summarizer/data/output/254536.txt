@@ -1,0 +1,6 @@
+
+5#
+Click [Next] to continue with the installation.
+
+Now you will be asked for the destination directory etc. as described in the General Installation chapter. After this you will be asked if you want to edit the properties of the server..
+

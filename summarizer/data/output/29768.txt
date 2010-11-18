@@ -1,0 +1,34 @@
+
+
+Configure Service Names
+
+The CoreMedia SCI Installer already configures the attributes necessary to install a CoreMedia component. The attributes are defined in the bin/<component>.jpif file. The attributes are:
+
+
+
+SERVICE_NAME: 
+
+
+The service name must be unique across all Windows services on the host, as it is an identifier for the service.
+
+
+SERVICE_DISPLAY_NAME: 
+
+
+The service display name is displayed in the name column of the service list window you can open with ControlPanel|Administrative Tools|Component Services|Services (Local). The display name must be unique across all service display names on the host.  
+
+
+SERVICE_DESCRIPTION: 
+
+
+The description is displayed in the description column of the service list window (available only in Windows 2000 and above)
+
+
+SERVICE_DEPENDENCIES: 
+
+
+A list of service names (service identifiers) the current service depends on. E.g. a CoreMedia Importer service depends on a CoreMedia Content Server service. Only services on the same host can be listed here.
+
+You only have to change the values of SERVICE_NAME and SERVICE_DISPLAY_NAME attributes if you configure more than one component of a type on a single host (e.g. more than one Content Server or more than one XML-Importer). The CoreMedia SCI Installer will always set the service name and service display name of a component to the same value. The three different SCI server types (Content, Master Live Server, Slave Live) have their own service names and service display names.
+
+The following excerpt is from the workflowserver.jpif file:

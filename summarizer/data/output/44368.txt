@@ -1,0 +1,3 @@
+
+
+If, for example, a page is generated for the ResourceUri (id=20,templateId=short.jsp), the Active Delivery Server allocates a dependency on the contents of resource 20 and on the code of the template /templates/short.jsp to the created page.

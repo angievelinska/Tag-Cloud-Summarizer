@@ -1,0 +1,33 @@
+
+
+ 
+
+Parameter 
+
+Type 
+
+Description 
+
+document 
+
+DocumentModel 
+
+The document with the property to validate. The DocumentModel is for read access only, do not try to modify any document here 
+
+propertyType 
+
+PropertyTypeModel 
+
+The property type of the property to validate 
+
+value 
+
+Object 
+
+The value of the property, not a PropertyModel but the value of the PropertyModel (see table below for the default types) 
+
+allProperties 
+
+Map 
+
+A map indexed by property name of all the documents properties

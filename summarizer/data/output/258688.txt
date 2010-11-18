@@ -1,0 +1,3 @@
+
+
+In a Content Application Engine with either In-Site Analytics or click tracking enabled, the file WEB-INF/spring/analytics/tracking-base.properties controls the basic behavior of the Analytics tag library, with most of the properties referring to the delivery of tracking images.

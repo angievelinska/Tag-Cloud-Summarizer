@@ -1,0 +1,23 @@
+
+
+CAE Portal Template
+
+The CAE shipment contains a webapplication contentapplicationengine-template  which serves as an entry for development of CAE applications. A slightly modified webapplication template can be installed as an entry for portal application development. Although these webapplications are nearly identical, there are some minor differences
+
+An additional servlet named httpcontentservice-servlet has been registered in web.xml. This servlet accepts http requests from the portal and forwards them to the real CAE application
+The default LinkScheme  implementations have been replaced by portal specific ones. The main difference is that the links are prefixed like portal-page://  according to Portal Link 1.0 (see above).
+
+You may access the content of the portal application directly (without accessing the httpcontentservice-servlet) by calling the URL http://[host]:[port]/[contextname]/servlet/[uri]. For example http://localhost:8001/portal/servlet/content/1234  accesses a content which is denoted as portal-page:///portal/servlet/content/1234  in Portal Link 1.0 syntax.
+
+Limitations and particularities
+
+Although portal applications may be developed using standard CAE and servlet mechanisms, there are some limitations and particularities which need to be considered.
+
+
+
+Due to the architecture contents which are send by an user (for example file upload) need to be buffered completely in main memory before transporting them to the portlet. Depending on the content's size this may temporarily cause big memory usage.
+
+
+
+
+

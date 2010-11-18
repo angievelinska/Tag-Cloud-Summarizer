@@ -1,0 +1,72 @@
+
+
+Starting the Content Delivery Environment comprises the following steps:
+Start the Master Live Server.
+Publish all resources below the /Sites folder.
+Start the Content Delivery CAE Feeder.
+Start the Tomcat servlet container.
+
+1. Start and initialize the Master Live Server
+
+Unix
+Use the command line to start the server with: delivery/bin/cm contentserver start
+
+Windows
+If you want to run the server as a service you have to install it as a service before the first start with: delivery\bin\cm contentserver install
+
+
+Start the server as a service with: delivery\bin\cm contentserver start
+or
+start the server not as a service with: delivery\bin\cm contentserver run
+
+
+
+2. Publish resources
+
+Publish all resources below the folder /Sites of the Content Management Server using the CoreMedia Editor tool.
+Start the CoreMedia Editor with: management\bin\cm editor 
+or open the editor via Java Web Start using a browser: 
+http://<Content Management Server Host>:<Content Management Server Port>/coremedia/editor
+Login as admin/admin.
+Start a query for all documents below /Sites.
+Select all documents.
+Approve all documents
+
+
+Publish all documents.
+
+
+
+3. Start the Content Delivery CAE Feeder
+
+Unix
+Use the command line to start the CAE Feeder with: delivery/bin/cm caefeeder start
+
+Windows
+If you want to run the CAE Feeder as a service you have to install it as a service before the first start with: management\bin\cm caefeeder install
+
+
+Start the CAE Feeder as a service with: delivery\bin\cm caefeeder start
+or
+start the CAE Feeder not as a service with: delivery\bin\cm caefeeder run
+
+
+
+4. Start the Tomcat servlet container
+
+Unix
+Use the command line to start Tomcat with the web applications: delivery/jakarta-tomcat/bin/cm httpd start
+
+Windows
+If you want to run Tomcat as a service you have to install it as a service before the first start with: delivery\jakarta-tomcat\bin\cm httpd install
+Start Tomcat as a service with: delivery\jakarta-tomcat\bin\cm httpd start
+or
+start Tomcat not as a service with: delivery\jakarta-tomcat\bin\cm httpd run
+
+You can access the CAE web application using the following URLs:
+
+http://localhost:8002/starterkit/servlet/segment/english_tutorial
+http://localhost:8002/starterkit/servlet/segment/deutsches_tutorial
+
+
+

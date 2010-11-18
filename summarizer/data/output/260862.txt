@@ -1,0 +1,5 @@
+
+
+The Database Message Service uses a servlet as an interface through which any client can access the service. While the servlet is configured in the web.xml file of the ProActive Delivery Server (pads) web application, the information about the database to be used by the service is stored in a separate configuration file. The location and name of the file is specified by the context parameter com.coremedia.generator.pads.dbmessageservice.config for the pads context. The default value is /WEB-INF/properties/corem/dbMessageServiceConfig.xml.
+
+It consists of four bean definitions for the defaultDataSource, the myDefaultLobHandler, the subscriptionservice, and the dbmessageservice. Only the bean definition for the defaultDataSource should be changed. The definition is  similar to the one for the DBMessageUploader  (see section). 

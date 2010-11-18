@@ -1,0 +1,4 @@
+
+
+ Parameter Description -t <paths> Enter the paths of resources for which you want to dump the attached rules.
+

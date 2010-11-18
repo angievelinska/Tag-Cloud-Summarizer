@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+value 
+
+NMTOKEN 
+
+#IMPLIED 
+
+The ID of the resource. 
+
+path 
+
+NMTOKEN 
+
+#IMPLIED 
+
+The path of the resource.

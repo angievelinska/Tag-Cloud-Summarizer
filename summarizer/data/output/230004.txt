@@ -1,0 +1,16 @@
+
+
+ Tag Name Attributes Description Examples container id: String (optional), value: DifferencingContainer (required), rendered: boolean (optional) Render the given value and provide a container for differencing panes and counters. 
+
+<diff:container id="diffContainer" value="#{differencingContainer}" >
+
+...
+
+</diff:container> pane id: String (optional), value: DifferencingPane (required), rendered: boolean (optional), style: String (optional), styleClass: String (optional) Render the given value in a very specific way, as used by the Differencing Service. This tag must reside inside a container element. 
+
+<diff:pane id="diffLeft" styleClass="CMDiffScrollpane" value="#{differencingPaneLeft}">
+
+...
+
+</diff:pane> property id: String (optional), mode: String (required), value: CapPropertyDifference (required), rendered: boolean (optional) Render the differences of a document property. The mode attribute value must be one of changes, old or new. <diff:property value="#{propertyDiff}" mode="new"/> counter id: String (optional), rendered: boolean (optional), style: String (optional), styleClass: String (optional) Render the index of the currently selected difference chunk. This tag must reside inside a container  element. <diff:counter>
+

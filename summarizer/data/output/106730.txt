@@ -1,0 +1,9 @@
+
+
+Applying New Rules via File Menu
+
+
+For administrators, there is an entry in the File menu of the explorer window: New rule.
+
+
+This menu item allow to adjust rights on a selected resource directly.

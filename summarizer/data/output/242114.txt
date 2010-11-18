@@ -1,0 +1,14 @@
+
+
+Automated Tasks
+
+Now you will learn the lifecycle of tasks. 
+
+For simplicity, we begin with an automated task. In the normal case, the task's state progresses linearly from left to right as shown in the state diagram in ###. The task is started by its process, or by the completion of its predecessor. It waits for its (optional) guard condition to become true. Then the automated actions are executed. When the automated actions are finished, the task becomes "completing". As soon as control is successfully transferred to the successor task, the task enters the "completed" state.  The task structure of a process definition may contain loops, so a task that has been executed once may later be reached and start again. A task's lifecycle terminates when its containing process terminates.
+
+Since the guard condition as well as the automated actions can contain customized code, error conditions must be modeled explicitly. When the evaluation of a condition or the execution of an action fails, or if a timer expires, the task is escalated, and will not automatically make any further progress. The previous state before escalation is recorded (denoted as history state (H*) in the state diagram) and can be inquired using Task#getEscalatedState(). If the failure was caused by external circumstances, it may make sense to retry the task after resolving the problem. When the retry method is invoked, the task goes back to the state before escalation and tries to execute the condition or actions once more.
+
+As described above, a process may be suspended. This operation cascades to all tasks contained in the process, which will all be suspended. Each task's state before suspension is recorded (denoted by the lower history state in ###), and can be inquired using Task#getSuspendedState().  The task can only continue when the complete process is resumed, which will move each task back to the state before it was suspended.
+
+When a process is aborted, each of its tasks will be marked as aborted (making most methods unusable) and will be destroyed soon after.
+

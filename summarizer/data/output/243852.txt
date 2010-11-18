@@ -1,0 +1,7 @@
+
+
+Predecessor
+
+Grammar: EMPTY 
+
+A Predecessor elements defines a predecessor of a Join task by its name. See Fork for an XML example.

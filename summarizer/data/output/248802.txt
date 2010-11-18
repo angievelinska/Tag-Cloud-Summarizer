@@ -1,0 +1,6 @@
+
+
+The following example shows how links to related documents are created in the HTML display of a document.
+
+
+The htmlUnparser, which executes the escaping for the text of the links created, was described in Section 4.2.2.2.

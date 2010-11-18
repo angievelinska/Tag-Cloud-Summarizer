@@ -1,0 +1,9 @@
+
+
+The Navigation Explorer shows the following information:
+
+(1) The Navigation Tree. Here the navigation structure is defined by Channel documents. All documents contained in the Navigation Children property of a Channel document are shown inside the node of this document. You can see in (3) that the Manage_Channel document contains the Basics_Channel, Content_Edit_Channel and Navigation_Channel documents in the "Navigation Children"-property and that these three documents are shown as subnodes in the Navigation Tree.
+
+(2) In this view, you see all documents that have the document selected in the Navigation Tree as a linked document in their "Navigation Contexts"-property.
+
+(3) In the Detail View, you see the document selected in the Navigation Tree in detail.

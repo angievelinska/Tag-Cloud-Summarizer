@@ -1,0 +1,17 @@
+
+
+The Unified API is the preferred API for interfacing with the CoreMedia CMS when writing custom tools and agents and when writing content delivery applications. In particular, it is tightly integrated with the CoreMedia Content Application Engine and it replaces the Scripting API. Moreover, it is available in the Workflow Server for modifying content and for implementing plugin classes.
+
+The Unified API allows you to access both the Content Server and the Workflow Server from custom code. It presents the properties of documents, versions, folders, users, groups, processes, and tasks in a uniform and object-oriented way.
+
+While the Unified API is comprehensive, care has been taken to isolate various aspects of the API, so that each individual aspect remains of moderate size. To this end, a connection mediates between multiple repositories. In turn, each repository is augmented by services and provides access to stateful objects. Stateful objects share a common meta-model and are identified in a common name space. This style is applied throughout the API and promotes uniformity.
+
+Typical applications of the Unified API are:
+
+content delivery through a servlet engine;
+form-driven web applications for content modifications;
+administrative command line tools;
+background processes whose actions are triggered by events;
+periodically scheduled processes that carry out custom actions;
+workflow actions, expressions, performers policies, and rights policies.
+

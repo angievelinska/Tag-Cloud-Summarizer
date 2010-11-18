@@ -1,0 +1,8 @@
+
+
+<Locale>
+
+Child elements:
+Parent elements: <Editor>
+
+You can select the language and country settings which should be used by the CoreMedia Editor with the element <Locale>. These settings determine the language used in the GUI of the CoreMedia Editor. The element needs to be located in editor-startup.xml.

@@ -1,0 +1,49 @@
+
+
+The information window is a valuable tool to find out details about the resource.
+
+To open, 
+
+
+select the resource and
+
+
+choose 
+
+
+
+File | properties from the menu bar, or
+
+
+Properties from the context menu, or
+
+
+click  in the toolbar.
+
+The information window has four tabs
+
+
+
+State
+
+
+Learn, who has created, approved etc. the ressource
+
+
+History
+
+
+3* Learn the details of the editorial lifecycle here (also see section) 
+
+
+Rights
+
+
+3* See the rights on the resource here (learn the basics in section)
+
+
+Rules
+
+
+3* Lists the rules applied to the resource (more about rules in section)
+

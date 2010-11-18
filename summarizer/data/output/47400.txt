@@ -1,0 +1,10 @@
+
+
+This chapter explains some of the basic features of WAGE  with the help of an example - how a property of a CoreMedia resource can be read and changed. It shows the basic steps necessary for implementing your own WAGE-based Web application:
+
+implementing a view which will render a form for changing property values of a CoreMedia resource
+implementing an action performing the business logic, for example to update a CoreMedia resource
+implementing an ActionForm, which is used to transfer data between the model and the view layers
+configuring your Web application
+
+This example also explains some of the most common Struts features and tags. For more details on Struts please refer to the Struts documentation.

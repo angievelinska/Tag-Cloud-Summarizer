@@ -1,0 +1,41 @@
+
+
+In this section, you will find a description of the database schema used by the CoreMediaCMS system. The Content Server analyzes the document types file and automatically creates the database schema from it. 
+
+Resource tables
+
+The following tables hold information concerning resources:
+
+<documenttypename>: This table has the name of the corresponding document type.
+resources: Holds information for each resource existing in the CoreMedia system.
+
+Property tables
+
+The following tables hold information concerning properties:
+
+blobs: Connects blobdata with the document type table.
+blobdata: Contains the actual BLOBs content in a LONG RAW column..
+texts: Connects sgmldata and sgmltext with the document type table.
+sgmldata: Contains mark-up data of an XML property.
+sgmltext: Contains actual text data of an XML property.
+linklist: Connects the document which links with the document to which it links.
+
+User Management
+
+The following tables hold information for the user management:
+
+cmusers: Contains the user data. 
+cmgroups: Contains the group data.
+cmusergroup: Connects users with groups.
+cmrules: Contains the rules of user groups.
+
+The <documenttypename> table
+
+The Content Sever creates  the following columns for each  property of the described type. Properties which are inherited are defined in the parent document type table and in all inheriting document type tables. Therefore, you have to change the table of the parent type and the tables of each subtype if you change a property of the parent type.  
+
+IntProperty: Column of type NUMBER(10) with the name of the property.
+StringProperty: Column of type VARCHAR(<UTF-8 length>. The UTF-8 length results from the length defined via the length attribute of the StringProperty multiplied by an UTF-8 weight. By default this factor is three. See section for a description of the UTF-8 length.
+DateProperty: Column of type DATE with the name of the property and another column of type VARCHAR(30) with the name <PropertyName>_tz.
+
+In addition, each document type table contains the following system attributes:
+

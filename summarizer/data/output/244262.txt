@@ -1,0 +1,5 @@
+
+
+Excel Export
+
+When exporting the report to Excel (.XLS), an excel spreadsheet document is generated with a header holding the report title and report sentence, the report data as tabular data and a footer which prints the time the report was generated as well as the user's login name (see screenshot below).

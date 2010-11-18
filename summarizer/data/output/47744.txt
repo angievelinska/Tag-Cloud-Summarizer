@@ -1,0 +1,9 @@
+
+
+CoreMedia WAGE is a set of building blocks you can use to develop your own Web application with content editing and workflow functionality. These building blocks include:
+
+The CoreMedia Authoring Server which manages changes made by Web clients
+Extensions to the Struts Web application framework, allowing rapid development of CoreMedia Web applications
+A WAGE tag library, which encapsulates much of the functionality to be used in JSPs
+View components like property editors or a focus management component
+

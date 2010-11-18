@@ -1,0 +1,18 @@
+
+
+The concept of CoreMedia workflows is surveyed in section. We recommend to read section too, because user interface and handling are similar to those in the CoreMedia Editor. There are only small changes:
+
+
+
+
+
+(1) The menu bar offers less items.
+
+
+(2) The detail information window contains a tool bar which offers the tools for editing the selected task or workflow.
+
+
+(3) The task and workflow overview has been revised for better usability. You will find all tasks accepted by you below My tasks, all tasks offered to you below Offered tasks and all workflows started by you below My Workflows.
+
+
+In addition, you may read section in order to utilize this preconfigured workflow too.

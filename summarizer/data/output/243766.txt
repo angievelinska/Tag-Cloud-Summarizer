@@ -1,0 +1,7 @@
+
+
+And
+
+Grammar: ( (Expression)* ) 
+
+An And expression evaluates to the conjunction of its sub-expressions, all of which must return boolean values. The sub-expressions are evaluated in a "short-circuit" fashion, i.e., they are evaluated top down until the first sub-expression evaluates to "false" or all sub-expressions have evaluated to "true". This helps to avoid exceptions during the computation, e.g. when checking the type of a document before accessing a property of the document of that expected type.

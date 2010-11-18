@@ -1,0 +1,14 @@
+
+
+ Servlet API Description 
+
+HttpServletRequest
+
+  #getUserPrincipal()
+
+  #getName() Returns the current user formatted as username@domain (where @domain is optional). An anonymous user leaves HttpServletRequest#getUserPrincipal()  undefined (null). 
+
+HttpServletRequest
+
+  #getLocale() Returns the current user's locale as used in portal.
+

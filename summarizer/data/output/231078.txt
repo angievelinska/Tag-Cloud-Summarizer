@@ -1,0 +1,3 @@
+
+
+No partial data will be shown for time intervals which are not completed yet. As such, during the month of January, no data is being reported for that month. Neither partial data nor predictions / forecasts are given in the predefined report.

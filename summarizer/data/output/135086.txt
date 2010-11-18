@@ -1,0 +1,4 @@
+
+
+Several configuration files are used to tune Preview-based Editing. There are five attributes which can be configured in config.bsh:
+

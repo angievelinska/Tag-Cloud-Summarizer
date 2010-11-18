@@ -1,0 +1,7 @@
+
+
+After the creation of some basic document types for the menu it is now time to create the content. 
+
+You might either enter the content manually (see chapter). This is a rather lengthy task, but you become familiar with the document type model and the CoreMedia Editor. 
+Or you might import the pre-defined content delivered with the example (see chapter). 
+

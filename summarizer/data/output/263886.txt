@@ -1,0 +1,3 @@
+
+
+After a CM server has been started, a set of standard groups with standard users exist. These groups and users are necessary for operation of the CoreMedia CMS components, e.g. the user workflow is used by the Workflow Server to connect to the Content Management Server. When uploading default workflow definitions workflow groups are created.

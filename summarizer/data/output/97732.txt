@@ -1,0 +1,23 @@
+
+
+CoreMedia SCI has a special window for creation and administration of workflows. This window holds three sections below menu bar (1) and toolbar (2):
+
+
+
+Task and workflow overview (3)
+
+
+3* Tasks or workflows to be edited are displayed here.
+
+
+Detail information window (4)
+
+
+3* Here you find all relevant information about the workflow which are partly editable. It also displays resources ready for approval. A document selected here opens in the detail view (5).
+
+
+Document window (5)
+
+
+3* Displays a selected document in the detail information window before. Double-click the document to open in a separate window. Then, available menu entries are activated.
+

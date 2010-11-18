@@ -1,0 +1,5 @@
+
+
+Within the portlet tag the title tag is used to render the title of the portlet whereas the content tag is used to render its content. There are no restrictions on the usage of any kind of HTML or JSP markup within the portlet tag.
+The attribute errorView in the portlet tag allows the declaration of a default view that will be displayed if a failure occurs during the rendering of the portlet markup. The result of rendering a portlet which is provided as CMPortletWindow is a PortletWindowModel. If you want to access the PortletWindowModel object in the page context you can use the var attribute in the portlet tag. 
+In the example shown below the rendering result is bound to the variable name window which is then used to access the window's current state for an EL expression.

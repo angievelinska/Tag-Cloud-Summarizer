@@ -1,0 +1,3 @@
+
+
+A Failure in the Active Delivery Server directly affects web page generation with JSPs. This applies to non cachable content as well as cachable content generated for the first time.

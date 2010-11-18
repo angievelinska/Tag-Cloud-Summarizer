@@ -1,0 +1,3 @@
+
+
+If regular expressions are used as configuration parameters, the syntax of the regular expressions always follows the conventions of the Java class java.util.regex.Pattern.

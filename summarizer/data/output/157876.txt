@@ -1,0 +1,3 @@
+
+
+In CSM 2005 all icons have been changed. Published documents are the most prominent ones and they represent the "normal" state of a document. To highlight this status, published documents have no icon at all.

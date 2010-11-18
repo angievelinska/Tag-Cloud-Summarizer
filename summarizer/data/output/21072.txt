@@ -1,0 +1,11 @@
+
+
+You are using Sun Solaris and while starting the server the error message "couldn't set locale correctly" appears.
+
+Possible causes:
+
+The package SUNWceuos is not installed on the machine.
+
+Possible solutions:
+
+Install the package.

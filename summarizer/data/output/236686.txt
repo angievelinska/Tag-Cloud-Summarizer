@@ -1,0 +1,27 @@
+
+
+
+Obtain the install-webstart-win.jar from a CoreMedia distribution or the CoreMedia download area.
+
+
+Extract it with: jar xvf <jar-name>  inside the Content Server installation root directory.
+Check for the executable file webstart/jre/j2re-1_5_0_09-windows-i586-p.exe. It contains the JRE. This file is requested from CoreMedia Editors. If you want to use the CoreMedia Editor with Java 6 on Windows Vista provide the file jre-6u2-windows-i586-p.exe in this directory.
+
+
+Check property settings of editor.configuration and editor.startup.configuration. You find these properties in <ProdServerInstallDir>/properties/corem/editor.properties. They must be set to the following URLs:
+
+
+
+3* http://<host>:<port>/coremedia/files/properties/corem/editor.xml
+3* http://<host>:<port>/coremedia/files/properties/corem/editor-startup.xml
+3* where <host> and <port> must match the values of cap.server.http.host and cap.server.http.port in the capserver.properties of the Content Server. If these were set correctly, the CM Editor will load the XML configuration files from the Content Server.
+5#
+If you want to use CoreMedia Editor with Windows Vista you have to comment out the <j2se version="1.5.0" max-heap-size="128"/> line and remove the comments from <j2se version="1.6" max-heap-size="128m"/> in webstart/ext/editor.jnlp.  
+For a customized Editor with own Java classes the jar-files with the classes have to be signed and stored in the directory <CoreMediaHome>/lib/ext. Their names have to be added to the file <CoreMediaHome>/webstart/ext/editor-extension.jnlp. If you have signed classes with different certificates, you have to use a separate jnlp file for each different certificate. Refer to these jnlp files in <extension> elements of the main editor-extension.jnlp file!
+
+
+
+3* The customized jar-files have to be inserted in a <jar>-element inside the <resource>-element like <jar href="lib/ext/<customer1.jar>"/>. A short description and example how to proceed is in the file.
+
+
+

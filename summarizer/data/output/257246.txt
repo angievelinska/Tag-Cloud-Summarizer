@@ -1,0 +1,24 @@
+
+
+Here we continue with  3-step-publication which is a classic Four-Eyes Workflow (see section for details). So editor and approver are different users.
+
+
+If editing is finished, you can approve the document for publication. Create a workflow:
+
+
+
+start the workflow and create a change set,
+
+
+
+approve resources, and
+
+
+
+publish resources.
+
+
+Read section to learn more about the workflow window, section lists how prepare and perform the workflow routine, and section explores other options.
+
+
+

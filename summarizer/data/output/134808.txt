@@ -1,0 +1,18 @@
+
+
+ Property Value Default Description 
+
+workflow.client.server.ior.url http://host-name:port/workflow/ior  Defines the URL where to get the IOR of the workflow server. The host name and port in the URL must match with the host name and port in the workflowserver.properties file. 
+
+workflow.user
+
+workflow.password
+
+workflow.domain 
+
+<workflow-user-name>
+
+<WorkflowUserPassword>
+
+<W orkflowUserDomain>  As a default, a workflow client (but not the CoreMedia Editor) connects to the Content Server as the workflow user. Here you can define a different user to connect with the server. Replace <WorkflowUserName>, <WorkflowUserPassword> and <WorkflowUserDomain> with your user name, domain and/or password.
+

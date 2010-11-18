@@ -1,0 +1,4 @@
+
+
+ Directory description coremedia/ context home directory coremedia/admin jsp-pages for administration (only after manually moving the directory from WEB-INF up) coremedia/develop jsp-pages for development (only after manually moving the directory from WEB-INF up) coremedia/templates templates coremedia/WEB-INF context environment coremedia/WEB-INF/lib required libraries coremedia/WEB-INF/lib/xml DTD used by the system coremedia/WEB-INF/properties/corem properties of the Active Delivery Server coremedia/WEB-INF/properties/management the files for JMX management. jakarta-tomcat/logs/localhost.log.[date] the default Active Delivery Server log coremedia/WEB-INF/config.bsh Active Delivery Server configuration coremedia/WEB-INF/web.xml web application deployment descriptor coremedia/generator cache directory of the Active Delivery Server coremedia/generator/tmp.build unfinished pages coremedia/xsl stylesheets (optional)
+

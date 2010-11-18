@@ -1,0 +1,5 @@
+
+
+You have to enable multi-site publication before the first start of the Content Management Server. To do so, you have to add the following property to the capserver.properties file of your Content Management Server.
+
+cap.server.multipleLiveServers=true

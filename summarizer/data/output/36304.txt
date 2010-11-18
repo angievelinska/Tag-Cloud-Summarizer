@@ -1,0 +1,5 @@
+
+
+Example generic expression
+
+The following code example shows s simple expression which returns a StringValue.

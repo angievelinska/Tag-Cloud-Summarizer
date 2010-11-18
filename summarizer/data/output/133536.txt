@@ -1,0 +1,5 @@
+
+
+Publication targets can be added dynamically as needed. Simply install a new Master Live Server and add a new group of properties to the publisher.properties-file of the Content Management Server. The Content Management Server will reload the property file automatically within a few seconds and schedule subsequent publications according to the updated information. 
+
+Take special care if rules for live groups are defined on the root folder. Such rules are published to all Master Live Servers upon creation. When adding a new Master Live Server, rules on the root folder are missing in that server at first. You can transfer these rules to the new server, if you log in to the Content Editor as user admin, open the user manager window and select Files|Synchronize live rules.

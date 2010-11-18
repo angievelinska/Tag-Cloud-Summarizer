@@ -1,0 +1,27 @@
+
+
+The Unified API supports programmers and administrators in their work, leading to a significant productivity gain.
+
+Programming is easy.
+While the API is comprehensive, a simple application might still not use more than half a dozen classes. This greatly reduces the initial learning effort for using the API.
+Creating a connection to Content Server and Workflow Server is as simple as calling a single method. Afterwards, the connection provides quick access to the entire system.
+
+
+As different parts of the API share a common style and in fact a common meta-model, it is comparatively easy to acquire knowledge about new parts of the API.
+
+
+The API explicitly specifies pre- and postconditions and indicates the possible events and exceptions, leaving little room for ambiguities.
+Convenience methods simplify common tasks.
+
+
+Widespread Java standard are embraced. In particular, this applies to the collections API, the commons logging API, and the Java beans conventions.
+Deployment is easy.
+Deploying an application that uses the Unified API is straightforward. Adding a few jars to the class path is all that is needed. The API does not demand special configuration files.
+Through a management interface it is possible to control Unified API applications at runtime.
+The API is memory-efficient.
+Multiple sessions per connection are possible, sharing a common cache while providing individual rights checks.
+All stateful objects are thin wrappers that use little memory and fetch their state through the common cache as needed.
+The API is robust.
+The Unified API can survive server restarts, providing a continuous event stream and maintaining cache consistency.
+The cache size is configurable in bytes, virtually eliminating fluctuations of memory usage by the API.
+

@@ -1,0 +1,3 @@
+
+
+The previous WebEditor has been replaced by a new one, a more flexible, more scalable Web editing application  based on the new WAGE framework and running in the Authoring Server. 

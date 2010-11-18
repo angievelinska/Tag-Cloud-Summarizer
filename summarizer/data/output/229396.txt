@@ -1,0 +1,9 @@
+
+
+For test installations, the Analytics Engine and a Content Server may share a single relational database, but due to load issues, this is never advisable for production installations.
+
+Deployment Variants
+
+Normally the Object Analyzer should be attached to the Content Management Server, so that it can analyze unpublished content, too. It can be attached to a Live Server, however, if that is needed. When attaching it to a Live Server in a multi-site environment, you should make sure to configure it for multi-site operation as described in the Administration and Operation Manual in the Analytics configuration and operation section.
+
+When using tracking images, it is possible to use a dedicated CAE to deliver the tracking images, routing the requests as appropriate by an upstream HTTP server. This can be helpful in isolating the load for Analytics.

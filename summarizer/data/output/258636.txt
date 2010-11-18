@@ -1,0 +1,31 @@
+
+
+After defining the data views, make sure to configure the cache correctly, so that the data view objects are not ejected from the cache immediately. An indicator for this situation is the message "Unreasonable Cache Size null for java.lang.Object" in the log files.
+
+To configure the cache, you must set a property conforming to the pattern dataviewfactory.cachesize.* in the file spring/objectserver.properties. As a minimal solution, you can insert the line
+
+dataviewfactory.cachesize.java.lang.Object=10000
+
+into the objectserver.properties. This will allow a total of 10000 data view objects to be cached.
+
+A more elaborate method would be to partition the cache according to the type of the cached objects. The type of an object is defined either by the Java type hierarchy or, if the object implements the interface com.coremedia.dispatch.HasCustomType, by the result of the method getCustomType(). For ordinary content beans, the Java type hierarchy is used.
+
+You can configure sizes for different types. If multiple types apply for a single cached object, the most specific type is used. For example
+
+dataviewfactory.cachesize.com.company.cms.SuperType=1000
+dataviewfactory.cachesize.com.company.cms.SubType=100
+
+
+would allow the caching of up to 1000 direct or indirect instances of SuperType as long as these are not also direct or indirect instances of SubType. For SubType, at most 100 instances would be cached. This can make sense if instances of SubType consume a lot of main memory, so that 1000 instances might lead to an OutOfMemoryError.
+
+Because data views extend their bean class, it is sufficient to configure cache sizes for the bean classes in the file objectserver.properties. You need not reference the class names of the automatically generated data view classes.
+
+The default cache configuration contains a single line to the effect of
+
+dataviewfactory.cachesize.com.coremedia.objectserver.blob.\
+  CachedBeanPropertyBlob=1000
+
+which ensures that blobs accessed through the BeanPropertyBlobLinkScheme are properly cached.
+
+Please note that the configured cache sizes are directly forwarded to the cache of the Unified API instance that lives in the CAE. That cache is an instance of the class com.coremedia.cache.Cache. That class does not perform any type hierarchy analysis when caching objects. This is only done by the data view factory inside the CAE.
+

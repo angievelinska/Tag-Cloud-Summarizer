@@ -1,0 +1,17 @@
+
+
+So far, you could only include a fragment verbatim into its enclosing page. Sometimes, you want to make use of fragment caching, however, you want to transform or post-process the fragment contents. 
+
+For this purpose, a number of methods are available in the Generator class: 
+
+#getInputStream(uri) allows you to read a page directly from the cache as a byte stream. 
+#getReader(uri) allows you to read a page directly from the cache as a character stream. This only makes sense if the page has character content and declares its encoding correctly. 
+#getObject(uri) interprets a page as an object, depending on its content type. Pages of type text/* and application/xml are transformed into a string; pages of type application/x-java-serialized-object are deserialized into an object. This way you can compute and cache intermediary objects in one template and use them from another. 
+
+Please note that all three methods require the target URI to point to a cacheable template. 
+
+You can use these methods, for example, to cache and transform XML fragments via the JAXP Transformation API (javax.xml.transform), using a StreamSource wrapping the result of #getInputStream. Also, you could store a structured navigation object as a serialized object in a cached fragment. 
+
+In addition, these methods ensure the correct dependency of the calling page to the fragment. If, for example, you use a URLConnection to read a fragment instead of using #getInputStream, the generator cannot map the HTTP request to the calling page and will not assign the correct dependencies. Thus, if the fragment changes, the calling page will not notice. 
+
+The following template shows how to create a fragment containing a cached, serialized object: 

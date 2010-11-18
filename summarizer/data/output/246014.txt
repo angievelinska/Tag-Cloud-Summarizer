@@ -1,0 +1,63 @@
+
+
+When editing the properties of a business object (BO), you have to be careful when to actually change the BO. If a valid value were immediately stored into the BO on each round-trip, it would not be possible to implement wizards, which accumulate input and save only when the user wants to ("save", "finish"). However, it would not be convenient to implement an additional step, namely collecting changed properties, as a specific backing Bean for each BO that should be edited.
+
+ES realizes editable Beans through Spring's Aspect Oriented Programming (AOP Proxies). The problem described above is a typical case where you want to apply AOP: An aspect of the system concerns many classes and is not easily implemented through inheritance. Here, this aspect is that when a property of the BO is set, the new value is stored as a preliminary value, and all such changes to all BOs are collected during a user interaction. When the user interaction is finished, the new values are either written into the BOs (successful case), or simply dropped (unsuccessful case when the user hits "cancel").
+
+Spring offers a simple proxy-based AOP framework, where a proxy can be created for a target object and intercept arbitrary method calls to that target. Spring AOP proxies use Java's dynamic proxies, but are far more high-level when it comes to defining which methods should be intercepted and how the behavior of the intercepted method should change.
+
+ES provides the generic interface com.coremedia.editing.form.EditableBeanRepository to retrieve an interface-compatible, editable AOP proxy for a given Bean, so that its properties can be edited in a wizard-style fashion. There is a predefined Bean editableBeanRepository_pageflow that is an instance of an EditableBeanRepository implementation that can handle content objects. The Bean has page flow scope so that each page flow defines its own user interaction. For other types of Beans, custom EditableBeanRepository implementations have to be provided (see JavaDOC of com.coremedia.editing.form).
+
+To allow on-the-fly access to the editableBeanRepository_pageflow Bean from a JSF view, there is a helper Bean editableBean_request that uses the faked map pattern (see section) to access the getEditableBean() method of the current editableBeanRepository.
+
+A Small Example
+
+Assume you have defined a Bean for a certain Document in Spring like:
+
+<bean id="currentDish_pageflow"
+      class="com.coremedia.editing.cap.CapObjectFactoryBean"> 
+  <property name="path" value="/site/dishes/Poultry"/>
+  <property name="capRepository" ref="contentRepository"/>
+</bean>
+
+A Bean that contains a "current" business object that is used in a form view is usually put in page flow scope, so that it is kept from one request to the next, and the user can still open several browser windows with the same session, but different current objects.
+
+As before, you can do read-only access of that Bean's properties in a JSF-JSP like this:
+
+<h:outputText value="#{currentDish.properties.ingredients}"/>
+
+Now, if you try to write to the properties Map of a content the same way, the user would get an exception when submitting an edited value:
+
+<%-- Does not work: throws an UnsupportedOperationException! --%>
+<h:inputText value="#{currentDish.properties.ingredients}"/>
+
+JSF tries to write the new property value directly into the Map returned by Content.getProperties(), which is (as the JavaDoc states) read-only. Even if it were modifiable, it would not be a good idea to write into the business object directly, as argued at the beginning of this section.
+
+Instead, you have to create an editable version of your content Bean explicitly when you want the user to modify properties. In the JSF-JSP, this can easily be expressed as follows:
+
+<h:inputText 
+value="#{editableBean[currentDish].properties.ingredients}"/>
+
+Now, editableBean[currentDish] calls editableBeanRepository.getEditableBean(currentDish), which returns a proxy of the respective content that implements all setters (and the put method of the properties map) to store the new value in the editableBeanRepository's preliminary values storage. The getters are implemented to return a preliminary value if present, otherwise the result of the original getter.
+
+If you want to offer many properties of the same Bean for editing, the above EL expression may seem a bit long. You can easily define a Spring Bean that does the same thing as an abbreviation:
+
+  <bean id="editableDish" singleton="false"
+        factory-bean="editableBeanRepository_pageflow"
+        factory-method="getEditableBean">
+    <constructor-arg ref="currentDish_pageflow"/>
+  </bean>
+
+Note that such helper Beans are not put into any scope (JSF: scope "none"), but are prototypes, i.e. are rebuilt each time they are requested. If editableDish was put into some other scope, it might "miss" changes to the currentDish_pageflow Bean applied during one request. It is not very expensive to re-get the editable Bean every time it is requested.
+
+Pitfalls When Using Editable Beans
+
+An editable version of a Bean implements the same interface, so at first glance, it seems to be possible to always use editable Beans, even for read-only access. But this approach is not recommended for the following reasons:
+
+Creating or using an editable Bean only when write access should be possible makes write access explicit and thus may avoid accidental modification of BOs.
+Spring's AOP proxies are not completely transparent. They do not have an adequate equals() and hashCode() method and thus cannot be used for comparison. Note that this also means that proxies may not be used in Java collections.
+AOP proxies are quite optimized, but still produce overhead that may degrade performance.
+
+Submitting and Reverting Changes
+
+All changes made to an editable Bean are preliminary. While this protects the BO from early, unwanted changes, it requires explicit saving of the preliminary changes. There are predefined Actions for saving and resetting all preliminary changes collected by the current editableBeanRepository, namely submitEditedBeansAction and resetEditedBeansAction, that call the respective methods of the EditableBeanRepository API.

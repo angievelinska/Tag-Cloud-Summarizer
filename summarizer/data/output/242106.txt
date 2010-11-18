@@ -1,0 +1,5 @@
+
+
+Content objects are often edited and published in formalized business processes. To this end, the WorkflowRepository as described in section provides a means to define your own processes, which may refer to documents and folder using their variables. Accessing content through workflow objects is well supported by the instances of the Task and Process interfaces. But sometimes it is interesting to know the processes in which a certain document or folder is processed.
+
+To this end, the WorkflowContentService provides the method getProcesses(Content) for obtaining a collection of processes that reference a given content. It is up to you to determine the exact variable and possibly task that is currently dealing with the content, if desired. Usually obtaining a reference to the process is enough to perform the remaining operations efficiently.

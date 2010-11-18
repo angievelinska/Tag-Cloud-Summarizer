@@ -1,0 +1,3 @@
+
+
+TemplateLinkFactory is a simple implementation of an AbstractIconLinkFactory for TemplateLinks. The icon is always the same Template Link icon, the target a page which displays the template source code. The tooltip text is composed of path and name of the template file.

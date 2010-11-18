@@ -1,0 +1,3 @@
+
+
+The Dashboard by default has only six slots available to display reports. If all six slots are already full, to add your new report you must replace an existing report definition in the analytics-dashboardviewdefinitions.xml file, thus removing the existing report from the Dashboard.

@@ -1,0 +1,9 @@
+
+
+<wage:menuItem>
+
+Item in a WAGE menu. If selected will excecute the (JavaScript) command defined by the commandCode attribute or the wage command set via the command attribute. Can only be used within a WAGE menu. Attributes:
+
+commandCode (optional): JavaScript command to execute on selection of this menu item
+command (optional): command to execute via the wage commands manager if commandCode is not set
+

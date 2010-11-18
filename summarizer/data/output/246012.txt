@@ -1,0 +1,15 @@
+
+
+Editing Services for JSF defines a set of custom JSF renders, components and utility classes as well as a custom taglib. Although the custom taglib is prefixed es (shorthand for Editing Services) some tags do not depend on Editing Services for JSF infrastructure. A summary of these generic components provided by the Editing Services for JSF taglib can be found in the reference section. The reasons for developing generic JSF components are described below.
+
+The JSF HTML panelGroup renderer renders a HTML span element around its children. This implies that it cannot be used as the HTML body's first child if valid HTML output is desired. So the <es:panelGroup>-tag allows to specify which HTML element has to be rendered in order to allow valid HTML output and to be more flexible with regards to HTML structure and CSS.
+
+The JSF HTML dataTable tag is designed to output a HTML table element based on a list model and column child components. The <es:forEach>-tag allows to define a single child component.
+
+There are built-in converters for prime types and java.util.Date but not for java.util.Calendar. Use the <es:convertCalendar>-tag in order to convert values of type Calendar.
+
+JSF leaks built-in file upload support. The <es:inputFile>-tag produces HTML <input type="file"> output and sets up renderers and converters that care for the uploaded file. Note that the default converter used by this component requires a bean of type org.springframework.web.multipart.MultipartResolver defined in the spring application context and the encoding of the surrounding HTML <form> tag set to "multipart/form-data".
+
+The <es:selectOneMenu>-tag extends the standard JSF selectOneMenu tag with additional optional features like auto submit on selection change. Another interesting feature is that it has the capability to attach itself to another component given by the "for" attribute. 
+
+Standard JSF has no feature for defining variables in a JSP. The aliasBean-tag defined by the apache Tomahawk project allows you to create a temporary name for a real bean visible for its children. This motivated the development of the <es:scope> and <es:variable>-tags that allow shorthand notations for complex EL expressions. A es variable is a component that publishes a variable for use in EL value bindings by its child-components. The visibility of a variable is defined by a scope component. A variable inherits from scope for the following reasons: If a variable has at least one child it represents the scope for the variable to be valid. If a variable has no children it searches the component tree and registers at the first scope found.

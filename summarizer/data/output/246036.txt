@@ -1,0 +1,3 @@
+
+
+The CAE web application template is the starting point for your own CAE applications.

@@ -1,0 +1,3 @@
+
+
+In addition to images all other kind of binary data like text files, MP3-files or Flash animations can be used in CoreMedia SCI. As a precondition, you need document types which support the appropriate formats. Binaries are saved and loaded like images.

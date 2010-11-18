@@ -1,0 +1,12 @@
+
+
+Both methods, getSubfolders and getDocuments, use getFolder and asContentMetaData now (see the source of file BrowserImpl.java). The service is ready now and can be compiled and deployed:
+Change to the directory ws03-browser
+Build and deploy the WebService with the following command:
+$ ant server
+Before you proceed with the client, be sure that the web application is running.
+Generate the client API:
+$ ant generate-client
+
+
+In this example the client is more complex than the server. At the end of this example you will have a Java Swing client which allows you to browse the structure. Before you can program the GUI you have to consider the layout. The folder structure can be represented very well as a tree and the contained documents of one folder as list or table. Because the Swing components are delivered with the standard JDK they lend itself to the widgets of choice. Trees and tables base upon the Model View Controller design pattern to separate your code from the visual representation. Hence, all you need is to implement so-called models with special interfaces which contain the vital data. Your tree class may look like the following. 

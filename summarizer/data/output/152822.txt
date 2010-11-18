@@ -1,0 +1,4 @@
+
+
+The development of a portal application differs from a standard CAE development in a marginal way only. All CAE concepts like Content Beans or caching may be used the same way. For that reason, it's assumed that you are already familiar with CAE development. 
+

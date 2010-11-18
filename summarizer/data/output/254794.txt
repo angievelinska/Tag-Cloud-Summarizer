@@ -1,0 +1,4 @@
+
+
+ Parameter Description -q Stop tracing the specified sessions -s Specify a session by its ID. You can obtain the IDs of all sessions with the sessions tool (see section x.1.6). -t Specify the sessions to be traced by their common type. Run the sessions tool with the -v option to find out about the types of the open sessions. The legal values for this parameter (see usage) are obvious shortcuts for those types. There are two special values, unknown and all. all denotes all sessions, unknown denotes all sessions but those of the concrete type values.
+

@@ -1,0 +1,5 @@
+
+
+If you use the Microsoft SQL Server as a database for Analytics with the Starter Kit, you have to apply a change in the Analytics web application. This is due to the fact, that the web application uses an SQL statement containing the "||" operator for string concatenation following ANSI SQL. The Microsoft SQL Server does not support this operator. 
+
+Simply replace the "||" operator from the WEB-INF/spring/analytics/analytics-reportdefinitions.properties file of the Analytics web application with the "+" operator.

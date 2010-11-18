@@ -1,0 +1,13 @@
+
+
+Before reading this book, you should inform yourself about the following topics:
+
+The development of applications for the Content Application Engine, as described in the Content Applications Developer Manual.
+The end user view of In-Site Analytics and of the Analytics Dashboard, as described in the User Manual.
+The basic configuration options and the installation process for the Analytics Engine, as described in the Administration and Operation Manual.
+
+If you intend to extend the aggregation process, you should also have a look at:
+
+The available support for defining custom workflows, as described in the Workflow Manual.
+
+For understanding the aggregation process in detail, for modifying the process and for extending the set of reports, it is also assumed that you are skilled in database technology, particularly SQL and JDBC.

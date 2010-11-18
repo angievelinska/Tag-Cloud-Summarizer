@@ -1,0 +1,18 @@
+
+
+Sourceless Clicks Link Overlays
+
+In sourceless clicks mode, the link overlays show the total number of clicks to the given target page in the same page context (as defined by the template developers), but disregarding the page on which the click happened. This helps in evaluating links that appear on many pages like, e.g., imprint links. The overlay contains the same elements as the click-through link overlays.
+
+Page Views Link Overlays
+
+In page view mode, the link overlays show the total number of page views for the linked page, regardless of the origin of the page view. The overlay contains the same elements as the click-through link overlays.
+
+Loyalty Link Overlays
+
+In loyalty mode, the link overlays show the percentage of numbers of visits that contained 1 click or 2 or more clicks after this one. Only clicks that are old enough for the session to time out afterwards are counted for this overlay.
+
+An indicator icon visualizes the loyalty, showing high (arrow up), medium (arrow right), or low (arrow down) loyalty as appropriate.
+
+If no single click was made on the link in the relevant time interval, the loyalty cannot be computed and is shown as not applicable.
+

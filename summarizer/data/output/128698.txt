@@ -1,0 +1,4 @@
+
+
+ Attribute Description class This attribute is used to enter the ResourceNamingFactory to use.
+

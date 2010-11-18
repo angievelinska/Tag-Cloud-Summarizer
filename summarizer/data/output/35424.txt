@@ -1,0 +1,6 @@
+
+
+The workflow manual does not cover all eventualities, but introduces concepts, ideas and the technology. Our manuals undergo permanent revision, and we are closely tracking progress in development and experience.
+
+To make our manuals valuable tools in development and implementation of the CoreMedia SCI, do not hesitate to contact us for ideas and suggestions via documentation@coremedia.com. 
+

@@ -1,0 +1,3 @@
+
+
+This section illustrates the process of defining a dataview configuration. For this example, a simple site with three pages is used. The first page consists of a brief overview of two articles that are completely shown on two separate pages. These article instances are shared between the overview page and the detail pages:  

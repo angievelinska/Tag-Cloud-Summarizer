@@ -1,0 +1,4 @@
+
+
+ File Description management/properties/corem/sql.properties  Properties for the Content Management Server and the Workflow Server management/properties/corem/workflowserver.properties Properties for the Analytics Data Aggregator management/config/objectanalyzer/spring/proactiveengine.properties  Properties for the Analytics Object Analyzer management/jakarta-tomcat/webapps/analytics/WEB-INF/spring/analytics/analyticsdashboard.properties  Properties for the Analytics Dashboard management/jakarta-tomcat/webapps/starterkit/WEB-INF/spring/analytics/overlay.properties  Properties for In-Site Analytics management/config/caefeeder/spring/caefeeder.properties  Properties for the Content Management CAE Feeder delivery/properties/corem/sql.properties  Properties for the Master Live Content Server delivery/config/caefeeder/spring/caefeeder.properties  Properties for the Content Delivery CAE Feeder
+

@@ -1,0 +1,43 @@
+
+
+The EditingContext interceptor provides an EditingContext, which is required for those requests which addresses editing property editors or pages renderer by the ContextMenuRenderer, or the ToolbarRenderer. 
+
+Configuration
+
+The following configuration might be used to define an EditingContext Interceptor. 
+
+<bean id="editingContextInterceptor" 
+class="com.coremedia.editing.context.\
+  EditingContextInterceptor">
+  <property name="editingContextFactory">
+  <bean class=
+  "com.coremedia.editing.context.PortalEditingContextFactory"/>
+</property>
+
+The interceptor must be set at the UrlHandlerMapping in the spring/cae-controllers-example.xml as shown below: 
+
+<bean class="org.springframework.web.servlet.handler.\
+             SimpleUrlHandlerMapping">
+    <property name="interceptors">
+      <list>
+        <bean class="com.coremedia.editing.context.\
+                     EditingContextInterceptor">
+          <property name="editingContextFactory">
+            <bean class="com.coremedia.editing.context.\
+                         PortalEditingContextFactory"/>
+          </property>
+        </bean>
+      </list>
+    </property>
+    <property name="mappings">
+      <value>
+        /content/*=contentViewController
+        /contentblob/*/**=contentBlobViewController
+        /propertyblob/*/*=propertyBlobViewController
+        <!--
+        map your controllers to an uri here, e.g. like
+        /uri/prefix/*=beanNameOfController
+        -->
+      </value>
+    </property>
+</bean>

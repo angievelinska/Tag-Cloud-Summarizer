@@ -1,0 +1,13 @@
+
+
+ 
+
+Attributes 
+
+Description 
+
+class 
+
+With this attribute, the class used for determining the dictionary used in the spellchecker is configured. As default the class com.coremedia.spellchecker.Bridge2JavaWordDictionary will be used. This class integrates the dictionary of a Microsoft Word installation. It takes the file properties/corem/language-mapping.properties to map the Java locale (e.g. de_DE)  to the Word locale (e.g. wdGerman). The spellchecker checks whether a language exists in word or not. If the language does not exist an error message will be shown. And all properties using the language will not be checked (see the element PropertyLanguageResolverFactory). If you are sure that the language is installed with Word you might check the language-mapping.properties file for the correct mapping. Maybe you need to add the appropriate mapping.
+
+For own classes, the interface com.coremedia.spellchecker.Dictionary must be implemented.

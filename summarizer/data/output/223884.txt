@@ -1,0 +1,23 @@
+
+
+You can define bookmarks in the CoreMedia Editor in order to find important resources quickly. The bookmarks are shown in the menu  Bookmarks, in the Bookmarks view and in the file chooser dialog. If you click the bookmark, the corresponding resource will be opened in the Explorer view. If you move a folder in the recycle bin, the corresponding bookmark will be deleted. If you move a document in the recycle bin, it will not be deleted but it will open up in the document view instead of the Explorer view. In addition it can not be opened from the file chooser dialog.
+
+Create Bookmark
+
+In order to create a new bookmark, proceed as follows:
+Select the resource, to which the bookmark should point.
+Select Bookmark|Add Bookmark from the Explorer window or select Bookmark from the context menu or click  in the bookmark window.
+
+Now, you have created a new bookmark, which will be shown in the Bookmark menu.
+
+Open Bookmark
+
+In order to open the document, select the bookmark from the Bookmark menu.
+
+Manage Bookmarks
+
+For better overview, you might edit the bookmarks. You can rename, move and delete bookmarks from the list:
+Select Bookmark|Manage Bookmark.
+
+The following window opens up:
+

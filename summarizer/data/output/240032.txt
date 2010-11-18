@@ -1,0 +1,4 @@
+
+
+ Attributes  Description  providerUrl The URL to access the Database Message Service (Servlet).  subscriptionName The name by which the DBMessageServiceReceiver subscribes to a Database Message Service. pollingInterval The interval in milliseconds between to attempts to receive messages.
+

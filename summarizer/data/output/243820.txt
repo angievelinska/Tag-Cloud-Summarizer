@@ -1,0 +1,9 @@
+
+
+IsDocumentVersion
+
+Grammar: EMPTY 
+
+IsDocumentVersion queries whether a resource value contained in the variable, which is given as in Get, is a document with an explicit version.
+
+This is helpful because document variables may refer simply to a document or to a specific version of that document, so that processing may have to vary depending on the kind of value stored.

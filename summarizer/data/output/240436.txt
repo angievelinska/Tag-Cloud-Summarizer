@@ -1,0 +1,9 @@
+
+
+In contrast to the standard query you start an advanced query from a document.
+
+In order to start an advanced query, proceed as follows:
+Choose the document, that stores the advanced query. If you just have created an advanced query with the Advanced Query Editor, you will automatically jump to this document.
+Click  in the toolbar of the property.
+
+The query starts and a result window opens up.

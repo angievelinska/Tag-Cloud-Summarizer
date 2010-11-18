@@ -1,0 +1,8 @@
+
+
+
+
+ Attribute Description typeName The bean type name. Use `*¿ to match all bean types propertyTypeByPrototype The type that properties must match. As StringProperty, IntegerProperty, DateProperty and BooleanProperty are prototype Spring configuration beans, they might be given as reference. features The list of features to apply to the selected properties
+
+Example B: Enabling the Fast full sort feature on all String properties:
+

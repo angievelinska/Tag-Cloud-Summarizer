@@ -1,0 +1,5 @@
+
+
+Derived dependencies are created when a template uses an artefact which has been created by the ADS itself, most prominently page fragments (you'll encounter 'Page Content', 'Formatted Uri', 'Template Mapping' and others when using the cache browser). In principle, a derived dependency concentrates all dependencies of the artefact into an interior node. With this dependency hierarchy it is possible to avoid change propagation and regeneration of pages when the contents of an artefact haven't "really" changed. 
+
+The following example illustrates this: 

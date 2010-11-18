@@ -1,0 +1,37 @@
+
+
+By default, the aggregation process parses search engine logs in such a way that it recognizes log entries that arise out of requests to the search engine that were performed using the full text search CoreMedia API and that were routed through the Content Server. However, it is possible to perform own searches directly by means of the FAST APIs and such queries may result in substantially different log entries. Unless you adapt the data aggregator, such searches may have to be omitted.
+
+In order to analyze even such queries, parsing strategies must be provided. You can parameterize the existing DefaultSearchDataExtractor in a different way or you can write your own implementation of the SearchDataExtractor interface as described in section.
+
+The strategies can be configured by means of the custom section of the task ImportSearchLogs. By default, this section is empty, which is equivalent to a single default extractor:
+
+<!-- START CUSTOM SECTION: Search Data Extractors -->
+<Extractor class=
+  "com.coremedia.analytics.plugin.DefaultSearchDataExtractor"/>
+<!-- END CUSTOM SECTION: Search Data Extractors -->
+
+Note that the default extractor is only added automatically if the list is empty. If you provide an extractor of your own, you have to list the default extractor explicitly, if you want it to run:
+
+<!-- START CUSTOM SECTION: Search Data Extractors -->
+<Extractor class=
+  "com.company.MySearchDataExtractor"/>
+<Extractor class=
+  "com.coremedia.analytics.plugin.DefaultSearchDataExtractor"/>
+<!-- END CUSTOM SECTION: Search Data Extractors -->
+
+The extractors are arranged in a sequence. Any extractor can return a null value to indicate that it cannot parse the given query. In that case, the subsequent extractors are also invoked until one is successful. Of course, you need only one extractor if you are sure that your own extractor handles all cases.
+
+Often it will not be necessary to write a custom class, the default extractor might might be reusable. It is possible to configure the regular expressions that the default extractor uses when analyzing the log files. For the search term, the regular expression is sought anywhere inside the query attribute. If the regular expression is found, the match for the first capturing group is used as the search term. 
+
+For example, assume that custom queries are made using the syntax "feederstate:SUCCESS AND term" when searching for a given term.. You can now configure the data aggregator as follows:
+
+<!-- START CUSTOM SECTION: Search Data Extractors -->
+<Extractor class=
+  "com.coremedia.analytics.plugin.DefaultSearchDataExtractor"/>
+<Extractor class=
+  "com.coremedia.analytics.plugin.DefaultSearchDataExtractor"
+  searchTermPattern="feederstate:SUCCESS AND (.*)"/>
+<!-- END CUSTOM SECTION: Search Data Extractors -->
+
+This allows the aggregator to use the remainder of the query string after a "feederstate:SUCCESS AND " prefix, if the default extractor is unsuccessful. For a detailed description of regular expressions in general and capturing groups in particular, please the JavaDoc of the class java.util.Regex.

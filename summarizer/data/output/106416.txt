@@ -1,0 +1,30 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+name
+ 
+
+Name of the HTML element to ignore.
+ 
+
+recursive
+ 
+
+"false" (Default): Only the element defined in name will be ignored.
+
+
+"true": The element defined in name and all contained elements will be recursively be ignored.
+
+
+
+
+
+

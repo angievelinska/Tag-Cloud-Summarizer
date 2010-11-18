@@ -1,0 +1,15 @@
+
+
+If you want to add dynamic content based on reports of the Analytics Engine to a page, use documents of type CMNamedDynamicList. You can use this document just like articles or other CMTeasable document types. It might be useful to define CMNamedDynamicList documents as templates for common scenarios. Then, you can simply copy the documents or link to them. To create a document, proceed as follows:
+Create a new CMNamedDynamicList document. 
+Enter the name of the plug-in "analyticsFeedback" into the plugin property of the document.
+Set the maxLength property to the maximum number of items you want show in the resulting list.
+Do the remaining configuration in the Struct-property contextSettings as described below. 
+Save your changes.
+Add the CMNamedDynamicList document to the appropriate document that should include the dynamic content.
+
+Now, the dynamic content should appear on the page.
+
+Configuring the report settings
+
+The following example shows the structure of a configuration of the contextSettings property. Many of these variables are deployment specific and are likely to be prepared by the system integrator. For instance, the available report names, default variable values and default refresh interval depend on the web application configuration in /WEB-INF/spring/analytics-feedback-plugin/analytics-feedback-plugin.xml. The only available report in the default configuration is "topViewedPages", that will return the most visited CMTeasable and CMChannel pages.

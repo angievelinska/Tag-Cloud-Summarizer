@@ -1,0 +1,16 @@
+
+
+ Property Value Default Description workflow.server.http.host String  Configures the workflow server's internal web server for clients that request the IOR. Enter the host-name or IP address of the computer where the workflow server is running workflow.server.http.port Int  Configures the workflow server's internal web server for clients that request the IOR. Enter the port of the computer where the workflow server is running workflow.server.ORBServerHost String  The host of the ORB which the Workflow Server uses. workflow.server.ORBServerPort Int  The port of the ORB which the Workflow Server uses. workflow.server.keepalive.ORBServerPort Int 0 
+
+The port to use for the ORB keepalive mechanism. Use this mechanism if you experience occasional hang-ups of the server that last for about a minute.
+
+Set to a positive number to specify a fixed port. When set to 0, an arbitrary port will be used for keepalive. When set to -1, the keepalive mechanism is not activated. workflow.server.keepalive.interval Int 1000 The interval between two keepalive requests in milliseconds, if keepalive is activated. workflow.server.uapi.ORBServerPort Int  
+
+The port for a Unified API client, which connects the Workflow Server to the Content Server.
+
+ workflow.user String workflow Define a user for the connection with the Content Management Server. workflow.password String workflow Define a password for the connection with the Content Management Server. workflow.server.tx.max Int 20 Limits the maximum number of database connections. roles.map.approver-role, roles.map.composer-role, roles.map.publisher-role String   
+
+The predefined workflows require the groups approver-role, composer-role and publisher-role (see Chapter for details). These groups are automatically created. If you use an LDAP server for user management, you might not want to use the predefined groups. In this case, you can map an LDAP group to the appropriate workflow group e.g. approver@example.org. The members of the LDAP group approver@example.org will be treated as members of the approver-role group etc. Note, that you can only map one LDAP group to one workflow group. 
+
+If you change this mapping after you have already uploaded workflow definitions, you have to reload the workflow definitions. workflow.server.managers.<managerName>.class String  Register a custom manager for use in the Workflow Server. The manager is created when the server starts. workflow.server.managers.<managerName>.order Int 0 The startup order for a custom manager. Managers are started in the given order. If the order is not specified, 0 is assumed. Managers with the same order are started alphabetically according to their name.
+

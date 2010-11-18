@@ -1,0 +1,6 @@
+
+
+It is recommended to use the IDs for external storage only. The identified objects of the Unified API are lightweight, so that it makes no sense to store IDs in main memory for a long time. IDs are more difficult to handle and often larger than their object counterparts. But for storage in a database or a file, IDs come in handy.
+
+IDs are also used by some of the administrative command line tools and for generating debugging output.
+

@@ -1,0 +1,31 @@
+
+
+In order to use Preview-based Editing with the ES for JSF property editors you need to redirect the view to one of the editing templates. These templates might be custom templates which allow the editing of properties of document types, or a wizard menu described below. The action which redirects to one of the editing view, or to the wizard menu needs special configuration. The description of the configuration is contained in the following section, it is usable for redirecting to the wizard menu as well as for redirecting to other ES for JSF property editors.
+
+Redirecting to the Wizard Menu
+
+The wizard menu shows further actions which might be executed for the given Context. It is viewed after executing an action in the Preview-based Editing toolbar. The action needs to have a specific NavigationHandler, and CommandPostProcessor in order to trigger a successful redirect to the wizard menu page. The special CommandPostProcessor, extracts all necessary ContextInfo information and puts it into a Model (Map). This Model is received by the ActionExecutionController. Together with the view returned by the NavigationHandler this forms the Spring ModelAndView, which is returned by the ActionExecutionController for further processing of the Spring Dispatcher. Usually this leads the desired redirect to the wizard menu with the required ContextInfo request parameter.
+
+The configuration looks like this:
+
+<bean id="portalGotoNewContent_request" class=
+"com.coremedia.editing.actions.NoOpCommandAction"
+  singleton="false">
+  <property name="name" value="fragment-new"/>
+  <property name="commandPostProcessor" 
+  ref="contextInfoToModelTransformer"/ >
+  <property name="navigationHandler">
+    <bean class="com.coremedia.editing.kits.springmvc.action.
+    SpringMVCNavigationHandlerImpl" >
+      <property name="view">
+        <bean 
+        class="org.springframework.web.servlet.view.RedirectView" >
+          <property name="url" 
+          value="/editing/servlet/pbe/forms/newfragment.jsp"/ >
+        </bean>
+      </property>
+    </bean>
+  </property>
+</bean>
+
+The CommandPostProcessor is the reference to the contextInfoToModelTransformer and the navigationHandler the SpringMVCNavigationHandlerImpl, which contains as view a RedirectView which redirects to the menu.

@@ -1,0 +1,100 @@
+
+
+The converter hox.corem.sgmlconverter.Sgml2RichTextConverter transforms SgmlText to RichText according to the following rules:
+
+
+Element transformations: 
+
+
+
+
+The root element is transformed from ROOT to div. 
+
+
+
+The elements B and I are converted to strong and em, respectively. 
+
+
+
+The HOX.LINK and HOX.IMAGE elements are converted to a and img elements, respectively.
+
+
+
+All other elements are converted to lower case. Note that this means that if you used elements not defined in coremedia-sgmltext.dtd, their lower case versions may not be defined in coremedia-richttext-1.0.dtd, resulting in invalid XML! 
+
+
+Attribute transformations: 
+
+
+All attributes actually defined in the coremedia-sgmltext.dtd must be upper case.
+
+
+All other accepted attributes in the SgmlText may be upper case or lower case. 
+
+
+All fixed attributes of the target RichText elements are set automatically.
+
+
+The attributes of HOX.LINK, HOX.IMAGE, and A are converted to the corresponding xlink attributes: 
+
+
+
+
+The A HREF attribute is converted to an xlink:href attribute. 
+
+
+
+The HOX.LINK / IMAGE ID attribute is converted to an xlink:href attribute containing a coremedia: URI. For img elements, the internal link does not specify a property. See "Embedded Images" discussion above. 
+
+
+
+The IMG WIDTH and IMG HEIGHT attributes are kept (in lower case). 
+
+
+
+The TARGET attribute is converted to an appropriate xlink:show or xlink:role attribute: TARGET="_blank" -> xlink:show="new", TARGET="_self" -> xlink:show="replace", otherwise for TARGET=target -> xlink:role=target. 
+
+
+
+A non-empty ALT attribute is converted to an xlink:title attribute. For HOX.IMAGE elements, the alt attribute of the corresponding img element is always generated (since it is required in coremedia-richtext-1.0.dtd), using the ALT attribute value if present, an empty string ("") otherwise. 
+
+
+TABLE attributes are converted like this: 
+
+
+
+
+The attributes LANG, XML:LANG, DIR, CLASS, ALIGN, and VALIGN are kept (in lower case). 
+
+
+
+For TABLE, the attribute SUMMARY is kept. 
+
+
+
+For TD, the attributes ABBR, COLSPAN, and ROWSPAN are kept. 
+
+
+SPAN's CLASS attribute is kept (in lower case).
+
+
+All other attributes are added to the class attribute like this: 
+
+
+
+
+All selectors are separated by blanks (" ").
+
+
+
+For each attribute A with value V, add a selector A--encode(V), where encode() is defined in hox.text.util.StyleValueEnDecoder. The encoding is necessary so that splitting the class attribute's value at spaces results in a list of (pseudo) class selectors. Custom attributes (see below) have to extract and decode the value to retrieve the original attribute value. 
+
+
+
+If the class attribute was already defined, the generated string is added, separated by another blank.
+
+
+
+
+
+

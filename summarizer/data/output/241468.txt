@@ -1,0 +1,13 @@
+
+
+ActionForm: CoreMedia WAGE comes with several extensions to the Struts ActionForm class:
+
+The generic ResourceActionForm (com.coremedia.cap.wage.forms.ResourceActionForm) encapsulates a CoreMedia resource for use as Struts form bean. Often you will be able to use this class for your projects without changes. It enables you to easily fill HTML forms with values of CoreMedia resource properties, and to update CoreMedia resources with the values of submitted forms.
+If you want to write your own ActionForm class, you have to extend the abstract WageActionForm (com.coremedia.cap.wage.action.WageActionForm). If you extend this class you have to be sure to call the getCurrentResource() method, which will install the current Resource and ChangeCollector according to request parameters defined in the CMRequestProcessor. See XXX and XXX for examples.
+The CreateResourceForm (com.coremedia.cap.wage.forms.CreateResourceForm) can be used to create new CoreMedia resources, together with the actions StartCreateResourceAction, StartCreateFolderAction, and CreateResourceAction (all in com.coremedia.cap.wage.actions).
+The WfInstanceActionForm (com.coremedia.cap.wage.forms.WfInstanceActionForm) encapsulates a CoreMedia workflow instance object, and lets you access it's properties (i.e. workflow variables) through a com.coremedia.cap.wage.VariableAssignment object by providing generic getter and setter methods.
+
+WAGE also provides you with form beans that work on lists of resources/workflow instances:
+
+The ResourceListActionForm (com.coremedia.cap.wage.forms.ResourceListActionForm) can be used to perform commands (like approve, check-in, move to another folder, etc.) on a set of CoreMedia resources. This form bean can for example be used for letting the user select multiple resources from a list and then to perform a command on these selected resources, so the user doesn't have to perform the command on every single resource. The ResourceListActionForm can also be used to start a new workflow with the selected resources as change set.
+Similiar to the ResourceListActionForm, the WAGE WfInstanceListActionForm (com.coremedia.cap.wage.forms.WfInstanceListActionForm) can be used to edit variables and perform workflow commands (like "accept task" or "abort process") on a set of CoreMedia workflow instances.

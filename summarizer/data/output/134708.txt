@@ -1,0 +1,14 @@
+
+
+usage: cm destroy -u <user> [other options] 
+          [<id1> <id2> ... | -t <path1> <path2> ... ]
+          Unless properly prefixed (coremedia:///cap/...), 
+          IDs are interpreted as content IDs.
+available options:
+ -d,--domain <domain name>   domain for login (default=<builtin>)
+ -f,--force                  force destruction of folders with 
+                             children
+ -p,--password <password>    password for login
+ -t,--paths <paths>          path of contents to destroy
+ -u,--user <user name>       user for login (required)
+ -url <ior url>              url to connect to

@@ -1,0 +1,35 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+gui 
+
+(boolean) 
+
+"true" 
+
+Defines whether a GUI element will be shown on execution of the action ("true") or not. E.g. executing publishResources with gui="false" will not show the publication window. 
+
+ignoreErrors 
+
+(boolean) 
+
+"false" 
+
+If set to "true", this attribute makes sure that the task containing the action will continue normally after an error was encountered. 
+
+timeout 
+
+NMTOKEN 
+
+"30" 
+
+The timeout in seconds for the action. The default timeout is 30 seconds.

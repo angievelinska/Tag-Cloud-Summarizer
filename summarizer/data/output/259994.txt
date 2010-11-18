@@ -1,0 +1,9 @@
+
+7#
+Enter the database properties and click Next to proceed with the installation.
+
+CoreMedia Analytics also needs a database for operation. The properties have the same meaning as for the Content Management Server database. The database driver is copied to the following directories:
+
+management/lib
+management/jakarta-tomcat/webapps/analytics/WEB-INF/lib
+management/jakarta-tomcat/webapps/starterkit/WEB-INF/lib

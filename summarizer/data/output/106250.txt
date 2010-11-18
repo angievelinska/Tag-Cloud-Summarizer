@@ -1,0 +1,3 @@
+
+
+In some cases, users are not required to use workflows. You can completely hide all references to the workflow component in the editor by setting the attribute enableWorkflow of the <Editor> element.

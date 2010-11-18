@@ -1,0 +1,3 @@
+
+
+This section describes how to deploy a portlet application into the CoreMedia Lightweight Portal. It gives a general overview and shows which changes must be conducted upon the original portlet application and how the portlets are weaved into the content repository. Furthermore it explains how you can accomplish this, using our deployment tool.

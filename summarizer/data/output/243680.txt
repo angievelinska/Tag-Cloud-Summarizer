@@ -1,0 +1,21 @@
+
+
+In the general definitions the workflow itself is described. 
+
+
+
+Line 4 - 5: The process is named 'SimplePublication'. The localized name is displayed in the GUI when selecting a workflow. The first task that is executed after the workflow start is the task 'AssignComposer'.
+
+
+Line 7 - 10:  The rights (see 4.1.8) concerning the workflow are assigned to users and groups. The user admin can create, start, suspend, resume and abort a workflow instance. The members of the group composer-role are allowed to create, start, suspend, resume and abort the workflow process instance.
+
+
+Line 12 - 23: Different variables are defined by name and type for storing the state of the workflow. The changeSet and comment variables store the resources which are processed and the comments of the users. The four aggregation variables which are prefixed with publication are used to store the publication result. 
+
+
+Lines 25 - 30: If a new workflow has been created a dialog box opens up (this can be suppressed) where workflow variables can be initialized.The variables to show or set are defined in this initial client view. The variables subject, comment, changeSet and comments will be shown in the initial window, so that the creator of the workflow can change the content of the variable.
+
+
+Line 32 - 37: If the workflow has been started, the variables defined in this client view will be shown in the variable view of the workflow window. The variables need not to be read only as in the example. The variables subject, comment, changeSet and comments will be shown in the variable view (if the workflow is selected in the workflow list), but it is not possible to change the variables, because they are defined as read only via the <Reads ...> elements.
+
+Automated Task 'AssignComposer'

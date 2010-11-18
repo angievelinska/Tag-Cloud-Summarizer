@@ -1,0 +1,9 @@
+
+
+Operations:
+
+
+users of group G grants rights on folder F2 for resource type Article   
+
+
+Required rights:

@@ -1,0 +1,6 @@
+
+
+PADS distinguishes between top-level and fragment values. Top-Level values (such as pages) are sent to the uploaders; fragment values are only helper values embedded into others. PADS performs a reachability-based garbage collection scheme on top-level values before every upload phase (resulting in "DELETE" events for unreachable top-level values). No such garbage collection is performed for fragments as it would slow down PADS' operation too much.
+
+Although most unused fragments are invalidated at some point and automatically deleted, this means that your database may grow in size through unused, yet valid fragments. If database/disk size is an issue, you should therefore regularly clean the PADS database from such fragments using the fragment cleaner.
+

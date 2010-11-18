@@ -1,0 +1,6 @@
+
+
+Toolbar line 2
+
+ Menu item Sub items Function (1)  Start spell checking for the document. (2)  Undo the last editing step. You can undo any number of steps. (3)  Redo the undone steps. (4)  Save the changes. (5)  Check-out the document (6)  Revokes the check-out. All changes since the last check-in are lost. (7)  Check-in the document. All changes are saved.
+

@@ -1,0 +1,4 @@
+
+
+In CoreMedia CMS you define your document type definitions in XML-files. CoreMedia CMS allows you, to administrate document type definitions in a modular manner. That means, that document types can be defined in different independent files, instead in one monolithic file. The Content Server loads and combines all document type files which match a given pattern.You can define the pattern in the cap.server.documentTypes property in the contentserver.properties file (see Section for details).
+

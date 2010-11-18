@@ -1,0 +1,17 @@
+ Variable
+Type 
+
+Workflow API Type
+(com.coremedia.
+workflow.common.
+values) Internal Type
+(com.coremedia.
+cap.wage) External Type
+(com.coremedia.
+cap.wage) String StringValue java.lang.String java.lang.String Integer IntegerValue java.lang.Integer 
+
+java.lang.String Date DateValue java.util.Calendar 
+
+java.lang.String Resource ResourceValue ClientResource ClientResource Folder FolderValue ClientFolder ClientFolder Document DocumentValue ClientDocument ClientDocument DocumentType DocumentTypeValue hox.corem.servlets.ResourceType java.lang.String Boolean BooleanValue java.lang.Boolean java.lang.Boolean User UserValue hox.corem.servlets.User java.lang.String Group GroupValue hox.corem.servlets.Group java.lang.String Timer TimerValue TimerValue TimerValue Exception ExceptionValue com.coremedia.workflow.
+WfException com.coremedia.workflow.
+WfException

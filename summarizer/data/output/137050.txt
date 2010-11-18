@@ -1,0 +1,15 @@
+
+
+All exceptions that are thrown by the Unified API are derived from the single class CapException, which is a runtime exception. 
+
+Because runtime exceptions are used, you do not have to catch the exceptions explicitly. The exceptions are documented in the Javadoc, however, so that you can easily catch those exceptions that you expect and can handle reasonably.
+
+Exceptions are equipped with error codes that simplify the analysis of the actual problem. However, these error codes are not supposed to be used algorithmically. The codes may change at any point of time in the future. They are solely intended for debugging purposes.
+
+Instead, for the most important problems and groups of problems, own exception classes were created. These exceptions can be treated specially in order to recover from errors. They will not change, although new exceptions may enter the hierarchy.
+
+Individual exception classes can provide further hints about the problem at hand. For example, a ContentException references the content that was involved into the failed operation.
+
+As it is possible for a write buffer flush to occur almost everywhere, it is possible that the associated FlushFailedException is thrown at almost every point in the code. If an application cannot be made robust with respect to such exceptions, care must be taken to flush all writes as soon as possible after the setters were called.
+
+Some method calls involve bulk operations, i.e., they operate many resources at one time. When such an operation fails, a BulkOperationFailedException is thrown. From that exception you can retrieve the BulkOperationResult that provides more details on the failed operation. Bulk operations only return normally when they succeed completely. This ensures that a problem is detected reliably as soon as possible.

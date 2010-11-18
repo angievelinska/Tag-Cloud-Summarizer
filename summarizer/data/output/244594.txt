@@ -1,0 +1,28 @@
+
+
+If you want to connect the Content Management Server via SSL to the Active Directory server proceed as follows:
+Install an Enterprise Certificate Authority on the Windows server (see http://support.microsoft.com/kb/247078/de for details).
+
+This will automatically install a certificate for the Active Directory server. Now you need to export the certificate.
+2#
+Switch to the Certificate Authority tool using Start|Control Panel|Administrative Tools|Certificate Authority.
+Double-click the certificate, select DER coding from detail and export the file using Copy to file.
+
+Now, you need to import the certificate for the Content Server.
+4#
+Import the certificate for the Content Server using the Java keytool tool the default password is "changeit":
+
+keytool -import -file ADCert.der -alias ADCert -keystore $JAVA_HOME/jre/lib/security/cacerts
+5#
+Change the following properties in the <CoreMediaHome>/properties/corem/jndi-ad.properties file:
+
+java.naming.security.protocol=ssl
+com.coremedia.ldap.host=ADServer
+com.coremedia.ldap.port=636
+6#
+Change the following property in the <CoreMediaHome> /properties/corem/jaas.conf file:
+
+protocol="ssl"
+port="636"
+
+Now you are done and the Content Server will connect to the Active Directory server via SSL.

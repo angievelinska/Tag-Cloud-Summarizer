@@ -1,0 +1,19 @@
+
+
+Words to be corrected are underlined in red. See the window for the actual language setting.
+
+Correct a word
+
+To replace such a word by one of the words suggested by the spellchecker click [Correct] or [Correct All] to correct in the whole document.
+
+Don't correct the word
+
+If a word is not misspelled but unknown and you want to leave it as it is, click  [Ignore] or [Never correct] for the whole document.
+
+Don't correct the word and add to user-defined dictionary
+
+If a word is not misspelled but unknown and you want to leave it as it is, click  [Add] to add it to the user-defined dictionary.
+
+Exit spell checker
+
+Click [Exit].

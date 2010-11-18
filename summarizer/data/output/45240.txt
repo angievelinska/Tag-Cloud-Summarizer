@@ -1,0 +1,7 @@
+
+
+For the example three document types are needed. The document types describe how the documents are constructed:
+
+Dish: Contains the information about the different dishes, consisting of name, description, ingredients, calories, a picture and price of the dish.
+Picture: Contains name and image of the dish
+Page: Contains the information of the title page, consisting of name, headlinepicture and a couple of dishes of the day.

@@ -1,0 +1,10 @@
+
+
+<bean id="beanTypeRepository" parent="AbstractBeanTypeRepository">
+  <property name="beanTypes">
+    <list>
+      <ref bean="beanType:Product"/>
+      <ref bean=¿beanType:MobilePhone"/>
+    </list>
+  </property>
+</bean>

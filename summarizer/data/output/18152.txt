@@ -1,0 +1,8 @@
+
+
+This scenario describes a Master Live Server malfunction. This error influences two processes:
+
+publication: Publications are cancelled as defective, blocked or cannot be carried out because the Master Live Server is not reachable.
+replication: Replication is disabled. The Slave Live Servers stay online and the connected Active Delivery Servers continue to operate with the already replicated content base.
+
+Possible errors are:

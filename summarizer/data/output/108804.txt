@@ -1,0 +1,3 @@
+
+
+The UserProvider instances are configured in the properties/corem/capserver.properties file. Here is an example configuration for an Active Directory Server:

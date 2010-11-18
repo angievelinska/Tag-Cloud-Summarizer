@@ -1,0 +1,56 @@
+
+
+The location of the resource bundles is defined in /WEB-INF/custom/editing-services.xml. Here you have to provide the supported locales and resource bundle names. In the following example from the CoreMedia Demo we defined the locales en and de and the resource bundles com.coremedia.easyedit.editing.Editing and com.coremedia.demo2005.pbe.menu.pbemenu:
+
+<bean id="editingServices" parent="defaultEditingServices">
+  <property name="supportedLocales">
+    <list>
+      <value>en</value>
+      <value>de</value>
+    </list>
+  </property>
+  <property name="defaultLocaleString" value="en"/>
+  <property name="messageSource">
+    <bean class="org.springframework.context.
+                 support.ResourceBundleMessageSource">
+      <property name="basenames">
+        <list>
+          <value>com.coremedia.easyedit.editing.Editing</value>
+          <value>com.coremedia.demo2005.pbe.menu.pbemenu</value>
+        </list>
+      </property>
+    </bean>
+  </property>
+</bean>
+
+Let us take a look at the renamePageAction of the CoreMedia Demo. The bean definition sets the name property to navi-new:
+
+  <bean id="newPageAction" parent="action" singleton="false">
+    <property name="name" value="navi-new"/>
+    <property name="command">
+      <bean class="com.coremedia.demo2005.editing.
+                   commands.NewPageCommand" 
+            parent="contextInfoCommand" singleton="false"/>
+    </property>
+  </bean>
+
+In the resource bundle file /com/coremedia/demo2005/pbe/menu/pbemenu.properties included in the cap-demo.jar you can find a link to the menu item icon of the action:
+
+Action.navi-new.icon = /com/coremedia/demo2005/icons-16x16/new.png
+
+The labels and tooltips for the menu item are stored in the localized resource bundles pbemenu_en.properties, pbemenu_fr.properties etc.:
+
+Action.navi-new.text=New page
+Action.navi-new.toolTip=Create a new page
+
+Action.navi-new.text=nouvelle page
+Action.navi-new.toolTip=créer une nouvelle page
+
+The resource bundle used for the template newpage.jsp rendering the JSF input form are /com/coremedia/demo2005/pbe/pbemessages_en.properties, /com/coremedia/demo2005/pbe/pbemessages_fr.properties etc.
+
+In JSF you include a resource bundle via
+
+<f:loadBundle basename="com.coremedia.demo2005.pbe.pbemessages" 
+              var="bundle"/>
+
+Then you can get a value for the current locale via expressions like #{bundle['newpage.title']}. 

@@ -1,0 +1,3 @@
+
+
+The <nitf> element is mapped to a <document> element:

@@ -1,0 +1,9 @@
+
+
+Uploaded workflow definitions are stored in the database as serialized objects. If you use the CoreMedia Workflow Server (Unlimited Edition), you can customize workflows by programming own extensions, e.g. actions, expressions, handlers. So every time, you have made incompatible changes in classes, which are used in already uploaded workflows, you need to convert these workflows. In case of an update of the CoreMedia Workflow Server, the workflows have to be converted, too. Otherwise, object deserialization errors can occur (see Suns JDK documentation for details).
+
+The workflowconverter utility has the following syntax:
+
+cm workflowconverter [ -v | -c [processID]* | -X [processID]* |-r processID jar]
+
+The parameters have the following meaning:

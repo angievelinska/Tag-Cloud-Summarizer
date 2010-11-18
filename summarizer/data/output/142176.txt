@@ -1,0 +1,3 @@
+
+
+The file chooser dialog contains a search field like the Explorer window. It switches alike into the search modus if you click [Search] or press <Enter>. The folder view will be replaced by a search area which contains no combo box for document types because this combo box is located at the bottom of the window. If you select a new document type from this list, a new search will be started. The search behaves alike the search in the Explorer window as described before.

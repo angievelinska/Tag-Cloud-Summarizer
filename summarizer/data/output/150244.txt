@@ -1,0 +1,13 @@
+
+
+The Document Model Browser can be found in the "CoreMedia Template Development" area, located in a standard CoreMedia installation under the URL http://<generatorHost:generatorPort/coremedia/develop. There, "Browse Document Model" should be selected. 
+
+The Document Model Browser has various functions which can be executed via hyperlinks in the upper region, as well as the actual diagram, which also contains various hyperlinks.
+
+The diagram can be expanded in stages in order to display a certain section of the document model. A white box is displayed for each document type, containing the type name and the type symbol (if it exists). The type symbols must be saved under the path <COREM_HOME>/tomcat4/webapps/coremedia/images/doctype-icons according to the scheme <doctypename>.gif. Abstract document types are written in italic.
+
+Each document type box can be expanded or collapsed. The state is changed by clicking on the type name or symbol with the mouse.
+
+Collapsed types are shown in gray. Expanded types, on the other hand, are shown in black, with their properties, views (if ViewDispatcher is being used, see the Delivery Developer Manual ) and subtypes. According to UML notation, subtypes are connected with their supertypes by an arrow.
+
+The properties are displayed in the format name: Type, corresponding to the document type definitions as shown in following table.

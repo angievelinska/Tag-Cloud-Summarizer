@@ -1,0 +1,5 @@
+
+
+For transformations two Sources are needed. The style sheet is either stored inside an XmlProperty or just a plain file in the local file system. If it's in a property, write a JSP page that unparses the content and refer to it via the method described above. 
+
+The advantage of storing the style sheets in CoreMedia documents is that a dependency between layout and content can be established. When the layout changes (in the style sheet), the website changes as well. This is quite nice, since style sheets can be tested and evaluated on the Production System. Once the work is finished the style sheet can be published to the Live System and the layout changes  automatically. 

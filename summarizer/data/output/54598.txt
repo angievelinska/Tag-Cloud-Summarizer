@@ -1,0 +1,19 @@
+
+
+
+ 
+
+Master Live Server Deadlock
+ 
+ 
+
+Error behavior
+ 
+
+The clients hang up or receive error messages until the watchdog restarts the server.
+ 
+
+Error correction
+ 
+
+The watchdog detects the error and restarts the server. Restarting the server implies a brief server failure. Therefore, the further behavior of the clients corresponds to the behavior described under Live Server Failure.

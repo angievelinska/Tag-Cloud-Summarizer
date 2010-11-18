@@ -1,0 +1,5 @@
+
+
+Cacheable Pages
+
+For pages which are cacheable you need to set "session=false".

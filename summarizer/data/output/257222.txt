@@ -1,0 +1,16 @@
+
+
+Search and Replace Text
+
+In order to search and replace text in several documents,
+create a document list and start the workflow
+
+3* You may select these documents manually or from a query result (for executing queries, see section).
+2#
+set search options and 
+
+3* For example, you can determine which fields of the documents will be searched.
+3#
+execute search and replace.
+
+The following chapters hold a description of these steps.

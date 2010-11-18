@@ -1,0 +1,19 @@
+
+
+According to the underlying content model the CoreMedia Editor generates forms for resource editing. The default forms provide editing facilities for each property of a document (so called property editors), general editing functionality like copy and paste and CoreMedia CMS version control features (see User Manual, Basic Knowledge). You can control the layout and behavior of these forms concerning the following aspects:
+
+use special property editors (e.g. a string editor which automatically converts to upper case. CoreMedia provides some alternative property editors to use, but you can also implement your own.)
+initialize and validate input (e.g. make sure that an integer value is greater than 42)
+provide complex commands (e.g. create a new document and link it into some navigational structure)
+
+Furthermore you can control 
+
+localization
+language specific spell checking
+rich text formatting
+filters to hide some objects from the users (e.g. document types they are not supposed to instantiate or folders that do not concern them)
+renderers to display objects (e.g. the fields in the document table)
+
+Many Editor features can be achieved or controlled simply by configuration, without writing a single line of code. However, understanding all the possibilities requires some knowledge of Java. 
+
+See the Editor Developer Manual for details.

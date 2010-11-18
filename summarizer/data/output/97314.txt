@@ -1,0 +1,57 @@
+
+
+
+ 
+
+Menu item
+ 
+
+Sub items
+ 
+
+Functions
+ 
+
+Cut
+ 
+
+
+ 
+
+Cuts the selected user/grops and copies them to the clipboard.
+ 
+
+Copy
+ 
+
+
+ 
+
+Copies the seleceted users/groups to the clipboard.
+ 
+
+Paste
+ 
+
+
+ 
+
+Pastes user/groups from the clipboard into the selected field.
+ 
+
+Membership in
+ 
+
+Paste, Paste group...
+ 
+
+You can insert groups from the clipboard (Paste) or using the dialog box (Paste group...) into the field Membership in.
+ 
+
+Members
+ 
+
+Paste, Paste user..., Paste group...
+ 
+
+You can insert groups or users from the clipboard (Paste) or using the dialog box (Paste group..., Paste user...) into the field Member.

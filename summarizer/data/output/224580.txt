@@ -1,0 +1,16 @@
+
+
+In this chapter you can find the description of the design principles that underlay the database design for the analytics datamart. Knowing these principles will help you optimize your database or extend the schema.
+
+Disable indices during bulk import for short lived tables. If during an import a table is (mostly) purged and the refilled, performance is improved by disabling indices before the import and rebuilding them afterwards.
+When accessing a single table concurrently, perform only inserts or only reads, but no updates, deletes or mixed operations. The internal locking in databases is quite complex and hard to predict, so that you want to avoid complex access schemes. Because concurrent writes to a single table are likely scattered across a single disk, concurrent writing will likely not improve performance.
+Write different tables concurrently. Writes to different tables will not block each other. If the writes go to different disks, concurrent writing will greatly speed up the application.
+Keep the content of auxiliary tables until the tables must be refilled. This helps during error recovery.
+Use indices only where needed. Maintaining indices is costly during write operations. Write operations are particularly costly, because their cost cannot be reduced by caches. However, some indices will be necessary to keep the read performance up.
+Use constraints only where needed. In particular, foreign keys can be quite costly during delete operations, necessitating additional indices that would otherwise be dispensable. Constraints can help the database optimize your queries and they can detect certain error conditions, but generally the extra runtime cost is undesirable.
+Avoid very small transactions, which lead to poor performance.
+Let the database perform very large transformations. Quite a lot of transformations are expressible in pure SQL. Databases are generally very good at optimizing these requests and they can make good of main memory for caching.
+Use very large transactions only when single statements get very large.
+Keep time arithmetic out of the database. Time arithmetic is generally not portable and unlikely to match the Java time arithmetic precisely. Subtleties like leap years, leap seconds, timezones and daylight saving time are very difficult to delegate to a database. Storing timestamps in UTC and performing comparisions works well, though.
+If you have to perform some tasks in Java code, try to limit yourself to tasks that parallelize well and use large thread pools. 
+

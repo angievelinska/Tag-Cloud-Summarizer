@@ -1,0 +1,30 @@
+
+
+ 
+
+Menu item 
+
+Sub item 
+
+Functions 
+
+Repeat 
+
+ 
+
+Repeats the last action (either a publication or a publication preview) after you have fixed possible errors. 
+
+Cancel 
+
+ 
+
+Cancels a publication from the queue. 
+
+Prioritize 
+
+ 
+
+Prioritizes the execution of the selected publication.
+
+
+

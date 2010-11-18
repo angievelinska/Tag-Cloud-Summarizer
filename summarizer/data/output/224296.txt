@@ -1,0 +1,6 @@
+
+
+User information
+
+User authentication is implemented by the portal supporting "single sign on". Current user information like user name/domain will be passed to the CAE portal application and may be accessed using standard servlet mechanisms.
+

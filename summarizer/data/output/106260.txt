@@ -1,0 +1,15 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+enableWorkflow
+ 
+
+If "false", removes all references to the workflow component from the GUI and ensures that no connection to the workflow server is established. Default is "true".

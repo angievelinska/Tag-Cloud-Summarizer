@@ -1,0 +1,6 @@
+
+
+ Parameter Description -print Prints out the table content. -deleteuser <user ID> 
+
+Deletes all entries for this user (and thus is utilized for the recycling of licenses.)
+

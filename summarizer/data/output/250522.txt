@@ -1,0 +1,21 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+class
+ 
+
+This attribute gives the name of the class which checks the content of the field for desired properties. This test is carried out when check in. See Section 5.8.1.1.2 for predefined classes.
+ 
+
+%varies;
+ 
+
+This entity stands for further configuration possibilities which depend on the API of the class. The specific configuration possibilities must be obtained from your developers.

@@ -1,0 +1,5 @@
+
+
+As described in more detail in section, the CoreMedia Starter Kit contains a plug-in API enabling the extension of the base application with additional functionality. One such plug-in is the ¿User Feedback Plug-in¿, which demonstrates some basic functionality of the CoreMedia Social Software in the context of the Starter Kit web application.
+
+In particular, the plug-in adds to the Starter Kit application the possibility for end-users to login, rate articles and submit comments. It extends the default templates with the necessary controls to submit ratings and comments and to display approved comments and average ratings.

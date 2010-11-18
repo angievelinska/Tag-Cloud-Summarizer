@@ -1,0 +1,14 @@
+
+
+The overall goal of the CoreMedia Content Application Engine (CAE) framework is to provide a structure for any kind of web application that accesses the CoreMedia content repository. The declarative nature of this framework and the independence of the layers ensure fast development and maintainable application design. An extensible web application template is provided as a starting point. You may also encounter the term "ObjectServer" throughout APIs or configuration files. Please read CoreMedia Content Application Engine in that case. The overall application setup and web request processing are handled by the Spring framework, so it is useful to have a solid knowledge of Spring before developing CAE applications.
+
+To represent the content objects in the repository, Java objects called content beans can be generated that directly reflect the repository structure. It is possible to extend these generated beans with any kind of custom business logic. On top of this data access object layer, a caching layer can be defined by simply declaring the cacheable properties of the content beans. The elements of the caching layer are views on the content beans and are therefore called data views. Based on the types of the content beans and/or data views, suitable JSP templates are chosen in order to render the back-end information. The object-oriented nature of the template registration and mapping subsystem harnesses the full power of inheritance and implementation relationships.
+
+The modular design makes it possible to extend and modify the CAE framework. 
+
+ContentBeans can be used for other purposes than rendering, for example for implementing web services, for business logic deployed in the workflow server or in the CAE Feeder, or for custom standalone applications.
+The DataView cache can operate on any bean, not just on ContentBeans.
+The Rendering Layer can render any bean, not just ContentBeans.
+
+
+

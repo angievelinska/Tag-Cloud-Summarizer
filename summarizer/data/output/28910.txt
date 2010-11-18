@@ -1,0 +1,52 @@
+
+
+ ServiceStatus  Description This action checks a certain service offered by the CoreMedia server, e.g. the replicator of a slave live server. Attribute 
+
+url
+
+URL where to get the IOR of the server
+
+user
+
+CoreMedia user name to log on to the server
+
+domain
+
+Domain of the user.
+
+password
+
+CoreMedia user password to log on to the server
+
+service
+
+Name of the checked service. Possible values are:
+
+replicator
+adminlogin
+userlogin Error codes 
+
+0	(ok)
+
+10              (unexpected_error)
+
+11	(timeout)
+
+12	(error)
+
+13	(respawning_too_fast)
+
+21	(io_error)
+
+31	(no_licenses)
+
+32	(invalid_login)
+
+33             (corba_error)
+
+81	(service_stopped)
+
+82	(service_failed)
+
+83	(service_disabled)
+

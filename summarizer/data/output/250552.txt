@@ -1,0 +1,45 @@
+
+
+After defining the new style group and style classes you can localize it for use in the Content Editor.  Follow these steps: 
+Add a Bundle element to the editor-startup.xml file. The Bundle element defines the localization file to use. 
+Create the localization file in the appropriate directory. 
+Enter the localization entries. 
+Restart the Content Editor. 
+
+If you do not localize your entries, the names will be taken from the css-file. 
+
+Please read chapter for more details on localization. 
+
+Enter the localization entries 
+
+The following keys can be used to localize your StyleGroup: 
+
+richtext-stylesheet-<StyleGroupName>Label=<Label of the StyleGroup used in menus> 
+richtext-stylesheet-<StyleGroupName>ToolBarLabel=<Label of the StyleGroup in the tool bar, usually empty, since icons are used mostly> 
+richtext-stylesheet-<StyleGroupName>Mnemonic=<Key Mnemonic for the StyleGroup> 
+richtext-stylesheet-<StyleGroupName>ToolTip=<Tooltip shown on mouse over> 
+richtext-stylesheet-<StyleGroupName>Image=<URL of a small (16*16) icon used in menus> 
+richtext-stylesheet-<StyleGroupName>ToolBar3Image=<URL of a small (16*16) icon used in the tool bar> 
+
+The following keys can be used to localize each style option: 
+
+richtext-stylesheet-<StyleGroupName>--<StyleOption>Label=<Label of the style option> 
+richtext-stylesheet-<StyleGroupName>--<StyleOption>ToolTip=<Tooltip of the style option> 
+richtext-stylesheet-<StyleGroupName>--<StyleOption>Image=<URL of a small (16*16) icon used for the style option> 
+richtext-stylesheet-<StyleGroupName>--removeClassAttributeValueLabel=<Label of the style option which removes the formatting, usually "---" is used> 
+richtext-stylesheet-<StyleGroupName>--removeClassAttributeValueToolTip=<The tool tip of the remove option> 
+
+Example:  
+
+Here you see the localization of the inline-format style group with the code style option defined previously. The image options have been omitted. 
+
+richtext-stylesheet-inlineformatLabel=Text format 
+richtext-stylesheet-inlineformatToolBarLabel= 
+richtext-stylesheet-inlineformatMnemonic=i 
+richtext-stylesheet-inlineformatToolTip=Selects special options for inline text 
+richtext-stylesheet-inlineformat--codeLabel=Code 
+richtext-stylesheet-inlineformat--codeToolTip=Formats text as code 
+richtext-stylesheet-inlineformat--removeClassAttributeValueLabel=--- 
+richtext-stylesheet-inlineformat--removeClassAttributeValueToolTip=Removes inline formatting 
+
+In image you can see the result of the localized style group. 

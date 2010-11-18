@@ -1,0 +1,13 @@
+
+
+The data presented in the overlays is regularly updated. Typically, page view data and click data is available after a few minutes delay. Reload the entire page to receive current values.
+
+Typical Use Cases
+
+The following tasks are supported by In-Site Analytics:
+
+Detect unused content. In click-through mode, locate the most rarely clicked links. These links might be removed, especially if interest is declining. It might also be possible to improve the context of the link, so that the link is more likely to be followed.
+Detect misplaced content. If a link is clicked often, but placed at the bottom of the page or in another unfavorable position, consider moving it to a top spot to make it more attractive to visitors.
+Detect misleading teasers. If a link is clicked often, but has a low loyalty, this is an indicator that the visitors were disappointed and left the site after viewing the next page. It might be advisable to adapt the context of the link to reflect the actual content of the linked page.
+Detect dead ends. If an entire page and not only a link has a low loyalty, this may be an indicator that the page does not offer enough links or enough interesting links. If the page is viewed often, consider adding related items to prolong the visitor's attention.
+

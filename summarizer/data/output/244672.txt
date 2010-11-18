@@ -1,0 +1,10 @@
+
+
+The CoreMedia Starter Kit manual covers all topics you will need for the usage, administration and development of the Starter Kit. 
+
+Section gives an overview of the Starter Kit. 
+Section describes the installation and configuration of the Starter Kit.
+Section describes the operation and configuration of the Starter Kit.
+Section describes the usage of the Explorer View of the Starter Kit.
+Section describes the design principles of the CoreMedia Starter Kit solutions and shows you how to extend the Starter Kit.
+Section is a reference chapter that shows the document types, bean types, Controllers, Linkschemes and templates used with the CoreMedia Starter Kit.

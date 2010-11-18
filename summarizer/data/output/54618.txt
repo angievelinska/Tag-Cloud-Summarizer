@@ -1,0 +1,14 @@
+
+
+ 
+
+ADS Deadlock  
+
+Error behavior 
+
+Request are blocked and a browser displays an error. 
+
+Error correction 
+
+The watchdog of the ADS detects the error and restarts the ADS (see the watchdog log). Further behavior corresponds to ADS failure with subsequent restart.
+

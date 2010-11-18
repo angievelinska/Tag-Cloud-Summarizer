@@ -1,0 +1,14 @@
+
+
+<bean id="fastFullSortFeatureSet" 
+parent="featureApplicationByPropertyName" 
+depends-on="fastBasicFeatureSet">
+    <property name="typeName" value="*"/>
+    <property name="propertyTypeByPrototype" 
+     ref="StringProperty"/>        
+    <property name="features">
+      <list>
+        <ref bean="fastFullSort"/>
+      </list>
+    </property>
+  </bean>

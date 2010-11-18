@@ -1,0 +1,7 @@
+
+
+Configure property names in the element PropertyNames and property types in the element PropertyTypes. Both of these elements are below the element FastIndex. The Search Engine indexes a property if both its name and its type are included in the configuration.
+
+The element PropertyNames contains a list of IncludeProperty and ExcludeProperty subelements to include and exclude properties. The order of these elements is important: the first element whose doctype attribute matches the document type and name attribute matches the name of the property decides whether the property should be indexed or not. You can use abstract document types and regular expressions in the doctype attribute and regular expressions in the name attribute. An element matches all document types if no doctype attribute is set and all property names if no name attribute is set.
+
+The element PropertyTypes supports the following subelements: Blob, Xml, String, Integer, Date and LinkList. In Blob elements you can specify the MIME-type and maximum size of Blob properties to be indexed. In Xml elements you can specify the grammar of the XML properties to index. If you do not want to index a property of a certain type, you just need to leave out the respective type element.

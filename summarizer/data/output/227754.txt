@@ -1,0 +1,9 @@
+
+
+If all documents in your document list have either been skipped or processed, the Search-and-Replace  Workflow is finished.
+
+CoreMedia SCI applications with freely configurable workflows allow to integrate an automatic publication workflow right after finishing the global search and replace.
+
+In any case processed documents have to be published in order to make the changes effective.
+
+You may collect these documents via the menu item Navigation| To be published.

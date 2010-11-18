@@ -1,0 +1,46 @@
+
+
+ 
+
+simple publication 
+
+2-step publication 
+
+2-step approval 
+
+3-step publication 
+
+The user must have 'approve' and 'publish' rights. 
+
+A user creates the workflow with all necessary resources. 
+
+A user creates the workflow with all necessary resources. 
+
+A user creates the workflow with all necessary resources. 
+
+A number of resources can be published (and implicitly approved) in one step. 
+
+A second user (needs 'approval' and 'publish' rights) can explicitly approve resources.
+
+ 
+
+A second user (needs 'approval' rights) can explicitly approve resources. 
+
+A second user (needs 'approval'  rights) can explicitly approve resources. 
+
+Publication is executed by finishing this task/ workflow. 
+
+Publication will be executed when finishing the task after all resources in the change set have been approved. 
+
+Workflow ends with approval of all resources in the change set. 
+
+After all resources have been approved, a third user can accept the task.  
+
+(If not, the workflow is returned to its 'composer') 
+
+(If not, the workflow is returned to its 'composer') 
+
+(If not, the workflow is returned to its 'composer')    
+
+If the third user accepts the task, the publication is implicitly started.
+

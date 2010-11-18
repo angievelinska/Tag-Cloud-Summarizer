@@ -1,0 +1,30 @@
+
+
+You can also start a workflow without adding one or more resource(s) to the change set:
+
+
+Open the workflow window.
+
+
+Choose the menu item File|New Workflow | Three-Step Publication.
+
+
+
+3* The workflow window opens with a newly created workflow and the "Compose" task automatically assigned to you. No resources added yet. A change set is a number of resources assembled in one workflow to be checked and published. To create a change set:
+
+
+Start the workflow (and add resources to the change set.)
+
+
+optional: add more resources
+
+
+optional: publication preview. If errors occur, add more resources if necessary. The preview assumes, that all resources are approved and all documents are checked-in. The preview does not check for checked-out documents. 
+
+
+optional: delegate the task
+
+
+complete the task.
+
+To create a change set you have to be a member of the relevant group.

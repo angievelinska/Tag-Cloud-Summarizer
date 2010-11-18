@@ -1,0 +1,14 @@
+
+
+Interface to implement
+
+For a generic expression you have to implement the interface com.coremedia.workflow.WfExpression. Such an expression must return a java.lang.Comparable value. If you want to use the result of your expression for further evaluation, you should return a WfValue because this is what all built-in expressions operate on.
+
+Convenience classes
+
+For convenience you can subclass from com.coremedia.workflow.common.expressions.AbstractExpression and implement the evaluate() method, which is called by the CoreMedia Workflow Server. See Example 5.5.2b for a simple example of an expression. 
+
+Define expressions
+
+The following XML fragment shows, how to define your expressions in the workflow definition.
+

@@ -1,0 +1,20 @@
+
+
+ Problem Check I enabled PBE, but no context menu appears. 
+
+Does the generated HTML source contain javascript elements where you placed the <contextinfo/> tag? The javascript always begins with if (typeof(com)!='undefined') { new com.coremedia.easyedit.ContextInfo ...
+Does the generated HTML source contain <script src="/coremedia/pbe/cap-pbe.js" language="JavaScript"></script> The generated HTML source does not contain <script src="/coremedia/pbe/cap-pbe.js" language="JavaScript"></script> 
+
+You forgot to place the <pbe:head/> in the jsp rendering your header. The java script is generated, but still no context menu appears. 
+
+You may have forgotten to add the event attribute to your <contextinfo/> tag.
+You may have forgotten to adapt the config.bsh settings of Preview-based Editing to your webapp. The context menu appears, but there is no hover effect. 
+
+You may have forgotten to provide a css style sheet for the hover effect. The WebEditor does not open when using the contextmenu from a remote computer. 
+
+You probably used localhost for the webEditorUri in config.bsh. Replace it with the name under which the computer is known in the network. The hover effect affects other elements, too. 
+
+The HTML elements that are surrounded by <contextinfo/> are probably not valid. Check the source and correct the errors.
+
+
+

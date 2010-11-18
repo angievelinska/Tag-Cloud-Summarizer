@@ -1,0 +1,7 @@
+
+3#
+Enter the name of your new folder in the name field.
+Click [Create] to confirm the procedure.
+
+The new folder appears in the folder hierarchy as a subfolder of the root folder.
+

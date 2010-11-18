@@ -1,0 +1,6 @@
+
+
+Preview-based Editing is a comfortable tool to edit websites that are generated with the CoreMedia Active Delivery Server or with the Content Application Engine. To use this feature, it is necessary to enrich the website templates with context information about the related CoreMedia resources, so that the generated web pages "know" about their corresponding documents in the content repository. The editor of the website triggers access to the editing functions via context menus in the web browser. If Preview-based Editing is enabled you get a mouseover hover effect on those elements of the preview website that have a context menu. The predefined menu items are Open Document, Open in Explorer, Open Container and Open Info.
+
+It is possible to use either the CoreMedia Editor or the WebEditor for Preview-based Editing. 
+

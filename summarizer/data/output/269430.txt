@@ -1,0 +1,3 @@
+
+
+Make sure that the WebService is running and that you can query the WSDL as described in the previous section. You cannot build the client if the WSDL is not available.

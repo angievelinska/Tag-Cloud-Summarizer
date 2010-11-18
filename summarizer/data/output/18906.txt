@@ -1,0 +1,5 @@
+
+
+For loopback connections, the servlet container must also have an HTTP port configured. The loopback URI in config.bsh must point to the HTTP port, while Apache connects to the port for the container-specific protocol (AJP, ...).
+
+The following figure explains the configuration:

@@ -1,0 +1,7 @@
+
+
+With activated Template and Content Links the original document and the generating template can be determined for all page fragments. The additional HTML code for the links messes up the layout somewhat, but there is no general prevention against it. Therefore, after editing the templates or the documents, Template and Content Links should be switched off again (see below).
+
+Sensible positioning of Template and Content Links allows convenient debugging. If an error is suspected in a template, the Template Links can be switched on. So it is possible to see which template is responsible for the faulty page fragment. As soon as the error has been corrected, the Template Links are switched off again for testing the actual layout.
+
+The Content Links can also be used for debugging, since erroneous content is often responsible for errors on the web page. For websites with closely interconnected content and online layout, Content Links can also be used for content editing by editorial staff. In contrast to the normal workflow process which involves content being edited and then a preview being shown, this reversed process involves navigation from the web page to the content. This workflow process can be more suitable, especially in the phase of revising the content.

@@ -1,0 +1,7 @@
+
+
+RequestProcessor: The CMRequestProcessor (com.coremedia.cap.wage.action.CMRequestProcessor) extends the Struts request processor by establishing a WageContext before Struts processes the request. The CMRequestProcessor has to be set as processor class in struts-config.xml by setting the attribute processorClass of the controller element to the qualified name of the class.
+
+Also configuration of the CMRequestProcessor is done via struts-config.xml. For this to work, the special configuration class com.coremedia.cap.wage.config.CMControllerConfig has to be set for the className attribute of the controller element. The generatorId (which is the name of the application scope Generator bean) and the defaultCharacterEncoding can be set here. All other configuration options that were present in eary releases of 4.1 have been moved to the wageConfig application scope bean (see wage-config).
+
+The following excerpt from struts-config.xml shows the the configuration of the CMRequestProcessor with default values set for the available configuration options.

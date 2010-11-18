@@ -1,0 +1,4 @@
+
+
+ Parameter Description -r Recursive import of files and subdirectories on entry of a directory to be imported -v Logging in info mode -v2 Logging in Debug mode -u Name of the user. -d The domain of the user. -p Password of the user
+

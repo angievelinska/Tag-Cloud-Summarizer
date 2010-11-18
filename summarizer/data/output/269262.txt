@@ -1,0 +1,9 @@
+
+
+This is a very basic example, just to make sure that your setup with Metro, Tomcat and CoreMedia CMS works properly.  On the server side, the interface Cms and its implementation CmsImpl declare the actual WebService, as you can see from the @WebService annotations.  It features a single method getResourceId which looks up the resource specified by the path argument and returns its ID.  This WebService deals with two portable artifacts:
+
+The path as argument
+The ID as return value
+
+Since JAX-WS can deal with strings directly, you do not have to care for the JAXB processing (i.e. the XML representation) for these artifacts. All you have to do is to implement getResourceId:
+

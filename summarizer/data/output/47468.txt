@@ -1,0 +1,3 @@
+
+
+If you like the prospect of automatic layout changes through the publishing of style sheets here's what you can do: Decide upon a DTD for the XML to be transformed. Generate testdata for this DTD. Enable the style sheet designers to be able to transform this data offline for testing purposes. Once they're done, copy and paste the finished style sheet into the WebEditor, test again and  then publish.

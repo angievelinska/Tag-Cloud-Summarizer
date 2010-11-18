@@ -1,0 +1,3 @@
+
+
+To feed the CoreMedia Analytics Engine, the Starter Kit provides click tracking in its JSP templates and configures Analytics to understand its website structure and page concept (see section page concept). In the JSP templates, Analytics contexts are spanned for the different areas of the page, and almost all links are specified as Analytics links, using pages, not documents as the objects to track. Taken together, this results in Analytics reports that can distinguish different Starter Kit sites and page areas for a detailed, 360 degree analysis of your website.

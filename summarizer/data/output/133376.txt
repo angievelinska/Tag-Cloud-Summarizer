@@ -1,0 +1,8 @@
+
+2#
+Select the Content Management Server option for Multi-Site or Single-Site server and click [Next].
+
+
+
+3* Now you will be asked for Search Engine options.
+

@@ -1,0 +1,3 @@
+
+
+Because commands and results are transferred using the http protocol each command will result in a http status code. Possible status codes are:

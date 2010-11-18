@@ -1,0 +1,41 @@
+
+
+For example, the definition of the property ingredients of the document type Dish in properties/corem/menudoctype.xml is:
+
+<DocType Name="Dish" Parent="Document">
+...
+<StringProperty Name="ingredients" Length="200"/>
+...
+</DocType>
+
+The generated Dish.jsp file will contain 
+<f:subview id="Dish">
+    <%@ include file="Document.jsp"%> 
+    <!-- inclusion of parent JSP file -->
+    
+    <f:subview id="ingredients">
+      <es:variable value="ingredients" var="propertyName">
+        <%@ include file="propertyeditors/String.jsp"%>
+      </es:variable>
+    </f:subview>
+    
+    <!-- all other subviews for other properties -->
+</f:subview>
+
+Editing Services for JSF allows you to create custom forms that fit the specific view of the targeted user group such a casual editors, by modifying sub views under editforms/propertyeditors or adjusting the document type templates directly for example.
+
+While this is not an "out-of-the-box" solution, it has the following advantages:
+
+The configuration level is more fine-grained: each property model and property editor component is configurable, not the form as a whole.
+There are no restrictions concerning the overall form structure. It may contain property editors and any other components (toolbars, preview areas, navigation, ...), in any layout and any order.
+Forms to edit properties from business objects can be assembled.
+
+To support this approach, an important group of building blocks are property editors. Property editors are not available as one building block, but are again assembled from more fine-grained components, converters, and models. This allows to apply standard JSF approaches in many cases, and only few Editing Services-specific features.
+
+JSF supports property editing through input components like <h:inputText>, <h:selectOneMenu>, etc., that closely resemble available HTML form elements. What JSF adds is infrastructure to
+
+do value binding: bind the value presented by the UI component to a property of a backing Bean.
+apply a converter: convert a property value to a human-readable format (basically a String) and from that format back to its typed format (String, integer, Date, arbitrary Object) in the backing Bean. This step may raise conversion errors that are reported to the user (by the <h:message> component).
+apply a validator to check the typed property value. This step may raise validation errors that are reported to the user. Only then, the component's submitted value is actually stored in the backing Bean.
+
+The following subsections explain how buttons affecting a property editor on the client-side are defined (ClientSideButtons), give a reference how to assemble property editors for all available Content property types (PropertyEditors), and finally provide guidelines for handling input errors.

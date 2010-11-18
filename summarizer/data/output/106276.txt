@@ -1,0 +1,15 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+enableDirectPublication
+ 
+
+If "true", ensures that the buttons for approval, disapproval, publication, and publication preview are displayed as buttons and included as menu items in all relevant windows for all users. Default is "false".

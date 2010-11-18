@@ -1,0 +1,14 @@
+
+
+usage: cm dbindex -u <user> [other options] [ --create | --drop |
+          --rebuild | --enable | --disable ]
+available options:
+ -b,--rebuild               rebuild index
+ -c,--create                create index
+ -r,--drop                  drop index
+ -e,--enable                enable index
+ -i,--disable               disable index
+ -p,--password <password>   password for login
+ -d,--domain <domain name> domain for login (default=<builtin>)
+ -u,--user <user name>      user for login (required)
+ -url <ior url>             url to connect to

@@ -1,0 +1,24 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+policyClass 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the class that determines the performers 
+
+varies   
+
+additonal parameters according to the implementation of the policy class
+

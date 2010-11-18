@@ -1,0 +1,12 @@
+
+
+To preview a document , either
+
+
+
+choose File | Preview | ... from the menu bar, or 
+
+
+select the document and press <ALT>+<V>.
+
+If you choose File|Preview a submenu opens up from which you can choose a specific browser or all configured browsers. From which browsers you can choose, depends on the configuration of your CoreMedia system. If you called the preview with <Alt>+<V>, all configured browsers will be called automatically.

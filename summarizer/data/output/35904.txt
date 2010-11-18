@@ -1,0 +1,5 @@
+
+
+CheckOutDocument
+
+Use this action to check-out one or more CoreMedia documents referenced by a variable.

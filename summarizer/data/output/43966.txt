@@ -1,0 +1,5 @@
+
+
+StateContentLinkFactory
+
+StateContentLinkFactory is a subclass of ContentLinkFactory displaying additional information about the condition of the current resource in the tooltip text. The icon displays folders with the appropriate folder icon and also the current state of the document (editable, checked out, approved, published). If suitable, the tooltip also contains information about who checked out, approved, or published the resource and the date of the action. ContentLinks target to the WebEditor like in the ContentLinkFactory.

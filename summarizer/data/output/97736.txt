@@ -1,0 +1,180 @@
+
+
+
+ 
+
+Menu item
+ 
+
+Sub items
+ 
+
+Function
+ 
+
+Start workflow
+ 
+
+
+ 
+
+This function is only activated, using customized workflows (depends on the license). If so, it starts a newly created workflow.
+ 
+
+Abort
+ 
+
+
+ 
+
+Aborts a workflow.
+ 
+
+Resume
+ 
+
+
+ 
+
+Continues the processing of a suspended workflow.
+ 
+
+Suspend
+ 
+
+
+ 
+
+Suspends the processing of a workflow. A task edited by a user can not be completed.
+ 
+
+Accept task
+ 
+
+
+ 
+
+Accepts a task for editing.
+ 
+
+Reject
+ 
+
+
+ 
+
+Rejects the editing of a task. It will be removed from your task list.
+ 
+
+Skip
+ 
+
+
+ 
+
+This feature can only be used in custom-made workflows (depends on the license). If so, you can skip the current task and continue with the next one.
+ 
+
+Retry
+ 
+
+
+ 
+
+If a task aborts, it will be marked as erroneous in the task list. You can restart the task after fixing the error.
+ 
+
+Nominate...
+ 
+
+
+ 
+
+You can nominate users or groups for the processing of the task in order to narrow the choice. You need the right to use this feature.
+ 
+
+User
+ 
+
+
+ 
+
+Nominate to user.
+ 
+
+Group
+ 
+
+
+ 
+
+Nominate to group.
+ 
+
+Complete task
+ 
+
+
+ 
+
+You can complete the task after finishing all work on it.
+ 
+
+Delegate
+ 
+
+
+ 
+
+You can delegate an accepted task to another user. The task will be automatically accepted by this user.
+ 
+
+Cancel
+ 
+
+
+ 
+
+You can cancel a task you have already accepted. The task can be again accepted from all authorized users.
+ 
+
+Save
+ 
+
+
+ 
+
+Saves changed workflow variables and/or edited documents.
+ 
+
+Properties
+ 
+
+
+ 
+
+Show the properties of the selected workflow process or task.
+ 
+
+Close
+ 
+
+
+ 
+
+Closes the workflow window.
+ 
+
+Exit
+ 
+
+
+ 
+
+Exits the WebEditor and closes all windows.
+
+
+
+
+
+

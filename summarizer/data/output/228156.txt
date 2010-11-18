@@ -1,0 +1,3 @@
+
+
+The following figure shows the components that interact with the Differencing Service:

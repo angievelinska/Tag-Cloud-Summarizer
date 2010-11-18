@@ -1,0 +1,8 @@
+
+
+<wage:locale>
+
+Gets the current locale from a ResourceUri parameter and sets it as session attribute. Use this tag to be able to make localized templates cacheable. Attributes:
+
+sessionKey (optional): the key under which the locale should be set as sesstion attribute, defaults to org.apache.struts.Globals.LOCALE_KEY
+uriParameter (optional): the ResourceUri parameter containing the locale, defaults to CMRequestProcessor.PARAM_LOCALE 

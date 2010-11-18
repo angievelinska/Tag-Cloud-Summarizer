@@ -1,0 +1,6 @@
+
+
+<Filter> 
+
+Child elements: <Predicate>
+ Parent elements: <Explorer>, <ResourceChooser>  

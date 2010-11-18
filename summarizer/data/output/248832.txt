@@ -1,0 +1,12 @@
+
+
+Like document views, property views are called via a jsp:include or context.include(...) on a PropertyUri. If the template-ID is left out, the configurable default view is used (see Section 4.4.1.5). Examples for this use of DocumentPropertyUris can be found in Section 4.4.1.4. An example for the explicit execution of a particular property view is the following code line from a JSP template:
+
+
+  context.include(pageContext,document.getPropertyUri("text","default"));
+
+
+Here, the (predefined) view default is executed on the property text of the current document. The ViewDispatcher determines the type of the property, let us assume Xml<mygrammar>, resulting for example in Xml/mygrammar/default.jsp.  If the view for this property type is not implemented, the implementation of the supertype Xml and therefore the template /templates/proptypes/Xml/default.jsp is used.
+
+
+

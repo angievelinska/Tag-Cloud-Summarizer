@@ -1,0 +1,5 @@
+
+
+This chapter demonstrates how WAGE can be used to build your own customized CoreMedia Web applications with content editing and workflow functionality.
+
+We will use the document type model of the Menu Site sample project as known from the CoreMedia SCI Developer Series with the following document types:

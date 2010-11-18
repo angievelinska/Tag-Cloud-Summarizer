@@ -1,0 +1,3 @@
+
+
+First the Spring application context is created. BeanFactory and its implementation FileSystemXmlApplicationContext are part of the Spring Framework in the Java packages org.springframework.beans.factory and org.springframework.context.support. The next statements retrieve Feeder and FeedableFactory implementations from the application context. You can use them to send data to the Search Engine as described in the API documentation of the Java package com.coremedia.cap.feeder.

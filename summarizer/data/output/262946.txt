@@ -1,0 +1,23 @@
+
+
+Comments and Ratings
+
+On article pages, logged in users will be presented with a form to enter a comment and the rating field will be editable. New comments will not be approved when they are first submitted. The SSE Management Views allow editors to walk through the submitted comments and approve or reject them. End-users will see all approved comments submitted by other users and all of their own comments, including the information whether it has been approved or rejected.
+
+Submitted comments will be stored as SSE resources of type com.coremedia.sse.base.model.XhtmlUserContent. Newly submitted comments must be approved before they will be visible to users other than the comment author. The comment author is informed about the pending approval or rejection of the comment in the comment¿s metadata line.
+
+User ratings will be stored as SSE relationships of the plug-in specific relationship type com.coremedia.sse.plugin.feedback.model.StarRating, which is a subtype of com.coremedia.sse.base.model.Rating. Each rating is represented by 1 to 5 stars (and stored with corresponding rating values of 1.0-5.0 by SSE). The average shown is the arithmetic average over all submitted user ratings.
+
+Only one rating is stored per user and article, but users may edit their  rating value at any time.
+
+Recommendations
+
+The Recommendation Engine uses a collaborative-filtering approach to identify documents to recommend to the current user: An estimate of a user's rating of a document is computed by combining the ratings of the document by similar users, where a user is similar to another one if they rated similarly in the past. So for the Recommendation Engine to generate recommendations for a user, (a) the user must have rated documents and (b) there must be other users that rated similarly and at least one document not rated by the original user.
+
+To compute recommendations based on the current ratings, you have to execute the Recommendation Engine by calling http://<your server>/starterkit/servlet/flow/recommend?method=PUT.
+
+Approving comments
+
+As mentioned above, an editor has to approve newly submitted comments before they will become visible to end-users other than the comment author.
+
+Editors may use the standard SSE Management Views web application to approve new comments. See the Social Software Extension Manual for details on this application.

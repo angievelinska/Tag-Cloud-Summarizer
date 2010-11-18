@@ -1,0 +1,11 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+name 
+
+Name of the process, for which the view should be configured.

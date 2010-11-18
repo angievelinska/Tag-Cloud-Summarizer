@@ -1,0 +1,5 @@
+
+
+This chapter describes the content of all configuration files which you can use to configure the CoreMedia Content Servers.
+
+Some property files contain additional property entries which are not described in the Administration Manual. As a rule, these properties are for special, system-relevant settings which you should not change.

@@ -1,0 +1,7 @@
+
+
+Start with the installation of FAST InStream. Do not start FAST services after installation. 
+
+Copy CoreMedia configuration files
+
+You have to copy the CoreMedia configuration files shown in the next table to every server of your Multi Node environment. <InstallDir> refers to the installation directory of your FAST InStream installations.

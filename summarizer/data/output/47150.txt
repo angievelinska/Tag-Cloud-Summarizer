@@ -1,0 +1,13 @@
+
+
+Since Java frameworks like the Struts Web application framework often use the JavaBean pattern to access business objects, WAGE allows you to access CoreMedia resources as JavaBeans.
+
+For example for a CoreMedia resource, every implied resource property and every document property is accessible as a bean property of the resource object.
+
+As CoreMedia document types and workflows can be defined individually in every project, there can't be a single class or an interface that represents all CoreMedia resource properties as bean properties for every document type. There has to be some kind of dynamic, but nevertheless JavaBean-conformant interface.
+
+As "normal" JavaBeans are not that dynamic, CoreMedia client document objects implement the DynaBean interface (org.apache.commons.beanutils.DynaBean) from the Jakarta Commons project. The Bean Utilities framework takes into account the shortcomings of JavaBeans when it comes to flexibility. In some frameworks like the JSP 2.0 expression language, java.util.Map is used for dynamic Beans. While a Map is arbitrarily dynamic, it lacks some kind of typing and reflection of properties. A DynaBean is a Java object that supports properties whose names and value data types, as well as values, may be defined during runtime. Each DynaBean has a DynaClass that describes the (fixed) set of typed properties for this DynaBean, like java.lang.Class does for "normal" Java objects. The only difference is that a DynaClass itself can be constructed at runtime. For further information about DynaBeans and DynaClasses, see the online documentation of the BeanUtils component of the Jakarta Commons project.
+
+Another problem you face when developing Web applications is that Web forms only offer very limited capabilities to edit typed data. In fact, HTML only supports strings (input fields), booleans (checkboxes), and enumerable values (selectors / combo boxes). Business objects like the CoreMedia resources and workflow objects need additional data types like dates, numbers, rich text, and lists of (references to) objects.
+
+The WAGE API provides objects that add DynaBeans accessebility to Active Delivery Server objects and Workflow Client objects so that these can be used conveniently in Web applications.

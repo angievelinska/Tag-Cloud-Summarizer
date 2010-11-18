@@ -1,0 +1,3 @@
+
+
+The CoreMedia Starter Kit supports internationalization of its content using a Language property and links between different language versions of the same content.

@@ -1,0 +1,39 @@
+
+
+You can define some attributes for your command in a properties file. The attributes are shown in the GUI and the names must follow the scheme:
+
+
+<command-name><suffix>=<value>
+
+
+<Suffix> can take the following values:
+
+
+
+
+Label: The text which is shown in the menus.
+
+
+
+MenuItemLabel: The text of a menu item.
+
+
+
+Image: The icon which is shown in the toolbar.
+
+
+
+ToolTip: The text which is shown as a tooltip.
+
+
+
+Mnemonic: The shortcut which can be used to start the command.
+
+
+Please notice that <command-name> is not the class name of your command but the name registered at the CommandManager. So it is possible to register several commands with the same name.
+
+
+Example:
+
+
+You have created a command called MakeCheaper:

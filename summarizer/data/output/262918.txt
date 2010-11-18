@@ -1,0 +1,14 @@
+
+
+Installation-time configuration via configuration files
+
+The User Feedback Plug-in contains the standard SSE configuration files in /WEB-INF/spring/sse, and /WEB-INF/spring/sse-flows. Plug-in specific configuration files reside in /WEB-INF/spring/userfeedback-plugin. Use the files for the following configuration:
+/WEB-INF/spring/sse/sse.properties
+Configure the SSE repository database connection parameters.
+/WEB-INF/spring/sse-flows/sse-flows.properties
+Configure the SSE repository database connection parameters. You can also choose to remove the recommendation engine from the web application by removing /WEB-INF/lib/coremedia-sse-recommend.jar and /WEB-INF/spring/sse-flows/*. See the Social Software Extension Manual for details.
+/WEB-INF/spring/userfeedback-plugin/dispatcher-servlet/userfeedback-pbe.properties
+A plug-in specific action is added to the PBE menu in /WEB-INF/spring/userfeedback-plugin/dispatcher-servlet/userfeedback-pbe-actions.xml. It provides a direct link from an article to the SSE Management Views to support the approval of comments.
+Set property sse.editor.approve.pbe.url to the URL of your SSE Management Views installation.
+Configure the /sse-editor web application according to the description in the Social Software Extension Manual (basically, this includes configuration of the database connection parameters in /WEB-INF/spring/sse/sse.properties).
+

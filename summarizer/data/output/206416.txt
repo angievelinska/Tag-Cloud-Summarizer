@@ -1,0 +1,50 @@
+
+
+ Symbol Nr. Sub Items Function (1) All defined paragraph formats Formats the current paragraph with the selected paragraph format. (2) All defined fonts. Sets the selected font for the text. (3) All defined font size Sets the selected font size for the text (4)  Removes all formatting from the selected text. (5)  Format text as bold. (6)  Format text as italic. (7) 
+
+
+
+Underline
+
+Strike through
+
+Superscript
+
+Subscript Format text. (8) 
+
+Allign left
+
+Center
+
+Align right
+
+Justify Defines the alignment of paragraphs. (9) All defined paragraph formats Formats the current paragraph with the selected paragraph format. (10) All defined background colors  (11) All defined font colors Sie wählen die Textfarbe. (12) All defined languages Sie wählen eine Sprache für den ausgewählten Text. (13) 
+
+Link...
+
+Internal Link...
+
+Insert an image... Sie fügen Verweise oder Bilder ein. (14) 
+
+Insert a table...
+
+Insert column left
+
+Add column right
+
+Delete selected columns
+
+Insert row above
+
+Add row below
+
+Delete selected rows
+
+Split merged cells
+
+Split cells horizontally
+
+Split cells vertically
+
+ Insert and format tables (15)  Open the attribute editor for the selected element.
+

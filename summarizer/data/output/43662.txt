@@ -1,0 +1,3 @@
+
+
+As the result, the method delivers an object of theBlob class, which represents the binary object stored in the property of the document. The Blob class has four methods: getContentType and getSize for requesting metadata, and writeOn and getInputStream for accessing the actual content.

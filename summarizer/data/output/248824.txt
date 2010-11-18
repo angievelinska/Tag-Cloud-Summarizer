@@ -1,0 +1,16 @@
+
+
+The ADS identifies pages with the help of URIs (Uniform Resource Identifiers), as defined in RFC 2396 (see e.g. http://www.rfc-editor.org/rfc/rfc2396.txt). URIs are a generalization of the URLs known from the Web and offer a structured, compact text form for unique naming of resources. 
+
+In the Generator API, all URIs are represented as URI objects instead of strings. Here, the classes from the hox.net packet help by allowing structured access to the URI components as described in RFC 2396. In the hox.corem.servlets packet, these classes are specialized further into ResourceURIs which store all information relevant for the ADS for designating a page. 
+
+A ResourceURI uniquely identifies a page which has been or will be created by the ADS. The ResourceURI consists of up to five components: 
+A resource ID. Since a page typically displays a certain resource, the identity of this resource partially identifies the page. Of course, the contents of further resources can also appear on the page; the primary resource is only used for simpler handling. If there is no primary resource for a page, the root folder of the CoreMedia repository with ID=1 is normally used. 
+A template ID. This is a string identifying the template for displaying the page. In the simplest case, it is the name of the used JSP template  (see Section 4.4). The template ID can also be left out. In this case, the template finder uses a default template. 
+A version number. If the resource ID references a document (and not a folder), the version number distinguishes between the pages created for the different versions of the document. The version number determines the version of the document which is presented to the template code on access. If the version number is left out, the most recent version is used. 
+A property name. If the resource ID references a document, a property name can be set and evaluated by both the template finder and the template itself. This feature is most often used for blob properties in order to deliver the binary content (possibly transformed by the template). Otherwise, the property name is simply left out. 
+Any number of key/value pairs as parameters. Keys and values are strings. A key can occur multiple times so that more than one value can be assigned to it. The order of the parameters is significant. Neither key nor value may be null. 
+
+The possible variants are represented by different classes: the abstract, overlying class ResourceUri (resource ID, template ID, parameters) is divided according to the resource being referenced into FolderUri and DocumentUri (additionally with version number) and the PropertyUri class adds the property names to a DocumentUri. 
+
+In the Active Delivery Server, ResourceURIs are used for different purposes: for a template, the URI components are evaluated for page generation, especially the resource designates the subject of the generated page (see Section 4.2). URIs of other pages may be embedded as links into the generated page (see e.g. Section 4.2.3.6). Instead of linking, URIs are also used to identify page fragments for insertion into the current page (see Section 4.2.6). Finally, ADS uses URIs to uniquely identify pages which have already been created (see Section 4.5). 

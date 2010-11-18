@@ -1,0 +1,3 @@
+
+
+In general, document types will be defined in the development phase of your content model. They are the "backbone" of your CoreMedia application and therefore are assumed to be stable. Nevertheless, new requirements might demand changes in the document model while preserving the existing content. In this chapter you will find a description on how to add and remove document types and attributes to  and from your content model.

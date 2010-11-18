@@ -1,0 +1,9 @@
+
+
+
+4#
+Select the directory of your Starter Kit installation.
+The CLiP requires the SSE User Feedback Plug-In. Click the checkbox to install it. 
+Click Next.
+
+The next window allows you to configure the database used by the SSE User Feedback Plug-In.

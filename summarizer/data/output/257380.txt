@@ -1,0 +1,45 @@
+
+
+The following options are available:
+
+
+Search for: the text to be searched for
+
+
+Replace by: text to replace the found text
+
+
+Case-sensitive search: determines whether lower and upper cases matter. Not activated by default.
+
+
+Properties: lists all searchable text fields of all document types of the selected documents. The names of the properties are composed of <document type>.<field name>. Select some of them, or select all by pressing the keys <Ctrl>+<A>.
+
+
+
+
+Set the options according to your specific requirements and type in the search text and the text to replace it with.
+
+
+
+Finish the creation of the document list via the menu item File|Complete task resp. the symbol bar item.
+
+
+Now the Search and replace task will automatically be assigned to you and you have three possibilities to proceed:
+
+
+Execute the task in the CoreMedia Editor:
+
+
+Open the CoreMedia Editor and process the task as shown in Kapitel.
+
+
+Reject the task:
+
+
+Chose File|Reject or the toolbar item. The task will be offered to all authorized users.
+
+
+Delegate the task:
+
+
+Chose File|Delegate or the respective toolbar item. A dialog box opens which displays all authorized users. Chose the appropriate user and click [Chose]. The task will be automatically assigned to the user who can handle the task in the CoreMedia Editor.

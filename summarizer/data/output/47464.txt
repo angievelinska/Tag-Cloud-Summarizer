@@ -1,0 +1,3 @@
+
+
+Working with cacheable templates can be a burden to developers, since the templates have to be reinvalidated frequently via the Admin Pages. A good workaround is to include a little button that is included in every page to be developed and which links directly to /coremedia/develop/templates.jsp?URI=all. A click on this link will purge the cache.

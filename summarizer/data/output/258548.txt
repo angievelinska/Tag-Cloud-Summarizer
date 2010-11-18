@@ -1,0 +1,12 @@
+
+
+As stated before, custom Spring-configuration files (bean and property configurations) are loaded from the WEB-INF/spring directory or its sub directories.  The framework configurations on the other hand are loaded from the cap-objectserver-webapp-config.jar or cap-objectserver-webapp-uapi-config.jar files, where the latter contains the Unified API dependent configurations.
+
+In WEB-INF/spring you will find the following files
+
+cae-contentbeans-example.xml
+cae-controllers-example.xml
+cae-linkschemes-example.xml
+
+which are example configurations for controllers, content beans, and link schemes. In a project, these files will typically be replaced by application specific configurations. The files contain detailed information on how to use them for configuration. 
+

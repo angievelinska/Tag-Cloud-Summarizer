@@ -1,0 +1,18 @@
+
+
+The configuration of a transformer mostly is too complex to store all necessary information in a single property, and therefore consists of several properties. The next component of the name after the prefix is a number. All transformer properties with the same number refer to the same transformer.
+
+
+The number has a further function: it determines the order in which the transformers are executed during operation.
+
+
+The number is followed (possibly hierarchically subdivided further) by the actual name of the property. For each transformer, the corresponding Java class must be specified with "class". Furthermore, for logging purposes, each transformer should be given a name. All further properties depend on the particular type of the transformer and describe e.g. stylesheets or filter data. These details will be dealt with in later sections in relation to the specific transformers.
+
+
+The file corem/properties/cm-xmlimport.properties which serves as an example for importer configuration, contains a complete (commented out) example for the configuration of an XSLT transformer and a user-defined transformer.
+
+
+We recommend not to use too many transformers, since errors can easily creep in when you make changes to one transformer and oversee effects of the intermediate format for the following transformer. Typically, you should use one or more XSLT stylesheets. 
+
+
+

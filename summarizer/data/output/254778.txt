@@ -1,0 +1,13 @@
+
+
+The verbose output of the publications tool looks like this (sample, one publication only):
+
+pending publications:
+  publication: coremedia:///cap/publication/3
+    priority: 60
+    user: rolf (coremedia:///cap/user/102)
+    preview: false
+    size: 4
+    stage: 4
+
+You can also run publications without the -v option and obtain the details of a publication with the dump tool (see section x.1.1).

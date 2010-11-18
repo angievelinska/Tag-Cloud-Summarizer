@@ -1,0 +1,42 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Optional
+ 
+
+Description
+ 
+
+class
+ 
+
+No
+ 
+
+The fully qualified class name of the builder to use.
+ 
+
+scheme
+ 
+
+Yes
+ 
+
+The builder generates values for keys of this scheme. If not set, the fully qualified class name is used.
+ 
+
+any
+ 
+
+Yes
+ 
+
+A custom attribute for which a corresponding setter method exists.
+
+
+

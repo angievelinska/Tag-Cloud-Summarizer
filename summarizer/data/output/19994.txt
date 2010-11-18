@@ -1,0 +1,16 @@
+
+
+The fields of the document type Dish should now be configured as follows:
+
+Pictures
+3* A selection list should be presented here.
+Description
+3* This field must be filled, since it is necessary for a dish.
+price
+3* Three different prices should be made available for selection here.
+name
+3* This field should be filled with the initial value "New Dish".
+calories
+3* This field should only be displayed and filled with the initial value "200".
+
+Once the configuration has been carried out, a document of type Dish appears as follows:

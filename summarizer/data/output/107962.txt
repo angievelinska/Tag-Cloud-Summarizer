@@ -1,0 +1,5 @@
+
+
+Read a fragment value
+
+You can use the static method introduced above to get a key for a fragment you want to read. The method #get(String) of the com.coremedia.generator.GeneratorCache interface returns a fragment value for a key as the following example shows:

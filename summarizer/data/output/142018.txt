@@ -1,0 +1,5 @@
+
+
+Troubleshooting
+
+The following table may help to solve problems you may encounter while enabling Preview-based Editing:

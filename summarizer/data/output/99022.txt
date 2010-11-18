@@ -1,0 +1,14 @@
+
+
+Instead of the "warning" value in the third line, you can also use the log levels "error", "critical", "alert" or "emergency".
+
+
+Apache Log4J
+
+
+The following CoreMedia component use Log4J logs:
+
+
+
+
+JMS Receiver

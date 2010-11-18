@@ -1,0 +1,3 @@
+
+
+The predefined Robot Percentage Report displays the percentage of "non-seen traffic" caused by robot visits in relation to the complete traffic for the selected site.

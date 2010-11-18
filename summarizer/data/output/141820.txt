@@ -1,0 +1,53 @@
+
+
+From this publication preview result you can:
+
+
+
+
+approve documents,
+
+
+
+undo the approval of documents,
+
+
+
+check the links from documents to other documents,
+
+
+
+check the links from other documents to documents,
+
+
+
+start the publication preview anew, or
+
+
+
+publish single documents,
+
+
+via  File menu,  icons or context menu.
+
+
+After you have made the required changes, start the publication preview anew. If a positive result is displayed, this document is ready for publication. You can publish as follows:
+
+
+
+
+Select Publication from the File menu.
+
+
+
+Click on the publication icon.
+
+
+
+In the Overview window or in the Publication window, select Publish from the context menu.
+
+
+The document has been published. The status is shown by the status icon for 'published'.
+
+
+If you are confident in the correctness of your change set, you can also click the publication symbol directly, skipping the preview phase. 

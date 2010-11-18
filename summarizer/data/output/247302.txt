@@ -1,0 +1,10 @@
+
+
+It is possible to select more than one component at the same time, e.g. a CoreMedia Content Server and an Importer. 
+
+Some components require more detailed specification and configuration during setup. This is described in the next chapters. For the installation of the .Net Application Bridge please refer to the .Net Application Bridge Administration Manual.
+6#
+Select the components for installation and click [Next].
+
+After selection and confirmation of required options, the next installation window asks for the installation directory.
+

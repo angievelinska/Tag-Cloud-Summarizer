@@ -1,0 +1,3 @@
+
+
+The template is optimized so that the data of the blob is not output on an HTTP-HEAD access (line 22). On the other hand, for a normal GET, the data is written directly into the output stream of the HTTP response (line 23). 

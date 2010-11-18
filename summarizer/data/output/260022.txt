@@ -1,0 +1,5 @@
+
+9#
+Enter the properties and click Next to proceed with the installation.
+
+The Content Delivery Environment needs an own database user for operation. The properties have the same meaning as for the Content Management Server database.

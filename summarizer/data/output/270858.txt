@@ -1,0 +1,5 @@
+
+
+You can now minimize, maximize and restore the portlet window by clicking on the window controls. There are no icons to switch to other portlet modes because the edit mode is only available for logged-in users and the help mode is not implemented in the Hello World portlet.
+
+The next section explains how a logged-in user can use the edit mode to set user-specific preferences for the portlet.

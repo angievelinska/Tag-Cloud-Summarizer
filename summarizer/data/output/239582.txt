@@ -1,0 +1,30 @@
+
+
+<WebBrowser>
+
+Parent elements: <WebBrowsers>
+
+
+
+<WebBrowsers>
+  <!-- Standard Windows IE installation -->
+  <WebBrowser id="Internet Explorer" os="win" 
+  command="c:\\Program Files\\Internet Explorer\\Iexplore.exe %s"/>
+
+  <!-- IE installation in german locale on Windows -->
+  <WebBrowser id="Internet Explorer" os="win" language="de" 
+  command="c:\\Programme\\Internet Explorer\\Iexplore.exe %s"/>
+</WebBrowsers>
+
+
+This element configures web browser installations for a given locale and operating system. Web extensions (see <WebExtension>) may open several web browsers (Preview) or the first matching web browser (Query Editor and Differencing). Therefore the order of <WebBrowser> elements is important.
+
+The example above configures two Windows web browsers, one with language attribute set to `de¿. If a web extension running on German locale wants to select a browser, it should open the German browser. A precedence list defines which browser is selected.
+os
+language
+country
+no attribute
+
+In the example above, for both browsers the os attribute has been set but the German browser is selected because it has a language attribute that matches the language of the German locale. If you delete the os attribute in the German browser configuration, the other browser will be opened.  
+
+ 

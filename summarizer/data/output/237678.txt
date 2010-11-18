@@ -1,0 +1,3 @@
+
+
+elThe next figure shows an overview of the CoreMedia system. The part in dark blue highlights the application area of the Delivery Developer Manual.

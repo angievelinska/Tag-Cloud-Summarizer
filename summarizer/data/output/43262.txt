@@ -1,0 +1,3 @@
+
+
+The CoreMedia SCI offers a generic XML layer for your convenience. All markup produced by the relevant Java classes is conformant to the CoreMedia DTD (lib/xml/coremedia.dtd).

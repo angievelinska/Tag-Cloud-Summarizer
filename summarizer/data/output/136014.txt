@@ -1,0 +1,42 @@
+
+
+Element String
+
+This elements configures String properties for indexing.
+
+Parent element: PropertyTypes
+
+Child elements: none
+
+Attributes: none
+
+Element Integer
+
+This element configures Integer properties for indexing.
+
+Parent element: PropertyTypes
+
+Child elements: none
+
+Attributes: none
+
+Element Date
+
+This element configures Date properties for indexing.
+
+Parent element: PropertyTypes
+
+Child elements: none
+
+Attributes: none
+
+Element LinkList
+
+This element configures LinkList properties for indexing.
+
+Parent element: PropertyTypes
+
+Child elements: none
+
+Attributes: none
+

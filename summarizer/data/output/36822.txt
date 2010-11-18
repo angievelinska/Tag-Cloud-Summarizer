@@ -1,0 +1,7 @@
+
+
+Integer
+
+Grammar: EMPTY 
+
+The Integer element is used to specify a single constant integer value within expressions or variable initializers.

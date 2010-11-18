@@ -1,0 +1,18 @@
+
+
+Most objects returned by the Unified API support object serialization as per java.io.Serializable for persistent storage. While you should normally keep all persistent CMS data in the content and workflow repositories, serialization might be appropriate for short term storage, for example when maintaining conversational state in a web application.
+
+Serialization itself requires no additional setup. Mutable objects will write their identity to the ObjectOutputStream, while values write their value. One piece of information is lost, however: the connection is not written to the stream. This is because a connection maintains a complex dynamic state and because it keeps security credentials that should not be externally accessible.
+
+Therefore, you have to provide a connection when deserializing a Unified API object. This is done by registering a connection at the class DefaultConnection. You can register a connection for the entire JVM. However, we recommend that you register a connection specifically for the thread that deserializes the objects. For an example, see the following code fragment:
+
+  CapConnection old = DefaultConnection.setLocal(myConnection);
+  try {
+    object = objectInputStream.readObject();
+  } finally {
+    DefaultConnection.set(old);
+  }
+
+Here a specific connection myConnection is set before accessing the stream. By resetting the connection after deserializing, we avoid unexpected side effects to calling code.
+
+Besides the connection, also its sessions, its repositories, and its services cannot be serialized. Moreover, Blob objects do not support serialization. While blobs provide a value semantics, storing them in the object stream would be undesirable due to their size, so that a write of a blob normally indicates an error. If you want to serialize blobs, you can do it manually by converting the blob to a byte array during a writeObject method.

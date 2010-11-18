@@ -1,0 +1,27 @@
+
+
+In order to activate the ContextMenuRenderer, or the ToolbarRenderer (in this section now called render) please change the file WEB-INF/spring/editing-jsf/dispatcher-servlet/pbe.properties of your web application. Add the following property for the ContextMenuRenderer:
+
+pbe.renderName=pbeInlineContextMenuRenderer
+
+And for the ToolbarRenderer:
+
+pbe.renderName=pbeToolbarRenderer
+
+Usually these properties are already available in the property file, you only need to uncomment the entries. 
+
+Setting the URI pointing to the ActionExecutionController
+
+If you are using one of the above mentioned renderer, you need to configure at least one property: the commandUriPrefix. It contains the URI which points to the ActionExecutionController. To change that URI customize the property: pbe.renderer.commandUriPrefix in the file pbe.properties. The URI is relative to the context path. The following line configures this property:
+
+pbe.renderer.commandUriPrefix=/servlet/command/
+
+For a detailed list of properties which may be altered, please have a look at the framework beans: pbeAbstractToolbarRenderer, and pbeInlineContextMenuRenderer and the corresponding JavaDoc of the bean classes.
+
+Configuring of the ActionExecutionController
+
+The bean configuration for the ActionExecutionController is located at: framework/spring/editing-jsf/dispatcher-servlet/editing-jsf-controllers.xml. The bean property: executableActions is a List of Action bean names which are allowed to be executed by that controller. 
+
+The ActionExecutionController is mapped under in the dispatcher servlet under: /command/* as defined by the bean definition named: actionExecutionControllerMapping in framework/spring/editing-jsf/dispatcher-servlet/editing-jsf-controllers.xml.
+
+Keep the configured actionExecutionControllerMapping ("/command/") in sync with the property commandUriPrefix of the Renderer.

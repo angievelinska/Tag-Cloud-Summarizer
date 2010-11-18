@@ -1,0 +1,46 @@
+
+
+The generic query classes have the following properties and follow these conventions:
+
+Every query has a name, which is used by the consolidator to identify and optionally remap and merge y values from more than one query. Query names should be per convention 'Q1', 'Q2'.
+The data source implicitly used by the query is the data model¿s defined data source.
+
+Provide the SQL statement to be executed in the property `sqlStatement¿. You may use placeholders, which are denoted with curly brackets. Example: A placeholder named `length¿ is denoted as '{length}' (without apostrophes) in the SQL statement property.
+
+
+
+The placeholder 'cond' is used throughout all reports to represent the (dynamically composed) SQL `WHERE¿ condition.
+
+
+
+
+Three (implicit) placeholders are used to reflect the query type (Raw, PreAggregated or PreConsolidated). They are used throughout the predefined reports:
+
+
+
+The (single value) `baseTableName¿ placeholder specifies the name of the single database table that contains the pre-aggregated data. During query preparation it will dynamically be mapped to the concrete database table which is suited best to the selected time range and resolution (see #ref#). Depending on the query type chosen (see table above), the baseTableName will be suffixed OR NOT. In RawRelationDataModelQueries, the basetable name will not be suffixed.
+
+
+
+The (implicitly defined) placeholder 'intervalTypeIdentifier' will generate the time interval suffix (without leading underscore) that will be appended to the base table name.
+
+
+
+The (implicit, single value) `timeColumnName¿ placeholder names the table column that contains the data entries' time information. For the given timeRange and timeResolution dimension constraints, a time-based SQL condition clause will be generated. Per default, the timeColumnName is set to 'EVENTINTERVALSTART.
+
+
+
+The baseTableName and timeColumnName placeholders and their mappings can be customized, and more than one baseTableName and timeColumnNames can be set. More information can be found in the paragraph below.
+
+In general, the SQL statement must bind the domain value (the value that represents the x-axis value) to the name `X_VALUE¿ in the SQL result set. Use the SQL `as¿ expression to rename query result columns. Example: 'select page_id as X_VALUE ¿'
+For category results, the X_VALUE should be of an SQL String type that is JDBC-convertible to java.lang.String. For time series results, the X_VALUE must be of SQL type Timestamp. Time series queries will internally convert it to `long¿, representing milliseconds. If you want to use other types of domain values you must define customized queries, query result consolidators and possibly define customized report templates.
+Numeric values (floating-points and integers) are automatically mapped with their uppercase DB Column name. Default value names are 'Y0' and 'Y1'. While arbitrary keys can be used, it is best practice to use identifiers 'Y' + index. Please note that the consolidator can be instructed to remap query result values, e.g. value 'Q1.Y0' (= the value 'Y0' sent in by query 'Q1') to its internal name 'Y1', 'Q2.Y0' to 'Y2'. This way, variable name clashes can be avoided. More on consolidator configuration can be found in the following paragraphs. Names like 'X_VALUE' or 'X_VALUE_DISPLAYNAME' should be avoided, since they will not appear in the result: The x value and its display name have precedence.
+String and Boolean values are automatically mapped with their uppercase DB Column name and treated as (additional) attributes. There are no default keys for these values. Names like 'Y0' or 'X_VALUE' should be avoided, since y values and x value will have precedence.
+An optional String value named 'ANNOTATION' will be mapped as the value annotation. The value annotation is intended to be used as a textual explanation of a data entry. Example: A Time series report where points in time are annotated as "Relaunch of Site X", "Import of content", etc.
+
+
+No other DB query result fields will be mapped.
+
+
+
+Please note: Per default all mentioned fields will be passed through the processing chain and in the end will appear in the result (e.g. the XML report output). The consolidator can be configured to filter out intermediary values or values not intended for output by configuring its resultRemoveFieldsExceptCSV name list property. More details will be given in the following paragraphs.

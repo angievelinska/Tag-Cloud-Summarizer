@@ -1,0 +1,7 @@
+
+
+This reports shows the number of internal search requests that are handled by the CoreMedia Search Engine. As an administrator, they allow you to judge the load on the search engine. As a site designer, they allow you to judge whether is search facilities are accepted by the site's visitors.
+
+Like the Top Internal Search Terms Reports, these reports are available in two flavors: for a specific collection and as a summary of all collections. You may select the time interval and the time resolution for the report and in the specific report you may set the collection to analyze.
+
+The reports are presented similar to the Performance report. Bars indicate the number of search requests performed during given time intervals.

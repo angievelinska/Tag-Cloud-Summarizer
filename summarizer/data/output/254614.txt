@@ -1,0 +1,3 @@
+
+
+If you get serialization errors of the workflow server after updating the system, you need to run the workflowconverter utility (see Section 5.6.20).

@@ -1,0 +1,11 @@
+
+
+Serving web browsers always means serving HTML which is actually SGML. Most HTML documents on the web are not even conformant let alone parsable by an XML parser. 
+
+To overcome this deficiency the W3C has issued a new version of HTML called XHTML, which is well-formed HTML. 
+
+When using XSLT to serve content to a web browser, you'll end up serving XHTML. There're some points to keep in mind when doing this: 
+
+Some browsers, most notably Netscape, have problems with empty tags like <b/>. Solve this problem by using an hox.text.xml.XHtmlUnparser. 
+Do not forget to set the correct MimeType in your JSP: text/html 
+

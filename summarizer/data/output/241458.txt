@@ -1,0 +1,15 @@
+
+
+To be able to modify CoreMedia resources without having to write all changes to the Content Server immediately, WAGE stores all changes to a ClientResource or a VariableAssignment in the user's session.
+
+The object keeping track of local changes is a ChangeCollector (com.coremedia.cap.wage.ChangeCollector). Every client session has got it's own ChangeCollector, or may even have more than one. Only after the ChangeCollector.commit() method is called, the collected changes are actually performed on the Content Server.
+
+As there can be multiple ChangeCollectors at a time (one for each client, and also a single client can use multiple ChangeCollectors), it is possible that different clients try to make incompatible changes to resources (for example one client links a document, while another client deletes it).
+
+As the ChangeCollectors do not know of each other, these incompatibilities in changes can only be discovered when trying to commit the local changes of a ChangeCollector to the server.
+
+Therefore a call to ChangeCollector.commit() returns a List of CommitFailure (com.coremedia.cap.wage.CommitFailure) objects, which denote any exceptions raised during commit, together with the bean (content resource or workflow variable assignment) and the property (if applicable) for which the exception was raised. You can also retrieve this list any time until the next commit() by calling ChangeCollector.getCommitFailures().
+
+After calling commit(), the ChangeCollector still contains all changes which couldn't be committed successfully. So only if the ChangeCollector is empty after a submit, all changes have been committed successfully. Otherwise, you should implement error handling behavior that modifies the changes until the changes can be committed. Here, it is allowed and sometimes necessary to use the "internal" ChangeCollector API (see warning below). You may want to use the very helpful method CMRequestProcessor.getCommitFailuresAsActionErrors() that converts WAGE CommitFailures into Struts ActionErrors (see example-1-action).
+
+You can also control if the ChangeCollector should try to automatically check out and/or check in documents by calling its setAutoCheckOut() and setAutoCheckIn() methods respectively. The default is neither to check out documents automatically (since this prohibits caching), nor to check them in (you probably want to keep a document checked-out for editing for some time and avoid too many versions). You can override this default using the methods setDefaultAutoCheckInMode() and setDefaultAutoCheckOutMode() of the wageConfig bean (see wage-config), preferably in the config.bsh of you Web application.

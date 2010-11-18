@@ -1,0 +1,54 @@
+
+
+Portal Link 1.0 is a specification (designed by CoreMedia) describing the way of setting links inside a portal page. From a structural point of view, such a link has these properties:
+
+Type: One of Page, Binary, External or Resource
+Uri: The "Uniform Resource Identifier" locating the linked data. 
+For types Page, Binary and Resource it's formatted as [/path]?[query] (e.g. /webapp/products/phone?view=teaser) where path consists of: Context Path, Servlet Path, and PathInfo (see the "Java Servlet Specification" for details). 
+The type "External" is formatted as [scheme]://[authority][/path]?[query] (e.g. http://myserver:8001/webapplication/servlet/content?id=5).
+Fragment (optional): A certain section inside the content.
+Container (optional): The place where the content should be displayed. The concrete semantic of a container depends on the type: For a Page Link a container denotes a portlet. For a Binary, Resource or External Link a browser window name is meant. A value . ("dot") always denotes the current portlet/window.  
+Container Features (optional): Additional container properties may be specified as key/value pairs, e.g. "width=10,height=20". A feature "com.coremedia.portlet.standalone=true" asks the link target to be opened in a new window without the portal environment such as navigation etc. The use of certain features depends on the concrete portal (see below).   
+
+XML Portal Links 
+
+When writing a link using XML, a single attribute uri with namespace http://www.coremedia.com/cms/portal/link/1.0 must be defined. The attribute's value is formatted according to RFC 2396 which defines a format like <scheme>://<authority><path>?<query>#<fragment>. This format's parts are used as follows
+
+<scheme>: For types Page, Binary and Resource the scheme names portal-page, portal-binary and portal-resource are used. For type External it's any other scheme, such as http or https.
+<authority>: Always empty for Page, Binary and Resource. For External it's "host:port" for example.
+<path>: Equal to Uri's [/path] as described above.
+<fragment>: Equal to above mentioned Fragment
+<query>: Equal to Uri's [query] with additional container and container features parameter (as described above) like plink-container-name=[containername] and  plink-container-feature-[containerfeaturename]=[containerfeaturevalue].
+
+Examples
+
+<img plink:uri="portal-binary:///contentblob/1234/Image" 
+     xmlns:plink="http://www.coremedia.com/cms/portal/link/1.0"/>
+
+A binary link with Uri /contentblob/1234/Image without Fragment and without Container.
+
+
+
+<a plink:uri="portal-content:///content/1234?view=
+    main&plink-container-name=myContainer&amp;
+    plink-container-feature-width=100&amp;
+    plink-container-feature-height=80#myFragment" 
+   xmlns:plink="http://www.coremedia.com/cms/portal/link/1.0"/>
+
+A page link with Uri /content/1234?view=main, a Fragment myFragment, a Container myContainer with Container Features height=80 & width=100.
+
+
+
+<a plink:uri="http://localhost/application?plink-container-name=
+    myContainer" 
+   xmlns:plink="http://www.coremedia.com/cms/portal/link/1.0"/>
+
+An external link with Uri http://localhost/application and Container myContainer.
+
+Links for SAP Enterprise Portal
+
+When developing a portal application for the SAP Enterprise Portal, the link property Container needs to be specified as qualified path for page links, e.g. pcd://portal_content/MyFolder/MyRole/MyWorkset/MyPage/MyPortlet. Beside the above mentioned container feature "com.coremedia.portlet.standalone" all features known from javascript such as toolbar=0 or scrollbars=0 may be used.
+
+Links for IBM Websphere Portal
+
+When using an IBM Websphere Portal, the Container property for portal links always denotes the current portlet as there is no way to link to another portlet. Container Features like com.coremedia.portlet.standalone and all known javascript features may be used. 

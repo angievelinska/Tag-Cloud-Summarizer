@@ -1,0 +1,12 @@
+
+
+Interactive Report Drill Down
+
+The Top Viewed Pages report model provides the following three report parameters:
+
+
+
+The number of entries parameter determines the number of top entries to display. Please note that technically this is an 'entry range' parameter, thus a simple extension of the available value set would allow entries like 'top 5-10' or blocks like '1-10', '11-20', etc. See the Analytics Developer Manual on how to extend report variables.
+
+
+

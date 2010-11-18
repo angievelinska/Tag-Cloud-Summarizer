@@ -1,0 +1,4 @@
+
+
+You can optionally restrict access to the report. Any report created from this report definition must then comply with the access restriction.
+

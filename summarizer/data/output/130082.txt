@@ -1,0 +1,3 @@
+
+
+Note, that recovery will not work correctly, if this given chronological order of backups is not respected. The content of the Content Server must be newer than the content of the Master Live Server, and the content of the Master Live Server must be newer than the content of the Slave Live Servers. The time between the single backups should be short. Try to avoid publishing deletions while the backups are made.

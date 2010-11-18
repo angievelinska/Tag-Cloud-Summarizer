@@ -1,0 +1,9 @@
+
+
+The license restriction does not apply to the global-search-replace workflow. If you have chosen this workflow, you can later upload one of the other predefined workflows, but again only once.
+
+If you want to use the global-search-replace workflow, you have to upload the global-search-replace workflow with the upload utility. Execute the command
+
+cm upload -u < username> -p <password> -n global-search-replace.xml
+
+and replace <username> and <password> with the user name and password of an administrative user. To start this workflow, at least one user must be a member of the group composer-role . If you have purchased a license for the CoreMedia Workflow Server (Unlimited Edition)  it is possible to adapt the global-search-replace workflow to your needs.

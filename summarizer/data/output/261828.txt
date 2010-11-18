@@ -1,0 +1,4 @@
+
+
+ Condition Definition sequences whether the database product supports SQL sequences; true for Oracle, DB2, PostgresQL oracle whether an Oracle database is used db2 whether a DB2 database is used mssql whether a SQL Server database is used
+

@@ -1,0 +1,8 @@
+
+
+The renaming of folders and documents is done in analogy:
+
+If you want to modify the name of the resource, 
+Select it, then 
+choose File | Rename from the file menu.
+Enter the new name in the dialog box that opens now:

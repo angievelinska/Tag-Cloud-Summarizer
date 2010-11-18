@@ -1,0 +1,4 @@
+
+
+The generator provides the bean hox.corem.servlets.beans.XmlAdapter which allows you to create XML for any generator resource. This bean also has some additional methods that might come in handy. Refer to the API documentation for further details.
+

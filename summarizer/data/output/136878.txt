@@ -1,0 +1,3 @@
+
+
+This chapter describes the properties of the config.bsh and struts-config.xml file. 

@@ -1,0 +1,22 @@
+
+
+In order for the CoreMedia Content Application Engine to instantiate the right classes at runtime, they need to be configured with the factory. The engine's default factory implementation uses the Spring application context to instantiate content beans. This way content beans can participate in Spring's dependency injection mechanism - for example, they can receive references to other services without having to resort to service lookups in JNDI or the servlet context.
+
+The content type to content beans mapping is defined in WEB-INF/spring/cae-contentbeans-example.xml using Spring¿s XML notation. The file should contain a prototype definition for each class corresponding to a document type. 
+
+Prototype definitions follow a specific naming scheme. In order to be found by the factory, they must be given the same name as the factory, followed by a colon `:¿ and the name of the document type for which they were generated. For example, a class com.company.Article that represents Article documents is registered with the factory as follows:
+
+<bean
+   name="contentBeanFactory:Article"
+   scope="prototype"
+   class="com.company.ArticleImpl "/>
+
+This line is a template for the content bean factory; it says:
+
+This is a definition for a content factory bean for the document type Article
+This definition is a prototype, not a singleton, it must be newly instantiated for every article document
+The implementation class is com.company.ArticleImpl
+short: "for documents of type Article, return a new instance of class com.company.ArticleImpl". 
+
+Important: using scope="prototype" is vital, otherwise Spring would cache one instance and return the same object every time.
+

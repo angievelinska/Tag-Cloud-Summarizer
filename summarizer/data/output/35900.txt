@@ -1,0 +1,5 @@
+
+
+CheckInDocument
+
+Use this action to check-in one or more CoreMedia documents referenced by a variable.

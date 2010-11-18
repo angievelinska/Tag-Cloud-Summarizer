@@ -1,0 +1,10 @@
+
+
+A comparator is used for sorting objects. There are different comparators for sorting different object types:
+
+Document types shown in the File|New resource menu in the CoreMedia Editor.
+Columns
+Folders shown in the folder view of the CoreMedia Editor.
+Workflows shown in the File|New workflow menu in the CoreMedia Editor.
+
+Comparators for sorting document types

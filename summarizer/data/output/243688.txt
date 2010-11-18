@@ -1,0 +1,9 @@
+
+
+This chapter is about the definition and description of workflows. Definition means that a desired workflow (or business process) is described by means of UML-activity diagrams. Then, description means the translation of a UML workflow description into a workflow XML file and probably some Java classes.
+
+ Section 4.1 gives a short survey of how to analyze and define a workflow by means of activity diagrams  and the syntactical elements of the XML workflow description language. 
+Section 4.2 describes how you can upload your workflow definition to the workflow server.
+Section 4.3 gives an example on how to define a workflow.
+In Section 7.1, all elements of the XML workflow description language are described as a reference.
+

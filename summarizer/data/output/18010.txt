@@ -1,0 +1,3 @@
+
+
+The property file replicator.properties configures the replicator process in a Slave Live Server.

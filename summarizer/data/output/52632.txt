@@ -1,0 +1,3 @@
+
+
+To circumvent these inconsistencies, you should always use property names starting with a lower case first letter in your CoreMedia document type model.

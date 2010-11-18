@@ -1,0 +1,7 @@
+
+
+The Unified API representation for view definitions is shown in ###. The diagram shows all subclasses of CapType managed in a workflow repository. Their instances form a hierarchy, which corresponds to the nesting in the workflow definition XML file (see the Workflow Developer Manual for details). A process definition contains a number of task definitions. Views can be defined by both process definitions and task definitions. There is one view definition per task definition, and two per process definition, where the initial view applies before the process starts running, and the running view applies after the process has started.
+
+At the bottom of the diagram, you can see the property descriptors. Each CapType aggregates a number of property descriptors. In the case of workflow and task definitions, these are the workflow variables. So for each process or task, a value is stored for each descriptor of its definition.
+
+A view definition also is a CapType, its property descriptors are PropertyViewDescriptors. In addition to being regular property descriptors, they provide information on how to represent the view during user interactions, and information on where the actual value is stored. A view as an instance of a view definition does not itself store any values. Instead, the name of the property view descriptor determines where the actual value is stored, relative to the view's origin. The origin of a view is the process or task the view was obtained from.

@@ -1,0 +1,3 @@
+
+
+The previous image showed the combination of two static fragments. The next figure shows how a web page is assembled out of static and dynamic fragments. The static fragments are taken from the Http Cache or an optional web cache while the dynamic fragments are taken from the CAE.

@@ -1,0 +1,7 @@
+
+
+If you have Preview Based Editing enabled, you can use it with CMPortletWindow documents too. All standard operations are available, for example to move a portlet window to another place on the website.
+
+However, you should never copy the same portlet window on two different pages, or twice on the same page, because the same portlet window always displays the same HTML content. Rather create a new portlet window referring to the same portlet instance.
+
+Preview Based Editing can also be used to configure the portlet's preferences, by invoking the "Portlet Mode EDIT" command. This is described in more detail in section 2.3. Editing Portlet Preferences.

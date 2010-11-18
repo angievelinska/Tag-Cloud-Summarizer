@@ -1,0 +1,4 @@
+
+
+ Editor Class Default Struct editor hox.corem.editor.toolkit.property.StructRichTextPane Tabbed Struct editor hox.corem.editor.toolkit.property.TabbedStructPropertyEditor
+

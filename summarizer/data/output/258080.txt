@@ -1,0 +1,6 @@
+
+
+The CoreMedia Starter Kit comes with a graphical installer, that allows you to install a complete CoreMedia CMS Starter Kit system. By default, the installer writes the file cap-starterkit-install.properties into the current working directory. This file contains all settings specified during the installation and will be used as default for a new installation from the same directory. You can also use this file as an install script for the script installation. 
+
+java -jar cap-starterkit-installer-5.2.<currentVersion>.jar 
+[text|text-auto] [-o <outputFile>] [-p <inputFile>]

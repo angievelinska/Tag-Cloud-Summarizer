@@ -1,0 +1,24 @@
+
+
+Start a Three-Step Publication
+
+
+To start a workflow and add one or more resource(s) to the change set:
+
+
+
+Select the resource(s) in the overview window.
+
+
+
+
+
+
+Select File|New Workflow | Three-Step Publication or New workflow | Three-Step Publication from the context menu.
+
+
+
+
+3* The workflow window opens with a newly created workflow and the "Compose" task automatically assigned to you. The added resource is displayed.
+
+

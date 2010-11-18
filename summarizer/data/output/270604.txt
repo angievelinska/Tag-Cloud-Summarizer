@@ -1,0 +1,22 @@
+
+
+Scope Of Delivery
+
+The CoreMedia Lightweight Portal comes as a  ZIP file that contains the following components:
+
+An installer, which installs the CoreMedia Lightweight Portal on top of a CoreMedia Starter Kit installation. 
+This documentation
+Technical reference documentation (javadoc) 
+
+Prerequisites
+
+In order to install the CoreMedia Lightweight Portal a Starter Kit installation is needed. The Starter Kit installation must at least have a Content Server and a Tomcat Web Server installed. If you want to install the example portlet window controls (see section) you also have to install the css-importer. For further information on how to obtain and install the Starter Kit see the Starter Kit Manual.
+
+Graphical Installation
+
+In order to install the CoreMedia Lightweight Portal using the graphical installer, proceed as follows:
+Enter the following command:
+
+java -jar portlet-extension-installer.jar
+
+The start screen opens up.

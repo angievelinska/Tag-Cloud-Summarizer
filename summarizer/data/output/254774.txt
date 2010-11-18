@@ -1,0 +1,44 @@
+
+
+The standard output of the license utility looks like this:
+
+license:
+  licensee: Development-Installation
+  valid from: 2004-09-30T00:00:00+02:00
+  valid until: 2005-09-30T00:00:00+02:00
+  grace until: 2005-12-31T00:00:00+01:00
+  release: <any>
+  host: <any>
+  ip: <any>
+  workflow customizable: true
+  service: coremedia:///cap/service/debug, 1/10c, 1/100n, 
+   m<infinity>
+  service: coremedia:///cap/service/webserver, 0/15c, 0/50n, 
+   m<infinity>
+  service: coremedia:///cap/service/filesystem, 0/5c, 0/50n, 
+   m<infinity>
+  service: coremedia:///cap/service/importer, 0/2c, 0/10n, 
+   m<infinity>
+  service: coremedia:///cap/service/replicator, 0/5c, 0/10n, 
+   m<infinity>
+  service: coremedia:///cap/service/feeder, 0/2c, 0/10n, 
+   m<infinity>
+  service: coremedia:///cap/service/publisher, 1/1c, 1/10n, 
+   m<infinity>
+  service: coremedia:///cap/service/system, 0/5c, 0/25n, 
+   m<infinity>
+  service: coremedia:///cap/service/workflow, 1/15c, 1/50n, 
+   m<infinity>
+  service: coremedia:///cap/service/editor, 1/15c, 1/50n, 
+   m<infinity>
+
+The compact notation of the services denotes the used and the available concurrent licences (e.g. 1/15c), the used and the available named licenses (e.g. 1/50n) and the multiplicity (e.g. m<infinity>). The verbose output of a service additionally shows the users that hold a named license, e.g.:
+
+  service: coremedia:///cap/service/editor
+    concurrent licenses: 15 used: 1
+    named licenses: 50 used: 1
+    multiplicity: <infinity>
+    users:
+      rolf (coremedia:///cap/user/102)
+
+For details about the license model of the CoreMedia CMS see section 5.7.

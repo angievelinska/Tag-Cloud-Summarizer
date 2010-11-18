@@ -1,0 +1,16 @@
+
+2#
+Start the CoreMedia CMS installer as described in chapter. You must have administrator privileges to install the CoreMedia Search Engine in a Microsoft Windows environment.
+Select the CoreMedia Search Engine option and click [Next].
+
+The next installation dialog asks for the destination directory. The CoreMedia Search Engine will not be installed directly into the specified directory but into a subdirectory searchengine. Note, that the subdirectory must be empty when installing otherwise the installation will not proceed.
+5#
+Enter the directory and click [Next].
+
+Now a window with the summary of your selections opens up.
+6#
+Click [Next] if you want to use the selections.
+
+Now the installation asks you for the directory with the contents of the CoreMedia Search Engine archive file. This directory is named oeminstaller for FAST InStream 4.3 and fastinstaller for FAST ESP 5.1. Note, that you must have write rights in this directory.
+
+

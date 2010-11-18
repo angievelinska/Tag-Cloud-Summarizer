@@ -1,0 +1,16 @@
+
+
+Furthermore, you can view the rights of the individual groups (as in illustration) by:
+
+
+
+selecting Group|Edit Group from menu bar,
+
+
+clicking on the Edit Group symbol, or
+
+
+double-clicking the group.
+
+
+

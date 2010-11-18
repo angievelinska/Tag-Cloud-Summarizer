@@ -1,0 +1,3 @@
+
+
+The ProActive Delivery Server needs a supported ORACLE database for use (see chapter).

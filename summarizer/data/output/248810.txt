@@ -1,0 +1,15 @@
+
+
+Using the methods of the hox.corem.servlets.Folder class of the Generator API, the following is possible for a given folder:
+
+
+call up the child resource with a given name
+
+call up an array of all child documents. Filtering according to document type is possible.
+
+call up an array of all direct or transitive sub-directories
+
+call up an array of all child resources (i.e. both folders and documents). Again filtering is possible.
+
+
+The order of the resources delivered is undefined. It is therefore desirable to sort the resources before use. As usual in Java, the java.util.Arrays#sort method is used for sorting, to which a comparative operator is passed (java.util.Comparator). To make the creation of suitable comparative operators easier, CoreMedia offers the hox.corem.servlets.beans.ComparatorFactory class. See Example 4.2.3b for a template which uses this bean.

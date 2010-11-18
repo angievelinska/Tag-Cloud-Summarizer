@@ -1,0 +1,13 @@
+
+
+The UserRepository provides listeners with events about all changes to user and groups. The interface UserRepositoryListener is partitioned into three main parts. 
+
+The super interface UserListener contains methods regarding the creation, update and destruction of users. 
+The super interface GroupListener is concerned with groups. 
+A UserRepositoryListener defines two additional methods to be called when a group gains or loses a member.
+
+The class UserRepositoryListenerBase provides an empty default implementation that can be overridden as needed. Attach your listener using the addUserRepositoryListener method of the UserRepository. 
+
+Because LDAP does not provide an event mechanism, the Content Server has no immediate means to detect changes to members that are imported from an LDAP server. When being accessed for the first time, a creation event is generated. Note that the first access may be seconds, days, or years after the user was actually created.
+
+LDAP data is cached for a certain amount of time and not re-fetched from the server. During that time, changes to the LDAP server are not detected. If an LDAP member is accessed again after it expires from the cache or if it is explicitly updated using the calls invalidate() or refresh(), the Content Server may detect some changes and send appropriate events. No events are sent for custom properties of members. No events are sent for changes of the group-member association. In short, while you may find it convenient to monitor the events for LDAP members, the events are incomplete and may arrive late.

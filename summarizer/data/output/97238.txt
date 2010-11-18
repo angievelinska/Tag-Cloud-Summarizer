@@ -1,0 +1,12 @@
+
+
+The layout of the publisher window is simple:
+
+
+(1) The menu bar with the common functions.
+
+
+(2) The toolbar with quick access to the most important functions.
+
+
+(3) The result list. Here you'll find the success of the publication for each involved resource.

@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of a property as defined in the document type 
+
+value 
+
+CDATA 
+
+#REQUIRED 
+
+a value of the appropriate type

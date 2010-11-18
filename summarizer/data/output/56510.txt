@@ -1,0 +1,4 @@
+
+4#
+Choose the Picture document, select it and click [Choose].
+Save it and view the result:

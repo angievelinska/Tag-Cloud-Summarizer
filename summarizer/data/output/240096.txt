@@ -1,0 +1,7 @@
+
+
+If you want to install a DBMessageServiceReceiver proceed as follows:
+Select the CoreMedia ProActive Delivery Server option and click [Next].
+
+The next window pops up.
+

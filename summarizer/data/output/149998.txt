@@ -1,0 +1,7 @@
+
+
+The "Menu Site"' is a simple demo with a handful of document types. If you already know older versions of this demo, which are not based on CAE, then you must take into account some adaptations. Hence, experienced developers should read this section, too. Due to some conceptual changes this demo got the new name "New Menu Site''. The complete sources are part of the example package and can be found in the directory cae/menusite. Before you build this example you should take a look at the files cae/README and cae/menusite/README.
+
+Think of a small but fine french restaurant called "Chez Andre''. The owner wants to attract customers by describing the delicious dishes on his own website. That will give him the pivotal advantage over his competitors. As a smart guy, he decided to use the CMS 2005. He knows that the CAE with its object oriented functionality is the right approach for future challenges, e.g. caching of time consuming operations, external data sources and personalization.
+
+At first, the required data structures have to be described by a document type model. The following table gives you an overview about the relevant elements:

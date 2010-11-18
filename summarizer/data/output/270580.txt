@@ -1,0 +1,9 @@
+
+
+This chapter describes, how to install and use Clip in the Starter Kit.
+
+Installation in the Starter Kit describes the graphical and script installation.
+Hello World Portlet describes the "Hello world" example portlet application.
+Editing Portlet Preferences describes how to edit portlet preferences in the EDIT mode.
+Adding Portlet Window Controls describes how to add portlet window controls to the example portlet.
+Editor Configuration describes how to prepare the CoreMedia Editor for editing portlet preferences.

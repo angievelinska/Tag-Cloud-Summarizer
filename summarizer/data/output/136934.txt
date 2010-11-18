@@ -1,0 +1,4 @@
+
+
+ Property Value Default Description <set-property property="generatorId" value="generator">   This property must match the name of the application scope generator bean in config.bsh. <set-property property="workflowTemplatePath" value="/wftemplates"/ >   This property sets the root uri path for the WorkflowViewDispatcher. <set-property property="defaultCharacterEncoding" value="utf-8"/>     This property sets the default character encoding. <set-property property="previewUriPrefix" value="/coremedia"/>     This property sets the root uri path for the preview.
+

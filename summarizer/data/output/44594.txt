@@ -1,0 +1,3 @@
+
+
+The following example shows the construction of a CoreMedia XML file:

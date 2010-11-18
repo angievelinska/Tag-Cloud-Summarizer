@@ -1,0 +1,13 @@
+
+
+You can start and stop a previously installed CoreMedia SCI component from a command prompt console or from the Windows GUI.
+
+Start and stop from the command prompt console
+
+To start a component execute the following command in the console:
+
+cm <component> start
+
+To stop a component execute the following command in the console:
+
+cm <component> stop

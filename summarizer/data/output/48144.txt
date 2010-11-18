@@ -1,0 +1,5 @@
+
+
+The CoreMedia installer allows you to install WAGE, which will create a context with the name "wage" in the webapps directory of Jakarta Tomcat (or simply the "wage" context in the installation directory if you choose not to install tomcat). This context includes all WAGE components, that is the classes, the JavaScript components, and the tag library.
+
+To follow the examples hands-on, download the WAGE examples in the file cap-examples.jar from the CoreMedia WebSite. For detailed step-by-step instructions about installing and running the examples, see the readme.txt file contained in the WAGE directory in the examples file.

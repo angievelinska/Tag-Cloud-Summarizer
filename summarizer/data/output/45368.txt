@@ -1,0 +1,3 @@
+
+
+Now a second view for Dish should be created that displays a teaser. This template is supposed to give a short overview when a couple of dishes are displayed in a list (like on the "Food of the day" page). The template renderTeaser.jsp is basically a reduced version of render.jsp:

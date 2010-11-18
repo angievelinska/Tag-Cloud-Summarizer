@@ -1,0 +1,37 @@
+
+
+If you are a skilled administrator, you do not need to create backups from Slave Live Servers. Instead, you can use a backup from the Master Live Server. However this procedure requires that you execute some SQL statements. To restore a Slave Live Server database from a Master Live Server backup you have to do the following:
+Stop the Slave Live Servers.
+If the database does not allow to take online-backups ensure that all publications are finished and that the last publication was successful. Freeze the content of the Master Live Server, i.e. no new publications are allowed. If possible, stop the Master Live Server.
+Create a backup of the Master Live Server database with the database backup tool.
+If the passwords on the Master Live Server are encrypted with cm encryptpasswords, the Rijndael key of the Master Live Server in the file $INSTALL_DIR/etc/keys/<databasename>.<dbuser>.rijndael has to be copied to the respective directory on the Slave Live Servers (<databasename> and <dbuser> have to be adjusted to the appropriate values of the Slave Live Server database). If the directory does not exist on the Slave Live Servers, it has to be created.
+If stopped, start the Master Live Server. You may continue to start publications again.
+Delete the full Slave Live Server database schema, if existent.
+Restore the database of the Slave Live Servers with the backup.
+On the Slave Live Server, fetch the last changelog entry with the following SQL statement and note the values of <sequenceno> and <idtag>:
+
+SELECT * FROM changelog WHERE sequenceno = (SELECT max(sequenceno)
+ FROM changelog);
+9#
+On the Slave Live Server, adjust the replicator settings with the following SQL statement. Replace <sequenceno> and <idtag> with the values obtained above:
+
+INSERT INTO system (property, content) VALUES ('replicator_remote',
+ '<sequenceno>');
+INSERT INTO system (property, content) VALUES ('replicator_local',
+ '<sequenceno>');
+INSERT INTO system (property, content) VALUES ('replicator_tag',
+ '<idtag>');
+10#
+Remove the content of the named license tracking table:
+
+3* DELETE FROM CmLicenses
+11#
+Set the proper server type.
+
+UPDATE system SET content='live' WHERE property=
+'repository_server_type' AND content='publication'
+
+As a result you must see: Updated 1 rows
+12#
+Restart the Slave Live Server.
+

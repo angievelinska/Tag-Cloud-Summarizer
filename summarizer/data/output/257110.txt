@@ -1,0 +1,42 @@
+
+
+Using a blockquote, you can format a paragraph as a quotation and you can add the quotation source. It depends on your project, how the quotation will be highlighted in the output. You can enter the quotation source (e.g. a URL) using the attribute editor. The use of the source information also depends on your project (e.g. as a tooltip).
+
+Format as quotation
+
+In order to format a paragraph as a quotation, proceed as follows:
+
+
+Choose the paragraph.
+
+
+Format the paragraph by
+
+
+
+choosing Add Blockquote from the context menu or
+
+
+click  and  in the tool bar.
+
+
+
+The paragraph will be highlighted.
+
+
+3#
+
+
+Open the attribute editor to enter the quotation source by 
+
+
+
+choosing the menu item Format|Stylesheet attribute or
+
+
+by choosing Stylesheet attribute from the context menu or by
+
+
+clicking  and   in the tool bar.
+
+The attribute editor opens as in Abbildung.

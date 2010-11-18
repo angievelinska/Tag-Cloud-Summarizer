@@ -1,0 +1,7 @@
+
+
+After the dialog has opened, continue as follows:
+6#
+Select [...]
+Choose the binary data you want to load from the dialog.
+Select [Load].

@@ -1,0 +1,9 @@
+
+
+Guard
+
+
+Grammar: (Expression) 
+
+
+A Guard contains a boolean expression, that defines a condition which must become true before a task is activated. See UserTask, AutomatedTask and Condition for details. 

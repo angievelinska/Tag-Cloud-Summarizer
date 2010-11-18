@@ -1,0 +1,27 @@
+
+
+Start the DBMessageServiceReceiver from the command line: 
+
+bin/cm dbmsgreceiver start [options] 
+
+or start the DBMessageServiceReceiver as a foreground process: 
+
+bin/cm dbmsgreceiver run [options] 
+
+The following options are supported: 
+
+-p <property.bundle>: 
+3* Use a different configuration bundle for the DBMessageServiceReceiver. Default is 
+corem/dbmessagereceiver (which corresponds to 
+properties/corem/dbmessagereceiver.properties). 
+-d: 
+3* Do not buffer events. Without this option the uploader gets events not until a commit message marking a consistent state was received. 
+-r: 
+3* Subscribe a receiver with the Database Message Service. 
+-i <file>: 
+
+
+3* Initialize the attached uploader with all values contained in the given file before receiving starts. 
+
+
+

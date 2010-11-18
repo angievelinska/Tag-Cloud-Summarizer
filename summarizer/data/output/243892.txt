@@ -1,0 +1,35 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+variable 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the written variable 
+
+description 
+
+CDATA 
+
+#IMPLIED 
+
+the textual description of the meaning of the variable 
+
+contentEditable 
+
+(boolean) 
+
+"true" 
+
+whether  a document referred to by a variable may be edited in the embedded document view (not enforced by the workflow server)

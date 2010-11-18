@@ -1,0 +1,5 @@
+
+
+Objects of the Unified API can store property values of various types. Not all property types are available for all repositories, however. Please see the documentation of the individual repositories for an overview of the supported property types.
+
+Most of the values are well-known in the Java language: String, Integer, Calendar, and the like. There are some special property values for which the existing classes are not sufficient. We will discuss these values in more detail now. All values share the common feature that they are unmodifiable in the sense that they will not change spontaneously and that they do not provide methods to change their state.

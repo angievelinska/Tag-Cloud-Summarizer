@@ -1,0 +1,3 @@
+
+
+If you know the old Menu Site example then you may recognized Category as new document type. The reason for this new element is that folders are not longer used to structure the content because they have no business functionality. In the case that you want or have to use folders you can still use them but it could be an indicator for an improvable design.

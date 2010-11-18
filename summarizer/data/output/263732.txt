@@ -1,0 +1,36 @@
+
+
+Typically, the staging tables contain at least some fields with values that are repeated very often at different times. This is good, because it makes it possible to aggregate the data for analysis. It also means that the amount of memory required can be reduced by replacing complex repeated values by numbers that represent the values. For example the browser identification can be more than a hundred characters long, but there are really only very few different browsers, so that a two-digit number might suffice to differentiate between all possible values.The reduction in storage size also increases the performance of the application, which is typically limited by disk write performance.
+
+To this end, the dimension table are maintained. They consist of one column that contains the artificial primary key and one or more columns that describe the uncompressed value. Normally, the primary key column is called id. When new values must be encoded, the automated action com.coremedia.analytics.wf.ExtendDimensionAction can be used. That action scans an arbitrary number of source tables and makes sure that all occurring values are properly encoded in the dimension table. New values for the primary key column are either drawn from a sequence object, if the database supports that, or they are assumed to be assigned automatically during an insert into the dimension tables.
+
+As an example, the brower identification dimension is maintained by the following action:
+
+<Action class="com.coremedia.analytics.wf.ExtendDimensionAction"
+     dimensionTableName="BrowserDimension"
+     dimensionColumnNames="browser"
+     sequenceName = "BrowserIds">
+  <Source tableName="StagingPageViews"/>
+  <Source tableName="StagingTransitions"/>
+</Action>
+
+This action definition indicates that the dimension table is named BrowserDimension and that the single value column is called browser. New values for the numeric primary key column are drawn from the sequence named BrowserId. The tables StagingPageViews and StagingTransitions are scanned for new values. Because no column names are given in the <Source> elements, it is assumed that the name from the dimension column is carried over. Therefore, the column browser is looked up in both source tables.
+
+A more complex example would be a hypothetical dimension table for products, if we assume that a product is identified by a vendor and a vendor-specific id.
+
+<Action class="com.coremedia.analytics.wf.ExtendDimensionAction"
+  dimensionTableName="ProductDimension"
+  dimensionColumnNames="vendor,specificId"
+  idName="globalId"
+  sequenceName = "ProductIds">
+  <Source tableName="StagingShippingEvents" 
+  columnNames="vendor,product"/>
+</Action>
+
+In this case, the numeric primary key is stored in the column globalId and the two columns vendor and specificId contain the actual data. The input data table StagingShippingEvent follows a different naming scheme using the column names vendor and product.
+
+Your own dimension tables should define a primary key on the numeric primary key column and an index on the identifying value columns. This allows the database to look up the values in both directions.
+
+When you look into the definition of the standard report aggregation process, you will find additional configuration parameters. These parameters are undocumented and should not be used in custom extensions. If you must maintain more complex dimension tables that are denormalized or that refer to other dimensions, you should use an SqlAction to execute an appropriate SQL statement.
+
+The file config/dataaggregator/spring/dataaggreator-actions-example.xml contains an example that shows how to configure as a dimension extension action in Spring XML.

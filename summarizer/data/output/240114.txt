@@ -1,0 +1,6 @@
+
+
+3* The installation is complete.
+4#
+Click [Finish] to finish the installation of the DBMessageReceiver.
+

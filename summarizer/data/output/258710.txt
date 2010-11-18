@@ -1,0 +1,42 @@
+
+
+
+
+1. Maintain your custom report definitions in the spring/analytics/analytics-reportdefinitions.xml file
+
+The CoreMedia Analytics Dashboard comes with a set of predefined report definitions (see the framework file analytics-reportdefinitions.xml in the cap-analytics-config.jar file) and an empty yet prepared report definition file for your custom report definitions (file spring/analytics/analytics-reportdefinitions.xml). If you do not have a custom analytics-reportdefinitions.xml file yet, create a new file. Then copy the prologue (the xml document type definition and the opening root tag <beans>) as well as the epilog (the closing root tag </beans> ) from the predefined report definition configuration file into the newly created custom reports definitions file.
+
+Note: The configuration file is a XML-file containing Spring Bean Configurations corresponding to Report Definitions. Open the file with an XML editor (even better is an editing tool that is Spring-Bean definition aware).
+
+2. Copy and modify a suitable report definition from the predefined or existing custom report definitions
+
+Copy a single predefined report definition from the framework report configuration file into the custom reports definitions file (path shall be spring/analytics/analytics-reportdefinitions.xml).
+
+Rename the copied report definition: change the name given in the id attribute of the topmost <bean> tag. See the example of the Performance report definition: Rename the existing definition
+
+<bean id="ReportDefinition.Performance" ...>
+  ...
+  </bean>
+
+to a new name, e.g.
+
+<bean id="ReportDefinition.MyNewReport" ...>
+  ...
+ < /bean>
+
+The resulting custom configuration should then read something like:
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+< beans>
+
+  <!-- New report definition 'MyNewReport' -->
+  < bean id="ReportDefinition.MyNewReport" ...>
+  ...
+  < /bean>
+
+  <bean id="ReportDefinition.SomeOtherReportDefinition" ... >
+  ...
+  </bean>
+
+</beans>

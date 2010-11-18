@@ -1,0 +1,46 @@
+
+
+A rights policy governs, for a certain workflow object, which users have permission to exercise which rights. The rights policy is configured for each process and for each task in the workflow definition.
+
+The rights policy can be retrieved and accessed directly from the AccessControl service (though this is rarely necessary), and is also used for various internal purposes.
+
+All methods in the AccessControl service eventually delegate to the rights policy.
+All client-side access checks (for lightweight sessions) are based on the rights policy. For the connection session, rights are checked on the server.
+The work list computation is based on the rights policy, on the client as well as on the server.
+
+In order to avoid costly network roundtrips, each connection to the workflow repository obtains a local copy of the rights policy configuration, and performs all rights computations using client-side code.
+
+The default rights policy is described in the Workflow Developer Manual. In the following, we will describe how to deploy a custom rights policy.
+
+A custom rights policy is often used to influence the "can do" work list, also known as "tasks offered". As described in ###worklist, the TASK_ACCEPT right forms the basis for the computation of the tasksOffered work list, which can therefore be customized by changing the rights policy.
+
+Marshalling
+
+Responsibility for computing work lists is split between server and client. It is therefore essential that both the server-side and client-side code behave exactly the same. The server-side implementation has to implement either the WfRightsPolicy interface as described in the Workflow Developer Manual, or the RightsPolicy interface of the Unified API. The client-side implementation in the Unified API has to implement RightsPolicy.
+
+The server-side rights policy is created and configured when the workflow definition is uploaded and parsed, and is stored in the database in serialized form. Since Java serialization is unsuitable as a cross-platform network protocol, the rights policy needs to supply a marshaller implementation, which encodes the rights policy configuration into a portable format such as XML, together with an ID (the policy ID) identifying the format. This encoded form is transmitted to the client when the client loads the process or task definition.
+
+On the Unified API client side, the policy ID is used to select a RightsPolicyMarshaller which parses the transmitted configuration, and creates the client-side counterpart as an instance of a class implementing RightsPolicy.
+
+The code for the client-side rights policy and its marshaller must be deployed in a jar file in the client's class path. The first implementation of RightsPolicyMarshaller with a matching policy ID is used. Names of implementing classes must be listed in a file called META-INF/services/com.coremedia.cap.workflow.plugin.RightsPolicyMarshaller inside the jar file. Internally, the implementing classes are found using the sun.misc.Service#providers utility, which is also used by the Java runtime to select XML parsers.
+
+For example, the cap-client.jar contains a file with the above name, consisting of the following line:
+
+com.coremedia.cotopaxi.workflow.authorization.
+ACLRightsPolicyMarshaller
+
+This instructs the Unified API implementation to consult the class ACLRightsPolicyMarshaller in the given package when unmarshalling rights policies. The method RightsPolicyMarshaler#getPolicyId of this class returns the string "coremedia:///cap/workflow-rights-policy/ACL", which is exactly the policy ID marshalled by the server side default rights policy.  
+
+When a rights policy with this policy ID is received on the client, the ACL rights policy marshaller is invoked and reads the ACL configuration sent from the server.  The marshaller creates and returns an instance of ACLRightsPolicy interpreting this configuration. As the name suggests, ACLRightsPolicy is the implementation of the RightsPolicy interface for this rights policy.
+
+Configuration
+
+If you want to design a Unified API rights policy that can be used on the server side, your policy must be configurable from the XML definition. The rights policy is configured in the element <Rights> that may be included in the definition of any task of process. Traditionally, configuration is done by including <Grant> and <Revoke> subelements in the <Rights> element. If you want to support this configuration style, you should implement the interface ConfigurableRightPolicy instead of RightsPolicy.
+
+That interface provides a number of grant and revoke methods that are called by the server while it parses the definition file. It also contains the method setRights(Set), which informs the policy about those rights that is is supposed to handle. Note that this set is different for tasks and processes.
+
+Rights Computation
+
+The interface RightsPolicy contains four mayPerform methods that must return true or false as a certain operation is allowed or forbidden. The getUsers methods allow the policy to determine those users who are allowed to perform a certain operation. Similarly, the getGroups methods return collections of groups. This is particularly useful when showing a selection of potential users or groups during user interaction.
+
+The rights for a certain task may depend on more than just a set of groups and their membership relations, as is true for the default implementation. For example, the right for an approval task may depend on the documents that are about to be approved. Note that when accessing content in a rights policy, the "can do" work list will only be re-evaluated after changes to content that is directly referenced by the process. Therefore it is not recommended to access other content from the rights policy.

@@ -1,0 +1,5 @@
+
+
+Configure Document Types
+
+You can restrict the indexed documents by their type in the file feeder.xml. The document types are configured in the element DocumentTypes, which is below the element FastIndex.

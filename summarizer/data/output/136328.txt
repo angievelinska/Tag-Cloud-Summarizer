@@ -1,0 +1,4 @@
+
+
+ Association Type Reference is stored in field Dataview is applied at ... Cache Lookup Cache Dependencies composition yes creation time no getter + dataview aggregation yes creation time yes getter + dataview static (default) yes property access yes getter dynamic no property access yes none
+

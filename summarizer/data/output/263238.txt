@@ -1,0 +1,3 @@
+
+
+The CoreMedia CAE Feeder, too, has been configured to be aware of the Starter Kit website structure and internationalization concept. When you search on website A, no results from website B should be returned. A and B can be completely different websites or internationalized versions of the same website, but in either case, mixing search results is not desired. This means that context information has to be added to the index, so the context of a document can be used when retrieving search results. Section describes the configuration of the CAE Feeder for the Starter Kit.

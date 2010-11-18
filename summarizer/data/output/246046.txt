@@ -1,0 +1,26 @@
+
+
+CoreMedia offers a tool to migrate web applications developed with CMS 2006 to the new directory structure of CMS 2008.
+
+The default pattern bases on the structure described in the "The CAE Web Application" section of the Content Application Developer Manual.
+
+Use the tool with the following syntax:
+
+java -jar migrationtool.jar 
+             refactor-all -p <path to webapp base dir> 
+             -n <vendorname> | 
+             refactor-structure -p <path to webapp base dir> 
+             -n <vendor name> | 
+             refactor-web-xml -p <path to webapp base dir> 
+             -n <vendor name> |             
+             refactor-spring1-to-spring2 -p <path to webapp base dir> 
+             -a <pattern> [-v]
+
+ -a <pattern>                       ant style pattern for file-based
+                                    refactoring
+ -n <vendor name>                   the vendor name
+ -p <Path to directory of           path to the web application
+     the web application>   
+ -v                                 changes the logging level
+                                    to verbose (DEBUG)
+

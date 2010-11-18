@@ -1,0 +1,3 @@
+
+
+The executed template can call up the context information provided by the ADS for this execution using a request scope bean called "context". In particular, the template is told the CoreMedia resource which should be displayed, as well as further attributes of the requested ResourceUri. The bean is imported in the template as follows:

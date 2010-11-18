@@ -1,0 +1,3 @@
+
+
+Please note, that custom applications which receive messages from a JmsUploader must be robust against duplicate events.

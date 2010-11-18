@@ -1,0 +1,4 @@
+
+
+The place approval states of a content are quite simple, but they are shown in Figure to indicate that a place disapproval can happen implicitly during a number of operations.
+

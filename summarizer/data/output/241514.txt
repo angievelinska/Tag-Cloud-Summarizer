@@ -1,0 +1,3 @@
+
+
+The first editing step renders the name property of a Dish document for editing. It passes on the collector and the resource parameters as hidden form fields. It also renders two buttons submitting the form to the action step1: one with the resourceCommand set to "abort", one with resourceCommand set to "continue". Therefore the action step1 will either abort the wizard (global forward) or forward to the next editing step step2 (see xxx).

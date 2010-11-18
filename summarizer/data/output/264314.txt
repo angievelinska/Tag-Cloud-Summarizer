@@ -1,0 +1,9 @@
+
+
+CoreMedia CMS is the future-proof standard software solution for production, administration and distribution of multimedia content for digital services.
+
+Content applications such as high-volume web sites and device-independent multi-channel services are implemented cost-effectively in minimal time using CoreMedia CMS.
+
+This Content Applications Developer Manual is written for developers, people who set up and tune, who integrate and implement CoreMedia CMS. It describes how to make all the features work well and deliver content in the most effective way to the customer.
+
+Out-of-the-box functions for complete editing processes in the easily used CoreMedia Editor, rapid prototyping features, an acclaimed architecture and a matching, proven process for content application projects guarantee excellent results and high, sustained customer satisfaction.

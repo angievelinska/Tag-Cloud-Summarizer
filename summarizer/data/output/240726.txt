@@ -1,0 +1,15 @@
+
+
+<bean id="storageImpliedBeanProperties" 
+ parent="AbstractStorageImpliedBeanProperties¿>
+  <property name="properties">
+    <list>
+      <bean parent="StringProperty">
+        <property name="name" value="id"/>
+      </bean>
+      <bean parent="DateProperty">
+        <property name="name" value="creationTime"/>
+      </bean>
+    </list>
+  </property>
+</bean>

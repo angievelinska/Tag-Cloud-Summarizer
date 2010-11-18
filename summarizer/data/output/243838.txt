@@ -1,0 +1,7 @@
+
+
+NotEmpty
+
+Grammar: EMPTY 
+
+NotEmpty is the negation of IsEmpty. See IsEmpty for details. 

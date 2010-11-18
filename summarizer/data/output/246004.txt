@@ -1,0 +1,12 @@
+
+
+As mentioned in the introduction of JSF-Enhancements, the way JSF supports model-driven select items lacks separation of model and view. While the select item's value is a model, its label is a view. Instead of bundling model and view into one object, the view should be produced from the model by a renderer. Another disadvantage of mixing value and label into one object is that your backing Beans have to use JSF-specific API, namely the SelectItem class, even if they just compute a model.
+
+ES allows to separate concerns of model and view for select items. Given a collection or array of Beans (the model), the predefined helper Bean "selectItems" can compute an array of JSF SelectItems. To render the labels, "selectItems" uses a LocalizedLabelFactory and retrieves the "text" property of the LocalizedLabel resulting from the given select item Bean. 
+
+The reason why LocalizedLabels are used instead of simple Strings is as follows: In contrast to plain HTML, other view technologies, and even some advanced DHTML components, can display select items in a combo-box with icon and tool tip. "selectItems" has the following properties that both use the "faked Map" pattern:
+
+label: for the given java.util.Collection or array (even with simple component type!), return a SelectItem array with one SelectItem for each LocalizedLabel resulting from applying the default LocalizationService configured in Spring to each Bean from the collection.
+byFactory: for the given LocalizedLabelFactory and java.util.Collection or array, return a SelectItem array with one SelectItem for each LocalizedLabel resulting from applying the given LocalizedLabelFactory to each Bean from the collection (using the current locale).
+
+To solve another every-day problem, you can let ES  sort model-driven select items alphabetically. Note that sorting is done after  localization, so that the correct order for the user is produced. The service is realized through the helper Bean "sortedSelectItem", which implements the same API as "selectItems".

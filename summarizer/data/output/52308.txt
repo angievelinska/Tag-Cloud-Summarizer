@@ -1,0 +1,36 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+value 
+
+NMTOKEN 
+
+#IMPLIED 
+
+The numeric ID of a user. 
+
+name 
+
+NMTOKEN 
+
+#IMPLIED 
+
+The name of a user. 
+
+domain 
+
+NMTOKEN 
+
+#IMPLIED 
+
+The domain of a user. Might be used in addition to name.
+

@@ -1,0 +1,5 @@
+
+
+Integrate your Initializer into the CoreMedia Editor using editor.xml
+
+You can integrate your Initializer into the CoreMedia Editor using the element Initializer of the editor.xml file as shown in example.

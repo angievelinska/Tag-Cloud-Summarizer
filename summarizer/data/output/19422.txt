@@ -1,0 +1,8 @@
+
+
+This element of the XML file designates the following features: 
+
+The documents usable in the editor via the parent element <Predicate>. 
+The initiators and validators which should be used with document fields via the sub element <PropertyType>. 
+
+The element has one attributes. If no <DocumentType> element is defined, all document types will be shown (except of abstract document types) and will be arranged alphabetically. 

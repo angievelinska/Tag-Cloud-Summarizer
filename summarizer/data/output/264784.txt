@@ -1,0 +1,3 @@
+
+
+The query tool can be used to start a synchronous, structured query against the content repository. It's analogous to the query used within the editors but you can create more sophisticated queries with the query tool.  You can also transform old queries from Query documents into the new syntax and execute them.

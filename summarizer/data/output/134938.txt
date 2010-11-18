@@ -1,0 +1,11 @@
+
+Store the css-file in the properties/corem directory of the Content Server.
+Enter the following URL into the property editor.richtext.css.location of the editor.properties file: 
+
+http://< ServerHost>:<ServerPort> /coremedia/files/properties/corem/< css-filename>. 
+
+
+
+Replace <ServerHost> with the host name of the Content Server and <ServerPort> with the port of the Content Server.
+3#
+Enter the names of the XML-files in the properties/policy/server.policy file of the server in order to allow the server to deliver the files. The entry must look as shown below:

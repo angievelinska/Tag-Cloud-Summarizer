@@ -1,0 +1,3 @@
+
+
+The Blob#getContentType method delivers the MIME type of the blob. The MIME type always matches the declared MIME type of the property, e.g. a BlobProperty declared as "image/*" could contain a blob of type "image/gif". In line 19 of Example 4.2.3.4d, the MIME type is transferred to the HTTP response.

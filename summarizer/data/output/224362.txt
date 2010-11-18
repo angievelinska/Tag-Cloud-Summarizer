@@ -1,0 +1,6 @@
+
+
+Although contentservice.xml is pre-configured, you have to do some simple changes before deploying the portlet: 
+Specify the CAE portal application by editing the line
+<property name="endpoint" value="http://[host]:[port]/[portal-application-context]/[servlet]"/> 
+and setting its endpoint URL. Alternatively you may want to use different ContentService implementations or configurations. Below you will find a list of all available ContentService implementations as well as the configuration parameters ("properties"). 

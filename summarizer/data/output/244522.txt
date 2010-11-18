@@ -1,0 +1,4 @@
+
+
+Overview of the Assembly Modes Features Feature/Mode embedded apache-ssi ahah Session cookies Yes Yes Yes Session URL rewriting in cached fragments Yes No  No Support of request parameters Yes Yes Yes Support of copying request parameters Yes No No Support of request headers Yes No Yes Support of copying request headers Yes No No Supports includes of external fragments No Yes Yes Compatible with Apache Webserver for delivery No Yes Yes Uses browser cache No No Yes
+

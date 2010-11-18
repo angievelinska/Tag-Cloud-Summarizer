@@ -1,0 +1,5 @@
+
+
+Concurrency/Parallel Execution
+
+After the task before the synchronization bar is completed, all follow-up tasks are activated. This is called a fork of the control flow. The re-synchronization of parallel executing tasks is called a join. This is also called an and-split, since all follow-up tasks are performed. Each fork must be matched by exactly one join that joins all previously forked tasks.

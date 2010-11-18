@@ -1,0 +1,25 @@
+
+
+In the figure the transitions denoted with numbers in circles have the following meaning:
+
+
+The server starts up and remains in administration mode. At this time, no Active Delivery Server can connect. The server connects with the Master Live Server and asks for changes. If there are changes, replication begins.
+
+
+The Master Live Server is not reachable. It has either broken down, has been stopped, is working defectively, or communication is disrupted. In this case, replication pauses. Every 30 seconds, the Slave Live Server attempts to connect to the Master Live Server.
+
+
+The Slave Live Server was able to reconnect to the Master Live Server. Replication starts again as described in 1.
+
+
+Replication is finished. The Slave Live Server is switched to online mode. If the Slave Live Server is started in transition 1 for the first time, it does not switch to online mode automatically. Instead you have to switch to online mode manually with cm runlevel -u <user> -p <password> -r online -g 0. Later the server switch is done automatically. Once the Slave Live Server is switched online, it continues to monitor the Master Live Server for changes and, if necessary, starts the replication.
+
+
+As in 2., the connection to the Master Live Server is lost. Replication pauses, but the Slave Live Server remains online. Every 30 seconds, the Slave Live Server attempts to connect to the Master Live Server.
+
+
+The Slave Live Server reconnects to the Master Live Server and  replication starts again, as described in 1.
+
+
+The database of Master Live Server has been reset. Replication stops and the Slave Live Server remains online. In order to synchronize with the Master Live Server, the database of Slave Live Server must also be reset.
+

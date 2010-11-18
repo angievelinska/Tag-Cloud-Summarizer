@@ -1,0 +1,5 @@
+
+
+In order to work as a link, a ResourceUri object needs to be transformed into a textual representation. If a client follows this link and sends a corresponding request, the textual representation sent by the browser needs to be transformed back into the original object form in order to be consumed by a template. In ADS, these steps are called formatting and parsing, respectively. Naturally, these two operations must be inverse: parsing a formatted URI must reveal an equivalent object and vice versa. 
+
+The parsing and formatting algorithm is a pluggable implementation of the hox.corem.servlets.ResourceUriFormat interface. The default implementation hox.corem.servlets.beans.StandardResourceUriFormat uses the full repository path for identifying the resource. A different algorithm can be configured by installing your own implementation class in the generator bean. This is done in the config.bsh file by overriding the resourceUriFormat bean property of the generator bean.  

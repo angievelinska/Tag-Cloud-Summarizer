@@ -1,0 +1,11 @@
+
+
+Note that it is not allowed to use trailing wildcards, like view[root,_,_]. Such JSPs will be ignored completely. 
+
+The type resolution mechanism remains unmodified: if there is no view for the type itself, the search is repeated for the object's super type. In particular, this means that any matching view for the type itself is preferred over any other view in the object's super type. For example, for a request for an article with viewtypes "[example,sports,formula1]", the template "CMArticle.asTeaser[_,sports].jsp" will be used, even if a less specific type but more specific view "CMTeasable.asTeaser[example,sports,formula1].jsp" exists.
+
+CSS
+
+Styling a document with CSS is a highly project-specific matter, and in projects most JSPs will be customized anyway. Therefore the templates are not cluttered with class attributes at each and every tag but only class attributes are set where they are needed for the sample layout.
+
+All class and id values we introduced for the Starter Kit sample layout start with the prefix "sk_". Unfortunately YAML uses no obvious naming scheme. The Starter Kit preserves these names however, in order to enable an easy update to later versions of the YAML style sheets. So you will encounter ids and class values which look somewhat arbitrary in the JSPs. The following image shows the page structure.

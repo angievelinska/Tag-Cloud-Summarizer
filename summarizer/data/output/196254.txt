@@ -1,0 +1,4 @@
+
+
+Before you delete document types, make sure that the data is no longer needed.
+

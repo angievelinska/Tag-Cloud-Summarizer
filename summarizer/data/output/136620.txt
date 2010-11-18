@@ -1,0 +1,23 @@
+
+
+Remote action handlers
+
+A remote action handler is responsible for executing a user tasks client actions on behalf of the clients user.
+
+
+
+Handlers must implement the interface RemoteActionHandler.
+
+
+A handler receives the command and parameters to process.
+
+
+It has to return an ActionResult.
+
+A client action is the result of one of the following client calls to the server:
+
+Task.accept()
+Task.complete()
+Task.retry()
+
+The client call is blocked at least until all client actions have been handled.

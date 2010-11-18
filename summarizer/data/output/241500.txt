@@ -1,0 +1,9 @@
+
+
+To transfer data between the model and the view layers, Struts requires an ActionForm bean to be defined for our input form.
+
+There are different possibilities of defining an ActionForm for a CoreMedia resource: One is to write an ActionForm for a specific CoreMedia document type, another is to use the generic WAGE ResourceActionForm or ResourceListActionForm (both in the package com.coremedia.cap.wage.forms), which can be used for documents of arbitrary type.
+
+If you want to use the generic WAGE ResourceActionForm, you have to configure it in struts-config.xml instead of the DishActionForm configured in XXX.
+
+A specific ActionForm for our Dish document type could look like this:

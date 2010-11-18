@@ -1,0 +1,8 @@
+
+2#
+Enter the name of the user - Joe - into the User Name field. 
+Enter the password - for simplicity Joe - into the Password and Repetition field.
+Press the Paste group with chooser icon in the Membership in field and select the group "PoultryFan".
+Press the disc icon in the toolbar to save the new group.
+
+Now you have created all necessary groups and users. 

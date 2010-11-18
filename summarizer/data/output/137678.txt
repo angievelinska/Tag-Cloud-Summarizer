@@ -1,0 +1,9 @@
+
+
+If you want to install the CoreMedia Unified API proceed as follows:
+
+
+Select the CoreMedia Unified API option and click [Next].
+
+The next window opens up where you can select the Unified API libraries (Java libraries), a simple Java example (Java sourcecode) and the interactive Bean Shell (interactive Bean Shell).
+

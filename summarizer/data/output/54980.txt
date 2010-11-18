@@ -1,0 +1,3 @@
+
+
+Properties are inherited to subclasses. E.g. Page has a name property inherited from Document. Templates are also inherited. For displaying a document, CoreMedia SCI calls the main() template of this document. If no template exists for this template the main() template of the "superdocument" is taken. All document types inherit main() from document type Resource. If you want to alter the displaying of Page a main() template for Page can be added, that would automatically override the inherited version from Resource. Adding a main() template for Page is done by storing a main.jsp-file in the appropriate directory: .../coremedia/templates/Page/main.jsp

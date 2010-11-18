@@ -1,0 +1,35 @@
+
+
+You can also link from one document type file to document types and grammars defined in other files.
+
+Example:
+
+The base-doctypes.xml file:
+
+<DocumentTypeModel xmlns="http://www.coremedia.com/2007/documenttypes"
+  Name=¿Base-Doctypes¿>
+
+ <XmlGrammar Name="mycompany-richtext" Root="company"
+    PublicId="-//MyCompany//DTD Richtext 1.0//EN"
+    SystemId="lib/xml/mycompany-richtext.dtd"/>
+
+ <DocType Name="BaseDocument" Abstract=¿true¿>
+  <StringProperty Name="Titel" Length="200"/>
+ </DocType>
+
+</DocumentTypeModel>
+
+The specific-doctypes.xml file:
+
+<DocumentTypeModel xmlns="http://www.coremedia.com/2007/documenttypes">
+
+ <ImportDocType Name="BaseDocument" From="Base-Doctypes"/>
+ <ImportGrammar Name="mycompany-richtext" From="Base-Doctypes"/>
+
+ <DocType Name="Text" Parent="BaseDocument">
+  <XmlProperty Name="Text" Grammar="mycompany-richtext"/>
+ </DocType>
+
+</DocumentTypeModel>
+
+In this example, the doc type BaseDocument and the grammar mycompany-richtext are defined in the base-doctypes.xml file and are also used in the specific-doctypes.xml file. To this end, both are imported using the <ImportDocType> and <ImportGrammar> elements.

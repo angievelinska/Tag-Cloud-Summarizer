@@ -1,0 +1,5 @@
+
+
+Because Document is only used as a supertype for the other document types but not as a "real" document it is defined as Abstract.
+
+The other document types inherit from Document, using the Parent attribute. Other fields like ingredients are added in the declarations. Most of the properties are StringProperty, which means that these properties are stored as strings. The description is an XmlProperty, allowing text including markup and links as content. The LinkListProperty pictures makes it possible to attach several pictures to a Dish. Images are binary data represented by the BlobProperty image. For more information about document types see the "Document Types" chapter in the Administration Manual. 

@@ -1,0 +1,13 @@
+
+
+Storing BLOBs as zipped files
+
+You can compress BLOBs which are not compressed by themselves, such as text BLOBs, and store them in the file system or in the database. By default, the zipped files are stored in the blobstore/zipfile directory below the Content Server installation directory or in the blobstore table of the database. Storing zipped files in the database requires a temporary directory which is var/temp by default.
+
+Storing BLOBs in different database tables
+
+You can configure multiple database tables, each with individual database-specific characteristics, to store the BLOBs in. The Content Server will not create the tables automatically, so you have to create them manually.
+
+Configuring BLOB store selectors
+
+ 

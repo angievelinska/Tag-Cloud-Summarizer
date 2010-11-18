@@ -1,0 +1,5 @@
+
+
+The setup of a Replication Live Server must be completed without additional restarts of the server. If the initial replication fails for any reason, you must empty the database schema and repeat the entire setup from step 3.
+
+If the replication does not complete repeatedly, the slave-database has to be build from a backup of the master-database as described later in the manual.

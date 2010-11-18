@@ -1,0 +1,25 @@
+
+
+What is a Property Editor?
+
+A property editor is a part of the UI that enables a user to change the value of some property. In a wider sense, a property editor is the whole part of the UI that presents the property:
+
+Usually, a label declaring the name of the property, with an optional help text that explains what should be entered.
+The actual editor component.
+A toolbar with buttons that works on the editor component.
+A place for input error messages.
+
+ES provides a <es:label> component that can be used to produce the label with icon and tool tip.
+
+The editor component part can consist of
+
+one standard UI component (e.g., a simple text input field),
+a combination of multiple standard UI components (e.g. date input via three combo-boxes),
+a custom component (e.g. a RichtText editor), or
+a combination of custom and standard components (e.g. a BLOB upload component combined with a combo-box for overriding the MIME type of the uploaded file).
+
+For the toolbar, <es:button> and <es:clientButton> are used.
+
+Input error messages are rendered by the standard JSF <h:message> component.
+
+The following subsections explain how to assemble property editors for all available CoreMedia property types and give concrete examples.

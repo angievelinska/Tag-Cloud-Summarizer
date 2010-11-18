@@ -1,0 +1,3 @@
+
+
+In order to make use of the cache, we separate the work of classifiying the user agent from the actual content generation into two templates: a non-cacheable dispatcher template that dispatches to different browser-specific cacheable fragments.

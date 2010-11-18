@@ -1,0 +1,16 @@
+
+
+usage: cm tracesession -u <user> [other options] -s <session> [-q]
+          tracesession -u <user> [other options] -t <type> [-q]
+available options:
+ -d,--domain <domain name>   domain for login (default=<builtin>)
+ -p,--password <password>    password for login
+ -q                          quit tracing
+ -s,--session <session>      ID of the session to be traced
+ -t,--type <type>            type of the sessions to be traced
+                             (one of: unknown, editor, scripting, 
+                              generator, publisher,replicator,
+                              watchdog, importer, utility, uapi,
+                              all)
+ -u,--user <user name>       user for login (required)
+ -url <ior url>              url to connect to

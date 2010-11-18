@@ -1,0 +1,15 @@
+
+
+this means that the transformers created with factory.getTransformer(name) accept both a StreamSource and a DOMSource as input documents. Therefore, if your transformer does not contain an XML parser, but is confined to input documents in DOM format, the factory should return "false" for getFeature(StreamSource.FEATURE). On the other hand, if the transformer processes non-XML-documents, the factory must return "false" for getFeature(DOMSource.FEATURE), because otherwise the importer tries to parse the supposed XML document, naturally leading to an error.
+
+This is also true for DOMResult.FEATURE and StreamResult.FEATURE. If your transformer works internally with a DOM tree, it should return it as such, and not as Stream. If the next transformer in the chain expects a DOM tree as input, this saves a new parsing of the document.
+
+In this version, SAX is supported neither on the source nor on the result side.
+
+If a transformer should be only called once for the whole document set rather than for each source document individually, its factory must return "true" for getFeature(MultiSource.FEATURE). In contrast to DOMSource and StreamSource,  MultiSource does not belong to JAXP, but is an extension by CoreMedia. If the transformer should return multiple documents, the factory must return "true" for getFeature(MultiResult.FEATURE). MultiResult has already been introduced in connection with the document generator.
+
+The source and result formats of a transformer are completely independent from each other. For example, you can develop transformers which create a single Stream document from all source documents, or which produce a set of DOM trees from one Stream document.
+
+To make the creation of factories easier, the Importer API contains the class GeneralTransformerFactoryImpl, which implements the GeneralTransformerFactory interface. GeneralTransformerFactoryImpl can be configured with three properties: transformerclass, sourceformat and resultformat. transformerclass sets the class of the actual transformer. This class must be a derivative of javax.xml.transform.Transformer (for more details see below), and must have a default construction without parameters. sourceformat and resultformat give the source and result format. Valid values are "stream", "dom" and "multi". (Note: these values do not match those of the corresponding FEATURE constants. The latter are opaque and are therefore not suitable for configuration via property files.)
+
+The configuration of a transformer of the class MyTransformer, which should be called individually for each document, which processes the source documents as Stream and which produces multiple result documents, therefore appears as follows:

@@ -1,0 +1,8 @@
+
+
+It is possible to use an Apache web server for delivering cached items directly from the Http Cache's value store. Reasons are for example:
+
+Deliver pages from the cache in case of maintenance of the CMS system.
+Improve the throughput with one or more web servers in front of the Http Cache 
+
+Figure shows the concept of this coupling.

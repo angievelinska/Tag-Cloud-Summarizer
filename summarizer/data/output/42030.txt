@@ -1,0 +1,10 @@
+
+
+The last step here is the publication of resources. They are automatically published with accepting the task.
+
+Proceed as follows:
+Switch to the workflow window.
+Select menu item or symbol for File | Accept task.
+
+3* The publication window opens and displays the publication result.
+

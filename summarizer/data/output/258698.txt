@@ -1,0 +1,5 @@
+
+
+A Workflow Server that acts as an Analytics Data Aggregator supports a number of additional configuration options in the file properties/corem/workflowserver.properties.
+
+Options that contain a time specification are configured with values as described in section.

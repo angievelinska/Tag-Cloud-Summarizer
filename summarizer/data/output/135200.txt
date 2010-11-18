@@ -1,0 +1,49 @@
+
+
+An important element in the monitoring of CoreMedia CMS components is logging. Without recording relevant information of the system it is often impossible to find out when an irregularity occurred. 
+
+The output of CoreMedia CMS is logged in two different ways:
+
+stdout/ stderr Output
+
+Enter the location for the stdout/stderr output of a component and any other third-party program in the corresponding JPIF start file of the component. To do so, configure the parameter OUTPUT_REDIRECT in the corresponding JPIF file of the component. The following values are possible:
+
+
+
+OUTPUT_REDIRECT=log 
+
+
+Log output in a log file ending with <componentname>.out.
+
+
+OUTPUT_REDIRECT=null 
+
+
+No output
+
+
+OUTPUT_REDIRECT= <no value> or OUTPUT_REDIRECT commented out (#OUTPUT_REDIRECT=) 
+
+
+Output to standard out (usually the console window, otherwise according to the environmental setting)
+
+CoreMedia CMS Logs
+
+Each CoreMedia component itself has at least one assigned log with a unique log name. Each log can write log messages to different log targets, called log actions. Different types of log actions exists that can write messages to files or send emails. The log actions are configured in the <component>.properties file. When log names contain dots they define a log name hierarchy (see the table below) with the empty log name on top. E.g. if you configure a log action to get messages for the log name cap.server all messages from the logs with this name or a name below in the hierarchy e.g. cap.server.replicator will be send to this log action. For each log action different log names with different log levels can be configured. The log level determines the amount of log messages. Here is an example configuration:
+
+Example:
+
+log.action.1.selectors=cap:debug,corem:info
+
+ The log name and log level are configured with a log.action.<n>.selectors property, where a colon separates a name and a log level and a comma separates several log name/log level pairs. In the example above, messages with the log level 
+
+
+
+debug from logs whose names start with cap or
+
+
+info from logs whose names start with corem 
+
+will be received. All components should run with the maximum acceptable log level (this may produce a lot of log output, but in case of debugging it allows to pinpoint the particular cause).
+
+The following table lists the log names that exist for the CoreMedia Server:

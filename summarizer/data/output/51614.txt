@@ -1,0 +1,9 @@
+
+
+This template renders the value of the subject workflow variable of the current task, or an (internationalized) no-subject-defined message if no subject has been set. It also renders the name of the current task, like compose or approve.
+
+Now let's see what the edit link for each task does. The "editTask" action uses the WAGE WfInstanceActionForward to forward to the "renderClient" view of the task set with the wfInstanceId parameter. The WfInstanceActionForward uses the WorkflowTemplateFinder to find the appropriate template, so for our example we provide one renderClient.jsp template in wftemplates/processes/TwoStepApproval/Compose/ for editing the changeSet variable in a compose task, and another renderClient.jsp in wftemplates/processes/TwoStepApproval/Approve/ for approving resources in the changeSet. The WfInstanceActionForward will then automatically forward to the appropriate view.
+
+The renderClient.jsp template for the compose task renders a form which contains all documents in the MenuSite folder, including subfolders. For each resource, a checkbox is rendered which can be checked to include the resource in the changeSet.
+
+The form is submitted to the editTask action, and the workflow instance ID is passed on as hidden form field.

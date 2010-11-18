@@ -1,0 +1,4 @@
+
+
+ Icon Description  Simple publication workflow.  Two step approval workflow.  Two step publication workflow.  Three step publication workflow.  Global search and replace workflow.  Simple process  Newly created process.  Not started process.  Escalated process  Start the process, also running process.  Complete the process.  Abort the process.  Resume the process.  Suspend the process.
+

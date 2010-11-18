@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the name of the PreCondition 
+
+description 
+
+CDATA 
+
+#IMPLIED 
+
+a textual description of the verified condition

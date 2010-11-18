@@ -1,0 +1,11 @@
+
+
+The Content Rules configuration consists of four major steps:
+Bean type model definition
+Mapping the bean type model to the specific bean repository
+Content Repository: Content type definition 
+Bean Query Editor Integration
+
+These steps will be described in detail in the next subsections. 
+
+The integration of Content Rules into CAE Applications will be described in the last subsection.

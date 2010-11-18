@@ -1,0 +1,3 @@
+
+
+<n> is an integer value not used for other log actions in the file and <service name> is the service name (service identifier) as configured in the SERVICE_NAME attribute in the <component>.jpif file.

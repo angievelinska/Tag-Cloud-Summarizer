@@ -1,0 +1,3 @@
+
+
+The CoreMedia Starter Kit comes with predefined content document types, for standard use cases. The content can be shared between different sites and channels.

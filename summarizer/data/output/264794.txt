@@ -1,0 +1,7 @@
+
+
+The following example transforms the default query of user johndoe into a UAPI query:
+
+cm query -u admin -p admin -m -t "/Home/johndoe/My Query"
+
+Note, that the name of the default query document is locale specific.  For German editors it is "Meine Recherche".  The result shows the transformed query without executing it.

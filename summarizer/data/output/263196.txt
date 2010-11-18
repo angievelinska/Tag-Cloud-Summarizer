@@ -1,0 +1,27 @@
+
+
+A CMHasContext (subtype of CMLinkable) can be reused in multiple CMContext contexts (see section and section). The direct navigation parents of a CMHasContext are linked in its contexts property. A CMHasContext with multiple navigation contexts can be reached through all the URLs for the different navigation paths. (Note, that the navigation structure itself is a tree, i.e. navigation nodes don't have multiple parents).
+
+For example: A CMHasContext with the segment property foo links to two CMContexts where the first can be accessed with the URL /starterkit/servlet/segment/english_tutorial/manage/ and the second with /starterkit/servlet/segment/english_tutorial/. The CMHasContext itself can now be accessed via /starterkit/servlet/segment/english_tutorial/manage/foo.html and /starterkit/servlet/segment/english_tutorial/foo.html.
+
+When formatting a link for a CMHasContext with multiple navigation contexts, the LinkScheme has to select one of navigation contexts of the CMHasContext. Therefore it uses the nearest navigation compared to the current navigation (the navigation of the link source). For the example above: If the link source is /starterkit/servlet/segment/english_tutorial/manage/bar.html, the resulting link will be /starterkit/servlet/segment/english_tutorial/manage/foo.html.
+
+Note, that you can always create a Page bean consisting of CMLinkable and CMContext and link to that directly if you don't want to link to the nearest navigation. Page beans can easily be created in a JSP with the JSP function page defined in the Starter Kit tag-lib (see previous section).
+
+The computation of the nearest navigation follows these rules:
+
+For two candidate navigations:
+Take the one which has more navigation nodes in common with the current navigation (from the root navigation upwards).
+For example: use /english_tutorial/manage of /english_tutorial if the current is /english_tutorial/manage/archive.
+If equal and both are below the current root navigation, use the shorter one (lower number of path elements)
+For example: use /english_tutorial instead of /english_tutorial/integrate if the current is /english_tutorial/manage/archive.
+If still equal and both are below the current root navigation, use the one with the smaller content ID to have deterministic behavior.
+For example: use /english_tutorial/manage (ID:42) instead of /english_tutorial/integrate (ID:100).
+Otherwise both candidates are below other root navigations than the current one. If the target CMHasContext has another locale than the current navigation, try to get the navigation variant (see section and section) of the current navigation for that locale and repeat steps 1 to 3 with the current navigation variant instead of the current navigation.
+For example: use /deutsches_tutorial/manage (German locale variant) instead of /playground/manage (unrelated other navigation tree).
+If still equal, use the shorter one (lower number of path elements).
+For example: use /foo instead of /foo/bar.
+Last fallback: use the one with the smaller content ID to have deterministic behaviour
+For example: use /site2 (ID:48) instead of /site3 (ID:102)
+
+Note, that there's no current navigation available if the LinkScheme is called from the PreviewController. When previewing a CMHasContext with multiple navigation parents, only rules 5 and 6 apply.

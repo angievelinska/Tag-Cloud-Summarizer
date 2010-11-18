@@ -1,0 +1,12 @@
+
+
+Above we saw that the SUPERVISE right is necessary for non-administrator users to check-in documents of other users. Now we will see that the SUPERVISE right is the right for a non-administrator group to grant new rights:
+
+
+Operations:
+
+
+users of group G grants rights on document doc for resource type Article   
+
+
+Required rights:

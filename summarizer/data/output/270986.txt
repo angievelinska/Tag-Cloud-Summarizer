@@ -1,0 +1,3 @@
+
+
+If a preference should be read-only even in portlet mode edit, you can add a read-only element as follows:

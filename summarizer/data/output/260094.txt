@@ -1,0 +1,68 @@
+
+
+If you have used document type names which exceeded the recommended length of 11 characters (which are longer than 15 characters to be exact) and you switch to another database you might exceed database limitations. This is especially true for IBM DB2 and Derby databases. In order to circumvent this problems there exists three attributes for the DocumentType element.
+
+PkName: This attribute defines a name for the primary key constraint of the document type table.
+ResourceFkName: This attribute defines a name for the foreign key constraint from the document type specific tables.
+IndexName: This attribute defines the index name for columns of document type specific tables.
+
+Example:
+
+Your document type name is "ProductAttributs" (<DocumentType name="ProductAttributes">). This name contains 17 characters. The CoreMedia Server will extend this name by up to three characters to obtain unique database identifiers. Unfortunately, the DB2 database has a limitation of 18 characters which will be exceeded by these names. In order to use your document type name furthermore you define unique names for the database using the attributes described above. Your new document type definition will look similar to the following example: <DocumentType name="ProductAttributes" PkName="pk_ProdAttr" ResourceFkName="fk_ProdAttr" IndexName="i_ProdAttr">
+
+Three document types, Dictionary, Query and Preferences , are already defined in the required-doctypes.xnl file. All types are essential for some components of CoreMedia and must therefore neither be renamed nor deleted.
+
+Defining the grammar
+
+The <XmlGrammar> element with the attributes Name, Root, Parent and SystemId is used to refer to DTDs from XMLProperty elements. The following example defines the CoreMedia rich text grammar:
+
+<XmlGrammar Name="coremedia-richtext-1.0" 
+              Root="div" 
+              SystemId="lib/xml/coremedia-richtext-1.0.dtd" >
+
+Name: The grammar name which you can use to reference the DTD
+Root: The name of the XML root element
+SystemId: A path that is either absolute or relative to $COREM_HOME which specifies the location of the XML grammar in the CAP server's file system. The SystemId can also be a URL from where the CAP server loads the XML grammar on startup.
+Parent: CoreMedia CAP has an inheritance concept for XML grammars. If this attribute is set to the name of another XML grammar, the XML grammar may be used when overriding a property with the other XML grammar.
+
+The <XmlGrammar>-elements coremedia-richtext-1.0, coremedia-dictionary, coremedia-query and coremedia-preferences are predefined. The latter three belong to the Dictionary, Query and Preferences document types respectively.
+
+If you want to use XML Schemas instead of DTDs you can specify the <XmlSchema> element with the attributes Name, SchemaLocation, Language and Parent. The following example defines the grammar custom-schema with a schema file custom.xsd located in $COREM_HOME:
+
+<XmlSchema Name="custom-schema" 
+            SchemaLocation="custom.xsd"
+            Language="http://www.w3.org/2001/XMLSchema">
+
+Name: The name which you can use to reference the Schema
+SchemaLocation: References to the XML Schema, separated by white spaces. The namespace is taken from the xsd-file(s)
+Language: For example http://www.w3.org/2001/XMLSchema
+Parent: CoreMedia CMS has an inheritance concept for XML schemas. If this attribute is set to the name of another XML schema, the XML Schema may be used when overriding a property with the other XML Schema.
+
+You specify a DTD grammar or XML Schema once in the doctype declaration and can refer to it with the attribute Grammar in the XmlProperty element:
+
+<DocType Name="Article">
+    <StringProperty Name="Headline" Length="200"/>
+    <XmlProperty    Name="Text"    
+     Grammar="coremedia-richtext-1.0"/>
+    <XmlProperty    Name="Summary" 
+     Grammar="coremedia-richtext-1.0"/>
+    <XmlProperty    Name="Comment" 
+     Grammar="custom-schema"/>
+</DocType>
+
+Importing grammars and document types
+
+You can import a grammar or schema into your document type file using the <ImportGrammar> element. The following example imports the "coremedia-richtext-1.0" grammar defined in the required-doctypes.xml file:
+
+<ImportGrammar Name="coremedia-richtext-1.0" 
+From="required-doctypes"/>
+
+Name: The name of the grammar or schema you want to import.
+From: The name of the XML-file, where the grammar or schema is defined (without the file extension).
+
+You can also import document types that are defined in different document type files. This is necessary, if you want to use this document type as a parent or as a target of a LinkList property. The following example would import the type Article from the editorial-types.xml file.
+
+<ImportDocType Name="Article"
+From="editorial-types"/>
+
+The attributes have the same meaning as for the ImportGrammar element.

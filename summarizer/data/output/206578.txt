@@ -1,0 +1,28 @@
+
+
+ 
+
+LdapLoginModule Options 
+
+Description 
+
+predicate.<n>.class 
+
+Java class name of a login predicate 
+
+predicate.<n>.args 
+
+Arguments for the login predicate. Use space value ¿ ¿ for no arguments. 
+
+host 
+
+LDAP server host name 
+
+port 
+
+LDAP server port number. If you want to use LDAP over SSL switch to 636, which is the default port for SSL connection. 
+
+domain 
+
+Domain to serve protocol The protocol to use. Change to "ssl" if you want to use LDAP over SSL.
+

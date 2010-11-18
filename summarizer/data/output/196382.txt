@@ -1,0 +1,3 @@
+
+
+Always make a backup of your data before schema migration. Stop the Content Server when you change document types. The changes take effect not until the Content Server has been started. Choose log level "Debug" and check the server log file for the impact of the new document types.

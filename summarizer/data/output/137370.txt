@@ -1,0 +1,9 @@
+
+
+The Unified API offers some administrative functionality for dealing with process definitions.  As described in the Workflow Developer Manual, a process definition consists of some XML, which may contain references to custom Java classes.  The byte code of custom Java classes has to be supplied either in the workflow server's class path, or in an accompanying jar-file.
+
+Code that is deployed in the workflow server's class path is shared between all versions of all workflows.  It can only be changed by shutting down and restarting the workflow server, which disrupts service and causes significant delays for reinitializing users' work lists etc. In contrast, custom code that is uploaded together with the process definition's XML is used only by this version of this process definition.  Such code runs in a separate class loader, and therefore will not share classes and static fields with other process definitions.
+
+Currently, custom code on the workflow server only has access to the content and user parts of the Unified API. For accessing workflow objects, server-side code uses the traditional  Workflow API. Further details on the server-side Workflow API and the interfaces for server-side code can be found in the Workflow Developer Manual and in the Javadoc.
+
+The method WorkflowRepository#createProcessDefinition is used to upload an XML process definition together with an optional jar file to the Workflow Server.  Later, the data originally uploaded can be retrieved using ProcessDefinition#getProcessDefinition and ProcessDefinition#getProcessClasses.

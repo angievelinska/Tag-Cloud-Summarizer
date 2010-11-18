@@ -1,0 +1,4 @@
+
+
+ Attribute Value Default Description class class name none (required) The name of a custom class that implements com.coremedia.cap.server.feeder.IndexDocumentFilter.
+

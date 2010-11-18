@@ -1,0 +1,20 @@
+
+
+Interactive Report Drill Down
+
+The Page Impressions per Category report model provides the following four report parameters:
+
+The site parameter determines the (sub-)site. The list of sites is automatically generated during report data aggregation.
+
+
+The category parameter determines a content category. The report displays the top viewed of this category and all of its subcategories. Please note that this parameter only exists in the 'Top Viewed Pages per Category' report. You can use this parameter to interactively drill down the repository's category structure: In the category filter selection box corresponding entries are listed (see screenshot).
+
+To navigate down the category hierarchy or drill into a subcategory, select a subcategory. The selected subcategory becomes the new current category and the chart visualizes the page impressions within that category. 
+To navigate up the category hierarchy or coarsen your category selection, choose the parent category in the category selection box. The parent category is marked with a minus sign '-'. After updating the report view, the parent category will become the new current category and the former current category will be shown as one of many pie sections.
+The time interval parameter allows a user to select the time interval. See the Performance report for time interval description and screenshots.
+
+
+The number format parameter allows you to choose between absolute numbers and relative numbers. 
+
+Absolute numbers - the total numbers of content items per category are indicated in brackets right to the subcategory name.
+Percents - the relative number of content items of a category compared to all content items contained in the current category (including all subcategories) is indicated as a percentage value right to the category name.

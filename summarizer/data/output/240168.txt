@@ -1,0 +1,29 @@
+
+
+The DBMessageServiceReceiver can not only be used as a standalone application as described in the Administration Manual but can also be used within customized applications. In this case the application contains a member implementing the interface Receiver. Details on the interface can be found in the javadoc of this component. This section gives a short overview of the usage of the DBMessageReceiver.
+
+An instance of a Receiver should be created by a call to the ReceiverFactory. In order to create a DBMessageReceiver an uploader object, a client id, a url of the DBMessageServiceServlet and a boolean indicating if a buffer should be used must be provided. Be aware that the uploader initialization and closing must be done by the client.
+
+
+Once the client has a member instance of the DBMessageServiceReceiver it can subscribe/unsubscribe to the Database Message Service. The receiving process can be started by calling the startReceive method (use the stopReceive method to stop the receiving process).
+
+In contrast to the JMSReceiver which completely stops when an uploader exception occurs, the DBMessageServiceReceiver only stops receiving but does not exit. 
+
+There are two possible sources of errors that lead to the stopping the receiving process:
+
+the uploader throws an exception
+To be aware of the these cases the client can register as a listener with the method registerErrorHandler.
+an exception occurred while trying to communicate with the DBMessageServiceServlet.
+Register as a listener with the method registerListener to get notice about these kind of problems.
+
+A registered listener also gets notified about the number of messages that have just been received.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+
+
+XSL Formatting Objects (XSL:FO) are a new standard by the W3C. XSL:FO defines how content should be styled, laid out, and paginated onto some presentation medium, such as a window in a web browser or a hand-held device, or a set of physical pages in a catalog, report, pamphlet, or book.
+
+XSL was designed to overcome the limitations of HTML and create a formatting vocabulary that is truly platform independent. It aims at both browsers and desktop publishing programs.
+
+When producing XSL:FO with XSLT from some XML content please keep in mind:
+
+There are no tools for helping with the layout. You'll have to code everything with a text editor. Considering the complexity of the specification this is quite a task.
+You can create PDF documents from XSL:FO objects by using one of the available processors for this. The Apache Project offers FOP for this Purpose. This manual was created from XSL:FO via XEP from renderX.
+

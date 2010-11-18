@@ -1,0 +1,29 @@
+
+
+Alternatively you could use different implementations of ContentMetaData in each instantiation context.  However, for CMS based WebServices this is not a good idea.  For real world projects we strongly recommend the usage of CAE content beans instead of naive interfaces and classes like ContentMetaData and ContentMetaDataImpl.  Maybe you have an existing CAE application which you want to expose as a WebService.  In this case you don't want to reinvent the wheel anyway but just annotate your content beans for JAXB processing.  You just might have to provide some additional constructors and setters, as explained above.  But even if you start from scratch it is a good idea to benefit from CAE flexibility, features and performance issues.  However, ContentMetaData is used for this example in order to keep it simple and independent of document types.
+
+Why are subfolders not simply included in ContentMetaData but require another server roundtrip to fetch them with getSubfolders?  As mentioned before, portable artifacts have no callback methods but include all data in the first place.  If subfolders are included as a List of ContentMetaData, these subfolder objects would in turn include their subfolders, and so on.  I.e. the JAXB runtime would recursively marshal the whole folder structure of the content repository into a single response if you requested the root folder.  When you JAXB-annotate your existing CAE content beans for a WebService, be aware not to include properties of recursive types!
+
+Generate the portable artifacts now:
+Change to the directory ws02-folders
+Invoke the apt tool:
+$ ant generate-server
+
+If you look at the generated portable artifact classes, you will notice that they make use of ContentMetaData, although it is an interface.  Marshalling to ContentMetaDataImpl and JAXB binding are mere runtime issues.
+
+Now compile and deploy the WebService:
+Use the convenient server target:
+$ ant server
+Wait until the web application is running in Tomcat
+
+Generate the client API
+$ ant generate-client
+
+The client is suitable for small repositories like the CMS Starterkit sample content.  If you work on a larger repository, you should change the client and restrict the repository traversal to a subtree or a maximum depth.
+
+Compile and execute the client with the following commands:
+Compile the source file with:
+$ ant compile-client
+On successful compilation, you can start start the client. A window should appear allowing you to explore document properties.
+$ ant execute-client
+

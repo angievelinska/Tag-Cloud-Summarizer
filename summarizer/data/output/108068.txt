@@ -1,0 +1,33 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Optional
+ 
+
+Description
+ 
+
+class
+ 
+
+No
+ 
+
+The fully qualified class name of the link predicate.
+ 
+
+any
+ 
+
+Yes
+ 
+
+A custom attribute for that a corresponding setter method exists in the link predicate class .
+
+
+

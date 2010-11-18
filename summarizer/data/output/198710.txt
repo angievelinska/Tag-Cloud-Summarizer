@@ -1,0 +1,4 @@
+
+
+ name type required description endpoint String yes An URL pointing to the portal application's "httpcontentservice-servlet" which is typically reachable at http://[host]:[port]/[context]/httpcontentservice authentication BasicAuthentication no Authentication informations which will be sent to the portal application. Currently only http basic authentication is supported.
+

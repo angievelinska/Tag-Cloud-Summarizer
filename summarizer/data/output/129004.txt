@@ -1,0 +1,25 @@
+
+
+You have to consider the following aspects when you tell the server to convert SgmlText to RichText: 
+
+Unparsing / LinkFilter  
+
+Use the DomUnparser with the new LinkFilter for RichText in hox.corem.servlets.text instead of hox.corem.servlets.beans.InternalLinkFilter. If you have defined your own DomUnparser or some filter (most commonly a LinkFilter) that is used with the standard DomUnparser, you may have to adapt this filter to the RichText format. If you only use the standard XML property templates, these automatically use the new LinkFilter.  
+
+Embedded Images 
+
+In contrast to the HOX.IMAGE element in SgmlText, embedded images in RichText reference not only a document (by ID), but also the name of the BlobProperty that contains the image data. This name has to be complemented when SgmlText is converted to RichText. Since the automatic converter does not know which property to use, it is left empty. In the CM Editor, a "broken image" is displayed, but the user can edit the image attributes and complement the desired BlobProperty manually. It you want to automate this process, implement a custom RichTextConverter (see below).  
+
+Custom SgmlText Attributes  
+
+In many cases, custom attributes not defined in the coremedia-sgmltext.dtd were used, especially in tables. The on-the-fly converter converts these attributes in a way that usually allows to achieve a WYSWYG behavior within the new RichText editors. After the converter is described in detail, you find hints how to configure the system to support the converted custom attributes.  
+
+Other SgmlText Extensions 
+
+ If the SgmlText properties contain content that is not converted satisfactorily (because the coremedia-sgmltext.dtd was neglected), you can still engage in the conversion process. For each XMLProperty, you can define a converter that runs on the SCI server every time content is  retrieved from the repository. The default conversion for SgmlText to RichText is done by the class hox.corem.sgmlconverter.Sgml2RichTextConverter, contained in cap-base.jar, and described below. All converters must be derived from hox.text.sax.SaxFilter (in principle a SaxEventHandler that can easily be chained, see JavaDoc) and configured in sql.properties like this:  
+
+sql.store.convert.<DocumentType>.<PropertyType>=<com.customer.XMLConverter>  
+
+Note that converters are not inherited. If you configure a converter for a RichText property, it replaces the Sgml2RichTextConverter. To reuse its conversion method, build up a chain from your converter to the Sgml2RichTextConverter or reuse members of an Sgml2RichTextConverter that are public API (see JavaDoc). 
+
+ 

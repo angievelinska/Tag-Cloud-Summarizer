@@ -1,0 +1,3 @@
+
+
+This chapter gives a brief introduction of the installation and start of the CoreMedia Starter Kit. For a list of  the supported systems and a comprehensive description of configuration details please refer to the Administration and Operation Manual.

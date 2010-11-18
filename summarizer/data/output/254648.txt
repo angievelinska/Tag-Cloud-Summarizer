@@ -1,0 +1,24 @@
+
+
+CoreMedia CMS manages content organized in freely configurable so-called documents. Documents normally contain the information of one entity. They may contain only a single information e.g. an image or may merge all information concerning a content object. 
+
+To have a consistent appearance and to avoid unnecessary effort, templates should be used for the creation of documents. CoreMedia supports this in the form of document types, which can be designed in an object-oriented way. 
+
+Documents as in use in CoreMedia SCI are described by so-called document properties (also called fields or properties for short). A document of the type "pressstatement" for example may consist of properties such as:
+
+author
+date
+title
+summary
+textual content
+accompanying images
+
+On the other hand, an image document has different document fields, e.g. dimensions and graphical data.
+
+The more a document is structured in specific fields, the more flexible is the access to contents from output templates e.g. for web page construction.
+
+Furthermore, the CoreMedia Editor allows to use document fields as search criteria. So it also pays off here to put some more effort in the creation of document types and to have as many properties as possible.
+
+Since content type and source format of the documents are application-specific, CoreMedia SCI document types are not rigidly programmed. You have the possibility to design the document types and fields that you need to represent the maximum amount of structured information from your documents in CoreMedia SCI. In general, this design process will be done in cooperation with members of the editorial staff.
+
+The document types can be defined in one or several XML-files, to support a more modular document type assembly. Its structure is described more detailed in the following sections. In section you learn how to install your document type file.

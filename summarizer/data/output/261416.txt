@@ -1,0 +1,5 @@
+
+
+Deinstallation of the CoreMedia Search Engine
+
+The CoreMedia Search Engine is based on FAST and you must use the FAST uninstall script for deinstallation. The uninstall script uninstall.bat or uninstall.sh is located in the installation directory of the CoreMedia Search Engine. Under Windows, you can also use the software administration in the system control panel for deinstallation.

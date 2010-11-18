@@ -1,0 +1,3 @@
+
+
+The heading results directly from the textual content of the <hl1> element. Inline Markup is not taken into consideration here.

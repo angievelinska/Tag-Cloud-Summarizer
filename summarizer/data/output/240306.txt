@@ -1,0 +1,3 @@
+
+
+The Advanced Query Editor is a web application, that you can invoke from the CoreMedia Editor and WebEditor. You can use it, to create queries which offer more search options as the standard query. An editor, for example, can search for documents which are not modified by him. In contrast to the standard query editor, an administrator or developer has to enable the advanced query. This means, that the advanced query might not be enabled in your editor. An advanced query is stored in the string property () of a regular CoreMedia document. You will also open the Advanced Query Window and execute the query from this document.

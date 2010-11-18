@@ -1,0 +1,11 @@
+
+
+Element Fields
+
+There can be exactly one element Fields below the element FastIndex. It contains the configuration of additional fields to be indexed. It can contain multiple XPathField elements with different name attributes.
+
+Parent element: FastIndex
+
+Child elements: XPathField
+
+Attributes: none

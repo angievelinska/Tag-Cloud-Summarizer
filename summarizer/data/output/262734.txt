@@ -1,0 +1,13 @@
+
+
+If you want to create a version of an existing document (the master) for a different language, you have two possibilities to link this document:
+
+Link it as a localized variant to the navigation context of the master.
+Link it to the appropriate navigation context of a localized version of the website. 
+
+In both cases you can start the same:
+Open the WebEditor and select the document from which you want to create a variant. Then click  in the toolbar to copy the content to the clipboard.
+Select the folder, where you want to place the new document and click   in the toolbar.
+
+If you place the copied document into the same folder as the master, the system automatically creates a document with the name "Copy of <oldDocumentName>".
+

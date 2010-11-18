@@ -1,0 +1,4 @@
+
+
+In the example above, you defined a string variable with the name "MyFirstVariable" and the value "OnlyATest". With line 6 you configure the action bean that the method setVariableToPass() on an instance of com.coremedia.training.workflow.action.ParameterAction is called with the name of the string variable as a parameter.
+

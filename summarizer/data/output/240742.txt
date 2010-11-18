@@ -1,0 +1,5 @@
+
+
+The Fast boundary match feature
+
+The `Fast boundary match¿ feature can be applied to storage-implied and bean String properties. It adds the `equals¿ operator to the given String property. The feature is made available as a Spring configuration bean named `fastBoundaryMatch¿.

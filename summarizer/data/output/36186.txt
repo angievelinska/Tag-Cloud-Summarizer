@@ -1,0 +1,9 @@
+
+
+Line 3: You need to import this package because you are working on the CoreMedia Editor.
+
+Line 5:  The name of the class must be the one called from the server.
+
+Line 7 - 10: This is the method in which you implement your actual action. The example action only prints the content of context and target and returns true.  
+
+Line 12 - 14: This method returns whether the command is executable with the given target and context or not.

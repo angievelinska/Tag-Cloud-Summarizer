@@ -1,0 +1,19 @@
+
+
+The CoreMedia Workflow comes with five predefined workflows. Four of these workflows deal with the approval and publication of resources, the fifth workflow handles the global search and replace functionality. If you have purchased the CoreMedia Workflow Server (Single Workflow Edition), you can choose the Global Search and Replace workflow and one of the four publication workflows after installation of the system.
+
+simple-publication
+3* A user (who needs approval and publish rights) creates a workflow with all necessary resources. The resources will be published (and implicitly approved) by the same user.
+two-step-publication
+3* A user creates a workflow with all necessary resources. A second user (who needs approval and publish rights) can approve the resources. After the successful completion of this task, the resources will be published automatically.
+two-step-approval
+3* A user creates a workflow with all necessary resources. A second user (who needs approval rights) has to approve the resources. The workflow will terminate after the successful completion of this task. Afterwards, the resources can be published manually by an authorized user or automatically.
+three-step-publication
+3* A user creates a workflow with all necessary resources. A second user (who needs approval rights) has to approve the resources. After successful completion of this task, another user (who can be one of the two other users) can accept the publication task of the workflow. Then the publication starts automatically.
+global-search-replace
+
+
+3* A user collects a set of documents, defines the search and replace options and starts an automatic or interactive search and replace run on this documents. See the appropriate section in the User Manual for details.
+
+
+

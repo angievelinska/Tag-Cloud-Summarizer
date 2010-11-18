@@ -1,0 +1,6 @@
+
+
+HttpContentService
+
+The HttpContentService is the default ContentService which uses http calls to access the portal application. This ContentService is lightweight and may be used for heavy load scenarios. Configure the ContentService with the following properties:
+

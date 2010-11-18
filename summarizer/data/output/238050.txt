@@ -1,0 +1,12 @@
+
+
+In order to edit a document, you have to check it out. A checked-out document is blocked for editing by others, and it is made visible to others that it is checked out by you.
+
+
+Every check-out creates a new version of the document. Older document versions are saved, so it is possible to track down content modification. It is is possible to create a new document version out of any older one, and so to restore any older content.
+
+
+If you have finished your editing task with this document, you check it in again, and so make it available to your colleagues - who continue editing or approve for publication. Whatever they or you are entitled to do, is defined by your group memberships (see chapter 'users and groups').
+
+
+Any version of a document has a state labeled by one of the following icons:

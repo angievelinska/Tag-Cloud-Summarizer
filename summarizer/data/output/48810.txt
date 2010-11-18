@@ -1,0 +1,3 @@
+
+
+After the command has been defined and registered as shown above, the command can then be used with the <wage:cmdButton> tag like the predefined commands within a WAGE toolbar:

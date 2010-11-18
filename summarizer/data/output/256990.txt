@@ -1,0 +1,13 @@
+
+
+The search area contains the following components:
+Search term: The field shows the search term. Press <Enter> to start a new search.
+Restrict to document type: You can restrict the search result to specific document types. This component will not be shown in the file chooser dialog.
+Search in folder: The search is limited to the shown folder.
+Subfolder checkbox: Shows, if the search spans subfolders.
+[Search]: Click this button to cancel a running search or to start a new search.
+[Back]: Click this button to cancel a running search and/or to leave the search modus. The Explorer window will be shown in the standard style. Documents previously selected in the document overview will be again selected. 
+
+See Abbildung for the Explorer window with the search area. The documents found from the search will be shown at the right side of the Explorer window in a specific document view. The document view differs from the non-search document overview. It contains less columns and has an additional column containing the path of the found document. If you click the heading of a column, this column will not only be sorted but a new search will be started. This is necessary, because the overview shows only a part of the result set if it exceeds 4000 documents or the editor has canceled the previous search. Therefore the sorting of a column might lead to a different number of hits or to different documents . E.g. sorting for document names in an ascending order might give 4000 documents starting with "a" to "g" and sorting in descending order might give 4000 documents starting from "z" to "o".
+
+You might always hide or show the search area without starting a new search. Simply click [Switch to Full-text search] in the toolbar or select Edit|Full-text search. 

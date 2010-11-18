@@ -1,0 +1,11 @@
+
+
+Operations:
+
+
+approvePlace folder F2
+
+disapprovePlace folder F2
+
+
+Required rights:

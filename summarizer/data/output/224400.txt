@@ -1,0 +1,12 @@
+
+
+Save image into the file system
+
+You can save an image from the document in the file system. To do this, the following steps are necessary:
+Select and open the document in the Overview window
+Open the dialog for saving the image, using one of the following methods:
+
+Select Save from the Binary Data menu or from the context menu.
+Click on the appropriate symbol on the tool bar.
+
+A dialog box appears:

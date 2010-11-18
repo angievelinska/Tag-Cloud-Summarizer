@@ -1,0 +1,21 @@
+
+
+Process
+
+
+Grammar: (Rights?, (Variable | AggregationVariable)*, InitialClient?, Client?, (Task)+) 
+
+
+A process is a definition of a workflow process which is identified by its name. It consists of tasks, which reference each other by name. The startTask attribute defines the name of the start task. A process is the template for a process instance. To run a process, it has to be instantiated. At that time an actual process instance is created, which carries the process state and completes the workflow steps that are defined by tasks and carried out by task instances. 
+
+
+The description of the process is a human readable explanation about what the process does or a key used for localization. 
+
+
+The subprocessOnly attribute defines whether an instance of the process can be created as a top level instance or only as a subprocess instance. The default is false. 
+
+
+The Rights element configures user and group permissions for the process instance operations. 
+
+
+Variables in the process scope define the global state of the workflow process. With InitialClient  and Client, you define which variables are to be read or written by a user or an external process. The InitialClient element is used for initializing the process before it is started while the Client element is used afterwards when the process is running. 

@@ -1,0 +1,18 @@
+
+
+The main goal of the Starter Kit¿s internationalization solution is to provide the web application programmer with a data model and an API to implement internationalization websites. Additionally, there is support for the editor in the CoreMedia WebEditor. There are several property editors that are configured in the WebEditor¿s config.bsh file. In this section, these property editors are described shortly from a developer¿s perspective. For a complete description of how the editor uses these features and creates internationalized content, please consult section.
+In the CoreMedia Editor, all editing and browsing required for localized content editing has to be done manually, using the generic features for link lists, integer entry, and queries.
+
+Locale Entry Property Editor
+
+The Starter Kit WebEditor has a preconfigured property editor for the locale property of a CMLocalized document. This property editor unites the three string properties for language, country, and variants into one drop-down selection box, where any locale predefined in Java can be chosen. All locales are shown in their localization in the language chosen by the editor.
+
+Master Link Property Editor
+
+The master and masterVersion property of a CMLocalized document is edited through a single link property editor combined with a version chooser. The version chooser only allows selecting a checked-in version of the master document. When the master link property editor is selected, the master document version can be opened in a document view or in an explorer view.
+
+Note that it should be best practice to only use published versions of the master document, or at least approved versions, since intermediate versions may be destroyed during publication. To avoid dead version links, we recommend that you switch off destroying intermediate versions (see CoreMedia CMS Administration Manual).
+
+Localized Variants Navigation
+
+To navigate all available localized variants of the current document, there is a new menu item in the ¿navigation¿ menu of the explorer window and the document window. As for all navigation menu items, a query result window is opened. It shows the set of all localized variants to which the current document belongs.

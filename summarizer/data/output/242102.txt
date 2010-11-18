@@ -1,0 +1,6 @@
+
+
+A version of a document is created when the document is created or checked out. In Figure you can see the lifecycle of a version. Typically, the content is checked in, so that the version is promoted to a regular version and is no longer a working version. The version is then approved and published, so that it appears on the live system.
+
+When the diagram references the destroy operation, this applies either to an explicit destroy() call of the version or the content, to an action of the document collector or version collector, or to a cleanup during publication when the publisher is configured to destroy intermediate unpublished versions.
+

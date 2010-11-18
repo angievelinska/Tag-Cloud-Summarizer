@@ -1,0 +1,15 @@
+
+
+The WebEditor offers different windows for different editing tasks:
+
+Explorer window
+The Explorer window is the main window, made of a folder view, a document view and a detail view (see section).
+Workflow window
+for creation, processing and surveying workflows (see section)
+Query window
+for assembling, modifying and managing queries (see section)
+Publisher window
+to monitor progress and results of publication processes (see section)
+User manager window
+to change the password (see section)
+

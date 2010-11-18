@@ -1,0 +1,5 @@
+
+
+The UserRepository interface contains a number of methods that allow you to get access to User and Group objects. As in all repositories, you can obtain a Member with a given string id using getMember(String). It is also possible to retrieve members based on their name and optionally their domain using the getUserByName and getMemberByName methods.
+
+You can issue a query for users or groups that provides only a substring of the actual name. In this case, the methods findUsers and findGroups return a collection of matching objects. Using these methods, you can set an upper bound on the number of results, reducing the load on the repository.

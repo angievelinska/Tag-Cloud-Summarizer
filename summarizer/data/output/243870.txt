@@ -1,0 +1,7 @@
+
+
+Successor
+
+Grammar: EMPTY 
+
+A Successor element defines a successor task of a Fork or Choice task by its name. See Fork for an example.

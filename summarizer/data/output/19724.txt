@@ -1,0 +1,8 @@
+
+
+<NamedDocumentVersionComparator>
+
+
+Child elements: <Comparator>
+
+Parent elements: <ColumnDefinition>

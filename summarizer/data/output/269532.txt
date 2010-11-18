@@ -1,0 +1,9 @@
+
+
+The CoreMedia Content Application Engine that is used for In-Site Analytics is assumed to be also used for preview based-editing, so that overlay reporting is always installed jointly with the CoreMedia Editing Services.
+
+As a necessary configuration step, you must provide access to the Analytics database. The properties overlay.db.driver, overlay.db.url, overlay.db.user and overlay.db.password in the file WEB-INF/spring/analytics/overlay.properties define the basic JDBC connection parameters, whereas the property overlay.db.database indicates the database product used. Possible values are oracle, db2, and mssql. The property value must match the database used, so that database specific SQL statements can be correctly generated. All five properties can be set by means of the installer.
+
+You may configure the default reporting interval for generating the overlays. By default, statistics for a total of 60 minutes are displayed, but you may change this value as needed using the property overlay.default.interval. You may configure the type of the displayed link overlays (clicks, loyalty, ...) by means of the property overlay.default.mode. By default, the number of clicks on the given link is shown.
+
+By setting overlay.default.satellite.visible to false, you make sure that the In-Site Analytics configuration satellite does not appear immediately when opening a preview, but only after it has been explicitly enabled by the user. By setting the values overlay.satellite.modes.csv and overlay.satellite.intervals.csv you can configure the possible value from which the user can choose in the satellite.

@@ -1,0 +1,10 @@
+
+
+The predefined Top Internal Search Terms Reports display a ranking of search terms entered into the CoreMedia Search Engine during the selected time interval. The CoreMedia Search Engine is an optional component extending the content repository with structured, full-text and metadata search capabilities. See the Administration and Operation Manual, Chapter 8 for more information on the CoreMedia Search Engine.
+
+The searches of the CoreMedia Search Engine are always run against one of a number of so-called collections. There is one report that displays the top search terms when all collections are joined into one and there is another report that allows you to query the top search terms of a single collection.
+
+In the analytics context, the CoreMedia Search Engine is called 'internal search engine' in order to distinguish it from 'external search engines'. The latter term refers to engines outside the scope of a CoreMedia CMS system installation, e.g. Google, Altavista, etc. See the next section (the External Search Terms Report) for a ranking of external search terms.
+
+Please note that currently the internal search terms ranking is a consolidation of search terms over all sites served by the search engine, no (sub-)site-specific breakdown is available. However, the search collections may be configured in a way that collections correlate with sites. In that case, the associated collection may be selected for getting a site-specific report.
+

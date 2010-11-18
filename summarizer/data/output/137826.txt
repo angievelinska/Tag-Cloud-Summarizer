@@ -1,0 +1,10 @@
+
+
+
+2#
+
+
+Select the Live Server type you want to install and click [Next].
+
+Now you will be asked for search options.
+

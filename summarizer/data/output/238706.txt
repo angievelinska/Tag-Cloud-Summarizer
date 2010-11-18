@@ -1,0 +1,22 @@
+
+
+ Property name Property description Mandatory name The profile's name. If the name property is not set, the Spring bean name will be used per default. no associatedRole A comma-separated list of roles that can assume this profile. This property may be left unspecified, in which case the profile is said to be generic. Currently roles are mapped to CMS user groups. A user is associated with a profile upon first request within a session. If a user matches more than one profile, the first profile matching will be selected. If no profile with a specified 'associatedRole' can be matched, the user will be associated with the first generic profile. no 
+
+views
+
+ 
+
+Ordered map of profile views. At least one view must be defined. Each entry maps a view identifier to a view definition.
+
+Entry key - View identifier: The view's identifier for the given profile.
+
+Please note that a view's display name (the text shown in the dashboard tab) is determined by this view identifier and not by the view's name, allowing profiles to name shared views differently.
+
+A view name key is computed from
+
+ <profile name> + ".view." + <view identifier> + ".name".
+
+The key is localized using the Dashboard properties. If no key mapping can be found, the view identifier is used as fallback name.
+
+Entry value - The view definition (see below) yes defaultViewIdentifier Upon a user's first access to the dashboard, the profile's default view is selected. The 'defaultViewIdentifier' must be one of the view identifiers used in list-property 'views'. yes
+

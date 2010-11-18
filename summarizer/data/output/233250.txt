@@ -1,0 +1,3 @@
+
+
+Note that the term "Services" as used here is not to be confused with "Web Services". It is meant as in the context of Enterprise Architecture, where "the term 'Service' refers to a discretely defined set of contiguous and autonomous business or technical functionality" [Wikipedia, "Systems Architecture Service"].

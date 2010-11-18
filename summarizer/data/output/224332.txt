@@ -1,0 +1,71 @@
+
+
+PortletEmulation web application
+
+The PortletEmulation web application retrieves pages and binaries from the servlet of the portal application and delivers them to a browser. You can configure an XSL stylesheet to perform an XSL transformation of the content that is returned to the client.
+
+Before using the PortletEmulation web application, you need to configure the URL of the portal application servlet and the URI of the home page. Configure the URL of the servlet in WEB-INF/contentservice.xml, e.g.: 
+
+<beans>
+ <bean id="com.coremedia.portal.service.ContentService"
+  ...
+  <property name="contentServices">
+   <list>
+    <bean class=
+  "com.coremedia.portal.frontend.service.HttpContentService">
+     <property name="name" value="contentservice_1"/>
+     <property name="endpoint" 
+     value="http://localhost:8001/portalmenusite/httpcontentservice"/>
+    </bean>
+ ...
+</beans>
+
+Note, that if the PortletEmulation web application accesses an SSL-secured portal application, you will have to add the SSL certificate of the CAE portal application to the ones trusted by the container. You can do this by adding the SSL certificate to the ones trusted by the Java Virtual Machine in the file <JRE>\lib\security\cacerts with the JAVA tool keytool. The SSL certificate must match the hostname of the portal application URL.
+
+The URI of the home page is configured in WEB-INF/web.xml, e.g.:
+
+<web-app>
+  <servlet>
+    <servlet-name>ContentServlet</servlet-name>
+    <servlet-class>
+      com.coremedia.portal.frontend.client.ContentServlet
+    </servlet-class>
+    <init-param>
+      <param-name>homepageUri</param-name>
+      <param-value>/portalmenusite/servlet/content/158</param-value>
+    </init-param>
+...
+
+You can configure a custom XSL stylesheet in WEB-INF/web.xml. The path must start with a "/" and is interpreted as relative to the context root. For example:
+
+<init-param>
+  <param-name>stylesheet</param-name>
+  <param-value>/WEB-INF/xslt/custom-transformer.xsl</param-value>
+</init-param>
+
+You can get the configured homepage from the URL 
+
+http://<host>:<port>/portletemulation
+
+Other pages can be accessed with 
+
+http://<host>:<port>/portletemulation/page/<path>
+
+For example: 
+
+http://localhost:8001/portletemulation/
+  page/portalmenusite/servlet/content/158
+
+Binary content can be accessed with 
+
+http://<host>:<port>/portletemulation/binary/<path>
+
+For example: 
+
+http://localhost:8001/portletemulation/
+  binary/portalmenusite/servlet/contentblob/158/image
+
+To perform an XSL transformation with the configured XSL stylesheet you just need to append the query parameter com.coremedia.portal.control.transform to the URL. For example:
+
+http://localhost:8001/
+         portletemulation?com.coremedia.portal.control.transform

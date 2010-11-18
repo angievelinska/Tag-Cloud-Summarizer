@@ -1,0 +1,3 @@
+
+
+The new command can then be defined and registered for use with the following JavaScript code within a WAGE toolbar:

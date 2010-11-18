@@ -1,0 +1,3 @@
+
+
+The dialog view contains a frame with a source URL to the action starting the wizard, passing in the current Resource (a Dish) as a parameter. If no collector paramter is specified, WAGE uses the default ChangeCollector name as configured in the wageConfig bean (see wageConfig). The default is WageSession.NEW_CHANGE_COLLECTOR, which will automatically create and use a new ChangeCollector that is then handed on from edit step to edit step.

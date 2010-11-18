@@ -1,0 +1,69 @@
+
+
+Copy text from other applications
+
+You can also copy texts from other applications into the RichText pane. You can choose between formatted copying or plain text copying. If the format of these texts in the clipboard is HTML and you choose formatted copy, the CoreMedia  application will try to convert the texts into the CoreMedia RichText format. Otherwise the text will be copied as plain text.
+
+The transformation of HTML texts into CoreMedia RichText format can be configured (see the Editor Developer Manual) and is therefore project specific. By default, the following elements of Microsoft Word texts can be transformed into the RichText format:
+
+
+
+Bold, italic, understrike and strike through
+
+
+Superscript and subscript
+
+
+Headlines
+
+
+Tables
+
+
+Ordered and unordered lists
+
+The following formats and structures can not be copied from Microsoft Word:
+
+
+
+Colors
+
+
+Images and drawings
+
+
+Paragraph alignment (centered ...)
+
+
+Format templates
+
+
+Language assignments
+
+
+Fonts and font sizes
+
+
+Frames
+
+
+Embedded objects (Excel tables ...)
+
+At the moment, it is not possible to copy the following structures into existing lists, tables and blockquotes:
+
+
+
+Several paragraphs
+
+
+Lists
+
+
+Tables
+
+
+Images
+
+If you try, only plain text will be inserted.
+
+If you have copied text containing attributes which are not defined in a style group (i.e. attributes you cannot use) all involved attribute editors will offer a button to remove these attributes (see figure). The same happens if you use legacy content from the SGML pane which contains attributes not supported in the RichText pane.

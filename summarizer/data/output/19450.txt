@@ -1,0 +1,3 @@
+
+
+This element is used to configure a class which determines the language used in a property. This information is used for the spellchecker.For the default class hox.corem.editor.DefaultPropertyLanguageResolverFactory the additional attributes language and country can be used to override the settings of the element Locale.

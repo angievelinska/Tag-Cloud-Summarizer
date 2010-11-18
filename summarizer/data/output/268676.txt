@@ -1,0 +1,3 @@
+
+
+The document is opened in a specific spellchecking modus an spelling errors are marked with a red, wavy line. The intention of this modus is only to correct spelling errors, you can not edit text- or richtext-fields.

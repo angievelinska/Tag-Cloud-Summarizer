@@ -1,0 +1,14 @@
+
+
+In CoreMedia CMS it is possible to define multiple document type definitions in separate files (see the Administration Manual). At startup-time the Content Server merges these files to create the complete document type hierarchy. You can use these files to alter an existing document type definition without changing the base definition file in three ways:
+
+Add new document types.
+Inherit from existing document types.
+Attach new properties to existing document type definitions.
+
+These procedures are described in the Administration and Operation Manual. In this section you will learn how to attach properties to an existing document type. The advantage of this approach is the possibility to introduce a new property in the middle of an existing type hierarchy and let all subtypes inherit this new property. Because an extendable DocType has no idea of any property that will be attached to it, there is only a navigation from the attachment to the DocType. At startup-time a DocType is merged with its attachments and the Content Server updates the persistence schema. 
+
+At runtime it will look like there has never been more than one definition file. It is even possible to access the new property from within the content bean instance of the extended type but as this type does not know about its new property there has to be another content bean written that represents the attachment and a navigation added to access its values.
+
+Because the attachment is not a DocType it is called a DocTypeAspect. There can be many DocTypeAspects attaching properties to the same target DocType, but the developer has to take care of name clashes. The relationship between document type and aspect is therefore of the cardinality 1:n. As a limitation to ensure consistent behavior in subtypes, it is neither allowed to alter existing or inherited properties nor attach properties that are already defined in subtypes of the TargetType. Aspects also have to define an index attribute for every property they want to be indexed. Aspects can not rely on the default index attribute value from the TargetType. To define DocTypeAspects the definition file must be valid against the coremedia-doctypes-2008.xsd schema. 
+

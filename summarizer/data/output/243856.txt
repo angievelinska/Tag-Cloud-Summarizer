@@ -1,0 +1,51 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the process 
+
+description 
+
+CDATA 
+
+#IMPLIED 
+
+a textual description of what the process does or a localization key. 
+
+startTask 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the initial task 
+
+subprocessOnly 
+
+(boolean) 
+
+"false" 
+
+Specify this attribute for processes that cannot run stand-alone. 
+
+defaultTimeout 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the maximum number of seconds that an instance of this process is supposed to take

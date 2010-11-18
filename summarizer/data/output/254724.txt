@@ -1,0 +1,14 @@
+
+
+Enable Feeding
+
+Configure the location and collection of the CoreMedia Search Engine as described in chapter.
+
+You can enable feeding by setting the property cap.server.feeder.enable to the value true. An enabled Search Engine Feeder automatically starts when the Content Server goes online and can be stopped and restarted using the Search Engine Feeder administration page as described in section. A disabled Search Engine Feeder starts when you change the configuration to enable it.
+
+The configuration of the Search Engine Feeder is contained in a separate XML file, which is specified in the property cap.server.feeder.config.
+
+For example:
+
+cap.server.feeder.enable=true
+cap.server.feeder.config=properties/corem/feeder.xml

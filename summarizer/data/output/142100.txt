@@ -1,0 +1,4 @@
+
+
+ Menu item Sub item Function Explorer  Opens a new Explorer window. Workflow  Opens a new Workflow window. Query  Opens a new Query window. Publisher  Opens a new Publisher window. User manager  Opens a new User Manager window.
+

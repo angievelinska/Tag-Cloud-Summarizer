@@ -1,0 +1,7 @@
+
+
+Install a CoreMedia SCI component as a Windows service in a command prompt console with the following command:
+
+ cm <component> install [-a] [-u <user> [-p <password>]]
+
+The parameters have the following meaning:

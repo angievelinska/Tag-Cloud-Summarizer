@@ -1,0 +1,8 @@
+
+
+ Component File Property Content Server contentserver.properties cap.server.management.jmxremote.url Workflow Server workflowserver.properties workflow.server.management.jmxremote.url Active Delivery Server 
+
+<TomcatHome>/webapps/coremedia/WEB-INF/web.xml
+
+<TomcatHome>/webapps/coremedia/WEB-INF/properties/management/jmx/capgenerator-jmx-agent.xml See section Content Application Engine The corresponding properties file of the component, for example objectserver.properties for the CAE template. management.jmxremote.url
+

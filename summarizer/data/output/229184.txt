@@ -1,0 +1,11 @@
+
+
+Disable Feeding
+
+Set the property cap.server.feeder.enable in the file contentserver.properties to the value false to disable the Search Engine Feeder.
+
+A disabled Search Engine Feeder does not start when the Content Server goes online and can not be started with the Search Engine Feeder administration page. Changing the configuration stops a running Search Engine Feeder.
+
+For example:
+
+cap.server.feeder.enable=false

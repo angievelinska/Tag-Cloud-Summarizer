@@ -1,0 +1,17 @@
+
+
+Delete
+
+To remove a link from the link list without copying to the clipboard:
+Select the link in the link list
+Remove the link by choosing one of the two possibilities:
+
+Select Links|Delete from the menu bar
+Select Delete from the Context menu
+
+Sorting
+
+To sort links in a link list by name, do the following:
+Choose the link list.
+Select Links|Sort by document name from the menu bar.
+

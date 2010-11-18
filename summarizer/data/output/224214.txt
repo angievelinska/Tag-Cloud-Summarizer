@@ -1,0 +1,7 @@
+
+
+ Binary data of mime type "text" can be directly edited in the document window, but it is not possible to move them in external applications using drag and drop. 
+
+Enter binary data using drag and drop
+
+You can easily drag and drop binary data into appropriate document fields. For a text field, this works only for empty fields.

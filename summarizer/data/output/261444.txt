@@ -1,0 +1,3 @@
+
+
+This chapter describes, how you can integrate the Apache HTTPD with the CoreMedia Starter Kit in order to get short URLs in the user's browser. These URLs apply for all top-level page requests but not for images, CSS, JavaScript and the like. 

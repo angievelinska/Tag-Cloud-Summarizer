@@ -1,0 +1,10 @@
+
+
+Migration from CoreMedia CAP Relase 3.3 to 4.0
+
+In order to migrate Version 3.3 to Version 4.0:
+
+Adjust user rights according to the new user rights model. See Section 3.5.1 for more information about migrating user rights.
+For the new spellchecker, a new doctype "dictionary" has been added to the <CoreMediaHome>/properties/corem/required-doctypes file. Add this doctype declaration to your doctype file.
+Modify Active Delivery Server properties and templates according to the new Active Delivery Server deployment. See Section 3.5.2 for more information on Active Delivery Server migration. 
+

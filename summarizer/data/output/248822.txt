@@ -1,0 +1,16 @@
+
+
+This section describes how web pages are filled with editorial content by accessing the CoreMedia repository.
+
+The templates are Java Server Pages (JSP). In addition to fixed, pre-determined components (mostly HTML text), templates contain sections with Java code which, on execution, create variable content. By using the CoreMedia Generator API, you can therefore access structure and content in the CoreMedia repository.
+
+Therefore, template programming is about writing Java code to deliver contents stored in Core Media SCI in order to bring it onto the website in proper shape. The required parts of the CoreMedia Generator API are described in the following.
+
+As introduction, Section 4.2.2 describes how a template obtains access to CoreMedia objects.
+The Section 4.2.3 describes access to the document properties as well as utility classes for user-defined configuration of property values.
+The Section 4.2.4 deals with navigation and display of the directory structure of the CoreMedia repository.
+In Section 4.2.5, the construction and evaluation of complex requests to the CoreMedia repository is described.
+The Section describes how to perform full text searches.
+The Section 4.2.6 shows how the contents of a page can be inserted into another page.
+Finally, in Section 4.2.7, the configuration and usage of Template and Content Links is described.
+

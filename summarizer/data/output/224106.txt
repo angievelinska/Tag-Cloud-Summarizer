@@ -1,0 +1,15 @@
+
+
+Define image section
+
+You have the chance to define image sections, show only relevant parts of an image on your website.
+
+To do this, carry out the following steps:
+Select and open the document in the Overview window.
+Check out the document.
+Open the dialog window for selecting the image section.
+
+Select Image section from the Binary data menu or from the Context menu
+or click on the appropriate symbol.
+
+A dialog box appears showing the original image. The image section is selected from this:

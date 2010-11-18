@@ -1,0 +1,37 @@
+
+
+Examples
+
+Example: Definition of a variable with a static values:
+
+<bean id="NumberFormatVariable" abstract="true" 
+    class="com.coremedia.analytics.definition.
+    report.statemodel.vartypes.DefaultValueSetVariable">
+  <property name="displayNameKeyPrefix" 
+  value="NumberFormatVarType.ValueName"/>
+  <property name="staticValuesAsSymbolicNameToIdentifierMap">
+    <map>
+      <entry key="absolute" value="absolute"/>
+      <entry key="relative" value="relative"/>
+    </map>
+  </property>
+  <property name="defaultInitValueSymbolicName" value="absolute"/>
+</bean>
+
+Example: Definition of variable with dynamic values:
+
+<bean id="SearchCollectionVariable" abstract="true" 
+    class="com.coremedia.analytics.definition.report.statemodel.
+    vartypes.DefaultValueSetVariable">
+  <property name="displayNameKeyPrefix" 
+  value="SearchCollectionVarType.ValueName"/>
+  <property name="dynamicValueProvider">
+    <bean class="com.coremedia.analytics.definition.report.
+    statemodel.vartypes.DefaultDynamicValueProvider">
+      <property name="sqlStatement" value="select ID, 
+      SEARCHCOLLECTION as NAME from SEARCHCOLLECTIONDIMENSION"/>
+    </bean>
+  </property>
+</bean>
+
+Please note that static and dynamic values can also be merged. In case an identifier is used in both value sets, the dynamic value will override the static value definition. Also have a look at the variable type definitions in framework/analytics-config-beantypes.xml for examples.

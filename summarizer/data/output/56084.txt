@@ -1,0 +1,13 @@
+
+
+Windows XP
+Open the Windows Explorer or go to My Workplace.
+Select Tools|Connect network drive.  
+Activate "Online disk space" or
+
+go to your network neighbourhood and click Add....
+3* Continue in both cases:
+4#
+Click [Continue].
+Select "Choose another network computer".
+Continue with step 5 of the Windows 2000 steps. 

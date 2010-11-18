@@ -1,0 +1,42 @@
+
+
+In order to create a WebDAV folder on your computer - depending on your operating system - proceed as follows:
+
+
+
+Windows XP
+Open the Windows Explorer.
+Select Tools|Connect network drive.
+Select "Online disk space".
+Click [Continue].
+Select "Choose another network computer".
+Enter the WebDAV server URL:
+
+3* http://<host>:<port>/webdav/ 
+3* Replace <host> with the name of the computer where the WebDAV server is installed and <port> with its port.
+7#
+Click [Continue].
+Enter your CoreMedia user name and password.
+Enter a name for the WebDAV folder.
+Click [Finish].
+
+
+
+Windows 2000
+Open a Windows Explorer window.
+Select Tools|Map Network Drive. 
+In the next dialog window, select "Web folder or FTP site"
+Enter the WebDAV server URL:
+
+3* http://<host>:<port>/webdav/ 
+3* Replace <host> with the name of the computer where the WebDAV server is installed and <port> with its port. 
+5#
+Click [Continue].
+Enter your CoreMedia user name and password.
+Enter a name for the WebDAV folder.
+
+
+Click [Finish].
+
+
+

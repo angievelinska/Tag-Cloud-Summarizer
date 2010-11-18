@@ -1,0 +1,21 @@
+
+
+<WebExtension>
+
+
+
+Child elements: <Pattern>
+
+Parent elements: <WebContext>
+
+
+
+<WebContext host="localhost" port="8001" context="editor-extensions" 
+ loginPort="8443">
+    <WebExtension name="query"/>
+    <WebExtension name="difference"/>
+</WebContext>
+
+
+
+The <WebExtension>-element configures a part of a web application which is used to add functionality to the CoreMedia editors.

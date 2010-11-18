@@ -1,0 +1,4 @@
+
+
+The functionality of CoreMedia components can only be guaranteed with approved platforms and corresponding Java versions. To operate CoreMedia SCI, run Java 2 platform with Java Runtime Environment (JRE) or Java Development Kit (JDK). 
+

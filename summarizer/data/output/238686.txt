@@ -1,0 +1,3 @@
+
+
+Please note that you can restrict access also via dashboard profile user role association and subsequent view access restriction. Typically these are more suitable level for access restriction than the report definition level.

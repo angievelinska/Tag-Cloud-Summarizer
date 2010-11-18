@@ -1,0 +1,32 @@
+
+
+  Menu Item  Sub Items  Function  New Resource  all system resource types and project-specific document types  creates a new resource of the chosen typen in the current folder  New workflow  project-specific number and type of workflows  starts a new workflow of the chosen type  New rule    
+
+administrators only: 
+
+change or add rules to the selected resource  Open    opens the selected doucment in a document window  Check out    
+
+check out a document for editing (status and current owner visible to all users) 
+
+already approved documents open an "undo approval" dialog box 
+
+yes: no approved version available 
+
+no: approved version keeps state and will be published no matter how many later unapproved versions exist  Revoke check out    
+
+undo the check out of a document 
+
+document is accessible for others again 
+
+Attention! This undoes all changes of the current version  Check in    check in applies changes and make them available to all other users  Delete    
+
+delete the selected document or folder 
+
+publication required to make changes effective on live servers 
+
+deleted document can just be viewed, not edited.  Revoke delete    
+
+only not yet published resources can be restored 
+
+(once in recycle bin after publication, resources lose all path information)  Save  save the changed document. If you revoke the check out of a document all changes since the last check out will be deleted. You have to "Check in" a document to create a new version of the document and to persist the changes. Rename    rename the selected resource via dialog box (double naming prohibited across all documents also of different types within the same folder)  Approve    Direct approval of a resource. This function must be enabled.  Revoke approve    Revoke approval directly. This function must be enabled.  Mark for withdrawal    Marks the resource for revoking of the publication. This will delete the resource on the Live Server. This change must be published to take effect.  Revoke withdrawal    Revokes the mark for withdrawal of publication.  Preview publication    Simulates the publication and shows the result.  Publish    Direct publication (without workflow) of a resource.  Preview    opens document in a browser for preview (project-specific, Internet Explorer and Netscape are default options)  Properties  tabs: history, rights, and rules  properties of a resource, history of editing, publication, etc.  Close    closes the active (overview) window, but does not exit the application  Exit    exits the CoreMedia Editor and closes all windows 
+

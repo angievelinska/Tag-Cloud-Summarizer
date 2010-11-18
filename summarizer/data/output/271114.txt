@@ -1,0 +1,18 @@
+
+
+In order to determine all portlet windows on a page even before the actual rendering has begun, the CAE Portlet Container has to search the model returned by the controller. It is important to find all portlet windows, otherwise the portlet's output will not be available during rendering.
+
+The interface com.coremedia.cae.portletcontainer.FindPortletWindows defines just one method:
+
+Collection<CMPortletWindow> findPortletsInModel(Object self,
+ModelAndView modelAndView, HttpServletRequest request);
+
+The Starter Kit plug-in comes with a predefined implementation, which you may have to extend if your project contains additional container beans. For non-Starter Kit projects, you need to provide a custom implementation.
+
+Most implementations will only depend on the "self" argument, which is the content bean or data view representing the page itself. Since the actual rendering result may also depend on additional information from the modelAndView and the servlet request, these parameters are provided as well.
+
+Each portlet window will be rendered only once, so it does not make sense to have the same window appear twice on a page, as it would contain identical markup.
+It is assumed that the returned CMPortletWindow objects have a suitable equals and hashCode method, and have unique ids understood by the CAE's idProvider.
+
+In order to register your strategy in the portlet interceptor, you should customize the portlet interceptor's property findPortletWindows, using the CoreMedia CAE spring plug-in architecture. In one of your webapp's spring xml files, you should add configuration similar to the following:
+

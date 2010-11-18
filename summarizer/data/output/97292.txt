@@ -1,0 +1,34 @@
+
+
+ 
+
+Menu items 
+
+Sub items 
+
+Functions 
+
+Previous document 
+
+ 
+
+Opens the document previously displayed in this window (if it exists). 
+
+Next document 
+
+ 
+
+Open the next document which was displayed in this window (if it exists). 
+
+Open in Explorer 
+
+ 
+
+Opens a document selected from the query result in the explorer window. Simultaneously, the according folder will be opened in the folder overview.  
+
+Copy to clipboard 
+
+ 
+
+Copies a document selected from the query result to the clipboard.
+

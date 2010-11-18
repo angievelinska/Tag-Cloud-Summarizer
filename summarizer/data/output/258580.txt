@@ -1,0 +1,33 @@
+
+
+A Spring ApplicationContext uses two kinds of configuration files: Bean and property configurations. Bean configurations are XML-files in which the components of the application and their interaction or dependencies are defined. 
+
+Example:
+
+<beans xmlns="http://www.springframework.org/schema/beans">
+ <bean id="mainService" class="com.mycomponent.Service1"> 
+  <property name="service" ref="subService"/>
+ </bean>
+ <bean id="subService" class="com.mycomponent.Service2"/>
+</beans>
+
+Here two beans mainService and subService are defined and the property service of mainService is configured with the subService bean.
+
+This kind of configuration files is used to describe the concrete architecture of an application. Therefore, software developers or architects will, in general, create and edit these files. 
+
+In contrast, there are the property configurations which use name/value-pairs in order to define administrative settings of the application, such as parameters to connect with external systems or timeouts for some aspects of a component.
+
+Example:
+
+jdbc.driver=org.postgresql.Driver
+jdbc.url=jdbc:postgresql://localhost/postgres
+
+These properties are linked from a bean configuration using so called "property placeholders". These are named placeholders, that are replaced with the concrete property values during creation of the ApplicationContext.
+
+Example:
+
+<bean id="remoteService" class="com.mycomponent.Service3"> 
+  <property name="connectionUrl" value="${jdbc.url}"/>
+</bean> 
+
+So, specific configurations are moved into property-files in order to give administrators a simpler view on the configuration.

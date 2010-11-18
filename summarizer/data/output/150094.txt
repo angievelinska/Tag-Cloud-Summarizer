@@ -1,0 +1,5 @@
+
+
+The name of the interceptor class in this example is LoginInterceptor. It observes incoming requests and looks for an existing authentication object. If such an object does exist then the interceptor sets up the CapConnection to the user's current session. Otherwise, it redirects to a login controller (LoginController), which asks the user for his/her credential. The ideal place to store the authentication object is the current HTTP session because all components can access it.
+
+Now you know all involved components but how do they work together and in which order they are called? The communication diagram in the next figure illustrates these relations: 

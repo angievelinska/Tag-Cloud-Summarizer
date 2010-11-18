@@ -1,0 +1,63 @@
+
+
+
+
+Begin of workflow
+
+
+3* This symbol marks the begin of the workflow. For this node, only outgoing transitions are allowed.
+
+
+End of workflow
+
+
+3* This symbol marks the end of the workflow. For this node, only incoming transitions are allowed.
+
+
+Activity / Task
+
+
+3* This symbol denotes an activity, which is called a task in the CoreMedia Workflow.
+
+
+Subactivity state / Subworkflow
+
+
+3* A separate workflow can be called from a task of another workflow. Thus the separate workflow can be called a subworkflow task.
+
+
+Decision node / Branch / Choice
+
+
+3* This symbol stands for a node where the control flow branches, depending on a decision. In a workflow definition, a decision-based branch is usually called an If task.
+
+
+Synchronization bar
+
+
+3* This symbol is used for splitting or synchronizing the control flow. In the splitting case the control flow forks in more than one follow-up task. In the synchronization case, multiple tasks executed in parallel are joined together.
+
+
+Control Flow
+
+
+3* Transitions specify the control flow from a node to its successor. Nodes can be any of begin or end of workflow, task, choice and synchronization bar.
+
+
+Conditional Control Flow
+
+
+3* Transitions can be inscribed with a condition in square brackets. Such edges are usually used as outgoing edges of a decision node (called a Choice task).
+
+
+Actor with Role
+
+
+3* An actor is used in UML to denote a participant in a use case. We introduce actors to specify rights of users of certain groups (roles) for user tasks.
+
+
+Dependency used to assign Roles to Tasks
+
+
+3* A dashed arrow denotes a UML dependency. We use special dependencies to connect roles (see above) with user tasks in order to assign rights.
+

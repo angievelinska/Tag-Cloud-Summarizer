@@ -1,0 +1,22 @@
+
+
+Prerequisites
+
+If you want to truncate the ChangeLog-table the following prerequisites should be fulfilled:
+
+Little load on the system for example at the evening.
+All clients which use the changelog are up-to-date.
+New backup of the system has been made
+
+Truncate the changelog
+
+If you truncate the changelog you should not delete all entries. You may leave 100000 entries which is a good value proven by practice. Proceed as follows:
+Get the maximum sequence number from the database using the following SQL statement:
+
+select max(sequenceno) from changelog
+2#
+Delete all but the last 100000 entries from the table. Replace <LimitSequenceNo> with the maximum sequence number minus 100000:
+
+delete from changelog where sequenceno < <LimitSequenceNo>
+
+All but the last 100000 entries are deleted from the ChangeLog-table.

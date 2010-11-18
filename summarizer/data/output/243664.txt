@@ -1,0 +1,6 @@
+
+
+Tasks are the main building blocks of workflows. There are UserTasks and AutomatedTasks, as well as auxiliary control flow tasks like If, Choice, Fork, Join, Switch, ForkSubprocess and JoinSubprocess.  All mentioned different types of tasks can be defined using the CoreMedia Workflow XML format.
+
+Like a process definition is a template for concrete process instances, a task definition is a template for specific task instances. While being executed by the workflow engine, a task instance can take several states as shown in the state diagram in Image 4.1.3a.
+

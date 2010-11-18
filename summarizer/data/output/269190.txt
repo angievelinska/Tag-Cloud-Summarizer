@@ -1,0 +1,30 @@
+
+
+The WebService examples in this manual are JAX-WS compliant (http://www.jcp.org/en/jsr/detail?id=224) and thus can be deployed in any WebServices engine which supports this standard.  WebServices can run as standalone endpoints, be deployed in a JAX-WS enabled application server (e.g. Glassfish) or be packaged with a JAX-WS implementation and be deployed in an ordinary servlet container like Tomcat.  The deployment details are not specified in the JAX-WS standard but depend on the implementation.  In this example Metro (http://java.sun.com/webservices/technologies/index.jsp) will be used for a number of reasons:
+
+It is the JAX-WS reference implementation
+It supports a simple deployment as a servlet
+It generates portable artifacts in a developer-friendly transparent way
+
+However, if you are already familiar with an other JAX-WS compliant engine like Apache CXF or Axis2, it should be easy to port the example.
+
+There are two approaches of developing WebServices: "Code first" and "WSDL first". These examples follow the "Code first" approach, i.e. first the application is programmed, then enhanced with javax.jws annotations and the Metro tools generate the WSDL and the portable artifacts. This approach consists of the following steps.
+
+The Server
+Code the application (i.e. the business logic).
+Determine the WebService interface by annotating some classes and interfaces or methods of the application with @WebService or @WebMethod annotations, respectively.
+
+
+Let Metro's Apt tool (Apt is an acronym for "Annotation Processor Tool" in this context and has nothing to do with Debian's Advanced Packaging Tool) generate the portable artifacts classes for your WebService. Unlike heavy weight protocols such as Corba, WebServices do not support complex objects with remote methods as arguments or return values. Instead, all relevant data of your complex business objects is marshalled into simple container objects which basically consist of fields of primitive types and according getters. Those objects are called portable artifacts.
+
+Consult the Metro documentation on https://metro.dev.java.net/nonav/1.0/docs/apt.html or in the docs directory of your Metro installation for details of apt. 
+Compile and deploy your application. Once it is running, you can query the WSDL description of your WebService and invoke the services.
+
+The Client
+Generate the client side interface of your WebService and the portable artifacts with Metro's Wsimport tool (https://metro.dev.java.net/nonav/1.0/docs/wsimport.html).  Wsimport requests the WSDL from your WebService, so your server must be running during this step.
+Now you can make use of the interface to code clients against your WebService.  
+
+
+
+
+

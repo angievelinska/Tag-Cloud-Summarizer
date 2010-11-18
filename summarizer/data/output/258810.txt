@@ -1,0 +1,91 @@
+
+
+This section explains how to integrate and execute Content Rules into a CAE application. Integrating Content Rules into a CAE application is very simple: Define a content bean type representing a dynamic content collection and register it with the CAE Spring configuration. Please refer to the CAE Content Rules example code for further details.
+
+1. Define a Dynamic Content Collection Bean type
+
+Define a CAE Content Bean type representing a dynamic content collection. The bean class will contain a content rule query string and code to execute the rule, still the bean type should be called after what it represents and not refer to its implementation. Hence we recommend that you name it 'DynamicContentCollection'.
+
+public interface DynamicContentCollection extends ... {
+  public List getContentCollection();
+}
+
+
+
+public class DynamicContentCollectionImpl extends 
+DynamicContentCollectionBase implements 
+DynamicContentCollection {
+  ...
+}
+
+1. Add a content rule query string getter method
+
+Add a string property 'query' that will hold the rule query expression. Fetch the query string property from the respective Content Repository type.
+
+  /**
+   * Return the value of the query expression.
+   */
+  public String getQuery() {
+    return getContent().getString("query");
+  }
+
+2. Add a queryService property, together with getter and setter methods:
+
+private QueryService queryService;
+
+public void setQueryService( QueryService qs ) {
+  queryService = qs;
+}
+
+public QueryService getQueryService() {
+  return queryService;
+}
+
+3. Wrap the rule execution in a property getter method
+
+Implement a method which executes the rule query and returns the list of content. We recommend that you name it like a getter method, to allow accessing retrieving the content list like a normal bean property.
+
+public List getContentCollection() {
+  return getQueryService().poseQuery( getQuery());
+}
+
+
+
+2. Register the Dynamic Content Collection type with the CAE application
+
+1. Define a Spring configuration bean 'BeanQueryService'. 
+
+The Query Service bean must be a Fast Query Service. Configure the QueryService to run against the Fast collection selected to be the Bean repository.
+
+  <bean id="beanQueryService" 
+class="com.coremedia.amaro.beans.query.fast.
+FastQueryServiceFactory">
+  <property name="idScheme" 
+   ref="queryServiceContentBeanIdScheme"/>
+  <property name="configServerHttpUrl" 
+   value="${search.qrserver}"/>
+  <property name="collection" value="${search.collection}"/>
+  </bean>  
+
+2. Register the Content Bean type with the CAE Content Bean Factory. 
+
+Add the Content Bean type definition to the configuration file 'spring/cae-contentbeans-example.xml'. Add the Query Service dependency.
+
+  <bean name="contentBeanFactory:DynamicContentCollection" 
+singleton="false" 
+class="com.coremedia.examples.DynamicContentCollectionImpl">
+    <property name="queryService" ref="beanQueryService"/>
+  </bean>
+
+
+
+3. Adapt CAE templates
+
+You have now successfully integrated Content Rules into your CAE application. Now adapt your CAE templates to deliver dynamic content web pages. 
+
+
+
+4. Optimize Performance
+
+You may want to add caching to the content bean (see the CAE content rules example code for this).
+

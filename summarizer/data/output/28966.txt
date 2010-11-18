@@ -1,0 +1,44 @@
+
+
+ ServerMode  Description This action checks the runlevel of the CoreMedia server. This ensures that the server has reached the specified runlevel and that certain clients can connect to the server. Attribute 
+
+url
+
+URL where to get the IOR of the server
+
+user
+
+CoreMedia user name to log on to the server.
+
+domain
+
+Domain of the user.
+
+password
+
+CoreMedia user password to log on to the server
+
+mode
+
+The expected server runlevel. Valid values are "maintenance", "administration" and "online".  Error codes 
+
+0	(ok)
+
+10               (unexpected_error)
+
+11	(timeout)
+
+12	(error)
+
+13	(respawning_too_fast)
+
+21	(io_error)
+
+31	(no_licenses)
+
+32	(invalid_login)
+
+33             (corba_error)
+
+71	(insufficient_mode)
+

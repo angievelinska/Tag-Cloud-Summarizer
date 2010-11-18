@@ -1,0 +1,6 @@
+
+3#
+Select the name of the file in which the image should be saved. 
+Save the image by clicking on [Save]. 
+
+A dialog box informs you whether the action had been successfully finished.

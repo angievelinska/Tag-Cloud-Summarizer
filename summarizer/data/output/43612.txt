@@ -1,0 +1,5 @@
+
+
+Multimedia objects, often known as Binary Large OBjects (BLOBs) in database terminology, should occur directly in the output of the template as seldom as possible. 
+
+In most cases only a URI should be put out, leading to the actual blob content. As an example, the document type "Image" has a BlobProperty "onlineimage" with MIME type "image/gif" that should appear in the web page display of the document. The template code could be as follows:

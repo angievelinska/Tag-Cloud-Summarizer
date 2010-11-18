@@ -1,0 +1,11 @@
+
+
+The CAE controller may already have processed the request and committed a response, e.g. by issuing a redirect. In this case, no further processing is done.
+
+Otherwise, the interceptor searches the created model for all portlet windows that appear on the page. Since the types and structure of the model depend strongly on the CAE application, an extension interface (FindPortletWindowsInModel) is provided, with a default implementation for the Starter Kit.
+
+If the request originated from a portlet URL, such as a render, action, or resource URL, it is delegated to the portlet container for handling. For an action request, the portlet container will invoke the portlet addressed to handle the action, and may also handle events between portlets. For a render request, or after an action was processed, the portlet render state is updated. The browser is then redirected to the original CAE page, which will display the updated portlet state. An action request may also result in a redirect to an external URL. A resource request is answered completely by the target portlet. In all of these cases, the HTTP response is handled by the portlet container, and no further processing takes place in the CAE.
+
+If the request originated from a normal CAE link (not related to portlets), or from a redirect after a portlet request, all portlet windows on the page are rendered in their current state, and the augmented model and view is passed on to the view by the interceptor. Applications should not assume that portlet rendering is complete by the time the view is invoked; the actual portlet invocations may proceed in parallel with each other, and in parallel or interleaved with the rendering of the HTTP response.
+
+The rendered portlet windows are made available in the model and view and can be accessed from the CAE's jsp templates by using the CoreMedia Lightweight Portal taglib. When the page element corresponding to the portlet window is rendered, its (project specific) template will use the taglib to insert the portlet's output, and possibly other markup depending on window state, portlet mode, error conditions etc.

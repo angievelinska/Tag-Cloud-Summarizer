@@ -1,0 +1,15 @@
+
+
+
+2#
+
+
+Click the Queue tab.
+
+
+Choose the publication you want to prioritize from the list.
+
+
+Select the menu item Publication|Prioritize  or click  on the tool bar.
+
+Your publication will be executed next. 

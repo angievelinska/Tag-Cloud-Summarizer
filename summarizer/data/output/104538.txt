@@ -1,0 +1,7 @@
+
+
+LDAP Enhancement
+
+With CoreMedia SCI 4.2 it is possible to connect one or more LDAP servers to a CoreMedia System and so to streamline user administration. This is possible in Production as well as Live Environments.
+
+The CoreMedia System has reading access to the LDAP server, so changes in CoreMedia's user administration are not transferred to the LDAP server.

@@ -1,0 +1,3 @@
+
+
+Since several Active Delivery Server instances can run in one servlet container, a log is initialized for each individual instance. The configuration of the log output is determined in the file log.properties of each instance (Active Delivery Server context). The format of the entries corresponds to the configuration possibilities described in section 4.5.

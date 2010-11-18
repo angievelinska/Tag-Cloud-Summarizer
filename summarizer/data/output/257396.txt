@@ -1,0 +1,12 @@
+
+
+Some crucial differences in handling are:
+
+The Spellchecker (section) is not yet available for the GenericWebEditor.
+There is no Undo/Redo functionality.
+
+
+There is no context menu.
+
+
+

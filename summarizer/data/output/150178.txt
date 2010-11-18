@@ -1,0 +1,7 @@
+
+
+After the login this method maps the CMS roles to Acegi roles by adding the prefix "ROLE_'' to each group name. These roles can be later used in security rules. In contrast to the former login example Acegi does not set the CMS connection to this session.
+
+The EhCacheBasedUserCache uses Spring's cache environment to reduce the calls to the CMS. Otherwise each login request would entail a new authentication with the resulting costs.
+
+The second object diagram in the following figure depicts the object hierarchy for the security enforcement.

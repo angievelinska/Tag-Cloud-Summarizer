@@ -1,0 +1,3 @@
+
+
+Note that an Active Delivery Server configured for offline generation cannot at the same time be used for on-demand generation from external HTTP requests. Both modes are exclusive.

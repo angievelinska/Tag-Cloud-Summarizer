@@ -1,0 +1,5 @@
+
+
+An edge connects two actions within a component, depending on the result code of the first action. The edges and actions form a graph. The watchdog process walks through the actions and edges in the graph. Edges are defined with <Edge/> elements in <Component> elements after action elements.
+
+Edges are configured with the following attributes:

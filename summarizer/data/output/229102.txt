@@ -1,0 +1,12 @@
+
+
+In a data based application like a content application, tables have to be presented and their sorting and filtering has to be changed interactively.
+
+Editing Services for JSF offers a so-called BeanTable. The model underlying a BeanTable is a pair of BeanTableModel (essentially a list of Beans) and BeanColumnModel, which is a list of column definitions each given by a BeanColumn. A BeanColumn knows, given a Bean from the BeanTableModel, how to compute the (non-localized) cell value used for rendering and a Comparable used for sorting (if the BeanColumn supports sorting). BeanTables allow configuration similar to what the editor.xml offers for the CoreMedia Editor.
+
+A BeanRow collects the cell values computed by all BeanColumns of the BeanColumnModel for one Bean in a single object, which is cached using the CAE DataView framework. BeanRows are used for rendering by a table component. A SortedBeanTableModel sorts a given BeanTableModel according to the Comparable computed by a given BeanColumn.
+
+For the BeanColumnModel, there are some sample Spring configurations, that e.g. provide a list of columns like the one in the standard configuration of the ContentEditors.
+
+For more information about table classes consult the packages com.coremedia.editing.table and com.coremedia.editing.cap.table in the JavaDoc API.
+

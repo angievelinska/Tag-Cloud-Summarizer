@@ -1,0 +1,11 @@
+
+
+Web Application Generator Extensions (WAGE) run in the CoreMedia WebEditing Server, a special Active Delivery Server.
+
+The WebEditing Server generates and delivers Web forms and DHTML pages which allow the user to interactively change document properties, create new folders and documents, accept offered tasks, modify workflow variables, and so on.
+
+WAGE offers a framework which consists of server-side components (an extension to the Active Delivery Server API and controller components based on Jakarta Struts) and client-side components (based on DHTML / JavaScript). These modules are reusable and flexibly adaptable to the Web application's needs.
+
+The WebEditor is a WAGE Web application that runs on the WebEditing Server and allows to modify the CoreMedia CMS repository and participate in workflows independently of project-specific document types and workflows.
+
+It can be considered a Web equivalent of the CoreMedia Editor and offers most of that editor's features, requiring only a Web browser. The WebEditor utilizes the APIs and components offered by the WAGE framework.

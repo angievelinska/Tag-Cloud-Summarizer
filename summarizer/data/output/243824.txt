@@ -1,0 +1,9 @@
+
+
+Join
+
+Grammar: ( (Variable | AggregationVariable)*, Predecessor+ ) 
+
+A Join task waits for two or more tasks to complete. Joined tasks must have been forked by a Fork task to perform execution in parallel. A Join task waits for all of them to be completed. 
+
+The Predecessor elements contained in this element list all tasks that use this Join element as the successor. For an example see Fork.

@@ -1,0 +1,18 @@
+
+
+The dialog box for external links in RichText fields has the same structure as the dialog box for internal links. The only difference is the Link field; no dialog box exists. Instead you can enter the URL of the link target directly:
+
+
+
+3#
+
+
+
+Enter the favored values in the fields.
+
+
+
+Apply with [OK].
+
+
+The dialog box closes. The marked text is colored blue and shown underlined. On mouse over the target of the link is shown in the status bar. 

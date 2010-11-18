@@ -1,0 +1,5 @@
+
+
+The complete list of options can be obtained from the API documentation of the class hox.corem.servlets.Generator (see also the Developer's Manual).
+
+The following options might typically be adjusted:

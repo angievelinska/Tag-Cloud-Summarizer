@@ -1,0 +1,77 @@
+
+
+Let the controller apply a dataview to its beans
+
+A controller's contract is to compute a ModelAndView which contains one or more model beans to be passed to the rendering engine. In order to make the model beans cacheable, it's important to apply a dataview to this beans within the controller.
+
+Example
+
+This example demonstrates a simple controller implementation snippet:
+
+ModelAndView handleRequest(HttpServletRequest request, 
+HttpServletResponse response) {
+
+  // compute the model bean from the request
+  MyBean modelBean = computeBean(request);
+  // apply a dataview to this bean
+  MyBean cachedModelBean = (MyBean) 
+  getDataViewFactory().loadCached(modelBean, null);
+  // construct the controller's result
+  ModelAndView result = ControllerUtils.viewOf(cachedModelBean);
+  return result;
+}
+
+Use caching only when it is reasonable
+
+Caching with dataviews is for improving an application's performance: The results of property computations are stored in the heap memory in order to prevent a repeated computation when accessing the property the next time. The values are removed from the cache when they are becoming invalid or due to evictions.
+
+The process of caching itself is not for free: Each cached entry consumes a bit of the (limited) heap space on the one hand. On the other hand, each cache read or write operation is synchronized by the cache which might lead to decreased concurrency. For this reason dataview caching of a single property should be used purposeful, that is when it results in a better performance. Here are some situations where dataview caching might not be worthwhile
+
+The computation of a property is cheap.
+The property value is already cached elsewhere. For instance, the Unified API is already caching its content properties: When simply delegating the content bean's property access to the content objects, the content beans need not to be cached again. Another example is a property which accesses another already cached property, e.g. a property "firstSentence" which performs a cheap string operation on a cached property "text".
+A cached dataview will be generally invalidated or evicted immediately after it is put into the cache without or rarely being accessed in the mean time.
+
+Make sure that it is worthwhile from a performance point of view before enabling a property to be cached by a dataview.
+
+Avoid caching of large objects
+
+Caching with dataviews is especially suited for properties that consume moderate memory. In opposite, large objects (such as binary objects) shouldn't be cached by dataviews since the heap memory is used disproportionately. Instead you might use the HttpCache where the resources are stored on the hard disk.
+
+Choose the right association type
+
+Properties can be separated into two groups from the dataview's point of view
+
+Associating Properties: Properties which values are beans or collections of beans where dataviews can be applied on again.
+Simple Properties: All other properties with return values such as String, Int or other objects
+
+You do not need to define an association type for a simple property. Instead, a dataview configuration such as <property name="propertyname" /> is sufficient. For an associating property you have to choose between the following association types which differ in terms of memory consumption, synchronization behavior and invalidation/eviction behavior.
+
+static
+composition
+aggregation 
+dynamic
+
+Despite this different behavior, these aspects doesn't need to be considered primarily when starting to create the dataview configuration. For the beginning it is sufficient to choose "static" for a cacheable property and "dynamic" for a non-cacheable property in order to make another property recursively reachable  (see above). As soon as you have finished your initial dataview configuration, you can do some optimizations by replacing specific association types with "aggregation" or "composition" in second step.
+
+Do not implement property methods that use context data
+
+In order to make a bean property cacheable you have to implement a public (non static and non final) getter method without parameters. Make sure that the method's implementation doesn't use any context data such as "current user", "current session" or similar stateful data. Otherwise a property value is related to an arbitrary context when putting it into the cache. When reading it from the cache then, it might not fit to the reader's context.
+
+The following example demonstrates a bad implementation where a list of content objects is filtered according to the current user's rights. 
+
+public List<ContentBean> getLinks() {
+
+  List<Content> contents = getContent().getLinks("links");
+  List<ContentBean> result = new ArrayList<ContentBean>();
+  for (Content content : contents) {
+    if (mayRead(content, getCurrentUser()) {  
+      // bad use of context data
+      result.add(createBeanFor(content));
+    }
+  }
+
+  return result; 
+}
+
+Assume the property "links" to be cached when accessing it the first time: The cached result depends on the right of the user which accesses this property for the first time. Another user accessing this property afterwards will obtain a value which is not appropriate to his rights and he might have access to more or less contents than required.
+

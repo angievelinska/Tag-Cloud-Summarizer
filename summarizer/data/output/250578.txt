@@ -1,0 +1,36 @@
+
+
+  Validator  Description  SetValidator2  
+
+Using this class several validators can be combined as subelements Validator of the element Validator. SetValidator2 uses the Validator2 interface and replaces the deprecated SetValidator class. 
+
+Example:      
+
+  <DocumentType name="Text">     
+
+     <PropertyType name="Content">       
+
+       <Validator class="SetValidator2">         
+
+           <Validator class="my.very.own.TextValidator"/>                
+
+           <Validator class="my.very.own.SpellValidator"/>              
+
+           <Validator class="my.very.own.AddValidator"/>            
+
+      <Validator>      
+
+    </PropertyType>   
+
+  </DocumentType>   NotEmpty2  This validator checks whether entries have been made in a field. If the field is empty, an error message is created and the document is not accepted for checking in. The validator must be named as the value in the Attribut class of the element <Validator>. NotEmpty2 uses the Validator2 interface and replaces the deprecated NotEmpty class. GenericValidator  This validator checks whether a field is filled with the appropriate pattern. If the entry is wrong, an error message is created and the document is not accepted for checking in. The validator is called implicitly, if the attribut validPattern of the element <PropertyType> is used. As a validPattern any regular expression can be used (see the element <PropertyType> in Section 5.8.1.1.1).  MinMaxIntegerValidator  
+
+This validator checks whether a field is filled with an integer in the appropriate range. If the entry is wrong, an error message is created and the document is not accepted for checking in. This validator must be set with the class attribut within the element <Validator>. The min and max values can be provided with the attributs min and max. 
+
+Example: <Validator class="MinMaxIntegerValidator" min="1" max="10"/>  LinkListValidator  
+
+This validator checks whether a linklist field is filled with a minimum (attribute minLength) or a maximum (attribute maxLength) number of entries. It also checks if a field is filled with unique entries only (attribute uniqueEntries) and if the entries are all below a specified path (attribute path). 
+
+Example: <Validator class="LinkListValidator" minLength="1" path="/looks"> 
+
+Thus, at least one entry must be contained in the linklist field and the documents belonging to the entries must be located below the folder /looks.  AlwaysTrueValidator This validator always validates to "true". If you use multiple editor XML-configuration files (see section) you can use the validator to override other validators.
+

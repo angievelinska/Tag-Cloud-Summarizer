@@ -1,0 +1,4 @@
+
+
+This element is used to configure the property editors, which define the view of the workflow variables and the determine a sort order and filtering criteria for the workflow list. The workflow variables are shown in the upper right part of the workflow window.
+

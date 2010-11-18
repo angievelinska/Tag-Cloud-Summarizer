@@ -1,0 +1,67 @@
+
+
+Before using the Persistent Cache, you have to implement one or more cache keys and appropriate factories. This chapter shows how to implement respective classes and how to use them. For a detailed understanding, you are asked to read the API documentation as well. 
+
+Implementing a PersistentCacheKey
+
+Writing a PersistentCacheKey means implementing the interface com.coremedia.persistentcache.PersistentCacheKey, by, for example, extending com.coremedia.persistentcache.PersistentCacheKeyBase. A PersistentCacheKey consists of the methods evaluate() and getSerialized():
+
+evaluate()
+
+The Method evaluate() is the above mentioned function for computing a value (represented as a java object). This method does not have any parameters for specifying the source data the computation should be applied to. Such parameters should be part of the concrete PersistentCacheKey instance and therefore should be passed at its construction time. 
+
+Dependencies may be triggered as a side effect during computation. This is done by calling the static methods from inside the evaluate() method:
+
+com.coremedia.cache.Cache#dependencyOn(Object dependent): Triggers an explicit dependency on a certain object. Currently, only dependencies on java.lang.String objects are supported.  
+com.coremedia.cache.Cache#cacheFor(long millis): Triggers a relative time dependency making the value become invalid when the time is reached
+com.coremedia.cache.Cache#cacheUntil(Date date): Triggers an absolute time dependency again making the value become invalid when the time is reached.
+
+In addition, an implicit dependency tracking takes place when the Persistent Cache share the Unified API memory cache¿s instance (see above). Operations on com.coremedia.cap.content.Content objects will implicitly trigger all relevant dependencies. On the other hand, the modification of dependent contents objects will result in appropriate invalidations. Example: If there is a PersistentCacheKey which accesses a content object during its value computation, the value becomes invalid when the content is changed. 
+
+Anyway, there may be situations where such an implicit tracking is not desired. To deal with this, you may use the following functions
+
+com.coremedia.cache.Cache#disableDependencies(): Temporarily disables any dependency tracking for the current computation. 
+com.coremedia.cache.Cache#enableDependencies(): Enables the dependency tracking again for the current computation. 
+
+The evaluate() method is allowed to throw an exception if it encounters a serious problem. The Persistent Cache ensures that no information related to this key (such as dependencies) will remain in the cache.
+Typically, a PersistentCacheKey¿s value is based on one or more ¿external¿ resources, such as a CoreMedia CMS content object. There may be situations where this resource disappears, e.g. due to deletion, while a PersistentCacheKey for this resource still exists. In a similar way, it might happen that a PersistentCacheKey is asked to be reconstructed from its serialized form although this resource has vanished. In any of these cases, the PersistentCacheKey should throw a com.coremedia.persistentcache.InvalidPersistentCacheKeyException when evaluate() is called.
+
+getSerializedKey()
+
+As mentioned above, there is the need to deal with serialized instances of the cache keys: The method getSerializedKey() provides this key's serialized form. It needs to contain all information (such as parameters) which are needed to reconstruct the PersistentCacheKey object from it. It is good practice to prefix the serialized key with a namespace like namespace:key. This is useful when implementing the associated method createKey(String)of the PersistentCacheKeyFactory.
+
+Keep in mind, that the PersistentCacheKey's serialized key is stored in the database when making the dependencies persistent. Thus, using short keys  (or short namespaces, respectively) will result in less database's disk space usage than using long keys and long namespaces. 
+
+Implementing a PersistentCacheKeyFactory
+
+It¿s the com.coremedia.persistentcache.PersistentCacheKeyFactory¿s responsibility to construct PersistentCacheKey instances based on the keys' serialized representations. This factory offers the method createKey(String) which is the inverse function for the PersistentCacheKey's method getSerializedKey(). 
+
+In an environment where several PersistentCacheKey instances and therefore several PersistentCacheKeyFactories are used, a mechanism for selecting the right factory needs to be provided. As a convention, a PersistentCacheKeyFactory may answer null to signal that it is not responsible for the given PersistentCacheKey. If the Persistent Cache wants to reconstruct a PersistentCacheKey, it sequentially asks all known PersistentCacheKeyFactories until a factory answers with a non null result. 
+
+In case that the PersistentCacheKeyFactory is asked to reconstruct a PersistentCacheKey whose resources are no longer available (see above), it nevertheless must return a PersistentCacheKey. This PersistentCacheKey should throw InvalidPersistentCacheKeyException when its evaluate() method is called. You may use the static method InvalidPersistentCacheKeyException.wrap(String serializedKey) for creating such a PersistentCacheKey instance. 
+
+Implementing an InvalidationListener
+
+As already stated, the InvalidationListener is an optional mechanism for a client to be notified about the invalidations. The interface¿s only method invalidated(InvalidationEvent) passes a com.coremedia.persistentcache.InvalidationEvent containing a PersistentCacheKey. The listener may either indicate that it is not responsible for this key by returning false. Or ¿ in case it returns true - it has to acknowledge the event by invoking its acknowledged() method after it has processed the event. This mechanism ensures that no invalidation is missed by the client.
+
+Don't expect invalidation events to be sent immediately after the invalidation takes place. Due to the interaction of several systems and the systems' general latency, an invalidation may take several seconds to take effect.  
+
+Accessing the Persistent Cache
+
+Accessing a com.coremedia.persistentcache.PersistentCache instance is simple. Just pass a PersistentCacheKey instance to the cache's method
+
+
+get(PersistentCacheKey)
+
+
+in order to obtain the key's computed value. All computation, dependency tracking and storage is done by the cache. If you explicitly want to remove a key (in contrast to an invalidation), its values and its dependencies from the cache, you have to call the cache's method
+
+remove(PersistentCacheKey).
+
+Invalidating Cached Items
+
+As mentioned above, each cached entry in the Persistent Cache consists of a key (the serialized PersistentCacheKey) and a set of dependencies. Whenever an invalidation of a single dependency takes place, the corresponding keys are removed from the cache. Time dependencies as well as dependencies related to the Unified API's content objects are invalidated automatically: Either when a special time has been reached or when modifications on the contents have occurred. Other dependencies such as a string dependency (see above) need to be invalidated programmatically by invoking invalidate(Object) of an instance of com.coremedia.cap.persistentcache.dependencycache.PersistentDependencyCacheManagement.  
+
+Example
+
+The following example demonstrates the code of a PersistentCacheKey and a corresponding PersistentCacheKeyFactory. The PersistentCacheKey computes a message like "Hello, [name]. The current time is [time]" which becomes invalid one hour after it's computation.

@@ -1,0 +1,15 @@
+
+
+Operations:
+
+
+approve document doc
+
+disapprove document doc
+
+approvePlace document doc
+
+disapprovePlace document doc
+
+
+Required rights:                  

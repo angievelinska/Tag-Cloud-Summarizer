@@ -1,0 +1,8 @@
+
+
+Or
+
+Grammar: ( (Expression)* ) 
+
+An Or expression evaluates to the disjunction of its sub-expressions, all of which must return boolean values. The sub-expressions are evaluated in a "short-circuit" fashion, i.e., they are evaluated from left to right until the first sub-expression evaluates to "true" or all sub-expressions have evaluated to "false".
+

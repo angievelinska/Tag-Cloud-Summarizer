@@ -1,0 +1,13 @@
+
+
+You can now compile and execute the adapted Web Service with the following commands:
+Change to the directory ws05-typebrowser
+Compile and deploy the WebService with the following command:
+$ ant server
+Wait until the web application is running in Tomcat
+
+Generate the client API with:
+$ ant generate-client
+
+At client side a tree and a table model are needed to implement a Swing client. In this case, no caching or other optimizing mechanisms are required because of the "stable" document model. That is, in most cases the document model does not change very often. Hence, the standard tree models are applied reducing the programming effort. The GUI has exactly the same layout as the content browser in example.
+

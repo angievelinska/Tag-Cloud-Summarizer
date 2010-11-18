@@ -1,0 +1,5 @@
+
+
+If access from the live side to the analytics database is administratively prohibited, you can still publish analytics information to the live side. To do so, create a workflow that regularly retrieves the selected reports using the XML REST interfaces, stores the XML data in some documents¿ XML property, and publishes these documents. The matching content beans for this document type then parse the XML and return the reported objects as a list of content beans, as in the previous solution. You will not need time dependencies or sql connection configuration, because the caching and replication features of the CMS take care of these issues. 
+
+You will still want to use data views, as for all other content types.

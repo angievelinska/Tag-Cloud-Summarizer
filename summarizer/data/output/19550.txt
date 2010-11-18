@@ -1,0 +1,7 @@
+
+
+Using these elements, for all windows of the CoreMedia Editor (except the workflow window) using table views or tree views, it can be configured which properties and how the properties should be shown. The following windows can be configured:
+
+Explorer window (element <Explorer>)
+Query window (element <Query>)
+Resource chooser window (element <ResourceChooser>)

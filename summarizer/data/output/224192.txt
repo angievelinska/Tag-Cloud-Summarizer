@@ -1,0 +1,12 @@
+
+
+The Http Cache is a component deployed in front of a CAE web application, which caches complete http responses based on client's requests or only fragments which are dynamically completed. Caching those responses makes it possible to serve requests under very high load: Responses that are expensive to compute may be stored and delivered from the cache instead of  re-computing them on each request. Furthermore, the Http Cache can serve conditional request (e.g. ¿If-Modified-Since¿), so the required bandwidth is reduced, too.
+
+The delivery of pages which combine cached content (static part) and non-cached content (dynamic part) pays off for personalization for example. The web page might contain a frame which is the same for all users containing logos, navigation, content and a personalized part which contains the last viewed pages and favorites for example. The Http Cache is able to cache the former content and to include the latter content dynamically on request.
+
+By making use of dependency tracking, the Http Cache is able to detect the invalidation of cached responses. As a consequence, invalid responses will be removed from the cache until they are requested and therefore computed again. The  invalidation detection mechanism may also be used for integrating high level caching services, such as Akamai. 
+
+Caching of rendering results (pages or fragments) has its place when personalized information is added in another post-processing step, such as using Edge-Side Includes or client-side Javascript, or for sites or parts of sites that are not personalized. Even in such a setup, you can still use the CAE's efficient caching of object models ("data views") for data shared between multiple pages, such as navigation structures; for rendering the personalized part of the site; or for page fragments requested during post-processing. As described at the beginning of this chapter, data views prepare all information needed for rendering, and allow fast rendering on-the-fly on each request.
+
+With the Http Cache, you have the modeling power of the CAE, and share business logic between personalized and mostly-static parts of your web appearance, making full use of http caching where you chose to.
+

@@ -1,0 +1,19 @@
+
+
+The CoreMedia Editor offers a lot of formatting options in the RichText pane. Nevertheless, you might want to have your own formatting options ready to hand. For this purpose, it is possible to extend the existing options and to add new ones. To do so, three steps are sufficient: 
+Extend the file properties/css/coremedia-richtext-1.0.css to your needs.
+
+The CoreMedia Editor uses the css-file defined in the editor.richtext.css.location property in the editor.properties file. Be sure to change the css-file actually used by your editor.
+Localize the new styles and style groups in a bundle file (optional).
+Add the new style groups to your Content Editor.
+
+These steps will be explained in the subsequent paragraphs. The formatted inline text or block element will be marked as follows:
+
+inline text
+Inline text will be embedded in the <span> tag with the attribute class containing the format option. Example:
+<span class="font-size--36">My big text</span>
+
+block element
+Block elements will have an additional class attribute containing the format information. Example:
+<p class="background-color--black">My test paragraph</p>
+

@@ -1,0 +1,15 @@
+
+
+Most company websites and intranets are produced in several languages for several countries. The CoreMedia CMS 2008 Starter Kit provides support for this use case.
+
+When considering "multi language support", one has to be aware that, in many cases, producing the same content in several languages does not suffice. Most websites are truly internationalized, meaning that for each country, the content is not simply translated, but the whole site is adapted to that country¿s market. In the following, we use the term locale for a combination of language and country.
+
+Documents are not only produced once and then translated, but after changes to the original document, the translation has to be updated accordingly. In contrast to natural language content that has to be translated, language-independent meta-data is often reused in internationalized variants of the site. In many cases, a site starts with a single locale and decides to produce internationalized variants later. Then, translation and maintenance of the original content are parallel tasks. Within the editorial staff, there are in most cases dedicated positions / roles for creation and translation of content and responsibilities (influencing access rights) not only by resort, but also by locale.
+
+The Starter Kit features built-in support for documents in different locales and models localized variants of the same content explicitly. The following concepts are used by the Starter Kit:
+
+Every localizable document can be assigned a locale.
+Not only text documents, but also structural documents like navigation are localizable. Thus, localization becomes internationalization, since structural documents change the way the website presents its content for to a target market.
+If a localizable document is derived from another localized document, e.g. through translation, a link can be set from the localized variant to the original document, making it the other document's master. A master document and its derived localized variants form a group of documents that represent the same content for different locales.
+Each version of a localized variant can refer to a specific version of its master, so that changes to the master document can be integrated into the localized variants.
+

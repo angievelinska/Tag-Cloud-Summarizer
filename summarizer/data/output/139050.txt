@@ -1,0 +1,11 @@
+
+
+Element Namespace
+
+The element Namespace defines prefix and URI of an XML namespace that is used in the XPath expression of the parent element. Note, that you have to define all namespaces that are used in the XPath expression. The XPath expression does not support a default namespace.
+
+Parent element: XPath
+
+Child elements: none
+
+Attributes:

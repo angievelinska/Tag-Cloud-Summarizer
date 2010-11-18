@@ -1,0 +1,7 @@
+
+
+For the Active Delivery Server there is already a predefined defaultUri="/,templateId=menu". You may naturally override this defaultUri in your config.bsh.
+
+CoreMedia Editor via Remote Control
+
+It is possible to use the CoreMedia Editor via Remote Control instead of the WebEditor. Besides the configuration of the remoteControlUri you have to adapt Resource/menu.jsp. Just change the four commands at the end of the file named "open-documentview", "open-document", "open-container" and "open-info" into "open-documentview-remote", "open-document-remote", "open-container-remote" and "open-info-remote".

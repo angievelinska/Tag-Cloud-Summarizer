@@ -1,0 +1,7 @@
+
+Change the property Language to the new language of the document.
+If you want to add the new document to a localized variant of the website you have to change the Navigation Contexts* property to the value of the appropriate Channel document in the localized variant. Otherwise you can leave it as it is.
+If you want to create a variant of the document in the same website, you have to change the URL segement* property to a new value. 
+Translate the content of the document into the new language.
+
+Now, you are done 

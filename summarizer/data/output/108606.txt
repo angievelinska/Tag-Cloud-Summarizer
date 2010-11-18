@@ -1,0 +1,3 @@
+
+
+The root folder has special rights. You cannot move, delete or rename the root folder.

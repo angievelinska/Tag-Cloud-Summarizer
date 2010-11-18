@@ -1,0 +1,3 @@
+
+
+Using these elements, the appearance of the document window of the CoreMedia Editor can be configured.

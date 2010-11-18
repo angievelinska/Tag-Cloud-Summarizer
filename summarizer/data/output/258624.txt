@@ -1,0 +1,14 @@
+
+
+In the request processing chain, Controller objects are the first to receive the web request from Spring's dispatcher servlet. Spring chooses the controller based on the URI prefix. A controller decomposes the request, creates or looks up objects, performs actions and finally forwards the request to the view. The Content Application Engine comes with a number of built-in controllers that implement read-only access to content beans and their blob properties. You can find their definitions in the file spring/cae-controllers-example.xml:
+
+The ContentViewController (URI prefix: /content) is responsible for the display of content beans. It receives a content id in the URI (e.g. /content/32) and retrieves the corresponding content bean. Additionally, it evaluates an optional query parameter "view". Next, it performs a cache lookup for a dataview of the content bean. By default, the bean's default data view will be used for any view (this is configurable in your <myComponent>-controllers.xml). The result and the desired view name are forwarded to the view dispatcher for rendering.
+The ContentBlobViewController (URI prefix: /contentblob) is responsible for delivering a blob property of a content object. It receives content id and blob property name in the URI plus an optional view name. The blob property value of the content object is then rendered in the desired view. By default, the blob data is simply copied to the servlet response. Note that the Unified API has already performed blob caching on disk, so a simple file copy takes place.
+The PreviewController (URI prefix: /preview) is responsible for handling preview requests from the CoreMedia Editor and CoreMedia WebEditor. It takes an id query parameter with the ID of the object to preview. The controller creates the object from the ID and redirects the browser to that object.
+
+If you want to extend the Content Application Engine, you may have to write a custom controller implementation. This is mainly necessary if
+
+you want to accept and process form submissions
+you want to accept requests for beans that are not based on content
+you want to restrict the built-in controllers
+

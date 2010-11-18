@@ -1,0 +1,4 @@
+
+
+First of all the user requests the pbe enabled preview web page inside the portlet. The request will be processed by the content portlet and forwarded to the portal application. The cae renders the result and during rendering of the page a special component: the ContextMenuRenderer renders the pbe  information into the markup (The ContextMenuRenderer is described in section). In the case of the ContextMenuRenderer the pbe information consists of an pop up menu which contains a set of entries which allows the modification of the content or requesting of further web pages including editing services forms. The markup is returned to the content portlet which renders the preview page with the embedded context menus inside the portal (Point 3).
+

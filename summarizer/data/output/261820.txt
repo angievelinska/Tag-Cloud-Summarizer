@@ -1,0 +1,44 @@
+
+
+Therefore you could rewrite the first statement of the above example:
+
+CREATE TABLE Foo (foo @VARCHAR@(10));
+
+For Oracle this will resolve to the modern type VARCHAR2 and for other databases to the standard type VARCHAR.
+
+Additional placeholders can be introduced by the means of loop statements.
+
+Loops
+
+CoreMedia Analytics encourages the storage of statistics for different time granularities in different tables as described in section. This will speed up table accesses, but it means that many tables with identical structures have to be defined. In order to simplify the creation of such table sets, a loop structure was added to the update script syntax.
+
+--- FOR interval IN hh dh dd wd bd md ww mm ym qq ff yy
+CREATE TABLE Baz_@interval@ (
+  baz @LONG@,
+  eventIntervalStart @TIMESTAMP@ NOT NULL,
+  eventCount @LONG@
+);
+--- ENDFOR
+
+The previous example shows how 12 distinct tables named Baz_hh, Baz_dd, and so on are generated with a single statement. Note how the replacement token @interval@ is used in the SQL statements and how it can be mixed with other replacement tokens.
+
+The general syntax is that the keyword FOR is followed by the replacement token (without the delimiting at-signs) and the keyword IN, before all allowed values are listed, separated by spaces. The replacement token takes on all listed values successively as the statement get reexecuted. It is allowed to specify multiple statements between the FOR and ENDFOR markers. It is allowed to use nested loops, but this is not normally necessary. All loops must be enclosed in batches.
+
+Conditions
+
+Some database specific statements cannot be obtained by simple token replacement. For these cases, conditional execution of statements is supported in update scripts. Note that you normally do not have to worry about conditional execution unless you develop for multiple database products at once. A typical use of a condition looks as follows:
+
+--- IF sequences
+CREATE SEQUENCE BazIds CACHE 1000;
+--- ENDIF
+
+Here the condition used is sequences, which is defined for all databases that support SQL sequences. Conditions may be negated by prefixing them with an exclamation mark (!).
+
+--- IF !sequences
+CREATE TABLE MaxBazId (maxId @LONG@);
+INSERT INTO MaxBazId VALUES (0);
+--- ENDIF
+
+There is no else-statement, you must use two IFs instead. Boolean expressions other than negation are not supported.
+
+The following table lists all conditions and their meaning.

@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+value 
+
+NMTOKEN 
+
+#IMPLIED 
+
+For relative timers, this attribute specifies the number of seconds until the timer runs out. 
+
+relative 
+
+(boolean) 
+
+"true" 
+
+This attribute determines whether the timer should be a relative timer. An absolute timer will not be useful in the workflow definition.

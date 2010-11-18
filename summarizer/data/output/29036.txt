@@ -1,0 +1,3 @@
+
+
+After the installation is finished, proceed with the configuration of components as it is described in the following component-specific chapters.

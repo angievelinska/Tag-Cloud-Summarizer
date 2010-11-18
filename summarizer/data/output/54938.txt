@@ -1,0 +1,7 @@
+
+2#
+Choose File|New Group.
+Enter the name of the group - anonymous - into the Name of the group field.
+Check the Content Server Group box.
+Press the [Add] button in the middle of the window to add rules to the group.
+

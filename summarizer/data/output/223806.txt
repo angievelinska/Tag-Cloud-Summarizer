@@ -1,0 +1,41 @@
+
+
+The CAE framework provides JMX access for several of its internal components which may be used for management and monitoring. Each CAE service features a JSR 160 based JMX connector server containing the CAE's management beans. You may connect to this server using any compliant JMX console, such as JConsole which is bundled with Sun's JDK 5.0 (http://java.sun.com) or as MC4J (http://mc4j.org). Have a look at http://java.sun.com/j2se/1.5.0/docs/guide/jmx/index.html for a first introduction to JMX.
+
+Each CAE service (such as the CAE web application) has a configurable property called management.jmxremote.url which defines a URL under which the JMX connector server is reachable. As a default, the URL is set to service:jmx:jmxmp://localhost:5555/ which starts a server on the service's localhost at port 5555 using the JMXMP connector. In order to connect to this JMX server, you have to enter this URL within your JMX console:
+
+For MC4J (Version 1.2b9)
+Start MC4j
+Select Management > Create Server Connection. A new wizard opens.
+Choose JSR160 as server connection type.
+Enter any value in the field Name. 
+Enter the above mentioned URL inside the field Server URL.
+Click [Next]. A screen opens.
+Click [Finish]. The new connection is is displayed in the MC4j Connections panel now.
+
+For JConsole
+
+Prerequisite
+
+Make sure that jmxremote_optional.jar  (which is provided by the CAE) is in JConsole's classpath.
+Start JConsole
+
+For Unix: 
+
+${JDK5}/bin/jconsole -J-classpath 
+-J${JDK5}/lib/jconsole.jar:/path/to/jmxremote_optional.jar
+
+For Windows: 
+
+%JDK5%/bin/jconsole -J-classpath 
+-J%JDK5%/lib/jconsole.jar:/path/to/jmxremote_optional.jar
+
+where a system variable JDK5 is set to the JDK 5.0 installation home.
+2#
+Select Connection > New Connection. A new window opens. 
+Click the [Advanced] tab.
+Enter the URL in the field JMX URL.
+Click [Connect]. A new console window opens.
+
+
+

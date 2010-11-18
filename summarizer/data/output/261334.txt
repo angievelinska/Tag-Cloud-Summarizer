@@ -1,0 +1,3 @@
+
+
+A new feature of CoreMedia CMS 2006 is the CoreMedia Differencing Service, a web application that computes the difference of two document versions. A user who displays a document in a CoreMedia Editor can start a web browser to show the differences between two document versions. The following subsections describe differencing in more detail.

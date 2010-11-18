@@ -1,0 +1,14 @@
+
+
+Technically, User and ContentState follow the well known pattern of interface, implementation and adapter. Notice that ContentState is used only as return value but not as argument in Webmethods, i.e. ContentState objects are used only in outbound messages.  This allows you to implement ContentStateAdapter.marshal as a simple typecast, because ContentStateImpl is the only implementation.  Furthermore, you do not need a noarg constructor and any setters in ContentStateImpl, because if there are no inbound ContentState artifacts, the JAX-WS runtime does not need to instantiate ContentStateImpl objects.  Nevertheless, the JAX-WS runtime insists on a noarg constructor, so  implement it as a dummy which throws an UnsupportedOperationException.
+
+Deploy the WebService with the well known commands:
+Change to the directory ws07-states
+Compile and deploy the WebSevice:
+$ ant server
+Wait until the webapp is running in Tomcat
+
+Generate the client API
+$ ant generate-client
+
+Since this WebService does not support unauthorized access, the client StateBrowser must authenticate itself with the createSession WebMethod and keep the session id for all further requests.  The constructor is the appropriate place to do this.  A WindowListener on the browser frame takes care for closing the session when the client terminates.

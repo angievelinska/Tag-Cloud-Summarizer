@@ -1,0 +1,3 @@
+
+
+This element of the XML file is used for entering the document type for which the view is defined and the class used for the view.

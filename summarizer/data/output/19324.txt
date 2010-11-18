@@ -1,0 +1,6 @@
+
+
+This element of the XML file is used to combine the elements for the document types configuration.
+
+
+The element has no attributes. If no <DocumentTypes> element is defined, all document types for which the user has the appropriate rights will be shown (except of abstract document types) and will be arranged alphabetically.

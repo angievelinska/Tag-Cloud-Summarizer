@@ -1,0 +1,11 @@
+
+
+Interface to implement
+
+For a boolean expression you need to implement the interface WfBooleanExpression. It extends WfExpression and defines an evaluateExpression() method with a boolean result.
+
+Convenience classes
+
+For convenience you can subclass from com.coremedia.workflow.common.expressions.AbstractBooleanExpression and implement its evaluateExpression() method.
+
+The abstract classes evaluate() method calls evaluateExpression() and builds a BooleanValue from the returned value. The next example shows a simple boolean expression which always returns true - a tautology.

@@ -1,0 +1,5 @@
+
+Select the CoreMedia Content Server option and click [Next].
+
+3* The next window for choosing  the server type opens up.
+

@@ -1,0 +1,4 @@
+
+
+ Attribute Value  Default  Description  doctype document type name or regular expression .* (all types) The name of the abstract or concrete document type whose properties should be indexed. You can specify a regular expression here to include properties of all document types whose name matches the expression. name property name or regular expression .* (all names) The name of the property that should be indexed. You can specify a regular expression here to include all properties whose name matches the expression.
+

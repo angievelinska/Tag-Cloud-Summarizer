@@ -1,0 +1,66 @@
+
+
+CoreMedia groups are highly project-specific, and their hierarchies and dependencies are modelled after the needs of the editorial team. 
+
+
+A default set of groups comes with every CoreMedia system in order to enable basic functionality. These are:
+
+
+
+
+admin
+
+
+
+3* for project administration, user and rights management as well as troubleshooting,
+
+
+
+chief editor
+
+
+
+3* has extended access to the project, can modify the project structure,
+
+
+
+approver
+
+
+
+3* the explicit right to approve resources for publication and so make modifications available to the public,
+
+
+
+importer
+
+
+
+3* no real users: technically required for automated or manual import of content,
+
+
+
+publisher 
+
+
+
+3* for publication of approved resources,
+
+
+
+editor 
+
+
+
+3* editorial staff, has access to certain parts of the project, 
+
+
+
+system
+
+
+
+3* no real users, technically required.
+
+
+

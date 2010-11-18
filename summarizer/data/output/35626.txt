@@ -1,0 +1,5 @@
+
+
+Loop
+
+The loop is a special case of a choice, where one of the successor tasks is a predecessor of the current task. Thus, a task may be repeatedly performed.

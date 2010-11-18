@@ -1,0 +1,14 @@
+
+
+The CoreMedia Workflow Server provides JMX access for management and monitoring.
+
+Two protocols are supported:
+
+jmxmp
+Hessian
+
+jmxmp is the standard protocol for JMX but if you apply the Hessian protocol, you can use the integrated Http-Server of the Workflow Server to connect to, thus saving a port. Hessian also requires authentication, thus improving security. In addition, you can use a https connection to the web server with the Hessian protocol. Section describes how to configure an SSL connection for the integrated Http-Server.
+
+Enabling JMX-support
+
+In order to enable JMX-support you have to add the URL of the connection server to the property workflow.server.management.jmxremote.url  in the workflowserver.properties  file.

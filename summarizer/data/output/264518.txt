@@ -1,0 +1,5 @@
+
+
+The Struct editor offers a convenient way to edit Struct properties (see section). The Struct editor comes in two flavours, one with tabs to switch between an XML-view and a formatted view and the default editor only offering the formatted view. 
+
+You have to configure the editors in the editor.xml file. In order to configure the editors, simply add the appropriate class to the editorClass attribute of the <Property> element 

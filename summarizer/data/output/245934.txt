@@ -1,0 +1,8 @@
+
+
+This manual provides information on the development of content applications.
+
+In section you will learn how to use the Content Application Engine for your own applications.
+In Section you will learn how to integrate content from the CoreMedia CMS into portals and how to edit this content right in the portal.
+In section you will learn how to create custom web GUIs using the Editing Services for JSF.
+

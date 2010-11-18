@@ -1,0 +1,114 @@
+
+
+The concepts and the document type model are reflected by a corresponding content bean API. Typically, in the CAE, each document type is mapped to a content bean interface, implemented by a content bean class (see the Content Application Developer Manual for details), and document properties are mapped to getter methods. While this is a good starting point for the content bean API, the Starter Kit does not stop at a one-to-one mapping. To release some restrictions of the document type model, the Starter Kit content beans use additional Java interfaces not manifested in document types. They are also tailored for usage by CAE views implemented as JSP templates.
+
+Page
+
+The main difference between the document types and the content bean interfaces is that there is an additional interface Page. As mentioned above, a Starter Kit page is not reflected as a document type, but of course, it needs a Java API. The relevant part of the Page interface for Web-site structure / navigation is that a page consists of a navigation node and an optional content document, and that pages are hierarchical, i.e. have (at most) one parent page:
+
+Page
+Page getParent();
+CMNavigation getNavigation();
+CMLinkable getContent();
+
+As described in the ¿concepts¿ section, a Starter Kit page must have a navigation (getNavigation()) and may have a content document. The method getContent() is not an exact match of this optional property, but returns the navigation if no content document has been used (not null). Consistently, to create a Page consisting of a navigation node only, you have to use
+
+PageImpl.getInstance(navigation,navigation)
+
+You can create a Page object from any combination of CMNavigation and CMLinkable, but you can only format or request URLs for a Page where at least one of the following conditions holds:
+navigation = content
+content.contexts contains navigation
+navigation.children contains content
+
+Condition 1 describes an overview page, described by a navigation only.
+
+Condition 2 is a CMHasContext content that has the given navigation as one of its contexts, i.e. a usage of content document in an allowed navigation context.
+
+Condition 3 is for the rather rare case that you want to use an article (or any other linkable that is not a CMNavigation) in the navigation tree. Although the condition also matches when content is a child navigation, pages should not be created using (parent navigation, child navigation). Since each navigation node has one unique parent, there is no need to specify the parent explicitly and the page should be created using (child navigation, child navigation).
+
+Page#getParent() returns the parent page of this page, which is defined as follows:
+
+
+If navigation is a root navigation, the page does not have a parent page (null).
+
+
+Else, if navigation = content (i.e. is an overview page), the parent page is based on the navigation's parent navigation.
+
+
+Else, the parent page consists of the navigation.
+
+As you can see, a parent page is always defined by a navigation node without the optional document. This is obvious, as the optional document leads to a leaf page.
+
+CMLinkable
+
+interface CMLinkable
+String getSegment();
+List<? extends CMNavigation> getParentNavigations();
+List<? extends CMContext> getContexts();
+
+ A CMLinkable in the document type model only provides the segment of that linkable. In the content bean API, however, two additional relations can be accessed.
+
+parentNavigations is the reverse relation of CMNavigation#children, plus, for CMHasContext, all contexts are also regarded as parent navigations. In other words, getParentNavigations() returns all navigation nodes that can appear as predecessors in a URL (this is for example checked when parsing an incoming request).
+
+In the document type model, contexts are only defined for documents of type CMHasContext. The content bean API pulls up the corresponding method getContexts() to CMLinkable, where CMNavigation#getContexts() simply returns an empty list. This is convenient if you have to handle polymorphic collections of CMNavigation and CMHasContext.
+
+CMNavigation
+
+interface CMNavigation extends CMLinkable
+List<? extends CMLinkable> getChildren();
+List<? extends CMLinkable> getVisibleChildren();
+Collection<? extends CMLinkable> getLinkables();
+boolean isHidden();
+boolean isHiddenInSitemap();
+CMLinkable getLinkableBySegment(String segment);
+List<? extends CMNavigation> getNavigationPathList();
+boolean isParentNavigationOf(CMNavigation navigation);
+boolean isRoot();
+CMNavigation getRootNavigation();
+CMNavigation getParentNavigation();
+
+The Java interface for the document type CMNavigation provides accessors for the properties children, hidden, and hiddenInSitemap. All other methods add functionality and need some more explanation.
+
+getVisibleChildren() simply filters the list of all child navigation nodes returned by getChildren() to the ones which are not hidden (isHidden()==false). This method is for example used by templates rendering the navigation menu.
+
+The method getLinkables() returns all CMLinkables for which the following condition holds:
+
+
+
+The CMLinkable is in production (not deleted) and
+
+
+
+(the CMLinkable has this CMNavigation as one of its contexts or
+
+
+the CMLinkable is contained in this CMNavigation's children).
+
+getLinkableBySegment() selects from the list returned by getLinkables() the one that has the given segment or null. In a consistent content, the result of this method is unique.
+
+getNavigationPathList() walks up the parent navigation relation, starting at this CMNavigation, until the root navigation is reached and returns the resulting list of nodes. Note that while the return type of the methods says that CMLinkables are returned, all but the last item in the list must be of type CMNavigation in order to have children or be a context. This method is for example used by templates that render a breadcrumb.
+
+getParentNavigation() is the reverse relation of children regarding navigation nodes. Since a navigation node has a unique parent, a single node or null is returned. If the parent navigation is null, isRoot() returns true.
+
+You can use x.isParentNavigationOf(y) to check whether x.equals(y.getParentNavigation()).
+
+Finally, getRootNavigation() returns the first element of getNavigationPathList(). For the case that the calling CMNavigation is a root navigation already, the object itself is returned.
+
+CMContext
+
+interface CMContext extends CMNavigation
+
+As in the document type model, the Java interface CMContext acts mainly as a target type for CMHasContext#getContexts().
+
+CMHasContext
+
+interface CMHasContext extends CMLinkable
+List<? extends CMContext> getContexts();
+
+The document type CMHasContext stores a list of contexts. Since the accessor for contexts has already been defined in the Java interface CMLinkable, the interface CMHasContext does not add any navigation-related method, but only re-defines the semantics of getContexts() to return the contexts stored in the corresponding linklist property.
+
+Content Bean Implementation Classes
+
+All content bean implementation classes (...Base, ...Impl) are part of the Starter Kit public API, too. The only reason we made these classes public API is to allow you extending them whenever you add a custom document type to the hierarchy. Note that it is not possible to change the inheritance hierarchy of existing Starter Kit document types, since this would lead to changes in the content bean interfaces. In this case use the Starter Kit plug-in API as described in sections xxx.
+
+If you really have to go beyond adding functionality, i.e. have to replace functionality of the Starter Kit content beans, the only possibility is to wrap all relevant Starter Kit content beans by your own, adapted interfaces and implementation classes, and replace the Starter Kit contentbeans-*.xml with your own configuration.

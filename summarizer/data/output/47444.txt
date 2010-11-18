@@ -1,0 +1,233 @@
+
+
+ 
+
+Property name 
+
+Java type 
+
+Method 
+
+Description 
+
+id_ 
+
+Integer 
+
+Resource
+
+#getId() 
+
+Resource ID 
+
+name_ 
+
+String 
+
+Resource
+
+#getName() 
+
+Name of the resource in its folder 
+
+folderId_ 
+
+Integer 
+
+Resource
+
+#getFolder().getId() 
+
+ID of the folder in which the resource is located 
+
+creationDate_ 
+
+Calendar 
+
+Resource
+
+#getCreationDate() 
+
+Creation date of the resource 
+
+creator_ 
+
+User 
+
+Resource
+
+#getCreator() 
+
+User who created the resource 
+
+modificationDate_ 
+
+Calendar 
+
+Resource
+
+#getModificationDate() 
+
+Time of the last modification of the resource 
+
+modifier_ 
+
+User 
+
+Resource
+
+#getModifier() 
+
+User who last modified the resource 
+
+isDeleted_ 
+
+Boolean 
+
+Resource
+
+#isDeleted() 
+
+Is the resource marked as deleted? 
+
+isCheckedOut_ 
+
+Boolean 
+
+Resource
+
+#isCheckedOut() 
+
+Is the document checked out for editing? 
+
+version_ 
+
+Integer 
+
+Document
+
+#getVersion 
+
+Version number 
+
+editionDate_ 
+
+Calendar 
+
+Document
+
+#getEditionDate() 
+
+Creation date of this version of the document 
+
+editor_ 
+
+User 
+
+Document
+
+#getEditor() 
+
+User who created this version of the document 
+
+approvalDate_ 
+
+Calendar 
+
+Document
+
+#getApprovalDate() 
+
+Time of the approval of this version 
+
+approver_ 
+
+User 
+
+Document
+
+#getApprover() 
+
+User who approved this version 
+
+publicationDate_ 
+
+Calendar 
+
+Document
+
+#getPublicationDate() 
+
+Time of the publication of this document 
+
+publisher_ 
+
+User 
+
+Document
+
+#getPublisher() 
+
+User who published this version 
+
+isApproved_ 
+
+Boolean 
+
+Document
+
+#isApproved() 
+
+Is this version approved? 
+
+isPublished_ 
+
+Boolean 
+
+Document
+
+#isPublished() 
+
+Is this version published? 
+
+lastName_ 
+
+String  
+
+The name of the resource on the Live Server. This property is empty for unpublished resources. 
+
+lastFolderId_ 
+
+Integer  
+
+The Id of the parent folder of this resource on the Live Server 
+
+syncDate_ 
+
+Calendar  
+
+Date and time of the last successfull publication of the resource 
+
+isMoved_ 
+
+Boolean  
+
+Is this resource moved? 
+
+isRenamed_ 
+
+Boolean  
+
+Is this resource renamed? 
+
+isNew_ 
+
+Boolean  
+
+Is this resource new? 
+
+isUnarchived_ 
+
+Boolean  
+
+Is this resource unarchived?

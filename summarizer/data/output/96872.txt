@@ -1,0 +1,3 @@
+
+
+After composing the search list and completing the task, the Options task will be assigned to you and automatically accepted. Here, you can enter the options for search and replace.

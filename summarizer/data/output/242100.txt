@@ -1,0 +1,5 @@
+
+
+As shown in Figure, a content becomes archived, when a deletion is published or when the content is archived explicitly. It can be moved out of the archive, reaching the unarchived state, which it keeps until being archived again or published.
+
+One last state chart refers to the state of Version objects.

@@ -1,0 +1,7 @@
+
+
+Not
+
+Grammar: (Expression) 
+
+A Not expression evaluates its boolean subexpression and returns the logical negation of the result.

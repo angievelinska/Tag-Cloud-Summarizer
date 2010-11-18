@@ -1,0 +1,12 @@
+
+
+ Menu Item Sub Items Function Reuse windows  opens documents in the same window as long as they are not checked out (helps to stay clear with multi-tasking) Ask before critical actions  a warning dialog asks to confirm whether irrevokable actions such as deleting a document or shutting down the editor Ask for new name while pasting  asks to rename a resource once a resource with the same name is detected in this folder (if turned off, the name is automatically supplemented with a trailing "*") Check while typing  start spellchecking while you are typing Autosave interval 
+
+off
+
+1 - 30 min 
+
+time counts start at first change of a document, starts anew with every save (changes in interval settings do not become effective after restarting the timer) 
+
+one timer per document Show remote control commands  (project-specific) if enabled, remote control commands are displayed in a window Preselect document from clipboard  A document from the clipboard will automatically be pre-selected for a document chooser. Load back changed binaries automatically  You have opened a BLOB via double click or drag-and-drop in an external application and you have edited and saved the BLOB. If you close the external application, the BLOB will automatically be reloaded into the CoreMedia Repository. 
+

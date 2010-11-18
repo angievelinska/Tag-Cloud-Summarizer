@@ -1,0 +1,5 @@
+
+
+Return Type
+
+Depending on the property type for which the initializer is intended to use the method may return the following values (return type is Object):

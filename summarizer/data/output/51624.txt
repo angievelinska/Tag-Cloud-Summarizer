@@ -1,0 +1,3 @@
+
+
+The addResource view for a Folder only includes the addResource view for all of its children:

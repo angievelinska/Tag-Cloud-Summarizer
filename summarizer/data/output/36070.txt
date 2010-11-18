@@ -1,0 +1,3 @@
+
+
+In the workflow definition above you find the definition of a variable MainUser of type User. To use your own user editor with this variable you have to insert the following lines in your editor.xml file.

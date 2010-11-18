@@ -1,0 +1,5 @@
+
+
+The databases have only been tested in CoreMedia compliant operating environments and therefore are only approved on these platforms.
+
+The following databases are supported for the recommended SCI  platforms:

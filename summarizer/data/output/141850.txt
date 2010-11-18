@@ -1,0 +1,19 @@
+
+
+Content is stored in a structure made up of folders and subfolders which you can edit in the overview window. Initialy, there is only the root folder with the subfolders Home, System and Inbox.
+
+To create a new folder:
+
+
+Select the folder in which you want to create the new folder.
+
+
+Open the dialog for creating a new folder. Either you:
+
+
+
+select File|Create Folder from the menu bar, or
+
+
+click  in the tool bar.
+

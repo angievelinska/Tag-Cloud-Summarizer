@@ -1,0 +1,36 @@
+
+
+Apache SSI assembly mode
+
+If you use the Apache SSI assembly mode you have to configure an Apache web server as a reverse proxy, that replaces the apache-SSI placeholder. Edit the httpd.conf file of the Apache web server as follows. In the example it is assumed, that the Tomcat with the CAE web application uses port 8001 and the Apache web server uses port 80. The context path of the CAE application is /menusite.
+
+LoadModule proxy_module modules/mod_proxy.so 
+LoadModule proxy_http_module modules/mod_proxy_http.so 
+
+LoadModule include_module modules/mod_include.so 
+
+# ReverseProxy Konfiguration 
+ProxyRequests Off 
+
+ProxyPass /menusite/ http://myserver:8001/menusite/ 
+ProxyPassReverse /menusite/ http://myserver:8001/menusite/ 
+
+# Configure the maximum inclusion depth here 
+ProxyMaxForwards 20 
+LimitInternalRecursion 20 
+
+<Proxy http://myserver:8001/menusite/* > 
+  Order deny,allow  
+  Allow from all  
+ 
+ Options +Includes  
+  # Enable inclusion filter for this mimetypes only 
+  AddOutputFilterByType INCLUDES text/html text/plain  
+</Proxy> 
+
+Combination of assembly mode with Apache web server delivery
+
+It is not possible to combine the embedded assembly mode with an Apache web server as an additional delivery system.
+
+If you want to combine the Apache SSI assembly mode with the Apache web server in the AS-IS delivery mode (see section) you have to do a special configuration of the Apache web server. This is, because the modules mod_asis and mod_include can not be combined in a simple way. You have to delegate each step in a virtual host and combine the hosts again in a row. The next image shows a schema of this coupling:
+

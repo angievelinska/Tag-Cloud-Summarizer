@@ -1,0 +1,3 @@
+
+
+This element of the DTD is used to define different tabs for the document view. The properties of a document shown in a tab are configured using the sub element <Property>. <Tab> can only be applied, when the view class TabbedDocumentView is used.

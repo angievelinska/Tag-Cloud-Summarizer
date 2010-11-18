@@ -1,0 +1,31 @@
+
+
+In the next example, you will see how to create and control a process using the Unified API. Before running the CreateProcessExample, the standard three-step publication workflow must have been uploaded. Please see the Administration Manual for details.
+
+The example code starts with retrieving the process definition via the well-known name and creates a process instance afterwards. The process has to be started before its first task can be started.
+
+  ProcessDefinition processDefinition =
+    repository.getProcessDefinition("ThreeStepPublication");
+  Process process = processDefinition.create();
+  process.start();
+
+When the process is started, the process definition on the server takes control. In the case of the three step publication, this leads to the Compose task eventually being offered to the process' owner. The code repeatedly tries to accept the task, which may fail because the task is not offered yet, or because it was already auto-accepted by a connected CoreMedia Editor.
+
+  Task composeTask = process.getTask("Compose");
+  while (!composeTask.isAccepted()) {
+    try {
+      composeTask.accept();
+    } catch (IllegalTaskStateException e) {
+      // not offered yet, or race condition with editor
+    }
+    Thread.sleep(1000);
+  }
+
+Now that you are sure that the task is accepted, you can freely access its variables.
+
+  composeTask.getView().set("subject", "a subject");
+  connection.getSession().flush();
+  Thread.sleep(5000);    // let the user have a good look
+  composeTask.complete();
+
+Here one variable is set to a new value and the change is flushed to the server. Just as with content, writes are buffered for workflows, too. After providing you with some time to inspect the new variable value in the editor, the compose task is completed. Because the change set was not changed and is still empty, the three-step publication process terminates automatically.

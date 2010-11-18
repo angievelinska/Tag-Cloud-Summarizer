@@ -1,0 +1,3 @@
+
+
+The following state diagram holds not for the initial replication! The initial replication is not fault-tolerant against connection losses but has to run without interruptions in order to succeed.

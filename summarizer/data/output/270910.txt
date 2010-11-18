@@ -1,0 +1,35 @@
+
+
+The CoreMedia CMS replicates its content repository from the content management environment to the live environment, and in the live environment from the Master Live Server to the Replication Live Servers. Each copy of the content repository can have a number of CAE web applications attached. In order to deliver a consistent web site in the live environment, the web application deployed in each CAE always has to be compatible with the content available in the respective replication live server.
+
+The situation is similar when dealing with portlet applications. The selection and configuration of portlets to be shown on each page is defined by the content. The portlets are referenced by name, as described in section 3.2. Configuring a Portlet Application. So in order to achieve a consistent web site in the live environment, all portlets referenced from the content should be available in the respective container. Also, the version of the portlet application deployed should understand the preferences defined in the content.
+
+Rolling out a new Portlet Application
+
+The following procedure permits the rollout of a new portlet application without service interruption, and without intermittent inconsistent states on the web site. There may be other concerns, such as dedicated QA phases, requiring a stricter practice.
+
+In order to roll out a new portlet application through the whole system, you (as an administrator) need to execute the following steps:
+Prepare war file (as described in section 3.1. Deploying a Portlet Application)
+Register portlet application (as described in section 3.1. Deploying a Portlet Application)
+Copy prepared war file to the content management environment (preview) servlet container
+Create portlet windows, if desired, and verify portlet application functionality
+Copy prepared war file to all live environment servlet container instances
+Make sure the portlet application war file was successfully deployed by all servlet containers (check logs)
+Publish portlet application registration documents (CMPortletDef and CMPortletInst)
+Publish portlet windows, if desired
+
+To avoid visible errors on the web page, the portlet application must be deployed before the registration documents are published.
+
+Since servlet containers are typically only able to deploy and redeploy an application a limited number of times, it may make sense to restart the whole servlet container instance. Usual procedures for servlet container restart (load balancing/failover or scheduled downtime) apply.
+
+Upgrading a Portlet Application
+
+The steps required to update a portlet application depend on the degree of modification.
+
+If the updated application understands all preferences that were configured for its portlet instances in the previous version, the updated portlet application war file can be deployed immediately throughout the live environment. As described in the previous section, you may want to restart the servlet container.
+
+Some servlet containers serialize and persist session states. As with all web applications, a portlet application should be aware that it may find serialized session state from an older version of itself in the session.
+
+If the updated application supports additional preferences or preference values, or contains additional portlets, these should be treated like a new portlet application: New or updated registration documents should only be published after the updated application was successfully deployed on all live nodes.
+
+If the updated application is not compatible with pre-existing instance configuration (i.e. preferences), the new portlet application version should be renamed and be deployed in parallel to the old application version, following the procedure for a new application rollout. After all instances of the old application version have been removed, and this removal has been published and replicated to all live systems, the old application can be undeployed from the servlet containers. You should first check whether the application supports operating multiple deployments in parallel, or whether its usage of global namespaces (such as application scope session attributes) leads to conflicts. If an interruption in portlet application service is acceptable, you can also remove the old version first, and then roll out the new version; this avoids a need to operate both versions in parallel.

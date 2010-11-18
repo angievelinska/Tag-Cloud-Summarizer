@@ -1,0 +1,5 @@
+
+
+This report shows the development of the percentage of exits for a given page. Exits are page views that are the first page view in a session. For the percentage, the number of exits is divided by the total number of page views of the given page during the same time span.
+
+A value of 100% indicates that sessions that reach this page are never continued by viewing additional pages. A value of 0% indicates that sessions that reach this page are always continued, for example by clicking on link on this page.

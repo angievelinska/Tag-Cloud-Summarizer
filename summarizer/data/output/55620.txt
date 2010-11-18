@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the name of the condition 
+
+description 
+
+CDATA 
+
+#IMPLIED 
+
+the textual description of the condition

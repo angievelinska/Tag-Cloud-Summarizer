@@ -1,0 +1,11 @@
+
+
+To view the detail information, 
+
+
+select the document, and
+
+
+click  in the toolbar. 
+
+Using the list of the Version field, you can get the information for each version of the document. Otherwise, use the window in analogy to the CoreMedia Editor as described in section.

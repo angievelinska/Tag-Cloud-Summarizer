@@ -1,0 +1,13 @@
+
+
+If you want to install a CoreMedia Editor, proceed as follows:
+Select the CoreMedia Editor option and click [Next].
+
+3* Now you are asked for the destination directory etc. as described in the "General Installation Information" chapter. Afterwards, you will be asked to configure the CoreMedia Editor.
+2#
+If you want to set up the CoreMedia Editor now, click [Yes]. If you want to configure later manually, click [No].
+
+3* If not,  make sure to do the basic configuration in the corresponding property files in the directory ./properties/corem later.
+3* If you decide to do so, configure component properties via dialog boxes depending on the selected CM components. For a detailed description of the properties see Chapter 5. In the subsequent dialog boxes all paths are given relative to the installation directory.
+
+Now, the dialog box to configure the capclient.properties file is shown.

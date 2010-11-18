@@ -1,0 +1,5 @@
+
+
+AbortTaskTimerHandler
+
+This timer handler aborts the task instance in which it is defined on expiration (see Image 4.4.2a). 

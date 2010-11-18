@@ -1,0 +1,28 @@
+
+
+This action is employed for generating long-term reports at multiple time granularities. It is assumed that the source data is available in a single table and that each row is associated with a certain point of time. Source rows are accessed by a range query that limits the values for the time column, so that the source table should be indexed on the time column in a way that supports range queries. Besides the time column, the source table may define additional columns that provide details about the event that happened at the indicated time.
+
+The action fills a group of tables of identical structure with a common name schema. Each table name starts with a common prefix and ends with an interval type code as described in section. The different tables contain data that is aggregated at different granularities. The tables must contain a column that defines the start time of the interval for which statistics are gathered. There may be additional key columns that provide details about the summed events. Only events that provide the same values for all key columns are integrated into one data point. Key columns must not be null.
+
+Events can either be counted, or numeric attributes of events can be added up, or both. By adding the property targetCountColumn, you can indicate that rows from the source table should be counted. By adding the properties sourceSumColumnNames  and targetSumColumnNames, you can request that one or more columns are summed and that the result is stored in the target table. The number of source and target column names must match. Individual names are separated by commas.
+
+As an example, we examine how internal search events are aggregated.
+
+<Action class="com.coremedia.analytics.wf.AggregateIntervalsAction"
+  endNotBeforeVariable="aggregatedPermanentlyBefore"
+  endBeforeVariable="aggregatePermanentlyBefore"
+  sourceTableName="InternalSearches"
+  sourceIntervalColumnName="eventTime"
+  sourceKeyColumnNames="searchTerm"
+  targetTablePrefix="IntSearches_"
+  targetIntervalColumnName="eventIntervalStart"
+  targetKeyColumnNames="searchTerm"
+  targetCountColumnName="eventCount"/>
+
+The start and end dates for the aggregation are stored in two process variables, whose names are configured in the definition. The intervals to be aggregated must end before aggregatePermanentlyBefore, but not before aggregatedPermanentlyBefore.
+
+The target tables' names start with IntSearches_, the time interval is indicated in the eventIntervalsStart column and events are processed jointly if they match in the key column searchTerm that is stored in the target tables. The number of events for each search term in each interval is counted. The count is stored in the column eventCount.
+
+The events are stored in the table InternalSearches. The time of the event is stored in the column eventTime in the source table. The value for the key column is taken from the column searchTerm of the source table. If there were multiple key columns, the column names would have to be separated by commas. 
+
+The file config/dataaggregator/spring/dataaggreator-actions-example.xml contains an example that shows how to configure an aggregation action in Spring XML.

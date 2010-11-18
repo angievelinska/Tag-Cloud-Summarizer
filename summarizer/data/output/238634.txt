@@ -1,0 +1,24 @@
+
+
+A report definition specifies a high-level state model and controls the report's visualization: it specifies the report phrase, names the report chart template and optionally specifies chart customizations. This visualization definition part will be covered later
+
+The state model defines report variables at the application domain level.
+
+Examples are 'site selection', 'time interval', 'entry pages and exit pages', 'browser-type detail level', etc. They correspond to report parameters.Variables of a report can optionally be interdependent. An example would be the time resolution variable of the Performance report, which changes according to the time interval selected.
+
+The application-level state model is mapped to a more technical data model. The data model is understood as being (conceptually) a multidimensional cube of a number of continuous or discrete dimensions with data entries being represented as points in the cube. Note that this is a conceptual model, technically the data is usually organized in a relational database model. Data model dimensions, like e.g. the time or content item dimension, are represented by domains of the underlying Database system: For example, time dimension values are represented by Timestamps and content items by their technical (integer) id.
+
+Dimension constraints determine the section of a data dimension that is relevant for a given report instance. The following types of dimension constraints are defined:
+
+Dimension Discretizers map continuous or discrete high-resolution values to discrete, not necessarily equidistant dimension values of a chosen (typically low) resolution. An example is the time resolution discretizer , mapping timestamps to days, weeks, months, years.
+Dimension Ranges define an upper and lower bound on a dimension. Examples are TimeRanges top 1-10 entries or time intervals (April 1st 2006 until Jun 30th 2006).
+Dimension Values are single values of a (usually discrete) dimension. Examples are a single category from a list of categories, a single site from a list of sites.
+
+State model variable values are mapped to dimension constraints at the data model level. A state model variable may result in more than one dimension constraint, thus dimension constraints are also called aspects of state model variables, as they deal with a single dimension of a (possibly) multidimensional variable. An example of a multidimensional state model variable is a time range variable which maps to both a time interval and a corresponding time resolution.
+
+Report Generation
+
+When a user requests a report, a report instance is created from the report definition and initialized with configured initial values; the state model variables are updated according to the user's (changing) parameter selection by the MVC controller. State model variable value updates are mapped to data model dimension constraints and a report query execution is triggered. 
+
+The Report Engine runs queries on the report instance. The Report Engine's Query Executor drives the query execution and result consolidation process: It instantiates the query definitions, replaces placeholders, maps dimension constraints to SQL clauses and runs the queries against the Analytics Database. The queries' results are passed to the single Query Result Consolidator, which merges, filters, aggregates and sorts the result. Optionally defined post processors additionally process the data. The data is stored in the report instance and rendered using the MVC views.
+

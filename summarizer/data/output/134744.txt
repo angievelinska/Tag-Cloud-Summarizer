@@ -1,0 +1,3 @@
+
+
+If you have purchased the CoreMedia Workflow Server (Unlimited Edition), you can simply supplement this workflow with an immediate publication of the changed documents. Extract the global-search-replace.xml file from the workflows.zip file and uncomment the lines shown in the example below.

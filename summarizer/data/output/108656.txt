@@ -1,0 +1,60 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Optional
+ 
+
+Description
+ 
+
+id
+ 
+
+no
+ 
+
+An unique identifier for the uploader.
+ 
+
+receiveInit
+ 
+
+yes
+ 
+
+Set this attribute to "false" if a new uploader should not receive notifications for existing values.
+ 
+
+builder
+ 
+
+yes
+ 
+
+A comma-separated list of key schemes for that the uploader is notified. If not set, pages will be passed to uploader.
+ 
+
+filter
+ 
+
+yes
+ 
+
+A regular expression to restrict the pages or values for that the uploader is notified. Default is ".*".
+ 
+
+any
+ 
+
+yes
+ 
+
+A custom attribute for that a corresponding setter method exists.
+
+
+

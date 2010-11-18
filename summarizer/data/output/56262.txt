@@ -1,0 +1,3 @@
+
+
+This chapter illustrates the basic features that are required to set up a project in the WebEditor.

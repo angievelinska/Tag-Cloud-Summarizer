@@ -1,0 +1,9 @@
+
+
+User
+
+Grammar: EMPTY 
+
+The User element is used to specify a single constant user value within expressions, variable initializers or policies. Either 'value' or 'name' must be specified. 
+
+If you delete a user in the user administration, which you have used in the User element of an uploaded workflow definition, its polices will fail.

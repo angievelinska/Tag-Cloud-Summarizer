@@ -1,0 +1,11 @@
+
+
+Example 3 demonstrates how multiple CoreMedia resources can be edited in a single HTML form by implementing an own ActionForm. In this way it is possible to make a (possibly complex) content model totally transparent for the user, as the user doesn't have to know which resource (or resources) he is editing at the moment.
+
+This example shows also how a new CoreMedia resource can be created and linked to another resource automatically, without any interaction from the user.
+
+We'll also examine how the BLOB property of a CoreMedia document can be edited by using the HTML form file upload mechanism.
+
+The configuration section of this chapter also shows how to use the WAGE LoginAction, instead of our own LoginAction from XXX.
+
+As the Action for this example doesn't have to do anything special (only commit the changes made), please refer to the other examples on how to write an appropriate Action class.

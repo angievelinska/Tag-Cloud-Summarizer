@@ -1,0 +1,45 @@
+
+
+  DB    Description  This action checks a CoreMedia database over the JDBC API.  Attribute  
+
+driver 
+
+JDBC driver to use 
+
+url 
+
+URL where to connect to the database 
+
+user 
+
+Name of the database user  
+
+password 
+
+Password of the database user 
+
+propertyFile 
+
+The CoreMedia database configuration file (sql.properties) where the settings (driver, url, password) are configured. The path must be relative to $COREM_HOME/properties. 
+
+You have to specify either driver, url, user and password or the propertyFile attribute.  Error codes  
+
+0	(ok) 
+
+10               (unexpected_error)
+
+11	(timeout) 
+
+12	(error) 
+
+13	(respawning_too_fast) 
+
+21	(io_error) 
+
+61	(no_jdbc_driver) 
+
+62	(no_connection) 
+
+63	(sql_exception) 
+
+ 

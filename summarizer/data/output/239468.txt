@@ -1,0 +1,13 @@
+
+
+Configure the publication targets in the publisher.properties. The parameters have the following meaning:
+
+publisher.target.<n>.name: This property defines the unique and permanent name of the publication target. Once set, you cannot change it anymore. It is used for lookups during localization.
+publisher.target.<n>.display.name: This property defines the name which is shown to the user, when no other localization information is available. The display name should be unique but may change during operation.
+publisher.target.<n>.ior.url: This property defines the location of the <n>-th Live Server you want to publish to.
+publisher.target.<n>.folders: This property defines the top-level folder (name or Id) you want to publish to the <n>-th publication target. You can enter more than one folder, separated by commas. Once a folder is assigned to a publication target, it must not be reassigned to another target. Otherwise, inconsistencies between Content Management Server and Live Server will occur.
+20#
+Enter the appropriate data into the fields.
+
+If you have chosen to install a Single-Site server then the two previous windows will be skipped and only the following window opens up for publisher configuration.
+

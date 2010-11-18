@@ -1,0 +1,3 @@
+
+
+The CapTypes are also identified by an ID.

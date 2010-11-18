@@ -1,0 +1,27 @@
+
+
+Localization of the CoreMedia Editor for use with WebStart is similar to the standard localization described before. You only have to provide the property file as a signed JAR-file to WebStart. Proceed as follows:
+Create a property file, here editor.properties, with the localized properties in a path com/customer/cap as described before.
+Create a JAR-file from the directory above com/ with: jar cf editor-properties.jar com.
+You need a key to sign the JAR-file. If you have no key, create it with: keytool -alias <keyname> -genkey
+
+You will be asked for a password, which you have to remember for further use.
+4#
+Sign the JAR-file with: jarsigner editor-properties.jar <keyname>
+
+When you are asked for the password enter the password from step 3.
+5#
+Place the editor-properties.jar file into the lib/ext/ directory of your ContentServer installation. By default, the ext/ directory does not exist, so you have to create it.
+Add the following entry to the editor-extension.jnlp file in webstart/ext/:
+
+<resources>
+  ...
+  <jar href="lib/ext/editor-properties.jar"/>
+</resources>
+7#
+Restart the CoreMedia Editor.
+
+Now, the editor can use the localized properties.
+
+
+

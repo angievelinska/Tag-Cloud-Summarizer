@@ -1,0 +1,21 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+task 
+
+NMTOKEN 
+
+#Implied
+
+current task 
+
+the name of the task for which an exclusion should be established

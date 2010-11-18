@@ -1,0 +1,13 @@
+
+
+The CoreMedia Editor provides different windows for different editing routines:
+
+an Explorer window (this is the default and main window, see illustration)
+a Workflow window for creation, processing and surveying workflows (see section)
+a Query window for assembling, modifying and managing queries (see section)
+a Publisher window to monitor progress and results of publication processes (see section)
+a Document type window to overview the different available document types (see section)
+a User manager window
+3* For non-administrators, this window is required for password changing (see section)
+3* For administrators, this window allows to create and modify group and user settings as well as individual and resource rights (see section).
+

@@ -1,0 +1,17 @@
+
+
+User management is an essential part in distributed collaborative applications. The two main tasks of the CoreMedia SCI user administration are:
+
+
+
+User Authentication 
+
+
+Defines which user may log on to the Server. A generic framework based on the Java Authentication and Authorization Service (JAAS) allows to authenticate users from arbitrary sources. A concrete solution exists for users and groups from LDAP servers.
+
+
+User Rights Management 
+
+
+Manage users, groups and rights on CoreMedia resources. As with user authentication users and groups may originate from arbitrary sources. Support is provided for LDAP servers, especially Microsoft Active Directory servers. The tool to assign rights on resources to groups is the CoreMedia User Manager, which is carefully designed to cope with thousands of users and groups sometimes found in large LDAP directories.
+

@@ -1,0 +1,11 @@
+
+
+Besides the configuration of paths and databases as described in the Administration and Operation Manual, a few implementation tasks are required even for a simple installation of the CoreMedia Analytics Engine.
+If you intend to use In-Site Analytics, you must use the analytics tag library in your JSPs for identifying the current page and for hyperlinks that support link tracking. The usage is simple, but it will require changes to virtually all your JSPs. Please see section for details.
+If you intend to use In-Site Analytics, you must add code that enables and disables the display of the Analytics overlays to your preview web application. While you can do this by means of Preview-Based Editing as described in the Content Applications Developer Manual, other techniques are possible, too. Refer to section for details about this task.
+If you choose not to use the Analytics taglib, because In-Site Analytics is not relevant for your use cases, make sure that the tracking interceptor as described in section is configured for all relevant controllers.
+If you intend to use the Http Cache with click tracking, you must use the Analytics tag library in your JSPs for identifying the current page and for rendering tracking images.
+The default content evaluator that is needed by the Object Analyzer has to be adapted in most cases to compute categories for content beans. See section for details.
+If you use beans other than content beans to identify a page, you should create an object id analyzer according to section so that pages can be placed into the correct categories and be given correct name.
+It is often necessary to implement a few of the interfaces described in section for gathering information about requests. In particular the interfaces for computing the user name and the locale for a request are highly application specific. Additional interfaces from that section may be needed, too.
+

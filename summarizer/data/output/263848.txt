@@ -1,0 +1,13 @@
+
+
+If you do not want to create all the content, document types and templates by yourself, you will find ready-made repositories (cap-examples.jar) in the distribution. This jar-file also contains the other examples delivered with CoreMedia. Proceed as follows:
+Create a temp directory and unpack the file cap-examples.jar which holds the example data into this directory with jar xvf cap-examples.jar. 
+Move to the newly created menusite/install directory.
+Copy the file menu-doctypes.xml and all the templates to the right directories with: cp -r * <CapInstallDirectory> replace <CapInstallDirectory> with the install directory of the CoreMedia system.
+Change the property cap.server.documentTypes in the file /properties/corem/capserver.properties to /properties/corem/menu-doctypes.xml so that CoreMedia SCI can find the doctypes file.
+Enter the bin directory of the CoreMedia installation and start the Content Server with ./cm capserver start
+Import the data to the database by entering the bin directory of the CoreMedia installation and execute:
+
+3* ./cm serverimport -u admin -p admin -r <tempDirectory>/menusite/data
+
+Please make sure that the right place is specified for the <tempDirectory> directory.

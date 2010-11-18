@@ -1,0 +1,8 @@
+
+
+<wage:resourceList>
+
+Renders a HTML form element with hidden input fields for commonly used WAGE form fields (like resourceId). Also instantiates a WAGE JavaScript resourceTable object, which is used to dynamically update the focus and selection fields for this form. Placing <wage:resourceRow> tags within this tag allows you to easily create HTML forms with selectable CoreMedia resources. By submitting this form to an appropriate Action (for example the WAGE ResourceListAction), commands (like check-in) can be executed on the selected resources. This tag extends the Struts form tag, so you may also used other attributes allowed for this tag. Attributes:
+
+action (required): the action to which the form should be submitted
+

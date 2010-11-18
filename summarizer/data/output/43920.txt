@@ -1,0 +1,10 @@
+
+
+During template development, it is difficult to determine for complex web pages
+
+which documents are entering the page and
+which templates are involved in the creation of the page fragments
+
+To provide better overview here and even to allow direct access, CoreMediaCAP offers automatically generated Template Links and Content Links.
+
+A Template Link has a hyperlink to a page showing the template source code, a Content Link has a hyperlink to the corresponding document in the Web Editor or CoreMedia Editor. As help text, the template name (with directory) for Template Links, and the document type and name for Content Links are shown in the browser when the mouse pointer hovers over the symbol. So it is easy to check which template or document is behind the page fragment.

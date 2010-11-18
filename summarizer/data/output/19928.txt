@@ -1,0 +1,11 @@
+
+
+Creating filters
+
+You want to make filters for the following documents available via the menu point View|Filter:
+
+Published documents
+Deleted documents
+
+Enter the following lines in the editor.xml file:
+

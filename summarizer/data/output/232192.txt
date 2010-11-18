@@ -1,0 +1,10 @@
+
+
+Installing the Object Analyzer
+
+If you want to install the Objects Analyzer proceed as follows:
+Select the CoreMedia Analytics option and press [Next].
+
+
+The window shown below opens up for selecting the Analytics components.
+

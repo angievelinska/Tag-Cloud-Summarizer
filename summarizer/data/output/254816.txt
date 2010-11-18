@@ -1,0 +1,160 @@
+
+
+In order to connect client and servlet container via HTTPS you have to generate a key for the servlet container. This key is sent from servlet container to client with each query of the client to the server. The client decides whether the sender of the key is trustworthy with every single request. 
+
+Before key generation you must have made JDK/JRE configurations described in the previous section. 
+
+Creation of the key for Active Delivery Server browser verification 
+
+The tool for creating the key is supplied with the JDK. You create the key with the following entries: 
+Enter the following command: 
+
+
+
+3* <java-home>/bin/keytool -genkey -alias tomcat -keystore /example/coremedia/5.1/.keystore -keyalg rsa 
+
+ 
+3* In this way you call the program keytool in the directory <java-home>/bin. You initiate creation of the key ( -genkey) with the alias name (-alias tomcat ). A key is created according to the RSA algorithm. The key is saved in the keystore file /example/coremedia/5.1/.keystore (here you can enter your own path/name). If you already have a keystore file, you must enter this. 
+
+
+2# 
+
+ 
+
+
+At the next input request, enter a password. If you want to save the key in an already existing keystore, you must enter the password of this file. 
+
+ 
+
+
+At the next input request, enter the name of the server (the entry given below is an example). 
+
+ 
+
+
+
+3* What is you first and last name? 
+
+ 
+
+
+3* [Unknown]: webserver.coremedia.com 
+
+ 
+
+
+4# 
+
+ 
+
+
+Confirm the following input requests with <Return>, until you are asked to confirm the correctness of the previous entries. 
+
+ 
+
+
+Enter "y" and <Return> to confirm the previous entries. You can cancel by entering <Return>. 
+
+ 
+
+
+
+3* After a short pause, you are asked for the "key password for < tomcat>". 
+
+ 
+
+
+6# 
+
+ 
+
+
+Here you must use the keystore password for the key with the alias "tomcat". 
+
+ 
+
+Creation of the key is thereby ended. 
+
+Key for Active Delivery Server-Active Delivery Server verification 
+
+This part is only necessary, if you want to use the Web Editor via https! It is not required for the usage of the WebDAV server. 
+
+The Active Delivery Server communicates internally with itself. For this reason it requires a so-called "truststore" in which the keys which are trusted are stored. The truststore file corresponds to the keystore file. In principle you have three possibilities for using the truststore file: 
+
+
+
+Simply enter the keystore file as truststore file. To do so, it is only necessary to make the appropriate entry in the file httpd.jpif (see Section). 
+
+ 
+
+
+Copy the keystore file to the truststore file and make the appropriate entry in httpd.jpif. 
+
+ 
+
+
+You already have a truststore file which you must continue to use. In this case, you must export the key from the keystore file and import it into the truststore file. Proceed as follows: 
+
+ 
+
+
+Export the key with the following command: 
+
+ 
+
+
+
+3* <Java-Home>/bin/keytool export -file /home/testuser/importantKeyFile -alias tomcat -keystore /example/coremedia/5.1/.keystore 
+
+ 
+
+
+3* The parameters have the following meanings: 
+
+ 
+
+
+3* -file: Name of the file into which the key is exported. 
+
+ 
+
+
+3* -alias: Alias name of the key which is exported. 
+
+ 
+
+
+3* -keystore: Keystore from which the key is taken. 
+
+ 
+
+
+2# 
+
+ 
+
+
+Import the key into the truststore using the following command: 
+
+ 
+
+
+
+3* <Java-Home>/bin/keytool import -file /home/testuser/importantKeyFile -alias tomcat -keystore /example/coremedia/5.1/.truststore 
+
+ 
+
+
+3* The parameters have the following meanings: 
+
+ 
+
+3* -file: Name of the file from which the key is imported. 
+3* -alias: Alias name of the key which is imported.
+
+
+
+3* -keystore: Truststore into which the key is imported. 
+
+ 
+

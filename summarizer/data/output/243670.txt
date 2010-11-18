@@ -1,0 +1,16 @@
+
+
+Basically a subworkflow is an ordinary workflow started by the task <ForkSubprocess> within another workflow. The subworkflow may be passed parameters via the subelements of the <Parameters> element. 
+
+A subworkflow is always started as a separate process, while the main process continues. There are two different ways in which a subworkflow may be started:
+
+Synchronously via <ForkSubprocess detached="false">
+3* If the main workflow is suspended, resumed or aborted, the subworkflow is suspended, resumed or aborted, too, but it may finish without affecting the subworkflow.
+3* The main workflow may wait for the subprocess to complete or to be aborted via the <JoinSubprocess> task. Note, that it is not possible to loop (see Section Section4.1.4) a <ForkSubprocess> and join all subprocesses afterwards. Use recursion in this case so that each subworkflow starts exactly one subworkflow.
+Asynchronously via <ForkSubprocess detached="true"> or simply <ForkSubprocess>
+
+
+3* If the main workflow stops, the subworkflow is not affected. Since they are not connected, there is no possiblity for the main workflow to wait for the subworkflow to finish.
+
+
+

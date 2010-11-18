@@ -1,0 +1,3 @@
+
+
+This element is used to provide initializers (or initial values) and validators (or valid pattern) for the properties of the document defined in <DocumentType>.

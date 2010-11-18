@@ -1,0 +1,3 @@
+
+
+One thing you have to pay attention to is the spelling of CoreMedia property names. If you have defined your document type model with property names starting with upper case letters, and you want to access these properties using the Struts tag library, you will have to use property="Name" when the resource is accessed as DynaBean (get("Name") will be called). If you have implemented own getter and setter methods (getName() and setName(...)) you have to write property="name" in the Struts tags, as Struts derives the property name automatically according to the JavaBeans conventions (essentially by removing get/set from the method name and converting the following letter to lower case).

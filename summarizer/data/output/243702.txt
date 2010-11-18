@@ -1,0 +1,25 @@
+
+
+Actions can only be used in automated tasks, user tasks or in the predefined RunActionTimerHandler. They are performed at different times:
+
+Entry actions are performed when a user accepts a task.
+Exit actions are performed when a user completes a task.
+
+
+Actions in an automated task run when the guard evaluates to true.
+
+
+Actions in a timer handler are run if the associated timer expires.
+
+Actions should run for shortest period of time that is feasible since they run inside a server transaction and block precious server resources. To avoid problems, stick to the following rules:
+
+Don't write client actions that require user interaction.
+If you interact with another system and need to wait for a result, for eample sending a mail and waiting for a notice of its receiption, always use a second task with a guard (see Section 4.1.6.3) following the initial task with your action. The example in Section 5.5.4 describes an expression which checks whether a mail has been received or not.
+
+Note the following features which are helpful when you program your own actions:
+
+Actions are JavaBeans.
+Parameters for the global configuration of the action bean can be defined via the XML workflow definition (see Section 5.4.5).
+Actions can set a success variable which may be used to control the error handling within the workflow.
+Actions can assign a result to a workflow variable (see Section 5.4.5 for details).
+

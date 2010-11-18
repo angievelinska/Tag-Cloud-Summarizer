@@ -1,0 +1,5 @@
+
+
+The Content Management Server installation contains all manuals of the CoreMedia CMS in the HTML format. You can call an overview page which contains links to all manuals. Enter the following address in your web browser:
+
+http://<ServerHost>:<ServerPort>/manuals

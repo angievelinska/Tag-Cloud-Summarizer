@@ -1,0 +1,23 @@
+
+
+This section describes how to configure CoreMedia SCI components to run as Windows Services. Windows services can be started and stopped manually or can be configured to be automatically started when the machine boots. Events from Windows services are displayed in the Windows Event Viewer. For more information on Windows services consult the help provided by your Windows system.
+
+Every permanently running CoreMedia component is a candidate to run as a Windows service:
+
+
+
+CM Content and Live Server
+
+
+CM Workflow Server
+
+
+CM Watchdog
+
+
+CM Importers
+
+
+JMS Receiver
+
+The following subsections explain how to configure, register, start and stop Windows services.

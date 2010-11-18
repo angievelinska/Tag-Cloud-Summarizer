@@ -1,0 +1,11 @@
+
+
+The CoreMedia WebEditing Server is the component which offers access to the CoreMedia repository using other tools than the CoreMedia Editor. It covers the following topics:
+
+WebDAV access
+You can access CoreMedia resources using a WebDAV enabled editor e.g. Microsoft Word.
+WAGE API
+You can use the WAGE API to program your own Web Clients to access the CoreMedia resources. See the CoreMedia WAGE Developer Manual for an in-depth description of this API.
+CoreMedia WebEditor
+The CoreMedia WebEditor is an application of the WAGE API which offers access to the CoreMedia resources using a simple browser. The look-and-feel is similar to the CoreMedia Editor.
+

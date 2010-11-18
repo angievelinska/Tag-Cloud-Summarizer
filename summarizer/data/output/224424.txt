@@ -1,0 +1,13 @@
+
+
+Delete binary data
+
+You can delete binary data from a document as follows:
+Select and open the document in the Overview window.
+Check out the document.
+Select the field whose binary data you want to delete.
+Delete the image without safety check, by one of the following possibilities:
+
+Select Binary data|Remove from the menu bar.
+Select Remove from the context menu.
+

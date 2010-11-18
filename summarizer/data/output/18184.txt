@@ -1,0 +1,14 @@
+
+
+The database content of Slave Live Servers is exchangeable, i.e. it is possible to restore the database of one Slave Live Server with the database content of another Slave Live Server. Complete replication of the Master Live Server takes far longer for huge databases than restoring a database with a backup. On average the replication process creates 5-10 documents per second in the repository, depending on the document size. Therefore:
+
+Execute regular database backups of a Slave Live Server
+Restore the Slave Live Server database with a backup.
+
+Note that Content Server, Master Live Server and Slave Live Server databases stand in a fixed temporal order. The state of the Content Server must be younger than the state of the Master Live Server. The state of the Master Live Server must be younger than the state of the Slave Live Server. Backups must follow this order, therefore:
+
+
+
+Create backups in the order Slave Live Server, Master Live Server, Content Server.
+
+The following section explains how to restore the database in detail.

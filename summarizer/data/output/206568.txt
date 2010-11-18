@@ -1,0 +1,3 @@
+
+
+The syntax conforms to the default configuration syntax in JAAS:

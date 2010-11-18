@@ -1,0 +1,5 @@
+
+
+cm workflowconverter
+
+Before starting the workflowserver for the first time it is necessary to run the workflowconverter utility (see section).

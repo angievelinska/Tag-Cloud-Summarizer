@@ -1,0 +1,15 @@
+
+
+In a typical content entry application, there are forms to edit the properties of one of more CoreMedia documents. You can use the template generator of Editing Services for JSF to generate templates from your document type definition file(s). You can invoke the template generator from the WEB-INF directory of the Editing Services application as follows
+
+java -jar lib/templategenerator.jar -o <output directory> 
+-d <doctype url 1> -d <doctype url 2>
+
+Replace <output directory> with the target directory for the templates and <doctype url n> with the location of your document type definition file(s). Invoke the template generator without arguments to see all available options.
+
+The template generator creates one JSP template per document type defined in the document type definition file(s). For each property of a document type except LinkList, a sub view for this property is included. For LinkList no sub view can be created, because of the binding attribute they possess. They are described directly in the generated JSP.
+
+The content of the sub view is the JSP template in editforms/propertyeditors chosen according to the property type and its attributes:
+
+
+

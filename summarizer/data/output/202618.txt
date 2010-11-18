@@ -1,0 +1,18 @@
+
+
+ File/Directory Meaning contentservice.xml The contentservice descriptor. Please edit this file as shown above. portalapp.xml 
+
+The portlet descriptor. Please configure the homepage uri here like
+
+<property name="com.coremedia.portal.portlet.homepageuri" value="/">
+
+You may also register javascript and css files here. js/ 
+
+Preferred location of additional javascript files. Put your files here and register them by editing portlet.xml like
+
+<property name="com.coremedia.portal.portlet.javascript" value="style/myfile1.js,style/myfile2.js"> style/ 
+
+Preferred location of additional css files. Put your files here and register them by editing portlet.xml like
+
+<property name="com.coremedia.portal.portlet.css" value="style/myfile1.css,style/myfile2.css"> errorpages/ Preferred location of additional errorpages when using the ErrorpagesContentService. The location needs to be defined inside contentservice.xml. lib/ Java libraries which are used by the portlet. Please do not modify this directory's content.
+

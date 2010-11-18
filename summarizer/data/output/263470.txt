@@ -1,0 +1,13 @@
+
+
+The robot dimension table shown in the previous diagram was already discussed in conjunction with the fact tables. In the following, only the actual permanent report tables are discussed, which are marked using the «permanent» stereotype.
+
+You can see that all report tables contain an XX placeholder in their name. There is one of these tables for each time interval type as described in section. In the actual table name the XX is replaced by the interval type code.
+
+RobotAccesses_XX
+
+These tables store in the column eventCount the number of robots who viewed a certain site in a given interval. The robotId column represents the robots id. Site and interval are identified by the columns site and eventIntervalStart.
+
+TotalRobotAccesses_XX
+
+These tables store in the column eventCount the total number of site views for all robots. Site and interval are identified by the columns site and eventIntervalStart.

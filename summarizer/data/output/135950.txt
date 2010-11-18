@@ -1,0 +1,11 @@
+
+
+Element IncludeDocumentType
+
+This element defines that documents of a certain type should be indexed.
+
+Parent element: DocumentTypes
+
+Child elements: none
+
+Attributes:

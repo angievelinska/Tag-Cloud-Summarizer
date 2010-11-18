@@ -1,0 +1,14 @@
+
+
+A document goes through several states during the editorial process (see section). The different states indicate whether documents are being edited, have been approved for publication or have already been published. 
+
+The status of the document is shown, for example, in the status field, in the version history or by the symbol at the top left corner of the window (see section). To apply changes to a document you have to check it out. 
+
+With checking out, a new version is created. This new version can be edited and saved in an intermediate stage as often as necessary. As long as the document is checked out, no other user can check it out, change or delete it. However, other users can access older version without making changes. They can read it, copy text passages or binary data, search for terms, etc. To check out a document that is already opened in the document window, you have the following options:
+
+Click into the document and press <Enter>.
+Select File|Check out from the menu bar.
+Click  on the toolbar.
+Press the keyboard shortcut <Ctrl>+<L>.
+
+A greyed out check-out symbol indicates that the document is already checked out.

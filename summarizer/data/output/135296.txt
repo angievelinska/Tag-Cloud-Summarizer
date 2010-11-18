@@ -1,0 +1,4 @@
+
+
+ Attribute Description Default container id of a folder or container document (e.g. a Page) - documentposition position of document inside a linklist - event javascript event triggering the popup menu (click, dblclick, contextmenu, mouseover) - property name of property holding a resource (e.g. linklist "Top" of a Page) - resource id of resource - uri uri to be called on javascript event if not set, taken from pbe.xml id reference to dependant html element automatically generated in addition with a <span id="..."> tag surrounding the tag's body content. hoverEffect true/false: turn hover effect on mouseover event on/off (the hovereffect sets the css style "hover" on the dependant html element) true enabled false/true: turn current contextinfo off/on true
+

@@ -1,0 +1,12 @@
+
+
+Save binary data
+
+You can save binary data  from the document in the file system. To do this, the following steps are necessary:
+Select and open the document in the Overview window.
+Open the dialog for saving the binary data, using one of the following methods:
+
+Select Save from the Binary Data menu or from the Context menu.
+Click on the appropriate symbol on the tool bar.
+
+A dialog box appears:

@@ -1,0 +1,8 @@
+
+4#
+Click [Browse] to choose the required license file. The file <LicenseFile> will be copied into the directory <CoreMediaHome>/properties/corem and will be renamed to license.zip during installation.
+
+If you have entered no file or the file can not be found, you can continue with the installation anyway. However, the server can only be started if a license file is in this folder and with the name assigned to the parameter cap.server.license in the file
+
+3* <CoreMediaHome> /properties/corem/capserver.properties.
+

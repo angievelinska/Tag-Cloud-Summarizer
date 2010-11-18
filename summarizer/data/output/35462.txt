@@ -1,0 +1,10 @@
+
+
+The CoreMedia Workflow consists of two components:
+
+The Workflow Server
+3* This component is a complete server that communicates with the Content Management Server and the CoreMedia Editor. The Workflow Server executes the workflow instances. 
+The Client GUI
+3* The Client GUI is what the user works with: by means of the Client GUI tasks are offered and processed.
+
+See the illustration below for grouping and interaction of the components:

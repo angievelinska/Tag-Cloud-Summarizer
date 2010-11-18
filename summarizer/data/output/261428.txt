@@ -1,0 +1,3 @@
+
+
+Configuration not mandatory: Change the index profile if you want to search in specific document properties using CoreMedia or FAST APIs.

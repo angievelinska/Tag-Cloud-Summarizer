@@ -1,0 +1,3 @@
+
+
+Note: An administrator can manually query and remove used licenses from the database table. See the server tool cm usedlicenses in section <cm usedlicenses section/>.

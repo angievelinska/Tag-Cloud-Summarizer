@@ -1,0 +1,20 @@
+
+
+The <analytics:pagecontext> tag sets the stage for tracking the origin of clicks. It identifies the rendered object, the view, and the locale for the current page. This information is passed to all links inside the context. A typical usage would be
+
+<analytics:pagecontext object="${self}" view="...">
+  ...
+</analytics:pagecontext>
+
+If it is known that the rendered page is different from the page encoded in the URL (for example because a text fragment was encoded into the URL and it is now displayed in a container object), the page encoded in the URL can be indicated as the linked page.
+
+<analytics:pagecontext
+  object="${self}" view="..."
+  linkedObject="${self}" linkedView="...">
+  ...
+</analytics:pagecontext>
+
+This can help the Data Aggregator correctly interpreting the JavaScript callbacks that are made when a link is clicked. Further details can be found in section.
+
+If no interceptor tracks the current page view, the page context tag also ensures that an appropriate event is generated at the closing tag.
+

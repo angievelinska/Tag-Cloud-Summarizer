@@ -1,0 +1,14 @@
+
+
+In order to move or copy folders, 
+Select the folder, 
+choose Edit | Cut, or the scissors icon in toolbar
+Select the target location, and
+choose Edit | Paste, or the clipboard icon in toolbar
+
+In order to copy folders, just choose Edit | Copy instead of Edit | Cut or the add to clipboard icon. You're prompted to rename the resource in case of identical names.
+
+ 
+
+
+

@@ -1,0 +1,3 @@
+
+
+This element of the XML file is used for configuring some features of a property in the document window.

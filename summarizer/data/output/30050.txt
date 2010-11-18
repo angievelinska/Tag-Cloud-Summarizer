@@ -1,0 +1,23 @@
+
+
+ 
+
+Parameter 
+
+Description 
+
+command 
+
+Allows to specify the name of the command class, which is executed upon the request. Custom command classes have to implement the interface hox.corem.editor.toolkit.Command or one of its subinterfaces. If there is no dot in the command name, hox.corem.editor.commands is prepended. 
+
+resourceId 
+
+Allows to specify one or more resources, on which a hox.corem.editor.commands.ResourceCommand is executed. 
+
+processInstanceId 
+
+Allows to specify one process instance id, on which a hox.corem.editor.commands.ProcessInstanceCommand is executed. 
+
+taskInstanceId 
+
+In conjunction with a processInstanceId, it allows to specify one task instance by its id, on which a hox.corem.editor.commands.TaskInstanceCommand is executed.

@@ -1,0 +1,13 @@
+
+
+Remove links
+
+
+External and internal links can be removed by 
+
+selecting the linked (blue and underlined) text
+
+unformatting the text (as described in section).
+
+
+

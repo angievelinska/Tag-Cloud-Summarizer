@@ -1,0 +1,11 @@
+
+
+Element XPath
+
+There can be exactly one element XPath below the element XPathField. It contains the XPath expression that selects the indexed XML fragment. The namespaces of elements and attributes used in the expression must be declared in Namespace subelements.
+
+Parent element: XPathField
+
+Child elements: Namespace
+
+Attributes:

@@ -1,0 +1,16 @@
+
+
+Example
+
+<Jmx name="myJmxAction"
+          serviceUrl="service:jmx:jmxmp://localhost:5555/"
+          objectName="ProactiveEngine:type=Core"
+          attributeName="HeartBeat"
+          defaultCode="ok">
+    <Converter class="com.coremedia.watchdog.NumberRangeConverter" 
+                    min="10" max="29999" code="ok"/>
+    <Converter class="com.coremedia.watchdog.NumberRangeConverter" 
+                    min="30000" code="error"/>
+</Jmx>
+
+The JMX action "myJmxAction" retrieves the attribute HeartBeat of the MBean "ProactiveEngine:type=Core". If the attribute value is between 10 and 29999 then a watchdog code "ok" is returned. A value greater or equal "30000" results in a code "error". The default code "ok" is used if no converter applies, e.g. if the value is lower than 10.

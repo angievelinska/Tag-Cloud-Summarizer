@@ -1,0 +1,10 @@
+
+
+Interactive Report Drill Down
+
+The Top External Search Terms report model provides the following three report parameters:
+
+The number of entries parameter determines the number of top entries to display.
+The site parameter determines the (sub-)site. The list of sites is automatically generated during report data aggregation.
+The time interval parameter allows a user to select the time interval. See the Performance report for time interval description and screenshots.
+

@@ -1,0 +1,3 @@
+
+
+The getPropertyUri method of the hox.corem.servlets.Document is defined in the following way:

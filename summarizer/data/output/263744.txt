@@ -1,0 +1,54 @@
+
+
+The ChunkingImportAction is an action that supports the import of log files in a simple and reliable way. It takes care of importing log files in the right order, chunking long log files to limit transaction sizes, persistently recording the already imported parts of each log file to avoid duplicate import, scheduling concurrent writes to the database, and updating the workflow variables according to the progress of the import. 
+
+The use of this importer class requires that each line of the input log files can be parsed individually. It is assumed that within each log file the lines are chronologically ordered. Multiple log files may cover the same time period, though.
+
+The parsing of lines and the updates of the database are encapsulated in the interface ImporterStrategy. A type variable T specifies the type of the intermediate result from the parse stage that is passed to the storing stage. You must supply an implementation of ImporterStrategy from package com.coremedia.analytics.wf.plugin for using the ChunkingImportAction. The method
+
+T parseLine(AggregatorManager manager, String line)
+
+parses the given line. If the line could not be parsed, the method may return null. The method
+
+long getTimeOf(T object)
+
+must return for every parsed object the time in milliseconds of when the event happened, so that the importer can import the earliest events first. Finally
+
+void store(AggregatorManager manager, T object)
+
+persists the given object. The AggregatorManager that is passed into the method along with the parsed object provides the method getJdbcTemplate(), which may be used to use Spring JDBC to access the database. When the method is called, a transaction has already been started.
+
+This action is best configured as a Spring bean in the collection import, where it is invoked after the standard imports have run. A typical Spring configuration might look like:
+
+<bean class=
+"com.coremedia.workflow.common.util.RegisteringLongAction">
+  <property name="collection" value="import"/>
+  <property name="action">
+    <bean 
+    class="com.coremedia.analytics.wf.ChunkingImporterAction">
+      <property name="importerId" value="myImport"/>
+      <property name="iterationStartVariable" 
+        value="iterationStart"/>
+      <property name="importEndVariable" value="customImportEnd"/>
+      <property name="duration" value="3600"/>
+      <property name="offset" value="600"/>
+      <property name="iterationSize" value="1000000"/>
+      <property name="chunkSize" value="2000"/>
+      <property name="streams" value="32"/>
+      <property name="script" value="bin/logMoveScripts.sh"/>
+      <property name="scriptOutputEncoding" value="UTF-8"/>
+      <property name="encoding" value="UTF-8"/>
+      <property name="directory" value="myImport/inbox"/>
+      <property name="archive" value="myImport/archive"/>
+      <property name="strategy">
+        <bean class="mypackage.MyImporterStrategy"/>
+      </property>
+    </bean>
+  </property>
+</bean>
+
+The bean properties importId, iterationStartVariable, importEndVariable, and strategy must be given in the bean definition. If another property with the name NAME is not present for an import with importerID equal to ID, the property is instead loaded from the file workflowserver.properties using the property name
+
+workflow.server.managers.aggregator.import.ID.SUFFIX
+
+where SUFFIX is determined according to the following table:

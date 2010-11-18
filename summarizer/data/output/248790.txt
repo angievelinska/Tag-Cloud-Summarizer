@@ -1,0 +1,3 @@
+
+
+This method of the Blob class delivers the size of the Blob data in bytes. The value is also used for the HTTP response in Example 4.2.3.4d (line 20). The actual data is written into the HTTP response with the help of the following method of the Blob class:

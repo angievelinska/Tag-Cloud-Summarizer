@@ -1,0 +1,10 @@
+
+
+When you are programming own expressions, respect the following general rules:
+
+Expressions must not have any side effects.
+Expressions must not hold any state.
+Expressions must be repeatable any number of times.
+All top level expressions used in the workflow configuration must be boolean expressions.
+
+Depending on their arity, expressions may have a specific number of sub-expressions, which are added through the addExpression() method. For example, a comparison has an arity of two, as it compares exactly two expressions. A logical expression like And or Or are n-ary, it must have at least two subexpressions, but may have any number of expressions. In contrast to that, a Not must have exactly one subexpression. If a maximum number of expressions is exceeded, a WfRuntimeException with the error code TOO_MANY_SUBEXPRESSIONS thrown.

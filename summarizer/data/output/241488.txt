@@ -1,0 +1,35 @@
+
+
+This chapter gives an overview of some other JavaScript components available within CoreMedia WAGE. For a complete reference, please refer to the WAGE JavaScript API Documentation.
+
+Package "cap": This package contains JavaScript components representing the corresponding CoreMedia objects:
+
+Document
+Folder
+Property
+Resource
+ResourceUri
+User
+
+Package "cap_editing":
+
+XHtmlEditor - the property editor to edit a subset of XHTML that can be converted to the coremedia-richtext-1.0 format. It is based on the CONTENTEDITABLE feature of Microsoft Internet Explorer and JScript, so that it works in IE 5.5 upwards without installation and without enabling ActiveX components.
+
+Package "dom":
+
+The DomElementAttributes component encapsulates properties of a Dom element node and provides methods for querying and changing these properties.
+
+Package "ui":
+
+The Clipboard component can be used to allow copying of CoreMedia resources between different browser windows.
+
+Package "wage":
+
+The AttributeEditor is a mediator between simple HTML form elements and DomElementAttributes. It is used to let the user edit the attributes of elements in the XHtmlEditor.
+The SelectableTable component add selection capabilities to HTML tables.
+The TableEditor is a SelectableTable offering methods for adding, removing and re-sorting table rows. It is used by WAGE's default link list property and aggregate variable editors.
+The MenuBar is the container for Menus. It is used by the corresponding tag from the WAGE Taglib (see xxx).
+A Menu is a specialized SelectableTable that automatically unselects the corresponding MenuBar entry. It is used by the corresponding tag from the WAGE Taglib (see xxx).
+The ResourceChooser can be used to choose CoreMedia resources in a seperate dialog window.
+The ResourceTable is a specialized SelectableTable for CoreMedia resources. It is used by the corresponding tags resourceList and resourceRow (xxx) from the WAGE Taglib.
+

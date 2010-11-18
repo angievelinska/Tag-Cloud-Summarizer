@@ -1,0 +1,3 @@
+
+
+Using these elements, the configuration of the spellchecker can be done.

@@ -1,0 +1,3 @@
+
+
+When you have ported all clients to the new repository layout in the test environment, the migration must also be performed in the content management environment.

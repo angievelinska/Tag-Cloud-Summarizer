@@ -1,0 +1,28 @@
+
+
+Now you are going to implement a client which uses the WebService.  How would you access the WebService?  Clients can query the WSDL, analyze it, create according SOAP messages and post their requests.  However, it is hard to deal with WSDL, XML Schema and SOAP, compose XML snippets by String operations and send HTTP requests. Fortunately Metro provides the Wsimport tool.  Wsimport evaluates the WebService's WSDL and generates a convenient Java API for the client side which handles all the low level protocol issues and enables you to focus on the business logic.
+
+The example contains a client which consists of the single class CmsClient.  If you open it with your favorite IDE right now, you will see errors all over due to unknown classes.  This is due to the fact that you have not yet generated the client interface.  Generate the client interface by calling
+
+$ ant generate-client
+
+to invokes Metro's Wsimport tool.  You will find the API classes in the package com.coremedia.examples.jaxws.client in the build/wsgen directory.  If you add these sources to your IDE project, the errors in the CmsClient class will vanish. At this point you would start to implement your own client if you had no prepared example.
+
+As you can see in CmsClient, you can access the WebService with
+
+Cms port = new CmsWebService().getCmsImplPort();
+
+Cms provides all methods which you have exposed as WebMethods in the serverside Cms interface.  Since you did not make use of method annotations but simply declared the whole Cms interface as WebService, getResourceId becomes a WebMethod.  You can now invoke the WebMethods to implement the business logic of your client. This basic example simply queries the ID of the root folder. Compile and execute the client:
+
+$ ant compile-client execute-client
+
+There is also a convenience target client which includes the three targets.
+
+$ ant client
+
+Since the root folder's ID is always 1, the result will look like this:
+
+execute-client:
+     [java] Invoking getResourceId(/)
+     [java] The resource id of path / is coremedia:///cap/content/1.
+     [java] 

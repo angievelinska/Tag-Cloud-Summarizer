@@ -1,0 +1,3 @@
+
+
+This chapter describes EditingServicesforJSF, a subcomponent of the CAE aimed at building Web user interfaces for custom content applications. The code examples presented in this chapter are found in the cae/es-menusite example of your CMS distribution. This chapter follows a use-case oriented approach. The impatient application developer should at least read getting started.

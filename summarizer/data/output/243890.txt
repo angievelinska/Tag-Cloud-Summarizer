@@ -1,0 +1,9 @@
+
+
+Workflow
+
+
+Grammar: ( Process ) 
+
+
+You can configure exactly one process per workflow definition, which means one workflow per file. If you wish to define more workflow processes, create their definition in separate files. This might be extended in the future. 

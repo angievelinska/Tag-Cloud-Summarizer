@@ -1,0 +1,35 @@
+
+
+The previous migration steps assumed that your existing content is supposed to be part of one publication target and that the migration to the multi-site mode was prompted by the need to add entirely new publication targets. In some cases, you might want to split the existing content among multiple publication targets.
+
+The overall procedure remains the same, but some additional steps become necessary.
+
+First of all, you have to create more than one top-level folder, but still only one folder per site that you will host, distributing the existing content as you see fit. Having assigned the content to top-level folders, you should run a query for wide links in order to detect misplaced resources or conceptual flaws in the design. After you have migrated to multi-site mode, it will be much more expensive to correct such problems.
+
+After the generators are up again as per step 12 of section, perform the following additional actions.
+Install new Master Live Servers to bring the overall number of Master Live Servers to the desired number of publication targets.
+Copy, on the database level, the Master Live Server database for every new server. Typically, you create a backup and restore it multiple times, now.
+Perform the same action for Replication Live Servers, if needed.
+Reconfigure the generators to use those Live Servers that are applicable to the site they are building. At this time, you may switch one generator at a time, effectively reducing the impact on the availability of your site. If a load balancer is distributing requests, reconfigure that as needed during the restarts.
+
+You can now proceed with the migration as before, making sure to configure all publication targets in the file publisher.properties in step 18.
+
+As all Master Live Servers were initialized as identical copies of the old Master Live Server, they contain content that is not applicable for their publication target. You can destroy that content at any time after the migration is complete.
+Make sure that there is a current backup of the servers and database schemas that will be modified.
+
+
+Make sure that all ADSs and other clients of the Master Live Server and its associated Live Servers are only using those folders that are published on the Replication Live Servers and not those folders that are to be deleted.
+
+
+In the publisher.properties of the Content Management Server, disable the affected publication target by assigning no folder to the publication target.
+
+
+On the Master Live Server, run 'cm multisitecleanup -u publisher -p <PublisherPassword> <FolderNames>', including the name of every top-level folder that you want to destroy on the command line. Be careful what content you destroy on which Master Live Server. The content that is applicable for the publication target must not be deleted, obviously. The cleanup tool will check whether some of the resources that are to be destroyed are still referenced from the outside. In this case, a destruction is not possible. The tool performs only those destructions that do not cause dead links. You may have to republish corrected versions of externally referring document and repeat the cleanup, if the destruction fails.
+
+
+Re-enable the publication target in the Content Management Server configuration.
+
+
+If step 4 has left part of the resources undestroyed, you can now fix the offending links by changing the document on the Content Mangement Server, creating two new versions of the offending documents, and publishing both documents in succession. Because the Master Live Server stores only two versions of any document, all old versions on the Master Live Server will disappear. Afterwards, you can go back to step 2 and try to clean up the remaining resources.
+
+This cleanup step should be performed during times of low load, but causes no restarts or cache refills.

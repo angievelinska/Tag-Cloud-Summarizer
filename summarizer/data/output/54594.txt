@@ -1,0 +1,12 @@
+ Master Live Server Failure  
+
+Error behavior 
+
+The Slave Live Servers connected to the Master Live Server discontinues replication and attempts to log on again to the Master Live Server periodically in order to continue replication. Log attempts are written to the server log.
+
+Publications are no longer possible and the publication which was running at the time of failure fails. You will see an error message if you try to start a publication or publication preview with the CoreMedia Editor. 
+
+Error correction 
+
+In an environment without cluster, the watchdog of the Master Live Server detects the failure and restarts the server. In the cluster environment, the cluster software controlls the watchdog (probedog). After server restart, the Slave Live Servers log onto the Master Live Server  and publications are possible again.
+

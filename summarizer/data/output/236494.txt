@@ -1,0 +1,7 @@
+
+
+As said in the previous sections, Editing Services for JSF is based on the CAE web application template and uses a custom JSF-spring- integration. The JSF servlet is wrapped in a spring controller and having the default mapping /views. The CAE web application template defines the mapping /servlet for the DispatcherServlet and the default web application mapping of the Editing Services for JSF web application template is /editing. This implies that the URL of any of JSPs defined below the views folder in your Editing Services for JSF application will be http://<your_host>:<your_port>/editing/servlet/views/<your_jsp>.jsp.
+
+
+
+Example: Using the default tomcat installation on your local machine this will be http://localhost:8001/editing/servlet/views/explorer.jsp.

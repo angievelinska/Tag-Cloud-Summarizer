@@ -1,0 +1,16 @@
+
+
+If you must restore the Master Live Server database with a backup, you also have to restore all Slave Live Servers databases. Proceed as follows:
+Stop the Master Live Server using: cm contentserver stop
+
+3* The replication on all Slave Live Servers stops automatically, but the servers remain online.
+2#
+Restore the Master Live Server database with a backup.
+Restart the Master Live Server with: cm contentserver start
+
+3* The Slave Live Servers now log on again to the Master Live Server, discover that the state of the Master Live Server database is older than their own state and stop replication, but remain online. To synchronize the databases you can apply the following strategy: 
+4#
+Stop the first half set of the Slave Live Servers one by one with cm contentserver stop and restore  the databases with a Slave Live Server backup which is older than the Master Live Server backup.
+Start the Slave Live Servers with: cm contentserver start
+Continue at step 4 for the second half set of the Slave Live Servers. 
+

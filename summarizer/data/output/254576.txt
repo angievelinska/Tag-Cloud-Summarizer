@@ -1,0 +1,21 @@
+
+
+3* Now you are asked for the destination directory etc. as described in the General Installation chapter. After the files have been copied, you will be prompted for configuration of the ProActive Delivery Server.
+4#
+If you want to set up the Proactive Delivery Server now, click [Yes] . If you want to configure later manually, click [No].
+
+3* If not, make sure to do the basic configuration later.
+3* If you decide to do so, configure component properties via the dialog boxes. For a detailed description of the properties see Chapter 5. All path information is relative.
+
+3* The next window is intended for the configuration of the server.xml file and will only open up if you install Tomcat together with the ProActive Delivery Server.
+
+The default Tomcat Servlet Engine is configured with the file ./conf/server.xml. In general, no configuration is necessary in this file. For the Content Server, the HTTP port of the Preview Generator is set as default to 8001, while the Live Server generally has the HTTP port 8000. The default of the Shutdown port is 8005. This port is used for shutdown of the Tomcat. 
+5#
+Click the [Next] button.
+
+3* Now, the dialog box for configuring capclient.properties is shown.
+3* The URL where CM components can obtain the IOR of the CM server is entered in the parameter cap.client.server.ior.url . CORBA communication with the server takes place via the IOR (see also Section 4.2).
+6# Enter the location of the IOR and click [Next].
+
+3*In the next dialog you can configure the database used by PADS. If you have chosen to install the Database Message Service, there are additional properties for the Database Message Service:
+

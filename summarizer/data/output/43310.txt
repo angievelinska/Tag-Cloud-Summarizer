@@ -1,0 +1,8 @@
+
+
+However, every medal has two sides. The drawbacks of using XSLT are:
+
+It does not integrate well with Java, i.e. it is not possible to simply call a Java method from a stylesheet.
+Processing can use a lot of memory since the entire input tree and stylesheet need to be in-memory.
+Processing can be slow depending on XPath expressions and sortings used.
+Writing stylesheets can be difficult due to syntactic issues.

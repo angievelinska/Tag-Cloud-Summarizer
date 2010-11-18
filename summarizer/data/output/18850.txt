@@ -1,0 +1,7 @@
+
+
+The optimal configuration of the Tomcat servlet container depends on your configuration and project demands. A reasonable configuration would be as follows:
+
+Configure the Apache webserver with a high number of clients e.g. 1024 which transfers requests of pages not in the cache to the servlet container with the help of the mod_proxy plugin.
+Configure a load-limiting threadpool for the HTTP protocol on port 8001 in the file conf/server.xml:
+

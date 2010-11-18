@@ -1,0 +1,18 @@
+
+
+In this chapter, templates  for image display belonging to a dish document are described. In the tutorial it is assumed  that dish images can have different sizes. So templates need to be written for resizing images. As image resizing is directly concerning property data (the Blob image) templates for displaying images should be added to the directory for property data. Add the following two templates small.jsp and large.jsp to the directory:
+
+
+<TomcatHome>/webapps/coremedia/templates/proptypes/Blob/image/.
+
+
+
+
+The template small.jsp will show the images with a width of 200 pixel
+
+
+
+The template large.jsp will show the images with a width of 700 pixel
+
+
+In both cases resizing is done by the browser.

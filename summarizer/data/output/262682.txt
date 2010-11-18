@@ -1,0 +1,14 @@
+
+
+If you have a website in one language and you want to create a variant of this site in another language or another locale, proceed as follows:
+
+A Starter Kit site should always reside below a dedicated folder, consider for example the English tutorial of the example content.
+Open the WebEditor and select the main folder of the website you want to copy, then click  in the toolbar to copy the content to the clipboard.
+Select the root folder ("Sites" in the example) and click  in the toolbar.
+
+This creates a "deep copy" of the folder. That is all content below the folder is copied and all links between documents below the folder are correctly translated into internal links between documents of the new, copied site.
+
+
+
+
+

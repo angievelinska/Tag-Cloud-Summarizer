@@ -1,0 +1,3 @@
+
+
+In the following section, you will find a description of all workflow-related elements of the editor.xml file, which you can use for the configuration. The description of some "universal" elements like Predicate which can be used in different contexts is limited to the use in the workflow context.

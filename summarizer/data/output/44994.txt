@@ -1,0 +1,5 @@
+
+
+The version number, number, is irrelevant for import and is simply set to 1.
+
+In the version a corresponding field element must be generated for every field of our document type Text. We set Priority and Source to default values, while AutoDeletedate, AutoPdate and Images are left empty. Within this example, only the heading and the actual content should be taken from the source document. For this purpose, suitable templates for body.head/hedline/hl1 and for body.content are called.

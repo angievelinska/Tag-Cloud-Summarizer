@@ -1,0 +1,3 @@
+
+
+See the figure above for a suitable Analytics deployment: The Analytics Database and the live CAEs are deployed on the live site, the CAE's can thus retrieve the report data from the Analytics Database.

@@ -1,0 +1,3 @@
+
+7#
+Now, the actual translation can take place. All properties of copied documents that contain localized text have to be translated. Note, that you can also remove a child navigation from the localized variant of a navigation node or remove a navigation context from a localized variant of a document, if the corresponding page should not be available in the new locale. Of course, you can also add market-specific pages to the localized Web-site.

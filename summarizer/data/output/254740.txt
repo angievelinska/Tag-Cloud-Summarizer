@@ -1,0 +1,5 @@
+
+
+Configure the XMLProperty Conversion
+
+Since SCI 4.1 the new coremedia-richtext-1.0.dtd was introduced to replace the previously used coremedia-sgmltext.dtd. In addition, it is now possible to use own DTDs. In general, text which conforms to the coremedia-sgmltext.dtd will be automatically converted into coremedia-richtext-1.0.dtd conform text without any additional configuration. In some cases (e.g. custom XML formats), more work is necessary (please read also Section).

@@ -1,0 +1,12 @@
+
+
+ Property Value Default Description cap.client.server.ior.url 
+
+URL format
+
+http://<server>:<port> /coremedia/ior  This property determines where to get the IOR of the server. <server> must be the name of the server host. For <port> you have to set the server's web server HTTP port. Both values must match with the corresponding value in the capserver.properties file on the server. cap.client.timezone.default TimeZone ECT 
+
+This parameter determines the used timezone. The standard value is ECT . Further timezones are documented in the class java.util.TimeZone. 
+
+Warning: Never change the timezone after the first start of the server.!
+

@@ -1,0 +1,4 @@
+
+
+ Attribute Description class The fully qualified name of your authentication factory. Your class must implement AuthenticationFactory and needs a public noarg constructor. See the Javadoc for details.
+

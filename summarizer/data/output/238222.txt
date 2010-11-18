@@ -1,0 +1,9 @@
+
+
+As mentioned above, the DataViewFactory's caching mechanism takes care of dependencies. Any dataview property may define one or more objects (called "dependencies") on which this property depends on. When caching a property, two things are stored in the cache: The property's value as well as its dependencies. In case that any dependent object becomes invalid (e.g. by modifications on it) the dependent property value becomes invalid as well and will be removed from the cache automatically. 
+
+Example
+
+A dataview property "headline" is calculated from a row in a database table and so this row is defined as a dependency. When caching an instance of this property's value, the dependency is tracked as well. Changing the table's row causes the cached value to become invalid and this value to be removed from the cache.
+
+Defining dependencies for a property value is done during the property's value computation by invoking the static method com.coremedia.cache.Cache#dependencyOn(Object) for each dependency. In order to notify the cache about a dependency invalidation, the method invalidate(Object) needs to be invoked on the DataViewFactory's Cache instance. As a result, any cached item depending on this object is removed from the cache.

@@ -1,0 +1,5 @@
+
+
+For editing the tasks we use a simple Action class that forwards to a "standard" ActionForward if no action_ parameter is set, or to a "success" ActionForward, if action_=commit and the commit was successful or action_=save. As this Action is very similar to the Actions of the other examples, and also does not contain any workflow specific code, it is not shown here.
+
+In the struts-config.xml configuration file we have to configure the required form beans, Actions and ActionForwards for this example:

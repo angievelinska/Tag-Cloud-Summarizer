@@ -1,0 +1,6 @@
+
+
+The ports have the following meaning:
+
+ Port Description Content Management Server Port The port where other components reach the server. Workflow Server Port The port of the Workflow Server. Jakarta Tomcat HTTP Port The http port of the Tomcat servlet container for the installed web applications. Jakarta Tomcat HTTPS Port The https port of the Tomcat servlet container for the installed web applications. Jakarta Tomcat Shutdown Port The shutdown port of the Tomcat servlet container for the installed web applications. CAE JMX Port The port of the CAE web application used for JMX management. Analytics Object Analyzer JMX Port The port of the Analytics Object Analyzer used for JMX management. CAE Feeder Port Port The port of the CAE Feeder used for JMX management.
+

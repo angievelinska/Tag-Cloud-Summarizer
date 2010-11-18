@@ -1,0 +1,11 @@
+
+
+ Property Value Default Description authentication.scheme.<n> Basic or Digest  
+
+This property configures the supported methods of HTTP authentication. This determines whether the password of the client will be submitted encrypted (Digest) or in plain text (Basic). WebDAV on Windows Vista does not support insecure Http Basic authentication and Digest authentication does not work with LDAP authentication on the Content Server. 
+
+The Digest authentication is recommended, but not all clients support this feature. If you are using WebDAV over SSL, it is sufficient to use Basic authentication. If you want to allow both methods, you can add both schemes:
+
+authentication.scheme.1=Basic
+authentication.scheme.2=Digest
+

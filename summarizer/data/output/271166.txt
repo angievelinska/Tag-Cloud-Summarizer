@@ -1,0 +1,7 @@
+
+
+The maximized portlet window may also be handled by Java and Spring programming, instead of using the portal taglib. For example, the Starter Kit integration uses a spring handler interceptor which replaces the modelAndView's model, so that the maximized portlet appears as the page's content in the current channel. Your mileage may vary.
+
+Window Controls
+
+If you want to control the mode and window state of a portlet window from outside the portlet application, like traditional portals do, you can use the portal:url tag to render the necessary links. The portlet window model offers methods to determine whether a certain portlet mode or window state is currently allowed. A simple example (without layout) would look as follows:

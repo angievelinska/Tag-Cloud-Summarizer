@@ -1,0 +1,3 @@
+
+
+The tables presented in this section are used for reporting robot views, so called non-seen traffic, for a site. Normally values that are written to these report tables will never be changed again.

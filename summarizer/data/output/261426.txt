@@ -1,0 +1,47 @@
+
+
+The Search Engine Feeder supports one type of additional fields, the XPathField. A more flexible solution is to develop a custom IndexDocumentFilter to add and remove fields programmatically.
+
+Configure an XPathField
+
+An XPathField contains the text of a fragment of an XML property. The fragment is specified with an XPath expression. If you configure such a field in the index profile, you can search for text in that specific field. Note, that searching in specific fields is not possible in the CoreMedia Editor and CoreMedia WebEditor but only in custom search applications using CoreMedia or FAST APIs.
+
+Configure additional fields inside the element Fields which is inside the element FastIndex. The element Fields supports multiple XPathField elements. XPathFields have a required attribute name which is equal to the name of the field in the index profile.
+
+Each XPathField has at least one subelement Property that specifies the source XML property and a subelement XPath with the expression to select the XML fragment for indexing. The Search Engine Feeder checks for each indexed document and each XPathField if there is a Property subelement whose doctype attribute matches the type of the document and whose name attribute matches the name of a XML property of the document. If so, the XPath expression is used to select a fragment of that property, which is then sent to the CoreMedia Search Engine for indexing. The field stays empty for documents without such a property. Note, that the order of the Property subelements is important: Property elements behind a matching one are ignored.
+
+The following example configures one additonal field named fragment which contains the plaintext below the first table element of the XML property text of the document type Article. Note, that namespaces for the XPath expression are configured explicitly.
+
+<FastIndex ...>
+  ...
+  <Fields>
+    <XPathField name="fragment">
+      <XPath expression="/r:div/r:table">
+        <Namespace 
+           prefix="r"
+           uri="http://www.coremedia.com/2003/richtext-1.0"/>
+      </XPath>
+      <Property doctype="Article" name="text"/>
+    </XPathField>
+  </Fields>
+  ...
+</FastIndex>
+
+The following example adds a field with the same name to the index profile. For a description of adding fields to the index profile, see the FAST Configuration Guide.
+
+<field-list>
+  ...
+  <field name="fragment" type="string"/>
+</field-list>
+
+Configure an IndexDocumentFilter
+
+An IndexDocumentFilter is an implementation of the interface com.coremedia.cap.server.feeder.IndexDocumentFilter. It can add and remove elements that are sent to the Search Engine for indexing. Please see the API documentation for details. 
+
+IndexDocumentFilters are configured with the element IndexDocumentFilter below the element FastIndex. The element takes the name of the implementing class as attribute. For example:
+
+<FastIndex ...>
+  ...
+  <IndexDocumentFilter 
+     class="com.customer.MyIndexDocumentFilter"/>
+</FastIndex>

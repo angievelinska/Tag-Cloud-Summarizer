@@ -1,0 +1,18 @@
+
+
+CoreMedia SCI supports built-in users and users from external sources like LDAP servers. The CoreMedia server authenticates built-in users, whereas authentication of LDAP users is delegated to the LDAP server. Authentication is now based on JAAS. Different JAAS login modules authenticate users from different sources. Login modules are Java classes that have to implement the interface javax.security.auth.spi.LoginModule (see http://java.sun.com/products/jaas/). CoreMedia SCI provides default login modules for built-in user and LDAP user authentication:
+
+
+
+CapLoginModule 
+
+
+The class hox.corem.server.CapLoginModule authenticates built-in users. Built-in users are system users created at CM Server initialization time and those created later by an administrator with the CM User Manager. This module is mandatory, because some system services are run by built-in system users.
+
+
+LdapLoginModule 
+
+
+The class hox.corem.login.LdapLoginModule authenticates users from LDAP servers.
+
+You can implement your own login module classes to authenticate users from other origins. Login modules are configured in the jaas.conf file.

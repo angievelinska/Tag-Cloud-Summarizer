@@ -1,0 +1,24 @@
+
+
+Performers policies are used when determining the users who are offered a certain task on their to-do lists. This set of users is then stored persistently with the task in order to reduce server startup times. When users reject the task from their to-do lists, the performers policy will be invoked again to update the lists.
+
+The interface to implement is PerformersPolicy. When implementing a policy, it is advisable to start with the class AbstractPerformersPolicy, which takes care of managing the policy state, namely:
+
+the forced user, who is set by means of the predefined action ForceUser,
+the excluded users, who are set by means of the predefined action ExcludePerformer,
+the preferred users, who are set by means of the methods assignTo(User) and assignTo(Group) in the interface Task,
+the rejected users, who are set by means of the method reject() in the interface Task.
+
+The policy state is maintained in four variables, which are defined in the method addInternalProperties(PropertyBuilder) in the interface PerformersPolicy. Such variables do not need ot be declared in the XML definition file. The interface PropertyBuilder provides one method per variable type. In own implementations, you may create as many variables as needed.
+
+This simplifies the encapsulation of the internal working of custom performers policies. Note that these variables reside in the same name space as variables defined in the XML process definition, so that you should choose names that are unlikely to occur as ordinary workflow variable names.
+
+When using the class AbstractPerformersPolicy, you will have to implement only four methods and of those, the methods getName() and getDescription() are used for logging purposes, only.
+
+The method calculatePerformers is the most important method of the policy. When called, the policy return a Performers object, which is essentially a collection of users together with a boolean flag that determines whether the current task is being forced onto a user. Some clients, most notably the CoreMedia Editor may choose to accept a forced task automatically on behalf of the current user. In principle, you can use any algorithm to compute the collection of users, but you should normally respect at least exclusions and rejections in that computations. 
+
+When no users are found, the policy is free to take appropriate measures to resolve this situation, for example by clearing the set of rejections. When an empty set of users is returned from the method, the task will be escalated.
+
+A collection is users is passed into the method calculatePerformers. This collections contains all users that are permitted to accept the task in question. By taking this collection into account when determining the performers, you avoid duplicating the rights rules in the performers policy.
+
+The method mayDelegateTo is called when a user tries to delegate a task to another user. While the permission check for the executing user is done by a RightsPolicy, the PerformersPolicy checks whether a designated user may possibly receive the task, typically taking the set of excluded users into account.

@@ -1,0 +1,15 @@
+
+
+Line 3 - 11: Make sure, you have defined the variables you want to use in the action.
+
+Line 13 - 36: You can use this method to get the value of all atomic string variables. If called, you have to pass the workflow instance and the name of the variable as parameters. The important part is line 17. You use the method getAtomicVariable of the interface WfInstance to get the atomic variable (in comparison to an aggregation variable) defined via variableName. In line 18 you extract the content of the variable using the method getValue. If everything went fine, you return the value of the variable in line 25.
+
+Line 38 -56: You can use this method to get the id of a resource. The only difference to the method above is the extraction of the resource id in the lines 45 - 49. If the value of the workflow variable is of type ResourceValue you can get the resource id using the getContentId() method.
+
+Lines 57 - 70: This is the method to be called from the workflow server. In our context of accessing variables the lines 59 - 62 are the interesting ones. Here you get the values of the workflow variables. In line 64 you have to return a WfActionResult object instantiated with the boolean result of the mail sending (you find the definition of the send method in the complete example in Section 6.3).
+
+Line 72 - 80: Here you declare the setter methods of your action Bean for the configuration. The name of the methods must match the names of the attributes of the action in the workflow definition. The setter and getter methods of the success variable are defined in the AbstractAction class from which the example action inherits.
+
+Access the repository
+
+In the following, we will show, how the action can access the session to the Content Management Server from the CoreMediaWorfklow Server to get the content of a document. See Example 5.4.6d for the appropriate lines of the action.

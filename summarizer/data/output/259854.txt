@@ -1,0 +1,10 @@
+
+
+This chapter describes how to install the Starter Kit files-only, without any CMS components. The following files are installed:
+
+
+
+Install as follows:
+Select the Starter Kit Files-Only option and click Next.
+
+The following window opens-up. You only have to enter the destination directory where the files should be installed.

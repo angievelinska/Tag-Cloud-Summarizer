@@ -1,0 +1,4 @@
+
+
+ Mode Description off Disables the Http Cache assembly functionality. In this case, the <httpcache:include>-tag acts like the <cm:include>-tag.  embedded Enables the embedded assembly mode of the Http Cache. apache-ssi Enables the Apache SSI assembly mode of the Http Cache, that is external server-side assembly. ahah Enables the AHAH assembly mode, that is external client-side assembly.
+

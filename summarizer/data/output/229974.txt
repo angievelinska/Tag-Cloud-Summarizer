@@ -1,0 +1,22 @@
+
+
+In the following table the three relevant consolidator types are described in detail.
+
+ 
+
+Consolidator Type 
+
+(Spring Bean name) Description TimeSeriesReport_
+GenericQueryResultConsolidator 
+
+Consolidator type suitable for time series reports. It expects its feeding queries to filter out data which lies outside the expected time range. If it receives data for entries outside the time interval defined by the time range dimension constraint, it will raise an exception.
+
+
+
+The consolidator discretizes the entries' x values according to the data model's time range and resolution constraints. It then applies the defined strategies. The resulting list of consolidated entries will per default be sorted by point in time (i.e. natural x value order). CategoryReport_
+GenericQueryResultConsolidator Consolidator type suitable for unsorted/unranked category, i.e. non-time series data. It applies the configured strategies. The resulting list of consolidated entries will per default be sorted by natural x value order. 
+
+RankingCategoryReport_
+
+GenericQueryResultConsolidator Consolidator type suitable for ranked category, i.e. non-time series data. It applies the configured strategies. The resulting list of consolidated entries will be sorted by natural Y0 value order.
+

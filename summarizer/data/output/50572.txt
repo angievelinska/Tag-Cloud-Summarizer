@@ -1,0 +1,5 @@
+
+
+Integrate your renderer into the CoreMedia Editor using editor.xml
+
+You can integrate your renderer into the CoreMedia Editor using the element Renderer which can be used within the element ColumnDefinition. ColumnDefinition can be used within TableDefinition which can be used within the elements Explorer, Query, Workflow and ResourceChooser.

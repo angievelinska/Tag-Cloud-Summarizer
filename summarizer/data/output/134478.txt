@@ -1,0 +1,5 @@
+
+
+I.e. systeminfo has none but the standard options.
+
+The output of systeminfo covers the client environment in which systeminfo itself is running, the content server and (if available) the workflow server. It contains information about the CoreMedia CMS versions,  the JVM versions, the operating systems, the occupied ports and some configuration details.

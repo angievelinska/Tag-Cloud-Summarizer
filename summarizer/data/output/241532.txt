@@ -1,0 +1,10 @@
+
+
+<wage:cmdButton>
+
+Renders a HTML image tag with an onClick-handler that will try to execute the command set with the command attribute on the currently focused property editor. Can be used only within a <wage:toolBar>.
+
+You can either use predefined commands (for example from com.coremedia.cap.gui.resources.RichTextCommandNames), for which an appropriate image and tooltip etc. is rendered automatically. Otherwise you may also define your own commands via standard resource bundles. See XXX for an example.  This tag is an extension of the Struts img tag, so you can also use any other attribute allowed for the Struts tag. Attributes:
+
+command (required): The command that should be called on the currently focused editor.
+

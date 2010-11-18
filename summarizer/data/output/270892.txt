@@ -1,0 +1,40 @@
+
+
+Deployment Overview
+
+When you deploy a portlet application two steps are performed by the deployment tool:
+
+
+The portlet application is adapted to the portal: 
+
+some additional entries which are specific to the portal are added to the web.xml inside the war file
+some extra files like TLDs, which are also portal-specific, are added to the war file.
+
+
+The portlets contained in the war-file are registered in the content repository. 
+
+for each portlet a CMPortletDef (see CMPortletDef) and a CMPortletInst (see CMPortletInst) is created and filled with the values provided by the portlet.
+
+How to Use the Deployment Tool
+
+The following shows the usage of the command line tool for deploying a portlet application.
+In this description the command line calls are shown relative to <your-starterkit-installation>/management/bin.
+Prepare portlet: 
+
+cm deployportlets prepare -i <path to warfile> -o <output path>
+2# 
+Register portlet in content repository: 
+
+cm deployportlets register -i <path to prepared warfile>
+-u <repository username> [-p <password>]  
+[-path <path in content repository>]
+
+You can execute both steps with one single call for simplicity:
+
+cm deployportlets [all] -i <path to warfile> -o <output path>
+-u <repository username> [-p <password>]  
+[-path <path in content repository>]
+
+
+
+The following table shows the actions and options of the deployportlets tool.

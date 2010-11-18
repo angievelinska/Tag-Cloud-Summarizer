@@ -1,0 +1,9 @@
+
+
+Here you can select the image section from the original image by
+4#
+selecting an area with the mouse while holding down the left mouse button
+after selecting the image section you can release the mouse button
+confirm the image section with [OK]
+
+The defined image section, the selected area of the image, appears on the website.

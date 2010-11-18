@@ -1,0 +1,3 @@
+
+
+Another use case is the re-use of fragments. On a news site, for example, a user might define criteria for news which are shown as a personalized selection on his start page. Therefore, his page contains a static frame, which is the same for all users and static news which are dynamically added to the static frame. The content and layout of the news is the same for all users, the selection on the start page is not.

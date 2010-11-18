@@ -1,0 +1,12 @@
+
+
+You can set the standard text attributes (Background color (8), Color (9), Font (10), Font size (11), Language (12))
+
+
+The other attributes are XHTML-compliant display options for the published document. They are: Text (2) (the name of the CoreMedia Picture document), Width (4) and Height (5) in pixels (px), Role (6), Title (7) and Float (13). Read more about these at the W3C's XHTML pages at http://www.w3.org/MarkUp/.
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+class 
+
+This attribute defines the class which is used to instantiate objects of the property value.

@@ -1,0 +1,3 @@
+
+
+Accessing a BLOB property via the getBlobProperty() method may return null (if no BLOB is currently being stored). When using the generic get() method for the same property, a ClientBlob object representing an empty BLOB is returned. If a ClientBlob represents an empty blob property can be determined by the isRemoved() method of the ClientBlob interface.

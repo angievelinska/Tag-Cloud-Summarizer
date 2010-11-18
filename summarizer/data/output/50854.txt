@@ -1,0 +1,3 @@
+
+
+In case you'd like to produce your XML verbatim the hox.text.xml.XmlEscapingWriter is a very helpful tool.

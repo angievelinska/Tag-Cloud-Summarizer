@@ -1,0 +1,4 @@
+
+
+ Field name Description id The identifier of the document. feederstate The state of the indexed document. For successfully indexed documents it contains the value SUCCESS. feederinfo Additional information about the document such as descriptions of indexing errors. feedertime The time when the document was created or updated by the CAE Feeder. freshness Same as feedertime if not set explicitly. This field is used for ranking of the search results in the default index profile. textbody A string field which contains the concatenation of multiple element values. By default the values of all elements are stored in this field. It is one of the default fields a search applies to.
+

@@ -1,0 +1,7 @@
+
+
+SSL-secured portal application
+
+For an SSL-secured portal application you must add the SSL certificate of the CAE portal application to the ones trusted by portal server.You can do this by adding the SSL certificate to the ones trusted by the Java Virtual Machine in the file <JRE>\lib\security\cacerts  with the JAVA tool keytool. The SAP Enterprise Portal will use the SSL certificates of the JVM if you add the following Java parameter with the SAP J2EE Engine Config Tool and restart the cluster afterwards: -Djava.protocol.handler.pkgs=com.sun.net.ssl.internal.www.protocol
+
+Note, that the SSL certificate must match the hostname of the portal application URL.

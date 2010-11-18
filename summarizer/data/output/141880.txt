@@ -1,0 +1,11 @@
+
+
+In order to get the preview of a document you can either
+
+
+
+chose the menu item File|Preview, or
+
+
+click  in the tool bar.
+

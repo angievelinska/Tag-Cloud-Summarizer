@@ -1,0 +1,9 @@
+
+
+
+
+JoinSubprocess
+
+Grammar: (Variable | AggregationVariable)* 
+
+A JoinSubprocess task waits for a non detached subprocess to complete. For an XML example see ForkSubprocess.

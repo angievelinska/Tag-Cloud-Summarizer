@@ -1,0 +1,10 @@
+
+
+The menu bar's activated resp. visible items depend on the current task and focus as well as user's rights: 
+
+A selected Title document will display other items in the menu bar than a complex document that holds a multimedia object. Apart from some system document types, they are highly project-specific anyway.
+A staff editor will have less options to process a document than a chief editor, a sports editor will edit and process different documents than somebody from the financial department.
+
+
+
+That's why some of the items listed here might not be activated or visible in your CoreMedia project.

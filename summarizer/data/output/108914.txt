@@ -1,0 +1,3 @@
+
+
+Right after installation, you find the pages in the WEB-INF directory of PADS, to make sure that a direct access to it is not possible by default. Please copy the directories 'admin' (for the administration pages) and 'develop' one level up to make use of them. Keep in mind to secure those areas by means of your servlet engine.

@@ -1,0 +1,25 @@
+
+
+Prerequisites
+
+Apache HTTPD needs three optional modules: 
+
+mod_proxy and mod_proxy_http to forward http requests to the servlet container,
+mod_rewrite to rewrite the URLs as requested by the clients into the format required by the servlet container. 
+
+Please refer to the Apache Modules documentation for further details on these modules.
+
+LoadModule proxy_module       libexec/apache2/mod_proxy.so
+LoadModule proxy_http_module  libexec/apache2/mod_proxy_http.so
+
+By loading these two modules, proxy functionality is made available in the server, but no proxying will occur unless additional directives enable it.
+
+The URL rewriting module allows for modifying a requests' URL before it is being acted upon by the server. The optional module needs to be compiled and loaded into the server.
+
+LoadModule rewrite_module     libexec/apache2/mod_rewrite.so
+
+The module makes URL rewriting available to the server, but actual rewriting rules need to be defined per virtual host, and the engine needs to be activated per virtual host.
+
+Virtual host configuration
+
+The following virtual host declaration is a complete example for a site with the home page URL http://coremedia.example.com/. In this example, the servlet container running the Starter Kit is configured to run on the same host as the web server, on port 8002. The web application has the standard Starter Kit prefix /starterkit, and the site document for this site has a URI segment of coremedia.

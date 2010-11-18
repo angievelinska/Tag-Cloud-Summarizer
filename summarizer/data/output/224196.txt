@@ -1,0 +1,12 @@
+
+
+This chapter describes the Http Cache¿s concepts and architecture from a high level and from a detail level perspective. Understanding this chapter¿s contents is essential for understanding the subsequent chapters.
+
+
+
+
+
+ 
+
+
+

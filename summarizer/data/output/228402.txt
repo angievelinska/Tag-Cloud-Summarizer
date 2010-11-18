@@ -1,0 +1,4 @@
+
+
+The time resolution parameter determines the discretization of the time axis. The values available as valid time resolutions will change according to the time interval selected. Example: If you select a time range of one month, you can only select time resolutions of equal or finer granularity, but not e.g. quarters or entire years.
+

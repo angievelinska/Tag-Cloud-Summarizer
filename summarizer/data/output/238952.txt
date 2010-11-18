@@ -1,0 +1,10 @@
+
+
+ Topic To notice Crawler Service The CoreMedia OEM FAST licenses do not allow crawler services. Do not assign that service to any host. Search Service 
+
+The search service for CoreMedia must be named ¿webcluster¿. Please configure the search service with the following custom index profile: 
+
+../oeminstaller/config/index-profiles/index-profile-coremedia.xml
+
+ Query Result Processing Service Depending on your license you are allowed to use FAST spell checking features. If you have a standard license please deselect all supported languages and select a default language, it does not matter which you choose. If you have an advanced license, please choose all languages which are supported in your license.
+

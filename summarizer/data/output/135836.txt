@@ -1,0 +1,3 @@
+
+
+Configuration not mandatory: The default configuration includes all String, Integer, Date, LinkList and CoreMedia RichText XML properties. It also includes Blob properties of the MIME-types text/*, application/pdf and application/msword that are not larger than 5 MB.

@@ -1,0 +1,7 @@
+
+
+The CoreMediaSmartContentInfrastructure is a content management system for easy and convenient creation and administration of up-to-date content, interactive features and personalized Web pages. 
+
+This manual describes functionality and handling of the CoreMedia Editor, CoreMedia WebEditor and CoreMedia Analytics and focuses editorial staff.
+
+Customization and project-specific modifications are not part of this manual, they require additional documentation.

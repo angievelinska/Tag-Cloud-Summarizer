@@ -1,0 +1,16 @@
+
+
+A resource naming factory creates and modifies names of resources and folders. This is intended to enable customization of how resources and folders are named or renamed in different projects.
+
+Interface to implement
+
+Own resource naming factories must implement hox.corem.editor.ResourceNamingFactory. Please read the Editor API for more details.
+
+Classes to subclass
+
+The easiest way to write own resource naming factories is to subclass BasicResourceNamingFactory and to overwrite the appropriate methods. Please read the Editor API for more details.
+
+Integrate your resource naming factory into the CoreMedia Editor using editor.xml
+
+You can integrate your resource naming factory  into the CoreMedia Editor using the attribute class of the ResourceNamingFactory element as shown in example.
+

@@ -1,0 +1,11 @@
+
+
+The Content Application Engine comes with a source code generator that reads your document type definition file and generates beans for each document type. The bean interfaces mirror the document properties, and the class hierarchy mirrors the document type hierarchy. After generating the code, you can modify and adapt it to your application¿s needs.
+
+The code generator can be invoked as follows from within the WEB-INF directory of the CoreMedia Content Application Engine:
+
+java -jar lib/beangenerator.jar
+
+
+This gives you all available options of the generator as shown in table. You need to pass the location of your document type definition file(s), a package for the generated classes as well as a target directory for the source code. By default, the generator creates code with generics for link lists as comments. 
+

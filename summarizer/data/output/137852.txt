@@ -1,0 +1,9 @@
+
+
+If you want to install an Importer proceed as follows:
+Select the CoreMedia Importer option and click [Next].
+
+The following dialog box allows to select the available CoreMedia Importers.
+
+
+

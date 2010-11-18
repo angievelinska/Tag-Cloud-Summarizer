@@ -1,0 +1,11 @@
+
+
+This manual is addressed to developers of CoreMedia projects who want to integrate the CoreMedia Analytics Engine into their content application. They'll find information about:
+
+the architecture and deployment;
+the integration of the Analytics Engine into a web site that is implemented using the Content Application Engine;
+the plugin interfaces available for advanced customization;
+the database schema, which can be important for extensions and for the integration of third-party analysis software;
+the aggregation process and standard extension points in that process;
+the possibilities for extending the Analytics Dashboard.
+

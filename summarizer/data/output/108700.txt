@@ -1,0 +1,8 @@
+
+
+
+2#
+
+
+
+If the effective rights are not empty, the group also has the implicit READ right for any resource and resource type:

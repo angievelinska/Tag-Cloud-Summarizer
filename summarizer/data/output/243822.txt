@@ -1,0 +1,7 @@
+
+
+IsEmpty
+
+Grammar: EMPTY 
+
+IsEmpty evaluates to true if the value of the specified variable or resource property is "null". For an aggregation variable, length of zero is considered as empty, too. See Length for details. For an XML example see PostCondition.

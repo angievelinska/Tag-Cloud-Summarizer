@@ -1,0 +1,3 @@
+
+
+In addition to images all other kind of binary data can be used in CoreMedia SCI. These data simply have to be defined by their MIME-type in a field of type BlobProperty. By this, text files, MP3 or Flash files can be integrated. Binaries are saved and loaded like images. In Abbildung you see a document containing a BLOB-property opened in the document window.

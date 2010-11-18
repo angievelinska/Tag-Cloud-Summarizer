@@ -1,0 +1,7 @@
+
+
+It depends on your concrete portal application wether this data should be used or not: For instance content may be restricted for certain users. In order to obtain the current user's rights you may contact the portal's usermanagement (e.g. a LDAP-server). In addition you also may support localization capabilities by evaluating the user's locale.
+
+Errorhandling
+
+Errors may occur when running the CAE portal application. In order to report these errors in a well defined way, you have to use these standard HTTP error codes:

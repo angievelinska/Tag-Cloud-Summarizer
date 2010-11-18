@@ -1,0 +1,3 @@
+
+
+At present, it is not possible to obtain the value of the pre-defined property lastFolderId_ with the getProperty methods (see also section)!

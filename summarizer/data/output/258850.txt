@@ -1,0 +1,22 @@
+
+
+The following section serves as a short example on how to enable the storing of the entry URL and the configuration of a command for return to the entry page.
+
+Prerequisites
+
+An installed Contentserver.
+An installed editing services  web application pointing to the installed Contentserver
+An installed CoreMedia Portal Webapplication template (contentapplicationengine-portal-template)
+
+Step-by-Step Instruction
+
+
+Copy the files cap-portal-* from WEB-INF/lib directory of the Portal Integration template to the WEB-INF/lib directory of the Editing Services web application.
+
+
+
+
+Replace spring/cae-linkschemes-example.xml of the Editing Webapplication with the Portal Integration version. Add these linkschemes to the cae-linkschemes-example.xml file:
+
+
+

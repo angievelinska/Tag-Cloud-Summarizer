@@ -1,0 +1,4 @@
+
+
+The example website created in the following chapters is supposed to support a chain of restaurants ("Chez Andre"). For each day there are 12 different dishes on the menu and every restaurant offers the same 12 dishes. The website shows the menu and gives a description and a picture of each meal. The dishes are categorized in meat, fish and poultry. There are four dishes in each category. On the home page of the website the three dishes of the day (one from each category) are shown. On the left is a menubar linked to the different categories to have a look at the other dishes. The normal (or anonymous) user is only allowed to see the three dishes of the day and the fish dishes. To see the other meals he needs to login. You find the login link atop of the menubar on the left.
+

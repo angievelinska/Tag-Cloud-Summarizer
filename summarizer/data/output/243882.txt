@@ -1,0 +1,15 @@
+
+
+Validator
+
+
+Grammar: (Expression) 
+
+
+A validator verifies variable bindings to keep certain rules, which are defined in the Validator element.
+
+
+By default, the variable bindings are verified only on initial process assignment or task completion. If validatedOnSave is set to "true", the verification takes place on every save.
+
+
+To specify a valid state, you provide an expression to the validator.

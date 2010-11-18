@@ -1,0 +1,3 @@
+
+
+The "*Base" class contains property getters for every user-defined property in the corresponding document type. We do not generate getters for metadata such as name or creation date. The property types are mapped to Java as follows:

@@ -1,0 +1,11 @@
+
+
+Dynamically accessing properties also works for CoreMedia workflow objects: the VariableAssignment interface (com.coremedia.cap.wage.VariableAssignment) extends the DynaBean interface and therefore allows you to access workflow variables through generic getter and setter methods.
+
+In CoreMedia workflow definitions, a variable can be defined either globally inside the process or locally inside a task. The context in that the variable is defined is its name space, but does not imply any scoping or access semantics. What follows is a summary of the semantics of variables as described in the CoreMedia Workflow Developer Manual.
+
+Variables can only be read and modified by a user using a client view on the set of all variables that is defined as either the initial process client view (InitialClient), the (running) process client view (Client under Process), or (most commonly) a client view of a user task (Client under UserTask). A client view specifies a subset of all (globally or locally defined) variables of the current process, and for each variable, whether it may be read (Reads)or (additionally) modified (Writes). For variables referring to CoreMedia resources, a client view also specifies whether the referred resource it intended to be modified (contentEditable). A variable assignment (com.coremedia.workflow.WfVariableAssignment) is essentially a structure consisting of a variable name, its read-only and content-editable state, and the variable's value.
+
+WAGE represents each type of client view definition as a DynaClass with a property for each variable, called a variable assignment type (com.coremedia.cap.wage.VariableAssignmentType). For each process instance, there are two VariableAssignmentType (DynaBean-)instances, one for the initial and one for the running process client view. For each user task instance, there is one VariableAssignmentType instance for its client view.
+
+The Workflow API usually works with WfInstance objects. Similar to the ResourceFactory for CoreMedia resources, there is a VariableAssignmentFactory (com.coremedia.cap.wage.VariableAssignmentFactory) that can be retrieved from the wageConfig bean. From this factory, you can construct VariableAssignment and VariableAssignmentType objects from the corresponding Workflow objects.

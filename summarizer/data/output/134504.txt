@@ -1,0 +1,5 @@
+
+
+After changes in the folder structure have been made, the index is automatically updated while the content server is online. If a large portion of the folder structure changes, i.e. several moves of large sub trees have been made, this may take a moment. So, there can be a short delay in descendantOf queries afterwards.
+
+To avoid unnecessary updates of the database, the index on a Live System (Master Live Server or RLS) should only be enabled if there are descendantOf queries from inside the Active Delivery Server JSP templates.

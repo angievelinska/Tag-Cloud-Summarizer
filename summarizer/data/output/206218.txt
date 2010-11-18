@@ -1,0 +1,3 @@
+
+
+The text-formatting options equal those in the CoreMedia Editor.

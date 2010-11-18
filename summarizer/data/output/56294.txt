@@ -1,0 +1,6 @@
+
+3#
+Select the document type.
+Enter the name of your new document in the name field.
+Click [Create] to confirm the procedure.
+

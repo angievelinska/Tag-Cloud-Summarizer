@@ -1,0 +1,6 @@
+
+
+The options have the following meaning:
+
+ Parameter Description -a Start date for documents to be republished. The format is yyyyMMddHHmmss. By default, the start date is two days before now. -b End date for documents to be republished. The format is yyyyMMddHHmmss. By default, the end date is the current date. -f The base folder for republication. It's only mandatory for multi-site systems. By default, the root folder will be taken as the base folder.
+

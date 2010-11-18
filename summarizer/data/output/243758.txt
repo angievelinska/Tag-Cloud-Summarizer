@@ -1,0 +1,19 @@
+
+
+Action
+
+
+
+Grammar: ( Condition?, Property) 
+
+An action is external code which may be called to customize the processing of the workflow engine (see Chapter for implementing own actions). 
+
+You can either give the full qualified name of your own action class which must be an implementation of com.coremedia.workflow.WfAction or an unqualified classname which will be searched for in the package com.coremedia.workflow.common.actions. 
+
+An predefined  Action or one subclassed from AbstractAction/AbstractClientAction may contain a Condition element which serves as a "guard" for the action code (see the example below). Only if the condition is satisfied, the code is executed, otherwise nothing happens. 
+
+The following actions are supplied with the workflow engine by default: ApproveResource, CheckInDocument, CheckOutDocument, CopyResource, CreateDocument, CreateFolder, DeleteResource, DisapproveResource, EnableTimer, ExcludePerformer, DisableTimer, MoveResource, OpenDocument, PreferPerformer, PublishResources, RenameResource, SaveDocument, UncheckOutDocument, UndeleteResource. 
+
+The predefined actions use some of the Action-attributes defined in chapter 4.4.1. 
+
+Note: The Property child element is valid for the CreateDocument action only. 

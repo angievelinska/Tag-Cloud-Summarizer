@@ -1,0 +1,5 @@
+
+
+This element of the XML file is used to configure the Active Delivery Server or Content Application Engine used for preview. The request to the generator then occurs via the URL (if no user defined pattern has be defined):
+
+http://<host>:<port>/<uriPath>

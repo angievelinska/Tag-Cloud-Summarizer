@@ -1,0 +1,16 @@
+
+
+ Command or Switch Description refactor-all Do both, refactor-structure and refactor-web-xml. refactor-structure 
+
+Refactors the structure of your CAE web application created with a previous CoreMedia CMS version to the current layout. Refactoring consists of the following steps:
+Copy and move files according to the new structure
+Archive all files from subdirectory framework into lib/<vendor name>-config.jar.
+Convert all bean id attributes containing a colon to bean name attributes. Example:
+<bean id="contentbean:myBean" ...> to <bean name="contentbean:myBean" ...> 
+Convert all bean singleton attributes with value "true"/"false" to bean scope attributes with value "singleton"/"prototype" respectively, as required by the new  Spring 2.0 schema. 
+<bean singleton="true" ...> to <bean scope="singleton" ...>
+Replace the old Spring 1.x beans definition element with Doctype declaration with the new schema based definition element.
+Convert BeanCustomizer to new Customizer declarations (see chapter "Customizing Spring Beans" in the Content Application Developer Manual).
+
+ refactor-spring1-to-spring2 Refactors Spring 1.x configuration files to the new Spring 2.x configuration format. This is a file based task which works on files in contrast to the web application based task refactor-structure. The refactoring consists of the steps 3-6  of the above refactor-structure steps. refactor-web-xml Refactor the web.xml file of your web application according to the new structure (see "The CAE Web Application" in the Content Application Developer Manual for details). -p <WEB-INF directory path> Path to the WEB-INF directory of your web application. -n <Vendor Name> The vendor name which is used for the path to third-party web applications. -v Switch the logging level to verbose for debugging. -a <pattern> An Ant-style pattern for referencing file path, all referenced xml files will be processed.
+

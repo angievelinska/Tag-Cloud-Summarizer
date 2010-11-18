@@ -1,0 +1,53 @@
+
+
+ComboBoxLinkListEditor
+
+Allows selection of a document from a ComboBox, whose content consists of the documents of a folder. The path attribute determines the path of this folder. Automatically, only documents of appropriate type are shown. The emptySelection attribute configures the text displayed if no document is linked.
+
+As with the GenericLinkListEditor, display is configured with a LinkListRenderer.
+
+FolderLinkListEditor
+
+A FolderLinkListEditor  displays two JLists side by side. The left list contains the resources from the link list of the document. The right list contains resources that are determined by the path parameter which points to a CoreMedia folder. All documents in this folder can be selected and thus be inserted into the documents link list.
+
+The following attributes can be used to configure the editor:
+
+path: The path to the folder whose content will be displayed in the folder list.
+showFolderListOnCheckOut: Indicates whether the folder list is shown when the document is checked out (true). If set to false, only the link list is displayed and the user must click a button to open the folder list.
+
+
+listHeight: Sets the height in pixel of the two lists. If the lists are longer, a scrollbar is displayed. The default value is 100 which displays approximately five list entries with a standard font size. For ten lines set the value to 180.
+
+
+
+In addition, you can configure the lists using the following sub elements. Use the attribute class to define the classes to use:
+
+LinkListRenderer: Define a renderer which renders the content of the left link list.
+FolderListRender: Sets the renderer for the right folder list. If not set a default render is used to display an icon and the document name.
+FolderListPredicate : Sets a predicate to filter the right folder list. If not set all documents matching the given link list element type are displayed.
+FolderListComparator : Sets a comparator to sort the right folder list. If not set the folder list is sorted by document name.
+
+Example:
+
+<Property name="TestLinkList" 
+editorClass="FolderLinkListEditor" 
+path="/" listHeight="180" >
+<LinkListRenderer 
+class=
+"hox.corem.editor.toolkit.property.ImageLinkListRenderer" 
+Property="TestBlob"/>
+</Property>
+
+GenericLinkListEditor
+
+Displays a list of the linked documents and allows links to be added/deleted/moved. Display of the documents is determined by the LinkListRenderer. This can be determined with a child element <LinkListRenderer class="Renderer class">.
+
+The default is DocumentTypeLinkListRenderer , which displays document type icon and document name.
+
+Other renderers are DocumentStateLinkListRenderer and ImageLinkListRenderer. The DocumentStateLinkListRenderer displays a state icon and the document name. The ImageLinkListRenderer displays Blob properties of the linked documents. The Blob property which should be used is determined by the property attribute of the LinkListRenderer element.
+
+Example:
+
+<LinkListRenderer class="ImageLinkListRenderer" property="small" />
+
+You can configure the file chooser and file creation dialogs of the GenericLinkListEditor. Use the child element <DialogSettings> with the two respective child elements <NewDocumentDialogSettings> or <DocumentChooserSettings>. With the following attributes you can parameterize the dialogs:

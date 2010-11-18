@@ -1,0 +1,7 @@
+
+
+Interactive Report Drill Down
+
+The report view allows a user to drill down using report parameters. These are rendered as selection boxes contained in the report phrase. After selecting new parameter values, please press the Reload button in the right upper corner to update the report view. The Performance report model provides the following three report parameters:
+
+The site parameter allows a user to select a (sub-)site. The list of sites is automatically generated during data aggregation.

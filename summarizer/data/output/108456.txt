@@ -1,0 +1,25 @@
+
+
+
+
+Rule: A rule defines a right on a resource of a certain resource type. A rule is granted not to a user but to a group. A user must be a member of a group to get the rights of the group. So a rule consists of a group, a resource, a resource type and a right parameter. Formally a rule is a four-tuple
+
+
+
+r = (gr,rs,rt,rg)  from (GROUPS x RESOURCES x RESOURCETYPES x RIGHTS)
+
+
+where
+
+
+GROUPS is the set of groups
+
+
+RESOURCES is the set of resources
+
+
+RESOURCETYPES is the set of resource types and the special folder type "+"
+
+
+RIGHTS is one of (READ, EDIT, DELETE, APPROVE, PUBLISH, FOLDER, SUPERVISE)
+

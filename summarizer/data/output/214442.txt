@@ -1,0 +1,9 @@
+
+
+<PasteTransformation> 
+
+Child elements: <TransformElement>*, <IgnoreElement>* 
+
+Parent element: <Property> 
+
+Use the <PasteTransformation> element if you want to customize the paste operation of the RichText pane. 

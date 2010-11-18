@@ -1,0 +1,13 @@
+
+
+The CAE Feeder sends data to the indexing component of the CoreMedia Search Engine, which is based on FAST. For more information about FAST, see the documentation of FAST. The FAST Product Overview Guide is a good starting point.
+
+The Search Engine maintains the index and provides search functionality. The index contains documents, which carry unique String identifiers. A search returns the documents that match a given query. The term document in this context refers to a FAST document. Do not confuse it with CoreMedia documents from the Content Server.  A FAST document consists of several fields that are configured in the index profile of FAST. The CoreMedia Search Engine comes with a default index profile which can be used for both the Search Engine Feeder of the CoreMedia Content Server and for the CAE Feeder. 
+
+The FAST Configuration Guide describes how to customize the index profile for your needs. Note that some fields of the index profile are required for the operation of the CAE Feeder. See the comments in the default index profile for a description of required fields.
+
+The process of sending data to the Search Engine is also called feeding the Search Engine. A piece of data used to add a new or update an existing document is called a Feedable. For efficiency reasons, the CAE Feeder sends batches of multiple Feedables to add or update documents and batches of multiple String identifiers to remove documents in the index. The Search Engine processes these batches asynchronously and notifies the CAE Feeder with a callback mechanism when a batch is persisted. Requests to add, update and remove documents originate from the Proactive Engine or custom code. For the Proactive Engine a special Receiver called FeedingReceiver is registered, which passes Feedables and document identifiers to the CAE Feeder. The use of the Proactive Engine ensures that the index is kept up-to-date after changes in the data of the underlying content beans. Furthermore the Proactive Engine keeps track of the current feeding state to continue seamlessly after restarts of the application. The CAE Feeder sends callbacks about completed requests to the FeedingReceiver, which in turn notifies the Proactive Engine.
+
+Alternatively to the Proactive Engine, you can develop a custom client to control the CAE Feeder with public API.
+
+The following figure shows the overall architecture with Proactive Engine:

@@ -1,0 +1,25 @@
+
+
+The main goal of a content management system is to deliver the right content, to the right customer in the right time. Important requirements are:
+
+Support of high traffic delivery
+Support of different delivery formats, such as HTML, WAP, PDF
+Support of personalized content
+Support of search
+Integration of data from third-party systems
+Integration with an existing portal solution 
+Integration with delivery platforms such as Akamai
+Analysis of usage
+Integration of user generated content
+
+To meet all these requirements, CoreMedia CMS contains the following components:
+
+The Content Application Engine (CAE) with its components Http Cache, CAE Feeder and Proactive Engine to deliver and search the content.
+Content Rules to deliver content, based on rules not on manual selection.
+The CoreMedia Portal Integration to integrate with portals.
+The Analytics Engine to analyze the usage of the content.
+The Social Software Extension to integrate user generated content.
+
+All these components have a framework character, and you can easily adapt them to your needs.
+
+See the Content Application Developer Manual for details of the CAE, Content Rules and the Portal Integration, the Analytics Developer Manual for details of the Analytics Engine and use the Social Software Extension manual to learn more about the integration of user generated content into your applications.

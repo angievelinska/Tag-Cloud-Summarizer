@@ -1,0 +1,8 @@
+
+
+usage: cm systeminfo -u <user> [other options]
+available options:
+ -d,--domain <domain name> domain for login (default=<builtin>)
+ -p,--password <password> password for login
+ -u,--user <user name> user for login (required)
+ -url <ior url> url to connect to

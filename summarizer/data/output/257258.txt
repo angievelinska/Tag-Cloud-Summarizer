@@ -1,0 +1,9 @@
+
+Start the GenericWebEditor by launching your Web browser, 
+then type in it's address bar:
+
+3* http://<contentserver>:<port>/editor/
+3* <contentserver> and <port> are project-specific, they'll be provided by senior or technical staff.
+3#
+The login screen (see illustration) opens:
+

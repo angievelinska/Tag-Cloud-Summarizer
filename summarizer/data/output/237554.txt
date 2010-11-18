@@ -1,0 +1,4 @@
+
+
+ Attribute Value previewBasedEdit true/false: turn Preview-based Editing on/off. webEditorUri The uri of the CoreMedia WebEditor (e.g. http://fnord:8001/editor/) remoteControlUri The uri of the remote control for accessing the CoreMedia Editor (this is normally http://localhost:44444/coremedia/control) contextPath name of your webapp defaultUri uri of the template rendering the context menu contextInfoFactory Factory for context infos providing multiple services and configuration. menuActions pbeMenuActions or pbeMenuRemoteActions to choose between WebEditor and Editor. Default is pbeMenuActions (WebEditor).
+

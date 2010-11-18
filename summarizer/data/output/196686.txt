@@ -1,0 +1,46 @@
+
+
+ Property type How to change 
+
+IntProperty
+
+DateProperty
+
+StringProperty 
+
+Remove the column of the property from the document type table.
+
+E.g.:
+
+Remove the attribute Source of type StringProperty from the document type Article using the following SQL statement:
+
+ALTER TABLE article DROP column "Source" BlobProperty 
+
+Remove the property information from the blobs table. Don't delete anything from blobdata, this will be done by the Content Server! Attribute names are only unique for one document type. Therefore, you have to check if the property you want to delete belongs to the proper document type.
+
+E.g.: Delete the BlobProperty named Logo from the document type Article. 
+
+DELETE blobs WHERE propertyname = 'Logo' AND documentid = (SELECT DISTINCT id_ FROM article WHERE id_ = documentid);
+
+COMMIT; XmlProperty 
+
+Remove the property information from the texts  table and the links contained in the XmlProperty from the linklists table. Don't delete anything from sgmldata or sgmltext, this will be done by the Content Server! Attribute names are only unique for one document type. Therefore, you have to check if the property you want to delete belongs to the proper document type.
+
+E.g.: Delete the XmlProperty named Text from the document type Article.
+
+DELETE texts WHERE propertyname = 'Text' AND documentid = (SELECT DISTINCT id_ FROM article WHERE id_ = documentid);
+
+COMMIT;
+
+DELETE linklists WHERE propertyname = 'Text' AND sourceDocument = (SELECT DISTINCT id_ FROM article WHERE id_ = sourceDocument);
+
+COMMIT; LinkListProperty 
+
+Remove the property information from the linklists  table. Attribute names are only unique for one document type. Therefore, you have to check if the property you want to delete belongs to the proper document type.
+
+E.g.: Delete the LinkListProperty named RelatedDocuments from the document type Article.
+
+DELETE linklists WHERE propertyname = 'RelatedDocuments' AND sourceDocument = (SELECT DISTINCT id_ FROM article WHERE id_ = sourceDocument);
+
+COMMIT;
+

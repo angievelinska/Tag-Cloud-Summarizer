@@ -1,0 +1,5 @@
+
+
+The complexity in correctly recognizing transitions between two pages arises (to a considerable extend) out of the flexibility that the Content Application Engine offers.
+
+If you can keep your application simple by rendering content beans and by using the same content beans as link targets, the complexity vanishes completely. If you need advanced CAE features, Analytics scales through the advanced customization options shown here.

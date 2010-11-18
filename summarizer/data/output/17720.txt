@@ -1,0 +1,24 @@
+
+
+CoreMedia components are configured mostly with property files which are located in the <CoreMediaHome>/properties/corem directory or in the <Component>/WEB-INF/properties/corem directory below the /webapps directory of the servlet container installation.
+
+Each component of the CoreMedia system has one or more relevant property files where the operation of the component can be configured. The configuration sections of the CoreMedia SCI Components chapter contain descriptions of how to use the relevant property file(s) to configure each CM component.
+
+The property files are in ASCII format. The properties in the files have key=value format:
+
+property.name=Value
+
+(the first part describes the name of the configuration setting and the second part the value)
+
+The hash sign (#) is used for labelling comments, or to deactivate all other entries of a property.
+
+In the following example, different entries for the user name for CoreMedia login are given:
+
+#user and password for convenient login
+login.username=Example
+#login.username=Test
+#login.username=User
+
+The name Example would now appear in the login window. The user does not have to enter his name again, if he is the user Example.
+
+If the entries are not commented out, the last entry is used. This allows properties to be handled flexibly and to be adjusted quickly.

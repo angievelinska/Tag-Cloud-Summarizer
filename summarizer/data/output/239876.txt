@@ -1,0 +1,3 @@
+
+
+Note that there is no authentication necessary to subscribe to the message service. In order to have some sort of authentication you can make use of firewalls or the authentication mechanisms of the web application server in which the service is running. 

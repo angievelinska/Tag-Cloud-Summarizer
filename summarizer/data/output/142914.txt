@@ -1,0 +1,8 @@
+
+
+The searchResult template calls the renderTeaser templates for Dish documents that match to the uri parameter searchstr. If more than three matches are found a next button for displaying the next matches is rendered. The offset is passed via uri parameter offset. Take a look at the parameters of the search:
+
+result = sese.search(str , "name", true, null, true, (ResourceType) type, true, offset, max);
+
+This call returns documents matching str sorted by the documents name (ascending=true). The search begins from the root folder (null) including all subfolders (true). The type we search for is Dish in our case, including all subtypes (true). Beginning with the current offset only three documents (max=3) are displayed.
+

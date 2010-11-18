@@ -1,0 +1,11 @@
+
+
+This section provides the following information about common pitfalls during the integration of Editing Services:
+
+Interceptors needs to be registered at the controller which forwards request to another servlet -for example the servlet which handles editing services property editors. One Interceptor is the BaseUri, and the other the WebEditingContext Interceptor.
+
+
+In the portal context there might be the need to return to an well defined page after editing, this mechanism is described in chapter x.
+
+
+

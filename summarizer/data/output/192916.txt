@@ -1,0 +1,3 @@
+
+
+Serialization is not recommended for long term storage. Future CMS releases might make incompatible changes to the stream format.

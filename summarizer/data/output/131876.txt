@@ -1,0 +1,3 @@
+
+
+The query window shows only the results for which you have read rights. This may lead to the following phenomenon: You execute a query without hit limit, get e.g. 521 hits and a lot of results are shown in the window. Now, you start the same query with a hit limit of e.g. 25. No (or less than 25) results are shown! This follows from the fact, that you have no read rights for some of the first 25 hits. 

@@ -1,0 +1,38 @@
+
+
+ 
+
+Menu Item 
+
+Sub Items 
+
+Function 
+
+Explorer  
+
+opens new Explorer window 
+
+Workflow  
+
+opens new Workflow window 
+
+Query  
+
+opens new Query window 
+
+Publisher  
+
+opens new Publisher window 
+
+User manager  
+
+opens new User Manager window 
+
+Document types  
+
+opens new Document type window 
+
+currently available open windows of all types  
+
+number and names in menu depend on opened windows
+

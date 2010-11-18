@@ -1,0 +1,3 @@
+
+
+The Overview window of the WebEditor is divided into three major sections: the folder overview (5), the document overview (4), and the detail view (6). Have a closer look at illustration: 

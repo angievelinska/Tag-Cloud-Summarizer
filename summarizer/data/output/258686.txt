@@ -1,0 +1,15 @@
+
+
+CoreMedia Analytics Dashboard features role-based views and implements role-based access control based on groups defined in the CMS. Configuration of dashboard profiles and views is described in the Analytics Developer Manual, chapter Customizing and Extending the Dashboard. 
+
+Restricted Access Per Install
+
+For security reasons, no view profile is enabled for unauthenticated users in the dashboard configuration, per install two profiles (adminProfile and editorProfile) for CMS user groups administratoren and editor have been enabled. These profiles require user authentication via Single Sign-On (SSO).
+
+Authentication via Single Sign-On (SSO)
+
+Analytics Dashboard does not provide an authentication mechanism on its own but relies on a Single Sign On mechanism like e.g. CAS. When enabling SSO authentication, unauthenticated dashboard users will be directed to the Single Sign-On authentication mechanism (e.g. the CAS login page). Users already authenticated at the SSO authentication provider (e.g. after being authenticated at the CMS system) need not re-authenticate.
+
+Configuring CAS as Single Sign-On (SSO) authentication provider
+
+Please refer to the Demo Developer Manual, section Installation, Single Sign-On for instructions on how to install and customize CAS. More information on CAS customization will be added.

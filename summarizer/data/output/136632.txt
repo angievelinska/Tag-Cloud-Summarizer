@@ -1,0 +1,7 @@
+
+
+Never implement client actions requiring any user interaction by a remote action handler:
+
+They will block server transactions for an undefined time and will eventually time out.
+They won't work in a synchronous client.
+

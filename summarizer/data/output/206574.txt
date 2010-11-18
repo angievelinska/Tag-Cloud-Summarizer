@@ -1,0 +1,24 @@
+
+
+
+ 
+
+CapLoginModule Options
+ 
+
+Description
+ 
+
+predicate.<n>.class
+ 
+
+Java class name of a login predicate
+ 
+
+predicate.<n>.args
+ 
+
+Arguments to the login predicate. Use space value ¿ ¿ for no arguments.
+
+
+

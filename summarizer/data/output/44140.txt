@@ -1,0 +1,50 @@
+
+
+Variant rules are Java classes implementing the interface hox.corem.servlets.beans.ViewVariantRule. Please see the API documentation for details. There are five types of predefined variant rules, which can be applied after each other as desired:
+
+
+
+
+StringPropertyViewVariantRule
+
+
+
+A string property from which the variant designator should be read can be configured in a particular document type. For resources of the given document type with non-empty string property, the rule delivers the value as the only variant designator, otherwise the empty variant list.
+
+
+
+LinkListPropertyViewVariantRule
+
+
+
+A LinkList property from which the list of variant designators should be determined can be configured in a particular document type. The delivered variant list consists of the names of the linked documents.
+
+
+
+PathViewVariantRule
+
+
+
+The selection of the view variant should depend on the location of the resource. For this purpose, a list of pairs of paths and variant designators is configured. The rule delivers the variant designator which is assigned to a path which is a prefix of the path of the requested resource. The path/designator list is searched in the given order.
+
+
+
+ParameterViewVariantRule
+
+
+
+The selection of the view variant can be made dependent on a parameter in the ResourceUri. The name of the parameter is configured from whose values the variant list should be constructed. The length of the list corresponds to the number of appearances of the parameter in the URI.
+
+
+
+MimeTypeViewVariantRule
+
+
+
+Since version 4.1, the dispatching according to a BLOB property´s MIME type has been moved to this new, predefined ViewVariantRule. The reason is that the basic view dispatching is based on "static" data of the resource at hand, like its resource type or the name or type of a property which cannot change at run-time. While the MIME type pattern (image/*) is statically defined in the document type, the concrete MIME type of a BLOB (like image/jpg) depends on the concrete stored data. View variants are better suited to "look into" the BLOB. The MimeTypeViewVariantRule adds exactly two variants to a BLOB property URI: One for the major part of the MIME type, one for the minor part.
+
+
+It makes sense to pass parameters for which a variant rule is configured from one page to the next, since they express a kind of mode in which the site is displayed. They are useful when only some templates differ in the different modes (but these considerably), for which view variants can then be implemented. According to the lookup logic, all other view variants revert to the view without variants. For this reason, variants are also suitable for template selection by the editorial staff, since if an error is made on entry, doesNotUnderstand is not called up, as occurs with a false view designator, but simply the view without variants is used.
+
+
+Variants of views should be used if the selection of the view is an intrinsic property of the called resource. This is different from the case where a caller decides how the resource is to be displayed; in this case you should not use a variant but a different view. Variants should only be used if global conditions can be found according to which the ResourceUri can decide which template should be used for a particular document and for a particular view. Other case decisions should be made, as before, in the templates or in the corresponding beans ("If it is between 8am and 8pm, use view renderDay, otherwise renderNight").

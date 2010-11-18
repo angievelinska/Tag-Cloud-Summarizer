@@ -1,0 +1,6 @@
+
+
+ Symbol Nr. Function (1) Opens the document selected in the publication result. (2) Copies the documents selected in the publication result to the clipboard. (3) Approves the resource for publication. (4) Revokes the approval. (5) Opens the layout preview for the selected resource. (6) Starts the publication preview. (7) Publishes the selected resource. (8) Repeats the last action, either a publication or a publication preview. (9) Cancels your selected publication from the queue. (10) Prioritizes your selected publication. (11) Shows information on the resource selected in the publication result. The Information window opens up.
+
+
+

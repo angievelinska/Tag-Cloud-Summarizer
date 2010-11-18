@@ -1,0 +1,10 @@
+
+
+With Java Web Start (JWS) you can download the CoreMedia Editor from the CM Server and start it. JWS is a deployment technology from Sun Microsystems. It guarantees that users always run the latest version of an application, eliminating complicated installation or upgrade procedures. On every launch, JWS checks the Web server (in this case the Content Server)  to see if a new version of the application is available and, if positive, automatically downloads and starts it. 
+
+An application can be launched: 
+
+from a Web browser by clicking on a link,  
+from JWS's built-in Application Manager, tracking usage of applications and providing quick access to most-frequently used application, or
+from desktop icons or Start Menu (Windows only). 
+

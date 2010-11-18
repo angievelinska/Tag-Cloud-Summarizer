@@ -1,0 +1,21 @@
+
+
+
+ 
+
+Attributes
+ 
+
+Description
+ 
+
+editorClass
+ 
+
+Editor class to be used for showing the variable. See Section 4.4.3 for a listing of the editor classes.
+ 
+
+name
+ 
+
+Name of the aggregation variable to be shown, as defined in the workflow definition.

@@ -1,0 +1,3 @@
+
+
+The standard configuration of the importer is set up for the situation that the source documents exist as files in certain directories. These directories are set in the configuration file, separated by semicolons:

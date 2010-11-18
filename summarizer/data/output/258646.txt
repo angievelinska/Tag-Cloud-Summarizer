@@ -1,0 +1,27 @@
+
+
+The implementation of the external Http Cache assembly strategy bases on CAE jsp-templates. Therefore, it is easy to include additional assembly systems. In general, you only have to create another CAE-template called:
+
+WEB-INF/templates/com.coremedia.cap.httpcache.assembly/Placeholder.<custom-assembly-mode-name>.jsp.
+
+Here, replace <custom-assembly-mode-name> by a short name identifying your custom assembly mode. This template replaces each <httpcache:include> with a placeholder, which in turn will be translated into an include operation by the external assembly system. The template is backed by a bean of type com.coremedia.cap.httpcache.assembly.Placeholder  which contains all information, required for the creation of the placeholder.
+
+Example
+
+You want to use "Edge Side Includes" (see http://www.w3org.TR/esi-lang), so that an AKAMAI-server can do the assembly. Then, the template would have the name WEB-INF/templates/com.coremedia.cap.httpcache.assembly.Placeholder.esi.jsp and might look like the following:
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ page session="false" %> 
+<esi:include xmlns:esi="http://www.edge-delivery.org/esi/1.0"  
+  src="<c:out value='${pageContext.request.contextPath}
+  ${self.path}${self.query}' escapeXml='false'/>"  
+  onerror="continue" /> 
+
+The placeholder created by the template would look as follows:
+
+<esi:include xmlns:esi="http://www.edge-delivery.org/esi/1.0" 
+src="mywebapp/myfragment?query=true" onerror="continue"/
+
+The URI contains the context path of the web application, the path of the fragment and additional query parameters. Not included in this example are additional <httpcach:header> or <httpcache:parameter>  passed within the <httpcache:include>-tag.
+
+"esi", the short name used for the assembly mode is an identifier for this custom mode. You can activate the mode setting the property httpcache.assembly.mode=esi in the WEB-INF/spring/httpcache/httpcache.properties file (see the Administration and Operation Manual for details).

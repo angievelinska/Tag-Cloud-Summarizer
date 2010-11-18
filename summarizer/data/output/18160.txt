@@ -1,0 +1,7 @@
+
+
+Malfunctions that occur on the Slave Live Server can affect two components:
+
+replication: Replication is interrupted and the content of the Slave Live Server becomes out-dated depending on the publication activity of the Content Server. After restart the Slave Live Server continues replication at precisely the point where it was interrupted and will only go online when its content is up-to-date.
+Active Delivery Servers: Requests which lead to server inquiries can block Active Delivery Servers. A Slave Live Server failure forces all logged-on Active Delivery Servers to shutdown.
+

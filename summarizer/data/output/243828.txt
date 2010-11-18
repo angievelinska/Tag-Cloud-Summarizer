@@ -1,0 +1,9 @@
+
+
+
+
+Length
+
+Grammar: EMPTY 
+
+Length evaluates to the length of the value of the specified variable or resource property and depends on the type. For an aggregation variable it returns the number of elements, for a string variable or string property it returns the length of the string. See also Get and Read. 

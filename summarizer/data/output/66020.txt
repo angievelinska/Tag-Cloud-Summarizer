@@ -1,0 +1,28 @@
+
+
+In this chapter, you will find general settings which must be done for each template.
+
+
+Content type of a page
+
+
+A page must always define a content type, otherwise 'text/html ' is assumed. It is possible that a template delivers content of different types, for example depending on the user-agent. In such a case, where the content type is not known in advance or more than one type is possible, you must declare the content type ' application/x-coremedia-dynamic'. In addition, you have to register an implementation of the interface hox.corem.servlets.ContentTypeResolver with the generator that can dynamically compute the content type for a specific invocation of this template. Please see the API documentation for details.
+
+
+The content type determines several things:
+
+
+
+
+for outermost templates, it determines the content type sent to the browser
+
+
+
+the charset parameter determines the encoding of the JSP writer (see the JSP specification for details). CoreMedia recommends using contentType="xxx;charset=utf-8" for all textual templates. Note that the JSP file itself has to be encoded in UTF-8, too. If you want the JSP to be encoded in ISO-8859-1 but still have it deliver UTF-8 encoded text, you have to add a pageEncoding attribute to the JSP page directive. Templates that do not deliver textual content (i.e. write directly to the servlet response's output stream) should not declare an encoding.
+
+
+
+the content-type may help to distinguish fragments from whole pages. The generator allows you to prohibit direct delivery (as opposed to inclusion) of certain content types through its #addDeniedContentType method.
+
+
+Examples:

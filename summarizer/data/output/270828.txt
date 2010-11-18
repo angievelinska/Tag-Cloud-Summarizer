@@ -1,0 +1,3 @@
+
+4#
+In CONFIG mode you can also switch back to VIEW mode without changing any preferences. Right-click the portlet being in CONFIG mode and choose Portlet View Mode from the menu.

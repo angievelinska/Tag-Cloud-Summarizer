@@ -1,0 +1,11 @@
+
+
+This section shows how to use Editing Services for JSF to create simple read-only views offering just a few buttons in order to implement simple workflows. A read-only view requires the definition of 
+
+a document that has to be presented
+a template (JSP) for rendering 
+a resource bundle for localization
+button or toolbar to set up actions that can be executed on the given document.
+
+In the case that multiple document views are required, navigation cases can be defined that link two content views. The navigation concept of Editing Services for JSF is introduced in this section as well.
+

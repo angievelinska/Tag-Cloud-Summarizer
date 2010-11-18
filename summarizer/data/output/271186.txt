@@ -1,0 +1,3 @@
+
+
+In the Starter Kit integration, consult the template com.coremedia.starterkit.common.contentbeans/Page.head.jsp for a realistic example.

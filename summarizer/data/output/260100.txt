@@ -1,0 +1,9 @@
+
+
+Values of other classes map to String elements with the value of their toString method.
+
+You can configure a PropertyConverter to convert the value to one of the supported types. A PropertyConverter implements the interface com.coremedia.cap.feeder.bean.PropertyConverter and can be configured with the propertyConverter property of the BeanPropertyFeedableElementMapping. PropertyConverters are especially useful to create a string representation when indexing collection properties. The PropertyConverter implementation com.coremedia.cap.feeder.bean.CollectionToStringPropertyConverter can be used for exactly this purpose. Please see the Javadoc for details.
+
+Furthermore it's possible to configure a default value which should be indexed if a bean property is null or a configured PropertyConverter returns null. A default value can be configured with the defaultValue property of the BeanPropertyFeedableElementMapping. Again, please see the Javadoc for details.
+
+If a bean property's get method throws an exception, the BeanFeedablePopulator will index a so-called error document in the index as placeholder. Error documents can be recognized by the value ERROR in the index field feederstate. The stacktrace of the exception is stored in the index field feederinfo. As stated in section, you must always add a feederstate:SUCCESS clause to your queries to find successfully indexed documents. Bean feeding will be automatically retried after 10 minutes (default, can be changed or disabled with BeanFeedablePopulator#setErrorCacheTime) or if a dependency is invalidated that was accessed before the exception was thrown. 

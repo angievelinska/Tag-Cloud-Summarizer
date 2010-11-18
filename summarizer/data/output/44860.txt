@@ -1,0 +1,10 @@
+
+
+The GeneralTransformerFactory interface consists of two methods, getTransformer and getFeature.
+
+The method getFeature is used in the sense of JAXP to find out whether the transformers created by this factory support certain source and result formats. For example, if your factory returns "true" for the call
+
+
+
+
+

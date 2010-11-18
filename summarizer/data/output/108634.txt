@@ -1,0 +1,13 @@
+
+
+You do not have to define rules for each group, resource or resource type. A rule definition may contain a
+
+
+supergroup: the rule is applicable for all subgroups
+
+superfolder: the rule is applicable for all subfolders
+
+supertype: the rule is applicable for all subtypes
+
+
+When using supergroups, -folders- and types the number of rules is greatly reduced but the problem of conflicting rules emerges. The problem appears when two rules for a supergroup and subgroup or a superfolder and a subfolder or a supertype and a subtype are defined. The following section explains how rights for a resource are evaluated from a set of rules and how conflicting rules are resolved.

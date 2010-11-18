@@ -1,0 +1,22 @@
+
+
+Predicates for filtering workflows and tasks
+
+  Default predicate  Sorted objects  Description  GenericProcessPredicate  
+
+Workflows: 
+
+com.coremedia.workflow.WfProcess  The default predicate filters workflows for which no creation right is granted to the user. Own predicates must implement hox.util.Predicate  DefaultWorklistPredicate 
+
+Workflows:
+
+com.coremedia.workflow.WfProcess
+
+Tasks:
+
+com.coremedia.workflow.WfTask 
+
+The default predicate filters tasks and workflows by the three categories: my tasks, offered tasks and my workflows
+
+Own predicates must implement java.lang.Cloneable and must extend hox.corem.editor.workflow.AbstractWorklistPredicate and should extend the default filter hox.corem.editor.workflow.DefaultWorklistPredicate for convenience.
+

@@ -1,0 +1,9 @@
+
+
+If you want to delete a document
+Select it, then 
+
+choose File | Delete from the file menu 
+click the Delete symbol in the toolbar
+or right-click the selected resource and choose Delete from the context menu (see illustration)
+

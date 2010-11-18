@@ -1,0 +1,99 @@
+
+
+This Content Rules example is based on the New Menu Site Example and on the Search example, which you are supposed to be familiar with.
+
+In the New Menu Site example you have seen a menu card ordered by categories which correspond to the folder structure of the repository.  We will now provide more flexible categories which make use of so called content rules.  Content rules are posted to a QueryService and allow structured queries for Java Beans.  (See com.coremedia.cap.beans.query.QueryService in our API documentation for details).  This example makes use of the FastQueryServiceFactory which comes with the CoreMedia CMS.  We will look at two aspects of content rules:
+
+Usage in a content application
+Preview from an editor
+
+Furthermore this example makes use of dataviews, the caching facilities of the CAE.
+
+As mentioned in the README file, we don't start from scratch but augment the New Menu Site example and reuse the Fast collection created with the Search example.  Just follow the steps described there, and start over with http://localhost:8001/contentrules/servlet/.
+
+If you already explored the content you have imported for the New MenuSite Example, you might have noticed the document type ContentRule (which extends the well known Category) and the two documents cheap and expensive in the advanced folder.  The documents contain content rules for dishes with prices over 40 and and under 30, respectively:
+
+TYPE = Dish: "price" > 40 ORDER BY "price" DESCENDING
+TYPE = Dish: "price" <= 30 ORDER BY "price" ASCENDING
+
+Note that the available properties (here: price) are not related to the CMS document types but depend on the QueryService.  For the FastQueryService used in this example all indexed properties but the textBody aggregation can be used in bean queries.  Since our FastQueryService is backed by the Fast collection we created in the Search example, price is in fact the only indexed property of Dishes (see trigger.xml in the Search example), so we cannot query ingredients, calories etc here. 
+
+The two ContentRule documents are linked as categories in the new start page.  Click on the Premium or the Value button, and see some more or less delicious and expensive meals. How does this work?
+
+The webapp
+
+Since our new ContentRule doctype extends Category, we do not need to change or add any templates or controllers in the New Menu Site example.  All we have to do is to override getDishes() in ContentRuleImpl and configure the new class along with the other content beans in contentbeans.xml.  ContentRuleImpl needs a QueryService which we provide by Spring configuration:
+
+<bean name="contentBeanFactory:ContentRule" scope="prototype" 
+      class="com.coremedia.examples.cae.beans.ContentRuleImpl">
+  <property name="queryService" ref="beanqueryService"/>
+</bean>
+
+The beanqueryService referenced here is declared in beanqueryservice.xml.  The implementing class FastQueryServiceFactory is included in CoreMedia CMS, but it is not public API.  You are simply supposed to use it exactly this way, so we do not go into further details.  Just notice the usage of the Fast server parameters you configured in local.properties.  Of course, ContentRuleImpl would also work with any other QueryService.
+
+ContentRuleImpl#getDishes() fetches the value of the BeanQuery property from the underlying document and poses this query to the QueryService.  The result is a Collection of content beans, which we assume to consist of Dishes only.  (The content rules in the sample content meet this constraint.)  Apart from some type casting and exception handling you see an invocation of Cache#cacheFor, which leads us to the next aspect.
+
+Caching
+
+Depending on the actual QueryService implementation, queries may be expensive, and we want to cache the results.  The CAE supports caching on a sophisticated level by the concept of dataviews.  We want to cache both, the single dishes and the whole query result.  The according dataviews are declared in dataviews.xml.  See the CAE developer manual for the details of data view declarations, esp. the meaning of associationTypes.  We chose the standard static policy.  The CAE cache creates dependencies on the underlying documents themselves automatically, e.g. a ContentRule bean is invalidated when the BeanQuery property changes. However, the result of a query depends not only on the query but on the content of the whole repository (or more precise: on the QueryService).  We cannot model this in terms of explicit dependencies, so we simply let it invalidate by a timeout of 10 minutes.
+
+Preview
+
+Now let's change the perspective and look at things from the editor point of view: When you compose a bean query, you want to see the result immediately in order to check if the query meets your intention.  So we integrated another controller into the example which handles URLs with a query parameter.  The editor invokes the application via such URLs.  You find the configuration in menusite-controllers.xml:
+
+<bean id="contentRulePreviewController" 
+class="com.coremedia.
+       examples.cae.beans.ContentRulePreviewController">
+  <property name="dataViewFactory" ref="dataViewFactory"/>
+  <property name="queryService" ref="beanqueryService"/>
+</bean>
+
+
+<!-- add mappings to the central mapping bean -->
+<customize:append bean="controllerMappings">
+  <map>
+    <entry key="/contentrulepreview/*"
+    value-ref="contentRulePreviewController"/>
+    <entry key="/" value-ref="/=rootController"/>
+  </map>
+</customize:append>  
+
+The ContentRulePreviewController processes URLs like
+
+http://localhost:8001/contentrules/servlet/contentrulepreview/
+?query=TYPE+%3D+Dish%3A+%22price%22+%3E%3D+35+ORDER+BY
++%22price%22+DESCENDING
+
+The URL contains the bean query as parameter, it is not related to any CMS resource. The ContentRulePreviewController simply extends Spring's AbstractController and overrides handleRequestInternal.  It provides DishList beans, whose caching policy is dynamic (see dataviews.xml).  Typically the preview queries are different each time (once the editor is happy, he stops previewing), so caching the query result would make no sense.  However, the cached Dish beans are used this way.
+
+DishList is a limited kind of Category, with nothing but a getDishes method.  The corresponding DishList.jsp simply renders the dishes with their teaser views, without any page decoration like picture or navigation.
+
+Editor
+
+You can use the Swing Editor to change the content rules and preview the results.
+
+Install the editor-extensions and configure the beanquery editor with the beantypes.xml and the beantype-storagemapping-fast.xml in the misc directory of this example. (In case you just installed the editor-extensions, you can simply replace the files in the WEB-INF/custom directory, otherwise you have to merge them.)
+
+Now configure the editor-extensions in the editor.xml of the Swing Editor (unless you have not done so yet, editor-extensions also serves differencing and extended queries).  Last thing to do is to configure the PropertyEditor for the beanquery:
+
+    <Document type="ContentRule">
+      <Property name="BeanQuery" 
+       editorClass="hox.corem.editor.toolkit.
+       property.BeanQueryStringPropertyEditor">
+        <WebContext host="localhost" port="8001" 
+        context="contentrules/">
+          <WebExtension 
+              name="beanquerypreview"            
+              class="hox.corem.editor.toolkit.property.
+              BeanQueryStringPropertyEditor$PreviewExtension" 
+              path="servlet/contentrulepreview/" 
+              view="preview">
+            <Pattern browser="FireFox" 
+            pattern="%p://%h:%n/%c%u?query=%q"/>
+          </WebExtension>
+        </WebContext>
+      </Property>
+    </Document>
+
+Now you can start the editor, open a ContentRule document, and set the focus to the bean query.  Two additional toolbar buttons appear which allow editing and previewing the bean query.  You can also edit the query string directly, but you should know what you are doing.
+

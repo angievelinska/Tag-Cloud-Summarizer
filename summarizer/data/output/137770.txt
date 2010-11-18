@@ -1,0 +1,9 @@
+
+
+Write a Repository Event Predicate
+
+Repository event predicates can be used to filter the repository events that trigger invalidations of values or pages computed by PADS. A repository event predicate must implement the interface com.coremedia.cap.generator.pads.RepositoryEventPredicate. It can filter events globally for all values or depending on the key of the to be invalidated value. When an event is received from the CoreMedia Content Server it will be passed to the configured predicates which can decide that the event should not invalidate any value computed by PADS. If the event isn't ignored at that time, the predicates are called again later for each to be invalidated value where they may ignore certain events for certain values only.
+
+Please read the Javadoc API documentation of com.coremedia.cap.generator.pads.RepositoryEventPredicate for more information.
+
+The following example predicate ignores all save events globally:

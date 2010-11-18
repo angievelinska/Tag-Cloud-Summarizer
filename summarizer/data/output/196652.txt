@@ -1,0 +1,21 @@
+
+
+The primary key of the document type tables consists of the ID_ and VERSION_ columns. There exists a foreign key connection to the resources table via the ID_ column.
+
+The blobdata table
+
+The primary key of the blobdata table consists of the following properties:
+
+DocumentId: Id of the document which contains the BLOB.
+DocumentVersion: Version of the document which contains the BLOB.
+PropertyName: Name of the property which contains the BLOB.
+
+The linklists table
+
+The primary key of the linklists table consists of the following properties:
+
+SourceDocument: Id of the document which links to the other document.
+SourceVersion: Version of the document which links to the other document.
+PropertyName: Name of the property which contains the link list.
+LinkIndex: Position of the link in the link list.
+

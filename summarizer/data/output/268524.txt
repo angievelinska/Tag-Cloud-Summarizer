@@ -1,0 +1,11 @@
+
+
+The CoreMedia WebEditor is shipped with a web service that allows spell checking.
+
+In order to enable spell checking, proceed as follows:
+Make sure that aspell (http://aspell.net) is installed on the computer where the Web Editing Server is running, with the dictionaries for the languages you want to spell check and that aspell is reachable in the environment.
+Set URIEncoding="UTF-8" in the <Connector> element of the server.xml file of the WebEditing Server tomcat installation.
+Set wageConfig.setSpellCheckerOption(SpellCheckerOption.ON); in the webapps/editor/WEB-INF/config.bsh file. Optional set wageConfig.setSpellCheckerOption(SpellCheckerOption.EDITABLE_ONLY); if you want to show spell checking only in checked-out documents but not in checked-in documents
+Set wageConfig.setPropertyLanguageResolverFactory(new DefaultPropertyLanguageResolverFactory(new Locale("de","DE"))); to the language you want to use for spell checking.
+
+If you want to use different languages for spell checking, depending on some properties of the document, such as the position in a folder hierarchy for example, you have to develop your own PropertyLanguageResolverFactory. See the JavaDoc for details. The Starter Kit comes with the StarterkitPropertyLanguageResolverFactory implementation that determines the language to check from the "lang" and "country" properties of the document.

@@ -1,0 +1,5 @@
+
+
+The CoreMedia API allows the construction of declarative queries to the repository (see Section 4.2.5). It is not possible to reconstruct the dependencies of a query result. This means that no pages containing query results can be stored in the cache or updated correctly.
+
+Similar to the method described in Section 4.5.3 you can execute the query in a template marked as non-cacheable and compose the result page from fragments from the cache.

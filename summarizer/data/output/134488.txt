@@ -1,0 +1,5 @@
+
+
+The dbindex utility is for creating an index over the folder structure of your CoreMedia CMS repository. This index will enhance the speed of a query using the descendantOf criterion. However, maintaining this index may affect the performance of the server, especially if you restructure large folders frequently. There is no need to create the index if descendantOf queries are used rarely or the folder tree is small.
+
+You cannot access the CoreMedia CMS repository for some minutes after start of the utility. 

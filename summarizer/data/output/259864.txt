@@ -1,0 +1,5 @@
+
+2#
+Enter the destination directory and click Next.
+
+The installer installs the files and you you are finished with the installation.

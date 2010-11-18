@@ -1,0 +1,27 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the name of the PostCondition 
+
+description 
+
+CDATA 
+
+#IMPLIED 
+
+a textual description of the verified condition

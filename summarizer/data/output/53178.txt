@@ -1,0 +1,20 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+documentVariable 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the variable that contains the checked-out document(s)
+

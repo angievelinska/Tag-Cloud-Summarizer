@@ -1,0 +1,3 @@
+
+
+The folders of the CoreMedia repository contain named documents and sub-folders. The resources contained are also known as children of the folder; each resource apart from the root directory lies in exactly one folder (or in the archive). The folder where a resource lies is obtained with the getFolder method of the hox.corem.servlets.Resource class:

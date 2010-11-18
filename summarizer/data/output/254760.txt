@@ -1,0 +1,19 @@
+
+
+The CoreMedia Search Engine is a FAST installation with CoreMedia specific adaptations for content processing. It maintains an index and provides full-text search capabilities. The CoreMedia CMS is delivered with two feeder components, which can be used to feed the Search Engine.
+
+The CoreMedia Content Server contains the Search Engine Feeder, which sends documents to be indexed to the Search Engine. This makes it possible to search for documents in the CoreMedia Editor, CoreMedia WebEditor and custom content applications. 
+
+
+Section "Search Engine Integration" describes the concept of the integration.
+Section describes the operation of the Search Engine Feeder.
+Section describes the configuration of the Search Engine Feeder.
+Content applications often require search functionality not only for single documents but for content beans of a Content Application Engine. The CoreMedia CAE Feeder makes content beans searchable by sending their data to the Search Engine, which adds it to the index. 
+
+
+The Section "CAE Feeder" of the "Content Application Engine" chapter in the CoreMedia Content Applications Developer Manual describes the concepts and usage of the CoreMedia CAE Feeder. 
+Section "CAE Feeder" describes the administration and operation of the CAE Feeder.
+
+The index of the Search Engine contains FAST documents, which carry unique String identifiers. A search returns the documents that match a given query. The term document in this context refers to a FAST document. When using the Search Engine Feeder, a FAST document represents a CoreMedia document. When using the CAE Feeder a FAST document represents a content bean. Multiple Search Engine Feeders and CAE Feeders can use the same Search Engine but require separate so-called collections. A collection groups documents in the index of the Search Engine. Searches use a collection to retrieve results for the specific application.
+
+A FAST document consists of several fields that are configured in the FAST index profile. The CoreMedia Search Engine comes with a default index profile, which can be used for both the Search Engine Feeder and the CAE Feeder. The FAST Configuration Guide describes how to customize the index profile for your needs. Note, that some fields of the index profile are required for the operation of the Search Engine Feeder and CAE Feeder. See the comments in the default index profile for a description of required fields.

@@ -1,0 +1,26 @@
+
+
+All workflow plug-ins can be executed in the Workflow Server. While rights policies and remote action handlers are also executed on the client-side, they still should be coded according to the server-side rules in order to be executable everywhere. In the following, we will list the restrictions that apply when programming code for the Workflow Server.
+
+Limitations of the API
+
+The main restriction arises from the fact that the server calls workflow plug-ins in the context of a transaction. In the Workflow Server, one transaction may write the variables of at most one process and its tasks. Accessing multiple processes, even if they are instances of the same definition, is not allowed. All server-side plug-ins are passed a workflow object in the signature of their main business methods. It is this workflow object that should be read or possibly modified by the plug-in.
+
+There are also some parts of the API that are not supported. Normally, these parts are not needed for writing plug-ins.
+
+No rights checks are performed when writing workflow variables. This ensures compatibility with the old WfAPI. The AccessControl service is still available without restrictions.
+When opening lightweight sessions by means of Connection.login(...), these sessions will have no influence on the objects of the workflow repository. This is because the plug-in is already running inside a transaction whose owner cannot be changed later on.
+No state modifying operations like accept() or suspend() are permitted. This is because server-side plugins are typically executed exactly during such state transitions and state transitions cannot be nested.
+Worklists are unavailable.
+Workflow repository events are not currently delivered inside the workflow server. Already adding a listener results in an exception. Only events regarding content and users are delivered. However, even such listeners should not normally be used, because plug-ins are supposed to terminate quickly without waiting for external conditions.
+As a consequence of missing events, your own cache entries should only access objects of the content and user repositories. When accessing workflow objects, no invalidations will be generated, resulting in outdated cache entries later on.
+
+General Remarks
+
+A plug-in should not engage in user interactions. It may still connect to external processes, for example when sending a mail message or when accessing an external database, but it should not freeze when a user does not respond. 
+
+A plug-in should be able to complete without requiring progress other parts of the workflow in order to avoid potential deadlocks.
+
+In order to resolve concurrent accesses to shared data, the server may restart a transaction. This may also happen during a system failure, but that is far less likely. In any case, a restart amounts to a repeated execution of your plug-in. Therefore your plug-ins should be robust to handle such a situation. Usually expressions, right policies, and performers policies do not result in side effects, so that it is irrelevant whether they are executed once or twice, but action are a more difficult matter.
+
+Finally, keep in mind that your plug-in will run in a server with an expected uptime of weeks or months. Therefore, any memory leak should be avoided. Preferably, your plug-ins do not use mutable fields except those that are used for configuration and they do not use mutable static fields at all. When you create own threads, make sure that they are guaranteed to terminate. When you use system resources like sockets or file handles, make sure they are released sooner rather than later.

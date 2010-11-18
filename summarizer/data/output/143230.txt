@@ -1,0 +1,3 @@
+
+
+This manual is intended for developers, who want to create own workflow definitions or who want to program own extensions to the workflow system. You will find further information on administration of the workflow system in the CoreMedia Workflow Server section of the Administration Manual. Additional information on the usage of the predefined workflows can be found in the User Manual.

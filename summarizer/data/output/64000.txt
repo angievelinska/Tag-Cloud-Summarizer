@@ -1,0 +1,3 @@
+
+
+Please keep in mind, that the databases and application servers have only been tested in CoreMedia compliant operating environments and therefore are only approved on these platforms. 

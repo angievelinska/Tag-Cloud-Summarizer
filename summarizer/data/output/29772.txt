@@ -1,0 +1,33 @@
+
+
+Configure Event Logging
+
+The CoreMedia SCI Installer does not automatically enable service event logging on Windows hosts. The CoreMedia component events originate from log events fired inside the component. There are two types of logging mechanism used in CoreMedia components:
+
+
+
+CoreMedia Logs (hox.log.Log) 
+
+
+Apache Log4J (org.apache.log4j.Logger). 
+
+Depending on these two types, two different configurations are necessary.
+
+CoreMedia Log
+
+The following CoreMedia components use CoreMedia logs:
+
+
+
+CoreMedia Content and Live Server
+
+
+CoreMedia Workflow Server
+
+
+CoreMedia Watchdog 
+
+
+CoreMedia Importers
+
+To configure Windows event logging a Win32EventLogAction class must be configured as log action in the properties/corem/<component>.properties file:

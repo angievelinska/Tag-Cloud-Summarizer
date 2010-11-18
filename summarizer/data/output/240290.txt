@@ -1,0 +1,10 @@
+
+
+CoreMediaCMS offers different possibilities to search for content.
+
+Search and replace in the current field of a document.
+Searching with the query and the advanced query
+Searching with the Global-search-and-replace workflow.
+Searching with the full-text search.
+
+These four search facilities have all their advantages and disadvantages, depending on the search task. The next table, compares the search facilities which will be described in the following subchapters.

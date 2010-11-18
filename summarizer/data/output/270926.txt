@@ -1,0 +1,45 @@
+
+
+When integrating portlets into a CoreMedia Lightweight Portal, the following roles can be distinguished:
+
+Administrator
+Developer
+Technical Editor
+Page Editor
+
+Administrator
+
+Administrators have access to the file system where the software is installed, and have access to CMPortletDefinition and CMPortletInstance documents in the content repository. They are responsible for
+
+installing the CoreMedia Lightweight Portal software
+installing portlet applications
+making portlets available for the technical editors
+
+The associated tasks are described in this manual:
+
+Installation in the Starter Kit, and parts of Integration into a non-Starter Kit project
+Deploying a Portlet Application, and Deployment Blueprint
+
+By registering a portlet application, the CMPortletDefinition and CMPortletInstance documents referring to the portlet application are created in the content repository. The administrator is responsible for keeping the registration in sync with the portlet applications that are actually available from all Content Application Engines in the content management and live environment.
+
+Therefore, the administrator should be the only role that has CREATE, MODIFY, DELETE and PUBLISH rights on the CMPortletDef document type and the /System/portlets/definitions repository path. In order to register the default instances, the administrator should also have MODIFY, DELETE and PUBLISH rights on the CMPortletInst document type and the /System/portlets/instances repository path.
+
+Developer
+
+An HTML/CSS developer is responsible for integrating portlets into the site layout, by defining suitable templates. See Tag Library, for further details. Consult the Starter Kit manual on importing, assigning and editing CSS styles.
+
+A Java/Spring developer will be required if the CAE web application is not a pure Starter Kit webapp, primarily to make sure all portlet windows on a page are found in the page model. Consult Developer, for further details.
+
+Technical Editor
+
+The technical editor is responsible for configuring a portlet instance, within the limits offered by the portlet preferences. A default portlet instance is created when the portlet is registered by the administrator. The technical editor may modify this portlet instance, or create a new portlet instance referring to the same portlet definition.
+
+The technical editor therefore needs access rights on the CMPortletInst document type and the /System/portlets/instances repository path. He/she also needs READ rights on the CMPortletDef document type.
+
+In order to test the portlet, the technical editor should also have the rights to create a CMPortletWindow, at least on an unpublished sandbox page.
+
+Page Editor
+
+The page editor is responsible for placing portlet windows on pages. Each portlet window refers to a portlet instance provided by the technical editor or administrator.
+
+The page editor therefore needs access rights for the documents making up a page in the page editors area of responsibility, including the CMPortletWindow document type. The page editor should also have READ rights on all portlet related document types.

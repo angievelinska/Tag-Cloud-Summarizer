@@ -1,0 +1,18 @@
+
+
+The definition for the aggregation process in the file data-aggregator.xml conforms to the ordinary syntax for process definitions. It uses a number of specially designed actions that perform most of the actual work. The process definition is still very important, because it defines the overall control flow and provides a means to customize the process easily.
+
+Roughly, the standard aggregation process consists of the following parts:
+check for concurrently running processes,
+controlling the timing of the loop,
+importing logs,
+determining timing parameters for consolidation and aggregation,
+extending the dimension tables,
+consolidating and compressing log data,
+aggregating overlay reports,
+creating snapshots,
+aggregating permanent reports.
+
+Normally, you do not need to rewrite the concurrency check or the loop control. However, all other process parts may have to be extended, if you want to implement own reports. To this end, a few explicit custom sections are provided in the workflow definition. If you stick to these sections when changing the process definition, it will be easier for you to merge changes as the default process receives bug fixes or extensions. The start and the end of each custom section are marked with comments containing the pattern START CUSTOM SECTION and END CUSTOM SECTION, respectively.
+
+The individual sections will be described in the following.

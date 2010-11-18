@@ -1,0 +1,6 @@
+
+
+3* The next window asks you to finish the installation.
+7#
+Click [Finish] to finish the installation of the CoreMedia Workflow Server.
+

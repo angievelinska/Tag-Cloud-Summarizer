@@ -1,0 +1,27 @@
+
+
+  
+
+Class 
+
+Description 
+
+JCheckboxBooleanEditor 
+
+A check box. "True" is shown as checked, "False" as unchecked.  
+
+ComboBoxDocumentTypeEditor 
+
+A combo box with the allowed document types. 
+
+GroupChooserEditor 
+
+A window which shows the available groups. 
+
+ResourceChooserEditor 
+
+A resource chooser window, like the one in the editor window. 
+
+UserChooserEditor 
+
+A window which shows the available users.

@@ -1,0 +1,13 @@
+
+
+A base folder defines the publication target of the contained resources. Hence, it determines the Master Live Server to publish the data to. As long as you don't use multi-site management, the root folder is the base folder of all resources. Therefore, only one publication target for all data exists in your CoreMedia system and you don't have to think about top-level folders; it doesn't affect your daily work.
+
+It's different, if CoreMedia CMS is configured for multi-site management. In this case, each folder below the root folder is a base folder for the contained resources. The root folder is only base folder for the directly contained documents. I.e. each of these folders might have an own publication target. So, you might manage the data for the internet and intranet on the same CoreMedia CMS avoiding all mixing.
+
+A published base folder with an own publication target has the   icon. In order to strictly separate the data of different base folders, the following actions will be prevented by the system.
+
+Creating links between different base folders.
+Moving a base folder into another base folder.
+Moving a resource from one base folder into another base folder.
+
+If you try to achieve such an action, an error message will show up.

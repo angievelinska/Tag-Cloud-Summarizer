@@ -1,0 +1,12 @@
+
+
+ Component Description Web application template and extensions 
+
+Installs a CAE web application template as a starting point for your own CAE development. As an option you can select extensions for the CAE. It it possible - but not always useful - to install as many extensions as required with the same CAE web application template.  The following extensions are available:
+
+Tracking Analytics Extension which is mandatory to track users on your website with the Analytics Engine. Read the Content Applications Developer Manual for details.
+In-Site Analytics which you need to show In-Site Analytics overlays in your CAE preview. Read the Analytics Developer Manual for details.
+Portal Extension for your portal applications with the CAE. Read the Content Applications Developer Manual for details.
+Editing Services for JSF Extension for your Editing Services and PBE applications with the CAE. Read the Content Applications Developer Manual for details.
+Http Cache Extensions for your Http Cache applications. Read the Content Applications Developer Manual for details. Proactive Engine application template Installs a ProActive Engine as a template for your own business code integration. Read section and the Content Applications Developer Manual for details. CAE Feeder template Installs a CAE Feeder as a template for your own feeding application. Read section and section and the Content Applications Developer Manual for details. Web Services Engine Installs a Web Services Engine. Read the Delivery Developer Manual for details. Install sample source code Installs sample source code for the CAE.
+

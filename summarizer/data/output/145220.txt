@@ -1,0 +1,46 @@
+
+
+ 
+
+Parameter 
+
+Example 
+
+Description 
+
+running 
+
+true 
+
+Shows the running status of PADS. 
+
+usedMemory 
+
+[58325937, 66550112] 
+
+Shows the used and reserved memory of PADS respectively. 
+
+Transient cache size 
+
+4510 [5000/5500] Shows the number of values in the in-memory value cache. The values in brackets are the minimum and maximum cache boundaries. The number of values in the cache doesn't fall below the minimum cache boundary after it has reached it the first time. 
+
+Running computations 
+
+1 running computation 
+
+Shows the values which are computed at the moment. 
+
+Detected dead links 
+
+1 
+
+Number of dead links. Dead links point from existing and needed values to missing values. They arise from a changed configuration (e.g. a PageLinkPredicate) or from errors during the computation of values. A computation is rescheduled for each dead link. 
+
+Updates pending on database 
+
+130 Number of pending database transactions to update cached values. 
+
+Deletions pending on the database 
+
+0 Number of pending database transactions to delete cached values.
+

@@ -1,0 +1,73 @@
+
+
+The previous diagram shows the structure of the staging tables. All staging tables start with the prefix Staging.
+
+As a common feature, all tables contain an eventTime column. This is the exact time when something happened that should be considered by the CoreMedia Analytics Engine, for example a page view or a search using the FAST search engine.
+
+Generally, the staging tables are very short lived. Sometimes a values survives two iterations of the aggregation process, but rarely more. If you can accept the loss of a certain amount of analytics data, consider putting the staging table into a table space that is faster, but less reliable compared to the other table.
+
+StagingPageViews
+
+Each row in this table signals that a rendering request was completed by a Content Application Engine. While the generated ouptut might not always be a 'page' of some sort, this is the most common use case.
+
+The httpRequest denotes the path component of the request URI.
+The queryString denotes the query component of the request URI.
+The sessionId identifies the session in which the page was requested.
+The userName identifies the user whoc requested the page.
+The ip column takes the IP address of the requesting client.
+The browser identifies the user agent used to display the page.
+If present, the referrer denotes the page that referred to the rendered page. The referrer is determined by inspecting the HTTP header.
+The referrerSearchPhrase is extracted from the referrer string. If present, it represents the search phrase that made the current page come up as a result.
+The contentSize is the size of the generated page in bytes.
+The columns pageObject, pageView and pageLocale jointly identify the rendered page. The pageSite column helps in extending the object dimension if the pageObject refers to a hitherto unknown object.
+The column multiplier denotes the sampling multiplier in effect when this event occurred. The multiplier can be used to correct statistics for the true number of events.
+
+StagingContextViews
+
+Each row in this table signals that a part of a page was renderer successfully. The page part is identified by its context.
+
+The columns sessionId, pageObject, pageView, pageLocale and pageSite match the identical columns from the StagingPageViews table.
+The pageContext column identifies the rendered page part.
+The column multiplier denotes the sampling multiplier in effect when this event occurred. The multiplier can be used to correct statistics for the true number of events.
+
+StagingTransitions
+
+When a page view results from a click on another page that is also rendered by the same content application, this is considered a transition. In some cases, the Content Application Engine can determine the source page of a transition. This enables the Content Application Engine to record a transition event instead of a page event.
+
+The columns pageObject, pageView, pageLocale and pageObject are replaced by the columns targetObject, targetView , targetLocale and targetObject.
+The columns sourceObject, sourceView, sourceLocale and sourceObject identify the page from which the transition originated.
+The column sourceContext identifies the part of the page from which the transition originated.
+The column multiplier denotes the sampling multiplier in effect when this event occurred. The multiplier can be used to correct statistics for the true number of events.
+
+StagingTransitionHints
+
+Often, it is not possible to identify the page that caused a transition while rendering the target page. Only the client can send the actual click event. In this case, the page view must be completed by a transition hint event that arrives asynchronously. Later stages of the report aggregation process consolidate hints and page views into the actual transition events.
+
+The sessionId identifies the session in which the page was requested.
+The columns targetObject, targetView, targetLocale and targetObject identify the target page.
+The columns sourceObject, sourceView, sourceLocale and sourceObject identify the page from which the transition originated.
+The column sourceContext identifies the part of the page from which the transition originated.
+
+StagingInternalSearches
+
+Each entry in this table represents one search request to the CoreMedia Search Engine.
+
+The column searchCollection identifies the set of documents in which the search was performed.
+The column searchTerm represents the query that was transmitted to the CoreMedia Search Engine. Individual word are separated by spaces.
+
+StagingRobotAccesses
+
+Each entry in this table represents a robot site view.
+
+
+
+The column site identifies the requested site.
+
+
+The column robotId identifies the robot.
+
+
+The column eventCount represents how often the robot requested the site.
+
+
+

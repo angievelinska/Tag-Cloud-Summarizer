@@ -1,0 +1,17 @@
+
+
+For safety, every significant change you make to a document can be saved. You have the following possibilities of doing this:
+
+
+
+Select File|Save from the menu bar.
+
+
+Click  on the tool bar.
+
+
+Press the key combination <Ctrl>+<s>.
+
+The document is now saved with all changes. You do not need to check in a document to save it. You can repeat this procedure as often as desired.
+
+Additionaly, you can define an interval for automatic saving using the menu item Options|Autosave interval.

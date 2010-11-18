@@ -1,0 +1,5 @@
+
+
+AddWarningTimerHandler
+
+This timer handler adds a timer expiration warning to a process or task instance (see Image 4.4.2b).

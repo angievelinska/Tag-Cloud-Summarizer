@@ -1,0 +1,4 @@
+
+
+  Attributes  Description  initialContextFactory  Name of the initial context factory class of the JMS provider.  providerUrl  The URL to access the JMS provider.  connectionFactory  Name of the connection factory class of the JMS provider.  topic  To receive events from a topic, you need to enter the name of the topic. Don't use topic together with attribute queue.  queue  To receive events from a queue, you need to enter the name of the queue. Don't use queue together with attribute topic.  clientId  This attribute is needed for a durable topic subscription if the used connection factory does not already set a client identifier.  subscription  If you want to use a durable topic subscription, this attribute needs to be set to the subscription name. 
+

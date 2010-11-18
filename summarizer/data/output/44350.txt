@@ -1,0 +1,9 @@
+
+
+As already mentioned, the ADS keeps record of contents of the repository accessed by a template when calculating a page. In the following, the dependency management is explained in detail. This should help you to keep the dependencies between pages and the repository under control.
+
+
+In a development installation, you should enable the ADS admin pages (by moving the directory admin out of the WEB-INF folder). The admin pages contain a cache browser that enables you to see and traverse the dependency graph. Starting from the page cache listing, you can jump into and navigate inside the dependency graph by following the arrow symbol to the left. 
+
+
+Two types of dependency are distinguished: basic and derived dependencies.

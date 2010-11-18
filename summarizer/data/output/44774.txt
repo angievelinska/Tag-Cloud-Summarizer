@@ -1,0 +1,3 @@
+
+
+Configuration of the transformer is done in the importer configuration file. All properties relating to transformers have hierarchical names and begin with the prefix import.transformer, e.g.

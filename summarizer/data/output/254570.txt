@@ -1,0 +1,11 @@
+
+
+Now you are prompted for the destination directory etc. as described in the "General Installation Information" chapter. Afterwards, configure the ADS.
+3#
+If you want to set up the ADS now, click [Yes]. If you want to configure later manually, click [No].
+
+3* If you choose [No], make sure to do the basic configuration in the corresponding property files in ./properties/corem later.
+3* If you decide to configure right now, configure component properties via dialog boxes. For a detailed description of the properties see Chapter 5. All path information given is relative.
+
+3* The next window configures the server.xml file and will only open up if you install Tomcat with the Active Delivery Server.
+

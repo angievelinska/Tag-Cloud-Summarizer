@@ -1,0 +1,28 @@
+
+
+The renderPageName.jsp uses plain JSF so far. Now it's time to start using some of the Editing Services for JSF components. The first step is to import the es taglib by adding the following line to the JSP's prologue:
+
+<%@ taglib
+    uri="http://www.coremedia.com/jsf/editing-services" 
+    prefix="es"%>
+
+The next step is to set up an additional resource bundle for localization. This requires to write some properties files and to do some configuration. The easiest way is to put your properties files in the WEB-INF/classes directory and to modify the global message source's baseName property by defining a bean of type com.coremedia.objectserver.util.ListPropertyCustomizer and to customize the basenames property of the global messageSource bean. This is done in the WEB-INF/spring/editing-customizations.xml spring beans file of the cae/editing example.
+
+In order to display some localized information such as a greeting and the current document's content type the <es:label>-tag can be used as shown below. The localizer attribute must be a valid JSF EL expression that evaluates to a bean of type  com.coremedia.editing.localization.LocalizedLabelFactory. The value attribute defines the value to be localized and rendered.
+
+  <es:panelGroup element="div" styleClass="CMContentPane">
+    <h:panelGroup>
+      <es:label localizer="#{keyLocalizer}" 
+      value="editing.example.greeting" mode="text"/>
+      <es:label styleClass="CMLabel" value="#{currentUser}"/>
+      <es:label localizer="#{keyLocalizer}" 
+      value="editing.example.doctype" mode="text"/>
+      <es:label styleClass="CMLabel" value="#{foodOfTheDay.type}"/>
+    </h:panelGroup>
+    <h:panelGroup>
+      <es:label styleClass="CMLabel" 
+      value="#{foodOfTheDay.type.descriptorsByName.name}"/>
+      <h:outputText value="#{foodOfTheDay.properties.name}"
+      styleClass="CMLabel"/>
+    </h:panelGroup>
+  </es:panelGroup>

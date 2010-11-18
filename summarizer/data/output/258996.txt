@@ -1,0 +1,8 @@
+
+
+A state model definition names a set of variables. The variables represent report parameters which users can manipulate in order to change the rendered report data subsection.
+
+Variable definitions have a name and a type. The name identifies the variable within the scope of the report definition. The variable type is determined by the Java class. Some variables might require properties to be set to be initialized correctly.
+
+The following state model variable types are predefined (see also the Spring bean definition for each Variable Type in the framework configuration file analytics-config-beantypes.xml in cap-analytics-config.jar):
+

@@ -1,0 +1,5 @@
+
+
+Naming the document type
+
+Every document type has a unique name, specified by the attribute Name. This name will be used by the Content Server to define unique data base identifiers like the table name, primary key constraint name, foreign key constraint name and index names. The name has a maximum length of 11 characters, is not case-sensitive and can contain letters, numbers, underscore and dash but no umlauts or other special characters ("§", " &", ...). For a localization of document type and property names see the Editor Developer Manual.

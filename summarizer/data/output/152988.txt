@@ -1,0 +1,5 @@
+
+
+Enable Searching
+
+Configure the location and collection of the CoreMedia Search Engine as described above. Set the property cap.server.search.enable to the value true to enable searching.

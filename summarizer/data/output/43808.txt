@@ -1,0 +1,3 @@
+
+
+Often, the linked documents also have to be inserted into the page (possibly displayed in a different way). The following code gives an example.  

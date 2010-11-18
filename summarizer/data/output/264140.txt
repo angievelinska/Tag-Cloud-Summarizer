@@ -1,0 +1,3 @@
+
+
+If you want to install the CoreMedia Content Management Server as a Single-Site or Multi-Site system, proceed as follows:

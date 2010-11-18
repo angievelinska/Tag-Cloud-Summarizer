@@ -1,0 +1,3 @@
+
+
+The referrer report tables are used for long term tracking of external referrers that direct traffic at the local site. Normally values that are written to these report tables will never be changed again.

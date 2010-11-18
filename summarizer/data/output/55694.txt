@@ -1,0 +1,35 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+variable 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of a new variable that iterates over all members of the aggregate 
+
+aggregate 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of an aggregation variable 
+
+index 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the name of a new integer variable that is set to the current index in the aggregate during the iteration

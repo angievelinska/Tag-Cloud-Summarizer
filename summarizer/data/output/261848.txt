@@ -1,0 +1,28 @@
+
+
+The approved Java versions for CoreMedia CMS are: Product Certified Version Supported Version Solaris
+SPARC 
+
+6.0 Update 4+ 
+
+1.5.0_13+ 
+
+Solaris x86
+
+
+ 
+
+6.0 Update 4+ 
+
+1.5.0_13+ AIX 
+
+6.0 Update 4+  Linux 
+
+6.0 Update 4+ 
+
+1.5.0_13+ Windows 
+
+6.0 Update 4+ 
+
+1.5.0_13+
+

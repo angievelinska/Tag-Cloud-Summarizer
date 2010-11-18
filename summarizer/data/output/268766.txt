@@ -1,0 +1,33 @@
+
+
+CoreMedia Analytics consists of a number of components that must be considered when setting up a watchdog or a set of watchdogs.
+
+The Analytics Database can be checked using a <DB> watchdog action.
+The Workflow Server that hosts the Data Aggregator can be checked using a <WorkflowServerQuery>.
+The database of the Workflow Server can also be checked using a <DB> watchdog action.
+The Data Aggregator itself is best checked with a <ProcessStatus> action like the following:
+
+  <ProcessStatus name="WDA-ProcessStatus"
+    url="http://localhost:44450/workflow/ior"
+    user="admin"
+    password="admin"
+    processName="DataAggregator"
+    maxCount="999999"/>
+
+This ensures that at least one Data Aggregator process is running without escalations.
+In-Site Analytics is best checked by the <Http> action, ensuring that the web application is still up.
+Tracking is also best checked by the <Http> action.
+The Analytics Dashboard can also be checked by the <Http> action, for example by retrieving a standard XML report.
+
+  <Http name="PD-Http" 
+    url="http://localhost:8001/analytics/dashboard/report/
+         DashboardViewDefinition.defaultView/
+         DashboardViewDefinition.defaultView.performance/
+         .timeResolution/h/.timeRange/r1dByh/
+         session/false/format/xml"
+    pattern=".*&lt;entries&gt;.*&lt;/entries&gt;.*"
+    user="admin" password="admin"/>
+
+Note: the line breaks in the previous code fragment must be removed. Adapt the user name and password as needed or choose any other XML report. Adapt the regular expression in the pattern attribute to check more than the elementary presence of the report in XML format. If the chosen report is expected to be longer than 65536 characters at times, increase the maxSize attribute of the <Http> action. Note that HTTP basic authentication must not be disabled in analytics-authentication.xml.
+
+The file properties/corem/watchdog.xml contains example watchdog scripts and probedog actions. See section for more details on setting up a watchdog.

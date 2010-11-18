@@ -1,0 +1,111 @@
+
+
+This section describes how the user information handling is implemented and which user attributes are supported by CLiP.
+
+Portlets commonly provide content personalized to the user making the request. This may require access to information about the user such as his name, email or phone. The portlet application defines the user attributes it uses in the deployment descriptor (portlet.xml).
+
+The portlet specification defines that the user attribute names defined in a portlet deployment descriptor must be mapped to the user attribute names offered by the runtime environment.
+
+Supported Attribute Names
+
+For filtering and mapping the user attribute names during deployment CLiP provides the interface com.coremedia.cae.portletcontainer.repository.UserAttributeFilter where you can specify the supported attribute names and the mappings on them.
+
+Currently CLiP supports the user attribute names recommended by the Java Portlet Specification v2.0. These attribute names are derived from the Platform for Privacy Preferences 1.0 (P3P 1.0) Specification by the W3C.
+
+Attribute name
+
+user.bdate.ymd.year
+user.bdate.ymd.month
+user.bdate.ymd.day
+user.bdate.hms.hour
+user.bdate.hms.minute
+user.bdate.hms.second
+user.bdate.fractionsecond
+user.bdate.timezone
+user.gender
+user.employer
+user.department
+user.jobtitle
+user.name.prefix
+user.name.given
+user.name.family
+user.name.middle
+user.name.suffix
+user.name.nickName
+user.login.id
+user.home-info.postal.name
+user.home-info.postal.street
+user.home-info.postal.city
+user.home-info.postal.stateprov
+user.home-info.postal.postalcode
+user.home-info.postal.country
+user.home-info.postal.organization
+user.home-info.telecom.telephone.intcode
+user.home-info.telecom.telephone.loccode
+user.home-info.telecom.telephone.number
+user.home-info.telecom.telephone.ext
+user.home-info.telecom.telephone.comment
+user.home-info.telecom.fax.intcode
+user.home-info.telecom.fax.loccode
+user.home-info.telecom.fax.number
+user.home-info.telecom.fax.ext
+user.home-info.telecom.fax.comment
+user.home-info.telecom.mobile.intcode
+user.home-info.telecom.mobile.loccode
+user.home-info.telecom.mobile.number
+user.home-info.telecom.mobile.ext
+user.home-info.telecom.mobile.comment
+user.home-info.telecom.pager.intcode
+user.home-info.telecom.pager.loccode
+user.home-info.telecom.pager.number
+user.home-info.telecom.pager.ext
+user.home-info.telecom.pager.comment
+user.home-info.online.email
+user.home-info.online.uri
+user.business-info.postal.name
+user.business-info.postal.street
+user.business-info.postal.city
+user.business-info.postal.stateprov
+user.business-info.postal.postalcode
+user.business-info.postal.country
+user.business-info.postal.organization
+user.business-info.telecom.telephone.intcode
+user.business-info.telecom.telephone.loccode
+user.business-info.telecom.telephone.number
+user.business-info.telecom.telephone.ext
+user.business-info.telecom.telephone.comment
+user.business-info.telecom.fax.intcode
+user.business-info.telecom.fax.loccode
+user.business-info.telecom.fax.number
+user.business-info.telecom.fax.ext
+user.business-info.telecom.fax.comment
+user.business-info.telecom.mobile.intcode
+user.business-info.telecom.mobile.loccode
+user.business-info.telecom.mobile.number
+user.business-info.telecom.mobile.ext
+user.business-info.telecom.mobile.comment
+user.business-info.telecom.pager.intcode
+user.business-info.telecom.pager.loccode
+user.business-info.telecom.pager.number
+user.business-info.telecom.pager.ext
+user.business-info.telecom.pager.comment
+user.business-info.online.email
+user.business-info.online.uri
+
+During deployment user attributes names specified in the portlet.xml are mapped to the names supported by CLiP. At runtime only those user attributes whose names could be mapped during deployment can be accessed by the portlet.
+If a user attribute name could not be mapped it is left out and is not accessible at runtime.
+
+Handling User Information at Runtime
+
+To retrieve user attributes at runtime we need access to the user and its detail information.
+
+Retrieving the User
+
+For extracting the user and its detail information from the http request CLiP provides the com.coremedia.cae.portletcontainer.sun.UserExtractor interface. It defines methods that expose the user's detail information. Through the method getUserInfo(HttpServletRequest, List<CMPortletUserAttribute>) the attributes of the user can be accessed.
+
+Retrieving the User Attributes
+
+For accessing the user attributes of a logged in user a mapping from the supported user attribute names to the attributes of the user at runtime must be specified. A UserExtractor uses a com.coremedia.cae.portletcontainer.UserAttributeMapper to retrieve the user attributes from a user which are supported by CLiP. The UserAttributeMapper interface defines a method for extracting an attribute from a user by using a supported user attribute name. A class that implements this interface must provide a mapping from the user attribute names supported by CLiP to the attributes of the runtime user.
+
+The UserExtractor and UserAttributeMapper can be set and configured in the starterkit-portletcontainer.xml.
+

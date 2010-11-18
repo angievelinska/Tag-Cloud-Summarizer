@@ -1,0 +1,7 @@
+
+
+You can use well known CSS syntax to define your own style groups and styles. Nevertheless, the RichText pane of the CoreMedia Editor does not support the display of all possible CSS formats. Some formats will be displayed in a WYSIWYG style (e.g. bold, italic, understroke ...) others will be displayed in a symbolic way (color, value of a Style group etc.). The actual layout of the text depends on the definitions and structure of the generated web site and can only be seen in the HTML-preview of the browser. In the WebEditor all CSS-styles supported by the Internet Explorer will be shown in a WYSIWYG manner. Style groups will be displayed as combo boxes in the tool bar and will be added to the appropriate attribute editors. Styles belong to a style group and will be shown as new options of the respective combo box.
+
+Define new style groups
+
+A style group is a list of CSS style classes, that share a common prefix ending with "--". E.g. [font-name--arial, font-name--times] is a style group font-name consisting of the two styles classes font-name--arial and font-name--times. You can limit the usage of your style group to single elements by adding the name of the element in front of the style group separated by a dot.

@@ -1,0 +1,3 @@
+
+
+With the publish tool you can publish resources.

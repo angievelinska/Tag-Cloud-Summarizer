@@ -1,0 +1,17 @@
+
+
+Load an image
+
+To integrate new images from the file system into image documents load the images to the CoreMedia SCI.
+
+To do this, proceed as follows: 
+Select the document, in which the image should be loaded.
+Open the document in the Overview window.
+Check out the document.
+Select the field containing the BLOB.
+Open the dialog for loading, by means of one of the following methods: 
+
+Select Load from the menu Binary Data or from the Context menu.
+Click on the appropriate symbol on the tool bar.
+
+A dialog box opens.

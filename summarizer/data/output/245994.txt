@@ -1,0 +1,7 @@
+
+
+This section presents a meta template for a link list property editor. Another meta template is needed for the corresponding backing Bean definition.
+
+A link list property editor is similar to the rich text property editor introduced in the previous section. It contains of a property label, a property toolbar, and the actual property editor. The property toolbar is again model-driven, only that the backing Bean linkListToolbar is used.
+
+The actual property editor is a <h:dataTable>, which uses two custom backing Beans. One backing Bean, referred to as ${linkListTable} in the following meta template, is the table component for the desired link list property and keeps track of the current selection, which is needed by the action from the linkListToolbar. The other backing Bean, ${listListController}, is a JSF-specific controller that adds helper methods to allow easy access to the selection from JSF. For further information about table backing Beans, see section tables.

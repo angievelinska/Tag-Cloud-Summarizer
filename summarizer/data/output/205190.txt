@@ -1,0 +1,23 @@
+
+
+Deploy the rights policy
+
+You have to deploy the rights policy to the server and client. Proceed as follows.
+
+Deploy to the Workflow Server
+Stop the Workflow Server with cm workflowserver stop
+Copy the rights policy .class-file with the complete path to <WorkflowserverHome>/classes or copy the rights policy as a jar-file to <WorkflowserverHome>/lib.
+Start the Workflow Server with cm workflowserver start
+Upload the modified Workflow definition with cm workflowupload -u admin -p <PassWord> -file <WorkflowDefinition>.xml
+
+Deploy to the client
+
+If you use the CoreMedia Editor via WebStart read section 4.5 "Installing Java Web Start" in the Administration and Operation Manual. There you will learn how to deploy CoreMedia Editor extensions via WebStart. If you use the CoreMedia Editor without WebStart proceed as follows:
+Stop the CoreMedia Editor.
+Copy the rights policy .class -file with the complete path to <EditorHome>/classes or copy the rights policy as a jar-file to <EditorHome>/lib.
+Start the CoreMedia Editor.
+
+Defining the policy in the workflow definition
+
+Defining your own rights policy in the workflow definition is quite simple. You only need to add the policyClass attribute to the <Rights> tag as shown in example.
+

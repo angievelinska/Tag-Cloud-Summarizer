@@ -1,0 +1,3 @@
+
+
+Within this element of the XML file, the document view in the query window is configured. The element has no attributes.

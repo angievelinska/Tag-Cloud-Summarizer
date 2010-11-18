@@ -1,0 +1,27 @@
+
+
+Backup
+
+Before performing a backup, stop all connected feeding applications such as Search Engine Feeders and CAE Feeders. See the FAST Operations Guide for backup instructions.
+
+Reducing the latency of indexing
+
+By default, a change applied to a document appears in the search after  ~90s. As described in the FAST Operations Guide, section "Reducing Indexing Latency", you can reduce this time in the file searchengine/etc/config_data/RTSearch/webcluster/rtsearchrc.xml.
+
+For FAST InStream 4.3:
+
+Set the property flushToDiskInterval to a minimum value of 10. 
+
+Thereby, documents are persisted as FiXML after 10 seconds at the latest. This might lead to a fragmented FiXML-file containing only a few documents, but this is no problem if you have less than 100000 documents. 
+
+Set the property desiredFreshness to a minimum value of 10.
+
+Thereby, the indexer starts indexing after 10 seconds at the latest.
+
+Keep in mind, that both values are minimum settings! In the worst case, indexing will start after 20 seconds. Assuming, that the generation of the first index-partition also takes 20 seconds, you are left with a latency of 40 seconds. 
+
+For FAST ESP 5.1
+
+Set the property latency to the value low.
+
+You have to add the latency of the Feeder to the FAST latency. You can configure the Search Engine Feeder latency which defaults to 10 seconds in the file properties/corem/feeder.xml using the attribute documentDelay of the element <Feeder>.

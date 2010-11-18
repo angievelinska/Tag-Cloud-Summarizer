@@ -1,0 +1,69 @@
+
+
+Under some circumstances, you will need to write down a string representation of the identity of a bean, for example "the content bean for content 22". This is typically necessary in intermediary XML documents or when you want to refer to a bean in a HTML hidden input field.
+
+For this purpose, the CoreMedia Content Application Engine contains a generic id facility that allows to convert selected bean types to a string and back. The Id API basically consists of two methods #getId and #parseId in the class com.coremedia.objectserver.ids.IdProvider. Note that this is not an object serialization. This facility is only useful to capture an id of a stateless object that represents an external business entity, as outlined in ContentBeanPatterns. The default implementation comes with id support for content beans and blob properties. Other bean types can be supported by writing a new implementation of com.coremedia.objectserver.ids.IdScheme and plugging it into the id resolver in WEB-INF/spring/cae-idschemes.xml using a Customizer.
+
+Using Ids for Encoding Objects in Form Fields
+
+In order to encode an object id into a form field in a template, as well as to decode it back on a form submission, the Content Application Engine comes with a custom tag <cm:id> as well as an implementation of the java.beans.PropertyEditor interface that you can use in Spring to parse form fields back into bean references. A convenience method in ControllerUtils instructs Spring to do so.
+
+The following example shows how to encode the id of a bean feature into an HTML form which submits to an action enable:
+
+<form action="<c:url value="/servlet/enable"/>" method="POST" >
+ <input name="feature" value="<cm:id self="${feature}"/>"
+        type="hidden" />
+ <img src="<c:url value="/icons/enable.png" />"
+      onclick='this.parentNode.submit();' />
+</form>
+
+The form submission is handled by a command object and a corresponding Spring CommandController implementation:
+
+public class EnableCommand {
+  Feature feature;
+  public void setFeature(Feature feature) {
+    this.feature = feature;
+  }
+  public void perform() { ... enable feature ... }
+}
+
+The Form Controller instructs Spring to parse the form/command field "feature" into a Feature object using the IdProvider.
+
+public class EnableController extends AbstractCommandController {
+  IdProvider idProvider;
+
+  public void setIdProvider(IdProvider idProvider) {
+    this.idProvider = idProvider;
+  }
+
+  protected Object getCommand(HttpServletRequest request)
+     throws Exception {
+    return new EnableCommand();
+  }
+
+  protected void initBinder(
+      HttpServletRequest request,
+      ServletRequestDataBinder binder) throws Exception {
+    super.initBinder(request, binder);
+
+    // bind the "feature" property using the IdProvider
+    ControllerUtils.registerAsBean(
+      Feature.class, "feature", binder,
+      idProvider
+    );
+  }
+
+  protected ModelAndView handle(HttpServletRequest request,
+                                HttpServletResponse response,
+                                Object command,
+                                BindException errors) throws 
+                                Exception {
+    EnableCommand enableCommand = (EnableCommand)command;
+    enableCommand.perform();
+    return ControllerUtils.redirectTo(
+        enableCommand.getFeature());
+  }
+}
+
+Note that the controller must be mapped to the URI, enabled in the URI mapping in your project specific <myComponent>-controllers.xml, and requires to have the idProvider injected in order to parse the bean ids.
+

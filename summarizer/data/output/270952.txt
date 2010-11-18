@@ -1,0 +1,7 @@
+
+
+This chapter describes how a user of Clip can edit the settings and positioning of the portlets.
+
+Configuring Portlet Preferences describes how the portlet preferences can be edited using the EDIT mode or the CoreMedia Editor.
+Positioning Portlets describes how you can position portlets on your website.
+Window Controls describes how to add window controls to your portlet window.

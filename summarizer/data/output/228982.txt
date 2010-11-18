@@ -1,0 +1,5 @@
+
+
+Configure the Search Engine
+
+The file caefeeder.properties contains properties to configure how to connect to the CoreMedia Search Engine. This includes host name and ports of the installed Search Engine and the name of the target collection. Each feeding application needs a different target collection. Do not use the same collection for multiple instances of the CAE Feeder or the Search Engine Feeder of the CoreMedia Content Server. The following example configures the CAE Feeder to use the collection named caefeeder of the Search Engine running on the same host with default ports:

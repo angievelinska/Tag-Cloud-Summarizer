@@ -1,0 +1,16 @@
+
+
+Uploaders receive the generated values (e.g. pages). They can be attached directly to PADS or to a remotely running JmsReceiver (see Section). Two different uploader types are included in the distribution: 
+
+FileUploader 
+3* The FileUploader writes files into the the file system. 
+JmsUploader 
+3* The JmsUploader sends values to a Java Message Service (JMS) queue or topic. 
+
+The CoreMedia Developer Manual describes how to write and configure custom uploaders. 
+
+The FileUploader 
+
+The FileUploader writes files for generated values into a directory. With page generation one file is created for each page with a file path equal to the resource URI of that page. The FileUploader creates, deletes and overwrites files to reflect the current state of the repository. 
+
+The FileUploader is configured with the element FileUploader which allows the following attributes: 

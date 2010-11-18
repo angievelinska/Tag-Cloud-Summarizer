@@ -1,0 +1,24 @@
+
+
+The CoreMedia CMS is being used for developing content applications in various scenarios, including Web sites, where editorial content is presented to a large number of Web users.
+
+Recently, CoreMedia CMS is increasingly applied as a platform for intranets and within portal servers. Distributed and casual users cause an increasing need for content editing over the Web.
+
+In contrast to Web site projects where content is managed only by a small group of dedicated editors (not by the Web user), in an intranet or portal project each web user edits content and participates in content workflows.
+
+Therefore, a large number of users has to be able to edit CoreMedia resources and to participate in workflows using a Web front-end.
+
+This manual describes how to develop Web applications with the CoreMedia Web Application Extensions of the Active Delivery Server (WAGE, the G comes from the old name of the ADS, Generator), a set of building blocks for CoreMedia Web applications with resource editing and workflow functionality.
+
+The manual consists of the following parts:
+
+
+
+an overview of the WAGE architecture and the building blocks used to create own Web applications in Chapter 2
+
+
+some examples on how WAGE can be utilized in Chapter 3
+
+
+a reference-style listing of the WAGE tag library in Chapter 4
+

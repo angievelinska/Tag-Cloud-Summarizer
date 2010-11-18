@@ -1,0 +1,11 @@
+
+
+Please make sure that no other Java process is running on your OS while installing the CoreMedia Editor via JWS.	
+Open the URL http://<host>:<port>/coremedia/ in a Web browser. <host> and <port> must match the values of cap.server.http.host and cap.server.http.port in the capserver.properties file of a Content Server. 
+Follow the link named "1. Install JRE (not yet installed)" on the displayed HTML page. Alternatively, you can download and execute the JRE by right-clicking and selecting "Save as...". The link is provided at the bottom of the page. You don't need to install JWS separately because it is part of the JRE: 
+This will launch a standard Windows-style installer that will guide you through the installation of the JRE.
+The installer prompts for the installation directory (Default is c:\Programme\Java, sufficient for most cases.)
+Click  [next]. The installer will create all necessary files and settings for the JRE.
+The installation registers the file extension .jnlp and the MIME type application/x-java-jnlp-file with Windows. So JWS can be launched from Netscape Navigator, Mozilla and Internet Explorer (and most other browsers) if a link to a JNLP file is activated. 
+A Web Start shortcut on the Windows desktop and in the Windows Start Menu will be created.
+

@@ -1,0 +1,27 @@
+
+
+The Database Message Service provides a utility called dbmsgservicecleanup that removes messages from the database that are not needed anymore. These ones are already received and acknowledged by all the subscribers of the Database Message Service. In addition the utility also removes all subscribers that haven¿t used the service for a configurable period of time.
+
+Configuring  the dbmsgservicecleanup utility
+
+The utility is configured in the spring configuration file /properties/corem/dbmessageservicecleanup.xml. The configuration is similar to the one for the DBMessageServiceServlet. It consists of five bean definitions of which two need to be changed (if not done automatically by the installation):
+
+
+
+The definition of the bean with the id defaultDataSource
+
+This can be configured as described in section
+
+
+The definition of the bean with the id subscriptionservice
+
+
+This bean contains a property timeBeforeRemovalInterval which describes the number of days of inactivity after which the utility would automatically unsubscribe a user. The default value is 60 days.
+
+Running the dbmsgservicecleanup utility
+
+You have to start the cleanup utility from the command line prompt. In a command console, change to the root directory of your Content Server installation and type the following command:
+
+bin/cm dbmsgservicecleanup
+
+The utility only runs one time. In order to run it regularly you have to integrate it manually into an external scheduling mechanism (e.g. a cron job in a Unix environment).

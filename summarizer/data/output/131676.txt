@@ -1,0 +1,4 @@
+
+
+ Parameter Description +E If this parameter is set, the output of cm validate is printed in a format parsable by Emacs. This is useful if cm validate is run from within Emacs. Then the user is able to click on errors to jump to the given line of the file. file The file to parse. The location of the file must be given relative to $COREMEDIA_HOME.
+

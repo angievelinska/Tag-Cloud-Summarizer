@@ -1,0 +1,35 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#IMPLIED 
+
+The name of the expression. 
+
+description 
+
+CDATA 
+
+#IMPLIED 
+
+A textual description of the expression. 
+
+successor 
+
+NMTOKEN 
+
+#REQUIRED 
+
+The successor which should be activated if the condition's expression evaluates to true.

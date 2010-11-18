@@ -1,0 +1,10 @@
+
+7#
+First you need to specify the path to your SSE Release.
+Then fill in the fields for the database connection. The SSE User Feedback Plug-In needs a supported database for operation. Please
+see the CoreMedia Administration and Operation Manual for supported databases and
+for details of the configuration. The properties have the following meanings:
+
+  Property Description Database Username The database user to be used by the SSE User Feedback Plug-In. Database Password The password of the database user. Database URL The URL of the database. Database Driver Class The class of the database driver. Database Type The type of the database. Possible entries are "oracle",
+"db2", "mssql" and "postgresql".
+

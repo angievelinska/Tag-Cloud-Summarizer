@@ -1,0 +1,3 @@
+
+
+Do not change the search string directly in the document, but only with the Advanced Query Editor. Otherwise, you might create malformed queries, that cannot be executed.

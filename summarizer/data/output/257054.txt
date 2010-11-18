@@ -1,0 +1,33 @@
+
+
+If you want to delete a folder or a document, keep in mind that:
+
+
+
+folders that have not been published before are destroyed and the documents are moved into the recycle bin (see sectiocn).
+
+
+folders or documents that had been published before are marked for deletion and will be deleted with the next publication. For more information, see 
+
+section.
+
+If you want to delete a folder
+
+
+Select the folder, then 
+
+
+
+choose File | Delete from the file menu or
+
+
+click the  in the toolbar
+
+
+or right-click the selected resource and choose Delete from the context menu (see illustration)
+
+
+A dialog box opens up.
+
+
+

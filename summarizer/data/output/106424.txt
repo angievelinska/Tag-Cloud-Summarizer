@@ -1,0 +1,27 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+name
+ 
+
+Name of the attribute to be taken over.
+ 
+
+value
+ 
+
+Value, which should be assigned to the attribute defined in name. If no value is defined, the value from the HTML element will be used.
+
+
+
+
+
+

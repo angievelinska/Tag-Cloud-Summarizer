@@ -1,0 +1,4 @@
+
+
+The new document appears in the document overview on the right-hand side of the overview window. It is automatically opened in the document window so that it can be filled with content right away. 
+

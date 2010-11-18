@@ -1,0 +1,3 @@
+
+
+In the report detail view, the report sentence (1) and report chart (2) are complemented by an report explanation (3) on the right side of the chart describing the visualized data and report parameters. The report phrase provides interactive drill-down functions: a user may select the requested detail levels as well as report sub-sections/sub-ranges for drill down. As an example, a user may narrow down the report's time range. In some reports clickable drilldown can be used to show detailed information.

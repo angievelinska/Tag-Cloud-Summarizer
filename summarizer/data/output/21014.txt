@@ -1,0 +1,9 @@
+
+
+To deinstall some or all CoreMedia components of a CoreMedia system, a graphical uninstaller exists.
+
+On UNIX platforms the unistaller is started in the /UnInst directory of the CoreMedia installation with the command:
+
+juninst CoreMedia.ju
+
+Under Windows OS, the uninstaller is activated by software administration in the system control panel.

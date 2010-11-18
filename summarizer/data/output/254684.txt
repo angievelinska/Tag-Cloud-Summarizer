@@ -1,0 +1,19 @@
+
+
+CoreMedia CMS has some groups and users for standard operation (so called build-in users/groups see section, e.g. workflow) on the Content Server.  You can add additional users and groups to administrate access rights on the content. CoreMedia distinguishes between content and live groups. Groups which have rules valid on the Content Management Server and groups which have rules valid on the Live Server respectively.
+
+Example: 
+
+You create a news site which offers content in the categories sports, politics, economy and gossip. Your editorial staff contains 20 editors, 5 for each category. Each editor has only access to content of his specific field. So you need to administrate at least 4 additional groups and 20 users on the Content Management Server each group with different access rights.
+
+You can either administrate these users and groups using the build-in user administration of the CoreMedia Editor or you can connect the CoreMedia system to an existing LDAP server. Therefore CoreMedia CMS supports any LDAP server. Because LDAP has no obvious concept for content and live groups CoreMedia CMS provides a UserProvider class (see Section and the JavaDoc). This class differentiates between live and content groups. CoreMedia provides the pre-defined ActiveDirectoryUserProvider to connect to an Active Directory server. If you use an Active Directory server you have the possibility to define all groups of this server as Live Server groups, Content Server groups or both using the properties
+
+com.coremedia.ldap.contentgroups=true
+com.coremedia.ldap.livegroups=true
+
+in the <CoreMediaHome> /properties/corem/jndi.properties file.
+
+If you want to connect to another LDAP server you can extend the LdapUserProvider class for your own user provider (see Section and the JavaDoc).
+
+Groups need to be connected with rules in order to have impact. In the example above, the group sport might have a rule which allows to read and write content from and into the sports folder. Use the User Administration Window of the CoreMedia Editor to add rules to your groups. Read section for details on rights and rules.
+

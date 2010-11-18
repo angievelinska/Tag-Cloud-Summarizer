@@ -1,0 +1,3 @@
+
+
+If you select the Configuration link on the administration page you will get information concerning the configuration of the ProActive Delivery Server. This is largely determined through the files WEB-INF/config.bsh and WEB-INF/properties/corem/pads.xml.

@@ -1,0 +1,31 @@
+
+
+
+ 
+
+Menu items
+ 
+
+Sub items
+ 
+
+Functions
+ 
+
+Add condition
+ 
+
+
+ 
+
+Adds a search criteria to the query.
+
+ 
+
+Remove condition
+ 
+
+
+ 
+
+Removes a search criteria from the query.

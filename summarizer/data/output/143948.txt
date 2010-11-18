@@ -1,0 +1,18 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+name
+ 
+
+With this attribute, the name of the bundle file is entered. The name must correspond to a file in the Classpath. You must obtain the name of the bundle from your developers.
+
+
+

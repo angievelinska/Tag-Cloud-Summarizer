@@ -1,0 +1,3 @@
+
+
+The explorer configuration which can be choosen via the menu item View|Display is defined within this element of the XML file.

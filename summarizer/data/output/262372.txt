@@ -1,0 +1,5 @@
+
+
+The Starter Kit works with separate CoreMedia documents to part content (CMHasContext) and context (CMContext), and you can render any content in any context. The general concepts behind this approach are explained in section.
+
+The controller passes a Page object to the view dispatcher. So page generation starts over with a Page JSP, possibly with a specified view. The Page implementation determines the content and the appropriate context from the request URL and provides getters to make them available in the JSPs.

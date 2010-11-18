@@ -1,0 +1,19 @@
+
+
+Large projects with complex settings, many editors, many responsibilites, and deadlines to catch, need some kind of administrative support in order to catch up with all the demands. 
+
+
+This support is provided by the introduction of the CoreMedia workflows:
+
+
+
+
+Workflows are defined sequences of editorial steps available for defined groups of users acting in certain roles on resources in certain states.
+
+
+The full editorial routine from creation to publication, from editing to deletion, can be modelled in workflows. These workflows run on a separate CoreMedia component, the Workflow Server. 
+
+
+
+
+

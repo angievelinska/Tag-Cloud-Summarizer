@@ -1,0 +1,4 @@
+
+
+ Rendering Hint Name Value Description x-coremedia-portal-text true|false All portal links which are contained inside this binary resource will be rewritten. This might be useful for CSS-files containing references to other resources. (SAP EP only)
+

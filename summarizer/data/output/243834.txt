@@ -1,0 +1,7 @@
+
+
+Let
+
+Grammar: ( (Expression), (Expression) ) 
+
+Let binds an expression-local variable to a value determined by the first sub-expression. It evaluates to the value of the second sub-expression, which can use the expression-local variable. Let is useful to reuse complex sub-expressions and store their result in an expression-local variable. Some functions as Length and Read can only be applied to variable values. Using Let they can be applied to any expression (mostly custom expressions), which must return values which must make sense. 

@@ -1,0 +1,11 @@
+
+
+Several CoreMedia CMS components provide JMX access for management and monitoring. They feature a JSR 160 based JMX connector server, which you can use to connect with any compliant JMX console, such as JConsole. JConsole is bundled with Sun's JDK 5.0. Have a look at http://java.sun.com/j2se/1.5.0/docs/guide/jmx/index.html for an introduction to JMX. Currently, the following components are enabled:
+
+CoreMedia Content Server with Publisher and Search Feeder
+CoreMedia Workflow Server
+CoreMedia Active Delivery Server
+CoreMedia Content Application Engine
+
+Have a look at the corresponding component chapters in order to learn how to enable JMX monitoring, how to connect with JConsole and to find a reference of the managed properties.
+

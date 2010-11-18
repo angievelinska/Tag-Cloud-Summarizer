@@ -1,0 +1,4 @@
+
+
+ Field Description Domain\User The name of the Windows user to run the CoreMedia Search Engine service as. This user must have "log on as service" permissions. (only used when installing under Windows). Enter .\User for local users. Password The password of the above user. Note, that the password will appear on the screen when typing. InstallPath The destination directory to install the CoreMedia Search Engine into. This is the directory searchengine in the destination directory. BasePort Base port for the range FAST will use (from baseport to baseport+4000). SpellCheckLanguages The languages you want FAST to have spellchecking for. DefaultSpellCheckLanguage The default spellchecking language. LemmatizationLanguages The languages used for lemmatization.
+

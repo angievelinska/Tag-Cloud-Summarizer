@@ -1,0 +1,9 @@
+
+
+If a user is member of group G then the effective rights for the two folders F1 and F2 are unified, so the user can read articles in both folders, edit articles in F1 and approve articles in F2. Of course the user cannot edit articles in F2 nor can he approve articles in F1.
+
+The effective rights are nearly the rights of a group on a resource for a resource type. There are only three exceptions:
+
+
+Navigate Through: If there are no effective rules for a Folder F1 and the group has non-empty effective rights for a resource located beneath F1 then the group has implicit READ rights for F1 and the folder type "+". This sounds more complicated than it is. Look at the simple example:
+

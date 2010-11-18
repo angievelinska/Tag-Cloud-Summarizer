@@ -1,0 +1,4 @@
+
+
+Per default, no restrictions regarding content types apply. If you want to narrow down the repository information report to a content type (subsuming its subtypes), you may use the content type filter (the 2nd report parameter) to specify a content type. After applying the filter, only content items of the selected content type or one of its subtypes will be included in the report.
+

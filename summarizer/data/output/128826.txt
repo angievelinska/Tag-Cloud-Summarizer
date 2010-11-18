@@ -1,0 +1,7 @@
+
+
+Example:
+
+If the watchdog process has to execute an action "B" in case an action "A" returns with result code "0", you have to configure:
+
+<Edge from="A" to="B" code="0"/ >

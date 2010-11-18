@@ -1,0 +1,7 @@
+
+
+Assign
+
+Grammar: (Expression)
+
+Assign transfers a value which is defined by the expression into a variable in the initial client view of the subprocess. For an XML example see ForkSubprocess.

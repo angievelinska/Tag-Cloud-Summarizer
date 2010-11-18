@@ -1,0 +1,7 @@
+
+
+If the property import.enforceCompleteVersion in the configuration file of the importer is set to "true" (default), then the values for all fields must be provided for an import of a document of this type. For each document property (StringProperty, XmlProperty, ...), there must be a corresponding  XML element (string, text, ...). If one declared field is missing an error message is generated, and if there are two values for one field, the first is overwritten by the last. 
+
+If the property import.enforceCompleteVersion in the configuration file of the importer is set to "false", it is not necessary to provide all elements. See the Administrator Manual for a description of the property. 
+
+Before we describe the format of each field element in detail, the following example shows a typical document of the above document type:

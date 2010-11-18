@@ -1,0 +1,20 @@
+
+
+ Section Version Description 
+
+
+
+Section 5 5.2.242 Added description of new Analytic Dashboard Reports. 
+
+Section 
+
+Version 5.2.321 
+
+Documented the new In-Site Analytics mode "sourceless clicks". 
+
+Section 
+
+Version 5.2.368 
+
+Added description of spellchecking for the WebEditor
+

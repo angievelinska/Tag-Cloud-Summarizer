@@ -1,0 +1,6 @@
+
+
+Unlike the merging of DocTypeAspects with their target DocTypes at startup-time, ContentBean and Aspect classes as well as their instances are always separated from each other. Due to distinct Plug-In identifiers, name clashes between different Plug-In providers are avoided. For every two Plug-Ins with the same identifier it is therefore not allowed to attach aspects to the same ContentBean.
+
+While all contentbeans implement AspectAggregator via CMObject all aspects implement the Aspect interface or respectively extend AbstractAspectContentBean. By doing that, aspects are provided with a back link to their aggregator. The aggregating contentbean itself, provides the navigation methods getAspectByName and getAspects.
+

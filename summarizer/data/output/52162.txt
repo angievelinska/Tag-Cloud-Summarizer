@@ -1,0 +1,3 @@
+
+
+CoreMedia SCI comes with an active editing application. This out-of-the-box Java application provides the complete functionality needed for content editing and production requiring no customization.

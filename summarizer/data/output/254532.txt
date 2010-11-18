@@ -1,0 +1,10 @@
+
+
+You will find the approved components in the following sections:
+
+Java platforms in  Java, 
+operating systems in Platforms,
+databases in Databases,
+servlet containers in Servlet.
+
+Please see also appendix for a complete overview of 3rd party software support.

@@ -1,0 +1,17 @@
+
+
+Configure CoreMedia Search Engine Location
+
+The CoreMedia Search Engine is based on FAST. The configuration refers to different components and servers of FAST. See the FAST documentation for a description of these.
+Configure the CORBA URL of the FAST Config Server in the property cap.server.search.corba.url.
+Configure the HTTP URL of the FAST Config Server in the property cap.server.search.http.url.
+Configure the hostname of the FAST Naming Server in the property cap.server.search.naming.host.
+Configure the port of the FAST Naming Server in the property cap.server.search.naming.port.
+
+Configure CoreMedia Search Engine Collection
+Configure the name of the FAST collection in the property cap.server.search.collection. You can use the FAST administration page to create a new collection as described in Section "CoreMedia Search Engine Operation".
+
+Configure Searching in Folders
+Configure cap.server.search.useFolderIds=true to enable a bugfix (BUNGSBERG-1986) for searching below folders with whitespace or special characters in their names. The default is false for backward compatibility with existing search engine installations. For existing search engine installations, make sure the FAST index profile contains the field folderpath before enabling this property.
+
+For example:

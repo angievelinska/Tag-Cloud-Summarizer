@@ -1,0 +1,14 @@
+
+
+ Function Name Parameters Description Example page CMNavigation, CMLinkable Creates a Page bean for a given CMNavigation and CMLinkable, for example for creating a link to a Page in a JSP. 
+
+<c:set var="selfsPage" value="${sk:page(cmpage.navigation,self)}"/>
+
+<analytics:link object="${sk:page(self,self)}">... nearestPage CMLinkable, PageContext Creates a Page bean for a given CMLinkable using the nearest CMNavigation compared to the current Page (stored in the request scope Bean cmpage) for the given pageContext. See next section for the exact algorithm. 
+
+<analytics:link object="${sk:nearestPage(self,pageContext)}">...
+
+ viewForMimeType Map<String,Object>, MimeType Returns the name of the view for the given MimeType and a Map that maps the String representation of MimeTypes to view names.  <cm:include self="${self}" view="${sk:viewForMimeType(selfsPage.settings.mimeSettings,self.data.contentType)}"/> navigationBelowOrEquals CMNavigation, CMNavigation Returns whether the first CMNavigation lies below the second CMNavigation, i.e. the first is the same or a direct or indirect parent of the second CMNavigation. Returns true is the first argument is null and false if the second is null. <c:if test="${sk:navigationBelowOrEquals(cmpage.navigation,self)}">
+  <cm:include self="${self}" view="submenuChildren"/>
+</c:if>
+

@@ -1,0 +1,9 @@
+
+
+<list>
+
+Child elements: <bean>
+
+Parent elements: <property>
+
+The <list> element groups conditions, which should be used in an AndCondition or OrCondition. It has no attributes.

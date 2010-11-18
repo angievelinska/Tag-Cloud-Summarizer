@@ -1,0 +1,17 @@
+
+
+Unified API Clients
+
+The Unified API has been adapted to the new language features of Java 5. In particular, generics, enums, and covariant return types are used to obtains a safer and cleaner API.
+
+The changes are fully source code compatible as far as calls to API objects are concerned. The changes are generally not binary compatible, so that you must recompile your source code when migrating to CMS 2008.
+
+A number of methods has been deprecated. In particular, many methods whose names end in an underscore have been replaced by methods without the underscore. These new methods have been made possible by covariant return types.
+
+Enumeration types are now implemented using Java enums. Please convert usages of the numeric constants in the enumeration classes to usages of the enums themselves, e.g., for programming switch statements.
+
+When implementing, a few changes to implementing classes are necessary:
+
+The method Expression.evaluate takes a parameterized map type as the second argument. Adapt the type in all implementations.
+The method BooleanExpression.evaluate now returns the type Boolean. Adapt the return type in all implementations, unless you are already deriving your class from BooleanExpressionBase.
+Those methods of RightsPolicy that return a collection must now return a parameterized type.

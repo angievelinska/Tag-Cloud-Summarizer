@@ -1,0 +1,24 @@
+
+
+Using the functions in the upper area, navigation can be simplified and clarity increased. The functions in detail are:
+
+
+
+admin home // develop home - switches to the "CoreMedia Generator Administration" or "CoreMedia Template Development" homepages.
+
+
+expand all - all document types are expanded.
+
+
+hide/show properties - display of properties is suppressed globally (hide) or allowed again (show).
+
+If the ViewDispatcher is being used, views of documents are displayed in the UML notation for operations. Then there are two further functions:
+
+
+
+hide/show views - as for properties, display of views can be suppressed globally.
+
+
+update views - the View templates are read anew from the file system. This function is also available in the "CoreMedia Template Development" region.
+
+If views are displayed, they are hyperlinked to the template source text. A click on a view opens the source text in a new window. The template can also be disabled there.

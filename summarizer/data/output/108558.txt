@@ -1,0 +1,12 @@
+
+
+The following paragraphs list required rights for certain operations on a folder F2 in parent folder F1:
+
+
+Operations:
+
+
+read implied properties of folder F2, like date of last modification or names of children
+
+
+Required rights:

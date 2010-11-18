@@ -1,0 +1,29 @@
+
+
+Passing Parameters Directly
+
+The most common way of opening a connection is provided by a method of the class com.coremedia.cap.Cap with four parameters: 
+
+The IOR URL of the Content Server 
+The name of the user who logs in 
+The user's domain 
+The user's password
+
+All parameters are passed as string values. The IOR URL is explained in more detail in the Administration and Operation Manual. It is a means for bootstrapping the CORBA protocol.
+
+String url = "http://localhost:44441/coremedia/ior";
+CapConnection connection = Cap.connect(url,
+  "user", "domain", "secret");
+
+The login call will fail with an exception if the Content Server is not reachable. A connection to the Workflow Server is also opened, if the Workflow Server is reachable, but its absence does not abort the login sequence.
+
+Because the IOR URL is cumbersome to write, the Unified API uses some rules for determining this parameter when it is omitted.
+
+CapConnection connection = Cap.connect(null,
+  "user", "domain", "secret");
+
+If the system property coremedia.content.server.url is set, its value is used as the URL. Else, if the system property coremedia.configpath is set, the system tries to determine the URL from the file capclient.properties. Because the latter property is automatically set by the cm start script, there is no need to configure the URL when the Unified API client is started by means of a .jpif file.
+
+When you use the built-in user repository of CoreMedia CMS and not an LDAP server for managing your users, you can set the domain parameter to null or omit it entirely.
+
+CapConnection connection = Cap.connect(url, "user", "secret");

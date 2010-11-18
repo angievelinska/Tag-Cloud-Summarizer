@@ -1,0 +1,19 @@
+
+
+The file watchdog.properties configures log actions and the name of the watchdog XML file that contains the actual watchdog configuration. The watchdog.properties file defines the following properties:
+
+watchdog.config=<XMLConfigurationFile>
+3* This property refers to the XML file which configures the watched components and the triggered actions. The file properties/corem/watchdog.xml is preset here which contains a few common settings for CoreMedia Servers and Active Delivery Servers.
+log.action.<n>.class=<log action>
+log.action.<n>.selectors=<log level>
+
+
+log.action.<n>.initArgs=<arguments>
+
+
+The default log action writes log message to the file watchdog.log. See Section 5.1.5 on how to configure log actions.
+
+
+
+
+

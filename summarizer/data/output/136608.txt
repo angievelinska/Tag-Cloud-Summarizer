@@ -1,0 +1,3 @@
+
+
+The CoreMedia Workflow comes with a workflow client integrated in the CoreMedia Editor. If you want to implement your own client, for example to trigger external events into the workflows or the query workflow state for reports etc, the Unified API provides the WorkflowRepository.  In order to create a workflow client, use a code like the following:

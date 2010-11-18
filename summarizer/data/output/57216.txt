@@ -1,0 +1,3 @@
+
+
+This example contains a link to a document with the internal id info. The internal id must not contain a "/" character. To link to a field of a document append a "/" character and the name of the field.

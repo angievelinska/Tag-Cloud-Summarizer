@@ -1,0 +1,4 @@
+
+
+ Property Value Default Description filesystem.listener class name  Registers a custom implementation of com.coremedia.cap.webdav.filesystem.FileSystemListener which is notified when a document property is written with WebDAV. See the API documentation for details.
+

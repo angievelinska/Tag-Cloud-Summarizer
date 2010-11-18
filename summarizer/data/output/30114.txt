@@ -1,0 +1,11 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+rowHeight 
+
+This attribute determines the height of a row in the table. The height is given in pixels.

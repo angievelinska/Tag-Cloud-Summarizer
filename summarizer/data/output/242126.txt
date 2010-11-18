@@ -1,0 +1,21 @@
+
+
+The AccessControl service of the WorkflowRepository allows to determine whether a user has the right to execute some operation on some workflow object. There is one right for each operation defined in the Task and Process interfaces, plus a read and a write right, plus the right to create instances of a process definition.
+
+A right can be queried using the generic method AccessControl#mayPerform, which expects as arguments the object to which the operation would apply, and the operation, represented as a Right object. The user for whom the right should be checked can optionally be passed as a third parameter, and defaults to the connection's current user.  
+
+Note that in contrast to the ContentRepository's AccessControl, in the workflow access control, there is no method signature expecting a set of groups. Whereas content rights can only be granted at group granularity, workflow rights can be granted per user. Therefore, group memberships are not sufficient to compute workflow rights.
+
+For each right, there is a method mayOperation, where operation is the name of the right, which serves as a shortcut for mayPerform with the respective right as argument.  So for example, the following two statements are equivalent:
+
+ac = wr.getAccessControl();
+allowed = ac.mayPerform(task, Right.TASK_ACCEPT, user);
+allowed = ac.mayAccept(task, user);
+
+The Javadoc of each operation specifies the required rights. Note that even when a user has the right to execute an operation, he may still be unable to do so. For example, some operations are only applicable in certain object states. Such "physical" requirements are expressed as preconditions, whereas "legal" requirements are expressed as rights.
+
+There are two rights whose names do not directly correspond to operations, namely Right.READ and Right.WRITE. These rights govern access to the properties of a WorkflowObject. The WorkflowObject in question can be a Process, a Task, or a WorkflowView.  When the READ right is given, all declared properties can be read, e.g. using WorkflowObject#get(String).  When the WRITE right is given, all properties that are not read-only can be assigned to, e.g. using WorkflowObject#set(String,Object).
+
+As explained in ###view, the properties of a view may actually be stored in various tasks or in the process.  However, for rights computation, the rights defined on the view's origin are considered, not the rights on the workflow object that stores the variable. In this way, a view can be used to grant access to a controlled subset of the process variables. This is especially interesting because a task's current performer is granted READ and WRITE rights on the task, which applies to all properties in the task's view.
+
+The actual rights computation is performed by a rights policy, which is described in section ###rightspolicy.

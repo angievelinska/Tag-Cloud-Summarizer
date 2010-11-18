@@ -1,0 +1,3 @@
+
+
+Component definitions should not contain cycles in which every edge has a delay of 0. Such cycles can cause high CPU loads and excessive usage of system processes and open files.

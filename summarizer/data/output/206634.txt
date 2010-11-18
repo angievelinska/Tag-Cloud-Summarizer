@@ -1,0 +1,5 @@
+
+
+AttributeLoginPredicate 
+
+This predicate returns true if the users LDAP attributes or the attributes of his groups match a regular expression or null if not.

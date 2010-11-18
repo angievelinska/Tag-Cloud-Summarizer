@@ -1,0 +1,3 @@
+
+
+After including the toolbar, the edit view for the pictures LinkList property is included. This will render the current state of the LinkList and instantiate a WAGE LinkList property editor component. Together with the toolbar you will already be able to move LinkList entries up and down, and remove entries.

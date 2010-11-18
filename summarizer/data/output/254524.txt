@@ -1,0 +1,18 @@
+
+
+CoreMedia CMS is a content management system for easy and convenient creation and administration of up-to-date content, interactive features and personalized web pages. 
+
+For this purpose, CoreMedia provides an environment for online editorial workflow processes. Users can simultaneously create and edit content and so conveniently maintain a website. Integration of contents from print editorial systems, office applications and news agencies (dpa, SID, Reuters, etc.) is possible via import mechanisms. Internet display of the content or creation of various export formats is made possible by the CoreMedia Active Delivery Server (ADS) with its flexible template technology or by the CoreMedia Content Application Engine (CAE).
+
+Key distinguishers for CoreMedia CMS are transparent editing processes, graded user and rights administration and easy integration into an existing system landscape.
+
+The following chapters describe the administration of the CoreMedia CMS system FeedContext:
+
+an overview of the architecture of the CoreMedia CMS system in Chapter 2
+the preconditions and installation steps for the system including the installation of Web Start and migration from previous versions are described in Chapter 3
+the migration of a previous release to CoreMedia CMS 2008 in Chapter 4
+the administration essentials of CoreMedia CMS e.g. how to start the components, in Chapter 5
+the monitoring of the system covering the Watchdog application, and logging in Chapter 6 
+user administration issues in Chapter 7
+the administration of individual system components is described in all of the following chapters.
+

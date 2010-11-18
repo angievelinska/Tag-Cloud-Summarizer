@@ -1,0 +1,9 @@
+
+
+The Administration and Operation Manual contains a description of the standard configuration parameters for the CoreMedia Analytics Engine. Mainly, these parameters are concerned with timing issues and the location of servers and files.
+
+Beside these parameters, which can be set in property files, there is the possibility to plug in strategy objects at various points in the system. These objects must be written in Java, implementing one of a number of interfaces from the public API. Typically, the implementations are then plugged into the CoreMedia Content Application Engine where they control the creation of log entries. In section these interfaces are discussed one by one.
+
+For In-Site Analytics, additional work is needed when the parameters of the overlays should be changeable at runtime. Typically, Editing Services for JSF will be used for this task as described in section.
+
+If these interfaces are not sufficient for achieving the desired behavior, it is possible to extend the aggregation process as described in section after a detailed introduction of the database schema. Typically, this is only necessary when you want to provide completely new reports.

@@ -1,0 +1,5 @@
+
+
+In the example, there is another namespace declaration for the elements defined in portlet application descriptor schema. For brevity, the portlet namespace is defined as the default namespace.
+
+A preference with multiple values can be set by adding multiple value elements. You do not have to repeat the name element. The following example sets the preference languages to the values en and de:

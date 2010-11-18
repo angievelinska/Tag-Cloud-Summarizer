@@ -1,0 +1,57 @@
+
+
+ 
+
+Class 
+
+Description 
+
+JTextFieldIntegerEditor 
+
+Simple integer field. This is the default editor. 
+
+JCheckBoxIntegerEditor 
+
+A check box. If the box is checked, "1" will be saved, otherwise "0". 
+
+ComboBoxIntegerEditor 
+
+Selection list. If this class is used, the attribute fixedChoice can be added to the <Property> element. "false" will allow you to type own entries in the combo box. "true" is default and will allow only the predefined items. You can limit the number of digits allowed to enter by using the attribute columns.
+
+Example:
+
+<Property name="Copies" editorClass="ComboBoxIntegerEditor" columns="3">
+
+If you are using this attribute you have to take care for two things:
+Do not enter a <HistoryItem> with a length longer than defined in maximumSize.
+Be sure that no integers longer than defined in columns have been stored in the repository before. Best practice would be to configure a validator to guarantee correct server side storage.  
+
+The selection options can be added with two different multiple child elements:
+
+<HistoryItem value="123"/>
+3* The values defined in this element are shown as a combo box.
+<LabeledItem value="60" label="One minute"/>
+3* The values defined in this element are shown as a combo box. In the combo box you will see the localized version of the value of the label attribute (localized via classes/hox/corem/editor/toolkit/property/property.properties). The value used is the one defined in value.  
+
+<FunctionItem>
+
+The attribute class defines the class which should be used. The attribute label (optional) defines the name of the function item.
+
+Own classes must implement the interface hox.gui.editor.combobox.FunctionItem.
+
+Example:
+
+<Property name="Value" editorClass="ComboBoxIntegerEditor">
+
+<FunctionItem class="myFunctionItem.MyIntegerClass"/>
+
+</Property> 
+
+GroupChooserIntegerEditor 
+
+This editor shows all groups defined in the CoreMedia system. One group can be choosen and the ID of the group will be stored. 
+
+UserChooserIntegerEditor 
+
+This editor shows all users defined in the CoreMedia system. One user can be choosen and the ID of the user will be stored.
+

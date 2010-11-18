@@ -1,0 +1,7 @@
+
+
+Fork
+
+Grammar: ( (Variable | AggregationVariable)*, Successor+ ) 
+
+A Fork task forks the flow of tasks into two or more Successors to perform execution in parallel. All forked tasks must be joined together by a Join task. 

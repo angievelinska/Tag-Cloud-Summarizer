@@ -1,0 +1,7 @@
+
+
+This example demonstrates how CoreMedia WAGE can be used to develop a simple workflow application.
+
+We will be using the "Two-Step-Approval" workflow for this example, so to run it you need a CoreMedia Workflow Server with the "Two-Step-Approval" workflow uploaded.
+
+This example shows how a new workflow can be started, how resources can be added to the workflow, and how resources can be approved in a Web application using CoreMedia WAGE.

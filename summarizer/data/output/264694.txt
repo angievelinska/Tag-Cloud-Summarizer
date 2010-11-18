@@ -1,0 +1,85 @@
+
+
+The directory jakarta-tomcat contains the Tomcat 5 installation and the CoreMedia web applications Active Delivery Server, the Web Editing Server, the ProActive Delivery Server, the Content Application Engine, the Differencing Engine,  the Web Services Engine (if installed). The individual subdirectories contain the following (the standard directories of the Tomcat installation will only be explained in short):
+
+bin: Start and stop scripts
+conf: Configuration files
+conf/server.xml: Server configuration file
+doc: Documentation
+common/lib: Runtime resources
+var/logs: Log files
+webapps: Auto-deployed web applications
+
+The CoreMedia Active Delivery Server:
+
+webapps/coremedia: ADS web application context
+webapps/coremedia/images: Icons and Images for the ADS
+webapps/coremedia/pbe: Resources for preview-based editing.
+webapps/coremedia/templates: Web application templates
+webapps/coremedia/WEB-INF: Private directory 
+webapps/coremedia/WEB-INF/admin: Administration templates
+webapps/coremedia/WEB-INF/develop: Development templates
+webapps/coremedia/WEB-INF/lib: Runtime resources like Java jar files and DTDs
+webapps/coremedia/WEB-INF/lib/xml: XML DTDs
+webapps/coremedia/WEB-INF/properties/corem: Configuration files
+webapps/coremedia/xsl: XSL stylesheets.
+
+The CoreMedia ProActive Delivery Server:
+
+webapps/pads: ProActive Delivery Server web application context
+webapps/pads/images: Images
+webapps/pads/templates: Templates
+webapps/pads/WEB-INF: Private directory
+webapps/pads/xsl: XSL stylesheets
+
+The CoreMedia Web Editor:
+
+webapps/editor: WebEditor web application context
+webapps/editor/images: Images.
+webapps/editor/libjs: JavaScript programs for the Web Editor.
+webapps/editor/lib: Libraries for the Web Editor.
+webapps/editor/templates: Web application templates
+webapps/editor/wftemplates: Templates for the workflow window
+webapps/editor/WEB-INF: Private directory
+webapps/editor/WEB-INF/admin: Administration templates
+webapps/editor/WEB-INF/lib: Runtime resources like Java jar files and DTDs
+webapps/editor/WEB-INF/lib/xml: XML DTDs
+webapps/editor/WEB-INF/properties/corem: Configuration files.
+webapps/editor/xsl: XSL stylesheets
+
+The CoreMedia WebDAV support:
+
+webapps/webdav: WebDAV server web application context
+webapps/webdav/WEB-INF: Private directory
+webapps/webdav/WEB-INF/lib: Runtime resources like Java jar files and DTDs
+webapps/webdav/WEB-INF/lib/xml: XML DTDs
+webapps/webdav/WEB-INF/properties/corem: Configuration files.
+
+The Web Editing Server:
+
+webapps/wage: Authoring Server web application context
+webapps/wage/css: The cascading stylesheets
+webapps/wage/images: Images
+webapps/wage/lib: Necessary libraries
+webapps/wage/libjs: The JavaScript library
+webapps/wage/skins: CoreMedia Skin for browser
+webapps/wage/templates: JSP templates
+webapps/wage/WEB-INF: Private directory
+webapps/wage/wftemplates: JSP templates for the workflow support
+webapps/wage/xsl: XSL stylesheets
+
+The Web Services Engine:
+
+webapps/wse/app: Contains the administration console for the Web Services Engine.
+webapps/wse/conf: Contains the configuration files for the Web Services Engine.
+webapps/wse/WEB-INF: Contains all jars for the Web Services Engine.
+
+The template for the Content Application Engine with Editing Services extension:
+
+webapps/contentapplicationengine-template/pbe: Resources for preview-based editing.
+webapps/contentapplicationengine-template/css: css-files for the application. 
+webapps/contentapplicationengine-template/libjs: JavaScript library. 
+webapps/contentapplicationengine-template/pbe: JSP-files for PBE.
+webapps/contentapplicationengine-template/views: JSP files for Editing Services.
+webapps/contentapplicationengine-template/WEB-INF/spring: Spring configuration files.
+

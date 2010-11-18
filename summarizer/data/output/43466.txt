@@ -1,0 +1,3 @@
+
+
+The resource to be displayed by the template is accessible via the context bean:

@@ -1,0 +1,25 @@
+
+
+Before deploying the portlet archive, you have to do some configuration concerning
+
+ContentService which is a connector between the portlet and the portal application. Typically the portal application's URL needs to be set.
+Homepage URI which is an URI denoting the homepage of the portal application, e.g. "/". For example, if the home page is accessible from your portal application under http://host:port/portal/servlet/content/1234, the homepage URI is /content/1234.
+
+These aspects may be configured optionally
+
+CSS files: A comma separated list of CSS files which shall be included into every portal page, e.g. "style/default.css,style/special.css". These files need to be packaged with the portlet archive.
+Javascript files: A comma separated list of Javascript files which shall be included into every portal page, e.g. "javascript/default.js,javascript/special.js". These files need to be packaged with the portlet archive.
+Portal Resource files: As mentioned above, portal resources are another type of documents besides portal pages and portal binaries. These documents need to be added to the portlet archive before addressing them like portal-resource:///images/myimage.gif.
+
+The configuration process generally consists of these steps:
+Unpacking the portlet archive using a ZIP-Archiver (e.g. WinZIP or JAR) into an empty directory. You may use the command
+jar xvf [path to portlet archive]
+for extracting the portlet archive into the current directory.
+Editing configuration files as described below.
+(Adding additional files to portlet archive)
+Repacking the portlet archive (again using the ZIP-Archiver) and naming it like before. You may use the command
+jar uvf [path to portlet archive] .
+for putting the current directory's files back to the portlet archive.
+
+
+

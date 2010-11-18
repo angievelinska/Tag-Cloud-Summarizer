@@ -1,0 +1,6 @@
+
+
+The options have the following meaning:
+
+ Parameters Description -n Name of the user for whom the password should be changed. This option is only available for administrators. For other users the username will be taken from the -u option. -w New password for the user.
+

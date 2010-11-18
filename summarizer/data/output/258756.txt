@@ -1,0 +1,15 @@
+
+
+If you use Tomcat, it is recommended to configure each servlet context to log into a separate file. A CAE-based applications's WEB-INF/log4j.properties file could look like this:
+
+log4j.rootLogger=warn, FILE
+log4j.logger.com.coremedia=info, FILE
+log4j.additivity.com.coremedia=false
+
+log4j.appender.FILE=org.apache.log4j.RollingFileAppender
+log4j.appender.FILE.File=${catalina.home}/logs/webapp-xxx.log
+log4j.appender.FILE.MaxFileSize=10MB
+log4j.appender.FILE.MaxBackupIndex=10
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern=%p %t %c - %m%n
+

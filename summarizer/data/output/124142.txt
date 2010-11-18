@@ -1,0 +1,18 @@
+
+
+Up to CAP 4.0, the rights to a deleted resource whose folder was also deleted were based on the rights granted for the root folder. This was considered unsafe, because it would violate intended read rights if a subfolder in a specially protected area is erased.
+
+
+
+
+From SCI 4.1 on, only members of the group "administrators" are granted any rights on resources with a non-existent last folder.
+
+
+
+From SCI 4.2 on, folders are not destroyed after deletion, so that rights to documents in trash can be computed normally according to the document's position in the hierarchy of existing and deleted folders.
+
+
+If access to resources with a non-existent last folder (which may occur in legacy content) is needed also for non-administrators, an SQL script can be used to assign an existing folder. For example, the following SQL statement restores the old pre-SCI 4.1 behaviour by assigning the root folder as the last folder:
+
+
+update resources r set lastFolderId_ = 1 where r.folderId_ = 0 and not exists ( select * from resources f where f.id_ = r.lastFolderId_ )

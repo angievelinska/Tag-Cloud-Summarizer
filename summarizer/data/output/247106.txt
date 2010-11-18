@@ -1,0 +1,13 @@
+
+
+Chart customization
+
+Chart customizers provide means to customize the graphical rendering of report data (the chart). You may configure one or more chart customizers for a given report, they will be applied in the given order.
+
+A chart customizer is a standard JasperReport concept for the programmatic beautification of generated charts, e.g. the customization of bar chart colors, line stroke, axis labeling, etc. Please consult the documentation of chart customizers in the JasperReport documentation / API (Java interface net.sf.jasperreports.engine.JRChartCustomizer).
+Chart customizers applicable to the Dashboard must implement the interface com.coremedia.analytics.jasperintegration.jfreechart.customizers.DashboardChartCustomizer. All predefined chart customizers implement this interface.
+
+While JasperReports technically allows only one chart customizer per chart, the Analytics Dashboard now allows more than one customizer. The customizers must be passed in as Spring beans. Class names are deprecated but are currently supported for legacy reasons.
+
+The following chart customizers are predefined:
+

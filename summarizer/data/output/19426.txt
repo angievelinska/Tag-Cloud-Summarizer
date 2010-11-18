@@ -1,0 +1,8 @@
+
+
+<PropertyType>
+
+
+Child elements: <Validator>?, <Initializer>?, <ModelClass>?
+
+Parent elements: <DocumentType>

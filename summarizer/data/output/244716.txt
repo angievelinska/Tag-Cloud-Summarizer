@@ -1,0 +1,3 @@
+
+
+The Starter Kit comes with predefined document types and specific extensions to the WebEditor. This chapter describes, how you can use the WebEditor for your editorial work. In order to benefit from these chapter, you should read section before, to be familiar with concepts such as "channel".

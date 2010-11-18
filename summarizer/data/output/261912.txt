@@ -1,0 +1,82 @@
+
+
+ Chosen Time Interval Parameter: Base Table Name Suffix Parameter: Lowerbound Parameter: Upperbound Last full hour (technically: one timeslot in the _HH table [= 1 hour] which started at `lowerbound¿) 
+
+_HH
+
+[alignment/slot
+
+  resolution=hour,
+
+  span=hour 
+
+Last full hour before or at the value indicated by PERMANENTLY-AGGREGATED- BEFORE (PAB)
+
+[alignment]
+
+-1 hour
+
+[lowerbound]
+
+in UTC 
+
+Lowerbound
+
++ 1 hour
+
+[slot resolution] 
+
+Last 24 hours
+
+(technically: one timeslot in the _DH table [= 1 hour]
+
+which started at `lowerbound¿) 
+
+Last 24 hours
+
+(technically: one timeslot in the _DH table [= 1 hour]
+
+which started at `lowerbound¿) 
+
+Last full hour before or at PAB -1 day [alignment]
+
+-1 day
+
+[lowerbound]
+
+in UTC 
+
+Lowerbound
+
++ 1 hour
+
+[slot resolution] 
+
+Last 7 days
+
+(technically: one timeslot in the _WD table [= 1 day] which started at `lowerbound¿) 
+
+_WD
+
+[alignment/slot
+
+  resolution=1 day,
+
+  span=7 days] 
+
+Recent midnight before or at PAB
+
+[alignment]
+
+-7 days
+
+[lowerbound]
+
+in UTC 
+
+Lowerbound
+
++ 1 day
+
+[slot resolution]
+

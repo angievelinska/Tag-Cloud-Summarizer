@@ -1,0 +1,13 @@
+
+
+The ContentRepository supports two different listeners: the ContentRepositoryListener and the PublicationServiceListener.
+
+The ContentRepositoryListener can be registered directly at the ContentRepository. It receives events about content creation, update and destruction and about operations of the PublicationService on content, e.g, approvals, deletions or publications. The listener methods of these two categories of events are separated into two sub interfaces ContentListener and PublicationContentListener. In addition, methods for handling rights rule changes are defined directly in ContentRepositoryListener. 
+
+While these interfaces highlight the conceptual differences between the various events provided to a ContentRepositoryListener, the full implementation of the entire ContentRepositoryListener is allowed when registering a listener. The class ContentRepositoryListenerBase helps with an abstract implementation when you want to react to a small subset of events.
+
+When attaching a ContentRepositoryListener, you can provide a timestamp. The timestamp has to lie in the past, e.g. you might have obtained it when listening to an earlier event. Exactly those events that occurred after that timestamp will be propagated. Once the past events have been delivered, the event stream switches transparently to the live stream of events.
+
+A special timestamp constant Timestamp.SYNTHETIC_REPLAY indicates that a synthetic sequence of events should be delivered instead of the real events that occurred in the past. A synthetic replay is typically shorter than a full historic replay, but the load and memory requirements on the Content Server while generating the synthetic events can be significant. If possible, it is recommended that you attach listeners with relatively recent timestamps or with no timestamp at all
+
+The PublicationServiceListener is provided with events about the state of the publisher itself. An event is sent whenever a publication is enqueued, started, completed or aborted. The listener is also informed when the publication targets of a Content Management Server with Multi-Site Management are redefined.

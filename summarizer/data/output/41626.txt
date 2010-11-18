@@ -1,0 +1,23 @@
+
+
+After the dialog has opened, continue as follows:
+
+
+
+6#
+
+
+
+Select [...].
+
+
+
+Choose the image you want to load from the dialog.
+
+
+
+If you want to convert the file into another file type while loading the image, you can select convert file format into the following format and select the desired file type.
+
+
+
+Click [Load].

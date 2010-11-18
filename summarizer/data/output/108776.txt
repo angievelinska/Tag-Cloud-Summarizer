@@ -1,0 +1,15 @@
+
+
+The CoreMedia Workflow installation comes with four predefined workflows which cover the publication of resources:
+
+
+simple-publication
+
+two-step-approval
+
+two-step-publication
+
+three-step-publication
+
+
+The workflows define workflow roles. Each role is mapped to a group:

@@ -1,0 +1,10 @@
+
+
+<wage:resourceRow>
+
+Renders a row within a resourceList using the CoreMedia resource specified via the name attribute. Can only be used within a resourceList. Attributes:
+
+name (required): name of the (resource) Bean for which the row should be rendered
+property (optional): name of the (resource) Bean property for which the row should be rendered
+styleClass (optional): style class to use for rendering the resource row
+

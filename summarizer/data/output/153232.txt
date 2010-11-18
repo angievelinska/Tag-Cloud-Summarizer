@@ -1,0 +1,4 @@
+
+
+In the following table you will find some options for the Java Virtual Machine which are recommended for proper operation with the CoreMedia CMS.
+

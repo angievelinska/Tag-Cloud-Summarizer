@@ -1,0 +1,7 @@
+
+
+The following section describes the configuration of the included Tomcat servlet container as required for setting up the CoreMedia ADS and gives some hints for the integration with other servlet containers. For further documentation please consult the manufacturers.
+
+If you install several Active Delivery Server contexts in one servlet container, for each context a separate Active Delivery Server license is needed.
+
+The directory layout of the Jakarta Tomcat servlet container is as follows:

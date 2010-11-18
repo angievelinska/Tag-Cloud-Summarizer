@@ -1,0 +1,3 @@
+
+
+If you want to migrate from CoreMedia SCI 4.1 to CoreMedia SCI 4.2, it is possible to use the old database and templates without any change. Nevertheless, you have to change your document types because the SGMLTextProperties have been removed from CoreMedia SCI 4.2. Only XMLProperties are allowed. The content of old SGMLTextProperties will automatically be converted to the rich-text DTD (see next chapter).

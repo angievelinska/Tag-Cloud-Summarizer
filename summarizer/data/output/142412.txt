@@ -1,0 +1,22 @@
+
+
+Before any document is permanently removed from the recycle bin the XML representation is written ("exported") to local filesystem. You may use a customized version of the XML Importer to import these documents later. If you are sure, that you don't need these files anymore, you can use the option --noexport to suppress the export.
+
+Usage
+
+Starts clean recycle bin in standard mode.
+
+bin/cm cleanrecyclebin <connection parameters> 
+      [--directory <a>] [--export-delay <b>] 
+      [--export-threads <c>] [--export-to-subdirs <d>] 
+      [--noexport] [--after <e>] [--before <f>]
+
+Starts clean recycle bin in simulation mode. This means that no documents will be destroyed nor anything will be exported.
+
+bin/cm cleanrecyclebin <connection parameters> 
+      --simulate [--after <a>] [--before <b>]
+
+Cancels a currently running clean recycle bin process.
+
+bin/cm cleanrecyclebin <connection parameters> --cancel
+

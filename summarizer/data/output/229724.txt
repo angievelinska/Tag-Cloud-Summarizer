@@ -1,0 +1,4 @@
+
+
+ Property Value Default Description filesystem.sessionTimeout seconds 600 The CoreMedia WebEditor Server opens a session to the CoreMedia Content Server for each user. After the specified time (in seconds) of inactivity the session is closed automatically and opened again when the user continues his work. There are two reasons why it is necessary to set this value: If the timeout value is small, the session is closed more often and the server response time increases.If the timeout value is too big, a license is consumed and cannot be used by another user. The system checks all timeout /4 seconds, but at least all 2 minutes and at most all 5 seconds if the session timed out.
+

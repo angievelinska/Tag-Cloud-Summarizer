@@ -1,0 +1,11 @@
+
+
+Operational sequence
+
+When PADS starts for the first time it creates database tables for its cache and starts the computation of the values for the configured root keys and of other values which are linked during value computation. With each restart it checks if all values for the configured root keys have been generated and starts a new computation if necessary. Newly registered uploaders will be notified about existing values if they are configured to receive initialization events. Furthermore PADS checks if template files for page generation have changed and invalidates dependent pages at restart. PADS listens for changes in the CoreMedia Content Server and invalidates dependent values. When PADS is restarted, it processes all repository changes that have happened in the meantime.
+
+PADS notifies uploaders about changes when a consistent state has been reached. A consistent state is reached when all configured and linked values have been computed and PADS is not processing events from the CoreMedia Content Server anymore. If running at a CoreMedia Live Server, consistent states are reached only after complete publications. However PADS tries to combine multiple publications, i.e. not every single publication leads to a consistent state and uploader notification.
+
+Before a consistent state is reached and uploaders are notified, a garbage collection is started to delete any values that aren't reachable from the configured root values anymore. Furthermore, garbage collection detects so-called dead links. Dead links point from existing and needed values to non-existing values. They arise from a changed configuration (e.g. a removed link predicate, see section) or from errors during the computation of linked values. In that case, a computation is rescheduled. Uploaders aren't notified until all values have been computed successfully. 
+
+Uploaders are notified about all changes since their last notification. Different uploaders will be notified concurrently but each uploader receives notifications sequentially. PADS waits until all uploaders have been notified before it resumes its work. There is no timeout for uploader notifications.

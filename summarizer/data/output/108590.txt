@@ -1,0 +1,13 @@
+
+
+Operations:
+
+
+rename folder F2
+
+mark folder F2 for deletion
+
+unmark folder F2 for deletion
+
+
+Required rights:

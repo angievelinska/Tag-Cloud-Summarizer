@@ -1,0 +1,7 @@
+
+
+If you want to install the CoreMedia Search Engine you have to do some prerequisite work. Proceed as follows:
+
+
+Create a temporary directory and unpack the CoreMedia Search Engine archive file for your operating system into it. The following table lists the archive file to use for different operation systems:
+

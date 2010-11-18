@@ -1,0 +1,8 @@
+
+
+The predefined Repository Information Report (see screenshot) shows a distribution of content-items by content category. The repository information report is site-specific and the site can be selected via report parameter. Additionally, a number of filters can be applied to further detail the reported repository status information.
+
+Your repository content is typically organized following a hierarchical category schema. The repository information report reflects the hierarchical category structure and allows you to navigate up and down the category hierarchy. Per default, the category 'top', which subsumes all defined categories, is selected. The report chart displays the content distribution for the currently selected category. If not empty, the current category is represented by the first pie section (counted clockwise from top), followed by a pie section for each direct, non-empty subcategory.
+
+To indicate which categories can be detailed further, the names of non-empty, structured subcategories (those that have again subcategories and thus can be drilled into) are prepended with plus sign '+' in the report chart. Category that do not show that sign are elementary categories (in the context of the selected site) and cannot be detailed further.
+

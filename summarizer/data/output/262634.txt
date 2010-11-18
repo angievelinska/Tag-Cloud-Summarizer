@@ -1,0 +1,10 @@
+
+9#
+In the "Site Indicator" document window, select the value of the root channel field, that reads "---" and click  in the toolbar.
+
+The Channel document is inserted into the root channel field.
+10#
+Click Check in and close the window.
+
+Now, you can open the Navigation Explorer with Window|Navigation explorer and you will see your new site as a root node in the Navigation Tree.
+

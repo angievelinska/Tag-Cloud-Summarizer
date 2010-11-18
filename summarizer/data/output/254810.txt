@@ -1,0 +1,25 @@
+
+
+In order to enable the statistics log proceed as follows:
+Enter the following lines to the log.properties file (the log level must be info):
+
+log.action.<No.>.class=FileAction
+log.action.<No.>.selectors=generator.statistics:info
+log.action.<No.>.initArgs=file=var/logs/statistics.log,
+fileSize=4000
+2#
+Restart the ADS.
+
+Please see section for a description of the log parameters.
+
+The data will be printed periodically in one line. Each line forms an XML document with generic key value pairs.
+
+Example:
+
+<statistics><entry key="pagecache.hits" value="40605"/>
+<entry key="foldercache.faults" value="37992"/>...
+</statistics> 
+
+The following keys are defined.
+
+Time

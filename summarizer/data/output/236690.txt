@@ -1,0 +1,4 @@
+
+
+ Field Value (local) Value (with Internet) Platform version 1.5.0 1.5.0 Product version 1.5.0 1.5.0_09 Product location http://<host>:<port>/coremedia/jre http://java.sun.com/products/autodl/j2se Command C:\Program Files\Java\j2re1.5.0_09\bin\javaw.exe C:\Program Files\Java\j2re1.5.0_09\bin\javaw.exe
+

@@ -1,0 +1,108 @@
+
+
+This list of links is displayed in the document window and can be edited by the following operations:
+
+Move to top
+
+In order to move a link in the link list to the top:
+Select the link in the link list.
+Move the link to the top position by choosing one of the next methods:
+
+Select Links|To the top from the menu bar.
+Select To the top from the context menu.
+
+
+
+Move up
+
+In order to move a link in the link list up by one position:
+Select the link in the link list.
+Move the link up by choosing one of the next methods:
+
+Select Links|Move up from the menu bar.
+Select Move up from the context menu.
+
+
+
+Move down
+
+In order to move a link in the link list down by one position:
+Mark the link in the link list.
+Move the link down by choosing one of the next methods:
+
+Select Links|Move down from the menu bar.
+Select Move down from the context menu.
+
+
+
+Move to bottom
+
+In order to move a link in the link list to the bottom:
+Select the link in the link list.
+Move the link to the bottom by choosing one of the next methods:
+
+Select Links|To the bottom from the menu bar.
+Select To the bottom from the context menu.
+
+
+
+Cut
+
+To remove a link from the link list and copy it to the clipboard:
+Select the link in the link list
+Remove the link by choosing one of the two possibilities:
+
+Select Links|Cut from the menu bar
+Select Cut from the Context menu
+
+Create new document and link to it
+
+To create a new document and paste it into the link list, proceed as follows:
+Mark the link after which the new link should be pasted.
+Create a new document, using one of the following options:
+
+From the menu bar select Links|Create Document...
+From the context menu select Create Document...
+
+
+In the toolbar click .
+
+
+A dialog for file creation opens up.
+3#
+Enter the data and click [Create].
+
+The document has been created and inserted in to the link list.
+
+Paste (before)
+
+To paste a link from the clipboard into the link list before the currently marked link:
+Mark the link before which the new link should be pasted.
+Paste the new link by choosing one of the next methods:
+
+Select Links|Paste (before) from the menu bar
+Select Paste (before) from the Context menu
+
+
+
+Paste (after)
+
+To paste a link from the clipboard into the link list of a document after the currently marked link:
+Mark the link after which the new link should be pasted.
+Paste the new link by choosing one of the two possibilities:
+
+Select Links|Paste (after) from the menu bar
+Select Paste (after) from the Context menu
+
+
+
+Paste (with selection dialog)
+
+To paste a link to any document (which you can newly create here) into a document:
+Mark the link after which the new link should be pasted.
+Open the selection dialog by choosing one of the two possibilities:
+
+Select Links|Paste (with chooser) from the menu bar
+Select Paste (with chooser) from the Context menu
+
+A selection dialog box opens:

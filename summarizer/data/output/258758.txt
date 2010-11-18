@@ -1,0 +1,9 @@
+
+
+Now you are prompted for the destination directory etc. as described in the "General Installation Information" chapter. Afterwards, you can configure the Editor Extensions Engine.
+3#
+If you want to configure the Editor Extensions Engine now, click [Yes]. If you want to configure later manually, click [No].
+
+3* If you choose [No], make sure to do the basic configuration in the corresponding property file /webapps/editor-extensions/WEB-INF/spring/objectserver.properties later.
+3* If you decide to configure right now, some dialog boxes will appear. If you install Tomcat the next dialog will configure the server.xml file.
+

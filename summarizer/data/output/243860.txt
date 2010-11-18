@@ -1,0 +1,11 @@
+
+
+Reads
+
+Grammar: EMPTY 
+
+Reads and Writes specify the variables that are 'important' to a task or process instance. For variables that are specified with Reads, it is not possible to modify them. They are just shown in the editor. Accordingly, Writes allows to modify variables on a workflow client. 
+
+The variable attribute specifies the name of the variable. The description is a human readable explanation about how to interpret or modify the variable. It may be localized by the editor. 
+
+Resource variables may be declared as contentEditable, which means that you can change the content of the resource stored in the variable (if you have the appropriate rights on the resource) but you can not change the resource to which the variable references even if the variable itself is read-only. 

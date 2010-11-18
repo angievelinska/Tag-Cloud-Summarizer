@@ -1,0 +1,3 @@
+
+
+The predefined Hour of Day Report (see Screenshot) is similar to the Performance Report (see Performance Report). It displays the number of page impressions and visits for a given (sub-)site in the selected time interval by hour of day.

@@ -1,0 +1,19 @@
+
+
+The CoreMedia CMS provides a series of server utility programs for information, adjustment and optimization of the server processes.  Basically there are four categories of such tools:
+
+Information
+
+The informational tools allow to inspect the current state of the CoreMedia CMS. You can dump all kinds of server objects, e.g. resources, running processes or used licenses. Furthermore you can query system information about the CoreMedia CMS itself (esp. the version), which becomes important whenever you submit a support request.
+
+Operation
+
+With the operational tools you control the CoreMedia CMS. This includes cleaning up the repository, uploading new workflow definitions and maintaining the database. 
+
+Repository
+
+The repository tools allow you to execute actions normally performed by the editors, like approving and publishing resources or starting workflows. They are emergency tools, needed only in exceptional cases to fix the repository immediately when something went wrong.
+
+Miscellaneous
+
+These tools are actually not CoreMedia CMS related. They provide generally useful functions like validating and transforming XML documents. 

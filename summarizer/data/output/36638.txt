@@ -1,0 +1,7 @@
+
+
+<ColumnDefinition>
+
+Child elements: <DisplayMap>*, <Comparator>?, <Renderer>?, <Varies>
+
+Parent elements: <TableDefinition>

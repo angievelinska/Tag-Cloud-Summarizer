@@ -1,0 +1,4 @@
+
+
+ Property Value Default Description filesystem.infoFile.name file name info.html This property configures the name of the information file. filesystem.infoFile false, true true This property suppresses the creation of the information file by chosing "false". filesystem.rememberMessages int 5 This property configures the number of error messages shown in the information file.
+

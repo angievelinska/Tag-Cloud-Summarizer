@@ -1,0 +1,45 @@
+
+
+PerformersPolicy
+
+One example of a performers policy is the DefaultPerformersPolicy, which is distributed together with the Unified API sources and not in the example package. We are going to discuss the main method of that class here.
+
+First, the users that may possibly execute the task are calculated.
+
+public Performers calculatePerformers(Task task, 
+  Collection permittedUsers)
+{
+  Set<User> users = new HashSet<User>();
+  users.addAll(permittedUsers);
+  users.removeAll(getExcludedUsers(task));
+
+If the task is forced to a user, that user is chosen.
+
+  User forcedUser = getForcedUser(task);
+  if(forcedUser != null) {
+    if(users.contains(forcedUser)) {
+      return new Performers(forcedUser, true);
+    }
+  }
+
+Otherwise, we look for users who are preferred, but have to rejected the task.
+
+  users.removeAll(getRejectedUsers(task));
+  Set<User> preferredUsers =
+    new HashSet<User>(getPreferredUsers(task));
+  preferredUsers.retainAll(users);
+  if(preferredUsers.size() > 0) {
+    return new Performers(preferredUsers, false);
+  }
+
+If we failed due to rejections, those rejections are cleared before recomputing the set of users. Note that this is a side effect that is explicitly allowed during the calculatePerformers method.
+
+  if(users.size() == 0 && getRejectedUsers(task).size() > 0) {
+    removeAllRejections(task);
+    return calculatePerformers(task, permittedUsers);
+  }
+
+If there are no rejections to be cleared, we have to go with the users that are not preferred.
+
+  return new Performers(users, false);
+}

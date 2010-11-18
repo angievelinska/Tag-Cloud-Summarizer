@@ -1,0 +1,5 @@
+
+
+External dependencies
+
+If you access external resources during value computation and these external resources are subject to change, you need to track and invalidate those dependencies manually. External resources are anything other than CoreMedia Content Server resources and values computed by PADS. Use method GeneratorCache#dependencyOn(String) during value computation in a builder to manually establish a dependency from the value to an external resource. The method takes an URI key as parameter to identify the external resource. You should only use URI schemes that start with a custom prefix like your domain.

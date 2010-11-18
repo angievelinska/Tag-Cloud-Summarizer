@@ -1,0 +1,4 @@
+
+
+ Log Level Description debug The most verbose level. This can lead to huge amounts of log messages that slow down the performance. The debug log level is used for debugging where it is important to record as much as possible. info Normal progress of the program. An example of a typical info message would be a user login. notice Normal but significant event (rarely used) warning Event which do not influence the normal progress of a program (yet). It informs that something abnormal has happened. error The simplest form of an error. The program temporarily fails to execute something. critical Indicates a critical error situation, in which the whole program execution is endangered. alert Denotes the output of a very critical error situation for which immediate intervention is necessary. The program continues to execute. emergency A total program or system failure where no further execution is possible.
+

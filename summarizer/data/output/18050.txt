@@ -1,0 +1,9 @@
+
+
+If the database of a Content Server is corrupted, proceed as follows:
+Stop the Content Server. The sessions of the connected clients will be closed and no more content changes are possible.
+Restore the Content Server with a backup. Note, that this backup must be newer than the backup of the Master Live Server. 
+Stop the Master Live Server. Restart the Content Server. Right now, it is possible again to change content, but no new publications are enabled.
+Recover the Master Live Server and the Slave Live Servers.
+
+Note that the use of incremental backups is advised in order not to loose any data.

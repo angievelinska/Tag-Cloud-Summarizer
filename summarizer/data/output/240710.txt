@@ -1,0 +1,8 @@
+
+
+Please note that the Spring configuration bean attribute ¿id¿ (here: id=¿beanType:MobilePhone¿) has no meaning whatsoever for the Content Bean type definition, it is solely used for identifying and referencing the bean type definition as a Spring config bean.
+
+Now setup the bean type repository and register the bean types (see example below). The bean type repository is simply a Spring configuration bean which must have its id attribute set to `beanRepository¿ and inherit from the Spring configuration bean class `AbstractBeanTypeRepository¿. Currently it is not possible to define more than one bean type repository.
+
+Example:
+

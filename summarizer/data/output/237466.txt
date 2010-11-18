@@ -1,0 +1,43 @@
+
+
+The following is the meta template for RichText properties:
+
+<es:panelGroup
+    element="div"
+    styleClass="CMPropertyEditor CMTextWidth#{
+                document.checkedOutByCurrentSession
+                ? '' : ' CMDisabled'}">
+  <es:panelGroup element="div" styleClass="CMPropertyToolbar">
+    <h:panelGroup
+        styleClass="#{document.checkedOutByCurrentSession
+                      ? null : 'disabled'}">
+      <es:label
+      styleClass="CMPropertyLabel"
+    value="#{document.type.descriptorsByName.${property.Name}}"/>
+    </h:panelGroup>
+    <es:forEach
+        listElement="span"
+        styleClass="CMToolbar"
+        var="clientAction"
+        value="#{richTextToolbar.actions}"
+        rows="22">
+      <es:clientButton
+        for="${property.Name}Editor"
+        value="#{clientAction}"
+        mode="icon"
+        disabled="#{!document.checkedOutByCurrentSession}"/>
+    </es:forEach>
+  </es:panelGroup>
+  <es:inputRichText
+      id="${property.Name}Editor"
+      value="#{document.properties.${property.Name}}"
+      disabled="#{!document.checkedOutByCurrentSession}"/>
+  <h:message for="${property.Name}Editor"/>
+</es:panelGroup>
+
+This is the first property editor using a toolbar. One difference to the meta template defined in the previous section is that the style classes CMDisabled and disabled are applied to different elements, here. This is to avoid all property toolbar icons from becoming disabled when the property is read-only. Some actions may still be available, e.g. an action to open a selected list element.
+
+The toolbar is model-driven, i.e. the offered actions defined for rich text editing are defined in a backing bean in Spring. Here, the backing bean richTextToolbar is used, which contains all available rich text editing actions. To limit the number of buttons in the toolbar, this list is cut to 22 elements (rows), which leads to table actions not being shown. If you really want all buttons, just leave out the rows attribute. A <es:forEach> component is used to render a button for each action from the backing bean. The <es:clientButton> must be assigned the <es:inputRichText> component as its target (for). The <es:inputRichText> component is the actual rich text editor. From the viewpoint of a template developer, it works as simple as a <h:inputText>.
+
+
+

@@ -1,0 +1,5 @@
+
+
+Note: <cm>-xmlimport is a freely configurable XML importer, in which the prefix <cm> can be exchanged for any other desired prefix (see section 5.6.1).
+
+According to the installation different CoreMedia components can be selected. On entering the command cm without further details, an overview is given of the installed and executable CoreMedia components:

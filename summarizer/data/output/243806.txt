@@ -1,0 +1,9 @@
+
+
+Greater
+
+Grammar: ( (Expression) , (Expression) ) 
+
+A Greater expression contains exactly two subexpressions, which are both evaluated during the evaluation of the Greater expression. The expression evaluates to "true" if and only if the computed value of the first sub-expression is greater than the value of the second sub-expression.
+
+Although a Greater expression may compare values of any type, this element makes sense only for integer, string, date and timer values as defined in the workflow.

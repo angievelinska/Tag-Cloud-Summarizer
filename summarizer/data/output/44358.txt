@@ -1,0 +1,13 @@
+
+
+Basic dependencies come into existence when using an object from outside the ADS. To follow the validity of the dependency, the Active Delivery Server must be informed about changes to the external objects. The following three types of basic dependencies are distinguished: 
+
+Dependency on the contents of a CoreMedia resource. In the case of documents such a dependency includes the property values, for folders the list of the resources contained, and, in general, the editing state of the resource. 
+Dependency on the name of a CoreMedia resource. 
+Dependency on the code of a certain template. 
+
+The ADS must be informed about changes to the template code manually via the administration interface (on the preview server normally in /coremedia/admin). On the other hand, the ADS finds out about changes to CoreMedia resources automatically. 
+
+In the dependency browser, these dependencies are classified as 'External Value'. 
+
+An example: the following template reads the properties of a document. Consequently, the generated page receives a dependency on the contents of the document. 

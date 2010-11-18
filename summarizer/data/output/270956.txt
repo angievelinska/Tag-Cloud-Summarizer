@@ -1,0 +1,5 @@
+
+
+Each preference is defined as a preference subelement from the portlet application descriptor namespace. It needs a name subelement for the name, followed by zero or more value elements, and finally an optional read-only element. The content of the name and value elements is pure character data. The read-only element may only contain the values true or false.
+
+The following example sets the preference foo to the value bar:

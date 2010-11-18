@@ -1,0 +1,23 @@
+
+
+You can use stylesheet attributes to assign an attribute to your text. This attribute will be evaluated during output and will affect the appearance of the output. To format a text section or a word with a style sheet attribute, proceed as follows:
+
+
+Highlight the text section which you want to format.
+
+
+Open the dialog for stylesheet attribute assignment in one of the following ways:
+
+
+
+
+
+Select Format|Stylesheet attribute from the menu bar or Stylesheet attribute from the Context menu.
+
+
+Click  and  on the toolbar.
+
+
+Use the keyboard shortcut <Ctrl>+<Shift>+<s>.
+
+A dialog box appears for the stylesheet attribute.

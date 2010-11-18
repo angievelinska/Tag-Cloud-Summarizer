@@ -1,0 +1,14 @@
+
+
+For attributes or elements of the rich text which are not supported by out-of-the-box functionality you have to create your own solution. The CoreMedia Editor supports this approach with style-sheet attributes. It allows you, to embed inline text within a <span> element which has a configurable class attribute and to add a class attribute to block elements, such as <p>. See the Editor Developer Manual for details.
+
+Example
+
+You might define a class "acronym" which can be applied to inline elements and use a simple text convention to combine the acronym with its definition. This text would look like:
+
+<span class="acronym">CAE--Content Application Engine</span>
+
+Use an unparser to convert this rich text XML into the following HTML:
+
+<acronym title="Content Application Engine">CAE</acronym>
+

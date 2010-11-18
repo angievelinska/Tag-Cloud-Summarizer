@@ -1,0 +1,3 @@
+
+
+The RichText component allows to edit tables in WYSIWIG fashion. The next screenshot displays the options available for tables.

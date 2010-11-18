@@ -1,0 +1,10 @@
+
+
+The authentication mechanism used by Editing Services for JSF follows the principle described in CAELoginExample. A CAP session is mapped to a HTTP session by the EditingSessionInterceptor class that is configured to intercept calls to the JSF FacesServlet. The second interceptor involved in the login process is the LoginInterceptor that checks whether or not a valid CAP session has been mapped to the current user's HTTP session. The LoginInterceptor has the following capabilities:
+
+Redirect unauthenticated HTTP GET requests to a login URI
+Redirect unauthenticated HTTP POST request to a re-login URI
+Store the original request URI
+Forward authenticated requests to a default URI if no original request URI is set
+
+Login and re-login URIs have to be resources performing some kind of user authentication. Editing Services for JSF provides a login JSP that invokes the LoginAction and the LoginController that simply creates a CAP light-weight session. After having logged in using the LoginAction, a JSF navigation can be performed in order to navigate from the login URI into the Editing Services for JSF application. This can be done using the ForwardOrRedirectController.

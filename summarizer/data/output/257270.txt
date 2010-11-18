@@ -1,0 +1,3 @@
+
+
+It can handle the newly introduced RichText feature (see section) too.

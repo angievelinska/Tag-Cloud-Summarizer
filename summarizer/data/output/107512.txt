@@ -1,0 +1,9 @@
+
+
+If you are familiar with XPath, you will have noticed that only the direct child elements of <p> are handled with match="p/*". This is deliberate, because <span> elements in coremedia-richtext-1.0.dtd may not be nested and therefore we cannot take nested markup into account with such simple means.
+
+
+Our stylesheet is ready now. Even if you have little experience with XSLT it should now be quite simple to obtain the author from the <bytag>, for example, and place it in a string field element of your document.
+
+
+To make the importer automatically executing the stylesheet enter it in the configuration file of the importer:

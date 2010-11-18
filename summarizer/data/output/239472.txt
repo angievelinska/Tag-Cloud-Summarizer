@@ -1,0 +1,6 @@
+
+23# 
+Click [Yes] if you want to configure LDAP now. The following window opens.
+
+3* If you click [NO], the installation of the Content Server is almost finished.
+

@@ -1,0 +1,10 @@
+
+
+Content management is always specific to a particular topic like sports or music and has an underlying semantic structure. In CoreMedia this structure consists of the CoreMedia document types bundled with certain conventions on where documents reside in the content hierarchy. We will call these conventions and the document types the information model of a content management project. 
+
+The aim of a custom XML layer is to reflect the information model on a formal level. It provides the following benefits: 
+
+Increased readability for template developers. The standard XML format can make it hard to see what is going on. Using a custom XML layer can make it very easy to see i.e. where content is missing. 
+Increased efficiency for style sheet programming. It is easier to write good style sheets if the XML layer follows the information model closely. This is mainly because the XPath expressions needed to produce style sheets turn out to be simpler. 
+Increased style sheet processing capabilities: By offering a custom XML layer information can be aggregated and computed before any style sheet transformations take place. Using this technique information from other systems (Weather forecasts, Stock information) can be incorporated as well. Since a great many problems cannot be solved efficiently by style sheets or are not solvable at all the Java/XSL  combination is a powerful tool. 
+

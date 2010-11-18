@@ -1,0 +1,29 @@
+
+
+There are currently two APIs for accessing workflow objects: the classic Workflow API (or WfAPI for short) as introduced with CoreMedia CAP 4.0 and the Unified API.
+
+The Unified API covers all workflow-related functionality required for developing client-side applications. In comparison to the WfAPI, it is integrated much better with the content repository, and provides a simpler model for accessing workflow variable values. Also, it is integrated with the caching framework used by the CAE.
+
+In CoreMedia CMS 2006, the WfAPI must still be used in the following cases:
+
+existing SCT 4.x clients,
+WAGE-applications,
+the CoreMedia Editor,
+for client actions handlers and client-side rights policies of such applications.
+
+WfAPI and Unified API may be used interchangeably for developing custom server-side plug-ins of the following types:
+
+actions,
+expressions,
+rights policies,
+performers policies.
+
+The Unified API should be used in the following areas:
+
+aplications using the CAE,
+other newly developed client applications,
+for client actions handlers and client-side rights policies of such applications.
+
+When migrating a WfAPI client to the Unified API, note that what is a process in the Unified API is called a "process instance" in the WfAPI, while a process definition in the Unified API is called "process" in the WfAPI, and similarly for tasks.
+
+The state hierarchy has been reshuffled slightly (compare the state charts in the Workflow Developer Manual and in this manual). Also note that some events have been renamed, as shown in ###eventnames. There are no per-object listeners in the Unified API, only the WorkflowRepositoryListener. The WfAPI's directory service functionality is covered completely by the Unified API's user repository.

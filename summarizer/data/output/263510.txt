@@ -1,0 +1,3 @@
+
+
+The predefined Top Exit Pages Report displays a ranking of exit pages of the selected site for the given time interval.

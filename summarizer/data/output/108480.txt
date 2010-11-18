@@ -1,0 +1,3 @@
+
+
+A right is a permission type and each right allows only some sorts of resource operations. Some operations require several rights, e.g. moving a document. The following table lists required rights for operations on a document doc of type Article in Folder F2:

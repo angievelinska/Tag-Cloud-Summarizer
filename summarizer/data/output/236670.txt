@@ -1,0 +1,7 @@
+
+
+Now the editing services web application is configured to run in the portal. You might install a portletemulation web application, or use one of the portlets to access your editing services web application. 
+
+The following steps describes a configuration which allows to call an editing services editing form which redirects back to the entry page.
+Create a single jsp (editing-web-app/views/edit.jsp) in the same web application which contains editing functionality. The content of the jsp in this example is simple but effective. It is a button which triggers a redirect to the page which was previously called:
+

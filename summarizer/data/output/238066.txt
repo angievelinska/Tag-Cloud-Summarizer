@@ -1,0 +1,5 @@
+
+
+A name and a password must be assigned to the new user.
+
+A home folder stores personal documents, as well as queries, the user-defined dictionary, CoreMedia Editor settings or draft documents of the user. If you do not enter a folder, it will be created automatically in the /Home  folder, with the name of the user as the folder name.

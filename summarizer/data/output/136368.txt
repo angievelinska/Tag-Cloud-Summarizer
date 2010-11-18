@@ -1,0 +1,3 @@
+
+
+Before working with the Unified API, a connection to the server must be opened. The connection object implements the interface com.coremedia.cap.common.CapConnection. There are a number of static methods in the class com.coremedia.cap.Cap that allow you to specify various sets of parameters for logging on to Content Server and Workflow Server.

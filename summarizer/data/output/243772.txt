@@ -1,0 +1,45 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+name 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the task 
+
+description 
+
+CDATA 
+
+#IMPLIED 
+
+the textual description of the task 
+
+final 
+
+(boolean) 
+
+"false" 
+
+whether the task is the final task to execute 
+
+successor 
+
+NMTOKEN 
+
+#IMPLIED 
+
+the next task to execute after the automated task has been completed 
+
+varies   

@@ -1,0 +1,7 @@
+
+
+Exists
+
+Grammar: (Expression) 
+
+Exists is the counterpart to ForAll and behaves similarly. It evaluates to true if any of the instances of the subexpression evaluate to "true". Evaluation is also short-circuit, i.e. it stops as soon as a subexpression instance evaluates to "true". 

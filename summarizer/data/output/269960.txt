@@ -1,0 +1,27 @@
+
+
+Example
+
+If you use the following call from the lib directory of your content application web application,
+
+java -jar beangenerator.jar 
+-d /contentserver/config/contentserver/doctypes/menu-doctypes.xml
+-o /output/classes
+-d /properties/package.properties
+-beanmapping /properties/contentbeans.xml
+-e Picture
+-generic
+
+with the following package.properties file,
+
+doctype.Dish.package=com.menusite.dish
+package=com.menusite
+
+this will generate interfaces, base classes and implementation classes for all document types of the menusite example except for the Picture document type. The document types are read from the /contentserver/config/contentserver/doctypes/menu-doctypes.xml file and the generated classes are written to the /output/classes directory. 
+
+The Dish document type belongs to the com.menusite.dish package while the other types are in the com.menusite package, this information is taken from the /properties/package.properties file. The bean mapping is written to the /properties/contentbeans.xml file. Generics are used which results in code like the following:
+
+public List<? extends Dish> getContent() {
+    List/*<Content>*/ contents = getContent().getLinks("content");
+    return (List<? extends Dish>) createBeansFor(contents);
+  }

@@ -1,0 +1,4 @@
+
+
+ Http Status Code Explanation 200 (OK) Request was successful, result data has also been transmitted. 204 (no content) Request was successful, no result data has been sent. 400 (bad request) The command sent to the servlet is known but at least one of the parameters is erroneous. 501 (internal server error) The command sent to the servlet is unknown. It could be misspelled or not implemented. 500 (not implemented) An internal error occurred in one of the services of the Database Message Service.
+

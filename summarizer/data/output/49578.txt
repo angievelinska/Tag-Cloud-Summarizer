@@ -1,0 +1,3 @@
+
+
+This manual is addressed to developers of CoreMedia projects who want to take the major step from large Web site projects with read-only content access to content-editing Web applications. They'll find a description of ideas and concepts, building blocks, and detailed examples.

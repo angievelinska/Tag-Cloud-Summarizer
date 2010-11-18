@@ -1,0 +1,3 @@
+
+
+The configuration of the database is done using the sql.properties file and the database dependent <DBName>.properties files. The Content Server connects with the database using JDBC. The JDBC-driver jar-files must be installed in the lib-directory of the CoreMedia CMS installation.

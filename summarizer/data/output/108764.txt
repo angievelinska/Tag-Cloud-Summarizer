@@ -1,0 +1,3 @@
+
+
+The default mapping of user rights to users, resources and resource types is as follows:

@@ -1,0 +1,3 @@
+
+
+Not mandatory: By default, the file <CoreMediaHome>/properties/css/coremedia-richtext-1.0.css file will be used.

@@ -1,0 +1,12 @@
+
+
+All necessary files for Preview-based Editing in the Active Delivery Server are included in the coremedia webapp provided after installation. Configuration for Active Delivery Server webapps is done in the WEB-INF/config.bsh. Adapt the following lines in your config.bsh. 
+
+// Preview-based Editing configuration
+pbeConfig = defBean("pbeConfig",
+ com.coremedia.pbe.Configuration.class);
+pbeConfig.setPreviewBasedEdit(true);
+pbeConfig.setWebEditorUri("http://localhost:8001/editor/");
+pbeConfig.setRemoteControlUri(
+ "http://localhost:44444/coremedia/control");
+pbeConfig.setContextPath("/coremedia");

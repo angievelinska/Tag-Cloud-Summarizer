@@ -1,0 +1,4 @@
+
+
+ Operating System FAST version Archive File Sun Solaris Sparc InStream 4.3 cm-SearchEngine-FAST4.3-oem-SunOS.zip Sun Solaris Sparc ESP 5.1.5 cm-SearchEngine-FAST5.1.5-SunOS.zip Sun Solaris x86 ESP 5.1.5 cm-SearchEngine-FAST5.1.5-SunOS-x86.zip IBM AIX InStream 4.3 cm-SearchEngine-FAST4.3-oem-AIX.tar.gz HP-UX InStream 4.3 cm-SearchEngine-FAST4.3-oem-HP-UX.tar.gz Linux InStream 4.3 cm-SearchEngine-FAST4.3-oem-Linux.tar.gz Linux ESP 5.1.5 cm-SearchEngine-FAST5.1.5-Linux.tar.gz Windows InStream 4.3 cm-SearchEngine-FAST4.3-oem-Win.zip Windows ESP 5.1.5 cm-SearchEngine-FAST5.1.5-Win.zip
+

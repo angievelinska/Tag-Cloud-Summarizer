@@ -1,0 +1,8 @@
+
+
+Adding document types is the simplest task. Proceed as follows:
+Add the new document types to the document types definition file of the Content Server.
+Optional create a secondary file containing new document type definitions and add it to cap.server.documentTypes in contentserver.properties.
+Restart the server.
+
+The Content Server automatically detects the new document types and creates the necessary database tables. The Content Server creates the new tables in the default table space of the CoreMedia database user. If you have distributed the CoreMedia tables on different table spaces, you have to assign the new tables manually to the appropriate table space.

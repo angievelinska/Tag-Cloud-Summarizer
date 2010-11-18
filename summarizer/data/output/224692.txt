@@ -1,0 +1,10 @@
+
+
+The top section of the explorer window has three bars: the title bar (1) that displays the current location at the very top, the menu bar (2) and the tool bar (3). Menu bar and tool bar provide access to all available functions. This availability depends on the selected resource(s) and the rights of the user. 
+
+The left section is named folder overview (4), it holds a tree structure of the project. Below you will find the bookmark overview (5) with your bookmarks.
+
+The upper right section is the document overview. It displays the documents (but not subfolders) of the selected folder. These can be sorted by document type, document name, date of creation, and version, all ascending or descending (6). A double click on the document opens the document window, a separate, resizable window for editing. Above the document overview you can use the full-text search. Simply enter the search term and click [Search].
+
+Most of these functions (9) are also provided  in the lower right section's document view (8). The status bar at the bottom displays the sort criteria of the document overview (10) and active filters 11). 
+

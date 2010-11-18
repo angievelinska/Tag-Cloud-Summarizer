@@ -1,0 +1,9 @@
+
+
+JPEG Transformer 
+
+The JPEG transformer class parses the image file and outputs the DataSets in Record 2 of the JFIF file, which are described in the Importer Developer Manual. The output consists of an <image> root element with the attributes base and name and XML elements <dataset> with the attribute id for each DataSet with the DataSet content. The element attribute 'id' contains the number of the DataSet in decimal three-digit form. An incomplete list of numbers can be found in the Developer's Manual in the "JPEG Images" subsection of the "Importers" chapter and is taken from the "IPTC - NAA Information Interchange Model" (IIM) specification. For example, the DataSet number 105 stands for the heading.
+
+JPEG XSLT Transformer
+
+The XSLT transformer transforms the generated XML tree into the desired CoreMedia XML using the given stylesheet. The stylesheet, which is installed by the installer, is written for a certain text and image type. It is highly likely that you have to change the stylesheet in order to suit it to your document types.

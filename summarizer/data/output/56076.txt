@@ -1,0 +1,9 @@
+
+
+In order to create a WebDAV folder on your computer, connect to network computer. The procedure is slightly different for the different Windows versions.
+
+
+Proceed as follows: 
+
+
+

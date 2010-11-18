@@ -1,0 +1,30 @@
+
+
+The individual directories contain the following files:
+
+./bin: Start scripts (see Section ) for Unix (cm) and Windows (cm.exe, cmw.exe) as well as the start scripts of the individual CoreMedia components and utility programs.
+./classes: Optional local classes. Note: The directory does not exist in the standard installation. It can contain customer-specific extensions. 
+./config/<component>: XML-configuration files of the component. The <component> directory supports the new modular configuration as described in the Content Application Developer Manual.
+./config/<component>/framework: Jar-files containing the default XML-configuration files that should not be changed.
+./docs/manuals: PDF User manuals for delivery from the editors.
+./docs/manuals/html: HTML manuals for delivery from the Content Server and WebEditor.
+./etc/xml: Utility files for the CM XML Importer. 
+./etc/xsl: Style sheets for the Legacy Importers which are adopted to the XML Importer framework.
+./etc/keys: Key files for password encryption in the database. The directory will only be created, when the encryption of passwords in the database is enabled (not default). 
+./jakarta-tomcat: Tomcat servlet container installation. For details of the directory tree see below.
+./lib: Runtime resources like Java jar files and DTDs.
+./lib/xml: XML-DTDs.
+./lib/sgml: SGML-DTDs.
+./lib/serveronly: CORBA classes needed by the CM Server.
+./lib/ext: Customized Java classes for the CM Editor.  
+./properties/corem: CoreMedia CMS configuration files in Java properties format.
+./var/log: log files of the CoreMedia components (see Section).
+./var/run: runtime data (e.g. Process ID).
+./var/tmp: temporary data.
+
+./webstart/ext: Configuration files for Java WebStart.
+./webstart/lib: Libraries for the CoreMedia Editor via WebStart.
+./webstart/images: Images for Java WebStart.
+
+
+

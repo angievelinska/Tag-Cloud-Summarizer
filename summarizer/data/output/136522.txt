@@ -1,0 +1,16 @@
+
+
+In the class HoxLogConfigExample, which you find in the examples distribution, you can see how commons logging is used to delegate to the classic CoreMedia logging package hox.log. You might want to use this option while migrating from the Scripting API to the Unified API. Using the following statement, you can redirect commons logging to CoreMedia logging:
+
+System.setProperty("org.apache.commons.logging.LogFactory",
+  hox.log.HoxLogFactory.class.getName());
+
+Actually setting up the classic CoreMedia log is more difficult, but as we are dealing with migration projects in this specific case, the necessary work has already been done. Please have a look at the source code if you are interested in details. When starting this example, use the following line:
+
+java -classpath lib/cap-client.jar:classes \
+  -Dcorem.home=/THE/COREM/HOME/DIR \
+  com.coremedia.examples.capclient.HoxLogConfigExample
+
+You have to pass the path to the base directory of the installation, so that the example can determine where to put the log file.
+
+Note that the classic CoreMedia logging is no longer recommended. This section is simply intended to aid you in migration projects where you have to use hox.log for easier integration of the Unified API with other CoreMedia components.

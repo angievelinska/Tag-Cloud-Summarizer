@@ -1,0 +1,3 @@
+
+
+To enrich the editorial backend for the specific needs of the Starter Kit, it extends the WebEditor by special support for website structure / navigation editing, internationalization, and validation. While the navigation editor is a whole new window to browse and modify the website structure, internationalization and validation refers to single documents or properties. The Starter Kit provides and uses a more convenient way to configure custom property editors in the WebEditor, which can be used for your own extensions. In contrast, the navigation editor is an extension by CoreMedia that goes beyond the public configuration API of the WebEditor and thus cannot be customized. For information on how to use the navigation editor, see section using naveditor.

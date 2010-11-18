@@ -1,0 +1,92 @@
+
+
+Two new services make the creation of new Preview-based Editing commands much easier: While the Unified API supports content handling and editing when accessing the CoreMedia server, the Editing Services API makes it possible to easily create new user interfaces for manipulation of data. 
+
+After installation of the contentapplication-template webapp there are several default actions available. The default actions which may appear in a context menu are subsumed in framework/spring/editing-jsf/jsf-dispatcher-servlet/editing-pbe-toolbars.xml file, located in the cap-editing-jsf-spring-config.jar file: 
+
+ <bean id="pbeMenuActions" 
+       class="java.util.ArrayList">
+    <constructor-arg>
+      <list>
+        <value>openDocumentviewAction</value>
+        <value>openDocumentAction</value>
+        <value>openContainerAction</value>
+        <value>separator</value>
+        <value>moveTopAction</value>
+        <value>moveUpAction</value>
+        <value>moveDownAction</value>
+        <value>moveBottomAction</value>
+        <value>removeLinkAction</value>
+        <value>separator</value>
+        <value>cutLinkAction</value>
+        <value>copyAction</value>
+        <value>pasteLinkAction</value>
+        <value>separator</value>
+        <value>loginAction</value>
+        <value>logoutAction</value>
+        <value>separator</value>
+        <value>openInfoAction</value>
+      </list>
+    </constructor-arg>
+  </bean>
+
+
+In your own application you override this file and add new actions by adding a spring bean definition file located under /WEB-INF/spring/editing  (e.g. editing-toolbars.xml) containing the bean definitions below. Be aware to include the default actions you will still need:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:customize="\
+http://www.coremedia.com/2007/coremedia-spring-beans-customization"
+       xsi:schemaLocation="\
+http://www.springframework.org/schema/beans \
+http://www.springframework.org/schema/beans/
+spring-beans-2.0.xsd \
+http://www.coremedia.com/2007/
+coremedia-spring-beans-customization \
+http://www.coremedia.com/2007/
+coremedia-spring-beans-customization.xsd"
+ <customize:replace bean="pbeMenuActions">
+     <list>
+        <value>openDocumentviewAction</value>
+        <value>openDocumentAction</value>
+        <value>openContainerAction</value>
+        <value>separator</value>
+        <value>newFragmentAction</value>
+        <value>removeFragmentAction</value>
+        <value>newPageAction</value>
+        <value>renamePageAction</value>
+        <value>removeNavigationAction</value>
+        <value>newSubcontentFragmentAction</value>
+        <value>newSubcontentPictureAction</value>
+        <value>blankSubcontentAction</value>
+        <value>removeSubcontentAction</value>
+        <value>showSubcontentAction</value>
+        <value>separator</value>
+        <value>newPageLanguageAction_de</value>
+        <value>newPageLanguageAction_en</value>
+        <value>separator</value>
+        <value>moveTopAction</value>
+        <value>moveUpAction</value>
+        <value>moveDownAction</value>
+        <value>moveBottomAction</value>
+        <value>removeLinkAction</value>
+        <value>separator</value>
+        <value>changeStyleAction</value>
+        <value>removeStyleAction</value>
+        <value>separator</value>
+        <value>demoCutLinkAction</value>
+        <value>copyAction</value>
+        <value>pasteLinkAction</value>
+        <value>separator</value>
+        <value>loginAction</value>
+        <value>logoutAction</value>
+        <value>separator</value>
+        <value>startWorkflowAction</value>
+        <value>openInfoAction</value>
+      </list>
+  <customize:replace>
+</beans>
+
+
+The values in the upper lists are references to action beans configured in editing-pbe-actions.xml. 

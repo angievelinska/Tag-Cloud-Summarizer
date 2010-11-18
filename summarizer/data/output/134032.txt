@@ -1,0 +1,19 @@
+
+
+In this chapter it will be discussed if the various repository clients might require an update of their configuration or code. The new configurations or implementations are tested against a test version of the multi-site repository.
+
+Migrating Importers
+
+Importer configurations have to take into account that the target folder for imported resources will change due to the newly inserted top-level folder.
+
+Migrating the User Manager
+
+Normally, the home folders of users are not published, so they may stay in place, not moving them into the new top-level folder. In the case that the home folders should be moved, the user information retrieved from LDAP servers must be updated to reflect the new repository layout. The preferred way of doing this is to use a modified UserProvider that handles the change. Users from the built-in user management reference the home folder by ID and as such are more robust with respect to repository restructurings.
+
+Migrating the Generators
+
+The JSPs and URI formatters must be updated to make use of the new repository layout internally, but provide stable URLs for external clients as far as possible. A URL rewriter in front of the CoreMedia system might help with this task, but further changes have to be made. Some well-known resources might be accessed using their path, the generated URIs might strongly depend on the path, and so on.
+
+Migrating Other Clients
+
+Scripting clients or workflows, too, might make use of well-known resources for retrieving configuration information or for storing temporary data.

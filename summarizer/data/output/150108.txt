@@ -1,0 +1,3 @@
+
+
+With the right permissions your web application can start new workflows. If you have not read the previous section you should do this first because this example depends on the described login mechanism. In order to start a new workflow the web application requires an own controller covering the single steps. Most code of this class deals with the processing of the data submitted by the following form:

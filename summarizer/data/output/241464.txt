@@ -1,0 +1,5 @@
+
+
+One important building block of WAGE is its CoreMedia Bean API that builds upon the Active Delivery Server API and the Workflow Client API. This API can be seen as a Web-application-tailored scripting API.
+
+In the following sections, different aspects of this API are considered: The basic Bean model is explained in resources-as-beans. The Bean property conversion that makes this API tailored for Web applications is introduced in propery-conversion. In change-collector, it is explained how changes to Beans are automatically collected and can then be committed to the Content Server and  Workflow Server.

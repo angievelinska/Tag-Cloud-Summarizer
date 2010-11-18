@@ -1,0 +1,20 @@
+
+
+Five options are available from this page:
+
+
+Configuration: Get information concerning the configuration of PADS.
+
+Status: Get information concerning the status of PADS.
+
+Dump entries to file: Create a file with cached values. The file can be used to initialize a new JmsReceiver.
+
+Web Container Information: Get information concerning the Web Container.
+
+Java VM Informtion: Get information concerning the used Java Virtual Machine.
+
+
+
+
+
+

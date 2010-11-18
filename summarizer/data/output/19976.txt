@@ -1,0 +1,3 @@
+
+
+3* The SgmlTextColumn class is used here for displaying the structured text field (SGML field). One DisplayMap tags is created for the document type Dish. The next figure shows the configured query window.

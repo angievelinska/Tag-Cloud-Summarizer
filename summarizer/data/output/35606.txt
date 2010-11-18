@@ -1,0 +1,7 @@
+
+
+The control flow between the tasks can be defined by Unified Modeling Language (UML) activity diagrams using the following schemes:
+
+Sequence
+
+When tasks are arranged in a sequence, a successor task may start just after its predecessor task has been completed. Since the workflow server uses a pull approach, the task does not run immediately after the predecessor has been completed, as this is delayed until a user accepts it (except for automated tasks). The very first task of a process always runs immediately.

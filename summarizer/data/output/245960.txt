@@ -1,0 +1,9 @@
+
+
+Preview-based Editing is a mechanism to edit documents in the preview of a prepared web page. Details about Preview-based Editing could be found in the Delivery Developer- and in the Content Applications Developer Manual. In the portal context the standard Preview-based Editing implementation is slightly modified. In order to realize Preview-based Editing the following modifications of the standard Preview-based Editing were addressed:
+A special component renders toolbars or CSS-based context menus while rendering the markup.
+A special Spring MVC controller (the ActionExecutionController) takes care of executing the user triggered actions, which where rendered into the page from the component mentioned before. The XXX in the architecture section visualizes the deployment.
+The executed actions may contain special Spring MVC conforming CommandPostproccessors and Navigationhandlers. They are used by the above mentioned Spring MVC controller in order to create the output which is returned to the Spring Dispachter Servlet.
+
+The following subsections describes the concepts in more detail. At first the ActionExecutionController which receives the user triggered actions is discussed. Afterwards the counterparts: the CSS-based renderer, and the toolbar renderer which renders the actions into the markup.
+

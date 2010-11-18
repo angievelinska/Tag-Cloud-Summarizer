@@ -1,0 +1,3 @@
+
+
+In the following you will find a description of the UML elements used for the definition of workflows and their mapping to the XML format used by CoreMedia Workflow. The details of the XML elements are given in the Section 6.1, the workflow XML reference.

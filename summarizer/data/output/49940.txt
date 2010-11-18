@@ -1,0 +1,4 @@
+
+
+ Property Default PropertyModel Value String StringModel String Integer IntegerModel Integer Date CalendarModel Calendar LinkList LinkListModel ResourceHolder [] SgmlText SgmlTextModel org.w3c.Document Blob BlobModel  hox.corem.editor.proxy.BlobValue
+

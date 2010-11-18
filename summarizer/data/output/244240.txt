@@ -1,0 +1,6 @@
+
+
+The screenshot shows the export icons for PDF (1), Excel (2) and XML (3) along with the icon that generates the permalink (4).
+
+
+

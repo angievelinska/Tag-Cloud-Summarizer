@@ -1,0 +1,12 @@
+
+
+If you want to use the CoreMedia WebEditor with Internet Explorer 7 you have to use the following security settings for optimal operation.
+Select Tools|Internet Options from the Internet Explorer menu bar and select the Security tab.
+Select Low or Medium-low security level for the required zone.
+Click [Custom Level...]
+Disable the option Allow websites to open windows without address or status bar below Miscellaneous.
+Enable the option Allow programmatic clipboard access below Scripting.
+Enable the option Allow websites to prompt for information using scripted windows below Scripting.
+Click [OK] to close the windows.
+
+ Now, you can start working with the WebEditor.

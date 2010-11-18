@@ -1,0 +1,300 @@
+
+
+
+2#
+Copy the Oracle JDBC drivers into the <CoreMediaHome>/lib directory.
+Copy the Oracle JDBC drivers into the Tomcat common libraries directory <TomcatHome>/common/lib .
+If you haven't provided the license file during installation, copy the license.zip file into the <CoreMediaHome>/properties/corem directory.
+
+Now you are finished with the installation of the CoreMedia CMS system.
+
+2. Install the CAE examples
+
+This CoreMedia Analytics example uses the CAE Menusite example which is contained in the cap-examples.jar. In order to unpack the example proceed as follows:
+Unpack all CAE examples (the ones below the cae/ path) from the cap-examples.jar into a directory, for example cae-examples.
+Copy the file menu-doctypes.xml file from the menusite/misc directory into the <CoreMediaHome>/config/contentserver/doctypes directory. Remove all other *doctypes.xml files in that directory.
+
+3. Start the CoreMedia Content Management Server
+
+Start and initialize the Content and import the Menusite content as follows
+Start the Content via ./cm contentserver start
+
+4. Import the MenuSite content into the Repository
+Import the Menusite content into the CoreMedia CMS repository as described in the README file in your CAE menusite installation directory.
+
+Now, you have a running Content with the Menusite content stored in the repository.
+
+5. Set up the Menusite Click-Tracking and In-Site Applications
+
+We will create two instances of the CAE Menusite web application, one showing the application as perceived by customers (we will name this instance 'menusite-live', it will be registering customer clicks) and one instance displaying the customer clicks as perceived by In-Site Analytics users (we will name it 'menusite-view'). For reasons of keeping the deployment simple, we will deploy both application instances to the same Tomcat server instance under different names. Note that in production environments, this obviously will never be the case: The 'menusite-live' instance would normally run in the publication environment, while the 'menusite-view' instance would run in the CMS production environment.
+
+Both instances (live and view) require identical adaptations of their JSP templates. We will therefore first perform modifications on the one unpacked application and later create two different deployments from it. We will enable Analytics in both instances by enhancing the existing JSP templates using the Analytics tag library. We will define reporting contexts for HTML pages and enrich links using the taglib.
+
+Locate the CAE application's templates. In the example these can be found under menusite/src/templates/com.coremedia.examples.cae.beans. Open each template and perform the following changes (as applicable) to the JSP templates:
+Import the Analytics taglib at the top of a template. If your application is built on Servlet 2.3/JSP 1.2, you must use the taglib's version for JSP 1.2:
+
+<%@ taglib prefix="analytics" 
+uri="http://www.coremedia.com/analytics-1.0-1.2"%>
+
+
+
+If your application is built on Servlet 2.4/JSP 2.0, you must use the taglib's version for JSP 2.0: 
+
+
+
+<%@ taglib prefix="analytics" 
+uri="http://www.coremedia.com/analytics-1.0-2.0"%>
+
+
+
+The menusite example in CoreMedia 2008 and later is built on Servlet 2.4/JSP 2.0, hence you must use the latter taglib definition. In case of doubt, have a look which CAE ObjectServer taglib version is used (1.0-1.2 or 1.0-2.0) and use the corresponding analytics taglib.
+2#
+
+
+Enhance existing links (both <a href="...">...</a> and combined <a href="<cm:link target='...'/>">...</a> with an Analytics link context by replacing them with <analytics:link object="...">...</analytics:link>. The Analytics link tag will create the link and wrap an Analytics link context around it. Link contexts are used to track page transitions.
+
+
+
+Example: Replace
+
+<a href=¿<cm:link target=¿${self.page}¿/>¿>Text</a> 
+
+with
+
+<analytics:link object="${self.page}">Text</analytics:link>
+
+
+3#
+
+
+Templates that render the HTML page scaffolding (<html> and <body> tags) must be configured to enable sessions if you want to use In-Site Analytics, they must include Analytics header information and define an Analytics page context. Do the following:
+
+Enable session by setting the JSP page directive 'session' attribute to true: 
+
+<%@ page contentType="text/html;charset=utf-8" session="true" %>
+...
+
+
+4#
+
+
+Include an <analytics:head/> head tag in the HTML page's <head> element. If no <head> element is defined, add an <head> element to the HTML page.
+
+
+
+<html>
+  ...
+  <head>
+    <analytics:head/>
+  ...
+  </head>
+  <body>
+  ...
+  </body>
+</html>
+
+
+5#
+
+
+Open an Analytics page context inside the HTML page's <body> element. The page context should refer to 'self':
+
+
+
+<body>
+  <analytics:pagecontext object="${self}">
+  ...
+  </analytics:pagecontext>
+</body>
+
+You have now successfully enriched your web application templates with Analytics. Next we will create two instances of the application and deploy them to the Servlet Engine (Tomcat).
+
+We will follow here the menusite application's build instructions. Prerequisites:
+Open the configuration file global.properties in the example in etc and set the following properties:
+
+cae.template.dir: Point to the webapp dir of the Tomcat, for example CMS/jakarta-tomcat/webapps. Make sure that the path does not terminate with a slash and that you use '/' not '\'.
+tomcat.home: Point to the base dir of the Tomcat, for example CMS/jakarta-tomcat. Make sure that the path does not terminate with a slash and that you use '/' not '\'.
+2#
+Create the menusite-live application instance (tracking the customers' clicks): Open the configuration file global.properties in etc and set the following properties:
+
+cae.template.name=contentapplicationengine-template. The CAE template with the click-tracking plug-in installed is required now.
+3#
+Switch to the menusite directory and call ant build.
+
+This merges template and application files and creates the click-tracking application instance in directory menusite/output/webapp.
+4# 
+
+
+Verify that click-tracking is enabled in the resulting web application: Goto the directory menusite/output/webapp/WEB-INF/spring/analytics. The directory must contain (among others) the following (xml and properties) files:
+
+
+
+
+analytics-pageresolution.xml, 
+tracking.xml,
+tracking-base.xml,
+tracking.properties, 
+tracking-base.properties
+
+5#
+
+
+Verify that the click-tracking interceptor is configured. Open the file menusite/output/webapp/WEB-INF/spring/analytics/analytics-controllers-example.xml. Verify that it contains a customizer bean definition which adds the reportInterceptor bean to the controllerInterceptors list bean.
+
+
+Configure a suitable UserNameExtractor to count Unique Visitors. As the (live) menusite does not provide a means of user authentication, we are advised to use the CookieUserNameExtrator to distinguish and count Unique Visitors (see also chapter71). First, configure the user name extractor in the file WEB-INF/spring/analytics/tracking.xml:
+
+<bean id="analyticsLog" parent="abstractAnalyticsLog">
+  <property name="userNameExtractor">
+    <bean
+  class="com.coremedia.analytics.plugin.CookieUserNameExtractor" />
+  </property>
+</bean>
+
+
+
+Next, it must be combined with an interceptor that actually sets the cookie at the right time in the request cycle. Add the user cookie interceptor to the customizer bean in file WEB-INF/spring/analytics/analytics-controllers-example.xml:
+
+<bean id="userCookieInterceptor"
+class="com.coremedia.analytics.util.UserCookieHandlerInterceptor">
+  <property name="cookieName" value="theUserName"/>
+</bean>
+
+
+<customize:append id="analyticsExampleInterceptorsCustomizer" 
+bean="controllerInterceptors">
+  <description>
+    Adds the 'reportInterceptor' to the list of interceptors.
+  </description>
+  <list>
+    <ref bean="reportInterceptor"/> 
+    <ref bean="userCookieInterceptor"/>
+  </list>
+</customize:append>
+ 
+
+
+7#
+
+
+In WEB-INF/spring/objectserver.properties, set the mbeans domain property 'management.jmx.objectname.domain' to 'MenuSiteLive'.
+
+
+Finally, publish the click-tracking instance to Tomcat:
+
+Create a directory 'menusite-live' below <TomcatHome>/webapps and copy all files from menusite/output/webapp into this directory.
+
+Now create the 'menusite-view' application instance (where customer clicks are shown using overlays).
+
+Prerequisites: 
+Completely remove the menusite/output and the menusite/temp directories.
+Completely remove the contentapplicationengine-template directory in tomcat under webapps.
+Please install a fresh copy of the ContentApplicationEngine-template to the same directory (tomcat > webapps > contentapplicationengine-template), this time with the insite plug-in. No servers need to be installed, just the CAE template with the plug-in. This time the template is enriched with In-Site Analytics.
+
+Now follow these steps
+Switch to the menusite directory and call ant build
+
+This merges the template and application files and creates the in-site application instance in directory menusite/output/webapp.
+2#
+Unfortunately, the merging algorithm does not merge the web.xml files, the template's entries are missing. Create a merged web.xml manually (containing the entries from the template as well as from the application). For the menusite application, proceed as follows:
+
+Remove the file web.xml in menusite/output/webapp/WEB-INF.
+Copy the template's web.xml (file <TomcatHome>/webapps/contentapplicationengine-template/WEB-INF/web.xml) to the directory menusite/output/webapp/WEB-INF/.
+3#
+Verify that in-site is installed. Verify that the file menusite/output/webapp/WEB-INF/spring/analytics/overlays.properties exists.
+
+
+
+Ensure that overlays are enabled. Open the file menusite/output/WEB-INF/spring/analytics/overlays.properties. Make sure the property overlay.default.visible is set to true.
+
+
+
+
+In menusite/output/webapp/WEB-INF/spring/objectserver.properties, set the mbeans domain property 'management.jmx.objectname.domain' to 'MenuSiteView'. Important is that the name is different from the name given in the menusite-live webapplication.
+
+
+Publish the menusite-view instance to Tomcat:
+
+Create a directory 'menusite-view' below <TomcatHome>/webapps and copy all files from menusite/output/webapp  into this directory.
+
+6. Optional: Configure the Analytics Dashboard Profile and Views
+
+Please note that this section has changed since previous versions.
+
+The default Dashboard view profile is now enabled for members of the administrators group per installation. Users will be directed to a login page. After successful authentication, they will be granted access to the views defined in the defaultProfile. As the default profile defines suitable views and reports, we do not change it. If you want to change the view profile, you can find it defined in WEB-INF/spring/analytics/analytics-profiles-and-views.xml. Please consult the documentation on profiles and views.
+
+7. Configure the Workflow Server and Run the Data Aggregator
+
+In this example the installed Workflow Server will host the Data Aggregator workflow and thus be the Analytics Data Aggregator.
+Adapt the following properties in the workflowserver.properties file in <CoreMediaHome>/properties/corem.
+
+workflow.server.managers.aggregator.logprovider.1.url=
+  http://localhost:8001/menusite-live/servlet/analyticslog
+workflow.server.managers.aggregator.loop.duration=30 
+workflow.server.managers.aggregator.session.timeout=120
+
+The first property setting tells the aggregator manager at which URL the Click-tracking CAE application will provide its click-tracking logs. This is typically the webapp base URL with '/analyticslog' appended.
+The last two property settings are for demonstration purpose only, to make clicks appear faster in the in-site and dashboard views. Do not use these settings for productive use.
+2#
+Start the Workflow Server with ./cm workflowserver start.
+
+Next we need to create a data aggregator process instance and start it: The CoreMedia Editor comes in handy:
+Start the CoreMedia Editor with cm editor and log in as user admin with password admin.
+Open the Workflow Window and select Menu|File|Load...
+Upload the file properties/corem/data-aggregator with the file chooser.
+Create a new process of the data-aggregator workflow, select File|New Workflow|data-aggregator.
+Start the process by clicking the [Start] button.
+
+
+Verify that the process is running.
+
+
+
+8. Start the Object Analyzer
+
+The Object Analyzer provides information about the content repository to Analytics. In this sample scenario, it will only be used to map technical content ids from the CAE click-tracking logs to human-readable content names (per default configuration derived from the content path names). The Object Analyzer can be started after the Data Aggregator process has completed the first iteration as it requires the Data Aggregator to initialize the Analytics Database.
+
+
+Verify the Object Analyzer configuration, which can be found below the directory <CMS-Installdir>/config/objectanalyzer/spring/:
+
+Open the file <CMS-Installdir>/config/objectanalyzer/spring/proactiveengine.properties. Verify that the repository entries point to the CMS and the jdbc properties correctly names the Analytics Database configuration (database driver, uri, username and password).
+Start the Object Analyzer. Call bin/cm objectanalyzer run from the CMS installation directory.
+
+9. Start the CAE hosting the MenuSite applications and the Dashboard
+
+Go live: Start the CAE hosting the Web applications menusite-live, menusite-view and the Analytics Dashboard:
+Invoke 'cm httpd run' from the <Tomcat>bin  directory) and verify that both applications are deployed:
+Check if the click-tracking web application is running by calling http://localhost:8001/menusite-live/servlet/ from your browser.
+Check if click-tracking is enabled in the menusite-live app by calling http://localhost:8001/menusite-live/servlet/analyticslog. The resulting page (an error page with error code 400) should read "Parameter 'mode' not given".
+Check if the menusite-view web application is running by calling http://localhost:8001/menusite-view/servlet/ from your browser.
+
+Now that we have built and deployed the menusite application instances, we will start the data aggregation process.
+
+10. Verify Your Setup
+
+You have to check if all components of the Analytics Engine are properly working.
+Open the 'live' menusite application in your browser at http://localhost:8001/menusite-live/servlet/. Click through the application.
+Open the Workflow Window of the CoreMedia Editor and check that the data-aggregator process is still running.
+
+Select the data-aggregator workflow from the bottom pane on the left. Watch the workflow variables in the variable view of the right pane. After some 2 minutes, the variables should have similar time values close to "now", with a difference of at most 2 minutes (sessions timed out 2 minutes ago). If any of the variables display values in the range of 1.1.1970, no logs have been read or the log provider (the menusite-live application) could not be found.
+
+
+If not log provider could be found, check the entry in 
+
+properties/corem/workflowserver.properties: The logprovider property should point to the URL of menusite, with an additional /analyticslog appended to it.
+Open the log provider URL in a browser window. If the provider is active, it should respond with a ¿mode parameter missing¿ exception.
+3#
+Open the 'menusite-view' application in another browser window at http://localhost:8001/menusite-view/servlet/. You should see In-Site Analytics overlays.
+Verify that the Analytics Dashboard is reachable by calling http://localhost:8001/analytics/dashboard/view from your browser. All reports should be empty, but not red.
+
+If all reports are red (except for the internal searches) it is a good indication that you forgot to copy the Oracle drivers. The detailed error reason can of course be found in the Tomcat log at <TomcatHome>/logs/ in the file localhost_log.
+
+11. Watch CoreMedia Analytics Work
+
+You are finished with the installation of the CoreMedia CMS system including CoreMedia Analytics. In order to watch reports, proceed as follows:
+Open the menusite-live application in your browser, calling http://localhost:8001/menusite-live/servlet. Click through the application.
+Now open the menusite-view application in another browser window at http://localhost:8001/menusite-view/servlet/. You should see In-Site Analytics overlays reflect your clicks after short-term (some one to two minutes).
+Open the Analytics Dashboard in another browser window http://localhost:8001/analytics/dashboard/view in a different browser. 
+
+
+

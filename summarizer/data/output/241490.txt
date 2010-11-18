@@ -1,0 +1,12 @@
+
+
+This chapter describes the WAGE components supporting the development of the view for your Web applications, like editors for editing the properties of a CoreMedia document in a Web browser, or the WAGE tag library.
+
+As many of these components are based on complex JavaScript libraries, WAGE provides you with the following JavaScript packages:
+
+cap: Contains JavaScript representations for CoreMedia objects like document or folder. The XHtmlEditor for editing rich text is part of the sub-package cap_editing.
+dom: Package for querying and manipulating DOM trees.
+ui: Contains for example the Clipboard, which allows to copy CoreMedia resources between different browser windows.
+wage: Contains the WAGE JavaScript components like property editors and the FocusManager. Requires the dom package to be loaded.
+
+WAGE provides you with a convenience method for loading all the classes contained in a package by using the <wage:includeScripts> tag. Some packages rely on JavaScript code that is dynamically created from JavaBeans existing on the Web server. JSPs that dynamically render JavaScript code can also be included via the <wage:includeScripts> tag using the attribute templates. The templates are always included before the packages. If a template uses a package, include it in a following, seperate <wage:includeScripts> tag. A typical example is shown in include-scripts-example.

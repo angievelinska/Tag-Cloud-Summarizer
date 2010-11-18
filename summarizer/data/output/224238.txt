@@ -1,0 +1,12 @@
+
+
+There are three kinds of utilities provided by the JSF Editing Kit.
+JSF EL utilities for the ease of JSP programming.
+Utility classes for implementing custom tags, components and renderers
+Classes for setting up the JSF runtime environment.
+
+The first category JSF EL utilities are in general maps that invoke some methods using the "key" as method parameter to compute some kind of result. The result may either be the return value of the maps get-method or a map that performs the same kind of magic itself. This makes it possible to call methods from within JSF EL. Examples are the classes com.coremedia.editing.kits.jsf.editing.action.JsfActionFactory and com.coremedia.editing.kits.jsf.editing.action.JsfActionListenerFactory.
+
+Developers of custom JSF tag, components or renderers will find the utility classes RendererUtils, FacesContextUtils, JsfUtil and TagUtils helpful. They define convenience methods to avoid code duplication.
+
+The third category includes the classes EditingRenderKit.

@@ -1,0 +1,11 @@
+
+
+Before enabling the Database Message Service some prerequisites need to be fulfilled:
+
+The Database Message Service needs to be installed together with the ProActive Delivery Server (PADS).
+The DBMessageUploader needs to be configured in the PADS as described in section.
+The configuration must have been done during the installation or as described in the previous section.
+
+In order to enable the Database Message Service the comments around the servlet and servlet-mapping definition for the DBMessageServiceServlet need to be removed in the web.xml of the PADS server web application. Note that you may  have to restart the tomcat after doing so.
+
+The resulting part of the web.xml file should  look like in the example shown below:

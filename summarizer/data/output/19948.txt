@@ -1,0 +1,3 @@
+
+
+3* In this case it is necessary only to make a few entries, since most of the default values can be used. For example, the default value for resizable is "true", i.e. the column is automatically scaled. It is also not necessary to make any DisplayMap entries, since the document type is an inherent property of all documents.

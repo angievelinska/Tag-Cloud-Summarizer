@@ -1,0 +1,14 @@
+
+
+Menu bar (1)
+3* The menu bar contains the menus as they are available according to the chosen resource and the user's rights. Basically, they provide access to all WebEditor editing functionalities and allow to open other windows.
+Tool bar (2)
+3* The tool bar lets you access the most common features via icons.
+Document overview (4) and document overview title bar (3)
+3* It displays the documents (but not subfolders) of the selected folder. These can be sorted by document type, document name, date of creation, and version, all ascending or descending (3). A double-click on the document opens the document window, a separate, resizable window for editing (see illustration).
+Folder overview (5)
+3* In the folder overview the folder hierarchy of the project can be viewed and modified.
+Detail view (6)
+
+Shows the chosen document with all its fields and contents in the chosen version. If you have only chosen a folder but not a document, you will see some folder information in this view.
+

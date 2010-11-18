@@ -1,0 +1,5 @@
+
+
+Example
+
+The following example shows a very simple renderer which inserts a JLabel saying "Hello" in each cell of the table column independent of the column type. 

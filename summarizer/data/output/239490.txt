@@ -1,0 +1,10 @@
+
+2#
+Select [Yes] or [No].
+
+3* If you choose
+Yes: 
+3* Tomcat will be installed and the ADS will be installed in  /webapps of the Tomcat installation. 
+No:
+3* Only the ADS context will be installed. You have to integrate these components in the servlet engine of your choice manually. 
+

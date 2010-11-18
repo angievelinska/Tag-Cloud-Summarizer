@@ -1,0 +1,7 @@
+
+
+The Unified API provides a common superinterface for all persistent entities: CapObject. A CapObject can be thought of as being contained by a repository. Within that repository, it is made unique by an identifier. The available object classes have already been named in this text: folders and documents, users and groups, processes and tasks.
+
+Folders and documents are jointly presented through the interface Content. Documents may exist in more than one Version. The Version and Content interfaces are subsumed under the ContentObject interface. Likewise, User and Group objects share a common superinterface Member and the interfaces Process, Task and WorkflowView are derived from the interface WorkflowObject. All of these interfaces extend CapObject.
+
+Two CapObjects refer to the same persistent entity if they are equal as per Object.equals(Object). In general, there may be more than one Java object for the same persistent entity.

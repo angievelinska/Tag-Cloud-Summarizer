@@ -1,0 +1,11 @@
+
+
+WAGE Toolbar: For the editing commands we use a simple WAGE toolbar. It allows to mark text as bold and/or italic, and to choose a color for the selected text. It also defines a new command "wizard-command" which marks text as bold and italic in one step.
+
+Rendering of the toolbar is done in the "renderToolbar.jsp" template, which we place in the templates/Resource folder of our webapp, so we can include it via
+
+context.include(pageContext, context.getResource().getUri("renderToolbar"));
+
+regardless of what the current resource is. In this way it is also possible to define specialized toolbars for specific document types by placing a renderToolbar.jsp in the appropriate template folder.
+
+The actual rendering of the toolbar and its buttons is done using the WAGE tag-library. See xxx for a reference of the used tags and their attributes.

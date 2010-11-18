@@ -1,0 +1,9 @@
+
+
+<wage:documentState>
+
+Renders an icon for the state (e.g. checked out) of a CoreMedia document and a label for the version of the document. The icon and label will be rendered for the current document, unless the (Bean) name and property attributes are set. See XXX for an example. Attributes:
+
+name (optional): name of a bean available in the pageContext
+property (optional): bean property, which has to be a Resource
+

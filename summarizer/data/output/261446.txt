@@ -1,0 +1,3 @@
+
+
+This section describes operational tasks specific to the integration of FAST in the CoreMedia CMS. For general operation and administration, see the documentation of FAST.

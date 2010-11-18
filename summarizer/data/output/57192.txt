@@ -1,0 +1,41 @@
+
+
+The content of <text> is included in two ways:
+
+
+
+As embedded text
+
+
+3* Place the content in the <text> element.
+
+
+3* Example:
+
+
+3* <text name="Text"> <div> <p>...Flowing text...</p> </div></text>
+
+
+As a separate XML-resource
+
+
+3* The content is stored in a separate resource and referred to by URL given in the href attribute. The XML in the resource must be wellformed. The root element depends on the DTD specified for the field type and usually is <div>. The URL in the href attribute is relative to the main XML-document containing the <text> element, or absolute. If the resource is a file, do not store the file in the importer inbox directory when the default SubDirGenerator is configured in cm-xmlimport.properties. Otherwise the importer will try to import the file and fail.
+
+
+3* Example:
+
+
+3* <text name="Text" href="../href/text.txt"/>
+
+The importer selects the embedded content if <text> element contains embedded content and a href attribute. The <XmlProperty> is used to specify XML fields in document types. Since CoreMedia SCI 4.1 this element replaces the former now deprecated element <SgmlTextProperty>. To be compatible with older releases this element can still be used in document type definitions. In this case the content of <text> must conform to the
+
+
+
+coremedia-query.dtd in the Expression field of the CoreMedia document type Query.
+
+
+coremedia-preferences.dtd in the Data field of the CoreMedia document type Preferences.
+
+
+coremedia-sgmltext.dtd in all other cases.
+

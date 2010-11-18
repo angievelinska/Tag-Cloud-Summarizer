@@ -1,0 +1,4 @@
+
+
+ Menu Item Sub Items Function Add Bookmark  Adds a bookmark to the current resource. Manage Bookmarks  Opens the window for bookmark management.
+

@@ -1,0 +1,6 @@
+
+
+The events utility has the following options:
+
+ Parameter Description -t Timestamp, this parameter gives the date of the last synchronisation with events. If you restart the utility, all events which happened after the moment given with the parameter -t will be reprocessed (i.e.printed to the console), so -t should be omitted when the events utility is used for the first time. If you start events without the parameter -t, all events from now on will be printed. A timestamp has the format <seq_no>:<sub_no>:<id_tag> and is printed out before the event. See Javadoc of com.coremedia.cap.content.Timestamp#fromNumbers(int,int,int) for further details. Note that session events don't provide timestamps.
+

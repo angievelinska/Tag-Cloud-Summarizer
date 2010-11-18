@@ -1,0 +1,14 @@
+
+
+Interactive Report Drill Down
+
+The Top Internal Search Terms report model provides the following two report parameters:
+
+The number of entries parameter determines the number of top entries to display.
+The time interval parameter allows a user to select the time interval. See the Performance report for time interval description and screenshots.
+
+If you are viewing a collection-specific report, you may also set the following parameter:
+
+The collection for which the search requests are analyzed.
+
+Please note that search term results are aggregated in a delayed way, hence you may not see search term rankings immediately.

@@ -1,0 +1,12 @@
+
+
+With the IOR utility program you can display an IOR in a user readable form. This program determines whether the computer name or an IP is used for communication over CORBA and which CORBA port is used. The CORBA communication settings can be configured (see section 4.3.2).
+
+
+The program is executed with:
+
+
+cm ior <ior1> <ior2> ...
+
+
+Example:

@@ -1,0 +1,5 @@
+
+
+Notice that we are using the new XML property with grammar "coremedia-richtext-1.0", i.e. a RichText property, instead of an SgmlProperty here. We are also using property names starting with lower case letters (contrary to the original menu-site document type model). This makes accessing these properties more consistent, see XXX for an explanation.
+
+If you should get an error message like "No getter method for property <PropertyName> of bean org.apache.struts.taglib.html.BEAN", a wrong spelled property name (e.g. starting with an upper case letter instead of lower case or vice versa) in a WAGE or Struts tag could possibly be the cause.

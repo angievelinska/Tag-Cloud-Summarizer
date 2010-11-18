@@ -1,0 +1,20 @@
+
+
+Frameworks delivered by CoreMedia contain, besides the program code, also configurations. The configurations determine the concrete characteristics of the application or enhance the framework with concrete functionality. If you create applications with the framework often several people are involved, who might work independently. In this context it is important, that the structure of the configuration allows to work without intersections.
+
+Aim of a modular configuration is therefore, to enable you to develop the different parts of an application independently in order to ease the creation of the whole application. The following steps support this goal:
+
+No central configuration files as possible
+Pattern based loading of configuration files
+Usage of customizers
+Conventions for the naming and storage of configuration files
+
+Plug-ins
+
+One aspect of the modular configuration is the introduction of a plug-in concept. The main idea is to distribute extensions or specific functions in a given directory structure. Ideally, you can simply copy such an plug-in in the installation directory of the framework in order to install and activate it.
+
+Plug-ins allow you to build a library of functionality, which you can use in arbitrary combinations, depending on your project requirements. In principle, a plug-in can span more than one component. It is possible, for example, that a plug-in defines document types for the Content Server and  Content Beans for the CAE.
+
+Configuration with Spring
+
+The Spring framework offers mechanisms to "wire" the components (beans) of an application using configuration files which are heavily used by the modular configuration. CoreMedia extended these mechanisms with some conventions which are described in this chapter.

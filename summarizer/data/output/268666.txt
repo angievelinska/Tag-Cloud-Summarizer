@@ -1,0 +1,3 @@
+
+
+In a checked-out document you start the spellchecking modus by clicking the  icon. The icon appears now in an activated style.

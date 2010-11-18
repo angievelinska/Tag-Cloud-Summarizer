@@ -1,0 +1,4 @@
+
+
+ Parameter Description -l <limit> Limit the number of results to the given value. -q <query> The query string. -e If set, the query searches for all versions of the documents. -m With the -m option you can transform legacy queries (according to coremedia-query.dtd) into UAPI queries (according to the syntax below).  You can specify the legacy query with the -q option or as id or path of a Query document.  Do not use the -m option if you specify a UAPI query in the first place. -x Like -m, additionally executes the transformed query. -t <paths>, <ids> Paths or IDs of Query documents to be transformed and executed.  If you make use of Query documents, you must also set the -m or -x option.
+

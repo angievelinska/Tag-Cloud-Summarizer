@@ -1,0 +1,5 @@
+
+
+Configure the content bean classes in the file cae-contentbeans-example.xml, which is located in the directory <InstallRoot>/config/caefeeder/spring. The file uses the same format as the contentbeans.xml configuration file of a CAE-based web application. Section ¿Spring Configuration¿ describes how to configure content bean classes.
+
+Make sure, that the configured classes are available in the classpath of the CAE Feeder, for example by copying a JAR file with the class files to the directory <InstallRoot>/lib.

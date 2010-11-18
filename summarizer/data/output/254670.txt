@@ -1,0 +1,33 @@
+
+
+You can control the CoreMedia Watchdog using the cm tool with the options <start|stop|kill|term|run|restart|status>. Please read section for a description of all options.
+
+Watchdog
+
+You have to differentiate between a Windows and a UNIX environment. In both cases, the component arguments (the components to be watched) in the command must be defined in the configuration file watchdog.xml (see section).
+
+Windows environment
+
+If you have installed the Watchdog as a Windows service (see section), proceed as follows:
+Add the components to watch to the JAVA_MAIN_ARGS property in the <CoreMediaHome>/bin/watchdog.jpif file.
+
+E.g. JAVA_VM_ARGS="-watch WatchContentServer WatchGenerator
+2#
+Start the Watchdog with cm watchdog start.
+
+Stop the Watchdog simply with cm watchdog stop.
+
+UNIX environment
+
+If you want to run the Watchdog in a UNIX environment you can either enter the components to watch as described for the Windows environment or proceed as follows:
+Start the Watchdog with:
+
+ cm watchdog start <ComponentToWatch> ...
+
+Probedog
+
+For the Probedog mode you don't have to differentiate between Windows and UNIX environment. Execute the Probedog with:
+cm probedog <component>
+
+
+

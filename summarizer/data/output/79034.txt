@@ -1,0 +1,16 @@
+
+
+Delete binary data
+
+To delete binary data from the document proceed as follows (you must have checked out the document):
+
+
+Click on the MIME type field of the field of which you want to remove the data. The field gains the focus.
+
+
+Click the recycle bin [1] symbol in the tool bar.
+
+
+Save the document or check it in.
+
+You have removed the binary data from the field.

@@ -1,0 +1,24 @@
+
+
+In detail, the parameters of a script file for the Installer are:
+
+destinationDirectory: The installation directory where the CoreMedia component(s) is/are to be installed. In this directory, the executing user must possess write/read rights.
+components: Selection of the CoreMedia component(s) to be installed. Permissible are: contentserver, workflowserver, searchengine, editor, importer, dotnetbridge, ads, pads, contentapplicationengine, editor-extensions, webeditorserver, tomcat, unifiedapi, portal, analytics.
+servertype: Selection of the server type. Permissible are the Content Management Server ("contentmanagement" or "multisite" for an installation with Multi-Site Management), the Master Live Server ("masterlive") or the Replication Live Server ("replicationlive").
+importformat: Selection of the importers to be installed, if Importer was selected as a CoreMedia component. Permissible are: imageimport, cm-xmlimport.
+licensefile: File path to the license file (<LicenseFile> ) for the Content Server which must be copied to this location before. During installation the file will be copied into the directory <CoreMediaHome>/properties/corem and renamed to license.zip.
+folder: Name of Window start menu folder where program icons are installed. You can create a folder structure using the backslash. E.g. CoreMedia\Production will create a folder CoreMedia with a sub folder Production in the Start menu.
+locale: Language selection for the installer text outputs.
+contentapplicationengine.components: Selection of the installation of the Content Application Engine. Permissible are a standalone template installation ("client") a complete CAE webapplication ("webapp"), the Web Services Engine (wsengine), the sample sources (sources), the Proactive Engine template (proactiveengine-template) and the CAE Feeder template (caefeeder-template).
+contentapplicationengine.webapp.plugins: Selection of extensions for the CAE webapplication("webapp"). You can choose from: The Http Cache extension ("httpcache"), the Editing Services extensions ("editingservices"), the Portal Backend extension ("portalbackend"), the Insite Analytics extension ("analytics-insite") and the Tracking for Analytics extension ("analytics-tracking"). All of these extensions can be freely combined.
+pads.component: Selection of the PADS component to be installed. Possible are context and receiver. context will install a complete PADS, receiver will only install a JMSReceiver.
+unifiedapi.components: Selection of the components of the Unified API. Possible are the libraries necessary for running Unified API programs ("libraries") and the source code of the interfaces of the Unified API ("sourcecode").
+webeditingserver.components: Selection of the Web Editing Server components. Possible are the WebEditor ("webeditor"), the WebDAV support ("webdav") and WAGE ("wage").
+portal.components: Selection of the portal components. The portlets for IBM WebSphere ("portlet-ibmwps"), the portlet for SAP Enterprise Portal ("portlet-sapep") and the portlet emulation tool ("portletemulation").
+WorkflowServerComponent.install.analytics: Enabling the Workflow Server to act as an Analytics Data Aggregator.
+analytics.components: The subcomponents of the Analytics Engine that should be installed. Possible values are: dashboard or objectanalyzer. Note that the Analytics Data Aggregator is installed as a Workflow Server and that tracking is enabled in the Content Application Engine.
+analytics.db.*: Database properties that are used for configuring the Analytics Database. These values are reused for all components that access this database.
+
+For description of properties configuration for selected CM components please see the previous section, "Graphical Installation" or the detailed description of each component in the following chapters.
+
+If an error occurred during installation of the Search Engine please read chapter for some troubleshooting. After installation of the Search Engine you should consider installing hotfixes for FAST. The directory hotfix in the CoreMedia Search Engine archive file contains available hotfixes and installation instructions. The directory might not exist if there are no hotfixes.

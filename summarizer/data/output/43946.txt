@@ -1,0 +1,16 @@
+
+
+The abstract class AbstractIconLinkFactory contains the basic functionality: the administration of enabling / disabling and the construction of the HTML fragment. The HTML fragment is parameterised by several abstract methods: 
+
+
+getIconUrl() to return the URL of the icon for display of the link.
+
+getTargetUrl() returns the URL of the link target.
+
+getToolTip() returns the tooltip text displayed when hovering the mouse over the icon.
+
+
+It is also possible to overwrite the method getTarget() in case the link should open in the same window and not in a new one (target="_blank").
+
+
+The methods getGenerator() and getContextPath() can be used by subclasses to get the current ADS or its context path.

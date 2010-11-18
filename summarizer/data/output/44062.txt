@@ -1,0 +1,7 @@
+
+
+When a URI request is read-in and analysed, the ADS goes through the reverse process as for formatting: 
+The context and servlet path of the Active Delivery Server (typically /coremedia and /generator) are removed from the beginning of the URI. Note the asymmetry to formatting the URI, where the contents of Generator#resourceUriPrefix are inserted. This way it is possible to present the user with a prefix which is different from that expected from the servlet standard for requests (request uri); the decision between the displays is carried out by an external component, such as the pre-connected web server described above. 
+The shortened URI is passed to the parseResourceUri method of the configured ResourceUriFormat. 
+The result is a URI object (FolderUri, DocumentUri or PropertyUri) which identifies the page being created and can be requested in the template code as Context#resourceUri. 
+

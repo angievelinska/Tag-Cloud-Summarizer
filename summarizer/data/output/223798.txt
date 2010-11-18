@@ -1,0 +1,5 @@
+
+
+The <analytics:head> tag includes common JavaScript code for click tracking in a page. The tag should be placed before the first link. This avoids JavaScript errors when links are clicked while the page is still being loaded.
+
+This tag allows no parameters.

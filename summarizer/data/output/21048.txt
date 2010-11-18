@@ -1,0 +1,24 @@
+
+
+The directory layout of the Active Delivery Server has changed as well as the format of the configuration file: formerly known as config.jsp is it now config.bsh.
+
+Directory layout
+
+The layout of the generator is now compliant to the servlet standard: all required files are below the servlet context directory. The easiest way to upgrade is to install a new context via installer and copy additional or modified files to their respective locations:
+
+Required jar-files have to be stored in <context>/WEB-INF/lib/. All required libraries of the Active Delivery Server core are installed by the installer.
+If you plan to run multiple coremedia contexts in the same container the Orbacus ORB (OB.jar) is required to go in a shared classloader. It cannot reside in WEB-INF/lib/. For Tomcat, the installer automatically places the file in the application-global library lib/apps/.
+Property files have to be stored in <context>/WEB-INF/properties/corem/. Required are capclient.properties (former corem.properties), mime.properties, log.properties. Templates using the SCI Client API also require the file validation.xml. All these files are installed by the installer.
+
+Configuration file
+
+CoreMedia CAP Version 3.x uses a file named config.jsp for configuration of the Active Delivery Server which was executed once per Active Delivery Server startup. Since using the JSP engine during application startup is implemented differently by various containers, the initialization procedure has been changed to run a bean-shell script, called config.bsh, from the folder WEB-INF/. This file has java syntax (with optional ommitance of types) and has access to the instance of hox.corem.servlets.Generator through the variable generator.
+
+Accordingly, usage of jsp:useBean and jsp:setProperty is no longer supported. Instead the respective Java equivalents have to be used:
+
+defBean('beanName', org.beans.Bean.class) defines an application scope bean.
+
+
+Setting a bean property is now performed through invocation of the respective setter method.
+
+See the installed file config.bsh for details. For more documentation on bean shell, please refer to http://www.beanshell.org.

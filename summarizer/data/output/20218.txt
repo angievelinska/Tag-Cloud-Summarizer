@@ -1,0 +1,3 @@
+
+
+To install a XML importer make a copy of the file properties/corem/cm-xmlimport.properties in the same directory and rename the copy according to the naming rule described in the previous section. In this file, carry out the configurations described in the following.

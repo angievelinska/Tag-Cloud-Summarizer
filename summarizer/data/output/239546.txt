@@ -1,0 +1,81 @@
+
+
+ Class Description JTextFieldStringEditor 
+
+Simple text field. This is the default editor.
+
+The JTextFieldStringEditor can be configured with the following attributes:
+
+fontName="Name of the font"
+This property is used for setting the font of the Text field in the CoreMedia Editor. It should be noted that the fonts depend on the particular configuration of the Java environment. If the font entered does not exist, all available fonts are shown in the log.
+fontSize="Size of the font"
+This parameter adjusts the font size of Text field in the CoreMedia Editor. The size can be set between 10 and 24. If there is no exactly matching character set for this font size, the font is scaled accordingly. This can cause an awkward appearance of the font.
+spellCheckingEnabled="false"
+This parameter disables spellchecking for the Text field in the CoreMedia Editor. Spellchecking is enabled by default. ComboBoxStringEditor 
+
+Selection list. If this class is used, the attribute fixedChoice can be added to the <Property> element. "false" will allow you to type own entries in the combo box. "true" is default and will allow only the predefined items. You can limit the number of characters allowed to enter by using the attribute columns.
+
+Example:
+
+<Property name="CopiesTo" editorClass="ComboBoxStringEditor" columns="15">
+
+If you are using this attribute you have to take care for two things: 
+
+
+Do not enter a <HistoryItem> or <FunctionItem> with a length longer than defined in columns.
+
+
+
+
+Be sure that no strings longer than defined in columns have been stored in the repository before. Best practice would be to configure a validator to guarantee correct server side storage.
+
+
+
+You can disable spell checking using the attribute spellCheckingEnabled="false". Spellchecking is enabled by default.
+
+The selection options can be added with three different multiple child elements:
+
+
+
+<HistoryItem value="abc"/>: The values defined in this element are shown as a combo box. 
+
+
+<FunctionItem: The attribute class defines the class which should be used. The attribute label (optional) defines the name of the function item. Own classes must extend the abstract class hox.gui.editor.combobox.FunctionItem.
+
+
+
+<LabeledItem value="60" label="One minute"/>
+
+
+
+The values defined in this element are shown as a combo box. In the combo box you will see the localized version of the value of the label attribute (localized via classes/hox/corem/editor/toolkit/property/property.properties). The value used is the one defined in value.
+
+Example:
+
+<Property name="Name" editorClass="ComboBoxStringEditor">
+
+  <FunctionItem class="myFunctionItems.MyStringClass" label="Select Me"/>
+
+</Property> JCheckBoxStringEditor A check box. If the box is chosen, "true" will be saved, otherwise "false". JPasswordFieldStringEditor Text field which allows to enter a password. Thus the input characters will be displayed hidden. JTextPaneStringEditor 
+
+Text field with more than one line. I.e. if the length of your string exceeds the width of your string text field a new line will be started. Internally, this will not be stored as a line break. You can insert line breaks hitting the <Return>-key. The length of the text is limited to the length defined in the document-type.xml file.
+
+The JTextPaneStringEditor can be configured with the following attributes:
+
+fontName="Name of the font"
+This property is used for setting the font of the Text field in the CoreMedia Editor. It should be noted that the fonts depend on the particular configuration of the Java environment. If the font entered does not exist, all available fonts are shown in the log.
+fontSize="Size of the font"
+This parameter adjusts the font size of Text field in the CoreMedia Editor. The size can be set between 10 and 24. If there is no exactly matching character set for this font size, the font is scaled accordingly. This can cause an awkward appearance of the font.
+spellCheckingEnabled="false"
+This parameter disables spellchecking for the Text field in the CoreMedia Editor. Spellchecking is enabled by default. QueryStringPropertyEditor 
+
+Stores a query string following the Unified API query syntax. This syntax allows to use `and¿, `or¿ and `not¿ operators and is more powerful than the query syntax in the standard search window. This property editor adds two buttons to the CoreMedia Editor for creating and executing the query. The property editor uses the query editor web extension to edit the query string in a separate browser window. If executed the query result is displayed in a result window similar to the result table in the standard search window. The property editor can be configured with every string property that is large enough to hold the query strings. Be aware, that a string property in a document type is always limited in size, but a user can create queries of any size. 
+
+The QueryStringPropertyEditor has no attributes to configure. BeanQueryStringPropertyEditor 
+
+Stores a query string from the Bean Query Editor that is used for Content Rules. This property editor adds two buttons to the CoreMedia Editor for creating and executing the query. The property editor uses the query editor web extension to edit the query string in a separate browser window.
+
+Be aware, that a string property in a document type is always limited in size, but a user can create queries of any size. 
+
+The BeanQueryStringPropertyEditor has no attributes to configure.
+

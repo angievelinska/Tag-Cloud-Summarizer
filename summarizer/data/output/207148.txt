@@ -1,0 +1,3 @@
+
+
+By means of the destroy tool, you remove the indicated objects permanently and irrevocably. Use with great care. This tool is typically needed to recover from error conditions only.

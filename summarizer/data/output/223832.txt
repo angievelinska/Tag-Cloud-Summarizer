@@ -1,0 +1,4 @@
+
+
+ x x x x name String  the name of the context logView true/false false whether to log the rendering of this context in the analytics log
+

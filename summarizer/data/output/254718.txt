@@ -1,0 +1,7 @@
+
+
+If a rule is applied to document types in a directory, the current rights structure for the particular group is passed on to the documents in subdirectories. If another rule should apply in a subdirectory it has to be created explicitly for the particular document types. For available rights and their impact see section.
+
+If a user possesses different rights for a resource due to belonging to multiple groups, these rights are combined additively.
+
+Example:

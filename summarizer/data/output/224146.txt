@@ -1,0 +1,8 @@
+
+
+This framework¿s main component is the ContentTrigger component (together with its ContentPersistentCacheKeyFactory) which assumes complete control over the communication with the Proactive Engine. It uses two customizable sub components: 
+
+ContentSelector: The ContentSelector is a com.coremedia.cap.content.events.ContentRepositoryListener which defines the contents considered relevant for processing. The configurable default implementation PathAndTypeContentSelector selects contents of certain content types which are located below a certain folder.
+
+ContentEvaluator: A ContentEvaluator is a kind of abstraction of the PersistentCacheKey¿s evaluate() method. It is responsible for computing a value which is based on a content. If you want to reuse your ContentBean business logic from a CAE web application, you can use the ContentBeanEvaluator instead. 
+

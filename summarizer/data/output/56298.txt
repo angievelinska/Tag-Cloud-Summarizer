@@ -1,0 +1,11 @@
+
+
+If a document is not in its correct place, you can move it by cut an paste to the new location. 
+
+To move an existing document, proceed as follows:
+Select the document which has to be moved, 
+choose Edit|Cut from the menu bar.
+Select the target folder, 
+choose Edit|Paste from the menu bar.
+
+The document is pasted into the selected folder.

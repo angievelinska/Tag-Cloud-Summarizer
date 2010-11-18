@@ -1,0 +1,13 @@
+
+
+If you want to deploy the WebEditor into the WebSphere Application Server you need to configure the web application and create the war-file.
+
+Configure the WebEditor web application as decribed in chapter. For the use with the WebSphere Application Server you need to add the following line to the editor/WEB-INF/config.bsh file:
+
+generator.setBackdoorConnector(new hox.corem.generatorv3.AlternateServlet23BackdoorConnector());
+
+Now, you can create the war-file as follows:
+Install the WebEditor without the Tomcat servlet container (see chapter).
+Switch to the directory of the WebEditor: cd <CoreMediaHome>/webapps/editor
+Create the war-file: jar cvf editor.war
+

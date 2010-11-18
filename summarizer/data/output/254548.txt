@@ -1,0 +1,12 @@
+
+5#
+Click [Next] to continue with the installation.
+
+Now you will be asked for the destination directory etc. as described in the "General Installation Information" chapter. Afterwards you will be asked, if you want to configure the properties of the server.
+6#
+If you want to set up the CoreMedia Live Server now, click [Yes]. If you want to configure later manually, click  [No].
+
+3* If not,  make sure to do the basic configuration  in the corresponding property files in the directory ./properties/corem later.
+3* If you decide to configure now, set the component properties via dialog boxes. For a detailed description of the properties see Chapter 5. All path information is relative.
+
+Now you may configure contentserver.properties.

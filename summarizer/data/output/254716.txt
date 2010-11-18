@@ -1,0 +1,18 @@
+
+
+A new group is created by giving it a new name and allocating existing users to the group. The Group id is automatically given by the application.
+Choose File|New group
+
+or click  on the tool bar
+or press <CTRL>+<G> resp. <ALT>+<G>
+2#
+Name the group.
+Choose the group type.
+
+3* You may choose Administrator group to provide administrator rights to the group members or Content Managment Server group to create a non administrative group on the Content Server. Check Live Server group if you want to create a group for the Live Server (you have to create the same group on the Live Server, read section for details on Live Server user/groups).
+4#
+Save the group settings.
+
+click  on the tool bar.
+or press <CTRL>+<S> resp. <ALT>+<S>
+

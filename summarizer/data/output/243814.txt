@@ -1,0 +1,9 @@
+
+
+Implies
+
+
+Grammar: ( (Expression) , (Expression)* ) 
+
+
+An Implies expression determines whether the first sub-expression logically implies all remaining sub expressions. Thus, <Implies>E1 E2 E3 ...<Implies/> is equivalent to <Or><Not>E1</Not> <AND>E2 E3 ...</And></Or>. For the common case of two sub-expressions, an Implies expression evaluates to "true" if and only if the first expresion evaluates to "false" (without caring for the result of the second sub-expressions) or both expressions evaluate to "true"..

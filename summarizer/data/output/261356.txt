@@ -1,0 +1,5 @@
+
+
+Configure in the following file:
+
+css-import.properties in the management/properties/corem directory.

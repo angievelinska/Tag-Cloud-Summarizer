@@ -1,0 +1,6 @@
+
+
+For every document in the linklist property, the template calls the template shown in Example 4.5.5.1a and in this way collects all short descriptions of documents to which the main document refers. Imagine that the document with ID 30 points to the documents with IDs 20 and 24, and the page (id=30, templateId=all.jsp) is generated. The page will contain, amongst others, dependencies on (id=20, templateId=short.jsp) and (id=24, templateId=short.jsp).
+
+
+What happens if document 20 is published in a new version, but the property shortVersion remains unchanged? The pages (id=20, templateId=short.jsp) and (id=30, templateId=all.jsp) could both be affected and are therefore provisionally marked as invalid in the cache (invalidated). On the next access to (id=30, templateId=all.jsp), the dependency on the page (id=20, templateId=short.jsp) is checked. For this purpose, (id=20, templateId=short.jsp) is regenerated. Now the Active Delivery Server (ADS) discovers that the page (id=20, templateId=short.jsp) has not changed, and that (id=30, templateId=all.jsp) does not have to be regenerated but is immediately installed again in the cache unchanged (revalidated).

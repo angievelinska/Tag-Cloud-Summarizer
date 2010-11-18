@@ -1,0 +1,13 @@
+
+
+Adjust configurations for database connection in sql.properties. The parameters have the following meaning:
+
+sql.store.driver: This parameter references the JDBC driver of the selected database. The driver is database-specific.
+sql.store.url: This parameter gives the URL where the Live Server can reach the database.
+sql.store.user and sql.store.password: these parameters hold the information about the database user.
+sql.store.dbProperties: This parameter references a database-specific configuration file in the directory ./properties/corem. Configuration files for all supported databases are supplied and contain special information for the particular database. They must not be changed. The default file names are: db2.properties for a DB2 database, mssql.properties for a Microsoft SQL Server and oracle.properties for an Oracle database.
+11#
+Enter the necessary data. If the database is installed on a different computer from the server you have to replace "localhost" with the computer name in sql.store.url. If you are not using an ORACLE database, the other entries also have to be adjusted. Continue with the configuration by clicking [Next].
+
+Now you will be asked to configure capclient.properties.
+

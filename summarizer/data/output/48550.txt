@@ -1,0 +1,18 @@
+
+
+The view for this example consists of several CoreMedia templates:
+
+A view Dish/render that displays one dish by including Dish/renderProperties and providing an edit link that invokes the wizard in a new window,
+a view Dish/preview that displays a "preview" of one dish by including Dish/renderProperties,
+a view Dish/renderProperties that renders some properties of a Dish,
+one template for each editing step (Dish/renderEditStepn with n=1..3),
+a view Dish/preview, and
+a helper view Dish/dialog as well as a static helper HTML page closeDialog.html.
+
+The wizard is opened in a new window. Since at the end of the wizard, the original window should be updated (reloaded) and raised, we need some helpers. The Dish/dialog view constructs a frame that contains the actual wizard. This is necessary because the JavaScript window.opener information would be lost when loading other pages into the new window during the wizard steps. With the frame constuct, the outer page always remains the same and thus the window.opener can still be retrieved. The HTML file closeDialog.html contains JavaScript code to reload and raise the current window's opener and then close the current window, so that the original page is updated and the dialog disappears.
+
+The template rendering the resource (Dish/render) renders a link to the dialog view. We set target="_blank" to open the editing wizard in a new window, thereby allowing to simultaneously edit multiple resources. In the link to the generic dialog view, we hand in the name of the action that should be invoked inside the frame.
+
+The <bean:define>-tag copies an existing bean property into a new bean. In our case, the property resource of the bean context (which holds the current CoreMedia resource) is copied into the newly created bean document with the type ClientDocument. It can then be used as a page scope bean (default scope) and as a Java scripting variable.
+
+The <wage:css> tag is used to include the cascading stylesheet necessary for displaying rich text with all attributes.

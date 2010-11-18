@@ -1,0 +1,3 @@
+
+
+Be aware that a document created on the Content Management Server published to the Master Live Server and replicated to Replication Live Server will be independently created on each server. While implied properties like name or Id are the same on each server, all properties concerned with creation (creationDate_, creator_, etc.) are different on each server. That is, a call to getModificationDate(), for example, gives different dates on the multiple servers for documents with the same Id.

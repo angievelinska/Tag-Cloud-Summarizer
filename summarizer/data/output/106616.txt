@@ -1,0 +1,18 @@
+
+
+General preconditions for starting CoreMedia SCI components:
+
+
+
+For operation of CoreMedia SCI on Unix systems, the ksh shell must be installed in /bin . It is used for starting the CoreMedia components on execution of the cm command (see next section).
+
+
+If the CM WebEditor is used an approved browser must be installed.
+
+
+In general, it must be ensured that all computers in use are mutually visible over DNS.
+
+
+The image converter service of the server needs the program convert from ImageMagick. On a Linux and Solaris system, you have to use the convert of your distribution. If there is no convert installed, you can download the respective program at ImageMagick. You have to enter the path to the installed convert in the property convertCommand in the file ./properties/corem/imageconverter.properties. If you are using Windows, convert will be installed by the installer program.
+
+Virtual machine crashes can be experienced when using certain combinations of kernel/glibc under Linux. The crashes were reported to occur mostly on startup. The problems might be fixed by reducing the default stack size. At bash shell, do "ulimit -s 2048"; at tcsh use "limit stacksize 2048". GLIBC 2.2 / Linux 2.4 users should also define an environment variable: "export LD_ASSUME_KERNEL=2.2.5"

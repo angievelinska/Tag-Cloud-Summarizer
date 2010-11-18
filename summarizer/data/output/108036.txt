@@ -1,0 +1,9 @@
+
+
+Link predicates
+
+
+You can register link predicates to restrict the computed values. Link predicates are asked if a link that a builder requested during computation should be created or not, i.e. if the value should be computed or not. Link predicates must implement the interface com.coremedia.generator.pads.LinkPredicate. They are registered with the LinkPredicate element inside the Pads element. The Pads element may contain zero, one or more LinkPredicate elements.  Link predicates are called in the order of their configuration: the decision is made by the first configured link predicate which returns that a link with given source and target keys should be created or not. Link predicates should only prevent links from values that were computed by custom builders. PADS will create all links, if no link predicate is configured.
+
+
+Example:

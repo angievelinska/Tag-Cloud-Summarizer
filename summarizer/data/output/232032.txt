@@ -1,0 +1,13 @@
+
+
+PADS can be used to generate pages (e.g. HTML pages) for offline use. It uses templates to create all pages which can be reached transitively through links from the configured root pages. Links are recognized during computation when URI objects are transformed into their string representation, i.e. Uri#toString is called. The followed links can be restricted using PageLinkPredicates. For configuration and operation see the Administration and Operation Manual.
+
+Template development follows the same rules as for the Active Delivery Server with some exceptions:
+
+Because PADS uses a persistent cache which is backed by a database, cache invalidations, updates and lookups are slower than with the ADS. For this reason, templates for page fragments should be less often marked as cacheable to minimize overhead. In some cases a computation might even be faster than a cache lookup, especially if the internal resource cache already contains all accessed resources.
+Access control is currently not supported.
+The length of ResourceUris is restricted by the maximum length of keys in PADS. The maximum length of a key in PADS is 512 characters. Because keys for pages use a 40 character prefix, the maximum length of a ResourceUri is 472 characters.
+
+When PADS is started it detects changed templates and invalidates dependent pages. Note, that it is not sufficient to change the  modification date of the template file, because change detection is based on MD5 hash values. If you want to force an invalidation of pages computed with a particular template, use the development pages instead. You must also use the development pages to announce template changes when PADS is running.
+
+If you configure a custom uploader for pages, it will receive instances of com.coremedia.generator.Page for each generated page. This class provides methods to access the page content and the content type. Please see the API documentation for details. 

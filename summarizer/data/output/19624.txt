@@ -1,0 +1,8 @@
+
+
+<Task>
+
+
+Child elements: <Variable>*, <AggregationVariable>*
+
+Parent elements: <Process>

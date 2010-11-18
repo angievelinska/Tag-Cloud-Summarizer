@@ -1,0 +1,8 @@
+
+
+<DocumentTypes>
+
+
+Child elements: <DocumentType>*, <Predicate>?, <Comparator>? 
+
+Parent elements: <Editor>

@@ -1,0 +1,5 @@
+
+
+Upload workflows
+
+If you have purchased the CoreMedia Workflow Server (Unlimited Edition), you can create your own workflow definitions. In order to make these definitions available to the users you need to upload them. For this purpose, you can either use the upload utility (see Section 5.6.21 for a detailed description) or the menu item File|Load in the workflow window of the CoreMedia Editor. 

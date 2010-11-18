@@ -1,0 +1,5 @@
+
+
+Respective elements of the workflow definition: <Choice>[<Successor>]
+
+Example:

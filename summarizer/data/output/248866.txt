@@ -1,0 +1,4 @@
+
+
+The major purpose of the CoreMedia Active Delivery Server (ADS) is to transform content stored in the CoreMedia repository into web-accessible pages in HTML or other formats. It does so on-demand, that is, pages are generated when a request arrives. The transformation is described in user-defined templates, namely JSP pages, that are invoked under control of the ADS servlet. Templates use the CoreMedia Generator API in order to read from the repository or invoke other templates. In order to speed up page delivery, ADS can cache pages or page fragments and make them directly accessible to a web server as static files.
+

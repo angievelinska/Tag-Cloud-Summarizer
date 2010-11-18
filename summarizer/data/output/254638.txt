@@ -1,0 +1,9 @@
+
+
+ Direct migration to CoreMedia CMS 2008 is only possible from a CoreMedia CMS 2005, CoreMedia CMS 2006 or CoreMedia SCT 4.2 system. If you want to migrate from previous versions you have to do it step by step. E.g. if you are currently using a CoreMedia CAP 4.1 system you have to perform the following steps:
+Migrate to CoreMedia SCT 4.2
+Apply the changes described in chapter. You do not need to install a CMS 2005 system, but you have to do all the API changes and so on.
+Apply the changes described in chapter. You do not need to install a CoreMedia CMS 2006 system, but you have to do all the API changes and so on.
+Migrate to CoreMedia CMS 2008
+
+In this chapter you will find the necessary steps for a migration from CoreMedia CAP 3.3 or higher to CoreMedia CMS 2008.

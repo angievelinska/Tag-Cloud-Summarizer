@@ -1,0 +1,17 @@
+
+
+Depending on the logic executed in the templates, page generation may take a significant amount of time. To enable performant page delivery, the ADS allows for caching of whole pages or page fragments if these fulfil certain rules. In contrast to most other page caching systems which are based on timeout or manual invalidation, the ADS cache performs automatic invalidation of pages if underlying resources have changed.
+
+In order to work properly, only certain types of templates can be cached. Because ADS uses the ResourceUri as the cache key for a page, the corresponding template may derive information from that Uri only. That means it may not use any of the following:
+
+
+
+request attributes passed from a calling template (except for the context bean)
+
+
+request headers (such as User-Agent, Accept-Language, ...)
+
+
+session attributes (such as current user, ...)
+
+If the template does use any of these, the page will be cached and ADS will not re-evaluate the template, even if it was called from a different session, browser, ... Actually, depending on the SCI and Container version, these values may not even be visible to the template when executed under cache control. See section ?? for options regarding caching in settings where you want to access request or session information and still profit from caching.

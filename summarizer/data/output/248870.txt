@@ -1,0 +1,3 @@
+
+
+If you want to use PADS for page generation with templates, you don't need to write a custom builder. Some notes on page generation are made in section.

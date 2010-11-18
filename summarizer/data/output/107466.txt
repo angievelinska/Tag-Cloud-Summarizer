@@ -1,0 +1,21 @@
+
+
+The importer allows to define XSLT style sheets which transforms XML files of your format into the CoreMedia format. This stylesheet is automatically executed on import.
+
+
+The XSLT interpreter used in CoreMedia requires stylesheets corresponding to the W3C Recommendation of the 16.11.1999. This particularly concerns the XSL namespace in the <xsl:stylesheet> element, which must be set to
+
+
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+
+
+Older XSL editors still generate the variant from an earlier Working Draft:
+
+
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform/1.0"
+
+
+This is out-of-date and not supported by CoreMedia.
+
+
+The value of the class property in the configuration file for an XSLT transformer is XsltTransformerFactory. Furthermore, the desired stylesheet must be defined with property.stylesheet.

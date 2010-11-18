@@ -1,0 +1,7 @@
+
+
+The ToolbarRenderer acts as a default implementation which might be overridden. Methods which are candidates for overriding are those who are prefixed with 'render'. Please have a look at the Java Doc for the class ToolbarRenderer (package: com.coremedia.easyedit) for details.
+
+Rendering of the Actions
+
+As mentioned before, the actions are usually rendered as icons in the toolbar. Under the hood, the action is rendered as a form which points to an ActionExecutionController which is responsible for executing the chosen action. The Renderer encodes the action name and the target (usually a ContextInfo-Object) as hidden input fields into the form. When the user triggers an action execution by clicking on an icon in the toolbar, the form is submitted and handled by the ActionExecutionController.

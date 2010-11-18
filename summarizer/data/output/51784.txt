@@ -1,0 +1,5 @@
+
+
+As we try to show many different configuration options for the examples, for example writing own form beans and actions for one example, and using the standard WAGE forms and actions for another, each example is deployed as a separate Web application. On the other hand, for the examples to work with any CoreMedia CMS version, they re-use the wage context of your installation. Please follow the installation instructions in the file readme.txt contained in the WAGE examples distribution carefully!
+
+Also the Menu Site demo content has to be imported before running the examples. For instructions on how to import the demo content, please refer to the CoreMedia CMS Developer Manual.

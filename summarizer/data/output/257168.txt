@@ -1,0 +1,5 @@
+
+
+The document has been checked out and can be given back (right-hand symbol) or the changes cancelled (middle symbol).
+
+You can find an overview of the different states in section.

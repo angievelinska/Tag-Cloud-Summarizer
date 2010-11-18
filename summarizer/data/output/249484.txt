@@ -1,0 +1,249 @@
+
+
+The strategy interface to be discussed here are mostly defined in the package com.coremedia.analytics.plugin where you can also find the default implementations. It will be explicitly stated, if a strategy is placed in a different package. Because the strategy implementations tend to be short, it is generally easier to implement a strategy from scratch rather than subclassing an existing implementation.
+
+BrowserExtractor
+
+The browser extractor is invoked to determine the browser that is used by the client requesting a page. You must implement a single method:
+
+String getBrowser(HttpServletRequest request);
+
+The default implementation DefaultBrowserExtractor simply retrieves the User-Agent header from the HTTP request.
+
+Your own implementation may discard some of the information present in the header, for example the exact build number of the browser. Or you may want to rewrite the technical identifier in a more human readable one. Or you might want to perform additional guesswork for browsers that disguises their identity.
+
+Of course, when you are not working in an HTTP/HTML environment, the name "browser" might not properly describe the user agent or device used to render a page. But still, browsers are the most frequent use case.
+
+LocaleExtractor
+
+The locale extractor determines the locale for which a certain page should be rendered. The reported locale is used in two cases. When tracking visitor behavior, the locale is written to the database, identifying the page. When using In-Site Analytics, the locale determines which data to retrieve from the database for display.
+
+You must implement a single method:
+
+String getCurrentLocale(Object object, String view, 
+  HttpServletRequest request)
+
+The return value of this method is the string representation of the locale. The length of the locale is limited to five characters in the database schema. 
+
+The reported language should always match the language shown on the page, not the locale requested by the browser. If your web application delivers pages in a single language only, you should probably use a simple LocaleExtractor that always returns a constant value. To this end, the class JvmLocaleExtractor returns the default locale of the JVM. This is a good starting point that is chosen as the default. It is sufficient for simple cases.
+
+If the default locale is not appropriate, but the locale is still fixed for all requests, you can use the class ConstantLocaleExtractor. It always returns a fixed locale string, which can be configured through its locale property. 
+
+For determining the locale you might want to reuse the locale from the servlet engine as done by the RequestLocaleExtractor. The RequestLocaleExtractor returns only the two-letter language code of the locale reported by the servlet engine, but you can set the property includeCountry to true to include also the country code. This is only useful if your application delivers different pages for different locales, though. 
+
+Alternatively, you might want to inspect the currently rendered object in a custom extractor.
+
+LogFilter
+
+The log filter is used when not all requests to the Content Application Engine should be logged and processed into reports. For example, it is rarely useful to log the retrieval of a CSS file. You must implement a single method:
+
+boolean mustLogPage(Object object, String view, String locale,
+  HttpServletRequest request)
+
+As a standard implementation, the PatternLogFilter is provided, which allows you to specify regular expressions that the rendered locale and view must or must not match.
+
+ObjectIdAnalyzer
+
+The class ObjectIdAnalyzer from the package com.coremedia.analytics.wf.plugin is used to link a page object to related content beans. For example, a page might render an object that aggregates one content bean indicating the position of the page in a navigation tree and one content bean storing the actual content. The interface contains a single method:
+
+ObjectIdInfo compute(String objectId);
+
+The argument string is the exact string produced by the IdScheme that handles the bean. The method should not consult other data sources. All information that is needed for the analysis must have been encoded into the id.
+
+Once the id is analyzed, the strategy object can instantiate an ObjectIdInfo bean and set properties as appropriate. To this end, the setters 
+
+void setName(String name);
+void setNameObject1Id(String id);
+void setNameObject2Id(String id);
+void setNameObject3Id(String id);
+void setCategoryObjectId(String id);
+
+are provided by the bean. The name is only set the in the very rare case that a human-readable name is encoded into the id, which is discouraged. Instead up to three other objects can be referenced, whose display names as computed by the Object Analyzer contribute to the display name of the page. The arguments to the setNameObject... methods are normally content bean ids starting with contentbean: and ending in the numerical content id. The category object is that content bean whose category according to the Object Analyzer also determines the category of the page. Often this is a content bean from the navigation hierarchy.
+
+An object id analyzer may return null, if it is not responsible for an ID of a certain format.
+
+PageDataExtractor
+
+A page data extractor analyzes a URI in order to determine information about the page it represents. The page is characterized by its object, its view, and its locale. The page data extractor may return the empty string as the locale to indicate that no locale can be determined and that the locale of the target page should be used. Null must be returned if the URI can not possibly be generated by the analyzed web application.
+
+There is a single method that needs to be implemented. 
+
+PageData getPageData(URI uri);
+
+Currently the page data extractor is only used to analyze the referrer string of an HTTP request, thereby helping in determining the source of a page view.
+
+The DefaultPageDataExtractor uses a regular expression to parse the URI. The first capturing group of the regular expression is considered to be the numeric content id of the rendered content object. Fixed values are used for view and locale.
+
+PageNameFormatter
+
+The page name formatter is used inside the Analytics Dashboard for format the names pf pages. To this end, it receives a reference to the current user session and a bean that contains further information about the page to be displayed.
+
+String formatName(AnalyticsUserSession aus,
+  PageNameInfo pageNameInfo);
+
+The session can be used to localize parts of the name, if that is needed. It can also be used to access repositories that might contain further information about the page.
+
+However, in most cases, the field provided by the bean in the second argument should be sufficient to assemble a name. The fields indicate the object that is rendered on the page, the view and the locale. There is also the display names of the object as computed by the Object Analyzer. If an ObjectIdAnalyzer instance recognized the id, there are also references to the name objects computed by the analyzer and the display names assigned to those objects. If not available, the fields of the bean are null. 
+
+The page name formatter simply returnes the formatted name or null, if it can determine (for example from the object id) that it is not qualified to compute a display name for the page in question.
+
+ReferrerDataExtractor
+
+The referrer data extractor analyzes the HTTP referrer string and provides access to two pieces of information:
+
+A normalized referrer URI. Depending on your needs you may want to discard some of the information available in the Referer header. For example, you might want to limit the referrer information to the domain name only, thereby reducing the number of different referrers.
+A search term. The search term should be set, if the incoming request was generated by an external search engine.
+
+There is a single method that needs to be implemented.
+
+ReferrerData getReferrerData(HttpServletRequest request)
+
+The referrer data extractor is not unified with the page data extractor, because the default implementation of the referrer data extractor is often sufficient for custom applications while the implementation of the page data extractor can be highly specific to a single installation.
+
+The DefaultReferrerDataExtractor applies varying heuristics to the URI after matching hte URI's host name against patterns for well-known search engines. It determines the URI by discarding the query part of the request URI.
+
+Generally, abstracting too much will loose valuable information, which cannot be recovered later on. Leaving the input data as-is might lead to inconclusive reports, because each data point is supported by very few values.
+
+RobotDetector
+
+The robot detector is used to detect robots that visit your tracking enabled site. To create your own robot detector class you will have to implement one single method:
+
+public String detect(HttpServletRequest request);
+
+The default implementation UserAgentRobotDetector simply retrieves the User-Agent header from the HTTP request and checks it against a list of known robots and wildcards provided by DefaultRobotProvider class. By default the robots provider gets its robot information from a plaintext file (analytics-robots.db) and from properties. For more information about robot provider configuration have a look at the Administration and Operation Manual.
+
+SearchDataExtractor
+
+This strategy extracts information about internal searches performed using the CoreMedia Search Engine, if you decided to deploy this component and if you are importing the generated search logs. If you choose to create a custom extractor, you must configure your extractor in the aggregation process definition as described in section.
+
+You must implement one method to implement the interface:
+
+SearchData getSearchData(Map attributes);
+
+The returned SearchData instance wraps information about the search collection that was accessed and about the requested search term. Both pieces of information must be present. The argument map contains the attributes of the search request URL as found in the log files. Typically you will access the values assigned to the keys filter and query. For all values, URL escapes have been resolved and plus signs (+) have been replaced by spaces.
+
+The standard implementation DefaultSearchDataExtractor uses regular expressions for obtaining the requested information.
+
+SessionExtractor
+
+The session extractor is used to determine a unique id that identifies a user session.
+
+String getSessionId(HttpServletRequest request)
+
+The default implementation DefaultSessionExtractor uses the id of the HTTP session as reported by the servlet engine. Generally, this is a good approach even for multiple Content Application Engines, if a load balancer makes sure to always route requests from the same client to the same server.
+
+If multiple servlet engines have to serve requests of a single session, it might be necessary to implement a custom schema for assigning ids to sessions.
+
+SiteExtractor and ContentSiteExtractor
+
+Every object belongs to exactly one site. The site extractor and the content site extractor are responsible for computing the stringified name of the site from any given object. Site extractors are used in the click-tracking configuration, they map generic objects to site names, while Content Site Extractors are used in the Object Analyzer configuration, they map content to site names only. You can configure the Site Extractor in the custom/tracking.xml file and the Content Site Extractor in the properties/corem/objectanalyzer/custom/trigger.xml file as a property of the DefaultObjectStateContentEvaluator (see section for details).
+
+The interface SiteExtractor defines the following method,
+
+public String getSite(Object object)
+
+while the interface ContentSiteExtractor defines the method
+
+public String getSite(Content content)
+
+The default implementation of ContentSiteExtractor is DefaultContentSiteExtractor. When used in the live environment of a multi-site installation, its bean property multiSiteMode must be set to true or false, depending on the intended behavior. In the content management environment, it can retrieve the server mode if a Unified API connection is injected into the extractor and if the mode is set to auto. In multi-site mode, this class uses the top-level folder that transitively contains the content under examination as the site, prefixing its numeric id with contentbean:. In single-site mode, it simply returns contentbean:1 in all cases.
+
+Another class DefaultSiteExtractor implements both interfaces. It uses the content bean id of the base folder of the content associated to a content bean as the site. Only content beans are supported. Internally, this extractor delegates to a ContentSiteExtractor, which can be replaced as needed, for example for activating or deactivating multi-site mode.
+
+In general, an arbitrary algorithm is possible, but you should take care that the algorithm is stable, because an object cannot change its site later on.
+
+SizeExtractor
+
+The size extractor determines the number of bytes delivered in the current request. It is guaranteed that the templates have been completely rendered before this method is invoked.
+
+long getSize(HttpServletRequest request, 
+HttpServletResponse response)
+
+The default implementation DefaultSizeExtractor works in combination with the class SizeFilter. The SizeFilter must be included in the web.xml configuration file as follows:
+
+<filter>
+  <filter-name>Analytics Size Filter</filter-name>
+  <filter-class>com.coremedia.analytics.util.SizeFilter
+  </filter-class>
+</filter>
+<filter-mapping>
+  <filter-name>Analytics Size Filter</filter-name>
+  <url-pattern>/servlet/*</url-pattern>
+</filter-mapping>
+
+Unfortunately, it is not possible to add a similar filter using a Spring configuration only.
+
+TargetObjectResolver
+
+When linking to a certain object, it may be necessary to rewrite the link to point to a different object. For example, a link to a small text fragment would likely be replaced by a link to the page object that contains the text fragment. To this end, the interface TargetObjectResolver was added, but it has since been deprecated in favor of interface TargetPageResolver.
+
+If you are using a target object resolver for both tracking and In-Site Analytics, you should move the object resolution code to the rendered beans and indicate the correct bean in the <analytics:pagecontext> tag. If you are using a target object resolver only for In-Site Analytics, you should convert it to a TargetPageResolver, which is more expressive for this purpose.
+
+TargetPageResolver
+
+An instance of the interface TargetPageResolver is used if the page identified in an <analytics:link> tag does not correspond to the page that is finally rendered after clicking the link. Normally, it would be conceptually cleaner to compute the page before rendering the link, putting exactly the needed information into the URL. However, this may not be possible if the computation performed by the controller is too expensive to be performed for each rendered link or if it would generate too many dependencies.
+
+In that case, the target page resolver may compute the rendered page for each link in an In-Site Analytics application, allowing In-Site Analytics to render the correct statistics without affecting the rendered URLs. To this end, the target page resolver must be able to simulate the entire chain of link formatter, controller, and JSP template.
+
+One method must be implemented when directly using the interface TargetPageResolver:
+
+PageData resolve(Object object, String view, String locale, 
+  HttpServletRequest request, HttpServletResponse response);
+
+The returned object is an aggregate indicating the object, view and locale rendered when requsting a link to the given object, view and locale. Frequently the view and locale (if that is used at all) are not changed by going through the rendering chain. Only the object may have to be replaced. In that case, the simplest way of implementing a target page resolver is inheriting from the class DefaultTargetPageResolver. This class passes all three arguments to the main method as-is, but allows suclassers to overwrite individual methods, especially for the object.
+
+public Object resolveObject(Object object, String view, String locale, 
+  HttpServletRequest request, HttpServletResponse response) {
+  return ...;
+}
+
+As you can see, the resolver gets access to the request and response object, allowing it the same freedom that is also enjoyed by the LinkFormatter.
+
+Typically the algorithm needed for resolving the target page identity is already available when combining the LinkFormatter and the Controller implementation. It is a good practice to extract that code into a separate class that can then be reused by all involved strategies.
+
+UserNameExtractor
+
+This strategy object derives the name of a user from a request object. In many cases, there might be no login procedure for your site, so that a user makes no sense, but in a shop a login might be mandatory.
+
+String getUserName(HttpServletRequest request);
+
+The default implementation DefaultUserNameExtractor returns the name of the request's user principal, which is useful if the servlet container's authentication model is used.
+
+For Internet applications this is often not the case. For these sites no authentication is available, but it is still desired to distinguish different users. This can be done by storing a cookie in the user's HTTP agent, where the cookie can be any string as long as it is unique. This is done using the CookieUserNameExtractor. To use it, it must be combined with an interceptor that actually sets the cookie at the right time in the request cycle. Configure the extractor in the file tracking.xml:
+
+<bean id="analyticsLog" parent="abstractAnalyticsLog"> 
+  <property name="userNameExtractor">
+    <bean 
+    class="com.coremedia.analytics.plugin.
+           CookieUserNameExtractor" />
+  </property>
+</bean>
+
+The interceptor must be added in the file cae-controllers-example.xml like this:
+
+<bean id="userCookieInterceptor" 
+class="com.coremedia.analytics.util.
+UserCookieHandlerInterceptor">
+  <property name="cookieName" value="theUserName"/>
+</bean>
+  
+<bean class="org.springframework.web.servlet.handler.
+SimpleUrlHandlerMapping">
+  <property name="interceptors">
+    <list>
+      <ref bean="reportInterceptor"/>
+      <ref bean="userCookieInterceptor"/>
+    </list>
+  </property>
+  ...
+</bean>  
+
+If you are using tracking images, the interceptor must also be configured for the tracking controller. To this end, change the definition of the bean trackingControllerMapping in the file analytics/tracking-base.xml as follows:
+
+<bean id="trackingControllerMapping" 
+parent="abstractTrackingControllerMapping">
+  <property name="interceptors">
+    <list><ref bean="userCookieInterceptor"/></list>
+  </property>
+</bean>
+

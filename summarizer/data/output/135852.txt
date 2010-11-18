@@ -1,0 +1,3 @@
+
+
+Configuration not mandatory: With the default settings the Search Engine Feeder automatically retries or restarts after indexing-related errors.

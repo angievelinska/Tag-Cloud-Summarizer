@@ -1,0 +1,4 @@
+
+
+ Parameter Description -e <encoding> Choose the encoding of the dump output. "ISO-8859-1" creates a dump in ISO-Latin-1. "UTF-8" creates a Unicode dump. The default value is the platform encoding. Consult the API documentation of java.nio.charset.Charset of your particular JRE to find out other supported values. -un <names> The named users to dump. -gn <names> The named groups to dump -pn <names> The named processdefinitions ("workflows") to dump -cn <names> The named contenttypes to dump -t <paths> The paths of resources to dump.
+

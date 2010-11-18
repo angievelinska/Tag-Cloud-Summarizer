@@ -1,0 +1,16 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+document 
+
+Document type from which the field is taken. "Content_" can be used as a wildcard for all document types. 
+
+property 
+
+Property of the document type which should be displayed. Two types of properties exist for a document. The properties which are defined in the doctypes file and the predefined properties in all documents like id_ or name_. See the Developer Manual for details.
+

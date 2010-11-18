@@ -1,0 +1,8 @@
+
+
+The prerequisites that have to be fulfilled in order to be able to run the examples are described in XXX.
+Steps necessary to develop a simple WAGE-based Web application are featured in XXX.
+How to develop a wizard-style editing application (resources are edited in multiple steps), how to use more than one ChangeCollector, and how to integrate basic RichText editing functionality into your Web application is explained in XXX.
+How multiple CoreMedia resources can be edited within a single form, how a new document can be created and linked automatically, how file upload can be used to edit the BLOB property of a CoreMedia document and how the <wage:checkbox> tag can be used, you'll read in XXX.
+LinkList editing is explained in XXX.
+A basic example working with workflows is shown in XXX.

@@ -1,0 +1,11 @@
+
+
+The WorkflowRepository in com.coremedia.cap.workflow handles processes and tasks. It provides two aspects WorklistService and AccessControl.
+
+You may want to start with the interface Task and inspect its methods and its state diagram. The access to variables of a task is exactly the same as the access to properties of a content (see CapObject). Keep in mind, however, that there are additional data types available in the workflow context.
+
+Afterwards, consult the interface Process, memorize that although there are some similarities in its state diagram, equal state names mean different things for processes and tasks. See ###states for further details.
+
+Conclude the first look at the workflow repository with the WorklistService aspect and examine the various collections of workflow objects it provides. Some background information is provided in ###worklist.
+
+###MORE

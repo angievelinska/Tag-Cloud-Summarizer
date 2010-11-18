@@ -1,0 +1,85 @@
+
+
+Of all components of the Analytics Engine, the tracking component needs the least configuration, mainly because it is a passive component that simply collects events and waits for the events to be fetched. None of the following configuration properties are mandatory.
+
+Enabling and Disabling Tracking
+
+Whether or not tracking should be enabled or disabled can be configured in WEB-INF/spring/analytics/tracking-base.properties using the property tracking.enable. For details see Section.
+
+Configuring Sampling
+
+You can configure a tracking CAE to discard many or most events in order to reduce the server load. This technique is known as sampling and it is commonly employed to reduce the hardware requirements for tracking websites with very many accesses. By rescaling the data before display in In-Site Analytics or in the Analytics Dashboard, this operation is largely transparent to the end user. Sampling is configured in the file tracking.properties.
+
+Sampling is based on the multiplier value configured as tracking.sampling.multiplier. The multiplier is an integer value n so that only1 out of n visitors are tracked. Consequently, only 1 out of n sessions and 1 out of n page views are tracked. If the configured multiplier is 0 (the default), tracking is disabled and all page views are tracked. The multiplier can be changed temporarily using JMX or permanently in the property file. When changing the multiplier from 0 to another value, it should first be changed to 1 and kept 1 for at least a day. This ensures that all sessions that were tracked before sampling was activated have a chance to complete. Similarly, a multiplier greater than 1 should only be changed to 1 and not directly to 0. After changing the multiplier between two values greater than 0, the new value only takes effect after visitors have not made a page view for at least the time configured as tracking.sampling.multiplier.keep.delay. This ensures that the modifier does not vary within one session.
+
+Set the sampling multiplier for all involved CAEs to the same value and keep the multipliers in sync.
+
+The sampling multiplier can be changed at any point of time and almost all statistics are completely unaffected by the change, except that statistics may become unreliable if the multiplier is set too high. However, the approximating mode for unique visitor statistics require a complex preaggregation logic that works best if the sampling multiplier is changed near midnight. This way, almost the entire day is counted with one multipler, allowing for a reliable daily preaggregation. If you have to change the sampling multipler at other times, don't do so more than a few times each year.
+
+The value tracking.sampling.multiplier.max denotes a maximum possible value for the multiplier. Normally, the configured multiplier will be used, but for sessions that started before the last change of the multiplier, an old value may be used. Because the multiplier has to be stored in the web browser, it may be tampered with. The maximum value ensures that only plausible values for the multiplier are possible.
+
+The user's identity and the currently active multiplier are kept in cookies, whose name and origin can also be configured in tracking.properties. The cookie names should be kept constant.
+
+Configuring the Storage of Logs
+
+After installing a Content Application Engine with enabled tracking, all page views are automatically tracked. The gathered data is temporarily stored in plain text files, which are then fetched by the Analytics Data Aggregator. You should probably configure the directories in which the files are stored. To that end, please adapt the properties tracking.directory.incomplete and tracking.directory.complete in the file WEB-INF/spring/analytics/tracking.properties in the web application. 
+
+Please make sure that there is enough free space to store the events of several hours, so that no events are lost in the case of a downtime of the Analytics Data Aggregator. Each click might generate a few hundred bytes of data, so that a plausible amount of disk space would be 100 MBytes to 1 GByte per CPU. 
+
+It is advisable to write log data to a local disk, not to a remote file system. Multiple Content Application Engines must not use the same directories.
+
+Configuring Multi-Site
+
+When enabling tracking in the live environment (the normal case), make sure to set the flag tracking.multi.site in the file custom/tracking.properties to either true or false. It is not possible for CoreMedia Analytics to detect a multi-site installation when connecting to Live Servers, so that the tracking CAE must complain if this property is not configured.
+
+Detecting Source Pages without JavaScript
+
+So that the tracking component can determine the source of page views even if the visitor disabled JavaScript, you must configure the URL parser. To this end, set the property tracking.page.data.extractor.pattern in the file tracking.properties to a Java regular expression that is matched against the referrer URL without the query part. If the regular expression matches, its first capturing group determines the numeric content id of the content bean being displayed. For example, a pattern like
+
+tracking.page.data.extractor.pattern=
+http://www.mydomain.com/myapp/servlet/content/([0-9]*)
+
+could be used in a very simple setup. However, most content applications attempt to create more user-friendly URLs, which are often much more difficult to parse. In that case, it might be necessary to implement the interface PageDataExtractor as described in the Analytics Developer Manual.
+
+Configuring External Search Engine Detection
+
+The tracking component tries to extract search term submitted to search engines from the HTTP Referer header. If the browser transmits it, we can find the URL that contained a link to the current page in that header. The URL of many (but not all) search engines contains the search terms in clear text. There is a default parser configuration that works correctly for significant number of search engines, almost all of which use a query parameter q or query to indicate the search terms. The default configuration also takes care of a small number of popular search engine that use other pattern.
+
+However, for some of the more rarely used search engines that are of particular importance to your site, you may need to configure additional rules in the file tracking.properties. All properties used for this purpose start with a prefix of tracking.search.engine.detection. The remainder of the property name after the prefix and a separating dot is a domain name or a host name suffix, where domain names or host names with that suffix belong to a certain search engine. For example the suffix google.com matches all of google.com, www.google.com, and images.google.com. 
+
+The suffix may contain the wildcard * arbitrarily often. For example you can specify google.*, which matches google.de as well as www.google.de and google.fr. Wildcards may only be adjacent to dots, for example it is not permitted to specify the pattern *oogle.com. When matching, longer patterns are preferred over shorter pattern and patterns without wildcards are preferred over pattern with wildcards. The property tracking.search.engine.detection.* specifies the default that is used when no other pattern matches.
+
+The property value for any pattern is either a number prefixed with the character @ or a comma-separated list of attribute names. If an @ prefix can be found, the trailing number is indicated as the number of the path component of the URI. For example the value @4 parses URLs generated by metacrawler.com, which look like
+
+http://www.metacrawler.com/info.metac/search/web/searchterm/...
+
+where ... indicates a long chain of additional path components. As you can see, the search term is located in the fourth position after the host name. Therefore the following default configuration is provided:
+
+tracking.search.engine.detection.metacrawler.com=@4
+
+If a comma-separated list of attribute names is given, the first URL parameter in the query part of the URL is used as the search term. For example, yahoo.com uses the p parameter for the search term, generating URLs like this:
+
+http://search.yahoo.com/search?p=searchterm&...
+
+This is handled by the following declaration:
+
+tracking.search.engine.detection.yahoo.com=p
+
+Tracking the Size of HTTP Responses
+
+The Analytics Engine can be configured to track the size of the delivered content for each page view. The size is not currently used in any of the standard reports, but it might be interesting for custom reports. In order to determine the size, it is necessary to configure the file web.xml directly, because this functionality cannot be achieved by means of a Spring configuration alone. You have to add the lines
+
+<filter>
+  <filter-name>Analytics Size Filter</filter-name>
+  <filter-class>com.coremedia.analytics.util.SizeFilter
+  </filter-class>
+</filter>
+<filter-mapping>
+  <filter-name>Analytics Size Filter</filter-name>
+  <url-pattern>/servlet/*</url-pattern>
+</filter-mapping>
+
+to the web.xml. This causes each response object to be wrapped with an object that counts the number of bytes transferred. This information will then automatically be extracted from the wrapper when the page view is logged.
+
+Please note that it is not possible to determine the delivered size of the response if you use tracking images. In particular, it is not possible to track the size of HTTP responses when using the HTTP cache extensions, which rely on tracking images.
+

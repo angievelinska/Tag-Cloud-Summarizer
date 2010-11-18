@@ -1,0 +1,7 @@
+
+
+Case
+
+Grammar: (%BooleanExpression;) 
+
+A case extends a condition by defining a successor to be activated if the condition's expression evalutes to true. A 'case' condition may be based on the state of workflow variables, the content of documents from the Content Management Server or the external state of third party products. For an example see Switch.

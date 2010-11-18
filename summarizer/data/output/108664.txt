@@ -1,0 +1,14 @@
+
+
+In the following cases the first rule in the rules table is not applicable:
+A user of a different group G2 which is not a subgroup of G wants to operate on a resource.
+A user of group G (or a subgroup) wants to operate on a document in a different folder F2 which is not a subfolder of F1.
+A user of group G (or a subgroup) wants to operate on a document teaser1 in folder F1 (or a subfolder). Document teaser1 has the document type Teaser, which is not a subtype of Article.
+
+The first rule is applicable only, if
+the user is member of group G or a subgroup and
+the user operates on a resource in folder F1 or a subfolder of F1 and
+the document has type Article or a subtype of Article.
+
+ It is now possible that two or more rules are applicable to a resource. Have a look at the next rules table:
+

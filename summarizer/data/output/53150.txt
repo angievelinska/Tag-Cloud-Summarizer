@@ -1,0 +1,20 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+resourceVariable 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the variable that contains the resource(s) to be disapproved
+

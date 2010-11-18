@@ -1,0 +1,12 @@
+
+
+<wage:checkbox>
+
+Renders an input field of type checkbox, which allows you to display and edit boolean values. As there are no boolean CoreMedia resource properties, often String or Int properties are used to store boolean values. This tag can also be used to display the value from a CoreMedia resource property as boolean, or to change it, by providing i.e. String or Int values (according to the CoreMedia property type) which are to be used as true and false values. For an example, see XXX. Attributes:
+
+property (required): property for which the getter or setter method should be called, the type is determined automatically
+trueValue (optional): value which should be set as resource property if checkbox is checked, default is true
+falseValue (optional): value which should be set as resource property if checkbox is unchecked, default is false
+
+As this tag extends the Struts checkbox tag, you can also use any other attribute allowed by the Struts tag, i.e. accesskey or ondblclick.
+

@@ -1,0 +1,11 @@
+
+
+Blob properties take Blob objects as values. Like Markup objects, they are API objects that are immutable. They provide access to metadata and to an input stream that contains the actual binary content.
+
+When a blob is read from the content repository, it is cached on disk and not in main memory. It is even possible for the disk cache to be cleared while you still hold a reference to the Blob object. Therefore, a content repository blob is a comparatively cheap object.
+
+The workflow repository supports blobs, too. Such blobs are always loaded into main memory and they cannot be garbage collected as long as they are directly or indirectly referenced from client code. Normally, this is not a problem, because workflow repository blobs often serve very special needs, being used for the compact storage of complex data structures. Workflow blobs are generally not recommended for storing large images or audio stream.
+
+When you want to set a blob property, it is possible to use a Blob object that you obtained by a previous read operation. The class BlobFactory allows the creation of Blob objects from either a file, a URL, an InputStream, or a byte array. It returns a blob object that you can pass into the setter.
+
+Normally, you obtain a blob by calling the method CapObject.getBlob(String). When you call CapObject.getBlobRef(String) instead, you get a reference to the blob instead, encapsulated as a CapBlobRef object. While ordinary blobs are immutable, blob references can change over time, reflecting concurrent changes to the CapObject. Blob references are cheaper than blobs, reducing resource requirements. They can also be useful when you want to indicate the origin of a blob as compared to its content, e.g., when generating URLs that link to image properties.

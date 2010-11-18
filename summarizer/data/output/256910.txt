@@ -1,0 +1,14 @@
+
+
+A CoreMedia System is made of two environments: a Production Environment and one or more Live Environments; depending on if the Multi-Site Extension has been installed or not. 
+
+Production is the creation, modification, deletion, and editing of texts, images, multimedia file, or the (mostly automated) import of content.
+
+After production, the edited content is 'moved' to the Live Environment by a publication, i.e. the database content in the Live Environment is updated and made available for a different group of users.
+
+The illustration outlines the basic architecture of such a CoreMedia System - but the technical base allows much more complex scenarios.
+
+
+
+
+

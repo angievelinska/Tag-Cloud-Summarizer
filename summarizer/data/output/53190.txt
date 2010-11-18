@@ -1,0 +1,20 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+resourceVaraible 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the variable that contains the deleted resource(s)
+

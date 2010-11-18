@@ -1,0 +1,27 @@
+
+
+For the precise syntax see the following examples.
+
+Log "debug" level messages from all logs to stdout (output according to environment settings):
+
+log.action.1.class=StdOutAction
+log.action.1.selectors=debug
+
+Log "info" level messages from all logs in a file:
+
+The file is saved as var/logs/capserver.log . After reaching a size of 4MB (checked after every 1000 write operations), the file is closed and a new file is created.
+
+log.action.2.class=FileAction
+log.action.2.selectors=info
+log.action.2.initArgs=file=var/logs/capserver.log, 
+fileSize=4000, writeOps=1000
+
+Send emails with "critical" level messages from all logs :
+
+An e-mail is sent with every "critical" log message. The recipient is "admin@customer.com", the sender is "coremedia@customer.com", the SMTP host is "mailserver01" and a copy is sent to "operator@customer.com".
+
+log.action.3.class=MailAction
+log.action.3.selectors=critical
+log.action.3.initArgs=to=admin@customer.com, 
+from=coremedia@customer.com, smtp.host=mailserver01, 
+cc=operator@customer.com

@@ -1,0 +1,9 @@
+
+
+The CoreMedia Content Server is the central component in the CoreMedia system. Among other things, it manages the content repository and the user authorization. It comes in three flavours:
+
+The Content Management Server
+The Master Live Server(s)
+The Replication Live Server(s)
+
+This chapter gives a description of the concepts and configuration of the CoreMedia Content Server. In a third subchapter you will find a reference listing of all property files you can use for configuration of this server.

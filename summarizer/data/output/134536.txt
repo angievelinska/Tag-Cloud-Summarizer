@@ -1,0 +1,3 @@
+
+
+I.e. killsession has none but the standard options.

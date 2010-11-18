@@ -1,0 +1,5 @@
+
+
+The CoreMedia Content Application Engine defines a mapping framework to create application-specific "business" objects from generic content objects. In order to do that, application specific classes have to be written and they have to be registered with a factory that is used throughout the application whenever a content object needs to be converted into an application bean. 
+
+You do not need to write the beans from scratch. The CoreMedia Content Application Engine comes with a source code generator that reads your document type definition file and generates beans for each document type. The bean interfaces mirror the document properties, and the class hierarchy mirrors the document type hierarchy. After generating the code, you can modify and adapt it to your application¿s needs.

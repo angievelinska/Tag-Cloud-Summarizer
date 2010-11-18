@@ -1,0 +1,3 @@
+
+
+Unified API objects that define an ID are equal in the sense of Object.equals(Object), if and only if their IDs are equal and if they belong to the same Unified API connection.

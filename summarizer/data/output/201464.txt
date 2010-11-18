@@ -1,0 +1,8 @@
+
+
+The plug-in interfaces Action, Expression, PerformersPolicy, and RightsPolicy inherit from the interface java.io.Serializable. That means that you must take care to make your implementations serializable, in particular by marking all non-serializable fields as transient. Remember that Unified API objects are serializable, so that it is alright to reference such objects from your plug-in, for example when configuring folders or groups.
+
+If you want to add special code for restoring transient fields after read, you can do so in a readObject method.
+
+It is advisable to define a serial version UID for your class to be able to indicate the compatibility of serialized versions appropriately. Note that you may make changes that break serialization compatibility, but that you must invoke the tool cm workflowconverter while the server is down after such changes.
+

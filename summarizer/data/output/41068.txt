@@ -1,0 +1,31 @@
+
+
+
+For LDAP-enhanced systems, choose the appropriate domain (1). Otherwise, leave this field empty.
+
+
+
+Enter your user name (2) and your password (3).
+
+
+
+Click the [Login] button.
+
+
+The following errors can occur:
+
+
+
+
+User name or password are wrong or wrongly combined. Type in again both. Then click [Login] again.
+
+
+
+All licenses are in use. Wait until one of your co-workers finishes and logs off, then start again. If this happens more often, buy more licenses. 
+
+
+
+The Content Server cannot be accessed. Restart the CoreMedia Editor. If the same error occurs again, inform your system administrator.
+
+
+After successful login, the Overview window opens (an administrator will see the user manager window) and you can start working.

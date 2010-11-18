@@ -1,0 +1,24 @@
+
+
+You can define for which resources PADS should build pages using the following elements: 
+
+Page 
+3* Define a resource URI for which a page should be built. 
+PageSelector 
+3* Select resources based on path and type for which pages should be built. 
+PageLinkPredicate 
+3* Restrict the followed links between pages. 
+
+Build pages defined by a resource URI 
+
+Use the element Page with the resource URI to start from in the attribute uri to generate pages. See section for details on the resource URI format used. 
+
+Example: 
+
+<Page uri="/pads/generator/Site/index.html"/> 
+
+This will generate the page with the specified resource URI and all pages that are reachable through links. 
+
+Build pages for selected resources 
+
+Use the element PageSelector to build pages for resources of a certain type and located below a given folder. See the next table for details on the attributes of PageSelector: 

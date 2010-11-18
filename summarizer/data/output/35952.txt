@@ -1,0 +1,7 @@
+
+
+PublishResources
+
+Use this action to publish one or more CoreMedia resources referenced by a variable. If the variable stores an explicit version, that version is published. If no version information is present, the most recent version will be published.
+
+The aggregation variables resultVariable, codeVariable, parameterVariable, and versionVariable jointly represent the result of the publication.

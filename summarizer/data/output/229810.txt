@@ -1,0 +1,12 @@
+
+
+A brief explanation of state and data model dependencies will be given as background before discussing mappings.
+
+State and data model dependencies
+
+A state model variable¿s state implies constraints on one or more data model dimensions. As such, a state variable expresses one or more dimension constraints as aspects or partial state. It is the state¿s variables responsibility to keep state and aspects consistent.
+
+Upon a state model update, which triggers the update of its variables, all state model aspects are collected and propagated to the data model. The data model in its turn may validate the update information and update its data model dimension constraints.
+
+Each variable type defines a predefined set of aspects, whose names are defined by the state variable type. The following table gives an overview of predefined variable types and aspects:
+

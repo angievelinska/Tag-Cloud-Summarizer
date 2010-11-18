@@ -1,0 +1,6 @@
+
+
+The options have the following meaning:
+
+ Property Description -e Defines the encoding for the output. Default is UTF-8. An encoding can only be used when the tool dumps in a file. -f File name of the user repository dump.
+

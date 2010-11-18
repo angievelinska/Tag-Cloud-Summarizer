@@ -1,0 +1,7 @@
+
+
+HEAD Markup
+
+The portlet standard allows portlets to add HTML fragments to the page at defined positions outside their portlet window, by setting XML "response properties". This is most useful to add elements that are only valid or effective in the page's HEAD section, such as CSS style sheets and some javascript functionality.
+
+A simple top-level CAE template might contain the following code:

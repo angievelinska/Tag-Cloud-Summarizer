@@ -1,0 +1,20 @@
+
+
+ 
+
+Attribute 
+
+Type 
+
+Default 
+
+Description 
+
+value 
+
+NMTOKEN 
+
+#REQUIRED 
+
+the name of the content type
+

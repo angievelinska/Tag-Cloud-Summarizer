@@ -1,0 +1,6 @@
+
+
+As opposed to the usual browsers the CSS support in Java/Swing is limited and does not cover the complete CSS attributes. Therefore Java/Swing will display some CSS attributes flawed or not at all. See also the JavaDoc of the javax.swing.text.html.CSS class for details.
+
+Because of these limitations you should always use the preview function of the CoreMedia Editor for a check of the used CSS styles.
+

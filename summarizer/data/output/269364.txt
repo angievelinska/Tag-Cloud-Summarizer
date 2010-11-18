@@ -1,0 +1,34 @@
+
+
+Enter the commands below and you should get all available document types:
+Generate the required interfaces and compile all source files with:
+$ ant compile-client
+On successful compilation, you can start start the client. Your screen should show a similar output depending on your content types.
+$ ant execute-client
+
+execute-client:
+     [java] ContentType <CMJavaScript>
+     [java] Id         : coremedia:///cap/contenttype/CMJavaScript
+     [java] Description: null
+     [java] Abstract   : false
+     [java] Concrete   : true
+     [java] Parent ID  : coremedia:///cap/contenttype/CMAbstractCode
+     [java] Properties -----
+     [java] include:LINK(collection)
+     [java] master:LINK(collection)
+     [java] ----------------
+     [java] 
+     [java] ContentType <CMHasContexts>
+     [java] Id         : coremedia:///cap/contenttype/CMHasContexts
+     [java] Description: null
+     [java] Abstract   : true
+     [java] Concrete   : false
+     [java] Parent ID  : coremedia:///cap/contenttype/CMLinkable
+     [java] Properties -----
+     [java] contexts:LINK(collection)
+     [java] master:LINK(collection)
+     [java] ----------------
+     ...
+
+
+

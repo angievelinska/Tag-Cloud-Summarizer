@@ -1,0 +1,11 @@
+
+
+This manual describes the customization of the CoreMedia Editor by means of predefined or self-implemented classes. The CoreMedia Editor is a Java Swing application which offers a full-grown editor API to the developer. The editor consists of four main windows which are all subject to configuration:
+
+The Explorer window in which you can inspect and edit the folder and document structure.
+The Document window in which you can edit the documents.
+The Query window in which you can retrieve information.
+The Workflow window in which you can create and edit workflows.
+3* Configuration of the first three windows is covered in this manual but the Workflow window is covered in the Workflow Developer Manual.
+
+The next figure shows the Explorer window of the CoreMedia Editor. 

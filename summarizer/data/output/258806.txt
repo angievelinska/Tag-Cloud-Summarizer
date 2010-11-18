@@ -1,0 +1,32 @@
+
+
+<bean name="beanType:MobilePhone" parent="BeanType">
+  <property name="beanClassName" 
+  value="com.coremedia.example.shopping.MobilePhoneImpl"/>
+  <property name="superType" ref="beanType:Product"/>
+  <property name="properties">
+    <list>
+      <bean parent="StringProperty">
+        <property name="name" value="name"/>
+      </bean>
+      <bean parent="StringProperty">
+        <property name="name" value="description"/>
+      </bean>
+      <bean parent="IntegerProperty">
+        <property name="name" value="onBoardMemoryInMB"/>
+      </bean>
+      <bean parent="IntegerProperty">
+        <property name="name" value="weightInGrams"/>
+      </bean>
+      <bean parent="BooleanProperty">
+        <property name="name" value="wlanSupported"/>
+      </bean>
+      <bean parent="DateProperty">
+        <property name="name" value="releaseDate"/>
+      </bean>
+      <bean parent="DateProperty">
+        <property name="name" value="newUntil"/>
+      </bean>
+    </list>
+  </property>
+</bean>

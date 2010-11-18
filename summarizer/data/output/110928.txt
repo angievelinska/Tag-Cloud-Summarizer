@@ -1,0 +1,11 @@
+
+
+The property types are:
+
+IntProperty
+StringProperty
+DateProperty
+XmlProperty
+BlobProperty
+LinkListProperty
+

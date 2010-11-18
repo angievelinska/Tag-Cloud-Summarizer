@@ -1,0 +1,4 @@
+
+
+ Type Description Example Integer A property that contains an integer value. See [1] String A property that contains a string. A string property is not written with quotes. See [2] Boolean A property that contains a boolean value. See [3] Link A property that links to another document. See [4] Struct A property that contains a Struct. See [5]
+

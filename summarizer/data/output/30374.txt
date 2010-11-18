@@ -1,0 +1,20 @@
+
+
+Comparators for sorting workflows
+
+ 
+
+Default comparator 
+
+Sorted objects 
+
+Description 
+
+GenericProcessComparator 
+
+Workflows:
+
+com.coremedia.workflow.WfProcess 
+
+The default comparator sorts the workflows in alphabetic order. Own comparators must implement java.util.Comparator
+

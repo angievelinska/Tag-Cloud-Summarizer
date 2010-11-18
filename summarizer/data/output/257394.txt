@@ -1,0 +1,17 @@
+
+
+Before you start to edit documents in the WebEditor, we recommend to read section and the previous sections in this section.
+
+The functionality is as similar to the CoreMedia Editor functionality as possible, that's why the section and especially section contain useful information too.
+
+To edit documents in the WebEditor, 
+Start the WebEditor (as described in section)
+Log in
+Select the document.
+Check out the document.
+Open the document in a document window
+
+3* Click the Open document symbol in the toolbar.
+6#
+Click into the fields and start editing.
+

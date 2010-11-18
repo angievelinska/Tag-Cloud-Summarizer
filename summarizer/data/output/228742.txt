@@ -1,0 +1,14 @@
+
+2#
+Select [Yes] or [No].
+
+3* If you choose
+Yes:
+3* Tomcat and the Editor Extensions Engine Web application will be installed in the Tomcat /webapps directory.
+No:
+
+
+3* Only the editor-extensions context will be installed. You have to integrate these components in the servlet engine of your choice manually. 
+
+
+

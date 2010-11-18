@@ -1,0 +1,3 @@
+
+
+Using XSLT it is possible to deliver content to a number of different plattforms. These publishing targets shall be discussed in this section.

@@ -1,0 +1,20 @@
+
+
+The term 'analytics dashboard' comprises a visualization and interactive drill down of long-term statistical CMS-related performance and system status data. The report data is being collected from CMS 2006 content management systems (feeding content play-out and content consumption-oriented reports) as well as from CMS 2006 content delivery systems (feeding editorial system status reports). CoreMedia provides the customer with an extensible set of general CMS-related reports and with a toolkit which enables them to easily extend existing reports or add new ones when needed.
+
+A user¿s entry point is a customizable analytics dashboard (see Dashboard-View), which provides a quick overview of several reports. If desired, a user may open a detail view for a refined report visualization which allows interactive drill down (see Report-Detail-View).
+
+Open the Analytics Dashboard
+
+The Analytics Dashboard is  a web based application. Enter the URI below in your browser. Ask your administrator for the hostname and port of the CoreMedia Analytics installation and replace <hostname> and <port> with this values:
+
+http://<hostname>:<port>/analytics/dashboard/view
+
+The Analytics Dashboard opens up, possibly after going through a login dialog. In figure you can find an example screenshot. The actual dashboard at your site may contain more or less reports, depending on the configuration of the Analytics Dashboard.
+
+Dashboard and detail report views
+
+In the dashboard, reports are organized by views. Views structure the information reported to a given user. One view represents a (logical) aspect of reported information, e.g. the overall performance of a site, searches and search terms, page views or a categorization of content. In the dashboard user interface, each view is shown as a tab. By clicking on the tab, the corresponding view is displayed to the user.
+
+A view is composed of one or more (usually three and more) reports. Each report is visualized in a report box with a report title (1) on top, a report sentence (2) describing the data shown and a report chart (3), see screenshot below. Clicking the ¿Details¿¿ link opens a detail view of the selected report.
+

@@ -1,0 +1,22 @@
+
+
+This chapter describes how to insert  and edit images into RichText-panes or BLOB-fields.
+
+Some basic tasks of image editing are covered by the CoreMedia Editor, but for further processing go with professional software such as Potoshop(tm).
+
+As the CoreMedia SCI supports WebDAV standards, it is possible to integrate these tools. For further reference, see the section. It is also possible to drag images from a document into an external application for editing. After you have finished editing, you can simply load back the image into the repository.
+
+If you want to paste images into RichText-panes, these images have to be stored in image documents in the CoreMedia repository. The CMS simplifies the task of document creation. You can use drag and drop to move an image into the RichText-pane. The CoreMedia system offers the option to create a new image document for this image.
+
+Insert images using drag and drop
+
+In order to move images from your computer into the CoreMedia repository, there must be a document type capable of storing the image format.
+
+Proceed as follows:
+Click the image file in the Windows explorer and move it on the RichText-pane.
+
+A dialog opens up. You can choose if you want to insert the image as an external link, an internal link or as an image. For the latter two points, the system has to create a new document.
+2#
+Click [Insert images...].
+
+A dialog opens up in which you have to define the document to create.

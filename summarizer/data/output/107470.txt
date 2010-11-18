@@ -1,0 +1,12 @@
+
+
+If transformations with regular expressions or XSLT are not sufficient, you can develop your own transformer in Java based on the Importer API. In this section you can find out more about formatting such transformers. The Importer API is closely related to the Java API for XML processing (JAXP), especially with the javax.xml.transform hierarchy. In some places, however, JAXP is not powerful enough, or too XSLT-specific for the requirements of CoreMedia, so that we had to define some extensions.
+
+
+In accordance with both JAXP and the document generator, transformers are not specified directly, but rather indirectly via factories. Since the javax.xml.transform.TransformerFactory is very XSL-specific, the Importer API defines a more general factory, the GeneralTransformerFactory.
+
+
+Like the document generator, the transformer factories are instantiated with java.beans.Beans.instantiate and can be configured with properties in the sense of java.beans.BeanInfo. In the configuration file, such a property is entered with the prefix of the importer (with number), the keyword property and the actual name of the property. For example, the XsltTransformerFactory introduced above is passed to the stylesheet via such a property.
+
+
+

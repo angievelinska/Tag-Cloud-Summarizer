@@ -1,0 +1,3 @@
+
+
+The BeanParser, that is used to parse the CoreMedia Editor configuration allows to configure all bean properties of the beans that are introduced in the following. Since not all configuration hooks will be explained, it's always a good idea to consult the JavaDoc and discover all configuration possibilities.

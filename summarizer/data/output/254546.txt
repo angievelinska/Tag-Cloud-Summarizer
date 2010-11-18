@@ -1,0 +1,23 @@
+
+
+This dialog box edits the file editor.properties.
+13#
+Enter the path to the editor configuration file editor.xml in the field editor.configuration. This field is jointly used from all editors that are remotely started over the web with Java Web Start. In this case the field must contain the following URL:
+
+3* http://<host>:<port>/coremedia/files/properties/corem/editor.xml
+3* where <host> and <port> must match the values of cap.server.http.host and cap.server.http.port in the previous dialog box that edits the file capserver.properties. For more information on starting an editor with Java WebStart see Section 3.2.3. 
+14# 
+Enter the path to the editor startup configuration file (editor-startup.xml by default). 
+Enter the default setting for the domain of the user in login.domain.
+If you want to login immediately with the default settings enter "true" in the login.immediate field. Default is "false".
+Continue the configuration by clicking [Next]. 
+
+A dialog box appears to configure the file editor.xml (for more detail see Section 5.8.1.1). The following parameters can be configured:
+
+preview.webserver.host: This parameter defines the computer where the production preview Active Delivery Server runs.
+preview.webserver.port: This parameter determines the port where the preview Active Delivery Server of the Content Server runs.
+difference.webserver.host: This parameter defines the computer where the Differencing Services run.
+difference.webserver.port: This parameter defines the port where the Differencing Services run.
+difference.webserver.uri: This parameter defines the URI of the differencing web application. 
+difference.webserver.loginport: This parameter defines the default login port to the differencing web application.
+

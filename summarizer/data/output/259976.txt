@@ -1,0 +1,3 @@
+
+
+The Content Management Server needs a supported database for operation. Please see the CoreMedia Administration and Operation Manual for supported databases and for details of the configuration. The properties have the following meanings:

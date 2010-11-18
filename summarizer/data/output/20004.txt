@@ -1,0 +1,3 @@
+
+
+One of the two list fields is opened up here as example. If you try to save this document without entries in the fields description an error message appears. An entry in the field calories is not possible. The field name has the default entry "New Dish". You achieve this configuration with the following settings in editor.xml:

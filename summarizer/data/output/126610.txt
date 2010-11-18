@@ -1,0 +1,24 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+explorerViewClass 
+
+Use this attribute to define your own explorer view for the editor.  
+
+publishViewClass 
+
+Use this attribute to define your own publication view for the editor. 
+
+ queryViewClass Use this attribute to define your own query view for the editor. 
+
+workflowViewClass 
+
+Use this attribute to define your own workflow view for the editor. 
+
+
+

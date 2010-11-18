@@ -1,0 +1,15 @@
+
+
+ Attribute Description class Java class with no-arg constructor. If not set, the class depends on the attribute name. If the name attribute is set to "query" the class hox.corem.editor.web.Query is used, if name is "beanquery" the class hox.corem.editor.web.BeanQuery is used, if name is "difference" the class hox.corem.editor.web.Difference is used and if name is "preview" the class hox.corem.editor.web.Preview is used. Other names will produce an error (if class is not set). name 
+
+The name of the web extension. Existing names are:
+
+preview - the preview of documents or folders
+difference - the Differencing Engine
+query - the Extended Query Editor
+beanquery - The Bean Query Editor path The path to the web application without context and URL query part. open 
+
+Use this attribute only with the preview web extension. It determines which browser(s) are opened, when you call the preview from the toolbar. If open is set to "all", then all defined browsers are opened. If you omit the attribute or set it to "last" (default), then the last selected browser is opened. If you have selected no browser before, the first configured browser is opened. Using the Preview menu item from the File menu, you can always choose the browser to use from all configured browsers.
+
+<WebExtension name="preview" open="all">
+

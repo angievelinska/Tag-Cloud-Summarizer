@@ -1,0 +1,3 @@
+
+
+If you want to publish content changes of a document, the newest created version which is not published will be taken into the changelist. If the newest version is already published, no version at all will be taken in. If required you can select another version for publication in the "version" field of the detail information window.

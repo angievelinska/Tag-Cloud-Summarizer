@@ -1,0 +1,5 @@
+
+
+The Content Application Engine (CAE) is a framework for the development of content applications. Because of this framework character, most aspects of the CAE are covered in the Content Application Developer Manual.
+
+This chapter describes administrational tasks for some specific components of the CAE, namely the Http Cache, the Proactive Engine and the CAE Feeder. In addition, managing the CAE via JMX is described.

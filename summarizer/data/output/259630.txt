@@ -1,0 +1,3 @@
+
+
+In earlier versions of Preview-based Editing, if you wanted to use the CoreMedia Editor instead of the Webeditor, you had to change the file /WEB-INF/framework/jsf/editing-jsf-forms.xml. Due to the newly introduced pbe property "menuActions", this is no longer neccessary. Simply change the property as described in the table above.

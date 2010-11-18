@@ -1,0 +1,3 @@
+
+
+This chapter describes tasks necessary for the configuration the CoreMedia Analytics Engine. This chapter might not cover all possible tasks. For a complete listing of configuration options, you might want to have a look at section. There you will find a description of all relevant property files for use with the CoreMedia Analytics Engine.

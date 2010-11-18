@@ -1,0 +1,3 @@
+
+
+This manual is addressed to developers of CoreMedia projects who want to write importers. Components which import and transform content into the CoreMedia repository.

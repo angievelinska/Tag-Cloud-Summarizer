@@ -1,0 +1,30 @@
+
+
+Perform a dry run of the following steps firstly using dedicated test servers to gain knowledge about the delays involved in the various steps and to ensure that all steps work correctly.
+
+You have to pay special attention to backup procedures before and during the migration.
+Make sure that there is an up-to-date backup of the servers and database schemas that will be modified.
+Using the information gained during the test phase, install new instances of all clients that need updating. Do not yet start the new clients, but make sure that they are correctly prepared for start-up and connection to the main servers.
+Stop all editorial work.
+Shutdown or reconfigure the watchdogs as applicable, because many processes are going to be down soon.
+Stop all writing clients, including, but not limited to, importers and scripts. (Make sure to re-schedule all periodic tasks that would happen in the next hours.)
+Shut down the Workflow Server.
+Shut down the preview ADS and all other reading clients that access the Content Management Server.
+Make sure that all Replication Live Servers have caught up with the Master Live Server. You may use the tool cm events on the Replication Live Servers for this purpose.
+Stop all clients that are attached to the Live Servers, including, but not limited to, ADS and PADS. At this point of time, your live site is down.
+Update the folder structure of the Content Management Server. Publish the changes. (This is typically done using the same script that was used to set up the test environment.)
+Make sure that all Replication Live Servers have caught up with the Master Live Server, replicating the change of the repository structure.
+Start the new instances of ADS and PADS that were previously installed in step 2. At this point of time, your live site is up.
+Because the ADS are starting up with empty caches, expect high load on the servers at this point of time. Wait until the load has returned to normal levels.
+Start new instances of other reading clients on the Replication Live Servers.
+Shutdown the Content Management Server.
+Run cm multisiteconverter in the directory where the Content Management Server is installed and on the host where the Content Management Server is supposed to be running. The runtime may vary depending on the actual size of the repository and the performance of the database, but 500 resources per second were achieved in a large example migration.
+Start the Content Management Server.
+Update the file publisher.properties to include the new top-level folder as its single publication target. To this end, you will have to comment out existing configuration parameters and add new configuration parameters.
+Start the workflow server.
+Start the new instances of clients at the Content Management Server side. Make sure to keep track of the correct start-up order, if that is required.
+Start or reconfigure the watchdogs as applicable.
+Enable periodic tasks, possibly re-scheduling next runs as needed based on the actual downtime.
+Resume editorial work.
+
+Once the migration of the primary publication target is done, set up additional publication targets as needed.

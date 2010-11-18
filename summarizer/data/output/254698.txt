@@ -1,0 +1,3 @@
+
+
+It is not possible to switch from an existing single-site system to a multi-site system by simply setting cap.server.multipleLiveServers=true. Please read section for a detailed description of the migration process.

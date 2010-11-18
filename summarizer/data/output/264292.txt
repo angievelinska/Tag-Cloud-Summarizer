@@ -1,0 +1,61 @@
+
+
+Add a string property
+
+If you want to add a string property to your struct field, proceed as follows:
+Check-out the document and click in the struct field.
+Enter the name of the property and the string value, colorOfField=red for instance. 
+If a number or boolean value appears after the equal sign, select string from the Type combo box.
+
+
+
+Add a boolean property
+
+If you want to add a boolean property to your struct field, proceed as follows:
+Check-out the document and click in the struct field.
+Enter the name of the property and the boolean value, showComments=true for instance. 
+If you want , select boolean from the Type combo box.
+
+Add a link property
+
+If you want to add a link property to your struct field, proceed as follows:
+Check-out the document and click in the struct field.
+Enter the name of the property and a dummy value, relatedContents=foo for instance. 
+Mark the dummy value as an internal link to the document you want to reference. The dummy text will not be saved and replaced by the path of the linked document after you checked-in and checked-out the document.
+
+
+The editor sets the link type of the property to the resource type of the target document. If you want to allow a more general link type, assign it with the type combobox.
+
+
+
+Add a struct property
+
+If you want to add a struct property to your struct field, proceed as follows:
+Check-out the document and click in the struct field.
+Enter the name of the struct property.
+Select Struct from the Type combo box. 
+Enter the properties of the struct property below the name. 
+
+
+Mark the properties as blockquote with the  icon.
+
+
+
+Create a list of properties
+
+All property types can be used in a single variant or as a list. If you want to add a list property to your struct field, proceed as follows:
+Check-out the document and click in the struct field.
+Enter the name of the list in the first line. 
+Select the type of the list elements from the Type combo box.
+Select List from the Cardinality combo box.
+
+
+Create an ordered list from the list elements below the title using the   icon.
+
+
+
+Create a template
+
+A template is a Struct property that contains no values. Simply add empty keys and empty name lines of lists or structs to the field. Use table as a guideline. The following table shows some rule of thumbs.
+
+

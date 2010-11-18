@@ -1,0 +1,12 @@
+
+
+An administrative user has a modified workflow view in the CoreMedia Editor. His worklist contains all available process definitions, all running processes and all tasks that have warnings or are escalated. An administrator possesses all rights on the shown items. For the usage of the workflow view in the CoreMedia Editor see the User Manual.
+
+If a task fails because of technical reasons (e.g the network is down and therefore a publication fails), an administrator can retry a task after solving the problem (nevertheless it's better practice, if the task performer retries the task). Proceed as follows:
+Select the escalated task (you will find a description of the state icons of the workflow in the User Manual).
+
+
+Choose the menu item File|Retry.
+
+
+

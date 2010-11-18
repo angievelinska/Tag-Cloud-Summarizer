@@ -1,0 +1,11 @@
+
+
+When writing properties of a CapObject, these writes are initially buffered and not sent to a server. Afterwards, the accumulated changes are sent to the server during a flush() call on the session object.
+
+Writes are buffered per session. If a session is made the current session in more than one thread, all of these threads will share a common write buffer. This means that they can see each other's changes and that one flush call on the session objects will flush all changes at once. 
+
+For this reason it is not normally a good idea to work with more than one thread using one session. The threads will continually lock out each other as the Unified API synchronizes for accessing the write buffer, leading to reduced performance. It is advisable to use one session per thread in a multi-threaded environment. You might even want to log in multiple times with the same user in this case.
+
+The write buffers are also flushed when a call is made that cannot be handled locally by the Unified API. Currently, all calls except setters and getters will flush the write buffers, but this may change in future versions.
+
+It is a good practice to flush the write buffers before any user interaction is resumed, before long delays are expected, and before returning from public methods that may be called from arbitrary code.

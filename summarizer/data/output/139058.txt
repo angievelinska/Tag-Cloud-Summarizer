@@ -1,0 +1,11 @@
+
+
+Element Property
+
+This element specifies a property.
+
+Parent element: XPathField
+
+Child elements: none
+
+Attributes:

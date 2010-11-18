@@ -1,0 +1,23 @@
+
+
+Example
+
+An abstract document type CMMedia is defined in file A. CMMedia is an abstract document type and is the root of a media document type hierarchy.
+
+ <DocType Abstract="true" Name="CMMedia" Parent="CMTeasable">
+    <LinkListProperty Name="master" Max="1" LinkType="CMMedia" 
+     Override="true"/>
+    <XmlProperty Name="caption" 
+     Grammar="coremedia-richtext-1.0"/>
+    <StringProperty Name="alt" Length="128"/>
+ </DocType>
+
+
+The document type CMMedia is extended with a StringProperty named copyright in file B. If you want to change a document type via DocTypeAspect, you have to import the document type before, using the <ImportDocType>-element. Because of the DocTypeAspect semantics the copyright property is inherited by all subtypes of CMMedia without changing their definitions.
+
+ <ImportDocType Name="CMMedia"/>
+ <DocTypeAspect TargetType="CMMedia">
+    <StringProperty Name="copyright" Length="128"/>
+ </DocTypeAspect>
+
+

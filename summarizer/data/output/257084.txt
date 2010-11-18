@@ -1,0 +1,8 @@
+
+
+The next chapters hold information about 
+
+how to create and handle folders in section, and
+how to create and move documents in section.
+
+The various features for editing documents are described in detail and by examples in section.

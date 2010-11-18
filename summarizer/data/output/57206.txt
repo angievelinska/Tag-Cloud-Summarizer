@@ -1,0 +1,5 @@
+
+
+Links in XML fields
+
+Beginning with CoreMedia SCI 4.1 XML fields conforming to any DTD can be defined. To link to documents from this XML fields use the attribute xlink:href. The attribute value must start with the prefix coremedia:///cap/resources/ followed by an internal or target id as shown below:

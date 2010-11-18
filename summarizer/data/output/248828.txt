@@ -1,0 +1,24 @@
+
+
+A template serves to prepare one or more documents for display as a web page, a WAP message, a PDF document or similar. Such display of a document will be designated a view of the document in the following. There can be various views of a document; for example, an article can be displayed as a teaser (in brief, with shortened text), as a search result or as a full page.
+
+The properties of a document are defined in document types (see the Administration and Operation Manual). Accordingly, documents of the same type can be dealt with uniformly by one template. Since document types have a subtype relationship through which properties are inherited, the same template can also display documents of a more specific type. However, in this case, the additional fields of the more specific document type are not taken into account. Common treatment of documents of different type which possess a more general mutual type is known as polymorphism in object-oriented programming.
+
+The ViewDispatcher interprets the template-ID as a designator of the view in which the given resource should be displayed. The template through which a view is implemented results from the template-ID and from the document type of the resource. The ViewDispatcher must therefore dispatch the view to an appropriate template.
+
+If the document type of the resource does not define a template for the requested view, the ViewDispatcher searches for a template in the supertype (parent) of the document type. This leads to inheritance of views, which perfectly complements the inheritance of properties.
+
+The implementation of a view for a document type can only access the properties which are defined for this document type. If a more specific type does not have its own implementation, the properties additionally defined in the subtype cannot be taken into account, as mentioned above. The view must then be specially implemented for the subtype. To be able to use the display of properties inherited from the supertype nevertheless, the ViewDispatcher has a so-called super command. Using the super command, the result of a view of the supertype can be included in the template implementing a view in the subtype.
+
+Until now, only document types have been discussed, but views are made available via the ViewDispatcher for all resources. To allow views of folders as well, which are not documents (but are of course resources), the ViewDispatcher knows the "virtual" types Folder, Document and Resource. Resource is the most general resource type, Folder and Document are it's direct subtypes. All user-defined documents are implicit subtypes of Document. In this way, it is not only possible to define views for folders, but also to provide common views for all resources (documents and folders), so as to exploit polymorphism even between documents and folders.
+
+The ViewDispatcher therefore searches for views from the current document type upwards through the document type hierarchy, until the Resource type is reached. If the desired view is even not implemented here, the special view doesNotUnderstand is called, which is delivered as standard with the CoreMedia system as the view for the document type Resource. The standard implementation outputs an error message, informing which view was called for which document type but was not implemented. When such an error message appears on a generated page, the template developer must ensure that such a case no longer occurs. The error can have (at least) two causes:
+
+Implementation of the view for the given document type or for one of its supertypes was forgotten.
+
+
+The view was wrongly selected by the command, or its name was written incorrectly.
+
+
+
+A further special case is an empty template-ID. In the ViewDispatcher, it is possible to configure which view should be used as a standard view in this case (see Section 4.4.1.5). The preset is the view main.

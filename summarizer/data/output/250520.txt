@@ -1,0 +1,33 @@
+
+
+
+ 
+
+Attribute
+ 
+
+Description
+ 
+
+name
+ 
+
+This attribute is used for configuring the name of the property which should be initialized or validated.
+ 
+
+initialValue
+ 
+
+Using this attribute, the value can be entered with which the property is initialized. See section for more details.
+ 
+
+validPattern
+ 
+
+This attribute is used for entering a regular expression against which the content of the property is checked. 
+
+
+
+
+
+

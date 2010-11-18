@@ -1,0 +1,102 @@
+
+
+In this section you will find basic information about changes between CoreMedia SCT 4.2 and CoreMedia CMS 2005. These changes may be a reason for a migration towards the newest version of CoreMedia CMS. It is assumed that you have a running CoreMedia SCT 4.2 system with some custom enhancements which you want to migrate to CoreMedia CMS 2005. 
+
+Common 
+
+Although CoreMedia aims to keep backward compatibility to previous provided APIs it has been imperative to do some smaller changes. Therefore you may encounter classes or methods in CoreMedia¿s APIs to be changed or removed. When migrating to CoreMedia CMS 2005 you have to adapt those parts of your code which are using the mentioned API changes. Those adaptations can be done with only small effort anyway. 
+
+To identify the amount of work to do, you should have a look at the release notes which are bundled with every release. In these notes you will find documentation of all API changes as well as some hints how to adapt these changes in your custom code.
+You will also get an overview about relevant adaptations by simply recompiling your custom code having the new java CMS 2005 libraries in your classpath: Just have a look at all compilation errors and warnings. 
+
+We strongly recommend to recompile your whole custom code against the new CoreMedia CMS 2005 java libraries before deploying and running this code on a CoreMedia CMS 2005 system.  
+Don¿t forget to use only the new java libraries instead of their older counterpart when running your code on a CMS 2005 system. Please consider that the dependencies of the java libraries among each other may have changed in CMS 2005. Therefore the set of libraries needed by a single component may be adapted.
+
+Content Server
+
+Configuration
+
+The configuration file capserver.properties needs to be renamed to contentserver.properties. In addition you have to adjust some of its properties 
+
+Properties cap.server.repository.[xxx] need to be added by moving corresponded properties cap.client.repository.[xxx] from file capclient.properties.  
+Property cap.server.workflow.server.url needs to be added.
+Properties cap.server.search.[xxx] and cap.server.feeder may be added but may also be ignored when abandoning the search feature. 
+
+Inside the file publisher.properties all properties named publisher.remote.[xxx] need to be renamed to publisher.target.[xxx].
+
+Repository
+
+Some changes have been done related to repository¿s database schema. There is an automatic migration of this schema when starting the new Content Server the first time. Thus there is no need to do those changes manually.
+
+Servertools
+
+Most of the servertools have been redesigned and are now provided with new syntax and semantics. Thus the underlying java classes may have been changed too. Please consult accordant chapter in this manual.
+
+Search Engine Feeder
+
+The Search Engine Feeder needs a user "feeder" which has at least read rights for all documents that should be indexed (see section). If you upgrade from a previous version of CoreMedia CMS you have to create the user manually.
+
+Workflow Server
+
+Configuration
+
+The file workflowserver.properties needs to be adjusted by 
+
+adding a new property workflow.server.remoteaction.handler with a default value com.coremedia.cotopaxi.workflow.BuiltInRemoteActionHandler.
+switching property workflow.server.adapters.directory to a new default value com.coremedia.cotopaxi.workflow.UnifiedUserManagerAdapter.
+
+Repository
+
+An existing workflow repository needs to be migrated manually using the workflowconverter tool. Please see further description for this tool inside this manual.
+
+API
+
+The workflow client API has been slightly changed. When using custom workflows implementations you should have a look at the API changes described in the release notes. 
+
+Scripting
+
+API
+
+Although the scripting API has been re-implemented internally, the public part has been kept almost the same. Please consult the release notes as well as the javadocs to keep track of this changes.
+
+Libraries
+
+Before running your scripting client under CMS 2005 you have to put these additional libraries into your classpath: cap-unified-api.jar, cap-client.jar, cap-base.jar, cap-workflow.jar, coremedia-common.jar, commons-logging.jar, commons-cli.jar, concurrent.jar, activation.jar, bouncy-castle.jar, xercesImpl.jar and xml-apis.jar.
+
+Servlet engine
+
+The Tomcat 4.1 servlet engine contained in CoreMedia SCT 4.2 has been replaced by Tomcat 5.0. In this context, the default installation path has been changed from tomcat4/ to jakarta-tomcat/. For example this may be an issue when using an automatic deployment. 
+
+Furthermore the way of configuring Tomcat has been changed slightly between versions 4.1 and 5.0. Please consult the Tomcat documentation when using a non standard configuration.
+
+CoreMedia Editor
+
+Configuration 
+
+The editor configuration editor.xml has been extended by an element <search>, which may be ignored when you don't use the search feature. In addition all <DisplayMap> elements inside <ColumnDefinition> need to be adjusted by replacing all entries document="*" with document=¿Content_¿.
+
+API
+
+The editor¿s public API has been changed at several places. Please consult the release notes as well as the javadocs to keep track of these changes. 
+
+ADS/PADS
+
+API
+
+Some small changes have been done on the API provided with ADS and PADS. Please consult the release notes as well as the javadocs.  
+
+Configuration
+
+The property liveServer in the configuration file pads.xml has been removed and must not be used any longer.  
+
+Libraries
+
+The 3rd party library commons-logging.jar is now part of ADS/PADS. Please do not forget to bundle this with your web application. 
+
+WAGE
+
+Some changes have been done on the standard JSP-templates located under templates/ and wftemplates/. Therefore you have to integrate your own changes into these templates. 
+
+Installer
+
+When using the script based installation you have to adjust some names (e.g. values of property servertype) inside your installation script. Please consult the default installation script and read comments carefully.

@@ -1,0 +1,18 @@
+
+
+ Tag Name Attributes Description Examples include self: Object (required), view: String (optional) Render the object passed as "self" in the given view at this position in the JSP output. Requires a template/view to be defined for such an object. <cm:include self="${self.navigation}" />, <cm:include self="${self}" view="frame"/> link target: Object (required), view: String (optional), var: String (optional) Create a link to the object passed as "target" in the given view. If var is set, the link is set as a page scope attribute with that name, otherwise it is directly written to the page. Requires a link scheme to be defined for such an object. <cm:link target="${article}"/>, <cm:link target="${article}" var="link"/> param name: String (required), value: Object (required) 
+
+Can only be used in the body of an include or link tag. Sets a request attribute with the given name to the given value, for the duration of the enclosing tag only. The included view or the called link scheme may use this parameter while creating its output / link.
+
+If used in the body of a link tag, the called LinkScheme can retrieve a map with all parameters by calling ViewUtils.getParameters. 
+
+<cm:include ...>
+ <cm:param name="verbose" value="true"/>
+</cm:include>,
+
+<cm:link target="${article}">
+
+<cm:param name="parameter" value="1"/>
+
+</cm:link> id self: Object (required), var: String (optional) Determine this object's id through the IdProvider. If var is set, create a page scope attribute with that name that holds the id; otherwise, write the id directly to the page output. <input name="teaser" type="hidden" value='<cm:id self="${teaser}"/>'/>
+

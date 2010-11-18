@@ -1,0 +1,3 @@
+
+
+For each CoreMedia Active Delivery Server the URL of the Content Server's IOR must be specified in the file capclient.properties. For this, the property cap.client.server.ior.url must have the value http://<server>:<port>/coremedia/ior. <server> refers to the name of the computer where the server runs. If server and Active Delivery Server are running on the same computer, "localhost" can be used. For <port> you have to use the respective port number, "44441" as default. This port number must be equal to the respective value of cap.server.http.port in the capserver.properties file of the server.

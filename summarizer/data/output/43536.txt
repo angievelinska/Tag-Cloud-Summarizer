@@ -1,0 +1,3 @@
+
+
+String properties are dealt with in a similar simple way: the access method in the hox.corem.servlets.Document class is defined as

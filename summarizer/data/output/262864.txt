@@ -1,0 +1,10 @@
+
+
+The Starter Kit separates content from structure. Therefore you can use content documents in different channels and sites without copying and moving it. In order to use an article in different channels proceed as follows:
+Open the Navigation Explorer and select the Article you want to reuse. Click  in the toolbar to copy the document to the clipboard.
+Select the Channel document in which you want to reuse the Article.
+Click the Check out button of the document.
+Select the Contentlist property of the Channel document and click  in the toolbar.
+
+The Article document is inserted into the field and you are done. The content will be shown in the new context.
+

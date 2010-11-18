@@ -1,0 +1,6 @@
+
+
+Customize the performer policy
+
+
+See Example 5.7b for a customization of the default performer policy which performs a very simple task. It calls the default performer policy and cuts off the last user from the result.

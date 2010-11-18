@@ -1,0 +1,12 @@
+
+
+The CoreMedia CMS is event driven. For each repository change an event is generated and send to all listeners. Listeners are for example
+
+the Replicator of a Replication Live Server
+the Workflow Server
+the PADS 
+indexer etc.
+
+It is also possible to write own clients which act as listeners. 
+
+All events are written to the ChangeLog-table in the database with a timestamp attached. Therefore a listener which was offline for a while can catch up with the current repository state by replaying all events since it was offline.

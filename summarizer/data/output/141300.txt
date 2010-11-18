@@ -1,0 +1,24 @@
+
+
+ 
+
+Symbol Nr. 
+
+Function 
+
+(4) 
+
+Refresh the Query window. (5) Cut resources and text. (6) Copies resources and text into the clipboard. (7) Pastes resources or text from the clipboard into the query document. (8) Direct approval of a resource. This functionality needs to be activated. (9) Opens the layout preview for a document. (10) Simulates a publication of the Query document and shows the result. (11) Direct publication of the Query document (without workflow). 
+
+(12) 
+
+Saves the Query document. 
+
+(13) 
+
+Revokes the check-out of the document. Changes will be lost. 
+
+(14) 
+
+Check-in the Query document. All changes will be saved. (15) Opens a date-chooser. Only visible if you select a search condition with a date. (16) Opens a file-chooser. Only visible if you select a search condition which contains a resource (e.g. path). (17) Removes the current resource from a search condition. Only visible if a search condition with a resource is selected. (18) Opens a resource in the Explorer window. Only visible if a search condition with a resource is selected.
+

@@ -1,0 +1,3 @@
+
+
+This utility can be used to start and stop tracing (logging) of specified sessions on the content server. The logging must be configured with the log facility trace. All sessions traced by tracesession will log in the same file. See section 6.1 for details on the logging of the CoreMedia CMS.

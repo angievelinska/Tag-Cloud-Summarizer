@@ -1,0 +1,3 @@
+
+
+The Starter Kit installs a complete CoreMedia CMS system with nearly all components. This chapter shows in a nutshell how you start and initialize these components. Please refer to the CoreMedia Administration and Operation Manual for a thoroughly description of starting and stopping CoreMedia components.

@@ -1,0 +1,8 @@
+
+
+<DocumentType>
+
+
+Child elements: <PropertyType>*
+
+Parent elements: <DocumentTypes>, <Predicate>

@@ -1,0 +1,11 @@
+
+
+Element ExcludeDocumentType
+
+This element defines that documents of a certain type should not be indexed.
+
+Parent element: DocumentTypes
+
+Child elements: none
+
+Attributes:

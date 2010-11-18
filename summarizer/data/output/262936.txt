@@ -1,0 +1,9 @@
+
+
+Login
+
+The features described below will be available on article pages where the feedback plug-in is enabled.
+
+After installing the User Feedback Plug-in, the average user rating and a list of comments will be shown below the article itself. In order to submit a rating or comment, end-users may use the login dialog to sign in with an arbitrary name and password combination. Once logged in, the login dialog will change to show the name of the current user and a logout button.
+
+The feedback plug-in also uses the Recommendation Engine of the SSE. If recommendations are available, they are shown in the rightmost column, replacing the document teasers seen on non-feedback-enabled pages.

@@ -1,0 +1,4 @@
+
+
+ Attribute Description class Name of the class in which the sorting comparator is defined. The class must contain a public constructor without arguments and must implement an interface depending on the objects to sort (see the API documentation).
+

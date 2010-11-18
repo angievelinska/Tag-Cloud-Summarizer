@@ -1,0 +1,17 @@
+
+
+The configuration of the FileUploader and JmsUploader are described in the Administration and Operation manual. This section describes the configuration of custom uploaders. 
+
+Custom uploaders are configured with the element Uploader inside the element Pads in the configuration file WEB-INF/properties/corem/pads.xml. The attribute class contains the fully qualified class name of the custom uploader. PADS uses Java reflection to instantiate it. This means the uploader needs a public no-argument constructor. 
+
+Each uploader must have an unique and durable identifier which is used to identify a new uploader and send all values to it that were generated before the uploader was registered. This identifier can be configured with the attribute id. If you don't want a new uploader to be notified about existing values, set the attribute receiveInit to false. 
+
+The attributes builder and filter define which values are passed to the uploader. The attribute builder contains a comma-separated list of builder schemes for which values are passed to the uploader. If no builder attribute is set, PADS passes generated pages to the uploader (see section). The filter attribute contains a regular expression that can be used to restrict the values the uploader receives based on the scheme-specific part of their keys. If the uploader receives notifications for generated pages, the resource uri of the pages must match this regular expression. 
+
+You can use the attributes id, receiveInit, builder and filter only if your uploader extends the class AbstractUploader. Otherwise you have to implement the appropriate methods of the interface Uploader (see API documentation). 
+
+It is possible to pass custom configuration settings to the uploader with attributes for that a setter method exists, e.g. an attribute destination would require a method setDestination(String) in the uploader implementation. 
+
+In the following example a custom uploader of class com.coremedia.ext.pads.ExampleUploader is configured, which receives notifications for all values with keys of the scheme com.coremedia.ext.pads.ExampleBuilder: 
+
+ 

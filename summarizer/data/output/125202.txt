@@ -1,0 +1,5 @@
+ 
+
+Property name Type 
+
+Default value Description enableDirectPublication boolean false Whether direct publication should be allowed for all users (true) or only for the admin (false). In the latter case, all other users have to use some publication workflow to publish resources. This option is merely a hint for a GUI to optionally suppress the respective functions (approve, publish). enableWorkflow boolean true Whether the workflow should be enabled. WAGE always opens the connection to the CoreMedia Workflow Server lazily, i.e. on the first request, not on start. This option does not prevent a workflow connection, but is merely a hint for a GUI to optionally suppress the respective functions (e.g. buttons, menus etc.).

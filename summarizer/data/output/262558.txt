@@ -1,0 +1,9 @@
+
+
+Navigation documents are modeled by the document type CMNavigation. Since there may be navigation documents that should not take over the role of a context (the Starter Kit does not offer any, but such document types could be added), the context role is modeled by a subtype of CMNavigation called CMContext. The document type for documents that have a context is called CMHasContext. The super type of CMNavigation and CMHasContext is called CMLinkable and defines the segment string property. All documents (subtypes) of that CMNavigation type create one or more pages and thus can be referred (linked) to by a URL.
+
+The tree relation between navigation nodes is stored by the link list children in CMNavigation. The relation is stored as a link list from parent to children so that the order of children can be specified. Each CMNavigation must only be used once in the resulting tree. Validators and other editor extensions (see below) have to ensure the ¿forest¿ constraint on this relation.
+
+The page concept cannot be found in the document type model explicitly; it only manifests in the contexts link list. There are two reasons for storing the relation from document to context as a link list in the document (CMHasContext): The context can be published without all documents in that context having to be published, and the document can specify a preferred context because the link list provides an order (the first link in the link list represents the default context).
+
+Figure XXX shows an UML diagram of the relevant part of the document type model.

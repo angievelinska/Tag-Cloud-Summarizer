@@ -1,0 +1,3 @@
+
+
+In this chapter you will find a summary of all predefined classes which you can use in the tasks of the CoreMedia Workflow.

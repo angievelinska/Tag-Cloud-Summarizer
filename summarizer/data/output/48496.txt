@@ -1,0 +1,9 @@
+
+
+This example shows how WAGE can be used to develop a "wizard-style" Web application, where CoreMedia resources can be edited in multiple steps. Resource properties are shown for editing on different pages, and at the end of the wizard there is a preview of the resource with the changed properties. The user may then decide if he wants to commit the changes and make them permanent, or roll back all changes.
+
+This example also demonstrates how to use multiple WAGE ChangeCollectors. When editing a resource, a new window is opened and an own ChangeCollector is used for storing the changes made to this resource. Therefore it is possible to edit multiple resources simultaneously without interference: Changes can be made to different resources in different windows. The changes are not visible in the other windows until they are committed. On committing the changes, only the changes of the current resource are committed and are then visible in all other windows.
+
+In this example, the ResourceListActionForm provided by WAGE is used, so there is no need to define a custom ActionForm subclass.
+
+We will also integrate basic rich text editing functionality into this example, using the WAGE RichText editing components, and write a custom toolbar for this purpose.

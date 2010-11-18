@@ -1,0 +1,41 @@
+
+
+This chapter describes requirements and procedures for installation, de-installation, and starting of CoreMedia SCI:
+
+how to install the CoreMedia system using the graphical installer is described in Section .
+how to install the CoreMedia system using the script-based installer is described in Section .
+how to update an existing CoreMedia system is described in Section
+how to uninstall an existing CoreMedia system is described in Section
+how to start an installed CoreMedia system is described in Section .
+
+The section describes the system environment necessary for CoreMedia SCI which has to be set up first to ensure trouble-free operation of CoreMedia SCI.
+
+CoreMedia SCI is shipped with an installation program for interactive graphical installation and configuration of the software.
+
+An automated, script-controlled installation without graphical output for distributed installation is also possible. Basic configuration of CM components is done directly after the installation.
+
+A standard distribution of the CoreMedia SCI consists of the following files:
+
+cap-<rel.no.>.jar : CoreMedia SCI installer where <rel.no.> is the current release number
+cap-<rel.no>-api.zip: archive for CoreMedia API Documentation
+cap-<rel.no.>-html.zip: The CoreMedia manuals as HTML-files. 
+cap-<rel.no.>-pdf.zip: The CoreMedia manuals as PDF-files.
+cap-<rel.no.>-source.zip: Selected Java source files of the CoreMedia SCI.
+cap-<rel.no>.js: a starter script for the installer with Windows Vista
+readme.txt: information about the CoreMedia SCI Installer
+install.script: template script file for non-GUI installation
+notes.html: release notes information file
+changes.html: overview of changes
+cap-examples.jar: The examples from the developer manuals
+cm-SearchEngine-FAST...: CoreMedia Search Engine archive files for different FAST versions and platforms in the searchengine directory.
+install-webstart-win.jar : Web Start installation archive for JRE
+
+The Installer must be executed with the same JRE/JDK used for running the components, since it automatically adjusts some configuration files of the CoreMedia system to this Java version.
+
+A graphical installation under Unix requires an installed and running X-Server.
+
+On UNIX OS it is recommended to set up a new user for both installation and operation of the CoreMedia system before running the installation program.
+
+For installation, the file cap-<rel.no.>.jar is copied into a directory where the newly set up user has write/read rights. If a script-based installation is carried out, the file install.script must be configured as described in the subsection script-based installation (see Section 3.2.2).
+
+When installing a CoreMedia Content Server, the license file should be kept ready, since it will be accessed during the installation (but you can also add it later)

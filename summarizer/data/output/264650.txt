@@ -1,0 +1,11 @@
+
+
+String Properties and UTF-8 Encoded Database
+
+In an UTF-8 encoded database, up to three bytes are required to store a single character. ASCII characters are stored in one byte and non-ASCII Latin-1 characters (e.g. german umlauts) in two bytes. Asian characters need three bytes for representation.
+
+The attribute Length in the element StringProperty defines the maximum length of allowed characters. The actual byte size of the generated varchar table column in the UTF-8 encoded relational database is a product of the value of Length with an additional factor.
+
+To avoid representation problems and to store even asian characters the simplest but wasteful way would be to multiply the string Length defined in the StringProperty element with a factor of three to compute the length of the generated varchar table column that holds the string values. In addition to the waste of storage, this could lead to database problems because database boundaries are reached when many string properties with big Length values are specified in one document type or within a document type inheritance hierachy. To be more flexible, every StringProperty element can have an attribute UTF8Length to specify the maximum number of bytes to hold a string property value. The value must be at least equal and at most three times greater than the value of the Length attribute. If for nearly all string properties in the document type schema the ratio of maximum character length to byte length is the same, one can simply add an attribute Utf8Weight to the DocumentTypeModel element. The value must be between 100 and 300 and, when divided by 100, defines the ratio between character and byte length for all string properties in the type schema where the attribute Utf8Length is not explicitly set. The default value for the Utf8Weight attribute, if omitted, is 300.
+
+For example the value of the attribute Utf8Weight can be set to 130. If a string property with a given Length attribute value of 50 and without Utf8Length attribute is specified, then the maximum byte length is 130/100 * 50 = 65. This may be enough for German text strings, because a string with a character length of 50 could contain 15 two byte encoded characters (e.g. German umlauts). If the length of a string is less than 49 characters, than even more non-ASCII characters are allowed.  

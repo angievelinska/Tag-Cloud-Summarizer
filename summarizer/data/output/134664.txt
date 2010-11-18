@@ -1,0 +1,17 @@
+
+
+usage: cm approve -u <user> [other options] 
+                  [<id1> <id2> ... | -t <path1> <path2> ... | 
+                   -c <id1> <id2> ... | -v <id1> <id2> ...]
+available options:
+ -c,--contents <contents>   ids of contents to place approve. 
+                            Ids are represented as 
+                            coremedia:///cap/content/1234
+ -d,--domain <domain name>  domain for login (default=<builtin>)
+ -p,--password <password>   password for login
+ -t,--paths <paths>         paths of contents to approve
+ -u,--user <user name>      user for login (required)
+ -url <ior url>             url to connect to
+ -v,--versions <versions>   ids of versions whose properties are
+                            approved. Ids are represented as 
+                            coremedia:///cap/version/1234/56

@@ -1,0 +1,52 @@
+
+
+You are asked to customize the Http Cache according to your business needs. Doing so means implementing your own cacheableRequestPredicate, requestNormalizer, cacheableResponsePredicate or eventListener beans. This chapter aims to give you an introduction of how to implement your custom components and how to embed them in the Http Cache. In addition, have a look at the API documention. 
+
+Registering your customized components
+
+When you have implemented a customized component, you have to register it in the Http Cache application. To do so, copy a JAR containing the implemented classes into the web application's classpath located at /WEB-INF/lib. After that, you have to edit the file /WEB-INF/spring/httpcache/httpcache-hooks-example.xml, which is a spring framework based configuration file (see http://www.springframework.org). This file contains the definition of four beans named requestNormalizer, cacheableRequestPredicate, cacheableResponsePredicate  and eventListener which reflect the above mentioned components. For registering your implementations, all you have to do is to replace the particular bean's class as well as its configuration, as follows:
+
+<bean id="cacheableRequestPredicate" 
+  class="com.mycompany.MyCacheableRequestPredicateImpl">
+  ...
+</bean>
+
+
+
+Implementing a CacheableRequestPredicate
+
+In order to write a CacheableRequestPredicate, you have to implement the interface com.coremedia.cap.httpcache.RequestPredicate. A default implementation com.coremedia.cap.httpcache.UriRegexpRequestPredicate  is provided. This implementation matches the request¿s URI against a number of configurable regular expressions. For example, requests having URIs http://myhost/mywebapp/servlet/content/123  or http://myhost/mywebapp/servlet/content/456  may be marked as ¿cacheable¿ when using a pattern /servlet/content/*. On the other hand, a request having an URI http://myhost/mywebapp/servlet/contentblob/123  doesn¿t match the pattern and therefore is not marked as cacheable.
+
+When implementing the RequestNormalizer you should keep in mind that caching a response causes system resources such as disk space, CPU or database IO to be consumed. On the other hand, the removal of a cached response due to an invalidation makes the HttpCache consume resources such as CPU and database IO as well. For this reasons you should carefully design your CacheableRequestPredicate and your web application in such a way that the number of cached responses is kept as low as possible. As a rule of thumb the response for a request should only be cached if it is typically
+
+expensive to compute, so the cost of recomputation exceeds the costs of putting it into the cache.
+not invalidated a short time after being cached. 
+
+You should also consider to use the memory based DataView caching mechanism for certain responses instead of generally using the HttpCache for all responses.
+
+Implementing a RequestNormalizer
+
+Create a RequestNormalizer by implementing the interface com.coremedia.cap.httpcache.RequestFilter. In your implementation, you may want to use class com.coremedia.cap.httpcache.DefaultRequest, which contains useful methods for dealing with Request objects. By default, the class com.coremedia.cap.httpcache.AllHeadersRemovingRequestFilter is provided: All headers (such as browser information and cookies) are removed from the requests and are therefore not taken into account for caching. 
+
+The RequestNormalizer is a good way to achieve the above mentioned goal to keep the number of cached responses low. When implementing a RequestNormalizer, you should choose a restrictive approach, e.g.by removing headers and parameters from the request which are not used. For instance, requests which vary in the User-Agent header field only, should be normalized to an identical request in case that the User-Agent doesn't make any difference for the response. A restrictive approach is also important with regard to malicious requests: Varying request headers or parameters could harm your website by causing lots of useless responses to be cached.
+
+Implementing a CacheableResponsePredicate
+
+Implement the interface com.coremedia.cap.httpcache.ResponsePredicate for writing a CacheableResponsePredicate. The class com.coremedia.cap.httpcache.Rfc2616CacheableResponsePredicate is used as a default. It is based on section 13.4 of RFC 2616, the HTTP/1.1 standard, and excludes certain responses (for example those which contain the header ¿Cache-Control: no-cache¿) from being cached.
+
+The CacheableResponsePredicate is applied by the HttpCache when the response is already written to disk. As a consequence, writing a response to disk which finally shouldn't be cached is a more expensive operation than letting the CacheableRequestPredicate decide to not cache the response and then render it by the CAE directly. For this reason, you should prefer the CacheableRequestPredicate for determining the cacheability and use the CacheableResponsePredicate for rare exceptions instead. 
+
+Implementing an EventListener
+
+An EventListener is implemented by using the interface com.coremedia.cap.httpcache.EventListener. It is important to acknowledge the incoming invalidation events by calling the event's acknowledge() method after the event has been handed. If you don't do so, the event will be repeated later on. The default implementation com.coremedia.cap.httpcache.AutoAcknowledgeEventListener should be used if you are not interested in any invalidation events: It simply acknowledges all incoming events without doing any further processing.
+
+Dependency Tracking for the CAE web application
+
+In the context of the Http Cache and from a special point of view, you might understand the CAE web application as a function for computing values of a type "http response". In fact, the Http Cache internally uses a PersistentCacheKey implementation which delegates its computation to the CAE and returns the CAE's output/response as its value. 
+
+In order to make the Http Cache keep track of certain dependencies, you have to trigger these dependencies from inside your CAE web application: Embed such code in any place which is passed during the CAE response generation, such as your templates, your controllers or your (content) beans. Use the same static functions on com.coremedia.cache.Cache as described above for the PersistentCacheKey's evaluate()method. For example, if you want a response to become invalid after 30 seconds, you have to call com.coremedia.cache.Cache.cacheFor(30*1000) during the response's computation. 
+
+When using the CAE¿s ContentBean mechanism, content dependencies are tracked automatically, so you don¿t have to worry about them. For example, if a response accesses a content repository based ContentBean property, this content dependency will be tracked. Any change to this content will lead to an appropriate invalidation. 
+
+When triggering dependencies you should keep in mind that every single dependency needs to be stored in the database and therefore causes the consumption of some database IO. Thus, a large number of dependencies for a single response might imply an significant load to the database. On the other hand, more dependencies might cause more invalidations to take place. For this reason, you should try to keep the number of dependencies low. Excluding unnecessary dependencies by temporarily disabling dependency tracking (Cache.disableDependencies() and Cache.enableDependencies()) might be a useful mechanism when dealing with dependencies.   
+

@@ -1,0 +1,7 @@
+
+
+General usage
+
+All server utilities are implemented as cm programs as described in section 5.1.4, i.e. you run them from the command line with cm or cmw. Most of the tools open a session and therefore need a user who is specified by three command line options -u, -d and -p.
+
+Furthermore you can explicitly specify the IOR URL of the content server to connect to. If you don't specify the URL, it is taken from capclient.properties.

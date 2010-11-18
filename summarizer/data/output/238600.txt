@@ -1,0 +1,6 @@
+
+
+<Predicate> 
+
+Child elements: <DocumentType>*, %varies;
+ Parent elements: <Filter>, <TreeFilter>, <DocumentTypes>, <Processes>, <Workflow> 

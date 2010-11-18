@@ -1,0 +1,14 @@
+
+
+In a standard CoreMedia installation, session handles and content are transmitted in clear text across the network between client and server. This is usually not a problem when the editorial workplaces and the servers reside in the same trusted network. However, for secure remote access, encrypted communication is sometimes required.
+
+If SSH tunneling is not an option, alternatively a Secure Socket Layer (SSL) connection can be used for the CORBA communication between CoreMedia components. This feature is available since CoreMedia CMS 2005 version 5.0.509 for Sun JDK 1.4 and Sun JDK 5. It will not work with other CORBA ORBs.
+
+The setup is slightly more complex than in the SSH case, because the certificate handling has to be administered explicitly for Java's SSL implementation, and because the port mapping has to be specified in CoreMedia configuration files.
+
+In the following, it is assumed that communication has to be encrypted between a CoreMedia Editor on the one side and the Content Server and Workflow Server on the other side.
+
+In the example, the following ports numbers are used. You may want to use different port numbers for your deployment.
+
+
+

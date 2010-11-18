@@ -1,0 +1,7 @@
+
+5#
+Change the property setting to your new language, here "French".
+In order to connect the localized variant of the Starter Kit site with the master site, you have to set the Master Object property of all Channel and CMLocalized documents to their corresponding documents in the master website. 
+
+The "Manage_Channel" Channel document of the new French site for example, has to link to the corresponding "Manage_Channel" document below the "Deutsches Tutorial/Manage_Channels" folder.
+

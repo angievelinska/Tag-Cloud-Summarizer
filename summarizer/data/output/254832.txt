@@ -1,0 +1,34 @@
+
+
+When using PADS data is stored in both the Content Server and the database of the PADS:
+
+Content Server: The Content Server's database contains the resources in their unprocessed state and a change log.
+PADS: The PADS's database contains values (serialized builder result objects) which are derived from the Content Server resources via application logic. It also contains the dependencies of these values among each other and among the source documents and it contains a link to the change log of the Content Server. This link can be used to adjust the state of the PADS with the state of the Content Server.
+
+In certain cases the PADS database has to be rebuilt:
+
+The content schema has been changed. Therefore the builder creates different results. PADS and Content Server are affected. 
+The builder has been changed and delivers different documents. Only the PADS is affected.
+The builder has been changed and the serialized objects stored in the PADS database are no longer compatible. Only the PADS is affected.
+
+The creation of a new PADS database takes a long time. Therefore, use a second PADS parallel to the production system to create the new database.
+
+The content schema has to be changed
+
+If you want to change the content schema, you need temporary copies of the Content Server and PADS databases. Proceed as follows:
+If you need to do not only schema changes but also content changes (e.g. you need to change configuration documents) you have to start with an additional step. Execute the following SQL command on the Content Server database and note the values, you will need them later:
+
+SELECT sequenceno, idtag FROM ChangeLog 
+WHERE sequenceno = (SELECT MAX(sequenceno) FROM ChangeLog)
+
+E.g.: 
+
+SEQUENCENO IDTAG
+201    1426971868
+2#
+Make copies of the Content Servers (Content Management Server, Master Live Server) and PADS databases and change the database schema on these copies as described in Section.
+If you need to do content changes, execute them on the copies.
+Start the copy of the PADS with the copied Content Servers. This will start the generation.
+When generation has finished you have new PADS content on the copies.
+
+

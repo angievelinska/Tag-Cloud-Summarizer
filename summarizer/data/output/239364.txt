@@ -1,0 +1,3 @@
+
+
+The predefined Top Referrers Report displays the top external pages that directed traffic towards a given local site. Both search engines and other websites are tracked in this report. Specific installations of CoreMedia Analytics may choose to rewrite URL before they are shown in this reports, for example by reducing the exact page to the Internet domain only.

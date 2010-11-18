@@ -1,0 +1,16 @@
+
+
+The used JVM installation is determined depending on the platform.
+
+Unix system
+
+The JVM used to start the installation (java -jar cap-<rel-no>.jar -p <InstallScript>) will be the active JVM. The location of the JVM will be written automatically in the <CoreMediaHome>/bin/pre-config.jpif and <ServletContainerHome>/bin/pre-config.jpif files by the installer. If you want to use a different JVM you must change the settings in these files.
+
+Windows system
+
+There are two possibilities:
+The information about the JVM to use is read from the property JAVA_HOME in the pre-config.jpif file or from the environment variable.
+If JAVA_HOME is not set, a JVM installed in the CoreMedia installation directory or in the servlet container directory of the CoreMedia installation will be used as the active JVM. The installation directory of the JVM has to be located directly below these directories. E.g. <CoreMediaHome>/jre.
+
+
+

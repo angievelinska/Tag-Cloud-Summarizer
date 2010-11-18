@@ -1,0 +1,9 @@
+
+
+In figure you can see an overview of all classes involved in the representation of users and groups.
+
+A group is called administrative, if its direct and indirect members are supposed to gain special privileges while working in the CoreMedia CMS. A user is called administrative, if at least one of its direct or indirect groups is administrative.
+
+For the purposes of assigning rights to users, groups may be designated as content groups or live groups or both. Only rules of content groups affect the computation of rights on the Content Management Server. Only read rights rules that are defined for live groups are published to the Live Servers.
+
+For users, the home folders can be retrieved as a content object. As already explained, setting the home folder is only possible for built-in users.

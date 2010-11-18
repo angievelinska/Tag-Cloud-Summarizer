@@ -1,0 +1,20 @@
+
+
+If the analysis algorithm used by the Object Analyzer has changed or when the analysis results in the Analytics Database are possibly corrupt, it is possible to rerun the Object Analyzer on the entire content repository by executing the following steps:
+
+
+Edit the file proactiveengine.properties in the Object Analyzer configuration. Set
+
+proactiveengine.clear=true
+
+
+Restart the Object Analyzer with following command
+
+cm objectanalyzer restart
+
+
+Set
+
+poactiveengine.clear=false
+
+A failure to reset the property file during the last step will lead to a situation where repository will be completely analyzed after each restart of the Object Analyzer, which is typically not desired.

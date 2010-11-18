@@ -1,0 +1,3 @@
+
+
+The transformer now only has to be entered in the configuration file of the importer. Since we had to change GeneratorTransformerFactoryImpl anyway, in order to support the prefix, we have also coded the class of the transformer (BaseMaker), as well as the source and result formats, straight into BaseMakerFactory. In the configuration file, therefore, only a prefix needs to be specified in addition to the class and the name.

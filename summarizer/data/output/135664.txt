@@ -1,0 +1,3 @@
+
+
+If Preview-based Editing is configured and activated in your preview, you can easily jump from the preview to the CoreMedia Editor or CoreMedia Webeditor: Whenever the mouse cursor hovers over an article, teaser, picture or any other element, a changing background color indicates, that you can open a context menu for the element. In the following picture you can see a context menu opened for a teaser about Shakira.

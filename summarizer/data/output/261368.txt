@@ -1,0 +1,53 @@
+
+
+Since hardware requirements are as specific as project requirements, such as e.g. the number of pages of a website, third-party services, high availability etc., they can only be determined individually. Planning of expected system demands, such as the number of computers and internal network topology, should be performed really carefully.
+
+CoreMedia systems can operate on a single computer or in a distributed environment. Project-specific demands can have a strong impact on hardware requirements. The listings below are just rough estimates and/or the very basic equipment needs. This chapter does not replace CoreMedia expert consulting by any means. 
+
+Basic Production System: 
+
+To run a CoreMedia System in production, the basic hardware equipment should at least consist of:
+
+one cpu for Content Server and Preview Active Delivery Server (ADS)
+one cpu for the FAST search engine with at least 2GB RAM. Please see the FAST Installation Guide for details of the required hardware.
+one cpu for n importers
+one cpu for Master Live Server 
+n cpus for n Live ADSs/CAEs and Slave Live Server
+external DB Server(s): equipment according to the recommendations of the database manufacturer
+
+Each cpu at least equivalent to:
+
+Sun: SPARC 1000 MHz allocating 512 MB main memory, 18 GB hard disk space.
+3* or
+PC: Xeon / Opteron with min. 2 GHZ allocating 512 MB main memory, 18 GB hard disk space.
+
+
+
+Editor Installation:
+
+Generally, CoreMedia Editors  are installed on separate Windows computers with access to the Content Server. A computer for the CM Editor should not fall short of the following recommendation:
+
+PC: Pentium IV/ Athlon min. 2 GHz, 256 MB main memory, 8 GB hard disk space
+
+
+
+CMS Development and Test System:
+
+For a development or test system all CoreMedia components can be installed on one computer:
+
+2 CM Servers: Content + Live, 
+(optional) 1 CM Importer
+2 CM ADSs: (Preview + Online)
+
+If possible, the database should be installed on a separate computer in the test system as well.
+
+Minimum requirements for a development system:
+
+Sun: SPARC 2*1000 MHz, 2 GB main memory, 18 GB hard disk.
+3* or
+
+
+PC: Xeon / Opteron 2 GHz, 2 GB main memory, 18 GB hard disk.
+
+
+

@@ -1,0 +1,15 @@
+
+
+ Start the installation of a CoreMedia component as follows: 
+Open an explorer window and change to the directory that contains cap-<rel.no>.jar and/or cap-<rel.no.>.js. 
+If you want to install a component on a Windows Vista system, use the cap-<rel.no.>.js script for installation. This script asks for administrator privileges before starting the installer. These privileges are required for installation into the Program Files folder. Simply, double-click the cap-<rel.no>.js file or open an administrator command line prompt and enter java -jar <Path>\cap-<rel.no.>.jar>.
+Otherwise, start the installation by one of the following options:
+
+3* If there is a link for direct execution of Jar archives in the operating system (Windows), the installer can be started by double-clicking cap-<rel.no>.jar. 
+3* or
+3* open an command line prompt and type java -jar cap-<rel.no.>.jar. 
+3* The installer uses the language of the installed Windows OS, but you can chose the installer language by starting the installation with:  
+ java -Duser.language=<LanguageCode>_<CountryCode> -jar cap-<rel.no.>.jar e.g.  
+java -Duser.language=en_US -jar cap-<rel.no.>.jar for an English installer. 
+
+The start window with version and copyright information opens. 

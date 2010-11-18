@@ -1,0 +1,4 @@
+
+
+ Report Template Name Description CategoryReport_AsPieChart Report template suitable for rendering a category report as pie chart. Used by the predefined 'RepositoryInfo' report. RankedCategoryReport_AsBarChart Report template suitable for rendering ranked category (top n element) reports as bar chart. Used by 'Top Viewed Pages', 'Top Entry and Exit Pages', and 'External Search Terms' reports. These report make intensive use of chart customizers to create a tabular view (multiple axes descriptions). TimeSeriesReport_AsBarChart Report template suitable for single time series reports which are to be rendered as bar charts. Not yet used by any predefined report. TwoTimeSeriesReport_AsBarLineChart Report template suitable for two time series reports with one data set rendered as bar and one as line chart. Used by the predefined 'Performance' report.
+

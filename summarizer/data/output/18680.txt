@@ -1,0 +1,29 @@
+
+
+The watchdog is installed with the server, the workflow server and the importer. The following actions can be executed with the watchdog:
+
+
+
+Components of the CoreMedia system can be monitored for functioning.
+
+
+Components can be locally stopped and/or restarted.
+
+
+Depending on the state of the system, further actions can be triggered.
+
+The watchdog is delivered in two versions:
+
+
+
+watchdog
+
+
+3* The watchdog is an independent monitoring process which is used to test regularly whether components are functioning and, in case of error, to restart them. 
+
+
+probedog
+
+
+3* The probedog is a process for one-time checking of the status of a component. This variant is used with integration of the CoreMedia system in a high-availability cluster. The probedog can be used as a diagnostic tool for the momentary status during operation. The probedog delivers a returncode which can be evaluated by a shell script. 
+

@@ -1,0 +1,7 @@
+
+
+The J2EE/servlet standard uses role based authentication. The Active Delivery Server maps these roles to corresponding SCI server groups to determine the access rules to apply. Please note, that the nature of the J2EE role model has one implication: no access rights inheritance due to hierarchical groups is taken into account in the web application. The user is treated as if he was only in the groups corresponding to his J2EE roles. For example, if the container identifies the user to be in role 'X', only rules that are explicitly defined for group 'X' are taken into account, not those for supergroups. You have to keep this in mind when designing the groups/rights model in the Content Server. 
+
+In order to use container-managed authentication, you have to follow three basic steps:
+Configure the web-application through the standard deployment descriptor (web.xml). Please refer to the servlet specification, section 12 for details. A fragment like the following may be used:
+

@@ -1,0 +1,4 @@
+
+
+  Menu item  Sub items  Functions  Show tree    Shows the search criteria as a tree.  Sort  Path, State, Name, Version, Type  Sorts the query results by the selected criteria. 
+

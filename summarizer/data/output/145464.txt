@@ -1,0 +1,71 @@
+
+
+You need to configure the DB2 database instance as follows:
+
+The tablespace's page size shall be increased when using large document types.
+
+db2 create bufferpool bp_$DBNAME all dbpartitionnums size 50000 
+numblockpages 0 pagesize 32768
+db2 create tablespace ts_$DBNAME pagesize 32768 managed by database 
+using \(FILE `echo \'`/db2tablespaces/ts_$DBNAME`echo \'` 8192\) 
+extentsize 32 prefetchsize 64 bufferpool bp_$DBNAME
+
+
+The parameters applheapsz, stmtheap and app_ctl_heap_sz may be modified when having problems with long queries. 
+
+db2 update database configuration for $DBNAME using applheapsz 16384
+db2 update database configuration for $DBNAME using stmtheap 60000
+db2 update database configuration for $DBNAME 
+using app_ctl_heap_sz 8192
+
+
+Next Row Locking must be disabled for use with CoreMedia SCI. As the database instance owner proceed as follows:
+Enter db2set DB2_RR_TO_RS=YES at the shell prompt of your database computer.
+Restart the database instance.
+
+You can use one of the following drivers. 
+
+DB2 Joint Combined Access com.ibm.db2.jcc.DB2Driver (Recommended)
+DB2 JDBC Application Driver com.ibm.db2.jdbc.app.DB2Driver
+DB2 JDBC Network Driver com.ibm.db2.jdbc.net.DB2Driver 
+
+Your driver choice depends on the used platform. If one of the drivers does not work on your system you might try to apply the other one. In all cases, copy the file of the driver (e.g. db2java.zip) into the lib directory of the CoreMedia installation and rename the file to db2java.jar.
+
+Joint Combined Access Driver
+
+When using the Joint Combined Access you have to configure the sql.properties as follows
+
+sql.store.driver=com.ibm.db2.jcc.DB2Driver
+sql.store.url=jdbc:db2://<DB-HOST>:<DB-PORT>/<DB-NAME>
+sql.store.user=<DB-USER>
+sql.store.password=<DB-USER-PASSWORD>
+sql.store.dbProperties=corem/db2
+
+Application Driver
+
+If you are using the Application Driver, an additional DB2 client installation on the CoreMedia Server host is required! 
+
+You configure the application driver in sql.properties as follows:
+
+sql.store.driver=COM.ibm.db2.jdbc.app.DB2Driver
+sql.store.url=jdbc:db2:<DB-NAME>
+sql.store.user=<DB-USER>
+sql.store.password=<DB-USER-PASSWORD>
+sql.store.dbProperties=corem/db2
+
+Network Driver
+
+If you are using the Network Driver, you need to start the db2jstrt daemon (part of the DB2 installation) which is used by the driver to connect to the database. Start the daemon with:
+
+db2jstrt <port>
+
+Use the port defined by the sql.store.url property in the sql.properties file.
+
+When you use the network driver you have to configure the following properties in sql.properties:
+
+sql.store.driver=COM.ibm.db2.jdbc.app.DB2Driver
+sql.store.url=jdbc:db2://<DB-HOST>:<DB-PORT>/<DB-NAME>
+sql.store.user=<DB-USER>
+sql.store.password=<DB-USER-PASSWORD>
+sql.store.dbProperties=corem/db2
+

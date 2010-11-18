@@ -1,0 +1,42 @@
+
+
+Possible Solution 
+
+To resolve the error, proceed as follows: 
+Open the CoreMedia CMS installer log file named coremediacms-installer-log.<date-time>.txt file and look at the last lines of log messages to find some errors.
+If  the log does not help, open the FAST installer log file named Install.log in the directory oeminstaller (for FAST InStream 4.3) or directory fastinstaller (for FAST ESP 5.1.5) and look at the last log messages.
+If the file Install.log does not exist, do the following depending on your OS:
+
+
+
+On UNIX OS: open a shell, change to the directory oeminstaller/bin (for FAST InStream 4.3) or fastinstaller/coremedia/bin (for FAST ESP 5.1.5) and execute cminstall.sh
+
+
+On Windows OS for InStream 4.3: open a command window, change to the directory oeminstaller/bin and execute 
+
+oeminstaller.exe -f "..\CoreMediaConfig.xml" -o -U <Windows user name> -P <Windows user password> 
+
+where you have to replace the user name and password. This command is invoked in cminstall.bat.
+
+
+On Windows OS for ESP 5.1.5: open a command window, change to the directory fastinstaller/updates/bin and execute:
+install.exe "..\CoreMediaConfig.xml" -o -U <Windows user name> -P <Windows user password>
+
+
+If the command succeeds you can start the search engine. If you get an error message, consult the Fast InStream OEM Installer Guide (for FAST InStream 4.3) or the FAST ESP Installation Guide (for FAST ESP 5.1.5). Maybe you have to re-execute the command with different options. You will find a list of possible options in the installer guide. 
+
+Wrong user/password combination
+
+If you have installed the search engine with a wrong user/password combination on a Windows platform, the start will fail. You will see no error message, if you try to start the search engine via the program menu. 
+
+Possible Solutions
+
+Try to start the search engine in the Windows services window. There you can also correct the user name and password for the two FastSearch services. To do this open the service properties and select the login tab.
+
+XML_GetInputContext not found
+
+During installation of FAST you get the error message "Der Prozedureinsprungpunkt "XML_GetInputContext wurde in der DLL expat.dll nicht gefunden"
+
+Possible Solutions
+
+If you have installed e.g. cygwin you will find an existing expat.dll file in the windows\system32 directory. This version of the DLL is in conflict with the version delivered with FAST InStream. Rename the existing expat.dll file in windows\system32 and the installation should work.

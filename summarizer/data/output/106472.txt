@@ -1,0 +1,32 @@
+
+
+ 
+
+Diagram Notation 
+
+Property Definition 
+
+width: Int 
+
+<IntProperty Name="width"> 
+
+headline: BoundedString<200> 
+
+<StringProperty Name="headline" Length="200" > 
+
+issuedOn: Date 
+
+<DateProperty Name="issuedOn"> 
+
+data: Blob<image/*> 
+
+<BlobProperty Name="data" MimeType="image/*" > 
+
+text: Xml<used grammar> 
+
+<XmlProperty Name="text" Grammar="used grammar" > 
+
+images[*]: Image 
+
+<LinkListProperty Name="images" LinkType="Image" >
+

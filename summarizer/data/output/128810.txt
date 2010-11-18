@@ -1,0 +1,4 @@
+
+
+ Attribute Optional Description name  A unique name which is used as component parameter in a cm watchdog <start|stop|...> <Component>+ command and configured in the watchdog.jpif file when registering a Windows service. startAction  The name of the action which should be executed first when the watchdog is started. If this is a simple status test (probe), it's the only action which is executed. delay x The attribute specifies the delay in seconds until the action defined in the startAction attribute is executed.
+

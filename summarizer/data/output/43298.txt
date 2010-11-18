@@ -1,0 +1,11 @@
+
+
+XSL transformations (XSLT) is yet another W3C standard targeted at XML processing. Using style sheets, developers can transform XML entities into other XML entities or plain text. The style sheets themselves are written in XML and can be stored in any XML enabled repository like the CoreMedia SCI. This also means that syntax checking can be done by one of the free XML parsers. However, this also means  that you will have to put up with the syntax which is sometimes difficult.
+
+The latest XSLT specifications can be found at http://www.w3.org/TR/xslt . A style sheet consist of so called Template Rules which contain literal output elements as well as instructions to the style sheet processor, Variables and Parameters .
+
+XSL transformations are tree driven. An input tree is processed by processing the root element. Elements are processed by finding the template rule in the style sheet that offers the best match for the input element emitting it's content.
+
+The following information shows you how to write JSP's that implement XSL transformations.
+
+The XSLT version supported by the CoreMedia SCI is 1.0.

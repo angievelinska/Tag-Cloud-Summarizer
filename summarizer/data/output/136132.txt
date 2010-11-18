@@ -1,0 +1,14 @@
+
+
+Rights determine, which operations user and groups may perform on processes and tasks. A rights policy is used to decide whether a concrete user may perform an operation on a workflow object. 
+
+The rights policy, which is used by the CoreMedia Workflow Server is configurable. By default, the ACLRightsPolicy is used. It determines the rights based on Access Control Lists (ACL) for each workflow object. The ACLs are defined by granting and revoking rights for a user or a group. The following rules apply:
+
+Rights for a user are calculated from concrete rights defined for a user and the rights from all the groups the user is a member of.
+A revoke precedes a grant.
+Concrete rights for a user precede rights for a group the user is member of.
+
+
+Rights for a group precede rights for another group if the other group is a subgroup of the first group.
+
+For example:

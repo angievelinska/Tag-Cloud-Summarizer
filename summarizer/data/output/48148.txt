@@ -1,0 +1,3 @@
+
+
+With WAGE you can easily develop Web applications which allow to edit CoreMedia resources in a wizard-style fashion (in multiple steps):

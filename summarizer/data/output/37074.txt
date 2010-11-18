@@ -1,0 +1,8 @@
+
+
+This chapter describes the workflow definition XML file format. You will find two kinds of items described here:
+
+Parameter entities (headline printed in bold italics)
+3* Parameter entities constitute rules for the XML grammar or standard sets of attributes. Parameter entities are reused in various places to shorten the definition of XML elements. 
+XML elements (headline printed in bold)
+3* XML elements describe the actual parts of a workflow description. 

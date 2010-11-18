@@ -1,0 +1,5 @@
+
+
+Pre- and postconditions are boolean expressions that act as assertions which are evaluated when entering or leaving a task. A task can contain any number of pre- and postconditions.
+
+Pre- and postconditions help the developer to determine error conditions that can not be handled by the normal workflow. If a pre- or postcondition evaluates to "false", the task is escalated. It may be manually restarted when the error condition has been resolved.

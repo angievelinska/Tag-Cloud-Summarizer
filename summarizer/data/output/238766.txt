@@ -1,0 +1,13 @@
+
+
+For the SQL-Server database you must use the original JDBC driver supplied by Microsoft. Copy the driver file into the <CoreMediaHome>/lib directory and configure the following settings in the file sql.properties:
+
+sql.store.driver=
+  com.microsoft.sqlserver.jdbc.SQLServerDriver
+sql.store.url=jdbc:sqlserver://
+  <DB-HOST>:<DB-PORT>;databaseName=<DB-NAME>
+sql.store.user=<DB-USER>
+sql.store.password=<DB-USER-PASSWORD>
+sql.store.dbProperties=corem/mssql
+
+Only SQL Server authentication is supported for the database user.

@@ -1,0 +1,23 @@
+
+
+The Search Engine Feeder automatically retries operation after some communication problems with the CoreMedia Search Engine. You can configure the number of retries and the delay between in the element FastIndex below the element Feeder in the file feeder.xml. The attributes sendAttempts, searchAttempts and reconnectAttempts define the maximum number of attempts to send a batch, search for a timestamp and reconnect to the CoreMedia Search Engine. You can configure the delay in seconds between the attempts in the attributes sendRetryDelay, searchRetryDelay and reconnectRetryDelay.
+
+If all retry attempts fail or another non-expected error occurs, the Search Engine Feeder stops. You can use the administration page to restart manually or you can configure the Search Engine Feeder to restart automatically after errors. The attribute restartAfterError of the element Feeder defines whether the Search Engine Feeder should automatically restart after indexing-related errors. The attribute restartAfterErrorDelay defines the delay in seconds before restarting. Note, that the Search Engine Feeder does not automatically restart after some internal errors.
+
+If the CoreMedia Search Engine fails to index a batch it will send an error back to the Search Engine Feeder to resubmit the batch. You can configure the maximum delay in seconds before resending the documents of the failed batch in the attribute retryDocumentDelay of the element Feeder. Such errors normally origin from a temporary problem of the CoreMedia Search Engine such as high load.
+
+In the case of network problems it can happen, that the Search Engine Feeder does not receive a callback notification from the CoreMedia Search Engine about a persisted batch. An example is a firewall which blocks callbacks. If the Search Engine Feeder does not receive a notification for a batch it stops with an error. The seconds to wait for a callback are configured in the attribute callbackTimeout of the element FastIndex.
+
+The following example configures the Search Engine Feeder to retry batch sending, searching and reconnecting 5 times each. If this fails or another error related to indexing occurs, the Search Engine Feeder shuts down and restarts after one minute. The callback timeout is set to one hour in the example.
+
+
+
+<Feeder restartAfterError="true"
+        restartAfterErrorDelay="60" ...>
+ <FastIndex callbackTimeout="3600"
+            sendAttempts="5" sendRetryDelay="10"
+            searchAttempts="5" searchRetryDelay="10"
+            reconnectAttempts="5" reconnectRetryDelay="30" ...>
+   ...
+ </FastIndex>
+</Feeder>

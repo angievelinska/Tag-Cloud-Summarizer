@@ -1,0 +1,14 @@
+
+
+The Workflow Server contains an embedded web server - Jetty - that is primarily used to deliver the IOR of the Workflow Server. You can also use the web server for JMX management (see section). In order to have a secure connection, configure SSL for the server as follows:
+Create a certificate using genkey as described in section for example. Make sure that the certificate name is the same as the workflow.server.http.host property in workflowserver.properties. You may be able to use the same certificate as for the Content Server.
+Configure the SSL connection in the file workflowserver.properties in <CoreMediaHome>/properties/corem using the following properties:
+
+workflow.server.https.port - The port to use for the secure connection.
+workflow.server.https.keystore - The path to the Java keystore file containing the certificate.
+workflow.server.https.password - The password to the keystore.
+workflow.server.https.keypassword - The password to the server's key (often the same as the keystore password).
+3#
+Restart the Workflow Server using cm workflowserver restart
+
+Now, you can connect to the embedded web server using SSL.

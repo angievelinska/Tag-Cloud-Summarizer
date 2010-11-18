@@ -1,0 +1,9 @@
+
+
+IsFolder
+
+
+Grammar: EMPTY 
+
+
+IsFolder queries whether a resource value contained in the variable given via the variable attribute is a folder and not a document or document version. 

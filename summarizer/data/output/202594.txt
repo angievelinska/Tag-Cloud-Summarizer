@@ -1,0 +1,27 @@
+
+
+ File/Directory Meaning web.xml The portal application descriptor. There is no need to edit this file. view.xsl A XSLT-stylesheet for transforming portal pages into html. There is no need to edit this file. contentservice.xml The contentservice descriptor. Please edit this file as shown above. portlet.xml 
+
+The portlet descriptor. Please configure the homepage uri here like
+
+<config-param>
+<param-name>homepageuri</param-name>
+<param-value>/</param-value>
+</config-param>
+
+You may also register javascript and css files here.  js/ 
+
+Preferred location of additional javascript files. Put your files here and register them by editing portlet.xml like
+
+<config-param>
+<param-name>javascript</param-name>
+<param-value>js/myfile1.js,js/myfile2.js</param-value>
+</config-param> style/ 
+
+Preferred location of additional CSS files. Put your files here and register them by editing portlet.xml like
+
+<config-param>
+<param-name>css</param-name>
+<param-value>style/myfile1.css,style/myfile2.css</param-value>
+</config-param> errorpages/ Preferred location of additional errorpages when using the ErrorpagesContentService. The location needs to be defined inside contentservice.xml.  lib/  Java libraries which are used by the portlet. Please do not modify this directory's content.
+

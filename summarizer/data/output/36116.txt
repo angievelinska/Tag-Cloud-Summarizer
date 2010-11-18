@@ -1,0 +1,30 @@
+
+
+Variables are typed. A variable of a certain type can only contain values of its defined type or subclasses of the type.
+
+The existing values are closely related to CoreMedia SCI property types and resource objects:
+
+
+
+Booleans
+
+
+Blobs
+
+
+Contents, Folders and Documents
+
+
+Content types
+
+
+Dates
+
+
+Exceptions
+Groups and Users
+Integers
+Strings
+Timers
+
+All values implement the java.lang.Comparable interface. They may contain null values and are immutable. So, their setValue() methods must never be called from your own code, the result of such an action is unpredicable

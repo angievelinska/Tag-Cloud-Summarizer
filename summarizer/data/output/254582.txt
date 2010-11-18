@@ -1,0 +1,5 @@
+
+
+If you want to install the CoreMedia Search Engine proceed as follows:
+Do the prerequisite work as described in chapter.
+

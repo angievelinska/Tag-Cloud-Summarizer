@@ -1,0 +1,3 @@
+
+
+The content bean also needs to have a dataview definition with associationType dynamic:

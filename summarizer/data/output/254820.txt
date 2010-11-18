@@ -1,0 +1,4 @@
+
+
+The default settings of the ADS caches are conservative guesses which are intended to work with the default settings of the Java virtual machine (VM). The default maximum heap size for the VM is 256MB which should work even on small-sized machines. For productive use you should increase and optimize these settings. See section for details. If you have increased the heap size you can start optimizing the cache settings. These settings are done in the <ADSInstallDirectory>/WEB-INF/config.bsh file. In Section you will find a table with all important options. The complete list of options can be obtained from the API documentation of the class hox.corem.servlets.Generator. You will find more information concerning caching in the Active Delivery Chapter of the CoreMedia Delivery Developer Manual.
+

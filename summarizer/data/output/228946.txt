@@ -1,0 +1,10 @@
+
+4#
+If you have chosen to install the Web application template or the Web application template with HTTP Cache, Editing Services for JSF and/or the Web Services Engine the window shown below will open. You can decide whether the default servlet engine Tomcat should be installed or not.
+
+If you choose
+Yes:
+Tomcat will be installed and the components will be installed in /webapps of the Tomcat installation.
+No:
+Only the component's context will be installed. You have to integrate these components in the servlet engine of your choice manually.
+

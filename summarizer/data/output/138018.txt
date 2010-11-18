@@ -1,0 +1,9 @@
+
+
+A Content Server can store an arbitrary number of persistent key/value pairs in a dedicated database table. These values can be used to store global resource-independent states. For example, some values are used internally to store the current database schema version and other information.
+
+The PropertyService allows you to access this persistent store. The PropertyService presents the table as a map from strings to strings. You can get individual entries or the entire map and you can set and remove key/value pairs.
+
+It is advisable to keep the number of key/value pairs moderate. It would be possible to store the path of a configuration folder or perhaps the time of the last run of a certain script. It is not recommended to store individual values per document and folder. 
+
+Please refer to the documentation of PropertyService for information about reserved keys that may not be used for arbitrary purposes.

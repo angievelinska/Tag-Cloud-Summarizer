@@ -1,0 +1,10 @@
+
+2#
+Enter the properties and click Next.
+
+If you have chosen the custom installation, the following window opens up. Select the components you want to install. If you install no Tomcat servlet container you have to move the web applications to a supported servlet container. The web applications are:
+
+Web Editor
+CAE web application
+Analytics Dashboard
+

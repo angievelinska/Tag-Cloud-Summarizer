@@ -1,0 +1,9 @@
+
+
+The GeneratorFactory class expects the following configuration parameters:
+
+import.multiResultGeneratorFactory.property.inbox: Directories of the image files to import, separated by ";" or ",".
+import.multiResultGeneratorFactory.property.sleepingSeconds: Number of seconds which the importer should wait before importing again.
+import.multiResultGeneratorFactory.property.filenameFilterClass: Full Java class name of type java.io.FilenameFilter, for selecting JPEG files. This value is optional. If not entered, all files are imported whose names are different from 'err' or 'bak'. In the configuration, the class com.coremedia.publisher.importer.JpegFileFilter is used as filter, and selects all files which end with '.jpg' or '.jpeg', ignoring case.
+
+Two TransformerFactory classes are specified, as shown in the following:

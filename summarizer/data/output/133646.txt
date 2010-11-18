@@ -1,0 +1,9 @@
+
+
+In order to invoke the fragment cleaner, run
+
+<PADSWebappHome>/WEB-INF/bin/cm cleanfragments [--depth <depth>]
+
+The cleaner operates in iterative passes, cleaning one dependency level after another, until no more unreachable fragments can be found. You can limit the number of levels (in order to limit the required runtime) with the switch --depth <depth> where depth is a positive number. Logging is performed to the same file as by PADS.
+
+Expect the fragment cleaner to run from several seconds to a few minutes, depending on the size and performance of your database. 

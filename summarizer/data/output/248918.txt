@@ -1,0 +1,4 @@
+
+
+The file sample-doctypes.xml located in the subdirectory /config/contentserver/doctypes is shipped with the installation of CoreMedia SCI. Create a new doctype-file for the menu website or use the sample-doctypes.xml as a starting point and rename it to menu-doctypes.xml. Add the new document types to menu-doctypes.xml. Because all document types have the same attribute name a supertype Document should be created. Example 8.2a shows how to define the Document document type.
+

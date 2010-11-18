@@ -1,0 +1,44 @@
+
+
+ 
+
+Attribute 
+
+Description 
+
+name 
+
+Name of the browser to start.
+
+Any number of names can be entered here. 
+
+command 
+
+Command for starting the browser.
+
+The string "%s" in the example is replaced by the URL of the document for display. 
+
+pattern 
+
+This attribute describes how the URL passed to the browser is constructed.
+
+%p Protocol
+
+%h Computer name
+
+%n Port number
+
+%u URI prefix
+
+%i URI postfix
+
+%f combined %u and %i
+
+Example: pattern="wap://%h:%n/wap/%f"
+
+Default: %p://%h:%n/%f optional 
+
+Specifies whether this browser is optional when doing a preview with all configured browsers (e.g. by clicking the Preview button in the toolbar or by selecting File|Preview|All). The Editor only shows errors for non-optional browsers or if no browser could be started at all.
+
+Allowed values are true and false. Default is false.
+

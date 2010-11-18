@@ -1,0 +1,9 @@
+
+
+The methods setFileUploader and setJmsUploader are automatically called by the BeanParser which parses the file pads.xml. In order to set the default FileUploader in your delegate for example, you have to define the DelegatingUploader as follows in the pads.xml file:
+
+<Uploader class="my.uploader.DelegatingUploader">
+  <FileUploader id="file01" directory="upload" filter=".*"/>
+</Uploader>
+
+For the JmsUploader it is straight forward.

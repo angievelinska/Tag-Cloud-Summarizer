@@ -1,0 +1,13 @@
+
+
+The Differencing Engine is an out-of-the-box building block for a web UI based on ES. It displays the differences of two document versions on a single web page. The page is built with the following JSF-JSP files:
+
+differences.jsp: the main JSF-JSP file for the application.
+diffContainer.jsp: included by differences.jsp it displays the two document versions and the toolbars.
+
+There exists a third file differencesShort.jsp which does the same as differences.jsp, but without displaying the header. Both main files include diffContainer.jsp which actually does the work to display the differences. The JSF tags used, refer to general ES and specific Differencing Engine components and backing beans. The latter are defined in the following Spring XML configuration files in the jar: cap-editing-diff-config.jar:
+
+framework/spring/differencing.xml
+framework/spring/editor-extensions/dispatcher-servlet/differencing.xml
+
+The second XML file defines JSF related beans and the first file does not. The following subsections describe the JSP tags and backing beans from diffContainer.jsp in detail.

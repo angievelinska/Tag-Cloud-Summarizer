@@ -1,0 +1,3 @@
+
+
+The events utility prints out all events reaching the Content Management Server and the Workflow Server.

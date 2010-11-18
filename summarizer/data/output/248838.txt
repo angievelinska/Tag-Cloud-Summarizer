@@ -1,0 +1,7 @@
+
+
+The views renderSmall, renderNormal and renderAll are available for both document types. The view renderThumbnail, on the other hand, can only be used on documents with the more specific type ImageWithThumbnail. While renderNormal is only available in the subtype through inheritance, renderSmall and renderAll are transferred (the more specific implementation is used).
+
+The implementations of the views are templates, as illustrated in Section 4.2. The advantage with templates called up by the ViewDispatcher is that it is certain that the current resource is of the required document type (or a more specific one). In this way, it is possible to assume without further checking that all the properties defined for this type can be accessed.
+
+In the following, the templates which implement the given views are introduced.

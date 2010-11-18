@@ -1,0 +1,17 @@
+
+
+Prior to using CoreMedia In-Site Analytics for your web application, you must enable Analytics in your application using the Analytics tag library. 
+
+Overview
+
+The Analytics tag library allows you to mark pages, page parts and links as relevant for Analytics. The tags are responsible for displaying statistics for pages and links. The tags also structure the page into a number of contexts. Links that appear in different contexts are tracked separately even if they link to the same target page.
+
+When a link is rendered using the tag library, the HTML element is augmented by a JavaScript-based event handler that tracks clicks on the link by sending notifications to your server. Therefore, the tag library supports the creation of HTML pages only and will track clicks on links only if JavaScript is enabled in the browser. This may result in the loss of a small number of click events, but for most sites the effect is negligible. The counting of page views is never affected by disabling JavaScript in the browser.
+
+Using Analytics without the Taglib
+
+You can use the Analytics Dashboard without any additional changes to your templates. An interceptor tracks all page requests and logs them for later processing independently of the analytics tag library. See the file analytics-controllers-example.xml for one possibility of activating the bean reportInterceptor. If you do not intend to enable In-Site Analytics, you can skip the description of the tag library.
+
+Using the Taglib without Analytics
+
+It may happen that you have developed JSP templates that use the Analytics taglib and want to deploy them in a project where Analytics has not been licensed. In that case, you can still install a CAE with the tracking extension, but set tracking.enable=false in the file tracking.properties. This will ensure that no page views are tracked and that the license is not checked for an enabled Analytics flag.

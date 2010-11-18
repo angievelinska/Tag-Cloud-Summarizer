@@ -1,0 +1,13 @@
+
+
+Action: There are also several predefined Struts actions, all contained in the package com.coremedia.cap.wage.actions:
+
+The actions StartCreateResourceAction, StartCreateFolderAction, and CreateResourceAction can be used together with a CreateResourceForm for creating new CoreMedia documents or folders. The Start... actions prepare the appropriate CreateResourceForm and should forward to a view that renders a corresponding view that invokes the CreateResourceAction.
+The ResourceListAction, to be used together with a ResourceListActionForm, is responsible for actually performing the command submitted in the form on the CoreMedia resources selected in the form.
+The WfInstanceListAction performs a command on a set of workflow instances.
+The LoginAction can be used for logging in a user. See XXX for an example on how to use this Action.
+The QueryAction can be used to create a new CoreMedia Query document.
+
+If the execute method of a Struts Action has been processed, it returns an Struts ActionForward, usually by looking up a certain name in the Struts ActionMapping, as defined by the stuts-config.xml file.
+
+The ResourceListAction for example returns an ActionForward with the name "workflowStarted" if the submitted command was to start a workflow, and the start was successful. For more information on which ActionForwards are used by which Action, please consult the API Documentation for these Action classes.

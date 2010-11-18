@@ -1,0 +1,5 @@
+
+3#
+Check the boxes of the environments you want to install and click Next.
+
+Now, you have to configure the components you want to install. If you have chosen the custom configuration without all components, you will not see all windows described below. At first, configure the Content Management Environment.

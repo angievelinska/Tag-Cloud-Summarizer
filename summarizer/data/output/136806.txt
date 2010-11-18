@@ -1,0 +1,5 @@
+
+
+To circumvent some of the mentioned problems, you might want to use the feature to upload a jar together with a workflow definition. This separates the classes for each workflow definition. But when you update the jar for an existing workflow definition, the same problems occur as when loading the classes from the workflow servers classpath.
+
+Additionally, references from the classes inside the jar to classes outside of the jar are likely to cause problems. It might seem, that packaging all classes that are referenced by the customized workflow classes into one huge jar is a solution. But consequently, you would have to package the transitive closure of your workflow classes into that one jar. That may not be feasible. It's better to document the dependencies of the customized workflow classes and to keep care that they are always fulfilled when running the workflow server.

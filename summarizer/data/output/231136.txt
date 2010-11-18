@@ -1,0 +1,3 @@
+
+
+See also the "CoreMedia XML Importer" chapter of the Administration Manual for details of the JPEG Importer.

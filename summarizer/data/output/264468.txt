@@ -1,0 +1,16 @@
+
+
+Three roles are defined for the predefined workflows (see section for more information on these). For each role a respective group exists: 
+
+approver-role: A member of this group can approve resources in a change set. 
+composer-role: A member of this group can start a workflow and create a change set. 
+publisher-role: A member of this group can publish resources in a change set. 
+
+A user must be a member of these groups, so that he can execute the appropriate task. A user must also be a member of a group which has the appropriate rights on the resource which should be approved or published.  
+
+Example: If a user shall be able to approve a document A, he must be a member of two groups: 
+
+the approver-role group: in order to be able to accept the approve task in the workflow, and 
+a group which has APPROVE rights on the resource A. 
+
+It is possible to merge these two groups in one! 
