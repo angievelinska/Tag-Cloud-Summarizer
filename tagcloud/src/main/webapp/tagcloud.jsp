@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@ page import="org.mcavallo.opencloud.*" %>
 <%@ page import="java.util.*" %>
-<%@ page import="edu.tuhh.tagcloud.servlet.TagCloudServlet" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -45,7 +44,7 @@ Click on the "Clear" button to remove all tags in the cloud.
 	<input type="button" value="Clear Cloud" onclick="document.cloudform.command.value='CLEAR'; document.cloudform.submit();" />
 	</td>
 	<td align="right" valign="top">
-	<input type="button" value="Search" onclick="document.cloudform.command.value='SEARCH'; document.cloudform.submit();" />
+	<input type="button" value="Generate Cloud" onclick="document.cloudform.command.value='SEARCH'; document.cloudform.submit();" />
 	</td>
 	</tr>
 	</table>
@@ -57,8 +56,7 @@ Click on the "Clear" button to remove all tags in the cloud.
 <div class="tagcloud" style="margin: auto; width: 80%;">
 <%
 Cloud tagcloud = (Cloud)request.getAttribute("tagcloud");
-    
-// Gets output tags
+
 List<Tag> tags = tagcloud.tags();
 
 if (tags.size() > 0) {
@@ -73,6 +71,7 @@ if (tags.size() > 0) {
 <%
 }
 %>
+
 </div>
 </td>
 

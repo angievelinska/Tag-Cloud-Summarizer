@@ -1,21 +1,18 @@
 package edu.tuhh.tagcloud.cloud;
 
 import org.mcavallo.opencloud.Cloud;
+import org.mcavallo.opencloud.Tag;
+
+import java.util.List;
 
 /**
  * @author avelinsk
  */
 public class TagCloud {
-  public static Cloud cloud;
-  public static String text = "";
 
-  public TagCloud(){
-    cloud = new Cloud();
-    text = "";
-  }
-
-  public Cloud getTagCloud(String content, String command){
-    new TagCloud();
+  public List<Tag> getTagCloud(String content, String command){
+    String text;
+    Cloud cloud = new Cloud();
     // Sets the number of tag to display in the tagCloud
     cloud.setMaxTagsToDisplay(30);
 
@@ -26,18 +23,16 @@ public class TagCloud {
     // The format specifier %s will be substituted by the tag name
     cloud.setDefaultLink("https://documentation.coremedia.com/servlet/content/247402?language=en&include=false&version=5.2&book=%s");
 
-    if (content != null) {
-            text = content;
-    }
+    if (content != null) { text = content; }
+        else { text = "";  }
+
     if (command != null) {
-            if (command.equalsIgnoreCase("CLEAR")) {
-                    cloud.clear();
-            } else if (command.equalsIgnoreCase("SEARCH")) {
-                    cloud.addText(text);
-                    text = "";
-            }
+       if (command.equals("CLEAR")) { cloud.clear(); }
+          else if (command.equals("SEARCH")) {
+             cloud.addText(text);
+          }
     }
 
-    return cloud;
+    return cloud.tags();
   }
 }
