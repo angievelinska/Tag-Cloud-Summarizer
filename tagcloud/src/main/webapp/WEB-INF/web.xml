@@ -4,7 +4,7 @@
 
 <web-app>
   <display-name>Tag Cloud Summarizer</display-name>
-
+  
   <servlet>
     <servlet-name>tagcloud</servlet-name>
     <servlet-class>edu.tuhh.tagcloud.servlet.TagCloudServlet</servlet-class>
@@ -22,10 +22,28 @@
 
   <error-page>
     <exception-type>java.lang.Throwable</exception-type>
-    <location>/404.htm</location>
+    <location>/WEB-INF/404.htm</location>
   </error-page>
   <error-page>
     <error-code>404</error-code>
-    <location>/404.htm</location>
+    <location>/WEB-INF/404.htm</location>
   </error-page>
+
+  <taglib>
+    <taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+    <taglib-location>/WEB-INF/fmt.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+    <taglib-location>/WEB-INF/c.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
+    <taglib-location>/WEB-INF/sql.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
+    <taglib-location>/WEB-INF/x.tld</taglib-location>
+  </taglib>
+
 </web-app>        
