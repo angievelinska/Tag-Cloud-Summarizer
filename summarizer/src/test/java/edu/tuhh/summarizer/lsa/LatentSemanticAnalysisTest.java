@@ -32,7 +32,10 @@ public class LatentSemanticAnalysisTest {
     try{
 
       lsa = new LatentSemanticAnalysis();
+      System.out.println("documents: "+documents.size());
       for (int i = 0; i<documents.size(); i++){
+        
+        System.out.println(i);
         lsa.processDocument(documents.get(i).reader());
       }
 

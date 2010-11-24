@@ -57,7 +57,7 @@ public class Query {
   }
 
   /**
-   * TODO: ? should queries for documents query Sigma * V_t sspace
+   * queries for documents query Sigma * V_t sspace
    *
    * @param query
    * @param sspace

@@ -27,7 +27,7 @@ public class QueryTest {
   public void initializeTest(){
     try {
       query = new Query();
-      sspace = SemanticSpaceIO.load(new File("sspace/LSA.sspace"));
+      sspace = SemanticSpaceIO.load(new File("summarizer/data/sspace/LSA.sspace"));
       start = System.currentTimeMillis();
     } catch (IOException e) {
       e.printStackTrace();

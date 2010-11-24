@@ -36,9 +36,7 @@
         <updatePolicy>never</updatePolicy>
       </snapshots>
     </repository>
-
   </repositories>
-
 
   <dependencyManagement>
     <dependencies>
@@ -47,6 +45,7 @@
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>1.1</version>
+        <scope>provided</scope>
       </dependency>
 
       <!-- lsa -->
@@ -71,7 +70,7 @@
       </dependency>
 
       <!-- webapp -->
-      <dependency>
+<!--      <dependency>
         <groupId>javax.servlet.jsp</groupId>
         <artifactId>jsp-api</artifactId>
         <version>2.0</version>
@@ -81,10 +80,10 @@
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
         <version>2.4</version>
-      </dependency>
+      </dependency>-->
 
       <!-- testing -->
-      <dependency>
+<!--      <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>4.8.1</version>
@@ -93,15 +92,13 @@
         <groupId>httpunit</groupId>
         <artifactId>httpunit</artifactId>
         <version>1.6.2</version>
-      </dependency>
-
+      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
   <build>
     <pluginManagement>
       <plugins>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -123,7 +120,6 @@
           <artifactId>maven-jetty-plugin</artifactId>
           <version>6.1.22</version>
         </plugin>
-
       </plugins>
     </pluginManagement>
   </build>

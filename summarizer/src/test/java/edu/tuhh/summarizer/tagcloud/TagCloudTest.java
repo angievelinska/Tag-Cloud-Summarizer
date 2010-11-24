@@ -52,7 +52,7 @@ public class TagCloudTest {
 
     tc.generateCloud(5.0, 20, tags, 1.0);
     
-    File dir = new File("opencloud");
+    File dir = new File("summarizer/data/opencloud");
     if (!dir.exists()){
       Assert.assertTrue(dir.mkdir());
     }

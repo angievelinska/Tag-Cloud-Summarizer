@@ -22,9 +22,6 @@ public class SimilarityUtil {
    * cosim(a,b) = (a . b)/(||a||.||b||)
    */
   public static double getSimilarityBetweenVectors(double[] a, double[] b){
-
-    
-
     double dotProduct, fNorm;
     dotProduct =  SimilarityUtil.getDotProduct(a,b);
     fNorm = getFrobeniusNorm(a,b);
@@ -38,7 +35,6 @@ public class SimilarityUtil {
    * a.b = a1*b1 + a2*b2 + ... + am*bm
    */
   public static double getDotProduct(double[] a, double[] b){
-    
     int length = a.length;
     double sum = 0.0;
     if (length != b.length){

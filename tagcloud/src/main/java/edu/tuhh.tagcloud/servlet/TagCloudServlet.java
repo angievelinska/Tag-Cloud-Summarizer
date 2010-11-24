@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author avelinsk
  */
 public class TagCloudServlet extends HttpServlet {
-
+  
   public void doGet(HttpServletRequest requeset, HttpServletResponse response)
           throws IOException, ServletException {
   }

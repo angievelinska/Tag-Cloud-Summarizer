@@ -25,8 +25,8 @@ import java.util.Date;
 public class Indexer {
   private static final Log log = LogFactory.getLog(Indexer.class);
   private static IndexWriter writer;
-  private String INDEX_DIR = "index";
-  private String DATA_DIR = "output";
+  private String INDEX_DIR = "summarizer/data/index";
+  private String DATA_DIR = "summarizer/data/output";
 
   public Indexer(boolean index){
     if(index){

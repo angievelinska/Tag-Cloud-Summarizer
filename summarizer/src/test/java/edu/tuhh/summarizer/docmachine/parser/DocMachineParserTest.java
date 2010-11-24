@@ -24,8 +24,8 @@ public class DocMachineParserTest {
 
   @Test
   public void parseFilesTest(){
-    File dir = new File("output");
-    File outputFile = new File("input/input.txt");
+    File dir = new File("summarizer/data/output");
+    File outputFile = new File("summarizer/data/input/input.txt");
     docParser.parseFiles(dir, outputFile);
   }
 

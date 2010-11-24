@@ -45,7 +45,7 @@ public class LSAUtils {
 
   public static Matrix getU() {
     try{
-      U = MatrixIO.readMatrix(new File("sspace","matrix_U.txt"), MatrixIO.Format.DENSE_TEXT);
+      U = MatrixIO.readMatrix(new File("summarizer/data/sspace","matrix_U.txt"), MatrixIO.Format.DENSE_TEXT);
     } catch(IOException e){
       e.printStackTrace();
     }
@@ -55,7 +55,7 @@ public class LSAUtils {
 
   public static Matrix getV_t() {
     try{
-      V_t = MatrixIO.readMatrix(new File("sspace","matrix_Vt.txt"), MatrixIO.Format.DENSE_TEXT);
+      V_t = MatrixIO.readMatrix(new File("summarizer/data/sspace","matrix_Vt.txt"), MatrixIO.Format.DENSE_TEXT);
     } catch(IOException e){
       e.printStackTrace();
     }
@@ -65,7 +65,7 @@ public class LSAUtils {
 
   public static Matrix getS() {
     try{
-      S = MatrixIO.readMatrix(new File("sspace","matrix_S.txt"), MatrixIO.Format.DENSE_TEXT);
+      S = MatrixIO.readMatrix(new File("summarizer/data/sspace","matrix_S.txt"), MatrixIO.Format.DENSE_TEXT);
     } catch(IOException e){
       e.printStackTrace();
     }

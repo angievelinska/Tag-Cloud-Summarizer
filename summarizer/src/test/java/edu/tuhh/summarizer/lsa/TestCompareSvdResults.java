@@ -35,7 +35,7 @@ public class TestCompareSvdResults {
     algorithms.add(SVD.Algorithm.JAMA);
     algorithms.add(SVD.Algorithm.SVDLIBJ);
 
-    File dir  = new File("svd");
+    File dir  = new File("summarizer/data/svd");
 
     if(!dir.exists()){
       dir.mkdir();

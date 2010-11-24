@@ -24,10 +24,10 @@ public class LSATest {
     public void testLSA(){
       lsa.runLSA();
 
-      Assert.assertTrue((new File("sspace/LSA.sspace")).exists());
-      Assert.assertTrue((new File("sspace/matrix_S.txt")).exists());
-      Assert.assertTrue((new File("sspace/matrix_U.txt")).exists());
-      Assert.assertTrue((new File("sspace/matrix_V.txt")).exists());
+      Assert.assertTrue((new File("summarizer/data/sspace/LSA.sspace")).exists());
+      Assert.assertTrue((new File("summarizer/data/sspace/matrix_S.txt")).exists());
+      Assert.assertTrue((new File("summarizer/data/sspace/matrix_U.txt")).exists());
+      Assert.assertTrue((new File("summarizer/data/sspace/matrix_Vt.txt")).exists());
     }
 
 /*  @Test

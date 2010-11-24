@@ -1,10 +1,10 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
   <display-name>Tag Cloud Summarizer</display-name>
-  
+
   <servlet>
     <servlet-name>tagcloud</servlet-name>
     <servlet-class>edu.tuhh.tagcloud.servlet.TagCloudServlet</servlet-class>
@@ -22,28 +22,32 @@
 
   <error-page>
     <exception-type>java.lang.Throwable</exception-type>
-    <location>/WEB-INF/404.htm</location>
+    <location>/404.htm</location>
   </error-page>
   <error-page>
     <error-code>404</error-code>
-    <location>/WEB-INF/404.htm</location>
+    <location>/404.htm</location>
   </error-page>
 
   <taglib>
     <taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
-    <taglib-location>/WEB-INF/fmt.tld</taglib-location>
+    <taglib-location>/WEB-INF/taglib/fmt.tld</taglib-location>
   </taglib>
   <taglib>
     <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
-    <taglib-location>/WEB-INF/c.tld</taglib-location>
+    <taglib-location>/WEB-INF/taglib/c.tld</taglib-location>
   </taglib>
   <taglib>
     <taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
-    <taglib-location>/WEB-INF/sql.tld</taglib-location>
+    <taglib-location>/WEB-INF/taglib/sql.tld</taglib-location>
   </taglib>
   <taglib>
     <taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
-    <taglib-location>/WEB-INF/x.tld</taglib-location>
+    <taglib-location>/WEB-INF/taglib/x.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>http://java.sun.com/jstl/fn</taglib-uri>
+    <taglib-location>/WEB-INF/taglib/fn.tld</taglib-location>
   </taglib>
 
 </web-app>        

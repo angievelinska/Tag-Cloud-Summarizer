@@ -121,7 +121,7 @@ public class TagCloud {
 */
 
   public Cloud getTagCloud(){
-    File input = new File("input/input1.txt");
+    File input = new File("summarizer/data/input/input.dat");
     log.info("file exists");
     StringBuilder sb = new StringBuilder();
     Scanner scanner;

@@ -17,7 +17,7 @@ import java.util.List;
 public class ProcessDocuments extends AbstractDocuments{
   private final static org.apache.commons.logging.Log log =
           org.apache.commons.logging.LogFactory.getLog(ProcessDocuments.class);
-  private static final String path = "output/";
+  private static final String path = "summarizer/data/output/";
   private static final String extension = ".txt"; 
 
   
