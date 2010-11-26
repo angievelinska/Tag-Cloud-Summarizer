@@ -1,8 +1,7 @@
 package edu.tuhh.summarizer.docmachine;
 
 import com.coremedia.cap.content.Content;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,8 @@ import java.util.Set;
  * @author avelinsk
  */
 public abstract class AbstractDocuments {
-  private  final static Log log = LogFactory.getLog(AbstractDocuments.class);
+  //private  final static Log log = LogFactory.getLog(AbstractDocuments.class);
+  private static Logger log = Logger.getLogger(AbstractDocuments.class);
   private List<Content> books;
 
   /**

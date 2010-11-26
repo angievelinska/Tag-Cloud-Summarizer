@@ -1,19 +1,22 @@
 package edu.tuhh.summarizer.tagcloud;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
 /**
  * @author avelinsk
  */
 public class TagCloud {
   private Cloud cloud;
-  private static final Log log = LogFactory.getLog(TagCloud.class);
+  //private static final Log log = LogFactory.getLog(TagCloud.class);
+  private static Logger log = Logger.getLogger(TagCloud.class);
 
   public TagCloud(){
     cloud = new Cloud();

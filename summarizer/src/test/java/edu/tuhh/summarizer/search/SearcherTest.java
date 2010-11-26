@@ -5,9 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * User: ng
- * Date: 18.08.2010
- * Time: 11:15:31
+ * @author: avelinsk
  */
 public class SearcherTest {
     Searcher searcher;
@@ -19,9 +17,7 @@ public class SearcherTest {
 
     @Test
     public void testSearchDocuments() throws Exception {
-        String[] args = {"idx",
-                "content management server"};
-        searcher.searchDocuments(args);
+        searcher.search("summarizer/data/index","I you we shall win the contest");
     }
 
     @After

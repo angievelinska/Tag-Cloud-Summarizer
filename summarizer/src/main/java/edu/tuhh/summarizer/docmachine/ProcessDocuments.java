@@ -3,20 +3,18 @@ package edu.tuhh.summarizer.docmachine;
 import com.coremedia.cap.content.Content;
 import com.coremedia.xml.Markup;
 import com.coremedia.xml.PlaintextSerializer;
+import org.apache.log4j.Logger;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.StringWriter;
+import java.io.*;
 import java.util.List;
 
 /**
  * @author avelinsk
  */
 public class ProcessDocuments extends AbstractDocuments{
-  private final static org.apache.commons.logging.Log log =
-          org.apache.commons.logging.LogFactory.getLog(ProcessDocuments.class);
+  //private final static org.apache.commons.logging.Log log =
+  //        org.apache.commons.logging.LogFactory.getLog(ProcessDocuments.class);
+  private static Logger log = Logger.getLogger(ProcessDocuments.class);
   private static final String path = "summarizer/data/output/";
   private static final String extension = ".txt"; 
 

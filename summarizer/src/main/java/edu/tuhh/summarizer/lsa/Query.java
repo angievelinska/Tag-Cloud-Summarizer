@@ -1,16 +1,19 @@
 package edu.tuhh.summarizer.lsa;
 
-import edu.ucla.sspace.common.*;
+import edu.ucla.sspace.common.DocumentVectorBuilder;
+import edu.ucla.sspace.common.SemanticSpace;
+import edu.ucla.sspace.common.Similarity;
+import edu.ucla.sspace.common.WordComparator;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.util.MultiMap;
 import edu.ucla.sspace.vector.DenseVector;
 import edu.ucla.sspace.vector.DoubleVector;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +21,8 @@ import java.util.List;
  * @author avelinsk
  */
 public class Query {
-  private static final Log log = LogFactory.getLog(Query.class);
+  //private static final Log log = LogFactory.getLog(Query.class);
+  private static Logger log = Logger.getLogger(Query.class);
 
   private String query;
 
@@ -30,7 +34,7 @@ public class Query {
 
   private WordComparator wordCompare;
 
-  public Query(){
+  public Query() {
     sspace = LSAUtils.getSSpace();
 
     docBuilder = new DocumentVectorBuilder(sspace);
@@ -41,7 +45,7 @@ public class Query {
     queryVector = new DenseVector(sspace.getVectorLength());
   }
 
-  protected void setQuery(String query){
+  protected void setQuery(String query) {
     query = query;
   }
 
@@ -49,7 +53,7 @@ public class Query {
    * @param query
    * @return
    */
-  protected DoubleVector getQueryAsVector(String query){
+  protected DoubleVector getQueryAsVector(String query) {
 
     queryVector = docBuilder.buildVector(new BufferedReader(new StringReader(query)), queryVector);
 
@@ -64,28 +68,28 @@ public class Query {
    * @param noOfResults
    * @return
    */
-   public double computeCosineSimilarity(DoubleVector query, SemanticSpace sspace, int noOfResults) {
-     LatentSemanticAnalysis lsa_space = (LatentSemanticAnalysis) sspace;
-     double cosineSimilarity = 0.0;
-     int i = sspace.getVectorLength();
-     for (int j = 0; j < i; j++){
-       DoubleVector doc = lsa_space.getDocumentVector(j);
-       double similarity = Similarity.cosineSimilarity(doc, query);
-       
-     }
+  public double computeCosineSimilarity(DoubleVector query, SemanticSpace sspace, int noOfResults) {
+    LatentSemanticAnalysis lsa_space = (LatentSemanticAnalysis) sspace;
+    double cosineSimilarity = 0.0;
+    int i = sspace.getVectorLength();
+    for (int j = 0; j < i; j++) {
+      DoubleVector doc = lsa_space.getDocumentVector(j);
+      double similarity = Similarity.cosineSimilarity(doc, query);
 
-     return cosineSimilarity;
-    }    
+    }
+
+    return cosineSimilarity;
+  }
 
 
-  protected DoubleVector getQueryMappedToSSpace(DoubleVector query){
+  protected DoubleVector getQueryMappedToSSpace(DoubleVector query) {
     List<DoubleVector> q = new ArrayList<DoubleVector>();
     q.add(query);
     Matrix m_query = Matrices.asMatrix(q);
-    Matrix q_U = Matrices.multiply(m_query,LSAUtils.getU());
+    Matrix q_U = Matrices.multiply(m_query, LSAUtils.getU());
     Matrix q_vector = Matrices.multiply(q_U, LSAUtils.getSInverse());
 
-    if (q_vector.columns() > 1){
+    if (q_vector.columns() > 1) {
       return query;
     }
     q_vector.getColumnVector(0);
@@ -93,18 +97,18 @@ public class Query {
 
     return query;
   }
-  
-  protected MultiMap getSimilarWords(SemanticSpace sspace, String word, int maxResult){
-    MultiMap results = wordCompare.getMostSimilar(word,sspace,maxResult, Similarity.SimType.COSINE);
+
+  protected MultiMap getSimilarWords(SemanticSpace sspace, String word, int maxResult) {
+    MultiMap results = wordCompare.getMostSimilar(word, sspace, maxResult, Similarity.SimType.COSINE);
     return results;
   }
 
-  protected DoubleVector getDocument(SemanticSpace sspace, int idx ){
-    return ((LatentSemanticAnalysis)sspace).getDocumentVector(idx);
+  protected DoubleVector getDocument(SemanticSpace sspace, int idx) {
+    return ((LatentSemanticAnalysis) sspace).getDocumentVector(idx);
   }
 
-  protected DoubleVector getWord(SemanticSpace space, String word){
-    return (DoubleVector) ((LatentSemanticAnalysis)sspace).getVector(word);
+  protected DoubleVector getWord(SemanticSpace space, String word) {
+    return (DoubleVector) ((LatentSemanticAnalysis) sspace).getVector(word);
   }
 
 }

@@ -2,14 +2,14 @@ package edu.tuhh.summarizer.lsa;
 
 import edu.ucla.sspace.common.Similarity;
 import edu.ucla.sspace.vector.DoubleVector;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 
 /**
  * @author avelinsk
  */
 public class SimilarityUtil {
-  private static final Log log = LogFactory.getLog(SimilarityUtil.class);
+  //private static final Log log = LogFactory.getLog(SimilarityUtil.class);
+  private static Logger log = Logger.getLogger(SimilarityUtil.class);
 
   public static double getSimilarity(DoubleVector vect1, DoubleVector vect2){
     return Similarity.getSimilarity(Similarity.SimType.COSINE, vect1, vect2);

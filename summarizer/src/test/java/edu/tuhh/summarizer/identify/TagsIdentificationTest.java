@@ -34,7 +34,7 @@ public class TagsIdentificationTest {
     Map<Double, Document> result = tid.sortMap(test);
 
     for (Map.Entry entry : result.entrySet()){
-      System.out.println((Double) entry.getKey() + " " + ((Document)entry.getValue()).getId());
+      System.out.println(entry.getKey() + " " + ((Document)entry.getValue()).getId());
     }
   }
 

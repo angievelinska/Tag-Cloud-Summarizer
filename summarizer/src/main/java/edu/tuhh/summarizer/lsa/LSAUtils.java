@@ -35,7 +35,7 @@ public class LSAUtils {
 
   public static SemanticSpace getSSpace() {
     try{
-      sspace = SemanticSpaceIO.load("sspace/LSA.sspace");
+      sspace = SemanticSpaceIO.load("summarizer/data/sspace/LSA.sspace");
     } catch(IOException e){
       e.printStackTrace();
     }

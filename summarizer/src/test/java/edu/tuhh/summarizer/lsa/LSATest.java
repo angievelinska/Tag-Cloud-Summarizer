@@ -8,9 +8,7 @@ import org.junit.Test;
 import java.io.File;
 
 /**
- * User: ng
- * Date: 19.08.2010
- * Time: 23:05:27
+ * @author: avelinsk
  */
 public class LSATest {
     LSA lsa;

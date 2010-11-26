@@ -12,8 +12,7 @@ import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
 import edu.ucla.sspace.vector.DoubleVector;
 import edu.ucla.sspace.vector.Vectors;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,8 +27,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * TODO: refactor
  */
 public class LSA {
-  private final static Log log = LogFactory.getLog(LSA.class);
- // public LatentSemanticAnalysis sspace = null;
+  //private final static Log log = LogFactory.getLog(LSA.class);
+  private static Logger log  = Logger.getLogger(LSA.class);
   /**
    * TODO: parameterize the number of threads, more threads, faster app
    *
@@ -157,34 +156,21 @@ public class LSA {
       i++;
     }
 
-/*    try {
-      PrintWriter pw = new PrintWriter(new File("summarizer/data/sspace/words.dat"));
-      for (int j=0; j<words.length;j++){
-        pw.write(words[j]);
-        pw.println();
-      }
-      log.info("words printed to file words.dat");
-      //pw.write(words.toString());
-      pw.close();
-    } catch (IOException e){
-      e.printStackTrace();
-    }*/
-
     Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
     //MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_SPARSE_TEXT;
-    MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_DENSE_TEXT;
-    File outputMatrix = new File("summarizer/data/sspace/matrix.dat");
+    //MatrixIO.Format fmt = MatrixIO.Format.SVDLIBC_DENSE_TEXT;
+    //File outputMatrix = new File("summarizer/data/sspace/matrix.dat");
 
-    try {
-      outputMatrix.createNewFile();
-      MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
+//    try {
+      //outputMatrix.createNewFile();
+      //MatrixIO.writeMatrix(matrix, outputMatrix, fmt);
       Matrix[] matricesReduced = SVD.svd(matrix,SVD.Algorithm.SVDLIBJ,90);
       //Matrix[] matricesReduced = SVD.svd(outputMatrix,SVD.Algorithm.JAMA, MatrixIO.Format.SVDLIBC_DENSE_TEXT,120);
       saveMatrices(matricesReduced);
-    }
-    catch (IOException e) {
-      e.printStackTrace();
-    }
+//    }
+//    catch (IOException e) {
+//      e.printStackTrace();
+//    }
   }
 
   

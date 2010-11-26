@@ -1,8 +1,6 @@
 package edu.tuhh.summarizer.search;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
+import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexWriter;
@@ -22,11 +20,15 @@ import java.util.List;
  * @author avelinsk
  */
 public class Searcher {
-  private static final Log log = LogFactory.getLog(Searcher.class);
+  //private static final Log log = LogFactory.getLog(Searcher.class);
+  private static Logger log = Logger.getLogger(Searcher.class);
   private Directory directory;
+  private String sw = "summarizer/data/stopwords/english-stop-words-large.txt";
+  private File stopwords;
 
   protected void setup(String idxDir) {
     try{
+      stopwords = new File(sw);
       directory = FSDirectory.open(new File(idxDir));
     } catch(IOException e){
       e.printStackTrace();
@@ -35,42 +37,40 @@ public class Searcher {
 
   private IndexWriter getWriter(){
     IndexWriter idxWriter = null;
+
     try{
-      idxWriter = new IndexWriter(directory, new WhitespaceAnalyzer(),IndexWriter.MaxFieldLength.UNLIMITED);
+      StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_29, stopwords);
+      idxWriter = new IndexWriter(directory, analyzer,IndexWriter.MaxFieldLength.UNLIMITED);
     } catch (IOException e){
       e.printStackTrace();
     }
     return idxWriter;
   }
 
-  public void searchDocuments(String[] args) throws IOException, ParseException {
-      if (args.length != 2) {
-          throw new IllegalArgumentException("Usage "+Searcher.class.getName()+" <index dir> <query>") ;
-      }
-      String indexDir = args[0];
-      String query = args[1];
-
-      search(indexDir,query);
-  }
-
   public void search(String idxDir, String query){
     setup(idxDir);
-    IndexSearcher idxSearch;
+    IndexSearcher searcher;
 
     try{
-      idxSearch = new IndexSearcher(directory);
-      QueryParser parser = new QueryParser(Version.LUCENE_30, "contents", new StandardAnalyzer(Version.LUCENE_30));
+      searcher = new IndexSearcher(directory);
+      QueryParser parser = new QueryParser(Version.LUCENE_29, "contents",
+                                    new StandardAnalyzer(Version.LUCENE_29, stopwords));
       Query q = parser.parse(query);
-      long start = System.currentTimeMillis();
-      TopDocs hits = idxSearch.search(q,5);
-      long end = System.currentTimeMillis();
+      TopDocs hits = searcher.search(q,10);
 
-      log.info("Found "+hits.totalHits+" document(s) in "+(end-start)+" milliseconds that match query "+q+": ");
-      for(ScoreDoc scoreDoc: hits.scoreDocs){
-          Document doc = idxSearch.doc(scoreDoc.doc);
-          log.info(doc.get("fullpath"));
+      log.info("Found "+hits.totalHits+" document(s): ");
+      ScoreDoc[] docs = hits.scoreDocs;
+      for (int i=0; i<docs.length; i++){
+        int docId = docs[i].doc;
+        Document doc = searcher.doc(docId);
+        log.info("Document "+docId+" : "+doc.get("contents"));
       }
-      idxSearch.close();
+
+      for(ScoreDoc scoreDoc: hits.scoreDocs){
+          Document doc = searcher.doc(scoreDoc.doc);
+          log.info(doc.get("path"));
+      }
+      searcher.close();
       
     } catch(IOException e){
       e.printStackTrace();

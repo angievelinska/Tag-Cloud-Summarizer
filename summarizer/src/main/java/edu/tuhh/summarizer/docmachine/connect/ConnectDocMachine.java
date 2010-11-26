@@ -8,6 +8,7 @@ import com.coremedia.cap.common.ServiceUnavailableException;
 import com.coremedia.cap.content.Content;
 import com.coremedia.cap.content.ContentRepository;
 import com.coremedia.cap.content.ContentType;
+import org.apache.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,8 +23,9 @@ public class ConnectDocMachine {
     private ContentRepository repository;
     private Content root;
     private ContentType folderType;
-    private final static org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(ConnectDocMachine.class);
-   
+    //private final static org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(ConnectDocMachine.class);
+    private static Logger log = Logger.getLogger(ConnectDocMachine.class);
+
     private void initParams(){
         this.username = "admin";
         this.password = "admin";

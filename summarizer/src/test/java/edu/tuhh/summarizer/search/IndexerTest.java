@@ -1,18 +1,27 @@
 package edu.tuhh.summarizer.search;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Created by IntelliJ IDEA.
- * User: ng
- * Date: 17.08.2010
- * Time: 22:15:52
+ * @author: avelinsk
  */
 public class IndexerTest {
+  Indexer indexer;
 
-    @Test
-    public void testIndexDocuments() throws Exception {
-        String[]dirs = {"index","output"};
-        Indexer.indexDocuments(dirs);
-    }
+  @Before
+  public void setup() {
+    indexer = new Indexer(true);
+  }
+
+  @Test
+  public void testIndexDocuments() throws Exception {
+    indexer.initializeIndex("summarizer/data/index", "summarizer/data/output");
+  }
+
+  @After
+  public void teardown(){
+    indexer = null;
+  }
 }
