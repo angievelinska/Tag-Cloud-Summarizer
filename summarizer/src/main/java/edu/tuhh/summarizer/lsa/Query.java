@@ -10,7 +10,6 @@ import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.util.MultiMap;
 import edu.ucla.sspace.vector.DenseVector;
 import edu.ucla.sspace.vector.DoubleVector;
-import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
@@ -21,11 +20,6 @@ import java.util.List;
  * @author avelinsk
  */
 public class Query {
-  //private static final Log log = LogFactory.getLog(Query.class);
-  private static Logger log = Logger.getLogger(Query.class);
-
-  private String query;
-
   private SemanticSpace sspace;
 
   private DoubleVector queryVector;
@@ -39,7 +33,6 @@ public class Query {
 
     docBuilder = new DocumentVectorBuilder(sspace);
 
-    // TODO: implement to run with more threads
     wordCompare = new WordComparator();
 
     queryVector = new DenseVector(sspace.getVectorLength());

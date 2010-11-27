@@ -19,22 +19,23 @@ import java.util.Date;
 
 /**
  * @author avelinsk
- */                            
+ */
 public class Indexer {
-  //private static final Log log = LogFactory.getLog(Indexer.class);
   private static Logger log = Logger.getLogger(Indexer.class);
-  private static IndexWriter writer;
-  private String INDEX_DIR = "summarizer/data/index";
-  private String DATA_DIR = "summarizer/data/output";
-  private static int mergeFactor = 10;
-  private static int minMergeDocs = 10;
-  private static int maxMergeDocs = Integer.MAX_VALUE;
+  private final static String INDEX_DIR = "summarizer/data/index";
+  private final static String DATA_DIR = "summarizer/data/output";
+  private final static String STOPWORDS = "summarizer/data/stopwords/english-stop-words-large.txt";
+  private final static int mergeFactor = 10;
+  private final static int minMergeDocs = 10;
+  private final static int maxMergeDocs = Integer.MAX_VALUE;
+
 
   public Indexer(boolean index) {
     if (index) {
       initializeIndex(INDEX_DIR, DATA_DIR);
     }
   }
+
 
   protected void initializeIndex(String index_dir, String data_dir) {
     File index = new File(index_dir);
@@ -46,7 +47,7 @@ public class Indexer {
       long end = new Date().getTime();
       log.info("Indexing " + numIndexed + " files took " + (end - start) + " ms.");
     } catch (IOException e) {
-      log.error("Unable to index " + index + ": " + e.getMessage());
+      log.error("Unable to index " + index + " :\n" + e.getMessage());
     }
   }
 
@@ -57,9 +58,9 @@ public class Indexer {
               + " does not exist or is not a directory. Aborting...");
     }
     Directory dir = FSDirectory.open(indexDir);
-    File stopwords = new File("summarizer/data/stopwords/english-stop-words-large.txt");
-    writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_29, stopwords), true,
-                              IndexWriter.MaxFieldLength.UNLIMITED);
+    File stopwords = new File(STOPWORDS);
+    IndexWriter writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_29, stopwords),
+            true, IndexWriter.MaxFieldLength.UNLIMITED);
     writer.setUseCompoundFile(true);
 
     indexDirectory(writer, dataDir);
@@ -70,14 +71,9 @@ public class Indexer {
     return numIndexed;
   }
 
-  /*
-  * recursive method that calls itself when it finds a directory, or indexes if
-  * it is at a file ending in ".txt"
-  */
 
   private static void indexDirectory(IndexWriter writer, File dir)
           throws IOException {
-
     File[] files = dir.listFiles();
 
     for (int i = 0; i < files.length; i++) {
@@ -90,29 +86,22 @@ public class Indexer {
     }
   }
 
-  /*
-  * method to actually index a file using Lucene, adds a document
-  * onto the index writer
-  */
 
   private static void indexFile(IndexWriter writer, File f)
           throws IOException {
-
     if (f.isHidden() || !f.exists() || !f.canRead()) {
       System.err.println("Could not write " + f.getName());
       return;
     }
-
     System.err.println("Indexing " + f.getCanonicalPath());
 
     Document doc = new Document();
-
     doc.add(new Field("path", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
     doc.add(new Field("modified", DateTools.timeToString(f.lastModified(), DateTools.Resolution.MINUTE), Field.Store.YES, Field.Index.NOT_ANALYZED));
     doc.add(new Field("contents", new FileReader(f), Field.TermVector.YES));
-
     writer.addDocument(doc);
   }
+
 
   private static int hitCount(IndexSearcher searcher, Query query) {
     int hits = 0;
@@ -121,81 +110,8 @@ public class Indexer {
     } catch (IOException e) {
       e.printStackTrace();
     }
+
     return hits;
   }
-
-
-  /**
-   * ************** old code below *************************************************************
-   */
-/*
-  public static void indexDocuments(String[] args) throws Exception {
-    if (args.length != 2) {
-      throw new IllegalArgumentException("Usage: java " + Indexer.class.getName() + " <index dir> <data dir>");
-    }
-
-    String indexDir = args[0];
-    String dataDir = args[1];
-    long startTime = System.currentTimeMillis();
-
-    Indexer indexer = new Indexer(indexDir);
-    int noIndexed;
-
-    try {
-      noIndexed = indexer.index(dataDir, new TextFilesFilter());
-    } finally {
-      indexer.close();
-    }
-    long endTime = System.currentTimeMillis();
-
-    log.info("Indexing " + noIndexed + " took " + (endTime - startTime) + " milliseconds");
-  }
-
-  public Indexer(String indexDir) throws IOException {
-    Directory dir = FSDirectory.open(new File(indexDir));
-    File stopwords = new File("summarizer/data/stopwords/english-stop-words-large.txt");
-    StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_29, stopwords);
-    writer = new IndexWriter(dir, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
-  }
-
-  public void close() throws IOException {
-    writer.close();
-  }
-
-  public int index(String dataPath, FileFilter filter) throws Exception {
-    File[] files = new File(dataPath).listFiles();
-    for (File f : files) {
-      if (!f.isDirectory()
-              && !f.isHidden()
-              && f.exists()
-              && f.canRead()
-              && (filter == null || filter.accept(f))) {
-        indexFile(f);
-      }
-    }
-
-    return writer.numDocs();
-  }
-
-  protected Document indexDocument(File f) throws Exception {
-    Document doc = new Document();
-    doc.add(new Field("contents", new FileReader(f), Field.TermVector.WITH_POSITIONS));
-    doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-    doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-    return doc;
-  }
-
-  private static class TextFilesFilter implements FileFilter {
-    public boolean accept(File path) {
-      return path.getName().toLowerCase().endsWith(".html");
-    }
-  }
-
-  private void indexFile(File f) throws Exception {
-    log.info("Indexing " + f.getCanonicalPath());
-    Document doc = indexDocument(f);
-    writer.addDocument(doc);
-  }
-*/
 
 }

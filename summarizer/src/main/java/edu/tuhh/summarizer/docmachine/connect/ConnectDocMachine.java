@@ -23,7 +23,6 @@ public class ConnectDocMachine {
     private ContentRepository repository;
     private Content root;
     private ContentType folderType;
-    //private final static org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(ConnectDocMachine.class);
     private static Logger log = Logger.getLogger(ConnectDocMachine.class);
 
     private void initParams(){

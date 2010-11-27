@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
  *
  */
 public class CountDocuments extends AbstractDocuments {
-  //private final static org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(CountDocuments.class);
   private static Logger log = Logger.getLogger(CountDocuments.class);
   private int counter = 0;
 

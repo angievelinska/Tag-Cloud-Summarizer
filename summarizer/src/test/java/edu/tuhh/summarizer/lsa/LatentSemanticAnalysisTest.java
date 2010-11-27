@@ -65,7 +65,7 @@ public class LatentSemanticAnalysisTest {
     }
 
 
-    File sspace = new File("lsa.sspace");
+    File sspace = new File("LSA.sspace");
     try{
       sspace.createNewFile();
       SemanticSpaceIO.save(lsa, sspace );

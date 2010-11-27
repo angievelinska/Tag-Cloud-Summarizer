@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
  * @author avelinsk
  */
 public class SimilarityUtil {
-  //private static final Log log = LogFactory.getLog(SimilarityUtil.class);
   private static Logger log = Logger.getLogger(SimilarityUtil.class);
 
   public static double getSimilarity(DoubleVector vect1, DoubleVector vect2){

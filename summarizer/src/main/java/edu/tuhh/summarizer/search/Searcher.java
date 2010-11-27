@@ -20,124 +20,75 @@ import java.util.List;
  * @author avelinsk
  */
 public class Searcher {
-  //private static final Log log = LogFactory.getLog(Searcher.class);
   private static Logger log = Logger.getLogger(Searcher.class);
   private Directory directory;
-  private String sw = "summarizer/data/stopwords/english-stop-words-large.txt";
-  private File stopwords;
+  private static File stopwords;
+  private static final int MAXRESULTS = 20;
+  private final static String STOPWORDS = "summarizer/data/stopwords/english-stop-words-large.txt";
 
-  protected void setup(String idxDir) {
-    try{
-      stopwords = new File(sw);
-      directory = FSDirectory.open(new File(idxDir));
-    } catch(IOException e){
+  protected void setup(String indexDir) {
+    try {
+      stopwords = new File(STOPWORDS);
+      directory = FSDirectory.open(new File(indexDir));
+    } catch (IOException e) {
       e.printStackTrace();
     }
   }
 
-  private IndexWriter getWriter(){
-    IndexWriter idxWriter = null;
+  private IndexWriter getWriter() {
+    IndexWriter writer = null;
 
-    try{
+    try {
       StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_29, stopwords);
-      idxWriter = new IndexWriter(directory, analyzer,IndexWriter.MaxFieldLength.UNLIMITED);
-    } catch (IOException e){
+      writer = new IndexWriter(directory, analyzer, IndexWriter.MaxFieldLength.UNLIMITED);
+    } catch (IOException e) {
       e.printStackTrace();
     }
-    return idxWriter;
+
+    return writer;
   }
 
-  public void search(String idxDir, String query){
-    setup(idxDir);
+  public void search(String indexDir, String query) {
+    setup(indexDir);
     IndexSearcher searcher;
 
-    try{
+    try {
       searcher = new IndexSearcher(directory);
       QueryParser parser = new QueryParser(Version.LUCENE_29, "contents",
-                                    new StandardAnalyzer(Version.LUCENE_29, stopwords));
+              new StandardAnalyzer(Version.LUCENE_29, stopwords));
       Query q = parser.parse(query);
-      TopDocs hits = searcher.search(q,10);
+      TopDocs hits = searcher.search(q, MAXRESULTS);
 
-      log.info("Found "+hits.totalHits+" document(s): ");
+      log.info("Found " + hits.totalHits + " document(s): ");
       ScoreDoc[] docs = hits.scoreDocs;
-      for (int i=0; i<docs.length; i++){
-        int docId = docs[i].doc;
+      for (ScoreDoc scoreDoc : docs) {
+        int docId = scoreDoc.doc;
         Document doc = searcher.doc(docId);
-        log.info("Document "+docId+" : "+doc.get("contents"));
+        log.info("Document " + docId + ": " + doc.get("path"));
       }
 
-      for(ScoreDoc scoreDoc: hits.scoreDocs){
-          Document doc = searcher.doc(scoreDoc.doc);
-          log.info(doc.get("path"));
-      }
       searcher.close();
-      
-    } catch(IOException e){
+    } catch (IOException e) {
       e.printStackTrace();
-    } catch(ParseException pe){
+    } catch (ParseException pe) {
       pe.printStackTrace();
     }
 
   }
 
-  public int getHitCount(String fieldName, String searchString){
-    IndexSearcher idxSearch = null;
-    int hitCount = 0;
-    try{
-      idxSearch = new IndexSearcher(directory);
-      Term t = new Term(fieldName, searchString);
-      Query q = new TermQuery(t);
-      hitCount = Searcher.hitCount(idxSearch, q);
-      idxSearch.close();
-    } catch(IOException e){
-      e.printStackTrace();
-    }
-    return hitCount;
-  }
 
-  public static int hitCount(IndexSearcher searcher, Query query){
-    int hits = 0;
-    try{
-       hits = searcher.search(query,1).totalHits;
-     } catch (IOException e){
-       e.printStackTrace();
-     }
-    return hits;
-  }
-
-  protected void deleteDocuments(List<String> docIdsToDelete){
-    try{
+  protected void deleteDocuments(List<String> docIdsToDelete) {
+    try {
       IndexWriter writer = getWriter();
-      for (String s : docIdsToDelete){
-        writer.deleteDocuments(new Term("id",s));
+      for (String s : docIdsToDelete) {
+        writer.deleteDocuments(new Term("id", s));
       }
       writer.optimize();
       writer.commit();
       writer.close();
-    } catch(IOException e){
+    } catch (IOException e) {
       e.printStackTrace();
     }
-  }
-
-  /**
-   * Replaces the document at index idx with the parameter doc
-   */
-  protected void updateDocument(String idx, Document doc){
-    IndexWriter writer = getWriter();
-    //TODO: add the document to the index
-    
-    try {
-      writer.updateDocument(new Term("id", idx), doc);
-    } catch(IOException e){
-      e.printStackTrace();
-    }
-  }
-
-  /**
-   * Get documents "like" the given one using term frequency vectors
-   */
-  protected void getSimilar(Document doc){
-    
   }
 
 }

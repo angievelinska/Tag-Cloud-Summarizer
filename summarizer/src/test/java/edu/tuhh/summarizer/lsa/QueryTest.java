@@ -1,5 +1,6 @@
 package edu.tuhh.summarizer.lsa;
 
+import edu.tuhh.summarizer.common.PropertiesLoader;
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.util.MultiMap;
@@ -12,6 +13,7 @@ import org.junit.Test;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * @author avelinsk
@@ -26,8 +28,10 @@ public class QueryTest {
   @Before
   public void initializeTest(){
     try {
+      Properties props = PropertiesLoader.loadProperties();
+      String SSPACE = props.getProperty("SSPACE");
       query = new Query();
-      sspace = SemanticSpaceIO.load(new File("summarizer/data/sspace/LSA.sspace"));
+      sspace = SemanticSpaceIO.load(new File(SSPACE));
       start = System.currentTimeMillis();
     } catch (IOException e) {
       e.printStackTrace();
@@ -82,6 +86,5 @@ public class QueryTest {
     System.out.print("query took: "+(end-start)+" ms.");
     
   }
-
 
 }

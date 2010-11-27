@@ -12,7 +12,6 @@ import java.util.Set;
  * @author avelinsk
  */
 public abstract class AbstractDocuments {
-  //private  final static Log log = LogFactory.getLog(AbstractDocuments.class);
   private static Logger log = Logger.getLogger(AbstractDocuments.class);
   private List<Content> books;
 

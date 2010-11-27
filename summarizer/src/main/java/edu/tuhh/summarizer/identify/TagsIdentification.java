@@ -16,8 +16,6 @@ import java.util.*;
  * by Stein and Meyer zu Eissen:
  * http://i-know.tugraz.at/wp-content/uploads/2008/11/40_topic-identification.pdf
  *
- * TODO: test it
- *
  * @author avelinsk
  */
 public class TagsIdentification {
