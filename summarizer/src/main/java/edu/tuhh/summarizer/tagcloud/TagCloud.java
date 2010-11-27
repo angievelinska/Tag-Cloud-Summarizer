@@ -3,63 +3,77 @@ package edu.tuhh.summarizer.tagcloud;
 import org.apache.log4j.Logger;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
+import org.mcavallo.opencloud.filters.DictionaryFilter;
+import org.mcavallo.opencloud.filters.Filter;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author avelinsk
  */
 public class TagCloud {
   private Cloud cloud;
-  //private static final Log log = LogFactory.getLog(TagCloud.class);
+  private DictionaryFilter blacklist;
   private static Logger log = Logger.getLogger(TagCloud.class);
+  private final static String STOPWORD = "summarizer/data/stopwords/english-stop-words-large.txt";
+  private static final String DEFAULT_LINK="File:////D:/tuhh/ss10/master thesis_coremedia/projects/Tag-Cloud-Summarizer/summarizer/data/output";
 
-  public TagCloud(){
+  public TagCloud() {
     cloud = new Cloud();
   }
 
 
-  protected TagCloud(double weight, int maxTags){
+  protected TagCloud(double weight, int maxTags) {
     super();
     cloud = new Cloud();
     cloud.setMaxWeight(weight);
     cloud.setMaxTagsToDisplay(maxTags);
-  }
-  
-
-  public Cloud generateCloud(double maxWeight, int maxTags, Map<String,Double> tags, double threshold){
-    new TagCloud(maxWeight,maxTags);
-    populateCloud(tags);
-    orderCloud(threshold);
-    return cloud;
+    cloud.addInputFilter(getStopWords());
+    cloud.addOutputFilter(getStopWords());
+    cloud.setDefaultLink(DEFAULT_LINK);
   }
 
-  public Cloud generateCloud(double maxWeight, int maxTags, List<String> words, double threshold){
-    TagCloud tc = new TagCloud(maxWeight,maxTags);
-    populateCloud(words);
-    orderCloud(threshold);
-    return cloud;
+  protected Filter<Tag> getStopWords() {
+    Filter<Tag> stopwords = null;
+    try {
+      FileReader reader = new FileReader(new File(STOPWORD));
+      stopwords = new DictionaryFilter(reader);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return stopwords;
+  }
+
+  public Cloud generateCloud(double maxWeight, int maxTags, Map<String, Double> tags, double threshold) {
+    TagCloud tc = new TagCloud(maxWeight, maxTags);
+    tc.populateCloud(tags);
+    tc.orderCloud(threshold);
+    return tc.cloud;
+  }
+
+  public Cloud generateCloud(double maxWeight, int maxTags, List<String> words, double threshold) {
+    TagCloud tc = new TagCloud(maxWeight, maxTags);
+    tc.populateCloud(words);
+    tc.orderCloud(threshold);
+    return tc.cloud;
   }
 
 
-  private void populateCloud(List<String> words){
-     //List<Tag> tags = new ArrayList<Tag>();
-     for (String t : words){
-       Tag tag = new Tag(t);
-       cloud.addTag(tag);
-     }
-   // cloud.addTags(tags);
+  private void populateCloud(List<String> words) {
+    //List<Tag> tags = new ArrayList<Tag>();
+    for (String t : words) {
+      Tag tag = new Tag(t);
+      cloud.addTag(tag);
+    }
+    // cloud.addTags(tags);
   }
 
   @SuppressWarnings("unchecked")
-  private void populateCloud(Map<String, Double> tags){
+  private void populateCloud(Map<String, Double> tags) {
     double weight;
     for (Object o : tags.entrySet()) {
-      Map.Entry<String,Double> entry = (Map.Entry<String,Double>) o;
+      Map.Entry<String, Double> entry = (Map.Entry<String, Double>) o;
       String word = entry.getKey();
       weight = entry.getValue();
       Tag tag = new Tag(word, weight);
@@ -68,16 +82,16 @@ public class TagCloud {
   }
 
 
-  protected void orderCloud(double threshold){
+  protected void orderCloud(double threshold) {
     cloud.tags(new Tag.ScoreComparatorDesc());
     cloud.setThreshold(threshold);
   }
 
 
-  protected void serializeCloud(File file){
+  protected void serializeCloud(File file) {
     FileOutputStream fos;
     ObjectOutputStream oos = null;
-    try{
+    try {
       fos = new FileOutputStream(file);
       oos = new ObjectOutputStream(fos);
       oos.writeObject(cloud);
@@ -88,7 +102,7 @@ public class TagCloud {
       e.printStackTrace();
     }
   }
-  
+
 
   protected Cloud deserializeCloud(File file) {
     Cloud cloud = null;
@@ -123,28 +137,27 @@ public class TagCloud {
   }
 */
 
-  public Cloud getTagCloud(){
+  public Cloud getExampleCloud() {
     File input = new File("summarizer/data/input/input.dat");
-    log.info("file exists");
     StringBuilder sb = new StringBuilder();
     Scanner scanner;
 
-    try{
+    try {
       scanner = new Scanner(input);
-      while(scanner.hasNext()){
+      while (scanner.hasNext()) {
         sb.append(scanner.nextLine());
 
       }
-    }catch(FileNotFoundException e){
+    } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
 
     log.info(sb.toString());
-    
+
     String[] words = sb.toString().split("\\s+");
     List<String> tags = Arrays.asList(words);
 
-    return generateCloud(40,20,tags,10.0);
+    return generateCloud(40, 20, tags, 10.0);
   }
 
 }
