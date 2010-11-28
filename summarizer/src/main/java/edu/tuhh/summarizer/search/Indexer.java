@@ -1,5 +1,6 @@
 package edu.tuhh.summarizer.search;
 
+import edu.tuhh.summarizer.common.PropertiesLoader;
 import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.DateTools;
@@ -16,24 +17,20 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Properties;
 
 /**
  * @author avelinsk
  */
 public class Indexer {
   private static Logger log = Logger.getLogger(Indexer.class);
-  private final static String INDEX_DIR = "summarizer/data/index";
-  private final static String DATA_DIR = "summarizer/data/output";
-  private final static String STOPWORDS = "summarizer/data/stopwords/english-stop-words-large.txt";
-  private final static int mergeFactor = 10;
-  private final static int minMergeDocs = 10;
-  private final static int maxMergeDocs = Integer.MAX_VALUE;
+  private Properties props;
 
-
-  public Indexer(boolean index) {
-    if (index) {
-      initializeIndex(INDEX_DIR, DATA_DIR);
-    }
+  public Indexer() {
+    props = PropertiesLoader.loadProperties();
+    String INDEX_DIR = props.getProperty("INDEX_DIR");
+    String DATA_DIR = props.getProperty("DATA_DIR");
+    initializeIndex(INDEX_DIR, DATA_DIR);
   }
 
 
@@ -52,7 +49,8 @@ public class Indexer {
   }
 
 
-  private static int index(File indexDir, File dataDir) throws IOException {
+  private int index(File indexDir, File dataDir) throws IOException {
+    String STOPWORDS = props.getProperty("STOPWORDS");
     if (!dataDir.exists() || !dataDir.isDirectory()) {
       throw new IOException(dataDir
               + " does not exist or is not a directory. Aborting...");
@@ -97,7 +95,9 @@ public class Indexer {
 
     Document doc = new Document();
     doc.add(new Field("path", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-    doc.add(new Field("modified", DateTools.timeToString(f.lastModified(), DateTools.Resolution.MINUTE), Field.Store.YES, Field.Index.NOT_ANALYZED));
+    doc.add(new Field("modified", DateTools.timeToString(f.lastModified(), DateTools.Resolution.MINUTE),
+            Field.Store.YES, Field.Index.NOT_ANALYZED));
+    doc.add(new Field("URL", f.toURI().toString(), Field.Store.YES, Field.Index.NOT_ANALYZED));
     doc.add(new Field("contents", new FileReader(f), Field.TermVector.YES));
     writer.addDocument(doc);
   }

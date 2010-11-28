@@ -16,7 +16,7 @@ public class TagsIdentificationTest {
   TagsIdentification tid;
 
   @Before
-  public void setup(){
+  public void setUP(){
     tid = new TagsIdentification();
 
     test = new HashMap<Double, Document>();
@@ -39,7 +39,7 @@ public class TagsIdentificationTest {
   }
 
   @After
-  public void teardown(){
+  public void tearDown(){
     tid = null;
     test = null;
   }

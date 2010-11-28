@@ -1,27 +1,43 @@
 package edu.tuhh.summarizer.search;
 
+import org.apache.lucene.document.Document;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
+import java.util.Properties;
+
+import static org.junit.Assert.*;
 
 /**
  * @author: avelinsk
  */
 public class SearcherTest {
-    Searcher searcher;
+  Search search;
+  Properties props;
+  Searcher searcher;
 
-    @Before
-    public void setup(){
-      searcher = new Searcher();
-    }
+  @Before
+  public void setUP() {
+    searcher = new Search();
+  }
 
-    @Test
-    public void testSearchDocuments() throws Exception {
-        searcher.search("summarizer/data/index","I you we shall win the contest");
-    }
+  @Test
+  public void testSearchDocuments() throws Exception {
+    List<Document> result = searcher.search("I you we he she it ours");
+    assertFalse(result.size()!= 0);
+  }
 
-    @After
-    public void tearDown(){
-      searcher = null;
-    }
+  @Test
+  public void testSearch(){
+    List<Document> result = searcher.search("Test content management database");
+    assertTrue(result.size() != 0);
+  }
+
+  @After
+  public void tearDown() {
+    search = null;
+    props = null;
+  }
 }

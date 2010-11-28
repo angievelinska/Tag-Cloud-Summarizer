@@ -38,10 +38,6 @@ public class Query {
     queryVector = new DenseVector(sspace.getVectorLength());
   }
 
-  protected void setQuery(String query) {
-    query = query;
-  }
-
   /**
    * @param query
    * @return

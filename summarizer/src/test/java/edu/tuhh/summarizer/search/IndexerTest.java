@@ -1,27 +1,31 @@
 package edu.tuhh.summarizer.search;
 
+import edu.tuhh.summarizer.common.PropertiesLoader;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Properties;
 
 /**
  * @author: avelinsk
  */
 public class IndexerTest {
   Indexer indexer;
+  Properties props;
 
   @Before
-  public void setup() {
-    indexer = new Indexer(true);
+  public void setUP() {
+    props = PropertiesLoader.loadProperties();
   }
 
   @Test
   public void testIndexDocuments() throws Exception {
-    indexer.initializeIndex("summarizer/data/index", "summarizer/data/output");
+    indexer = new Indexer();
   }
 
   @After
-  public void teardown(){
+  public void tearDown(){
     indexer = null;
   }
 }

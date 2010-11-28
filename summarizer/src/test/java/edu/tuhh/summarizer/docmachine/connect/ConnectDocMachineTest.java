@@ -1,37 +1,31 @@
 package edu.tuhh.summarizer.docmachine.connect;
 
 import com.coremedia.cap.content.ContentRepository;
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 
+@Ignore
 public class ConnectDocMachineTest extends TestCase {
-    ConnectDocMachine conn;
+  ConnectDocMachine conn;
 
-    public ConnectDocMachineTest(String name) {
-        super(name);
-    }
+  @Before
+  public void setUP() throws Exception {
+    conn = new ConnectDocMachine();
+    conn.openConnection();
+  }
 
-    public void setUp() throws Exception {
-        super.setUp();
-        conn = new ConnectDocMachine();
-        //conn.openConnection();
-    }
+  @Test
+  public void testOpenConnection() {
+    assertTrue(conn.openConnection() instanceof ContentRepository);
+  }
 
-    public void tearDown() throws Exception {
-        super.tearDown();
-        conn.closeConnection();
-    }
+  @After
+  public void tearDown() throws Exception {
+    conn.closeConnection();
+  }
 
-
-    public void testOpenConnection(){
-
-        assertTrue (conn.openConnection() instanceof ContentRepository);
-    }
-
-
-    public static Test suite() {
-        return new TestSuite(ConnectDocMachineTest.class);
-    }
 }
 

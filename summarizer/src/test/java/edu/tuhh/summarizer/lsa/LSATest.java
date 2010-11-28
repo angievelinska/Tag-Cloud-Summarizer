@@ -16,7 +16,7 @@ public class LSATest {
   LSA lsa;
 
   @Before
-  public void setUp() throws Exception {
+  public void setUP() throws Exception {
     lsa = new LSA();
   }
 

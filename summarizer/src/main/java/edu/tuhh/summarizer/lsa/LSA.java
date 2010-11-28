@@ -18,7 +18,6 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Creates an LSA semantic space.
@@ -97,7 +96,6 @@ public class LSA {
                                         int noThreads)
           throws IOException, InterruptedException {
     Collection<Thread> threads = new LinkedList<Thread>();
-    final AtomicInteger count = new AtomicInteger(0);
     for (int i = 0; i < noThreads; ++i) {
       Thread t = new Thread() {
         public void run() {

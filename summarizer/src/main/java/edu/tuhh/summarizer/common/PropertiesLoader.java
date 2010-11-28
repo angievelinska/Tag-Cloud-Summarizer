@@ -16,19 +16,25 @@ public class PropertiesLoader {
 
   public static Properties loadProperties() {
     if (props != null && !props.isEmpty()) {
-      log.info("Properties file was already loaded.");
+      log.info("Properties file was loaded before.");
       return props;
 
     } else {
       props = new Properties();
+      FileInputStream fin = null;
       try {
-        FileInputStream fin = new FileInputStream(PROP_FILE);
+        fin = new FileInputStream(PROP_FILE);
         props.load(fin);
-        fin.close();
-        log.info("Properties file is now loaded.");
       } catch (IOException e) {
         log.error("Error loading properties file: ");
         e.printStackTrace();
+      } finally {
+        try{
+          fin.close();
+        } catch(IOException e){
+          log.error("Error closing FileInputStream: ");
+          e.printStackTrace();
+        }
       }
       return props;
     }

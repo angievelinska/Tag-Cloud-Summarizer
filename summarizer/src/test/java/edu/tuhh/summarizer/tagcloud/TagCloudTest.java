@@ -1,5 +1,6 @@
 package edu.tuhh.summarizer.tagcloud;
 
+import edu.tuhh.summarizer.common.PropertiesLoader;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -20,10 +22,12 @@ import static org.junit.Assert.assertTrue;
  */
 public class TagCloudTest {
   TagCloud tc;
+  Properties props;
 
   @Before
   public void init() {
     tc = new TagCloud();
+    props = PropertiesLoader.loadProperties();
   }
 
   @Test
@@ -54,11 +58,11 @@ public class TagCloudTest {
 
     tc.generateCloud(5.0, 20, tags, 1.0);
 
-    File dir = new File("summarizer/data/opencloud");
+    File dir = new File(props.getProperty("TEST_DIR"));
     if (!dir.exists()) {
       assertTrue(dir.mkdir());
     }
-    File file = new File(dir, "cloud.html");
+    File file = new File(dir, props.getProperty("TEST_CLOUD"));
     if (!file.exists()) {
       try {
         assertTrue(file.createNewFile());
@@ -72,6 +76,9 @@ public class TagCloudTest {
 
     Cloud c2 = tc.deserializeCloud(file);
     System.out.println("Word pattern: "+c2.getWordPattern());
+
+    assertTrue(file.delete());
+    assertTrue(dir.delete());
   }
 
   @Test
@@ -98,7 +105,6 @@ public class TagCloudTest {
   @After
   public void terminate() {
     tc = null;
+    props = null;
   }
-
-
-}
+}                
