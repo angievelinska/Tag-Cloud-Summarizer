@@ -26,25 +26,8 @@ public class LSATest {
 
     Properties props = PropertiesLoader.loadProperties();
     File sspace = new File(props.getProperty("SSPACE"));
-    Assert.assertTrue(sspace.exists());
-    String matrix_u = (String)props.get("SSPACE_DIR")+ (String)props.get("MATRIX_U");
-    Assert.assertTrue((new File(matrix_u)).exists());
-    String matrix_s = (String)props.get("SSPACE_DIR")+ (String)props.get("MATRIX_S");
-    Assert.assertTrue((new File(matrix_s)).exists());
-    String matrix_vt = (String)props.get("SSPACE_DIR")+ (String)props.get("MATRIX_Vt");
-    Assert.assertTrue((new File(matrix_vt)).exists());
+    Assert.assertTrue("TermSpace is saved.",sspace.exists());
   }
-
-/*  @Test
-  public void testSVD(){
-
-//    System.out.println("vector length after reduction: "+lsa.sspace.getVectorLength());
-    Vector v = (DoubleVector) lsa.getVector("content");
-    int size = v.length();
-    for (int i=0; i<size; i++){
-      System.out.print(v.getValue(i));
-    }
-  }*/
 
   @After
   public void tearDown() throws Exception {

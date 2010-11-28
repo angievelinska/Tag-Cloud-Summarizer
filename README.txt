@@ -1,6 +1,6 @@
 Tag Cloud Summarizer
 Master Thesis Project
-Author: angievelinska
+Author: Angelina Velinska
 Hamburg, 2010
 
 Tag Cloud Summarizer defines the main concepts in the documents returned as a result from search queries, and presents them as a Tag Cloud. 

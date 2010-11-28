@@ -6,8 +6,6 @@ import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
-import edu.ucla.sspace.matrix.MatrixIO;
-import edu.ucla.sspace.matrix.SVD;
 import edu.ucla.sspace.text.Document;
 import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
@@ -38,10 +36,11 @@ public class LSA {
       // initialize the semantic space
       sspace = new LatentSemanticAnalysis();
       Iterator<Document> iter = new OneLinePerDocumentIterator(props.getProperty("docFile"));
-      File output = initOutputFile(props);
 
       //SVD reduction
       processDocumentsAndSpace(sspace, iter, noOfThreads, props);
+
+      File output = initOutputFile(props, "termSpace.sspace");
       SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
       log.info("Semantic space is saved after SVD reduction.");
     } catch (IOException e) {
@@ -50,19 +49,17 @@ public class LSA {
       ex.printStackTrace();
     }
 
-    // save the 3 matrices resulting from LSA as files
-    saveMatrices(sspace, props);
+    saveDocumentSpace(sspace, props);
 
     long end = System.currentTimeMillis();
     log.info("LSA took " + (end - start) + "ms to index the document collection.");
   }
 
 
-  protected File initOutputFile(Properties props) {
+  protected File initOutputFile(Properties props, String fileName) {
     String SSPACE_DIR = props.getProperty("SSPACE_DIR");
-    String SSPACE_FILE = props.getProperty("SSPACE_FILE");
     File outputPath = new File(SSPACE_DIR);
-    File outputFile = new File(outputPath, SSPACE_FILE);
+    File outputFile = new File(outputPath, fileName);
 
     if (!outputPath.exists()) {
       outputPath.mkdir();
@@ -120,40 +117,18 @@ public class LSA {
       t.join();
   }
 
-
-  protected void saveMatrices(SemanticSpace sspace, Properties props) {
-    log.info("Saving 3 matrices after LSA...");
-    int numWords = sspace.getWords().size();
-    DoubleVector[] vectors = new DoubleVector[numWords];
-    String[] words = new String[numWords];
-    int i = 0;
-    log.info("Total words in sspace: " + words.length);
-    for (String word : sspace.getWords()) {
-      words[i] = word;
-      vectors[i] = Vectors.asDouble(sspace.getVector(word));
-      i++;
+  protected void saveDocumentSpace(LatentSemanticAnalysis sspace, Properties props) {
+    int numDocs = sspace.getDocumentsNumber();
+    DoubleVector[] vectors = new DoubleVector[numDocs];
+    log.info("Total documents in sspace: " + numDocs);
+    for (int i = 0; i < numDocs; i++) {
+      vectors[i] = Vectors.asDouble(sspace.getDocumentVector(i));
     }
-
-    Matrix matrix = Matrices.asMatrix(Arrays.asList(vectors));
-    Matrix[] matricesReduced = SVD.svd(matrix, SVD.Algorithm.SVDLIBJ, 90);
-    saveMatrices(matricesReduced, props);
-  }
-
-
-  protected void saveMatrices(Matrix[] matrix, Properties props) {
-    File dir = new File(props.getProperty("SSPACE_DIR"));
-    File matrix_u = new File(dir, props.getProperty("MATRIX_U"));
-    File matrix_s = new File(dir, props.getProperty("MATRIX_S"));
-    File matrix_vt = new File(dir, props.getProperty("MATRIX_Vt"));
+    File sspaceFile = initOutputFile(props, "docSpace.txt");
+    Matrix docSpace = Matrices.asMatrix(Arrays.asList(vectors));
     try {
-      matrix_u.createNewFile();
-      matrix_s.createNewFile();
-      matrix_vt.createNewFile();
-
-      MatrixIO.writeMatrix(matrix[0], matrix_u, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
-      MatrixIO.writeMatrix(matrix[1], matrix_s, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
-      MatrixIO.writeMatrix(matrix[2], matrix_vt, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
-
+     // MatrixIO.writeMatrix(docSpace, sspaceFile, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+      LSAUtils.saveDocumentSpace(docSpace, sspaceFile);
     } catch (IOException e) {
       e.printStackTrace();
     }

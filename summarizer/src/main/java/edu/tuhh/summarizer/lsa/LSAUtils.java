@@ -6,10 +6,8 @@ import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.matrix.DiagonalMatrix;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
-import edu.ucla.sspace.matrix.MatrixIO;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 /**
@@ -20,76 +18,49 @@ public class LSAUtils {
    * matrix Ak after SVD
    */
   private static Matrix A;
-
-  private static Matrix U;
-
-  private static Matrix V_t;
-
-  private static Matrix S;
-
   private static SemanticSpace sspace;
-
-  /**
-   * singularity threshold
-   */
-  private static final double SINGULARITY_THRESHOLD = 10E-12;
-
 
   public static SemanticSpace getSSpace() {
     try {
-      sspace = SemanticSpaceIO.load(getProperties().getProperty("SSPACE"));
+      sspace = SemanticSpaceIO.load(getProperties().getProperty("SSPACE_DOCS"));
     } catch (IOException e) {
       e.printStackTrace();
     }
     return sspace;
   }
 
-
-  public static Matrix getU() {
-    try {
-      U = MatrixIO.readMatrix(new File(getProperties().getProperty("SSPACE_DIR"),
-              getProperties().getProperty("MATRIX_U")),
-              MatrixIO.Format.DENSE_TEXT);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    return U;
-  }
-
-
-  public static Matrix getV_t() {
-    try {
-      File v_t = new File(getProperties().getProperty("SSPACE_DIR"),
-              getProperties().getProperty("MATRIX_Vt"));
-      V_t = MatrixIO.readMatrix(v_t,MatrixIO.Format.DENSE_TEXT);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    return V_t;
-  }
-
-
-  public static Matrix getS() {
-    try {
-      S = MatrixIO.readMatrix(new File(getProperties().getProperty("SSPACE_DIR"),
-              getProperties().getProperty("MATRIX_S")),
-              MatrixIO.Format.DENSE_TEXT);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    return S;
-  }
-
   /**
-   * SVD can be used for calculating A(inverse)
-   * <p/>
-   * A(inversed) = V * Sigma(inversed) * U(transposed)
+   * Writes the semantic space to the file using the {@code TEXT} format.
    *
-   * @return
+   * @param sspace the semantic space to be written
+   * @param output the file into which the space will be written
+   * @throws IOException if any I/O exception occurs when reading the semantic
+   *                     space data from the file
    */
-  public static Matrix getAInverse() {
-    Matrix V_S_inv = Matrices.multiply(transpose(getV_t()), getSInverse());
-    return Matrices.multiply(V_S_inv, transpose(getU()));
+  protected static void saveDocumentSpace(Matrix sspace, File output) throws IOException {
+    OutputStream os = new FileOutputStream(output);
+    PrintWriter pw = new PrintWriter(os);
+
+    writeHeader(os, SemanticSpaceIO.SSpaceFormat.TEXT);
+    // write out how many vectors there are and the number of dimensions
+    pw.println(sspace.rows() + " " + sspace.columns());
+
+    for (int i=0; i<sspace.rows(); i++) {
+      StringBuffer sb = new StringBuffer(64);
+      for (int j = 0; j<sspace.columns(); j++){
+        sb.append((sspace.get(i,j))).append(" ");
+      }
+      pw.println(i + "|" + sb.toString());
+    }
+    pw.close();
+  }
+
+
+  static void writeHeader(OutputStream os, SemanticSpaceIO.SSpaceFormat format)
+          throws IOException {
+    DataOutputStream dos = new DataOutputStream(os);
+    dos.writeChar('s');
+    dos.writeChar('0' + format.ordinal());
   }
 
 
@@ -107,23 +78,6 @@ public class LSAUtils {
     }
     return m_inv;
   }
-
-  public static Matrix getSInverse() {
-    return getMatrixInverse(getS());
-  }
-
-
-  public double[] getSingularValues() {
-    Matrix S = getS();
-    int m = S.rows();
-    double[][] singularMatrix = S.toDenseArray();
-    double[] s = new double[m];
-    for (int i = 0; i < m; i++) {
-      s[i] = singularMatrix[i][i];
-    }
-    return s;
-  }
-
 
 /*  **
    * Generates an identity matrix.

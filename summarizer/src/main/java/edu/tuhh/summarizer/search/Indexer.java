@@ -50,13 +50,12 @@ public class Indexer {
 
 
   private int index(File indexDir, File dataDir) throws IOException {
-    String STOPWORDS = props.getProperty("STOPWORDS");
     if (!dataDir.exists() || !dataDir.isDirectory()) {
       throw new IOException(dataDir
               + " does not exist or is not a directory. Aborting...");
     }
     Directory dir = FSDirectory.open(indexDir);
-    File stopwords = new File(STOPWORDS);
+    File stopwords = new File(props.getProperty("STOPWORDS"));
     IndexWriter writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_29, stopwords),
             true, IndexWriter.MaxFieldLength.UNLIMITED);
     writer.setUseCompoundFile(true);
