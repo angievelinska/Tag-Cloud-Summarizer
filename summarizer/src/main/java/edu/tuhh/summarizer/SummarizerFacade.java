@@ -30,7 +30,7 @@ public class SummarizerFacade {
   private Properties props;
 
 
-  public void init() {
+  public SummarizerFacade() {
     try {
       props = PropertiesLoader.loadProperties();
       String SSPACE_TERMS = props.getProperty("SSPACE_TERMS");
@@ -59,6 +59,7 @@ public class SummarizerFacade {
     List<Tag> tags = new ArrayList<Tag>();
     for (Query.SearchResult result : results){
       Tag tag = new Tag(result.word, link, result.score);
+      tag.setWeight(result.score);
       tags.add(tag);
     }
     return tags;

@@ -14,7 +14,6 @@ import static org.junit.Assert.*;
  * @author: avelinsk
  */
 public class SearcherTest {
-  Search search;
   Properties props;
   Searcher searcher;
 
@@ -37,7 +36,7 @@ public class SearcherTest {
 
   @After
   public void tearDown() {
-    search = null;
+    searcher = null;
     props = null;
   }
 }

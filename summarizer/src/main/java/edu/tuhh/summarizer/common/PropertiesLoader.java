@@ -29,9 +29,11 @@ public class PropertiesLoader {
         log.error("Error loading properties file: ");
         e.printStackTrace();
       } finally {
-        try{
-          fin.close();
-        } catch(IOException e){
+        try {
+          if (fin!=null) {
+            fin.close();
+          }
+        } catch (IOException e) {
           log.error("Error closing FileInputStream: ");
           e.printStackTrace();
         }

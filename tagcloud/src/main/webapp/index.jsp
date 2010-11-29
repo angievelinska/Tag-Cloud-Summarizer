@@ -44,7 +44,7 @@ Click on the "Clear" button to remove all tags in the cloud.
 	<input type="button" value="Clear Cloud" onclick="document.startform.command.value='CLEAR'; document.startform.submit();" />
 	</td>
 	<td align="right" valign="top">
-	<input type="button" value="Generate Cloud" onclick="document.startform.command.value='SEARCH'; document.startform.submit();" />
+	<input type="button" value="Search" onclick="document.startform.command.value='SEARCH'; document.startform.submit();" />
 	</td>
 	</tr>
 	</table>

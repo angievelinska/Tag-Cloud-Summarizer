@@ -35,7 +35,7 @@
       <artifactId>opencloud</artifactId>
       <version>0.2</version>
     </dependency>
-    
+
     <!-- linear algebra -->
     <dependency>
       <groupId>jama</groupId>
@@ -82,13 +82,13 @@
       <scope>provided</scope>
     </dependency>
 
-     <!-- logging -->
-      <dependency>
-       <groupId>log4j</groupId>
-       <artifactId>log4j</artifactId>
-       <version>1.2.16</version>
-      </dependency>
-    
+    <!-- logging -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.16</version>
+    </dependency>
+
     <!-- testing -->
     <dependency>
       <groupId>junit</groupId>

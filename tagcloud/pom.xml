@@ -28,7 +28,7 @@
       <version>2.4</version>
       <scope>provided</scope>
     </dependency>
-<!--    <dependency>
+    <!--    <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <version>2.2</version>
@@ -45,10 +45,17 @@
       <version>1.1.2</version>
       <scope>runtime</scope>
     </dependency>-->
-    
+
+    <!-- logging -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.16</version>
+    </dependency>
+
   </dependencies>
 
-    <build>
+  <build>
     <finalName>tagcloud</finalName>
     <plugins>
 
@@ -73,5 +80,5 @@
 
     </plugins>
   </build>
-  
+
 </project>

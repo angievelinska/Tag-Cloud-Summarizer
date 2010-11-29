@@ -27,5 +27,6 @@ public class IndexerTest {
   @After
   public void tearDown(){
     indexer = null;
+    props = null;
   }
 }

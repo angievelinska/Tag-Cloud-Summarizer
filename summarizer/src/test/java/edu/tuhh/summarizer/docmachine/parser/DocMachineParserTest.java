@@ -38,5 +38,6 @@ public class DocMachineParserTest {
   @After
   public void tearDown() {
     docParser = null;
+    props = null;
   }
 }

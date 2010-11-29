@@ -10,7 +10,6 @@ import edu.tuhh.summarizer.lsa.*;
 import edu.tuhh.summarizer.search.IndexerTest;
 import edu.tuhh.summarizer.search.SearcherTest;
 import edu.tuhh.summarizer.tagcloud.TagCloudTest;
-import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -35,5 +34,4 @@ import org.junit.runners.Suite;
                 IndexerTest.class,
                 SearcherTest.class}
 )
-public class TestSuite {
-}
+public class TestSuite {}
