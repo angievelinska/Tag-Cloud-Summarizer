@@ -1,17 +1,16 @@
 package edu.tuhh.summarizer.lsa;
 
+import Jama.Matrix;
 import edu.tuhh.summarizer.common.PropertiesLoader;
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.util.MultiMap;
 import edu.ucla.sspace.vector.DoubleVector;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Map;
 import java.util.Properties;
 
@@ -19,19 +18,19 @@ import java.util.Properties;
  * @author avelinsk
  */
 public class QueryTest {
-  SemanticSpace sspace;
+  SemanticSpace sspaceTerms;
   Query query;
-  MultiMap<Double,String> results;
-  long start,end;
+  MultiMap<Double, String> results;
+  long start, end;
 
 
   @Before
-  public void initializeTest(){
+  public void initializeTest() {
     try {
       Properties props = PropertiesLoader.loadProperties();
-      String SSPACE = props.getProperty("SSPACE");
+      String SSPACE_TERMS = props.getProperty("SSPACE_TERMS");
       query = new Query();
-      sspace = SemanticSpaceIO.load(new File(SSPACE));
+      sspaceTerms = SemanticSpaceIO.load(new File(SSPACE_TERMS));
       start = System.currentTimeMillis();
     } catch (IOException e) {
       e.printStackTrace();
@@ -42,49 +41,69 @@ public class QueryTest {
 
   @Test
   @SuppressWarnings("unchecked")
-  public void testQuery(){
-    results = query.getSimilarWords(sspace, "content", 20);
+  public void testQuery() {
+    results = query.getSimilarWords(sspaceTerms, "content", 20);
     Double key;
     String value;
-
-
-    for (Object o : results.entrySet()){
-      Map.Entry<Double,String> entry = (Map.Entry<Double,String>) o;
+    for (Object o : results.entrySet()) {
+      Map.Entry<Double, String> entry = (Map.Entry<Double, String>) o;
       key = entry.getKey();
       value = entry.getValue();
-      System.out.println("key: "+key+" value: "+value);
+      System.out.println("key: " + key + " value: " + value);
     }
   }
 
   @Test
-  public void testGetDocumentVector(){
+  public void testGetDocumentVector() {
 
-    DoubleVector testVector = query.getQueryAsVector("test document vector");
+    DoubleVector testVector = query.getQueryAsVector("content management system");
     Assert.assertNotNull(testVector.length());
 
-    System.out.println("vector length: "+testVector.length());
-    for (int i = 0; i < testVector.length(); i++){
+    System.out.println("vector length: " + testVector.length());
+    for (int i = 0; i < testVector.length(); i++) {
       System.out.println(testVector.get(i));
     }
   }
 
+  @Ignore
+  //prints out all words in the sspace
   @Test
-  public void testGetWords(){
-    System.out.println("number of words: "+sspace.getWords().size());
-    for (Object o : sspace.getWords()){
+  public void testGetWords() {
+    System.out.println("number of words: " + sspaceTerms.getWords().size());
+    for (Object o : sspaceTerms.getWords()) {
       String entry = (String) o;
       System.out.println(entry);
     }
   }
 
+
   @After
-  public void endTest(){
-    sspace = null;
-    query = null; 
+  public void endTest() {
+    sspaceTerms = null;
+    query = null;
     results = null;
     end = System.currentTimeMillis();
-    System.out.print("query took: "+(end-start)+" ms.");
-    
+    System.out.print("query took: " + (end - start) + " ms.");
+
+  }
+
+
+  private void prettyPrintMatrix(String legend, Matrix matrix,
+                                 String[] documentNames, PrintWriter writer) {
+    writer.printf("=== %s ===%n", legend);
+    writer.printf("%6s", " ");
+    for (int i = 0; i < documentNames.length; i++) {
+      writer.printf("%8s", documentNames[i]);
+    }
+    writer.println();
+    for (int i = 0; i < documentNames.length; i++) {
+      writer.printf("%6s", documentNames[i]);
+      for (int j = 0; j < documentNames.length; j++) {
+        writer.printf("%8.4f", matrix.get(i, j));
+      }
+      writer.println();
+    }
+    writer.flush();
   }
 
 }

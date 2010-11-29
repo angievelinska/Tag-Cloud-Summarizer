@@ -5,12 +5,14 @@ import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.Similarity;
 import edu.ucla.sspace.common.WordComparator;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
+import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.util.MultiMap;
 import edu.ucla.sspace.vector.DenseVector;
 import edu.ucla.sspace.vector.DoubleVector;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
+import java.util.*;
 
 /**
  * @author avelinsk
@@ -20,13 +22,19 @@ public class Query {
   private DoubleVector queryVector;
   private DocumentVectorBuilder docBuilder;
   private WordComparator wordCompare;
+  private Matrix docMatrix;
 
-  public Query() {
-    sspace = LSAUtils.getSSpace();
+  public void queryTermSpace() {
+    sspace = LSAUtils.getTermsSpace();
     docBuilder = new DocumentVectorBuilder(sspace);
     wordCompare = new WordComparator();
     queryVector = new DenseVector(sspace.getVectorLength());
   }
+
+  public void queryDocMatrix() {
+    docMatrix = LSAUtils.getDocsMatrix();
+  }
+
 
   /**
    * @param query
@@ -37,11 +45,26 @@ public class Query {
     return queryVector;
   }
 
+  public List<SearchResult> search(String query) {
+    // build up query matrix
+    DoubleVector queryVector = getQueryAsVector(query);
+    final Map<Integer, Double> similarityMap =
+            new HashMap<Integer, Double>();
+    for (int i = 0; i < docMatrix.rows(); i++) {
+      double sim = SimilarityUtil.getCosineSimilarity(docMatrix.getRowVector(i), queryVector);
+      if (sim > 0.0D) {
+        similarityMap.put(i, sim);
+      }
+    }
+    return sortByScore(similarityMap);
+  }
+
   /**
-   * queries for documents query Sigma * V_t sspace
+   * Computes the cosine similarity between the query
+   * and the document vectors in the document space
    *
    * @param query
-   * @param sspace
+   * @param sspace      - the document semantic space
    * @param noOfResults
    * @return
    */
@@ -51,7 +74,7 @@ public class Query {
     int i = sspace.getVectorLength();
     for (int j = 0; j < i; j++) {
       DoubleVector doc = lsa_space.getDocumentVector(j);
-      double similarity = Similarity.cosineSimilarity(doc, query);
+      cosineSimilarity = Similarity.cosineSimilarity(doc, query);
     }
     return cosineSimilarity;
   }
@@ -70,4 +93,33 @@ public class Query {
     return (DoubleVector) ((LatentSemanticAnalysis) sspace).getVector(word);
   }
 
+  private List<SearchResult> sortByScore(
+          final Map<Integer, Double> similarityMap) {
+    List<SearchResult> results = new ArrayList<SearchResult>();
+    List<Integer> docIndexes = new ArrayList<Integer>();
+    docIndexes.addAll(similarityMap.keySet());
+    Collections.sort(docIndexes, new Comparator<Integer>() {
+      public int compare(Integer s1, Integer s2) {
+        return similarityMap.get(s2).compareTo(similarityMap.get(s1));
+      }
+    });
+    for (Integer index : docIndexes) {
+      double score = similarityMap.get(index);
+      if (score < 0.001D) {
+        continue;
+      }
+      results.add(new SearchResult(index, score));
+    }
+    return results;
+  }
+
+  public class SearchResult {
+    public int index;
+    public double score;
+
+    public SearchResult(Integer index, double score) {
+      this.index = index;
+      this.score = score;
+    }
+  }
 }

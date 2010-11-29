@@ -6,6 +6,7 @@ import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
+import edu.ucla.sspace.matrix.MatrixIO;
 import edu.ucla.sspace.text.Document;
 import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
@@ -124,10 +125,11 @@ public class LSA {
     for (int i = 0; i < numDocs; i++) {
       vectors[i] = Vectors.asDouble(sspace.getDocumentVector(i));
     }
-    File sspaceFile = initOutputFile(props, "docSpace.txt");
+    File sspaceFile = initOutputFile(props, "docSpace.sspace");
+    File matrixFile = initOutputFile(props,"docSpace.txt");
     Matrix docSpace = Matrices.asMatrix(Arrays.asList(vectors));
     try {
-     // MatrixIO.writeMatrix(docSpace, sspaceFile, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+      MatrixIO.writeMatrix(docSpace, matrixFile, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
       LSAUtils.saveDocumentSpace(docSpace, sspaceFile);
     } catch (IOException e) {
       e.printStackTrace();

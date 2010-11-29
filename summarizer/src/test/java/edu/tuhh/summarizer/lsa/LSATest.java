@@ -25,7 +25,7 @@ public class LSATest {
     lsa.runLSA();
 
     Properties props = PropertiesLoader.loadProperties();
-    File sspace = new File(props.getProperty("SSPACE"));
+    File sspace = new File(props.getProperty("SSPACE_TERMS"));
     Assert.assertTrue("TermSpace is saved.",sspace.exists());
   }
 

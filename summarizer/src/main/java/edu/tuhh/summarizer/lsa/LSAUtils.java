@@ -6,27 +6,52 @@ import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.matrix.DiagonalMatrix;
 import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
+import edu.ucla.sspace.matrix.MatrixIO;
 
 import java.io.*;
 import java.util.Properties;
 
 /**
+ * Utility class which serves constructing and querying
+ * the semantic space produced by LSA.
+ *
  * @author avelinsk
  */
-public class LSAUtils {
-  /**
-   * matrix Ak after SVD
-   */
-  private static Matrix A;
-  private static SemanticSpace sspace;
+class LSAUtils {
 
-  public static SemanticSpace getSSpace() {
+  private static Matrix A;
+  private static SemanticSpace termsSpace;
+  private static SemanticSpace docsSpace;
+  private static Matrix docsMatrix;
+
+  public static SemanticSpace getTermsSpace() {
     try {
-      sspace = SemanticSpaceIO.load(getProperties().getProperty("SSPACE_DOCS"));
+      termsSpace = SemanticSpaceIO.load(getProperties().getProperty("SSPACE_TERMS"));
     } catch (IOException e) {
       e.printStackTrace();
     }
-    return sspace;
+    return termsSpace;
+  }
+
+  public static SemanticSpace getDocsSpace() {
+    try {
+      docsSpace = SemanticSpaceIO.load(getProperties().getProperty("SSPACE_DOCS"));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return docsSpace;
+  }
+
+  public static Matrix getDocsMatrix(){
+    String docMatr = getProperties().getProperty("DOCS_MATRIX");
+
+    try{
+      docsMatrix = MatrixIO.readMatrix(new File(docMatr),MatrixIO.Format.SVDLIBC_DENSE_TEXT);
+    }catch(IOException e){
+      e.printStackTrace();
+    }
+
+    return docsMatrix;
   }
 
   /**
@@ -45,10 +70,10 @@ public class LSAUtils {
     // write out how many vectors there are and the number of dimensions
     pw.println(sspace.rows() + " " + sspace.columns());
 
-    for (int i=0; i<sspace.rows(); i++) {
+    for (int i = 0; i < sspace.rows(); i++) {
       StringBuffer sb = new StringBuffer(64);
-      for (int j = 0; j<sspace.columns(); j++){
-        sb.append((sspace.get(i,j))).append(" ");
+      for (int j = 0; j < sspace.columns(); j++) {
+        sb.append((sspace.get(i, j))).append(" ");
       }
       pw.println(i + "|" + sb.toString());
     }
