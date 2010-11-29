@@ -1,9 +1,9 @@
 package edu.tuhh.summarizer.lsa;
 
-import Jama.Matrix;
 import edu.tuhh.summarizer.common.PropertiesLoader;
 import edu.ucla.sspace.common.SemanticSpace;
 import edu.ucla.sspace.common.SemanticSpaceIO;
+import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.util.MultiMap;
 import edu.ucla.sspace.vector.DoubleVector;
 import org.junit.*;
@@ -41,7 +41,7 @@ public class QueryTest {
 
   @Test
   @SuppressWarnings("unchecked")
-  public void testQuery() {
+  public void testGetMostSimilarWords() {
     results = query.getSimilarWords(sspaceTerms, "content", 20);
     Double key;
     String value;
@@ -84,21 +84,20 @@ public class QueryTest {
     results = null;
     end = System.currentTimeMillis();
     System.out.print("query took: " + (end - start) + " ms.");
-
   }
 
 
   private void prettyPrintMatrix(String legend, Matrix matrix,
-                                 String[] documentNames, PrintWriter writer) {
+                                 String[] documents, PrintWriter writer) {
     writer.printf("=== %s ===%n", legend);
     writer.printf("%6s", " ");
-    for (int i = 0; i < documentNames.length; i++) {
-      writer.printf("%8s", documentNames[i]);
+    for (int i = 0; i < documents.length; i++) {
+      writer.printf("%8s", documents[i]);
     }
     writer.println();
-    for (int i = 0; i < documentNames.length; i++) {
-      writer.printf("%6s", documentNames[i]);
-      for (int j = 0; j < documentNames.length; j++) {
+    for (int i = 0; i < documents.length; i++) {
+      writer.printf("%6s", documents[i]);
+      for (int j = 0; j < documents.length; j++) {
         writer.printf("%8.4f", matrix.get(i, j));
       }
       writer.println();

@@ -44,10 +44,18 @@ public class LSASearchTest {
   }
 
   @Test
-  public void testSearch() {
+  public void testDocsSearch() {
     String q = "content management system";
     List<Query.SearchResult> results =
-            query.search(q);
+            query.searchDocSpace(q);
+    printResults(q, results);
+  }
+
+  @Test
+  public void testTermsSearch(){
+   String q = "content management system";
+    List<Query.SearchResult> results =
+            query.searchTermSpace(q,20);
     printResults(q, results);
   }
 
@@ -65,7 +73,7 @@ public class LSASearchTest {
                                   List<Query.SearchResult> results) {
     System.out.printf("Results for query: [%s]%n", query);
     for (Query.SearchResult result : results) {
-      System.out.printf("%s (score = %8.4f)%n", result.index, result.score);
+      System.out.printf("%s %s (score = %8.4f)%n", result.index, result.word, result.score);
     }
   }
 

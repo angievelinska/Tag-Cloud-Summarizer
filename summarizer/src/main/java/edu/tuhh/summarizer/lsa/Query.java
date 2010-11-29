@@ -45,8 +45,7 @@ public class Query {
     return queryVector;
   }
 
-  public List<SearchResult> search(String query) {
-    // build up query matrix
+  public List<SearchResult> searchDocSpace(String query) {
     DoubleVector queryVector = getQueryAsVector(query);
     final Map<Integer, Double> similarityMap =
             new HashMap<Integer, Double>();
@@ -58,6 +57,25 @@ public class Query {
     }
     return sortByScore(similarityMap);
   }
+
+  public List<SearchResult> searchTermSpace(String query, int maxResult) {
+    DoubleVector queryVector = getQueryAsVector(query);
+
+    MultiMap<Double, String> similarityMap = wordCompare.getMostSimilarToVector(queryVector, sspace,
+            maxResult, Similarity.SimType.COSINE);
+
+    List<SearchResult> results = new ArrayList<SearchResult>();
+    for (Map.Entry entry: similarityMap.entrySet()){
+      double score = (Double)entry.getKey();
+      if (score < 0.001D){
+        continue;
+      }
+      results.add(new SearchResult(0, (String) entry.getValue(), score));
+    }
+
+    return results;
+  }
+
 
   /**
    * Computes the cosine similarity between the query
@@ -108,17 +126,20 @@ public class Query {
       if (score < 0.001D) {
         continue;
       }
-      results.add(new SearchResult(index, score));
+      results.add(new SearchResult(index, "", score));
     }
     return results;
   }
 
+
   public class SearchResult {
     public int index;
+    public String word;
     public double score;
 
-    public SearchResult(Integer index, double score) {
+    public SearchResult(Integer index, String word, double score) {
       this.index = index;
+      this.word = word;
       this.score = score;
     }
   }
