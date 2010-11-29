@@ -31,7 +31,7 @@ public class Search implements Searcher {
   private static final int MAXRESULTS = 20;
   private static Logger log = Logger.getLogger(Searcher.class);
 
-  protected void setup() {
+  public Search(){
     try {
       Properties props = PropertiesLoader.loadProperties();
       String INDEX_DIR = props.getProperty("INDEX_DIR");
@@ -56,8 +56,8 @@ public class Search implements Searcher {
     return writer;
   }
 
-  public List<Document> search(String query) {
-    setup();
+  public List<Document> doLuceneSearch(String query) {
+    //setup();
     IndexSearcher searcher;
     List<Document> result = new ArrayList<Document>();
 
@@ -84,6 +84,21 @@ public class Search implements Searcher {
       pe.printStackTrace();
     }
 
+    return result;
+  }
+
+  public List<Document> getDocsByIds(List<Integer> docIds){
+    IndexSearcher searcher;
+    List<Document> result = new ArrayList<Document>();
+    try{
+      searcher = new IndexSearcher(directory);
+      for(Integer index : docIds){
+        result.add(searcher.doc(index));
+      }
+      searcher.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
     return result;
   }
 

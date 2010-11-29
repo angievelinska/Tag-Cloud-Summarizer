@@ -1,5 +1,6 @@
 package edu.tuhh.summarizer.tagcloud;
 
+import edu.tuhh.summarizer.common.PropertiesLoader;
 import org.apache.log4j.Logger;
 import org.mcavallo.opencloud.Cloud;
 import org.mcavallo.opencloud.Tag;
@@ -15,9 +16,8 @@ import java.util.*;
 public class TagCloud {
   private Cloud cloud;
   private DictionaryFilter blacklist;
+  private Properties props;
   private static Logger log = Logger.getLogger(TagCloud.class);
-  private final static String STOPWORD = "summarizer/data/stopwords/english-stop-words-large.txt";
-  private static final String DEFAULT_LINK="File:////D:/tuhh/ss10/master thesis_coremedia/projects/Tag-Cloud-Summarizer/summarizer/data/output";
 
   public TagCloud() {
     cloud = new Cloud();
@@ -25,19 +25,21 @@ public class TagCloud {
 
 
   protected TagCloud(double weight, int maxTags) {
-    super();
+    props = PropertiesLoader.loadProperties();
+    String DEFAULT_LINK = props.getProperty("DEFAULT_LINK");
+    String STOPWORDS = props.getProperty("STOPWORDS");
     cloud = new Cloud();
     cloud.setMaxWeight(weight);
     cloud.setMaxTagsToDisplay(maxTags);
-    cloud.addInputFilter(getStopWords());
-    cloud.addOutputFilter(getStopWords());
+    cloud.addInputFilter(getStopWords(STOPWORDS));
+    cloud.addOutputFilter(getStopWords(STOPWORDS));
     cloud.setDefaultLink(DEFAULT_LINK);
   }
 
-  protected Filter<Tag> getStopWords() {
+  protected Filter<Tag> getStopWords(String STOPWORDS) {
     Filter<Tag> stopwords = null;
     try {
-      FileReader reader = new FileReader(new File(STOPWORD));
+      FileReader reader = new FileReader(new File(STOPWORDS));
       stopwords = new DictionaryFilter(reader);
     } catch (IOException e) {
       e.printStackTrace();

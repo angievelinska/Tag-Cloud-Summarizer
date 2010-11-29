@@ -125,12 +125,12 @@ public class LSA {
     for (int i = 0; i < numDocs; i++) {
       vectors[i] = Vectors.asDouble(sspace.getDocumentVector(i));
     }
-    File sspaceFile = initOutputFile(props, "docSpace.sspace");
+    //File sspaceFile = initOutputFile(props, "docSpace.sspace");
     File matrixFile = initOutputFile(props,"docSpace.txt");
     Matrix docSpace = Matrices.asMatrix(Arrays.asList(vectors));
     try {
       MatrixIO.writeMatrix(docSpace, matrixFile, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
-      LSAUtils.saveDocumentSpace(docSpace, sspaceFile);
+      //LSAUtils.saveDocumentSpace(docSpace, sspaceFile);
     } catch (IOException e) {
       e.printStackTrace();
     }

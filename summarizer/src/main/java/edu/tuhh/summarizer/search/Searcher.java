@@ -7,8 +7,10 @@ import java.util.List;
 /**
  * @author avelinsk
  */
-interface Searcher {
+public interface Searcher {
 
-  public List<Document> search(String query);
+  public List<Document> doLuceneSearch(String query);
+
+  public List<Document> getDocsByIds(List<Integer> docIds);
 
 }

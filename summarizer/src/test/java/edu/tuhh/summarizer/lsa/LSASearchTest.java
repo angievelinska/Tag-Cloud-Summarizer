@@ -33,8 +33,6 @@ public class LSASearchTest {
       String SSPACE_TERMS = props.getProperty("SSPACE_TERMS");
       String DOCS_MATRIX = props.getProperty("DOCS_MATRIX");
       query = new Query();
-      query.queryTermSpace();
-      query.queryDocMatrix();
       sspaceTerms = SemanticSpaceIO.load(new File(SSPACE_TERMS));
       docsMatrix = MatrixIO.readMatrix(new File(DOCS_MATRIX),MatrixIO.Format.SVDLIBC_DENSE_TEXT);
       start = System.currentTimeMillis();

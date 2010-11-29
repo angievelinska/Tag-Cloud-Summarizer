@@ -25,13 +25,13 @@ public class SearcherTest {
 
   @Test
   public void testSearchDocuments() throws Exception {
-    List<Document> result = searcher.search("I you we he she it ours");
+    List<Document> result = searcher.doLuceneSearch("I you we he she it ours");
     assertFalse(result.size()!= 0);
   }
 
   @Test
   public void testSearch(){
-    List<Document> result = searcher.search("Test content management database");
+    List<Document> result = searcher.doLuceneSearch("Test content management database");
     assertTrue(result.size() != 0);
   }
 

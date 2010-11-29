@@ -91,7 +91,7 @@ public class TagCloudTest {
 
   @Test
   public void checkFilter() {
-    Filter<Tag> filter = tc.getStopWords();
+    Filter<Tag> filter = tc.getStopWords(props.getProperty("STOPWORDS"));
     // Discard words contained in the dictionary
     assertFalse(filter.accept(new Tag("a")));
     assertFalse(filter.accept(new Tag("an")));

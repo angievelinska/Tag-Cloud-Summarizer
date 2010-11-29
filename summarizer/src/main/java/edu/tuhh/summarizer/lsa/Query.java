@@ -24,14 +24,11 @@ public class Query {
   private WordComparator wordCompare;
   private Matrix docMatrix;
 
-  public void queryTermSpace() {
+  public Query() {
     sspace = LSAUtils.getTermsSpace();
     docBuilder = new DocumentVectorBuilder(sspace);
     wordCompare = new WordComparator();
     queryVector = new DenseVector(sspace.getVectorLength());
-  }
-
-  public void queryDocMatrix() {
     docMatrix = LSAUtils.getDocsMatrix();
   }
 
