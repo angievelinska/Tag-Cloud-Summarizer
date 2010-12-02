@@ -1,0 +1,28 @@
+\chapter{Topic identification in clusters}
+
+A major problem in text analysis is to determine the topics in a text collections and identify the most important, novel or significant relationships between topics. Clustering and visualizations (tag clouds) are key analysis methods in order to solve this problem.\\
+
+Clustering is widely used for recommendation, and for categorizing search. An example of a recommendation is "X" like these. The search engine will look for similar results as the ones presented.\\
+
+disadvantages of clustering:\\
+objects can be assigned to one cluster only\\
+in social networks, clustering can be used to recognize communities in large groups of people.\\
+clustering is also used in partitioning web documents into groups, a.k.a. genres (data mining)\\
+search engines - categorization of search results or grouping (Yippy search engine)\\
+recommender systems - recommend new items based on user's taste \\
+
+When performing classification by clustering, the cluster labels are usually manually created by human beings. However, this is a  very expensive approach. It is sensible to find and algorithm for automatically identifying topic labels or cluster labels. Therefore, we have investigated the performance of Topic identification algorithm by Stein and zu Eissen\cite{Stein04topicidentification}. \\
+
+\section{External topic identification}
+The best scenario is that cluster labels should present a conceptualization of the documents in text corpus. This is not achieved by the algorithm presented. Technically, a hierarchical clustering algorithm can construct from each Document set $D$ a category tree. However, the labeling based on this hierarchical clustering will be far from a semantical taxonomy. This weakness of the algorithm presented can be corrected by using an external classification knowledge, e.g. an upper-level ontology. \\
+
+
+We believe that the weaknesses of topic identification algorithms in categorizing search engines could be overcome if external classification knowledge were brought in. We now outline the ideas of such an approach where both topic descriptors and hierarchy information from an upper ontology are utilized. \\
+
+ Then, topic identification is based on the following paradigms:\\
+1. Initially, no hierarchy (refines-relation) is presumed among the C 2 C. This is in accordance with the observations made in [Ertöz et al. 2001].\\
+2. Each category C 2 C is associated to its most similar set O 2 O. If the association is unique, $ T o (O)$ is selected as category label for C.\\
+3. Categories which cannot be associated uniquely within O are treated by a polythetic, equivalence-presuming labeling strategy in a standard way.
+In essence, finding a labeling for a categorization C using an ontology O means
+to construct a hierarchical classifier, since one has to map the centroid vectors of the clusters C 2 C onto the best-matching O 2 O. Note that a variety of machine learning techniques has successfully been applied to this problem; they include Bayesian classifiers, SVMs, decision trees, neural networks, regression techniques, and nearest neighbor classifiers.	\\
+

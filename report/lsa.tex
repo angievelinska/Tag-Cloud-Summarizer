@@ -37,7 +37,7 @@ A=
  a_{11}& a_{12}& \cdots& a_{1n} \\
  \vdots& \vdots& \ddots& \vdots \\ 
  a_{m1}& a_{m2}& \cdots& a_{mn}
-\end{bmatrix}\\
+\end{bmatrix}
 \end{equation}\\
 
 Local and global weightings are applied to increase or decrease the importance of terms within documents. We can write
@@ -60,7 +60,7 @@ After the initial pre-processing, the term-document matrix is decomposed into th
 %
 \begin{equation}
 \label{lsa:svd}
-A=U \Sigma V^{T}\\
+A=U \Sigma V^{T}
 \end{equation}\\
 
 After the initial matrix $A$ is decomposed, all but the highest $k$ valued of $S$ are set to $0$. The resulting reduced matrix is the semantic space of the text collection. A classical example presenting the truncated \gls{SVD}~\cite{Dumais88usingLSA}  can be used for displaying dimensionality reduction, and how it affects all three matrices.\\
@@ -102,7 +102,7 @@ In this work we are using \gls{LSA} for \gls{IR} purpose. Therefore, the final s
 %
 \begin{equation}
 \label{lsa:query}
-q = q^{T}U_{k}\Sigma_{k}^{-1}\\
+q = q^{T}U_{k}\Sigma_{k}^{-1}
 \end{equation}\\
 where $q$ is the set of words in the query, multiplied by the reduced term and singular values matrices. Using the transformation in~(\ref{lsa:query}), the query is ''mapped'' onto the reduced k-space. After the mapping, the resulting query vector can be compared to the documents in the k-space, and the results ranked by their similarity or nearness to the query. A common similarity measure is the cosine between the query and the document vector. From the resulting document set, the documents closest to the query above certain treshold are returned. \\
 

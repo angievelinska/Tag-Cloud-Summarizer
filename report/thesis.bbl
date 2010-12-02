@@ -1,4 +1,14 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Mann08}
+C.~D. Manning, P.~Raghavan, and H.~Schtze, {\em Introduction to Information
+  Retrieval}.
+\newblock New York, NY, USA: Cambridge University Press, 2008.
+
+\bibitem{mugo10}
+D.~M. Mugo, ``Connecting people using {L}atent {S}emantic {A}nalysis for
+  knowledge sharing,'' Master's thesis, Hamburg University of Technology, Jan.
+  2010.
 
 \bibitem{Dumais88usingLSA}
 S.~T. Dumais, G.~W. Furnas, T.~K. Landauer, S.~Deerwester, and R.~Harshman,
@@ -38,5 +48,36 @@ P.~Nakov, A.~Popova, and P.~Mateev, ``Weight functions impact on {LSA}
 P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
   {\em In Proceedings of the Students Prenetations at ESSLLI-2000},
   pp.~156--166, 2000.
+
+\bibitem{Stein04topicidentification}
+B.~Stein and S.~M.~Z. Eissen, ``Topic identification: Framework and
+  application,'' in {\em Proc of International Conference on Knowledge
+  Management (I-KNOW}, 2004.
+
+\bibitem{SemSearch2008}
+``Proceedings of the {W}orkshop on {}semantic {S}earch ({S}em{S}earch 2008) at
+  the 5th {E}uropean {S}emantic {W}eb {C}onference (eswc 2008), tenerife,
+  spain, june 2nd, 2008,'' in {\em SemSearch} (S.~Bloehdorn, M.~Grobelnik,
+  P.~Mika, and D.~T. Tran, eds.), CEUR Workshop Proceedings, CEUR-WS.org, 2008.
+
+\bibitem{mica04}
+A.~Micarelli and F.~Sciarrone, ``Anatomy and empirical evaluation of an
+  adaptive web-based information filtering system,'' {\em User Modeling and
+  User-Adapted Interaction}, vol.~14, no.~2-3, pp.~159--200, 2004.
+
+\bibitem{Landauer1998}
+T.~Landauer, P.~Foltz, and D.~Laham, ``An introduction to latent semantic
+  analysis,'' {\em Discourse processes}, vol.~25, pp.~259--284, 1998.
+
+\bibitem{S-Space}
+D.~Jurgens and K.~Stevens, ``The {S}-{S}pace package: an open source package
+  for word space models,'' in {\em ACL '10: Proceedings of the {ACL} 2010
+  {S}ystem {D}emonstrations}, (Morristown, NJ, USA), pp.~30--35, Association
+  for Computational Linguistics, 2010.
+
+\bibitem{CrDuSh09}
+P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
+  of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
+  Analytics Science and Technology}, 2009.
 
 \end{thebibliography}
