@@ -1,1 +1,2 @@
-cmd.exe /c perl "C:\Program Files\MiKTeX 2.8\scripts\glossaries\makeglossaries" thesis
+:: Please, replace path to MiKTeX scripts with your own MiKTex installation, in order to build the glossary part of the report.
+cmd.exe /c perl "C:\Program Files (x86)\MiKTeX 2.9\scripts\glossaries\makeglossaries" thesis

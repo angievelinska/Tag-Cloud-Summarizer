@@ -2,17 +2,23 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{C}\relax \glsresetentrylist %
 \glossaryentryfield{CMS}{\glsnamefont{CMS}}{Content Management Systems}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{6\delimN 7}\delimN 
-		\setentrycounter{page}\glsnumberformat{13}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{22}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
 \glossaryentryfield{IR}{\glsnamefont{IR}}{Information Retrieval}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{5\delimR 7}\delimN 
-		\setentrycounter{page}\glsnumberformat{11}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{6}\delimN 
+		\setentrycounter{page}\glsnumberformat{8\delimN 9}\delimN 
+		\setentrycounter{page}\glsnumberformat{15}}}\glsgroupskip
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossaryentryfield{LSA}{\glsnamefont{LSA}}{Latent Semantic Analysis}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{5\delimR 14}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{8}\delimN 
+		\setentrycounter{page}\glsnumberformat{10}\delimN 
+		\setentrycounter{page}\glsnumberformat{12\delimR 16}\delimN 
+		\setentrycounter{page}\glsnumberformat{22\delimN 23}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{SVD}{\glsnamefont{SVD}}{Singular Value Decomposition}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{8}\delimN 
-		\setentrycounter{page}\glsnumberformat{10\delimN 11}}}%
+		\setentrycounter{page}\glsnumberformat{12}\delimN 
+		\setentrycounter{page}\glsnumberformat{14\delimN 15}}}\glsgroupskip
+\glsgroupheading{W}\relax \glsresetentrylist %
+\glossaryentryfield{WCC}{\glsnamefont{WCC}}{Weighted Centroid Covering}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{10}}}%
 \end{theglossary}\glossarypostamble

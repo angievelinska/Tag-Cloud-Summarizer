@@ -2,98 +2,92 @@
 \label{sec:introduction}
 
 \section{Motivation}
+Information Retrieval systems become more important not only due to their use in Internet and digital libraries, but also because the majority of companies ( business ?) organize their activities and depend on digital documents, and information. Finding the right information brings value to the business, and failing to do so often leads to losses.\\
 
-Text Analysis sequence:
+The search applications nowadays, whether used in Internet or in companies  internally, face constantly growing problem of information overload. Users searching for information usually submit queries composed of a few keywords only. The search application performs exact matching between the submitted keywords, and the document set it searches through, and often returns a long list of results. Users without domain expertise are not familiar with the appropriate terminology thus not submitting the right query terms with respect to relevance or specialization. Thus, users retrieve a large number of irrelevant pages. \\
+
+\gls{IR} systems are facing challenges due to the peculiarities of human behavior, information overload, and information need.
+\begin{itemize}
+\item \textbf{Human behavior}. Users searching for information usually submit queries composed of a few keywords only, as shown in studies\cite{98usersSearchBehavior}. The search application performs exact matching between the submitted keywords, and the document set it searches through, and often returns a long list of results. When searching with short queries, the focus of a user is unclear, the missing information contributes to long result lists containing many unrelevant hits. Users without domain expertise are not familiar with the appropriate terminology thus not submitting the right query terms with respect to relevance or specialization. Another issue is the ambiguity of words, when words have more than one meaning. As a consequence, search results do not fit the information needs of users. When relevant documents contain words that are semantically relevant to the queries but not the same (synonyms), they will not be judged relevant. 
+\item \textbf{Manual processing of results}. When a large number of matching documents is returned as a search result, only some of the documents found can be read, due to human limitations in information processing, and time constraints (users want to find information quickly). Human users need to narrow down the search iteratively by reformulating the query, since it is unclear in which context their queried words are used, and which words could be useful to focus the search. This reformulation is known as a frustrating and time consuming process.
+\item \textbf{Information need}. Search applications that implement the keyword search paradigm (or full-text search) are broadly accepted by users; however, the challenge for the next years is the development of search solutions that reflect users' context ("what the user meant" versus "what the user wrote"). In other words, solutions that are able to:   
+\begin{inparaenum}[\itshape a\upshape)]
+\item  organize search results better than in the form of long lists,  
+\item  adapt to a user’s personal skills and experience concerning the underlying document collection, and  
+\item  adapt to the retrieval task a user is concerned with, 
+\end{inparaenum}
+or to adapt to the users' information need. \\
+\end{itemize}
+
+
+The issues listed above have lead to the development of techniques to assist users effectively navigate and organize the available documents in the search results, with the goal to find the best matching their needs. $Document clustering$ is a technique that offers methods to structure the search results in categories, in order to aid users in finding the best results for their search needs. It solves the problem of finding a meaningful ordering in a large amount of returned results.\\
+
+
+When a categorization according to topic is determined using an unsupervised approach (document clustering), it has to be presented to the users. In particular, the categories have to be labeled with characteristic terms for browsing. Which words from the cluster to choose as labels is a difficult problem to solve. This work offers an overview of the current algorithms for cluster labeling. It evaluates an interesting new method for cluster labeling, called Weighted Centroid Covering, proposed in \cite{Stein04topicidentification} and \cite{Stein07topicidentification}. It further makes a proposal for improving the quality of identified labels, by using external knowledge from a light-weight ontology. This work further presents the ontology, developed for this purpose.\\
+
+Another important aspect of the problem is to find comprehensive and accurate descriptions (labels) for the clusters of semantically related documents. \\
+
+Information retrieval systems become more and more important, and have their main application areas in Internet, libraries, and in the business companies. \\
+
+\gls{IR} technologies find wide application - in search engines, for browsing or filtering document collections, for further processing a set of retrieved documents. Before retrieval the documents are indexed, otherwise at each search, they would have to be scanned through for each query. The index maps the words or terms back to the documents where they occur. A method for document indexing, which is applied in this work, is called \gls{LSA}. It indexes the document collection by representing it as a reduced matrix of words and documents. \gls{LSA} representation improves \gls{IR} performance with respect to a basic problem of word-matching search - synonymy, or the case when more than one term describe the same concept. \\
+
+
+\section{Information Retrieval systems}
+In this work we investigate techniques from the field of \gls{IR}. Therefore, what follows is an overview of the text analysis processes, common to most \gls{IR} systems. Then, in the context of these processes, we shall summarize the contributions of the current work.\\
+
+Most IR systems share common workflow, and follow common data processing stages.
+The main goal of text analysis is knowledge discovery. There are many challenges today in the fields where text analysis is applied, and the main one is that there exists a huge amount of information to process manually. 
+Another challenge is the data ambiguity, synonyms, polysemy.
+We shall call text collections of documents a text corpus (pl. corpora).
+Data in such collections can be structured, e.g. data in database tables, semi-structured, e.g. in XML, HTML format, or unstructured - articles, reports, e-mail, etc. \\
+
+Text analysis processes involve information retrieval, lexical analysis to study word frequency distributions, tagging/annotation, among the others.\\
+
+Automated processing, modeling, and analysis of unstruc-
+tured text (news documents, web content, journal articles,
+etc.) is a key task in many data analysis and decision mak-
+ing applications. In many cases, documents are modeled as
+term or feature vectors and latent semantic analysis (LSA)
+[4] is used to model latent, or hidden, relationships between
+documents and terms appearing in those documents. LSA
+supplies conceptual organization and analysis of document
+collections by modeling high-dimension feature vectors in
+many fewer dimensions.
+
+
 
 %
 % text analysis sequence
 %
-\begin{center}
 \begin{figure}[htbp]
 \label{fig:text_analysis}
 	\centering
-	\includegraphics[width=\ScaleIfNeeded]{img/text_analysis} 
+\includegraphics[width=\ScaleIfNeeded]{img/text_analysis}
+%	\includegraphics[width=\ScaleIfNeeded]{img/text_analysis} 
+%\includegraphics[height = 0.7\textheight, trim = 30 100 30 280, clip, angle = 270]{timer}
  % or [scale=0.5]
-	\caption[Text analysis sequence]%
-           {Text analysis sequence}
+	\caption[Workflow in IR systems]%
+           {[Workflow in IR systems}
 \end{figure}
 
-This thesis contributes  for addressing the points presented above. The research focus is automatic identification of the main topics in a set of documents, returned as results to user queries. Research is done in analysis and visualization phases of the text analysis sequence diagram\ref{fig:text_analysis}.
+The current work contributes in the transformation, analysis and post-processing phases of \gls{IR} workflow. The research focus is automatic identification of the main topics in a set of documents, returned as results to user queries. Research is done in analysis and visualization phases of the text analysis sequence diagram\ref{fig:text_analysis}. \\
 
+
+This thesis contributes right here; techniques are developed which address the
+design and the operationalization of IR processes respecting the above points.
+The research focus is automatic document categorization, a technique which has
+been shown to improve retrieval performance.\\
 
 
 \section{Goal and scope of work}
 This works contributes with the following:
-\begin{list}{}{}
-\item Evaluation of the $ WCC $ algorithm, proposed for unsupervised topic labeling of clusters\cite{Stein04topicidentification}.
-\item Proposition for improving $ WCC $ algorithm, using topic identification based on external knowledge. For this purpose, a light-weight ontology has been developed, in order to be used as a reference to external semantic knowledge. 
-\item Software application for executing an IR process is developed. It presents a visualization of the main concepts contained in a document set in the form of a tag cloud.
-\end{list}
+\begin{enumerate}
+\item It offers an overview of the current cluster labeling algorithms, and makes an evaluation of \gls{WCC}, proposed for unsupervised topic labeling of clusters in \cite{Stein04topicidentification} and \cite{Stein07topicidentification}.
+\item It proposes an improvement in \gls{WCC} algorithm, performing topic identification based on external knowledge. A light-weight ontology has been developed for this purpose, in order to be used as a reference for external semantic knowledge during cluster labeling. 
+\item A software application for executing an IR process has been developed. It implements \gls{LSA} for information retrieval, and \gls{WCC} for visualization of the main concepts contained in a document set in the form of a tag cloud. \\
+\end{enumerate}
+
 
 \section{Outline}
-This chapter motivates the presented research, and summarizes its contributions. It also offers a general overview to the problem of text analysis, common to most IR systems. \\
-Chapter 2 gives the theoretical foundations for preprocessing and transformation phases of text analysis, and reviews a specific technique for information retrieval, called Latent Semantic Analysis. \\
-Chapter 3 contains the contribution related to evaluation of $WCC$ algorithm, and a proposition for its improvement, by using a light-weight ontology developed for this purpose. It contains the analytical phase of text analysis problem. \\
-Chapter 4 refers to the post-processing phase of text analysis, giving the visualization means to present the concepts retrieved from a document set. \\
-The software contribution is given in Chapter 5. Finally in Chapter 6, this work concludes with evaluation of results and outlook.\\
+This chapter motivates the presented research work, and summarizes its contributions. It also offers a general overview to the phases of text analysis, common to most IR systems. Chapter 2 gives theoretical foundations for preprocessing and transformation phases of text analysis, and reviews a specific technique for information retrieval, called Latent Semantic Analysis. Chapter 3 contains the contribution related to evaluation of \gls{WCC} algorithm, and a proposal for its improvement, by using a light-weight ontology developed for this purpose. It represents the analytical phase in \gls{IR} systems. Chapter 4 refers to the post-processing phase of text analysis, giving the visualization means for presenting the main concepts retrieved from a document set. The software contribution, developed as a part of this work, is described in Chapter 5. Finally, in Chapter 6 the thesis concludes with evaluation of results and outlook.\\
 
-
-We are now in the years before the Semantic Web, or Web 3.0. In the past years there has been major research in the fields of Information Retrieval, and improving search systems. Major companies like Google offer already products implementing techniques from the field of IR or semantics, in order to improve precision of search results, and increase user satisfaction.
-However, despite the major research done in the field, the implementation of these techniques is still relatively limited on a business scale.\\
-
-While many web-based search engines and applications implement techniques and tools from IR and semantic web, search functionality implemented in companies still relies mostly on full-text based search. \\
-
-
-In order to create automatic modeling, processing, and analysis of unstructured text (LSA)\\
-
-and labeling, and classification of unstructured text(Clustering and topic identification), we investigate the implementation of IR techniques for business needs in CoreMedia AG.\\
-
-\section{Motivation}
-Full-text search delivers a large number of results and does not handle synonymy and polysemy well. This problem can be partially solved by using IR technique to cope with polysemy and synonymy (such as LSA), and to use clustering for categorization of search results.\\
-However, when using clustering, another issue arises - how to automatically identify category labels.\\
-
-\section{Goal and scope of this work}
-The goal of this work is to investigate implementation of IR technique LSA for handling ambiguous search in the use case of CoreMedia AG, Hamburg. In order to categorize search results, and provide better user experience, categorization of search results has been proposed, and a cluster labeling algorithm investigated. the implementation of IR and semantic technologies for business needs, in order to improve user experience with search systems.\\
-Investigations have been made in three topics: use of ontologies to add semantic meaning to unstructured texts, use of IR techniques for document retrieval (LSA), and use of clustering technique and topic identification algorithm for categorizing search results.\\
-
-\section{Thesis Structure}
-
-Text analysis: methods for \\
-searching - IR\\
-labeling - TI algo\\
-analyzing document collections - LSA, clustering\\
-
-challenges:\\
-- too much information to process manually (need automation)
-data ambiguity\\
-
-- ambiguous queries lead to information overload and topic confusion (IR)\\
-- determine topics in text collections and identify most important relationships (Topic detection and association); clustering and visualization and key analysis methods\\
-
-active text analysis research, implementation of techniques in business environment, for business needs? \\
-
-
-----------------------------------\\
-----------------------------------\\
-Identifying the main concepts in texts is the subject of many research studies in the field of information retrieval and data mining. \\
-
-This work investigates the implementation of Latent Semantic Analysis (LSA) for discovering the main concepts in texts, in order to present an overview of the text content in the form of a tag cloud.\\
-
-
-During the last decade there have been constant optimizations in information retrieval effectiveness, making web search the preferred source of finding information. A substantial part of information retrieval deals with providing access to unstructured information in various domains. \gls{IR} refers to finding material (usually documents) of an unstructured nature (usually text) that satisfies an information need from within large collections (usually stored on computers) \cite{Mann08}. Many people today use methods from the field of IR when they use a search engine online, or search through their emails. In this context "unstructured data" refers to data which does not have a clear structure.\\
-
-\gls{IR} technologies find wide application - in search engines, for browsing or filtering document collections, for further processing a set of retrieved documents. Before retrieval the documents are indexed, otherwise at each search, they would have to be scanned through for each query. The index maps the words or terms back to the documents where they occur. A method for document indexing, which is applied in this work, is called \gls{LSA}. It indexes the document collection by representing it as a reduced matrix of words and documents. \gls{LSA} representation improves \gls{IR} performance with respect to a basic problem of word-matching search - synonymy, or the case when more than one term describe the same concept. \\
-
-While \gls{IR} deals with retrieval of documents, other systems manage content, such as documents. Content management includes a set of technologies and processes that support the creation, management and publication of content in any form or medium. Content may be documents, multi-media files, or any other file types that follow content lifecycle and require management. \gls{CMS} vary depending on their purpose and target environments - there are \gls{CMS} for the web, for enterprise, for mobile devices, as well as \gls{CMS} for managing collection of documents. \\
-
-\section{Motivation and objective}
-\label{sec:introduction:motandobj}  
-A drawback of the classical \gls{LSA} implementation as an \gls{IR} method is the low precision of the returned results. A previous work by David Mugo \cite{mugo10} has investigated the improvement of \gls{LSA} precision performance by annotating the document collection and including the anotations used in \gls{LSA}. In his work, Mugo constructs a concept-document matrix from the annotations used, and concatenates it with the word-document matrix normally generated in \gls{LSA} process. The proposed solution, however, results in a slow speed of \gls{LSA}, and has left Mugo's hypothesis open. \\
-
-Taking into consideration the results from Mugo's work, the current project has several objectives to reach. It will investigate the implementation of \gls{LSA} method for improving information retrieval in a domain-specific document management system with respect to context-based search. A further investigation will be made on improving the precision performance of \gls{LSA} method by using semantic annotations, and on finding an adequate way to present the results of \gls{LSA} as a tag cloud. And finally, it will be investigated how to use the tag cloud as a form of a relevance feedback to control \gls{LSA} method. \\
-
-In the context of the stated objectives, semantic annotations are meta data annotations used to add information to unstructured data, or to the document collection. Semantic annotations are based on an ontology in our case, specifically developed for the domain of interest CoreMedia \gls{CMS}. Ontologies are used to capture some knowledge about a certain domain, by describing the concepts of the domain and the relationships between them. To further clarify the objectives, relevance feedback is an \gls{IR} technique, used to influence the retrieved results based on the user's preference. It allows the user to modify the initial tag cloud by selecting the most relevant words. The tag cloud is then re-generated from \gls{LSA} results with the relevance feedback posted as a query. \\
-
-\section{Outline}
-\label{sec:introduction:outline}
-The reminder of this work is organized as follows. Chapter \ref{sec:docmanagsystem} describes in more detail what a document management system is, and provides an overview of the general structure of DocMachine 2.0, the \gls{CMS} deployed at CoreMedia AG. Chapter \ref{sec:semannot} presents the basic concepts of ontologies and document annotations based on ontologies. In Chapter \ref{sec:lsa} an overview of latent semantic analysis method is given, as well as an approach for improving \gls{LSA}'s precision by including semantic annotations in the method. Chapter \ref{sec:implementation} presents the prototype implementation and makes an evaluation of the results achieved in this work. And finally, conclusions are drawn in Chapter \ref{sec:conclusion}, along with some limitations of the current study and outlook for a future research.   \\ 

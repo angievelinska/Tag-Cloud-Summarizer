@@ -1,35 +1,31 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Goal and scope of work}{5}{section.1.2}
-\contentsline {section}{\numberline {1.3}Outline}{5}{section.1.3}
-\contentsline {section}{\numberline {1.4}Motivation}{7}{section.1.4}
-\contentsline {section}{\numberline {1.5}Goal and scope of this work}{7}{section.1.5}
-\contentsline {section}{\numberline {1.6}Thesis Structure}{8}{section.1.6}
-\contentsline {section}{\numberline {1.7}Motivation and objective}{9}{section.1.7}
-\contentsline {section}{\numberline {1.8}Outline}{10}{section.1.8}
-\contentsline {chapter}{\numberline {2}Latent Semantic Analysis}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Overview}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Text pre-processing}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}Singular Value Decomposition}{13}{section.2.3}
-\contentsline {section}{\numberline {2.4}Querying the semantic space}{14}{section.2.4}
-\contentsline {section}{\numberline {2.5}Factors influencing LSA performance}{14}{section.2.5}
-\contentsline {chapter}{\numberline {3}Topic identification in clusters}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}External topic identification}{16}{section.3.1}
-\contentsline {chapter}{\numberline {4}Tag Clouds}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}existing implementations}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}use}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}1}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}Brainstorming}{20}{section.4.4}
-\contentsline {chapter}{\numberline {5}Implementation and evaluation}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}LSA implementation}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Tag Cloud implementation}{22}{section.5.2}
-\contentsline {section}{\numberline {5.3}Tools used}{22}{section.5.3}
-\contentsline {section}{\numberline {5.4}Advantages and drawbacks}{22}{section.5.4}
-\contentsline {section}{\numberline {5.5}Latest development in the field of LSA}{22}{section.5.5}
-\contentsline {section}{\numberline {5.6}Improvements}{22}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusion and outlook}{23}{chapter.6}
-\contentsline {section}{\numberline {6.1}1}{23}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{23}{section.6.2}
-\contentsline {chapter}{Acronyms}{24}{section*.3}
-\contentsline {chapter}{\numberline {A}Appendix}{25}{appendix.A}
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{6}{section.1.1}
+\contentsline {section}{\numberline {1.2}Information Retrieval systems}{8}{section.1.2}
+\contentsline {section}{\numberline {1.3}Goal and scope of work}{10}{section.1.3}
+\contentsline {section}{\numberline {1.4}Outline}{10}{section.1.4}
+\contentsline {chapter}{\numberline {2}Latent Semantic Analysis}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Overview}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Text pre-processing}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}Singular Value Decomposition}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Querying the semantic space}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Factors influencing LSA performance}{16}{section.2.5}
+\contentsline {chapter}{\numberline {3}Topic identification in clusters}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}External topic identification}{17}{section.3.1}
+\contentsline {chapter}{\numberline {4}Tag Clouds}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}existing implementations}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}use}{20}{section.4.2}
+\contentsline {section}{\numberline {4.3}1}{20}{section.4.3}
+\contentsline {section}{\numberline {4.4}Brainstorming}{21}{section.4.4}
+\contentsline {chapter}{\numberline {5}Implementation and evaluation}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}LSA implementation}{22}{section.5.1}
+\contentsline {section}{\numberline {5.2}Tag Cloud implementation}{23}{section.5.2}
+\contentsline {section}{\numberline {5.3}Tools used}{23}{section.5.3}
+\contentsline {section}{\numberline {5.4}Advantages and drawbacks}{23}{section.5.4}
+\contentsline {section}{\numberline {5.5}Latest development in the field of LSA}{23}{section.5.5}
+\contentsline {section}{\numberline {5.6}Improvements}{23}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusion and outlook}{25}{chapter.6}
+\contentsline {section}{\numberline {6.1}1}{25}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{25}{section.6.2}
+\contentsline {chapter}{Acronyms}{26}{section*.3}
+\contentsline {chapter}{\numberline {A}Appendix}{27}{appendix.A}
