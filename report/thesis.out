@@ -1,36 +1,17 @@
 \BOOKMARK [0][-]{title.0}{Titlepage}{}% 1
-\BOOKMARK [0][-]{declaration.0}{Declaration}{}% 2
-\BOOKMARK [0][-]{acknowledgements.0}{Acknowledgements}{}% 3
-\BOOKMARK [0][-]{contents.0}{Contents}{}% 4
-\BOOKMARK [0][-]{figures.0}{List of figures}{}% 5
-\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 6
-\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.2}{1.2 Information Retrieval systems}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.3}{1.3 Goal and scope of work}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.4}{1.4 Outline}{chapter.1}% 10
-\BOOKMARK [0][-]{chapter.2}{2 Latent Semantic Analysis}{}% 11
-\BOOKMARK [1][-]{section.2.1}{2.1 Overview}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.2}{2.2 Text pre-processing}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.3}{2.3 Singular Value Decomposition}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.4}{2.4 Querying the semantic space}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.5}{2.5 Factors influencing LSA performance}{chapter.2}% 16
-\BOOKMARK [0][-]{chapter.3}{3 Topic identification in clusters}{}% 17
-\BOOKMARK [1][-]{section.3.1}{3.1 External topic identification}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{4 Tag Clouds}{}% 19
-\BOOKMARK [1][-]{section.4.1}{4.1 existing implementations}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{4.2 use}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{4.3 1}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.4}{4.4 Brainstorming}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{5 Implementation and evaluation}{}% 24
-\BOOKMARK [1][-]{section.5.1}{5.1 LSA implementation}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{5.2 Tag Cloud implementation}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.3}{5.3 Tools used}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.4}{5.4 Advantages and drawbacks}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.5}{5.5 Latest development in the field of LSA}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.6}{5.6 Improvements}{chapter.5}% 30
-\BOOKMARK [0][-]{chapter.6}{6 Conclusion and outlook}{}% 31
-\BOOKMARK [1][-]{section.6.1}{6.1 1}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.2}{6.2 Future Work}{chapter.6}% 33
-\BOOKMARK [0][-]{section*.3}{Acronyms}{}% 34
-\BOOKMARK [0][-]{appendix.A}{A Appendix}{}% 35
-\BOOKMARK [0][-]{references.0}{Bibliography}{}% 36
+\BOOKMARK [0][-]{contents.0}{Contents}{}% 2
+\BOOKMARK [0][-]{figures.0}{List of figures}{}% 3
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 4
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{1.2 Information Retrieval systems}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{1.3 Goal and scope of work}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.4}{1.4 Outline}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{2 Latent Semantic Analysis}{}% 9
+\BOOKMARK [1][-]{section.2.1}{2.1 Overview}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{2.2 Text pre-processing}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{2.3 Singular Value Decomposition}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.4}{2.4 Querying the semantic space}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.5}{2.5 Factors influencing LSA performance}{chapter.2}% 14
+\BOOKMARK [0][-]{section*.3}{Acronyms}{}% 15
+\BOOKMARK [0][-]{appendix.A}{A Appendix}{}% 16
+\BOOKMARK [0][-]{references.0}{Bibliography}{}% 17

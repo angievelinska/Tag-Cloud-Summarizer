@@ -2,8 +2,9 @@
 \label{sec:implementation}
 
 \begin{summary}
-This chapter reports the implemented solution for the given thesis problem, gives discusses its advantages and disadvantages.
+This chapter reports the implemented solution for the given thesis problem, presents experimental results, and discusses its advantages and disadvantages.
 \end{summary}
+
 
 It is a challenge by itself to come up with a sensible evaluation set for an IR implementation. ... Define here precision, recall, measures , how to measure LSA performance with  diff. k, clusters, cluster labelling. \\
 
@@ -19,6 +20,12 @@ For the implementation of LSA this work uses the open LSA library which is part 
 The real difficulty of LSA is to find out how many dimensions to remove - the problem of dimensionality.\\
 
 TODO:test if inluding only terms that occur in more than one document improved \gls{LSA} performance with respect to generating precise tag clouds.\\
+
+\section{Latest development in the field of LSA}
+\label{sec:lsa:latest}
+LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\
+
+at the end- improvements of lsa with the basics explained.\\
 
 \section{Tag Cloud implementation}
 \label{sec:implementation:tag_cloud}
@@ -40,17 +47,14 @@ why am i using lsa instead of lda for example?\\
 \item LDA - characteristics, advantages, disadvantages
 \end{enumerate}
 
-\section{Latest development in the field of LSA}
-\label{sec:lsa:latest}
-LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\
-
-at the end- improvements of lsa with the basics explained.\\
-
-\section{Improvements}
-only terms occuring in more than one documents have been included \\
-stop words \\
-compound words list \\
-Lanczos algorithm for computation of SVD of large sparse matrices \\
-Multi-threading computation in the project \\
 
 
+\section{Experimental evaluation}
+Example for presentation and evaluation of results, IR system:~\cite{SpamFilteringLSI2008} \\
+\begin{itemize}
+\item Data set
+\item Experimental setup
+\item Analysis of data matrices
+\item True/false positive rates
+\item Feature reduction
+\end{itemize}

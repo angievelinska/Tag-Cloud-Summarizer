@@ -52,15 +52,4 @@ P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
   {\em In Proceedings of the Students Prenetations at ESSLLI-2000},
   pp.~156--166, 2000.
 
-\bibitem{S-Space}
-D.~Jurgens and K.~Stevens, ``The {S}-{S}pace package: an open source package
-  for word space models,'' in {\em ACL '10: Proceedings of the {ACL} 2010
-  {S}ystem {D}emonstrations}, (Morristown, NJ, USA), pp.~30--35, Association
-  for Computational Linguistics, 2010.
-
-\bibitem{CrDuSh09}
-P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
-  of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
-  Analytics Science and Technology}, 2009.
-
 \end{thebibliography}

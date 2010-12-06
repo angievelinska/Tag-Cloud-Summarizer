@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.3)  3 DEC 2010 17:36
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.3)  6 DEC 2010 10:50
 entering extended mode
 **thesis.tex
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.tex
@@ -573,33 +573,16 @@ Overfull \hbox (11.38736pt too wide) in paragraph at lines 71--72
 
 [1
 
-] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\declaration.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-)
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\acknowledgements.tex
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--13
-
- []
-
-) [2] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.toc
-[3
-
-])
+] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.toc)
 \tf@toc=\write9
- [4] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lof)
+
+[1
+
+] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lof)
 \tf@lof=\write10
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\introduction.tex
-[5
+[2
 
 ]
 Chapter 1.
@@ -613,80 +596,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
- [6
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+ [3
 
 ]
 Missing character: There is no ’ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[7]
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--43
-
- []
-
-
+File: img/text_analysis.eps Graphic file (type eps)
+<img/text_analysis.eps>
 Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[8]
-File: img/text_analysis.eps Graphic file (type eps)
- <img/text_analysis.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
+[5]
+Overfull \hbox (8.8084pt too wide) in paragraph at lines 47--48
+\OT1/cmr/m/n/12 sis, how-ever, are com-mon, e.g. be-tween trans-for-ma-tion and
+ post-processing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[10]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex
-[11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex [7]
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
@@ -698,7 +665,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[12
+[8
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
@@ -708,6 +675,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
+ []
+
+
+Overfull \hbox (2.58115pt too wide) in paragraph at lines 28--29
+[][]\OT1/cmr/m/n/12 After to-k-eniza-tion, one has to con-struct a term-documen
+t ma-trix eq. ([][][][]).
  []
 
 
@@ -725,7 +698,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[13]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 57--61
 
  []
@@ -746,7 +719,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-[14]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
@@ -766,234 +739,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-[15]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\clustering.tex
-[16]
-Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+LaTeX Warning: Reference `sec:implementation' on page 12 undefined on input lin
+e 136.
 
- []
-
-
-Overfull \hbox (2.0631pt too wide) in paragraph at lines 5--6
-[][]\OT1/cmr/m/n/12 Clustering is widely used for rec-om-men-da-tion, and for c
-at-e-go-riz-ing search.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-[17
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-Missing character: There is no ö in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--28
-
- []
-
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\tagclouds.tex
-[18]
-Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-[19
-
-]
-File: img/tagcloud.eps Graphic file (type eps)
- <img/tagcloud.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 53--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
-
- []
-
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\implementation.tex
-[21]
-Chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-[22
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
-
- []
-
-[23]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\conclusion.tex
-[24]
-Chapter 6.
 ) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls)
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [25
-
-])
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [12])
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\appendices.tex
-[26
+[13
 
 
 ]
 Appendix A.
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl [27
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl [14
 
 ]
-[28
+[15
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
- [29]
+ [16]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
  (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 77561AFBC8B39D11F71C35E0EE71FC75;2293.
+(rerunfilecheck)             Checksum: DE7A9D084288301EC5E103AA3A8AC8D5;1046.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 9682 strings out of 494020
- 146369 string characters out of 3143905
- 251019 words of memory out of 3000000
- 12699 multiletter control sequences out of 15000+200000
- 13027 words of font info for 50 fonts, out of 3000000 for 9000
+ 9631 strings out of 494020
+ 144928 string characters out of 3143905
+ 248619 words of memory out of 3000000
+ 12667 multiletter control sequences out of 15000+200000
+ 13205 words of font info for 50 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 33i,15n,43p,1326b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,15n,43p,1755b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (30 pages, 129660 bytes).
+Output written on thesis.dvi (17 pages, 78560 bytes).

@@ -1,5 +1,7 @@
 \chapter{Topic identification in clusters}
 
+In this work the use of semantic knowledge to improve the results given by algorithms for cluster labeling is proposed.\\
+
 A major problem in text analysis is to determine the topics in a text collections and identify the most important, novel or significant relationships between topics. Clustering and visualizations (tag clouds) are key analysis methods in order to solve this problem.\\
 
 Clustering is widely used for recommendation, and for categorizing search. An example of a recommendation is "X" like these. The search engine will look for similar results as the ones presented.\\
@@ -16,6 +18,9 @@ When performing classification by clustering, the cluster labels are usually man
 \section{External topic identification}
 The best scenario is that cluster labels should present a conceptualization of the documents in text corpus. This is not achieved by the algorithm presented. Technically, a hierarchical clustering algorithm can construct from each Document set $D$ a category tree. However, the labeling based on this hierarchical clustering will be far from a semantical taxonomy. This weakness of the algorithm presented can be corrected by using an external classification knowledge, e.g. an upper-level ontology. \\
 
+Unfortunately, domain ontologies usually have coverage limitations because not all the terms of the domain are included in the ontology.\\
+
+Classical clustering methods are not able to deal with the semantics of the linguistic values of the objects (notions, texts). In this paper, a general methodology to incorporate this knowledge into the cluster labeling process has been presented. \\
 
 We believe that the weaknesses of topic identification algorithms in categorizing search engines could be overcome if external classification knowledge were brought in. We now outline the ideas of such an approach where both topic descriptors and hierarchy information from an upper ontology are utilized. \\
 
