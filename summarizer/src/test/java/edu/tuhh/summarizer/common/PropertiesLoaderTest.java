@@ -13,27 +13,28 @@ import static org.junit.Assert.assertNotSame;
  * @author avelinsk
  */
 public class PropertiesLoaderTest {
-  PropertiesLoader props;
+  PropertiesLoader props = null;
   @Before
   public void setUP(){
     props = new PropertiesLoader();
   }
   @Test
   public void testLoadProperties() throws Exception {
-    Properties props = PropertiesLoader.loadProperties();
-    assertEquals("LSA.sspace", props.getProperty("SSPACE_FILE"));
+    Properties properties = props.loadProperties();
+    assertEquals("termSpace.sspace", properties.getProperty("SSPACE_FILE"));
 
   }
 
   @Test
   public void testProperties(){
-    Properties props = PropertiesLoader.loadProperties();
-    assertNotSame( "input.txt", props.getProperty("docFile"));
+    Properties properties = props.loadProperties();
+    assertNotSame( "input.txt", properties.getProperty("docFile"));
   }
 
   @Test
   public void printProps(){
-    for (Map.Entry entry : PropertiesLoader.loadProperties().entrySet()){
+    Properties properties = props.loadProperties();
+    for (Map.Entry entry : properties.entrySet()){
       System.out.println("Property: "+entry.getKey()+"="+entry.getValue());
     }
   }

@@ -27,7 +27,7 @@ public class Indexer {
   private Properties props;
 
   public Indexer() {
-    props = PropertiesLoader.loadProperties();
+    props = new PropertiesLoader().loadProperties();
     String INDEX_DIR = props.getProperty("INDEX_DIR");
     String DATA_DIR = props.getProperty("DATA_DIR");
     initializeIndex(INDEX_DIR, DATA_DIR);

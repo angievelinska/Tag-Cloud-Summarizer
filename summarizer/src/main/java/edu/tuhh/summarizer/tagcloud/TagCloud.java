@@ -25,7 +25,7 @@ public class TagCloud {
 
 
   protected TagCloud(double weight, int maxTags) {
-    props = PropertiesLoader.loadProperties();
+    props = new PropertiesLoader().loadProperties();
     String DEFAULT_LINK = props.getProperty("DEFAULT_LINK");
     String STOPWORDS = props.getProperty("STOPWORDS");
     cloud = new Cloud();

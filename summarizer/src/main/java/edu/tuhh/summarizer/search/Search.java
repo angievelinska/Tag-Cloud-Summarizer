@@ -33,7 +33,7 @@ public class Search implements Searcher {
 
   public Search(){
     try {
-      Properties props = PropertiesLoader.loadProperties();
+      Properties props = new PropertiesLoader().loadProperties();
       String INDEX_DIR = props.getProperty("INDEX_DIR");
       String STOPWORDS = props.getProperty("STOPWORDS");
       stopwords = new File(STOPWORDS);

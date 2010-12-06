@@ -29,7 +29,7 @@ public class LSASearchTest {
   @Before
   public void initializeTest() {
     try {
-      Properties props = PropertiesLoader.loadProperties();
+      Properties props = new PropertiesLoader().loadProperties();
       String SSPACE_TERMS = props.getProperty("SSPACE_TERMS");
       String DOCS_MATRIX = props.getProperty("DOCS_MATRIX");
       query = new Query();

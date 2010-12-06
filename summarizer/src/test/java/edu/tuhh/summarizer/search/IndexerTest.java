@@ -16,7 +16,7 @@ public class IndexerTest {
 
   @Before
   public void setUP() {
-    props = PropertiesLoader.loadProperties();
+    props = new PropertiesLoader().loadProperties();
   }
 
   @Test

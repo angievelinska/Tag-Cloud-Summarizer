@@ -27,7 +27,7 @@ public class TagCloudTest {
   @Before
   public void init() {
     tc = new TagCloud();
-    props = PropertiesLoader.loadProperties();
+    props = new PropertiesLoader().loadProperties();
   }
 
   @Test

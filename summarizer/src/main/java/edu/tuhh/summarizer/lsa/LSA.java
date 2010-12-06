@@ -27,7 +27,7 @@ public class LSA {
   private static Logger log = Logger.getLogger(LSA.class);
 
   public void runLSA() {
-    Properties props = PropertiesLoader.loadProperties();
+    Properties props = new PropertiesLoader().loadProperties();
     IteratorFactory.setProperties(props);
     int noOfThreads = Runtime.getRuntime().availableProcessors();
 

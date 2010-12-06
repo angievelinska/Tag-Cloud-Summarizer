@@ -137,7 +137,7 @@ class LSAUtils {
   }
 
   public static Properties getProperties() {
-    return PropertiesLoader.loadProperties();
+    return new PropertiesLoader().loadProperties();
   }
 
 }

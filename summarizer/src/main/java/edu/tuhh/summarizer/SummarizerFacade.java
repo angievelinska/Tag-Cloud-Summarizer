@@ -32,7 +32,7 @@ public class SummarizerFacade {
 
   public SummarizerFacade() {
     try {
-      props = PropertiesLoader.loadProperties();
+      props = new PropertiesLoader().loadProperties();
       String SSPACE_TERMS = props.getProperty("SSPACE_TERMS");
       String DOCS_MATRIX = props.getProperty("DOCS_MATRIX");
       query = new Query();

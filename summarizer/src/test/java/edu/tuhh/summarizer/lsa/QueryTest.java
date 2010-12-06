@@ -29,7 +29,7 @@ public class QueryTest {
   @Before
   public void initializeTest() {
     try {
-      Properties props = PropertiesLoader.loadProperties();
+      Properties props = new PropertiesLoader().loadProperties();
       String SSPACE_TERMS = props.getProperty("SSPACE_TERMS");
       query = new Query();
       sspaceTerms = SemanticSpaceIO.load(new File(SSPACE_TERMS));

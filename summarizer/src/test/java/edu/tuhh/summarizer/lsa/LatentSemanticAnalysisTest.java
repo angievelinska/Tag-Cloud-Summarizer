@@ -33,7 +33,7 @@ public class LatentSemanticAnalysisTest {
 
   @Before
   public void setUP() {
-    props = PropertiesLoader.loadProperties();
+    props = new PropertiesLoader().loadProperties();
   }
 
 

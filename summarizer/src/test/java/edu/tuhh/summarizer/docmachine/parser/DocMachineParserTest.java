@@ -20,7 +20,7 @@ public class DocMachineParserTest {
   @Before
   public void setUP() {
     docParser = new DocMachineParser();
-    props = PropertiesLoader.loadProperties();
+    props = new PropertiesLoader().loadProperties();
   }
 
   @Test
