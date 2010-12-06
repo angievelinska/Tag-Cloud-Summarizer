@@ -1,5 +1,6 @@
 package edu.tuhh.summarizer.common;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Map;
@@ -11,7 +12,12 @@ import static org.junit.Assert.assertNotSame;
 /**
  * @author avelinsk
  */
-public class PropertiesLoaderTest { 
+public class PropertiesLoaderTest {
+  PropertiesLoader props;
+  @Before
+  public void setUP(){
+    props = new PropertiesLoader();
+  }
   @Test
   public void testLoadProperties() throws Exception {
     Properties props = PropertiesLoader.loadProperties();

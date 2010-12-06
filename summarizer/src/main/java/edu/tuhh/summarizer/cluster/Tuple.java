@@ -1,4 +1,4 @@
-package edu.tuhh.summarizer.identify;
+package edu.tuhh.summarizer.cluster;
 
 import edu.tuhh.summarizer.common.Document;
 import edu.tuhh.summarizer.common.Tag;

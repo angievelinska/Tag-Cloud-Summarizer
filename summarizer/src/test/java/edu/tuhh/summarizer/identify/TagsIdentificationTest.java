@@ -1,5 +1,6 @@
 package edu.tuhh.summarizer.identify;
 
+import edu.tuhh.summarizer.cluster.TagsIdentification;
 import edu.tuhh.summarizer.common.Document;
 import org.junit.After;
 import org.junit.Before;

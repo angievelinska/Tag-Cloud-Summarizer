@@ -23,6 +23,8 @@ public class PropertiesLoader {
       props = new Properties();
       FileInputStream fin = null;
       try {
+
+        //TODO: load properties with class loader
         fin = new FileInputStream(PROP_FILE);
         props.load(fin);
       } catch (IOException e) {
