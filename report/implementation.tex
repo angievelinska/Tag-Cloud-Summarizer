@@ -21,8 +21,8 @@ The real difficulty of LSA is to find out how many dimensions to remove - the pr
 
 TODO:test if inluding only terms that occur in more than one document improved \gls{LSA} performance with respect to generating precise tag clouds.\\
 
-\section{Latest development in the field of LSA}
-\label{sec:lsa:latest}
+\subsection{Latest development in the field of LSA}
+
 LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\
 
 at the end- improvements of lsa with the basics explained.\\
@@ -58,3 +58,84 @@ Example for presentation and evaluation of results, IR system:~\cite{SpamFilteri
 \item True/false positive rates
 \item Feature reduction
 \end{itemize}
+
+\subsection{Document set}
+
+\begin{center}
+\begin{tabular}{l  c}
+\hline
+\multicolumn{2}{c}{Document set}\\
+\hline
+Categories & 5 \\
+Documents & 20 \\
+\hline
+%\caption[Document set]{Overview of the constructed document set}
+\end{tabular}
+\end{center}
+
+The number of categories is five. For each category 5 documents were drawn randomly from the entire category. Table~\ref{eval:data_set} gives an overview of the constructed data sets. The document preprocessing
+involves parsing and stop word removal according to standard stop word lists. \\
+
+\begin{table} [!h]
+\begin{center}
+\begin{tabular} { c c l }
+\hline
+Id & Category & Document \\
+\hline
+1 & 2 & sample \\
+\hline
+\end{tabular}
+\caption[Document set]{Overview of the constructed document set}
+\end{center}
+\label{eval:data_set}
+\end{table}
+
+
+\subsection{Cluster labeling evaluation}
+
+To evaluate the quality of WCC, Popescul and Ungar’s method, and the standard
+keyword extraction algorithm RSP, we downloaded 150 documents from the digital library Citeseer, each of which containing author-defined keywords.
+
+To evaluate the WCC algorithm, we prepared a document set with author-defined keywords. The evaluation idea is to cluster the documents, label the resulting clustering, compute f1-f4, and measure to which extent the identified topic labels appear in the keyword list of at least one document of the associated cluster. To measure the extent, standard precision and recall values can be chosen. Note, however, that the precision value is more important in our scenario since usually only a few words (about one to five) are presented to a user. \\
+
+The clustering was done on the results from queries used for evaluation of \gls{LSA} (??).  \\
+The clustering was done on the prepared data set~\ref{eval:data_set}, used for evaluation of the \gls{IR} methods implemented in this work. \\
+
+Figure 3.15 shows precision and recall curves for \gls{WCC} depending on the number of extracted words per label. The values are averaged over 10 retries of the experiment, each time redrawing a new set of documents. The precision curve shows that one to five cluster labels can be identified at very high precision rates. (??check with my results?) \\
+
+\subsection{Results}
+
+
+\section{LSA evaluation from IR book}
+Dumais (1993) and Dumais (1995) conducted experiments with LSI on
+TREC documents and tasks, using the commonly-used Lanczos algorithm
+to compute the SVD. At the time of their work in the early 1990’s, the LSI
+computation on tens of thousands of documents took approximately a day
+on one machine. On these experiments, they achieved precision at or above
+that of the median TREC participant. On about 20% of TREC topics their
+system was the top scorer, and reportedly slightly better on average than
+standard vector spaces for LSI at about 350 dimensions. Here are some conclusions
+on LSI first suggested by their work, and subsequently verified by
+many other experiments. \\
+• The computational cost of the SVD is significant; at the time of this writing,
+we know of no successful experiment with over one million documents.
+This has been the biggest obstacle to the widespread adoption to
+LSI. One approach to this obstacle is to build the LSI representation on a
+randomly sampled subset of the documents in the collection, following
+which the remaining documents are “folded in” as detailed with Equation
+(18.21). \\
+• As we reduce k, recall tends to increase, as expected. \\
+• Most surprisingly, a value of k in the low hundreds can actually increase
+precision on some query benchmarks. This appears to suggest that for a
+suitable value of k, LSI addresses some of the challenges of synonymy. \\
+• LSIworks best in applicationswhere there is little overlap between queries
+and documents. \\
+The experiments also documented some modes where LSI failed to match
+the effectiveness of more traditional indexes and score computations. Most
+notably (and perhaps obviously), LSI shares two basic drawbacks of vector
+space retrieval: there is no good way of expressing negations (find documents
+that contain german but not shepherd), and noway of enforcing Boolean
+conditions. \\
+LSI can be viewed as soft clustering by interpreting SOFT CLUSTERING each dimension of the
+reduced space as a cluster and the value that a document has on that dimension
+as its fractional membership in that cluster. \\

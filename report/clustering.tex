@@ -1,8 +1,57 @@
-\chapter{Topic identification in clusters}
+\chapter{Cluster labeling}
+A major problem in text analysis is to determine the topics in a text collections and identify the most important, novel or significant relationships between topics. Clustering and visualizations (tag clouds) are key analysis methods in order to solve this problem.  In this chapter, we discuss three novel algorithms for cluster labeling, and in chapter~\ref{sec:tagclouds} we shall introduce using tag clouds as a visualization mean in \gls{IR} systems. \\
+
+\subsection{Clustering}
+
+Clustering groups of objects based on their similarities in so called clusters. The process of cluster labeling produces labels for these clustered groups of objects. Such methods are often used in \gls{IR} in the post processing phase of \gls{IR}~(fig.~\ref{fig:text_analysis} for visualization of retrieved documents. For example, similar search results can be grouped together when presenting results in search engines. This should help users to gain a fast overview on the retrieved results. It is important here to choose suitable labels of the categories defined in this way. If  \\
+
+\begin{itemize}
+\item Differential cluster labeling
+\item Cluster-internal labeling
+\end{itemize}
+
+Clustering algorithms can be divided into \textit{monothetic} and \textit{polythetic}, based on how the documents are assigned to different clusters~\cite{hierarchMonotheticClustering2004}. Monothetic algorithms assign a document to a cluster based on a single feature, while polythetic algorithms classify documents by overall degree of similarity/difference calculated over many properties. This makes monothetic clustering well suited for generating hierarchies and browsing search results, since a single feature, common to all documents in the cluster, describe each cluster. Users understand easily clusters generated in this way. K-means is an example of polythetic document clustering algorithm, where each cluster is described by several words of phrases. \\
+
+
+Some clustering algorithms attempt to find a set of labels first and then build
+(often overlapping) clusters around the labels, thereby avoiding the problem
+of labeling altogether (Zamir and Etzioni 1999, Käki 2005, Osi ´nski andWeiss
+2005). \\
+
+Carpineto et al.~\cite{surveyWebClusteringEngines2009} claim that there is a difference between clustering of data sets, and clustering of search results, returned from search engines: "in search results clustering description comes first". Thus, they propose a classification of clustering algorithms based on how well the clustering algorithms can generate sensible, comprehensive and compact cluster labels. \\
+
+\subsection{Cluster labeling}
+There is not a commonly accepted definition of cluster labeling in literature, as it is a relatively young field of research, as compared to clustering. \\
+
+Cluster labeling algorithms can be categorized in the following three categories, as suggested by Carpineto et al.~\cite{surveyWebClusteringEngines2009}: \\
+
+\textbf{Data-centric algorithms} \\
+Data-centric algorithms were the first ones to be implemented for cluster labeling. Here, clustering is done with some general clustering algorithm, and terms which are close to the cluster centroids are nominated as cluster labels. Cluster centroids are a collection of independent terms from all documents not related to each other. In order to define the terms from cluster centroid, one uses a frequency measure, such as $tf-idf$~(see fig.~\ref{lsa:tf_idf}). Next, we will present \gls{WCC} as an example for a data-centric algorithm.  \\
+
+\textbf{Description-aware algorithms} \\
+Description-aware algorithms assign labels during clustering process. Using monothetic term selection, one nominates the labels which are interpretable to human users. Suffix Tree Clustering is an example of such an algorithm, introduced by Zamir and Etzioni~\cite{suffixTreeClustering99}. Clustering and labeling and close related, and labeling influences the clustering process. Therefore, it is not possible to combine the labeling with any clustering algorithm. \\
+
+\textbf{Description-centric algorithms} \\
+These algorithms operate on the principle \textit{"description comes first"}, and in this sense are the opposite of the data-centric algorithms. The goal here is to find meaningful cluster labels. If there is not suitable label found, the cluster is useless for the users, and therefore is discarded. Description-centric algorithms are mainly applied for clustering of search results~\cite{surveyWebClusteringEngines2009}. We will introduce next two examples of such algorithms - Descriptive k-means and LINGO. \\ 
+
+
+
+Assume that a categorization $C$ of a document set $D$ is determined using an unsupervised approach. To present this categorization to a user, it is convenient to label the individual categories with characteristic terms. Among others, these terms called \textit{category labels} (or topic identifiers) should characterize the content of the associated category with respect to the remaining categories. This property implies that it should summarize a category's content and that it should discriminate a category from the other categories. This section resumes desired properties of category labels and reviews algorithms to generate such labels. Moreover, a  proposition for improvement of one topic identification approach, and evaluation of topic identification approach for flat categorizations(? or hierarchical ?) are contributed. \\
+
+
+When performing classification by clustering, the cluster labels are usually manually created by humans. However, this is a  very expensive approach. It is sensible to find and algorithm for automatically identifying topic labels or cluster labels. Therefore, we have chosen to present three new algorithms for cluster labeling, which offer improvements in different aspects of the classical methods used until now. We further implement the Weighted Centroid Covering algorithm  by Stein and zu Eissen\cite{Stein04topicidentification}, and make an evaluation of its performance. A novelty proposed by us is the improvement of this algorithm using external semantic knowledge. Therefore, we have developed an upper-level domain ontology for CoreMedia \gls{CMS} domain, which is the use case of this work.  (???) \\
+
+
+From IR book:\\
+There is good evidence that clustering of search results improves user experience and search result quality (Hearst and Pedersen 1996, Zamir and Etzioni 1999, Tombros et al. 2002, Käki 2005, Toda and Kataoka 2005), although
+not as much as search result structuring based on carefully edited category
+hierarchies (Hearst 2006). \\
+
+
 
 In this work the use of semantic knowledge to improve the results given by algorithms for cluster labeling is proposed.\\
 
-A major problem in text analysis is to determine the topics in a text collections and identify the most important, novel or significant relationships between topics. Clustering and visualizations (tag clouds) are key analysis methods in order to solve this problem.\\
+
 
 Clustering is widely used for recommendation, and for categorizing search. An example of a recommendation is "X" like these. The search engine will look for similar results as the ones presented.\\
 
@@ -13,9 +62,31 @@ clustering is also used in partitioning web documents into groups, a.k.a. genres
 search engines - categorization of search results or grouping (Yippy search engine)\\
 recommender systems - recommend new items based on user's taste \\
 
-When performing classification by clustering, the cluster labels are usually manually created by human beings. However, this is a  very expensive approach. It is sensible to find and algorithm for automatically identifying topic labels or cluster labels. Therefore, we have investigated the performance of Topic identification algorithm by Stein and zu Eissen\cite{Stein04topicidentification}. \\
+Cluster labeling algorithms:
+\begin{itemize}
+\item Description comes first
+\item Model based
+\end{itemize}
 
-\section{External topic identification}
+\subsection{Formal framework for cluster labeling algorithms}
+There still exists no uniformly agreed upon formal framework for cluster labeling algorithms.  \cite{Stein04topicidentification} and \cite{hoppe:2010} have given their formal definitions for cluster labeling algorithms. We base our definition on these sources. \\ 
+
+
+
+
+\section{Algorithms for cluster labeling}
+We will present three novel algorithms for cluster labeling.
+\subsection{Data-centric algorithms}
+Weighted Centroid Covering - 2004
+
+\subsection{Description-aware algorithms}
+
+\subsection{Description-centric algorithms}
+Descriptive k-means - 2007 \\
+
+Lingo - 2004 \\
+
+\section{Cluster labeling using external knowledge}
 The best scenario is that cluster labels should present a conceptualization of the documents in text corpus. This is not achieved by the algorithm presented. Technically, a hierarchical clustering algorithm can construct from each Document set $D$ a category tree. However, the labeling based on this hierarchical clustering will be far from a semantical taxonomy. This weakness of the algorithm presented can be corrected by using an external classification knowledge, e.g. an upper-level ontology. \\
 
 Unfortunately, domain ontologies usually have coverage limitations because not all the terms of the domain are included in the ontology.\\

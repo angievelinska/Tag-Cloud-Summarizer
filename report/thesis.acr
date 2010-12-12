@@ -1,19 +1,35 @@
 \glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
 \begin{theglossary}\glossaryheader
+\glsgroupheading{C}\relax \glsresetentrylist %
+\glossaryentryfield{CMS}{\glsnamefont{CMS}}{Content Management System}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{23}\delimN 
+		\setentrycounter{page}\glsnumberformat{31}\delimN 
+		\setentrycounter{page}\glsnumberformat{38}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
 \glossaryentryfield{IR}{\glsnamefont{IR}}{Information Retrieval}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{3\delimR 5}\delimN 
-		\setentrycounter{page}\glsnumberformat{7}\delimN 
-		\setentrycounter{page}\glsnumberformat{11}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{6\delimR 12}\delimN 
+		\setentrycounter{page}\glsnumberformat{15}\delimN 
+		\setentrycounter{page}\glsnumberformat{19}\delimN 
+		\setentrycounter{page}\glsnumberformat{21}\delimN 
+		\setentrycounter{page}\glsnumberformat{34}}}\glsgroupskip
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossaryentryfield{LSA}{\glsnamefont{LSA}}{Latent Semantic Analysis}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{7\delimR 12}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{9}\delimN 
+		\setentrycounter{page}\glsnumberformat{11}\delimN 
+		\setentrycounter{page}\glsnumberformat{16\delimR 20}\delimN 
+		\setentrycounter{page}\glsnumberformat{31\delimR 33}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{SVD}{\glsnamefont{SVD}}{Singular Value Decomposition}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{8}\delimN 
-		\setentrycounter{page}\glsnumberformat{10\delimN 11}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{16\delimR 19}}}\glsgroupskip
+\glsgroupheading{V}\relax \glsresetentrylist %
+\glossaryentryfield{VSM}{\glsnamefont{VSM}}{Vector Space Model}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{12}\delimN 
+		\setentrycounter{page}\glsnumberformat{14}\delimN 
+		\setentrycounter{page}\glsnumberformat{16}}}\glsgroupskip
 \glsgroupheading{W}\relax \glsresetentrylist %
 \glossaryentryfield{WCC}{\glsnamefont{WCC}}{Weighted Centroid Covering}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{4}\delimN 
-		\setentrycounter{page}\glsnumberformat{7}}}%
+		\setentrycounter{page}\glsnumberformat{7}\delimN 
+		\setentrycounter{page}\glsnumberformat{9\delimN 10}\delimN 
+		\setentrycounter{page}\glsnumberformat{22}\delimN 
+		\setentrycounter{page}\glsnumberformat{34}}}%
 \end{theglossary}\glossarypostamble

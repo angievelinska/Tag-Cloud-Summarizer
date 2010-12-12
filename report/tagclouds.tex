@@ -1,5 +1,5 @@
 \chapter{Tag Clouds}
-\label{sec:semannot}
+\label{sec:tagclouds}
 
 Tagging, which is one of the defining characteristics of Web 2.0 services, allows users to collectively classify and find information. Some websites include tag clouds as a way to visualize tags in a folksonomy.(4)\\
 
@@ -74,6 +74,51 @@ There are three main types of tag cloud applications used in social software.\\
 \end{enumerate}
 The following tag clouds were evaluated in order to select the solution that is most applicable for Tag Cloud Summarizer project.\\
 \begin{itemize}
+\item Yippi Cloud Creator (former Clusty) \footnote{\url{http://cloud.yippy.com/}}
 \item TagsTreeMaps\footnote{\url{http://tagstreemaps.sourceforge.net/TagsTreeMaps.html}}
 \item OpenCloud\footnote{\url{http://opencloud.sourceforge.net/}}
 \end{itemize}
+
+\section{Tag clouds construction}
+According to \cite{hoppe:2010}: \\
+Erstellung von Schlagwortwolken
+Tagging beschreibt die Aktivität, eine Ressource mit einem oder mehreren Schlüsselworten
+oder Schlüsselphrasen zu assoziieren. Ein Tag ist als Etikett oder Notiz zu verstehen,
+um zu einem späteren Zeitpunkt Dinge leichter wieder finden zu können. Tags dienen
+somit der Organisation von Ressourcen.
+Großer Beliebtheit erfreuen sich unter anderem kollaborative Tagging-Dienste wie
+Flickr (Bilder), del.icio.us (Internetseiten) oder Facebook (soziales Tagging). Beim kollaborativen
+Tagging annotieren Nutzer selbst die entsprechenden Ressourcen. Der auf diese
+Weise implizit entstehende sogenannte tagspace soll anschließend effizient durchsuchbar
+sein. Jedoch führt das manuelle Annotieren von Ressourcen zu Problemen, wie Golder
+u. Huberman (2006) aufzeigen. Synonyme und Polyseme verursachen dabei Probleme,
+die bereits in Kapitel 2.1.1 angesprochen wurden. So schließt eine Bildersuche mittels
+des Schlüsselworts Auto keine Bilder mit ein, die nur mit dem Synonym Pkw assoziiert
+sind. Ein weiteres Problem ist, das dieselben Ressourcen von verschiedenen Nutzern unterschiedlich
+annotiert werden. Fügt ein Nutzer als Schlüsselwort einem Bild Auto als
+Schlüsselwort hinzu, so wird ein anderer durch Zuweisung von Volkswagen Golf Mk5
+(A5/Typ 1K, 2003-2009) deutlich konkreter.
+Um Inkonsistenzen bei der Zuweisung von Tags zu vermeiden und dadurch die Retrievalqualität
+von Suchmaschinen zu steigern, wird automatisches Tagging eingesetzt.
+Dieses dient vor allem beim Annotieren von neuen Weblog-Nachrichten dazu, Empfehlungen
+für passende Schlüsselworte einem Nutzer vorzuschlagen.
+Brooks u. Montanez (2006) annotieren automatisch neue Nachrichten in Weblogs. Sie
+verwenden dazu die drei häufigsten Terme einer Nachricht, gewichtet nach dem tf-idf -
+Schema. Nachteil ist, dass Schlüsselworte somit auf Wort-Unigrammen und dem der
+Nachricht zugrundeliegenden Vokabular beschränkt sind.
+Mishne (2006) ermitteln zu neuen Nachrichten in Weblogs zunächst ähnliche Nachrichten,
+die von anderen Nutzern zuvor verfasst wurden. Anschließend werden einem Nutzer
+die dort verwendeten Schlüsselworte als Tags für eine neue Nachricht vorgeschlagen.
+Lee u. Chun (2007) setzen dagegen ein überwachtes Lernverfahren ein – ein neuronales
+Netz. Dieses wird auf einer Menge von Blog-Nachrichten trainiert, denen Tags zugewiesen
+sind. Anschließend können Empfehlungen für Tags für neue Nachrichten gegeben werden.
+Grundlage zur Erfassung von Tags sind Verfahren der Schlüsselwortbestimmung. Dabei
+werden häufige, durch tf-idf gewichteteWort-Bigramme in den Nachrichten ermittelt. Ob
+die ermittelten Bigramme auch allgemein häufig verwendet werden, wird anschließend
+mittels WordNet evaluiert.
+Neben der automatischen Empfehlung von Schlüsselworten wird ebenso versucht, aus
+dem tagspace eine Hierarchie abzuleiten (Brooks u. Montanez, 2006; Wu u. a., 2006).
+Solche Hierarchien dienen der Suchoptimierung. Da im Allgemeinen bei der Erstellung
+von Schlagwortwolken auf vorhandene Schlüsselworte zurückgegriffen wird, finden sich
+bis auf die Erstellung von Taxonomien aus Schlagworten keine Gemeinsamkeiten mit
+Ansätzen des Cluster-Labelings. 

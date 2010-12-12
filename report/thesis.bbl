@@ -13,6 +13,20 @@ B.~Stein and S.~M.~Z. Eissen, ``Topic identification: Framework and
 B.~Stein and S.~M. zu~Eissen, ``Topic identification,'' {\em KI}, vol.~21,
   no.~3, pp.~16--22, 2007.
 
+\bibitem{IRmodels09}
+D.~Hiemstra, ``Information retrieval models,'' in {\em Information Retrieval:
+  Searching in the 21st Century} (A.~G\"{o}ker and J.~Davies, eds.), UK: Wiley,
+  2009.
+
+\bibitem{probabilistic77}
+S.~Robertson, ``The probability ranking principle in {IR},'' vol.~33,
+  pp.~294--304, 1977.
+
+\bibitem{IRbook2008}
+C.~D. Manning, P.~Raghavan, and H.~Sch{\"u}tze, {\em Introduction to
+  Information Retrieval}.
+\newblock Cambridge, UK: Cambridge University Press, 2008.
+
 \bibitem{Dumais88usingLSA}
 S.~T. Dumais, G.~W. Furnas, T.~K. Landauer, S.~Deerwester, and R.~Harshman,
   ``Using {L}atent {S}emantic {A}nalysis to improve access to textual
@@ -28,14 +42,14 @@ S.~Deerwester, S.~T. Dumais, G.~W. Furnas, T.~K. Landauer, and R.~Harshman,
 S.~Dumais, ``{LSA} and {I}nformation {R}etrieval: {G}etting {B}ack to
   {B}asics,'' pp.~293--321, 2007.
 
+\bibitem{MatrixCompGolub96}
+G.~H. Golub and C.~F. Van~Loan, {\em Matrix computations (3rd ed.)}.
+\newblock Baltimore, MD, USA: Johns Hopkins University Press, 1996.
+
 \bibitem{Berry95usinglinear}
 M.~W. Berry, S.~Dumais, G.~O'Brien, M.~W. Berry, S.~T. Dumais, and Gavin,
   ``Using linear algebra for intelligent information retrieval,'' {\em SIAM
   Review}, vol.~37, pp.~573--595, 1995.
-
-\bibitem{MatrixCompGolub96}
-G.~H. Golub and C.~F. Van~Loan, {\em Matrix computations (3rd ed.)}.
-\newblock Baltimore, MD, USA: Johns Hopkins University Press, 1996.
 
 \bibitem{dumais91improving}
 S.~T. Dumais, ``Improving the retrieval of information from external sources,''
@@ -51,5 +65,39 @@ P.~Nakov, A.~Popova, and P.~Mateev, ``Weight functions impact on {LSA}
 P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
   {\em In Proceedings of the Students Prenetations at ESSLLI-2000},
   pp.~156--166, 2000.
+
+\bibitem{hierarchMonotheticClustering2004}
+K.~Kummamuru, R.~Lotlikar, S.~Roy, K.~Singal, and R.~Krishnapuram, ``A
+  hierarchical monothetic document clustering algorithm for summarization and
+  browsing search results,'' in {\em Proceedings of the 13th international
+  conference on World Wide Web}, WWW '04, pp.~658--665, ACM, 2004.
+
+\bibitem{surveyWebClusteringEngines2009}
+C.~Carpineto, S.~Osinski, G.~Romano, and D.~Weiss, ``A survey of web clustering
+  engines,'' {\em ACM Computing Surveys}, vol.~41, no.~3, pp.~1--38, 2009.
+
+\bibitem{suffixTreeClustering99}
+O.~Zamir and O.~Etzioni, ``Grouper: A dynamic clustering interface to web
+  search results,'' pp.~1361--1374, 1999.
+
+\bibitem{hoppe:2010}
+D.~Hoppe, ``{Cluster-Labeling: Paradigmen und Validierung},'' masterarbeit,
+  Bauhaus-Universi{\"a}t Weimar, Fakul{\"a}t Medien, Mediensysteme, June 2010.
+
+\bibitem{S-Space}
+D.~Jurgens and K.~Stevens, ``The {S}-{S}pace package: an open source package
+  for word space models,'' in {\em ACL '10: Proceedings of the {ACL} 2010
+  {S}ystem {D}emonstrations}, (Morristown, NJ, USA), pp.~30--35, Association
+  for Computational Linguistics, 2010.
+
+\bibitem{CrDuSh09}
+P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
+  of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
+  Analytics Science and Technology}, 2009.
+
+\bibitem{SpamFilteringLSI2008}
+G.~Wilfried, J.~Andreas, and R.~Neumayer, {\em Spam filtering based on latent
+  semantic indexing}, pp.~165--183.
+\newblock Springer, 2008.
 
 \end{thebibliography}

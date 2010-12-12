@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.3)  6 DEC 2010 10:50
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.8)  12 DEC 2010 14:51
 entering extended mode
 **thesis.tex
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.tex
@@ -250,6 +250,30 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count115
+\float@exts=\toks24
+\float@box=\box31
+\@float@everytoks=\toks25
+\@floatcapt=\box32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@indent=\dimen126
+\caption@parindent=\dimen127
+\caption@hangindent=\dimen128
+)
+\c@ContinuedFloat=\count116
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
@@ -312,9 +336,9 @@ Package: letltxmacro 2008/06/24 v1.3 Let assignment for LaTeX macros (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
 )
-\@linkdim=\dimen123
-\Hy@linkcounter=\count115
-\Hy@pagecounter=\count116
+\@linkdim=\dimen129
+\Hy@linkcounter=\count117
+\Hy@pagecounter=\count118
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2010/11/26 v6.81v Hyperref: PDFDocEncoding definition (HO)
@@ -322,7 +346,7 @@ File: pd1enc.def 2010/11/26 v6.81v Hyperref: PDFDocEncoding definition (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty"
 Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
 )
-\Hy@SavedSpaceFactor=\count117
+\Hy@SavedSpaceFactor=\count119
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -338,7 +362,7 @@ Package hyperref Info: Plain pages OFF on input line 4008.
 Package hyperref Info: Backreferencing OFF on input line 4013.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4228.
-\c@Hy@tempcnt=\count118
+\c@Hy@tempcnt=\count120
 LaTeX Info: Redefining \url on input line 4583.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\bitset.sty"
@@ -347,9 +371,9 @@ Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\bigintcalc.sty"
 Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
 ))
-\Fld@menulength=\count119
-\Field@Width=\dimen124
-\Fld@charsize=\dimen125
+\Fld@menulength=\count121
+\Field@Width=\dimen130
+\Fld@charsize=\dimen131
 Package hyperref Info: Hyper figures OFF on input line 5667.
 Package hyperref Info: Link nesting OFF on input line 5672.
 Package hyperref Info: Hyper index ON on input line 5675.
@@ -363,9 +387,9 @@ LaTeX Info: Redefining \pageref on input line 5741.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
 Package: atbegshi 2010/03/25 v1.12 At begin shipout hook (HO)
 )
-\Hy@abspage=\count120
-\c@Item=\count121
-\c@Hfootnote=\count122
+\Hy@abspage=\count122
+\c@Item=\count123
+\c@Hfootnote=\count124
 )
 
 Package hyperref Message: Driver (default): hdvips.
@@ -375,12 +399,12 @@ File: hdvips.def 2010/11/26 v6.81v Hyperref driver for dvips
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pdfmark.def"
 File: pdfmark.def 2010/11/26 v6.81v Hyperref definitions for pdfmark specials
-\pdf@docset=\toks24
-\pdf@box=\box31
-\pdf@toks=\toks25
-\pdf@defaulttoks=\toks26
-\Fld@listcount=\count123
-\c@bookmark@seq@number=\count124
+\pdf@docset=\toks26
+\pdf@box=\box33
+\pdf@toks=\toks27
+\pdf@defaulttoks=\toks28
+\Fld@listcount=\count125
+\c@bookmark@seq@number=\count126
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2010/03/16 v1.6 Rerun checks for auxiliary files (HO)
@@ -407,15 +431,15 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks27
-\XKV@tempa@toks=\toks28
-\XKV@depth=\count125
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+\XKV@depth=\count127
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\mfirstuc.sty"
 Package: mfirstuc 2009/11/03 v1.04 (NLCT)
-\@glsmfirst=\toks29
-\@glsmrest=\toks30
+\@glsmfirst=\toks31
+\@glsmrest=\toks32
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xfor\xfor.sty"
 Package: xfor 2009/02/05 v1.05 (NLCT)
@@ -426,14 +450,14 @@ Package: translator 2010/06/12 ver 1.10
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\translator
 -language-mappings.tex"))
-\gls@level=\count126
-\@gls@tmpb=\toks31
+\gls@level=\count128
+\@gls@tmpb=\toks33
 \gls@tmplen=\skip56
 \istfile=\write5
-\glskeylisttok=\toks32
-\glslabeltok=\toks33
-\glsshorttok=\toks34
-\glslongtok=\toks35
+\glskeylisttok=\toks34
+\glslabeltok=\toks35
+\glsshorttok=\toks36
+\glslongtok=\toks37
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypern
 av.sty"
@@ -453,17 +477,17 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTright=\skip59
 \LTpre=\skip60
 \LTpost=\skip61
-\LTchunksize=\count127
-\LTcapwidth=\dimen126
-\LT@head=\box32
-\LT@firsthead=\box33
-\LT@foot=\box34
-\LT@lastfoot=\box35
-\LT@cols=\count128
-\LT@rows=\count129
-\c@LT@tables=\count130
-\c@LT@chunks=\count131
-\LT@p@ftn=\toks36
+\LTchunksize=\count129
+\LTcapwidth=\dimen132
+\LT@head=\box34
+\LT@firsthead=\box35
+\LT@foot=\box36
+\LT@lastfoot=\box37
+\LT@cols=\count130
+\LT@rows=\count131
+\c@LT@tables=\count132
+\c@LT@chunks=\count133
+\LT@p@ftn=\toks38
 )
 \glsdescwidth=\skip62
 \glspagelistwidth=\skip63
@@ -473,22 +497,22 @@ sty"
 Package: glossary-super 2009/05/30 v2.01 (NLCT)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count132
-\ST@wd=\dimen127
+\c@tracingst=\count134
+\ST@wd=\dimen133
 \ST@rightskip=\skip64
 \ST@leftskip=\skip65
 \ST@parfillskip=\skip66
-\ST@pageleft=\dimen128
-\ST@headht=\dimen129
-\ST@tailht=\dimen130
-\ST@pagesofar=\dimen131
-\ST@pboxht=\dimen132
-\ST@lineht=\dimen133
-\ST@stretchht=\dimen134
-\ST@prevht=\dimen135
-\ST@toadd=\dimen136
-\ST@dimen=\dimen137
-\ST@pbox=\box36
+\ST@pageleft=\dimen134
+\ST@headht=\dimen135
+\ST@tailht=\dimen136
+\ST@pagesofar=\dimen137
+\ST@pboxht=\dimen138
+\ST@lineht=\dimen139
+\ST@stretchht=\dimen140
+\ST@prevht=\dimen141
+\ST@toadd=\dimen142
+\ST@dimen=\dimen143
+\ST@pbox=\box38
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.s
 ty"
@@ -500,34 +524,63 @@ Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
 \plpartopsep=\skip69
 \plitemsep=\skip70
 \plparsep=\skip71
-\pl@lab=\toks37
+\pl@lab=\toks39
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count135
+\calc@Bcount=\count136
+\calc@Adimen=\dimen144
+\calc@Bdimen=\dimen145
+\calc@Askip=\skip72
+\calc@Bskip=\skip73
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count137
+\calc@Cskip=\skip74
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\hypcap.sty"
 Package: hypcap 2008/09/08 v1.10 Adjusting anchors of captions (HO)
 )
 \glo@main@file=\write6
-Package glossaries Info: Writing glossary file thesis.glo on input line 25.
+Package glossaries Info: Writing glossary file thesis.glo on input line 28.
 \glo@acronym@file=\write7
-Package glossaries Info: Writing glossary file thesis.acn on input line 25.
+Package glossaries Info: Writing glossary file thesis.acn on input line 28.
 
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-\c@lstlisting=\count133
-\AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 53.
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux
+
+LaTeX Warning: Label `lsa:vsm' multiply defined.
+
+
+LaTeX Warning: Label `lsa:cosine_measure' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+\c@lstlisting=\count138
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: hypcap package is loaded.
+Package caption Info: longtable package is loaded.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2008/03/28 v1.2 longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box39
+Package hyperref Info: Link coloring OFF on input line 56.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -538,11 +591,11 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 )
-\c@section@level=\count134
+\c@section@level=\count139
 )
-LaTeX Info: Redefining \ref on input line 53.
-LaTeX Info: Redefining \pageref on input line 53.
-LaTeX Info: Redefining \nameref on input line 53.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.out)
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.out)
@@ -554,12 +607,12 @@ Dictionary: glossaries-dictionary, Language: English
 )
 File: img/STSlogo.eps Graphic file (type eps)
  <img/STSlogo.eps>
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -567,22 +620,43 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 File: img/CoremediaLogo.eps Graphic file (type eps)
 
 <img/CoremediaLogo.eps>
-Overfull \hbox (11.38736pt too wide) in paragraph at lines 71--72
+Overfull \hbox (11.38736pt too wide) in paragraph at lines 74--75
 [][][] 
  []
 
 [1
 
-] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.toc)
+] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\declaration.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--15
+
+ []
+
+) [1]
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\acknowledgements.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+) [2] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.toc
+[3
+
+])
 \tf@toc=\write9
-
-[1
-
-] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lof)
+ [4] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lof)
 \tf@lof=\write10
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\introduction.tex
-[2
+[5
 
 ]
 Chapter 1.
@@ -602,7 +676,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
- [3
+ [6
 
 ]
 Missing character: There is no ’ in font cmr12!
@@ -617,57 +691,294 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
+[7]
 File: img/text_analysis.eps Graphic file (type eps)
-<img/text_analysis.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+ <img/text_analysis.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-[5]
-Overfull \hbox (8.8084pt too wide) in paragraph at lines 47--48
+[8]
+Overfull \hbox (8.8084pt too wide) in paragraph at lines 46--47
 \OT1/cmr/m/n/12 sis, how-ever, are com-mon, e.g. be-tween trans-for-ma-tion and
  post-processing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+[9]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex [10]
+Chapter 2.
+
+Package caption Warning: \label before \caption on input line 14.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:ir_process' on page 11 undefined on input line 9.
+
+
+File: img/IR.eps Graphic file (type eps)
+<img/IR.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 9--22
+
+ []
+
+
+Package caption Warning: \label before \caption on input line 34.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:vsm' on page 11 undefined on input line 25.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+[11
+
+]
+File: img/vsm.eps Graphic file (type eps)
+ <img/vsm.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 29--40
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Package caption Warning: \label before \caption on input line 34.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:vsm' on page 13 undefined on input line 52.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
- []
-
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex [7]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[8
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Package caption Warning: \label before \caption on input line 14.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:ir_process' on page 15 undefined on input line 84
+.
+
+
+Package caption Warning: \label before \caption on input line 34.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:vsm' on page 15 undefined on input line 84.
+
+
+Package caption Warning: \label before \caption on input line 34.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:vsm' on page 15 undefined on input line 84.
+
+
+Package caption Warning: \label before \caption on input line 14.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:ir_process' on page 15 undefined on input line 84
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+[15]
+Missing character: There is no – in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+Overfull \hbox (2.58115pt too wide) in paragraph at lines 119--120
+[][]\OT1/cmr/m/n/12 After to-k-eniza-tion, one has to con-struct a term-documen
+t ma-trix (eq. [][][][]).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--162
+
+ []
+
+[17]
+File: img/svd.eps Graphic file (type eps)
+ <img/svd.eps>
+
+Package caption Warning: \label before \caption on input line 164.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `lsa:truncated_svd' on page 18 undefined on input line
+ 182.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+
+ []
+
+
+Overfull \hbox (20.2398pt too wide) in paragraph at lines 201--201
+[]\OT1/cmr/bx/n/17.28 Factors which in-flu-ence LSA per-for-mance 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\clustering.tex
+[20]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 4.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+[21
 
 ]
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ´ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
@@ -678,48 +989,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
  []
 
 
-Overfull \hbox (2.58115pt too wide) in paragraph at lines 28--29
-[][]\OT1/cmr/m/n/12 After to-k-eniza-tion, one has to con-struct a term-documen
-t ma-trix eq. ([][][][]).
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+Missing character: There is no ä in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--49
+
+ []
+
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 57--61
+
+Overfull \hbox (2.0631pt too wide) in paragraph at lines 56--57
+[][]\OT1/cmr/m/n/12 Clustering is widely used for rec-om-men-da-tion, and for c
+at-e-go-riz-ing search.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 58--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-File: img/svd.eps Graphic file (type eps)
-<img/svd.eps>
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
@@ -730,57 +1071,320 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--95
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+Missing character: There is no ö in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--104
+
+ []
+
+[25]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\tagclouds.tex
+[26]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Missing character: There is no – in font cmr12!
+
+Overfull \hbox (226.22098pt too wide) in paragraph at lines 8--10
+\OT1/cmr/m/n/12 Re-trieval". Jour-nal of New Mu-sic Re-search 37 (2): 101114. h
+ttp://www.informaworld.com/smpp/content db=all con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
 
-LaTeX Warning: Reference `sec:implementation' on page 12 undefined on input lin
-e 136.
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+[27
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+File: img/tagcloud.eps Graphic file (type eps)
+<img/tagcloud.eps> [28]
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
+
+ []
+
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ö in font cmr12!
+Missing character: There is no ß in font cmr12!
+Missing character: There is no ß in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ß in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ß in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no – in font cmr12!
+Missing character: There is no ß in font cmr12!
+Missing character: There is no ö in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ä in font cmr12!
+Missing character: There is no ß in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ü in font cmr12!
+Missing character: There is no ä in font cmr12!
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\implementation.tex
+Overfull \hbox (18.66988pt too wide) in paragraph at lines 83--1
+\OT1/cmr/m/n/12 lab-o-ra-tiven Tag-ging an-notieren Nutzer selbst die entsprech
+en-den Ressourcen.
+ []
+
+[30] [31]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+[32
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
+
+[33]
+
+Package caption Warning: \label before \caption on input line 90.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `eval:data_set' on page 34 undefined on input line 76.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+Missing character: There is no ’ in font cmr12!
+
+Overfull \hbox (2.18819pt too wide) in paragraph at lines 99--100
+[][]\OT1/cmr/m/n/12 To eval-u-ate the WCC al-go-rithm, we pre-pared a doc-u-men
+t set with author-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+Package caption Warning: \label before \caption on input line 90.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `eval:data_set' on page 34 undefined on input line 102
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+Missing character: There is no ’ in font cmr12!
+Missing character: There is no • in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no ” in font cmr12!
+Missing character: There is no • in font cmr12!
+Missing character: There is no • in font cmr12!
+Missing character: There is no • in font cmr12!
 ) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls)
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [12])
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\appendices.tex
-[13
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [35]
+[36]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex
+[37
 
 
 ]
 Appendix A.
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl [14
+File: img/ontology.eps Graphic file (type eps)
+<img/ontology.eps>)
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\sourceCode.tex
+[38
 
 ]
-[15
+Overfull \vbox (39.33897pt too high) has occurred while \output is active []
+
+
+[39]
+Appendix B.
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl [40
+
+]
+[41
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
+ [42]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
  (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DE7A9D084288301EC5E103AA3A8AC8D5;1046.
+(rerunfilecheck)             Checksum: 8CF149AE8DC8505BF57A71EBA15C2C8C;3528.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 9631 strings out of 494020
- 144928 string characters out of 3143905
- 248619 words of memory out of 3000000
- 12667 multiletter control sequences out of 15000+200000
- 13205 words of font info for 50 fonts, out of 3000000 for 9000
+ 10772 strings out of 494020
+ 165641 string characters out of 3143905
+ 271332 words of memory out of 3000000
+ 13768 multiletter control sequences out of 15000+200000
+ 15837 words of font info for 60 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 33i,15n,43p,1755b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,17n,73p,1755b,541s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (17 pages, 78560 bytes).
+Output written on thesis.dvi (43 pages, 209244 bytes).

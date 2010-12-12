@@ -10,6 +10,8 @@
 \usepackage{listings} 
 \usepackage[ngerman,english]{babel}
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage[small,bf]{caption}
 \usepackage{url}
 \usepackage[bookmarksnumbered,%
             pdffitwindow=true, %
@@ -20,12 +22,13 @@
 \usepackage{amssymb,amsmath}
 \usepackage[nonumberlist,acronym,toc]{glossaries}
 \usepackage{paralist}
+\usepackage{calc}
 \usepackage[all]{hypcap}
 
 \makeglossaries
 \newacronym{IR}{IR}{Information Retrieval}
 \newacronym{LSA}{LSA}{Latent Semantic Analysis}
-\newacronym{CMS}{CMS}{Content Management Systems}
+\newacronym{CMS}{CMS}{Content Management System}
 \newacronym{LSI}{LSI}{Latent Semantic Indexing}
 \newacronym{SVD}{SVD}{Singular Value Decomposition}
 \newacronym{VSM}{VSM}{Vector Space Model}
@@ -38,7 +41,7 @@
 \textwidth13cm
 \textheight22cm
 
-\usepackage{graphicx}
+%\usepackage{graphicx}
 \makeatletter
 \def\ScaleIfNeeded{%
 \ifdim\Gin@nat@width>\linewidth
@@ -74,44 +77,63 @@
 \Huge
 \hrulefill\\
 \bigskip
-Tag Cloud Control \\by Latent Semantic Analysis\\
-\hrulefill\\ \bigskip \bigskip
+\begin{center}
+Tag Cloud Control \\
+by Latent Semantic Analysis\\
+\end{center}
+\hrulefill\\ 
+\bigskip 
+\bigskip
+\large \textsc{Master's Thesis}\\
+\medskip
 \normalsize submitted by\\
 \large
-Angelina Velinska\\
-\vspace{0.5cm}
+Angelina \textsc{Velinska}\\
+\normalsize IMT\\
 \end{flushright}
 \end{minipage}
 
-\vspace{5.5cm}
+\vspace{2.5cm}
 
 \begin{minipage}[b]{1\linewidth}
-\begin{flushright}
-\bigskip
+\begin{flushleft}
 
-
-\end{flushright}
-\end{minipage}
-
-\begin{minipage}[b]{1\linewidth}
-\begin{flushright}
-\bigskip 
-%\bigskip
 supervised by\\
+\medskip
 \large
-Prof. Dr. Ralf M\"oller\\
-Dipl. Ing. Sylvia Melzer\\
-\large
-Software Systems Institute (STS)\\
-Technical University of Hamburg-Harburg\\
+Prof. Dr. rer. nat. habil.~Ralf \textsc{M\"oller}\\
+Dipl. Ing. Sylvia \textsc{Melzer}\\
+%\skip
+\normalsize 
+Software Systems Institute\\
+\medskip
+
+\large Prof. Dr.~Karl-Heinz \textsc{Zimmermann}\\
+\normalsize Institute of Computer Technology\\
+Hamburg University of Technology\\
+
 \bigskip
-Dr. Michael Fritsch\\
-%\bigskip
+\bigskip
+\large
+Dr.~Michael \textsc{Fritsch}\\
+\normalsize 
 CoreMedia AG\\
 Hamburg\\
-\bigskip 
+
+
+
+\end{flushleft}
+
+%\vfill
+
+\begin{center}
+% Bottom of the page
 \bigskip
-\end{flushright}
+\large
+\textsc{Hamburg University of Technology}\\
+{\large December, 2010} 
+\end{center} 
+
 \end{minipage}
 
 \end{titlepage}
@@ -121,10 +143,10 @@ Hamburg\\
 
 % don't put page numbers on declaration and acknowledgement pages:
 {\renewcommand{\thepage}{}
-%\pdfbookmark[0]{Declaration}{declaration}
-%\input{declaration}
-%\pdfbookmark[0]{Acknowledgements}{acknowledgements}
-%\input{acknowledgements}
+\pdfbookmark[0]{Declaration}{declaration}
+\input{declaration}
+\pdfbookmark[0]{Acknowledgements}{acknowledgements}
+\input{acknowledgements}
 }
 
 
@@ -143,23 +165,18 @@ Hamburg\\
 \input{clustering}
 \input{tagclouds}
 \input{implementation}
-\input{conclusion}
+%\input{conclusion}
 % prints the list of acronyms
 % call: latex thesis, makeglossaries thesis, latex thesis
 \printglossaries
 
 
 \begin{appendix}
-\input{appendices}
+\input{ontology}
+\input{sourceCode}
 \end{appendix}
 
-% After adding new references to the "references.bib" file, first invoke latex, then
-% bibtex on the references file, then latex again:
-% latex thesis
-% bibtex thesis
-% latex thesis
-
-% number the bibliography instead of alpha-numerial abbrev.
+% number the bibliography instead of alpha-numerical abbrev.
 %\bibliographystyle{alpha} 
 \pdfbookmark[0]{Bibliography}{references}
 \bibliographystyle{ieeetr}

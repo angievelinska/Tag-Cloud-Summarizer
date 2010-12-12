@@ -21,6 +21,8 @@ in other words, to adapt to the users' information need. \\
 
 The factors listed above have lead to the development of techniques that assist users to effectively navigate and organize search results, with the goal to find the documents best matching their needs. \emph{Document clustering} is a process of forming groups (clusters) of similar objects from a given set of inputs. When applied to search results, clustering organizes the results into a number of easily browsable thematic groups. It contributes to solving the problem of finding a meaningful ordering in a large amount of returned results. \emph{Latent Semantic Analysis} is another method from \gls{IR} that handles the problem of words having more than one meaning, or words ambiguity. It also filters out noise well, and reduced the number of unrelevant hits. Both techniques have been implemented in this work. \\
 
+\enlargethispage{+\baselineskip}
+
 After documents have been clustered into categories according to their topics, they have to be presented to the users. In particular, the categories have to be labeled with characteristic terms for browsing. Which words from the cluster to choose as labels is a difficult problem to solve. This work presents algorithms for cluster labeling. It evaluates an interesting new algorithm, called \gls{WCC}, proposed in \cite{Stein04topicidentification} and \cite{Stein07topicidentification}. Further, it proposes an improvement of \gls{WCC} by using external semantic knowledge for definition of the cluster labels, provided by a domain-specific ontology, which was developed as a part of this work.\\
 
 
@@ -31,14 +33,11 @@ As a part of this work, we have implemented techniques from the field of \gls{IR
 % text analysis sequence
 %
 \begin{figure}[htbp]
-\label{fig:text_analysis}
 	\centering
-\includegraphics[width=\ScaleIfNeeded]{img/text_analysis}
-%	\includegraphics[width=\ScaleIfNeeded]{img/text_analysis} 
-%\includegraphics[height = 0.7\textheight, trim = 30 100 30 280, clip, angle = 270]{timer}
- % or [scale=0.5]
+\includegraphics[scale=0.7]{img/text_analysis}
 	\caption[Workflow in IR systems]%
            {Workflow in IR systems}
+\label{fig:text_analysis}
 \end{figure}
 
 Most IR systems share common workflow, and follow common data processing stages. Some of the processes involved in text analysis are: lexical analysis to study word frequency distributions of words, retrieval, tagging/annotation, and visualization among the others. The workflow in \gls{IR} systems usually starts with \textbf{document ingestion}, where texts from the document corpus\footnote{Throughout this work we use \emph{document corpus} as a synonym to a document collection, in which \gls{IR} tasks are performed.}, which will be analyzed, are parsed or loaded into memory. After that comes the \textbf{pre-processing} phase, responsible for text extraction, tokenization, token-filtering, text folding, etc. In this phase, documents are often represented as vectors, whose components quantify properties like how often words occur in the document. In the \textbf{transformation} phase is where a dictionary, matrix or other form of index is created from the extracted texts. In this phase all extracted terms\footnote{A term in this context denotes a word after pre-processing of the texts. A term is a single unit, e.g. a word, a phrase, a number, or an abbreviation.} are assigned weights by applying a weight function. In Chapter~\ref{sec:lsa:factors_infl_lsa} are given more details about the most common weight functions used in \gls{IR} systems. Phase \textbf{analysis} can include retrieval process by querying the corpus, clustering, etc. \textbf{Visualization} phase is where concepts, query results, or summarizations extracted from the text collection are presented to users. And in the final \textbf{archiving} phase, results from the text analysis process can be saved.\\
@@ -53,6 +52,9 @@ This works contributes with the following:
 \begin{enumerate}
 \item It offers an overview of the current cluster labeling algorithms, and makes an evaluation of \gls{WCC}, proposed for unsupervised topic labeling of clusters in \cite{Stein04topicidentification} and \cite{Stein07topicidentification}.
 \item It proposes an improvement in \gls{WCC} algorithm, performing topic identification based on external knowledge. A light-weight ontology has been developed for this purpose, in order to be used as a reference for external semantic knowledge during cluster labeling. 
+
+\enlargethispage{-\baselineskip}
+
 \item A software application for executing an IR process has been developed. It implements \gls{LSA} for information retrieval(analysis phase from fig.~\ref{fig:text_analysis}, and \gls{WCC} for visualization of the main concepts contained in a document set in the form of a tag cloud. \\
 \end{enumerate}
 
