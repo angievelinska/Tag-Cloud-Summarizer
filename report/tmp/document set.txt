@@ -1,0 +1,23 @@
+
+Session, connection
+1. The session that is created while the connection is opened is also known as the connection session.
+2. The sessions of the connected clients will be closed and no more content changes are possible.
+3. The previous code fragment shows how a second session is created from an existing connection.
+4. Multiple sessions show their greatest potential in trusted applications which receive help in restricting user views while maintaining a shared cache.
+5. Having opened connection, all actions are executed on behalf of the single user whose credentials where provided when logging in.
+
+
+Server
+6. The state of the Master Live Server must be younger than the state of the Slave Live Server. 
+7. The rewrite module checks the availability of the requested file and, in the negative case, passes the request on to the Active Delivery Server.
+8. The directory layout of the Active Delivery Server has changed as well as the format of the configuration file.
+9. The CoreMedia Content Server is a central component that manages the content repository and the user authorization.
+10. The CoreMedia Content Management Server is the production system used to create and administrate content.
+
+
+Publication, workflow
+11. If the database does not allow to take online-backups ensure that all publications are finished and that the last publication was successful.
+12. The third task in the workflow aims to check if the change set is empty. Then, no publication is necessary and the workflow can be finished. 
+13. This element is used to define which information should be shown in the columns of the workflow list at the left side of the workflow window.
+14. Publication will be executed when finishing the task after all resources in the change set have been approved.
+15. The CoreMedia Workflow installation comes with four predefined workflows which cover the publication of resources.

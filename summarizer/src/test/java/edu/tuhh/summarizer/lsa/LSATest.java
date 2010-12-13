@@ -13,6 +13,7 @@ import java.util.Properties;
  * @author: avelinsk
  */
 public class LSATest {
+
   LSA lsa;
 
   @Before

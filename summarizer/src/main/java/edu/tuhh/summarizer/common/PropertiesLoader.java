@@ -4,7 +4,6 @@ import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 /**
@@ -13,7 +12,7 @@ import java.util.Properties;
 public class PropertiesLoader {
   private static Properties props;
   private final static Logger log = Logger.getLogger(PropertiesLoader.class);
-  private static final String PROP_FILE = "summarizer.properties";
+  private static final String PROP_FILE = "C:/tmp/summarizer.properties";
 
   public Properties loadProperties() {
     if (props != null && !props.isEmpty()) {
@@ -25,10 +24,9 @@ public class PropertiesLoader {
       FileInputStream fin = null;
       try {
 
-        InputStream inputStream = this.getClass().getClassLoader()
-                .getResourceAsStream(PROP_FILE);
+        fin = new FileInputStream(PROP_FILE);
+        props.load(fin);
 
-        props.load(inputStream);
       } catch (IOException e) {
         log.error("Error loading properties file: ");
         e.printStackTrace();

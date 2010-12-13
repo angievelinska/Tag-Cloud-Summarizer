@@ -8,7 +8,6 @@ import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.matrix.MatrixIO;
 import edu.ucla.sspace.text.Document;
-import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
 import edu.ucla.sspace.vector.DoubleVector;
 import edu.ucla.sspace.vector.Vectors;
@@ -27,34 +26,34 @@ public class LSA {
   private static Logger log = Logger.getLogger(LSA.class);
 
   public void runLSA() {
-    Properties props = new PropertiesLoader().loadProperties();
-    IteratorFactory.setProperties(props);
-    int noOfThreads = Runtime.getRuntime().availableProcessors();
+      Properties props = new PropertiesLoader().loadProperties();
+//      IteratorFactory.setProperties(lsaprops);
+      int noOfThreads = Runtime.getRuntime().availableProcessors();
 
-    long start = System.currentTimeMillis();
-    LatentSemanticAnalysis sspace = null;
-    try {
-      // initialize the semantic space
-      sspace = new LatentSemanticAnalysis();
-      Iterator<Document> iter = new OneLinePerDocumentIterator(props.getProperty("docFile"));
+      long start = System.currentTimeMillis();
+      LatentSemanticAnalysis sspace = null;
+      try {
+        // initialize the semantic space
+        sspace = new LatentSemanticAnalysis();
+        Iterator<Document> iter = new OneLinePerDocumentIterator(props.getProperty("docFile"));
 
-      //SVD reduction
-      processDocumentsAndSpace(sspace, iter, noOfThreads, props);
+        //SVD reduction
+        processDocumentsAndSpace(sspace, iter, noOfThreads, props);
 
-      File output = initOutputFile(props, "termSpace.sspace");
-      SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
-      log.info("Semantic space is saved after SVD reduction.");
-    } catch (IOException e) {
-      e.printStackTrace();
-    } catch (InterruptedException ex) {
-      ex.printStackTrace();
+        File output = initOutputFile(props, "termSpace.sspace");
+        SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
+        log.info("Semantic space is saved after SVD reduction.");
+      } catch (IOException e) {
+        e.printStackTrace();
+      } catch (InterruptedException ex) {
+        ex.printStackTrace();
+      }
+
+      saveDocumentSpace(sspace, props);
+
+      long end = System.currentTimeMillis();
+      log.info("LSA took " + (end - start) + "ms to index the document collection.");
     }
-
-    saveDocumentSpace(sspace, props);
-
-    long end = System.currentTimeMillis();
-    log.info("LSA took " + (end - start) + "ms to index the document collection.");
-  }
 
 
   protected File initOutputFile(Properties props, String fileName) {
@@ -126,7 +125,7 @@ public class LSA {
       vectors[i] = Vectors.asDouble(sspace.getDocumentVector(i));
     }
     //File sspaceFile = initOutputFile(props, "docSpace.sspace");
-    File matrixFile = initOutputFile(props,"docSpace.txt");
+    File matrixFile = initOutputFile(props, "docSpace.txt");
     File matrixCluster = initOutputFile(props, "cluster.txt");
     Matrix docSpace = Matrices.asMatrix(Arrays.asList(vectors));
     try {

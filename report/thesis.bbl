@@ -83,4 +83,20 @@ C.~Carpineto, S.~Osinski, G.~Romano, and D.~Weiss, ``A survey of web clustering
 O.~Zamir and O.~Etzioni, ``Grouper: A dynamic clustering interface to web
   search results,'' pp.~1361--1374, 1999.
 
+\bibitem{S-Space}
+D.~Jurgens and K.~Stevens, ``The {S}-{S}pace package: an open source package
+  for word space models,'' in {\em ACL '10: Proceedings of the {ACL} 2010
+  {S}ystem {D}emonstrations}, (Morristown, NJ, USA), pp.~30--35, Association
+  for Computational Linguistics, 2010.
+
+\bibitem{CrDuSh09}
+P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
+  of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
+  Analytics Science and Technology}, 2009.
+
+\bibitem{SpamFilteringLSI2008}
+G.~Wilfried, J.~Andreas, and R.~Neumayer, {\em Spam filtering based on latent
+  semantic indexing}, pp.~165--183.
+\newblock Springer, 2008.
+
 \end{thebibliography}

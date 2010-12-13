@@ -47,7 +47,7 @@ public class LatentSemanticAnalysisTest {
       for (int i = 0; i < documents.size(); i++) {
         lsa.processDocument(documents.get(i).reader());
       }
-      IteratorFactory.setProperties(props);
+//      IteratorFactory.setProperties(props);
       lsa.processSpace(props);
 
     } catch (IOException e) {

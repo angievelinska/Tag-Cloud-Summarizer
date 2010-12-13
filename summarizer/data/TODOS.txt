@@ -1,3 +1,10 @@
+
+TODOS:
+- LSA parses < 15 docs
+- IteratorFactory cannot find "C"
+- debug tagcloud
+- copy files after LSA has run to c:\tmp
+
 Project Ideas
 --------------
 1. At the first login to DocMachine, a cloud with the most popular tags is displayed.
@@ -17,11 +24,20 @@ Next step will be to parse texts from DocMachine directly into LSA.
 terms occuring only once
 6. create a test suite - a central runnable place to call all tests (or the chosen ones).
    configure a test suite for the cluster and topic identification evaluation. 
+7. static properties form summarizer need to be made available on the classpath of tagcloud webapp - the properties file,
+the term-space file, and the document-space matrix.
+8. add lucene to search results delivery - highlighting?
+9. remove the unused libs from summarizer\lib (jama,colt,etc.)
 
 
-Questions
+Experiments
 -------------
-1. How to integrate indexing in Lucene with SVD in LSA? SVD uses a matrix, no indexing, no feedables.
+1. i need a set of documents with several well-defined categories
+2. i nees a set of queries
+3. i need a definition of precision/recall measure
+
+How to test the implementation of an algorithm!?
+
 
 Report
 -------------
