@@ -2,22 +2,24 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{C}\relax \glsresetentrylist %
 \glossaryentryfield{CMS}{\glsnamefont{CMS}}{Content Management System}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{23}\delimN 
-		\setentrycounter{page}\glsnumberformat{31}\delimN 
-		\setentrycounter{page}\glsnumberformat{38}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{24}\delimN 
+		\setentrycounter{page}\glsnumberformat{32}\delimN 
+		\setentrycounter{page}\glsnumberformat{39}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
 \glossaryentryfield{IR}{\glsnamefont{IR}}{Information Retrieval}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter{page}\glsnumberformat{6\delimR 12}\delimN 
 		\setentrycounter{page}\glsnumberformat{15}\delimN 
 		\setentrycounter{page}\glsnumberformat{19}\delimN 
 		\setentrycounter{page}\glsnumberformat{21}\delimN 
-		\setentrycounter{page}\glsnumberformat{34}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{23}\delimN 
+		\setentrycounter{page}\glsnumberformat{35}}}\glsgroupskip
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossaryentryfield{LSA}{\glsnamefont{LSA}}{Latent Semantic Analysis}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter{page}\glsnumberformat{9}\delimN 
 		\setentrycounter{page}\glsnumberformat{11}\delimN 
 		\setentrycounter{page}\glsnumberformat{16\delimR 20}\delimN 
-		\setentrycounter{page}\glsnumberformat{31\delimR 33}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{22}\delimN 
+		\setentrycounter{page}\glsnumberformat{32\delimR 34}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{SVD}{\glsnamefont{SVD}}{Singular Value Decomposition}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter{page}\glsnumberformat{16\delimR 19}}}\glsgroupskip
@@ -30,6 +32,6 @@
 \glossaryentryfield{WCC}{\glsnamefont{WCC}}{Weighted Centroid Covering}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter{page}\glsnumberformat{7}\delimN 
 		\setentrycounter{page}\glsnumberformat{9\delimN 10}\delimN 
-		\setentrycounter{page}\glsnumberformat{22}\delimN 
-		\setentrycounter{page}\glsnumberformat{34}}}%
+		\setentrycounter{page}\glsnumberformat{23}\delimN 
+		\setentrycounter{page}\glsnumberformat{35}}}%
 \end{theglossary}\glossarypostamble
