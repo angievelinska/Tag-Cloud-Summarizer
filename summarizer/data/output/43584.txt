@@ -1,3 +1,0 @@
-
-
-The value of a DateProperty is represented by the java.util.Calendar class:

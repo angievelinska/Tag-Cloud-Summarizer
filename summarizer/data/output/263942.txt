@@ -1,3 +1,0 @@
-
-
-For the ease of editing, the Struct editor allows you to enter text, that might violate the proper format of a Struct property. This would result in an error message, if you try to save your document. 

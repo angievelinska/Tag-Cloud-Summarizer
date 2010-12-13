@@ -1,6 +1,0 @@
-
-
- <Editor>
-
-Child elements: <AuthenticationFactory>, Locale>?, <Preview>, <PropertyModelFactory>?, <RemoteControl>? <DocumentTypes>?, <Documents>?, <Explorer>*, <ResourceChooser>?, <Query>?, <Search>?, <SpellChecker>, <PropertyLanguageResolverFactory>, <ResourceNamingFactory>?, <Workflow>?, <Processes>?, <FrameFactory>?, <WebBrowsers>, <WebContext>*
-Parent elements:

@@ -1,7 +1,0 @@
-
-
-If you want to install the CoreMedia CMS Portal Integration proceed as follows (see the Content Applications Developer Manual for details):
-Select the CoreMedia CMS Portal Integration option and click [Next].
-
-The next window opens up where you can select the portlets for the supported portal server (Portlet for ...) and a development tool (PortletEmulation Development Tool)
-

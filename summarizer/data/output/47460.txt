@@ -1,3 +1,0 @@
-
-
-The Generator's getInputStream() method requires a cacheable template!

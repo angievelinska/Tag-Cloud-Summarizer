@@ -1,6 +1,0 @@
-
-
-Defining a dashboard view
-
-We recommend that you copy an existing view definition and adapt its properties:
-

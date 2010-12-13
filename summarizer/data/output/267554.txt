@@ -1,4 +1,0 @@
-
-
- Type Java type CapPropertyDescriptor type Blob n.a. BLOB Boolean java.lang.Boolean BOOLEAN Date java.util.Calendar DATE Integer java.lang.Integer INTEGER String java.lang.String STRING Content com.coremedia.cap.content.Content n.a. Version com.coremedia.cap.content.Version n.a. Content List n.a. LINK list Markup com.coremedia.xml.Markup MARKUP User com.coremedia.cap.user.User n.a.
-

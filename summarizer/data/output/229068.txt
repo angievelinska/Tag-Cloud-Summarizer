@@ -1,5 +1,0 @@
-
-
-The CoreMedia Search Engine adds full-text search capabilities to the CoreMedia CMS. You can use it to quickly find documents of a CoreMedia Content Server and content beans of a Content Application Engine  by their textual data. It is possible to search for text in binary data of many supported formats.
-
-Document search is available in the CoreMedia Editor and the CoreMedia WebEditor. You can integrate search functionality into your website and custom applications.

@@ -1,3 +1,0 @@
-
-
-The Active Delivery Server is a component for the delivery of content.

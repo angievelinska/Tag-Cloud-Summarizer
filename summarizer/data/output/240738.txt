@@ -1,4 +1,0 @@
-
-
- Property Type Operators Result Set Ordering Criterion StringProperty 'contains' (substring) Per default cannot be used as a result set ordering criterion IntegerProperty =, !=, >, >=, <, <= Per default cannot be used as a result set ordering criterion BooleanProperty 'is true', 'is false' Per default cannot be used as a result set ordering criterion DateProperty =, !=, >, >=, <, <= Per default cannot be used as a result set ordering criterion
-

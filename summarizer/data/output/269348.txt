@@ -1,4 +1,0 @@
-
-
-Each document type consists of several properties describing the name and the type of each value.  The Unified API represents property declarations as CapPropertyDescriptor objects.  For the WebService they are mapped to PropertyDescriptor objects, since you cannot enhance the UAPI with JAXB annotations. A property has no ID.  Instead, it is uniquely determined by its name and by the ID of the declaring document type.  Thus the implementation PropertyDescriptorImpl needs two setters in order to enable the JAX-WS runtime to initialize it from incoming PropertyDescriptor arguments.
-

@@ -1,9 +1,0 @@
-
-
-In this example PADS instantiates a builder of class com.coremedia.ext.pads.ExampleBuilder and uses it to compute a value for the configured URI. The builder-specific argument to the right of the colon uniquely identifies a value and tells the builder what to build. Note, that you must only use characters that are allowed in URIs and you have to escape special characters like ' &' for the XML representation the configuration uses.
-
-Instead of configuring the root key in the XML configuration file, you could also call method addRoot(String) on the padsConfig object in WEB-INF/config.bsh (see the API documentation of interface com.coremedia.cap.generator.pads.PadsConfiguration).
-
-If you want to compute values for resources of a certain type and below a folder, you can use the RootSelector element below the Pads element.
-
-Example:

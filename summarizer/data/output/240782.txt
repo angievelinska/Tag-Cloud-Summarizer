@@ -1,6 +1,0 @@
-
-
-Install the editor extension Bean Query Editor to enable editors modify Rule query expressions. Then customize the CoreMedia Editor to use the Bean Query Editor as a custom property editor for the rule query expression. 
-
-Please refer to the Editor Developer Manual on how to integrate the Bean Query Editor into the CoreMedia Editor and how to use custom property editors.
-

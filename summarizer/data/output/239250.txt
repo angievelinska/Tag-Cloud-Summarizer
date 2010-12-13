@@ -1,4 +1,0 @@
-
-
-You use Java 1.5 with Sun OS. Components do not respond on request. The CPU load of the components is high, the thread dump shows threads which use nio-classes.
-

@@ -1,9 +1,0 @@
-
-
- By default, access control is switched off, so that the Active Delivery Server behaves exactly like in versions up to CAP 4.0. In order to enable access control, you have to set Generator#accessControlEnabled to "true", using the config.bsh file:
-
-
-3* generator.setAccessControlEnabled(true)
-
-
-If you leave access control off, you should not experience a performance penalty for the unused functionality.

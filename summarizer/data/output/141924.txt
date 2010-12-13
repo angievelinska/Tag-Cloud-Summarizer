@@ -1,5 +1,0 @@
-
-
-If you are using multi-site management, you can not create links between documents in different base folders. Therefore, only documents from inside the current base folder are shown in the resource chooser.
-
-Only administrators are - in exceptional cases - allowed to create links between different base folders.

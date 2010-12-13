@@ -1,3 +1,0 @@
-
-
-A content management system is used to organize content; that sounds quite simple. But when you dive deeper into the sea of content management you will find different meanings. For some people content management means the management of documents, scanned bills and the like. For others, it is the management of whole web pages.

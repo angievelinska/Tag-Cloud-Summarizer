@@ -1,3 +1,0 @@
-
-
-When you open the publication window, you will see different tabs. You can use them, to get information about the publications. If you publish only few resources, the queue will be mostly empty.

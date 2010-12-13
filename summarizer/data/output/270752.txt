@@ -1,4 +1,0 @@
-
-
-When you are logged into the preview (management) web site as a sufficiently authenticated editor (such as admin), you can change the portlet's preferences by switching to CONFIG mode using the Preview-based Editing menu of the portlet. To do so, proceed as follows:
-Right-click on the portlet window. The portlet window looks as follows:

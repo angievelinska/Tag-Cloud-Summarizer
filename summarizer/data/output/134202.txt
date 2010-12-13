@@ -1,5 +1,0 @@
-
-
-These options are common for most of the server utilities, and we will therefore not mention them in detail for each tool. Note that most server utilities require administrative permissions and thus can only be run with users of administrative groups. 
-
-If you are not sure how to use a utility, just start it without any options to print out a summary of its usage.

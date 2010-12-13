@@ -1,5 +1,0 @@
-
-
-In order to return to the calling JSP, the Editing Services needs to know when it should return to the entry point. For that you need to define a custom NavigationHandler (for details see the Editing Services chapter) which needs to be set for all commands/actions finishing the editing process. 
-
-The custom NavigationHandler, which is described in the next subsection, has the class RedirectingToEntryURLNavigationHandler. It sends a redirect back to the client with the URL saved when beginning editing.

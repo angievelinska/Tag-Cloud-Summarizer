@@ -1,8 +1,0 @@
-
-
-Configure in the following files:
-
-editor.properties
-editor-startup.xml
-
-The settings of editor.properties will be overwritten by the editor-startup.xml settings.

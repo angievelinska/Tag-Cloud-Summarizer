@@ -1,3 +1,0 @@
-
-
-You can define the browser for the web extensions (see chapter) using the element <WebBrowsers>. Multiple browsers for different locales and operating systems can be defined. The browser for the preview can be chosen from the File|Preview menu of the overview window. If you do not define any browser, the web extensions cannot be executed. 

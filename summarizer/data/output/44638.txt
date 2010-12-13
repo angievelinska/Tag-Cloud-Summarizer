@@ -1,3 +1,0 @@
-
-
-CoreMedia SCI does not run without specifying document types and their fields (see the Administration and Operation Manual), e.g.

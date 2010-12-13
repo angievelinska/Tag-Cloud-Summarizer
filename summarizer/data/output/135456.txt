@@ -1,8 +1,0 @@
-
-
-Configure in the following files:
-
-contentserver.properties
-feeder.xml
-
-Unless otherwise noted, configuration changes take effect when the Search Engine Feeder starts or restarts.

@@ -1,9 +1,0 @@
-
-
-Group
-
-Grammar: EMPTY 
-
-The Group element is used to specify a single constant group value within expressions, variable initializers or policies. Either 'value' or 'name' must be specified.
-
-If you delete a group in the user administration, which you have used in the Group element of an uploaded workflow definition, its polices will fail. 

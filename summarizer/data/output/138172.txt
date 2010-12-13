@@ -1,7 +1,0 @@
-
-
-Refer to the Administration and Operation Manual for more information on how to connect CoreMedia CMS with an LDAP server and on how to create users by means of the built-in user management.
-
-The access control services of the content and workflow repositories must take the structure of users and groups into account when computing rights. The WorklistService, too, is dependent on the specific user who accesses the worklist.
-
-The Javadoc of the Unified API is the recommended source for in-depth descriptions of individual classes and methods. Look at the interfaces UserRepository, User, Group, and Member in the package com.coremedia.cap.user primarily.

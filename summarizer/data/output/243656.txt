@@ -1,3 +1,0 @@
-
-
-Each workflow definition describes one process. A process can take several states as shown in Image 4.1.2a.

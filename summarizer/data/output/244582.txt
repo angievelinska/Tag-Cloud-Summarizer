@@ -1,8 +1,0 @@
-
-
- AttributeLoginPredicate Options Description negative Same as for NameLoginPredicate depth 
-
-The AttributeLoginPredicate is not restricted to the user¿s attributes but may also consider the attributes of the groups, he is member of. The integer value specifies the depth of group nesting (defaults to 0). '-1' means the nesting is unrestricted. The attributes are the strings returned by the method call hox.corem.usermanager.User#getAttributeKeys(). For the LDAP server, these are the values configured with the properties com.coremedia.ldap.user.customattrs for a user and com.coremedia.ldap.group.customattrs for a group in the jndi-ad.properties file. The values are logically or-ed. If one of the values matches the regular expression, the predicate returns true.
-
-E.g. with depth=0 only the LDAP attributes of the user are used. With depth=1 the LDAP attributes of the user and the LDAP attributes of his direct groups are matched against the regular expression. <service>.regex Same as for NameLoginPredicate regex Same as for NameLoginPredicate
-

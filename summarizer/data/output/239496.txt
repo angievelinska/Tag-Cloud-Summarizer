@@ -1,4 +1,0 @@
-
-
-Now you will be asked for the destination directory etc. as described in the "General Installation Information" chapter. Afterwards, you will be prompted to configure the WES. At first you might configure the server.xml file.
-

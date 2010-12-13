@@ -1,3 +1,0 @@
-
-
-In CoreMedia SCI 4.1, the user/password combination admin/admin was used to connect to the Master Live Server for replication. In CoreMedia SCT 4.2 this combination changed to replicator/replicator. You have to use initcapserver on the  Master Live Server and adapt the replicator.user and replicator.password properties in the replicator.properties files on the Slave Live Servers to the new user name and password.

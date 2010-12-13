@@ -1,7 +1,0 @@
-
-
-Then
-
-Grammar: EMPTY 
-
-Then defines the successor of the If task if the condition evaluates to true, see If for details and an example. 

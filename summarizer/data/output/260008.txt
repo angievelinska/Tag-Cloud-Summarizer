@@ -1,8 +1,0 @@
-
-8#
-Enter the database properties and click Next to proceed with the installation.
-
-If you have chosen to install a Content Delivery Environment you can configure it with the following installer windows. The database driver will be copied to the delivery/lib directory.
-
-
-

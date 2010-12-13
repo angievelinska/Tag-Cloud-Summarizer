@@ -1,3 +1,0 @@
-
-
-Make sure to open the preview and live CAEs in different browser instances to avoid lost sessions in the preview CAE. This would occur because the session cookie does not contain the port.

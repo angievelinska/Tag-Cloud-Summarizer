@@ -1,4 +1,0 @@
-
-28#
-Click [Finish] to finish the installation of the CoreMedia Content Server.
-

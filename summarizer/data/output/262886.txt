@@ -1,3 +1,0 @@
-
-3#
-If you operate a CoreMedia Analytics Engine, select Tracking Analytics Extension when installing a delivery CAE and Insite Analytics Extension when installing a preview CAE. Click [Next].

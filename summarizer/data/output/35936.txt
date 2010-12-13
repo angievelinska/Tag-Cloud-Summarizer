@@ -1,5 +1,0 @@
-
-
-DisableTimer
-
-Use this action to disable a timer. 

@@ -1,7 +1,0 @@
-
-
-There is no automatic recalculation of the user sets if there are changes in the user management. This may cause the following effects:
-
-New users or users assigned to new groups won't see any offers already pending.
-Users removed from groups won't see already offered task disappear from their task lists. This is not a security problem, since the rights are checked on every access on the server.
-

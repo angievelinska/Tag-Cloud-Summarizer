@@ -1,3 +1,0 @@
-
-
-Users can customize the appearance and/or behaviour of a portlet by editing the portlet's associated preferences if supported by the portal. The Hello World example portlet supports the portlet edit mode to edit a single preference value: the displayed message.

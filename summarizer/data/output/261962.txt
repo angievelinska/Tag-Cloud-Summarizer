@@ -1,3 +1,0 @@
-
-
-Please note: The Analytics Dashboard will only start displaying information after an hour-shift (dashboard time resolution) and two minutes (the configured session timeout). You should then see your clicks in the performance, top viewed pages and entry and exit pages in the dashboard view (when selecting last 24 hours as time interval).

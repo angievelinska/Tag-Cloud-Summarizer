@@ -1,6 +1,0 @@
-
-
- Parameter Description -b <binary path> Retrieve a binary from the given path.
- -p <page path> Retrieve a page from the given path.
- -url <service url> The URL of the endpoint
-

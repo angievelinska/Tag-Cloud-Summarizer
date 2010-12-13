@@ -1,3 +1,0 @@
-
-
-All field types have the attribute Name, defining the name by which the field can be referenced in a document.

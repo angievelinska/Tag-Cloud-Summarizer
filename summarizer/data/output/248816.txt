@@ -1,7 +1,0 @@
-
-
-When using user information, note that all documents on the Live Server are created and changed by the user set up for publication (publisher) on the Live Server. In brief, user information is not transferred to publication. Therefore, templates requesting user information are only suitable for internal editorial use on the Content Server. 
-
-You can also query for Documents that already lie in the archive. Using the property name lastFolderId_, the last folder apart from the archive in which the document was located can be searched for. If the document is not in the archive, this is the current folder. Otherwise, it is the last folder before archiving. The property helps when you want to restore the contents of an accidentally deleted folder. At present, it is not possible to obtain the value of the lastFolderId_ property of a document with Document#getProperty or another method. 
-
-See Example 4.2.4a for a demonstration of the construction of a query. In a series of calls, new expression components are added to the newly-created Query object in reverse Polish notation (also known as Postfix notation) and then linked. 

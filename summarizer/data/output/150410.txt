@@ -1,3 +1,0 @@
-
-
-PostgreSQL requires regular maintenance for proper operation. Please see the PostgreSQL manual for VACUUM and ANALYZE. You may also want to use pg-autovacuum.

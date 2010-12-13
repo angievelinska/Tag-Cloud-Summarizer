@@ -1,3 +1,0 @@
-
-
-The Differencing Service comes with its own set of JSP tags defined in the tag library html_diff.tld. The following table describes these tags.

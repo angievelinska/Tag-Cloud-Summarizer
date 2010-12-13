@@ -1,8 +1,0 @@
-
-
-<ModelClass>
-
-
-Child elements: 
-
-Parent elements: <PropertyType>

@@ -1,3 +1,0 @@
-
-
-At this point, the transition from coremedia DTD to coremedia-richtext-1.0.dtd occurs. The template generates the coremedia field element for the document field Text and the coremedia-richtext-1.0.dtd element <div>, which is filled with <p> elements.

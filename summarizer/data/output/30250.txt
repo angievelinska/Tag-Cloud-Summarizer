@@ -1,3 +1,0 @@
-
-
-Property editors are connected with fields in document types or with variables in workflows. In this way, for example, you can apply a combo box to a field.

@@ -1,8 +1,0 @@
-
-
-The Proactive Engine is a component for computing values and keeping them up to date. This chapter describes Proactive Engine related administration issues without explaining the underlying concepts. Have a look at the Content Application Developer Manual for further details.
-
-Configuration
-
-The Proactive Engine application template's files are structured as
-

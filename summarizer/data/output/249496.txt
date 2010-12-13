@@ -1,5 +1,0 @@
-
-
-Except for the variable iterationStart all variables mentioned in the previous table are set in the task EvaluateAggregationStrategy. This task contains an invocation of the AggregationStrategyAction which sets a number of workflow variables for controlling the integration based on the results of the import phase. For example, the strategy may decide to delay the aggregation if some data could not be correctly retrieved. The action can be changed by changing the custom section in the task EvaluateAggregationStrategy.
-
-Your implementation of the aggregation strategy and in fact all of your extensions may write to additional variables, which are preferredly defined in a special custom section in the header. You may choose to make your variables directly accessible by including them in the assignment or the initial assignment.

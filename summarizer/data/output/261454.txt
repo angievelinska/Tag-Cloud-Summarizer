@@ -1,3 +1,0 @@
-
-
-This instruction does not work for a preview web application with enabled Preview-based Editing, login and the like. It only applies to a delivery environment CAE.

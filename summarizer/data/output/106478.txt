@@ -1,3 +1,0 @@
-
-
-CoreMedia SCI offers the possibility of storing structured text in an XMLProperty. In the generator API the value of such a property is accessed via the getDomProperty method:

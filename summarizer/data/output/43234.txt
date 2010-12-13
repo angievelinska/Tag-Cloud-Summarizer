@@ -1,5 +1,0 @@
-
-
-An unparser is a Java class that cares about the actual syntactic representation of your text. Suppose you have a DOM tree in memory and would like to write it into the file system or to the JSP writer. This is where the Unparser comes in. The unparsers provided are all subtypes of SaxUnparser, which means that they use SAX events to generate the actual XML (or SGML in case of the SgmlUnparser).
-
-Consult the following table which unparser fits your needs best.

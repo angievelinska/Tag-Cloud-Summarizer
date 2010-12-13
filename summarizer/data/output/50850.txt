@@ -1,3 +1,0 @@
-
-
-The third alternative is the path of least resistance. Be aware though that XML has a lot of fine points on the syntactic side. Unless you're very experienced you should avoid this method at all costs. The Unparsers will take care of the syntax hassle for you. However if you're experienced a combination of the three method can lead to very processing effective templates with a small  memory footprint.

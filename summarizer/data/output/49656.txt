@@ -1,7 +1,0 @@
-
-
-This template first includes the wage stylesheet, which is necessary for correctly displaying the toolbar we will be using for editing the LinkList. It then loads the JavaScript packages and installs a WAGE FocusManager. A simple text input field is rendered for the name property of the document.
-
-For editing the pictures LinkList property of a Dish document, first a toolbar is included for rendering command buttons (see below). Then the LinkList itself is rendered using the "edit" view. This will also instantiate a JavaScript LinkList editor component, which we'll need later for adding new resources to the LinkList. The "addPicturesToLinkList" view for the current folder will render all Picture documents in a folder and the JavaScript commands to add Pictures to the LinkList.
-
-The resourceId is submitted as hidden input field, and a submit button is rendered which will submit "commit" as "action_" parameter. 

@@ -1,5 +1,0 @@
-
-
-If you want to create a new navigation channel in an existing site, proceed as follows:
-Open the Navigation Explorer.
-Select the parent channel or site to create the new channel in and click the toolbar button 

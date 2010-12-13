@@ -1,7 +1,0 @@
-
-
-The Starter Kit assumes that a site consists of a set of hierarchical pages that form a tree. As said above, each page on a site has a dedicated URL, where the sub-page adds a segment to the parent page¿s URL. The building blocks of pages are navigation nodes and leaf nodes. Both types of nodes specify a segment. Each leaf node consists of a document that must allow the parent navigation node as its navigation context.
-
-Like pages, navigation nodes of one site also form a tree, i.e. each navigation node has exactly one or no parent navigation node. If it has a parent, it is called the (direct) child of that navigation node. If it has no parent, is it called a root navigation and represents the home page or entry page of a Starter Kit site.
-
-As an example of how Starter Kit URLs are structured, consider the following imaginary demo content URL:

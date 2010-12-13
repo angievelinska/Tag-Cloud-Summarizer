@@ -1,5 +1,0 @@
-
-
-It is important to submit the current resource as a request parameter (e.g. as a hidden parameter as shown above) so that the right resource is modified and also for the CoreMedia ResourceActionForward (see below) to work. The parameter name to be used is defined as a constant in the CMRequestProcessor, but you may also use the name "resource" directly.
-
-It would also have been possible to write plain HTML with Java scriptlets instead of using the Struts tag libraries for most of the tags used in this example. The next code block shows the HTML that will be generated out of the tags of this example if no error occurred:

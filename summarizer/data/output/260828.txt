@@ -1,6 +1,0 @@
-
-2#
-Select the components you want to install and click [Next].
-
-If you have selected the CAE web application template and extensions, then the next window opens up. You can choose to install the CAE template alone or together with one or many of the extensions. The extensions do not interfere with each other.
-

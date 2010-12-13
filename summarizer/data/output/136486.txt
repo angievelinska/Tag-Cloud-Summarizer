@@ -1,5 +1,0 @@
-
-
-Line 1: You have to import the WfServer class which you will find in com.coremedia.workflow. You need it to access the repository.
-
-Line 4 - 13: This method gets the content of the document defined via the given id. The important parts are line 6 and 7. Here the method getConnection() of the class WfServer is used to get a CapConnection object. With this object and its getContentRepository() method you can access the CoreMedia Content Management Server repository using the Unified API. With the method getContent(id) you retrieve a Content object. In the last step you fetch the XML representation from the Content using the method getMarkup(field).toString() which returns a java.lang.String (see the Unified API documentation for details). This string may be inserted into the mail.

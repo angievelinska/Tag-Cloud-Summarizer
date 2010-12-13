@@ -1,3 +1,0 @@
-
-2#
-Choose the option Portlet Config Mode from the menu. The portlet switches to CONFIG mode.

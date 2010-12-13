@@ -1,3 +1,0 @@
-
-
-If the template is configured exclusively for displaying documents, you can work directly with the corresponding API class: 

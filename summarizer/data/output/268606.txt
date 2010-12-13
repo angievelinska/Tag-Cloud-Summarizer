@@ -1,6 +1,0 @@
-
-
-Column classes for workflows
-
- Class Description hox.corem.editor.workflow.columns.WorklistDetailColumn Shows some information about the WfInstance (task or process) in the workflow list. hox.corem.editor.workflow.columns.WorklistProcessColumn Shows some process information in the workflow list.  The process is either the WfInstance itself or the parent process in case the WfInstance is a task.
-

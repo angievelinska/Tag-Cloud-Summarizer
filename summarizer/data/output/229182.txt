@@ -1,3 +1,0 @@
-
-
-The CoreMedia Search Engine Feeder is an integrated component of the CoreMedia Content Server. Configure the Search Engine Feeder of the CoreMedia Content Management Server to provide full-text search for documents of the Content Management Environment, for example in the CoreMedia Editor and CoreMedia WebEditor. Configure the Search Engine Feeder of the CoreMedia Master Live Server to provide full-text search for documents of the Content Delivery Environment, for example on the website.

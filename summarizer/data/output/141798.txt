@@ -1,9 +1,0 @@
-
-
-While you have checked out a document, no other user can check it out. If you want the document to be accessible again to other users for editing, you must check it in. You can do this in the following way:
-
-Select Check in from the File menu.
-Click  in the toolbar
-Press the key combination <Ctrl>+<g>.
-
-The Check in symbol is shown in grey. The document has now been checked in and other users can edit it:

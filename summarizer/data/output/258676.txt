@@ -1,4 +1,0 @@
-
-
- Directory Description <InstallRoot>/bin Contains files required to start the application. <InstallRoot>/config/caefeeder Contains configuration files for the CAE Feeder. <InstallRoot>/lib Contains required libraries. <InstallRoot>/var/logs Contains log files.
-

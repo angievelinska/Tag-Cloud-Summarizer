@@ -1,6 +1,0 @@
-
-
-Combine load balancing with external Http Cache assembly
-
-If you combine load balancing with external Http Cache assembly (e.g. AHAH), ensure that all fragments of a page are delivered by the same CAE node. Otherwise inconsistencies might occur due to different states in the single nodes caused by latencies while replication for example.
-

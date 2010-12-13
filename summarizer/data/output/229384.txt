@@ -1,5 +1,0 @@
-
-
-The CoreMedia Analytics Engine tracks visitor behavior on a site in a fine-grained fashion down to individual page views and clicks and stores the data for a potentially unlimited time. It is possible to plug in a strategy for identifying the user who is associated with a certain event. Other data fields, too, may contain information that allows an identification of specific users. For example, in some jurisdictions already the storage of the requesting IP address renders the data as personally identifiable information.
-
-The storage and processing of such personally identifiable information may be subject to strict limitations depending on the applicable laws. Additionally, your organization may have a privacy policy in use that restricts the permissible uses of the information further. For intranets, a special protection for employees might have to be considered.

@@ -1,3 +1,0 @@
-
-
-The Starter Kit pre-configures and extends almost all CMS components for typical scenarios. Where the CMS offers generic and flexible frameworks, the Starter Kit provides concrete solutions. In fig, you see an overview of how the Starter Kit plugs into various CMS components.

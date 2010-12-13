@@ -1,3 +1,0 @@
-
-
-For more details on the editor GUI please refer to the CoreMedia User Manual.

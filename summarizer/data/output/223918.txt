@@ -1,4 +1,0 @@
-
-
- Icon Description   Rename the bookmark.   Move the bookmark to the begin of the list.   Move the bookmark up.   Move the bookmark down.   Move the bookmark to the end of the list.   Delete the bookmark.
-

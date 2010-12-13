@@ -1,3 +1,0 @@
-
-
-blWithin this element of the XML file, the columns of the document table view are configured. 

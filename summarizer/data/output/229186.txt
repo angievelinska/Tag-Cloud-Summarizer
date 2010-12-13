@@ -1,6 +1,0 @@
-
-
-Configure the user account
-
-The Search Engine Feeder requires a user account to access the documents of the Content Server it runs in. During the initialization of the Content Server a dedicated user is created with the name and password feeder. For security reasons, change the password afterwards. The account requires at least read rights on the content to be indexed. A license of the service feeder is consumed by a running Search Engine Feeder.
-

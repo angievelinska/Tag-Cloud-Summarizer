@@ -1,9 +1,0 @@
-
-
-AddLatestVersion
-
-Grammar: ( (Expression)* ) 
-
-An AddLatestVersion expression adds the latest version to a document value or to each member of an aggregate containing only documents. If a document already contains version information, the value is handed through. Otherwise, the Content Management Server is queried for the latest version of the document and the document version is added.
-
-No attributes.

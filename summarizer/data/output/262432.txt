@@ -1,3 +1,0 @@
-
-
-To create a common understanding of the Starter Kit, this section explains the basic concepts to editors as well as to application developers.

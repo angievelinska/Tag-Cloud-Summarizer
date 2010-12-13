@@ -1,3 +1,0 @@
-
-
-There is an Editing Services for JSF example application contained within the CoreMedia CMS examples archive located in the cae/es-menusite directory. The example enriches the well-known Menu Site example as described in Menu Site with preview based editing and custom editing views. The code snippets presented throughout the following sections are put together in order to prove the simplicity of developing a custom content editing application using EditingServicesforJSF.  You will find installation hints in the cae/es-menusite/README file that is contained in the cap-examples.jar of your CoreMediaCMS distribution.

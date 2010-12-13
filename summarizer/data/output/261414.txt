@@ -1,8 +1,0 @@
-
-8#
-Configure the fields and click [Next] afterwards. You have to enter a user and password otherwise an error message pops up.
-
-Next, the following message appears which notifies you that the FAST installer which is needed to install the CoreMedia Search Engine will be invoked now. 
-
-
-

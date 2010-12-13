@@ -1,3 +1,0 @@
-
-
-If you migrated from a release prior to CMS 2005, the Search Engine Feeder fails to start when the CoreMedia Content Server starts the first time because the user account does not exist. In that case, create the user account manually. Afterwards you can use the administration page to start the Search Engine Feeder.

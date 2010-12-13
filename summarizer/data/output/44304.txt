@@ -1,9 +1,0 @@
-
-
-As described before, the caching mechanism cannot be used for pages that depend on request time values such as current user, time of day, user agent, ... However, with a little transformation, you can still make use of the cache: you need to shift the relevant properties into the cache key, e.g. as parameters of a ResourceUri. This way they become distinguishable to the ADS cache. 
-
-
-Assume that you want to build a site which appears differently to different user agents. Thus, in a non-cacheable outer template, you would shift the HTTP request header 'User-Agent' into the parameter of a ResourceUri and include the resulting cacheable template. Since the user-agent is now part of the cache key, different versions of the page will be cached and delivered according to the requestor.
-
-
-The following example demonstrates the necessary steps. It starts out with one non-cacheable template that does the whole job:

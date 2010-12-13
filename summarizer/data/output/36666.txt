@@ -1,7 +1,0 @@
-
-
-<Predicate>
-
-Child elements: <DocumentType>*, %varies;
-
-Parent elements: <Processes>...

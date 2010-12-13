@@ -1,3 +1,0 @@
-
-
-Note, that the changes of persisted batches do not appear in the search results immediately. They appear after they have been successfully indexed, which normally happens some seconds or minutes later.

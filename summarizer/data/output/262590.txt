@@ -1,5 +1,0 @@
-
-
-Now, you can add additional information, such as text or images, to your new Article.
-
-Note, that this article is till now no content of the navigation channel you have selected before! That is, it will not be shown on the website in the context of the navigation channel. The new Article only has a link to the navigation channel marking it as its "Navigation Context". If the article should appear as content of the channel, you have to link to the article from the Contentlist property of the Channel document. 

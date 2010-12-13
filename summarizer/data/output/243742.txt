@@ -1,6 +1,0 @@
-
-
-Example workflow startup class
-
-
-The following example shows a customized startup class. The example will check all atomic workflow variables if they are capable to store documents. If it finds such a variable it will store the first selected document in this variable. Please be aware that the exception handling in this example is rather poor. The example startup class needs a selected document and needs an atomic variable which is able to store documents. See Example 5.10.2b for the required packages.

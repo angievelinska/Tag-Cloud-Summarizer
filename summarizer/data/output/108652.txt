@@ -1,3 +1,0 @@
-
-
-The next table shows the attributes of the Uploader element:

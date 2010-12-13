@@ -1,3 +1,0 @@
-
-
-It is comfortable to enable or disable beans with the standard names contentLink and templateLink from the Develop pages. For further IconLink beans make appropriate changes in tomcat4/webapps/coremedia/WEB-INF/develop/configureLinks.jsp.

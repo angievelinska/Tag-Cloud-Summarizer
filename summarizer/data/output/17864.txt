@@ -1,3 +1,0 @@
-
-
-Using the tab Rules, the applicable rules of all groups of the logged-in user for the current resource are shown.

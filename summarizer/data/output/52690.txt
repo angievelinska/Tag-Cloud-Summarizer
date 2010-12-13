@@ -1,9 +1,0 @@
-
-
-<wage:resourceDisplacement>
-
-Renders an icon and label for the displacement a CoreMedia resource. The icon and label will be rendered for the current resource, unless the (Bean) name and property attributes are set. Attributes:
-
-name (optional): name of a Bean available in the pageContext
-property (optional): Bean property which has to be a Resource
-

@@ -1,9 +1,0 @@
-
-7#
-Enter host name or IP address of the Live Server's internal httpd which serves the login service IOR in the field cap.server.http.host.
-Enter the port of the Live Server's internal httpd which serves the login service IOR in the field cap.server.http.port.
-Enter the document type file for the Live Server in the field cap.server.documentTypes.
-If you have chosen to enable the Search Engine you can configure some properties defining the location of the Search Engine. Please see section for a description of the properties.
-
-3* Now the next window pops up for configuration of sql.properties.
-

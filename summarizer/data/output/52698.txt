@@ -1,6 +1,0 @@
-
-
-<wage:separator>
-
-Renders a separator icon (a vertical line) for grouping entries on a wage toolbar. Can be used only within a <wage:toolBar>.
-

@@ -1,9 +1,0 @@
-
-
-The Proactive Engine is a component for proactively computing values using the Persistent Cache. ¿Proactively¿ means, that it automatically computes values which are specified by a client and automatically re-computes these values when they become invalid. Furthermore, all computed values are passed to one or more client components (¿receiver¿), keeping the clients up to date. Typically, a receiver¿s job is to hand the values over to another system. The receiver¿s state as well as the internal processing state is held persistent, so that the components may resume seamlessly after a restart.  
-
-The Proactive Engine is a generic framework which supports many use-cases such as
-
-Feeding a search engine with contents from the CoreMedia CMS repository or any other data source
-Actively generating documents (by reusing business logic which is already in use in a CAE web application) and storing the documents in the local file system.
-

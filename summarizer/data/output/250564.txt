@@ -1,8 +1,0 @@
-
-
-  Step  Description  1.  Extend ExplorerView.    public class MyExplorerView extends ExplorerView  2. Overwrite the getComponent method.     public JComponent getComponent() {   3.  Get references to the CommandManager the ListenerManager and/or the ToolBarManager and/or the MenuBarManager.    CommandManager commandMgr = getCommandManager(); ListenerManager listenerMgr = getListenerManager(); ToolBarManager toolBarMgr = getToolBarManager(); MenuBarManager menuBarMgr = getMenuBarManager();  4.  Now you can get references on the manager components and register your command as described in section.    commandMgr.registerCommand("makecheaper", new com.coremedia.extensions.MyFirstCommand); ...  5. Call the super method getComponent(). It's important to call this method after you have associated the command with an activation model.  super.getComponent() 6. Return the ExplorerView.    
-
-return this; 
-
-} 
-

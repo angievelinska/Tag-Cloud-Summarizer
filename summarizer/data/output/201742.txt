@@ -1,5 +1,0 @@
-
-
-In this section we will discuss examples for both the client API and the API for writing Workflow Server plug-ins.
-
-All examples can be found in the examples distribution. The client examples are placed in the package com.coremedia.examples.capclient, whereas the plug-in examples are placed in com.coremedia.examples.plugin. Similarly, the compiled classes are found in cap-capclient.jar and cap-plugin.jar.

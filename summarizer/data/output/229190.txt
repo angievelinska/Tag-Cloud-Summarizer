@@ -1,7 +1,0 @@
-
-
-The CoreMedia Analytics Engine extends an existing CoreMedia Content Management and Content Delivery Environment with capabilities to analyze visitor activity on produced sites and to report on the management environment's status. It comprises In-Site Analytics for the fine-grained and prompt visualization of current site visitor activity and an Analytics Dashboard for long-term, drillable compilations of site visitor activity and repository status overviews. These two distinct applications provide users with an encompassing overview of site activities.
-
-The Analytics Engine is specifically tailored for applications that use the Content Application Engine for rendering the pages. Neither the Active Delivery Server nor any form of pregeneration are currently supported.
-
-This section will elaborate on the components of the Analytics Engine, on a typical deployment and on the configuration option.

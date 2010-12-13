@@ -1,4 +1,0 @@
-
-
- Attribute Description name Name which will replace the placeholder in the group.configuration property of editor.properties. In general, this is not the name of an existing group, but it can be.
-

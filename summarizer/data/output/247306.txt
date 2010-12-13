@@ -1,7 +1,0 @@
-
-8#
-Enter the destination program folder in the Program folder field. You can use the suggested folder, enter your own folder, or choose one out of Existing folders. If this folder does not yet exist it will be created by the program.
-Click [Next] to continue the installation.
-
-The next dialog displays a summary of the selections you have made so far. 
-

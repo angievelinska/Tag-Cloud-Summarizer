@@ -1,3 +1,0 @@
-
-
-This element is used for the configuration of the variable editors for the process variable view (in the <View> element) and for each task (in the <Task> element).

@@ -1,9 +1,0 @@
-
-
-Interface to implement
-
-Server-side actions must implement the interface com.coremedia.workflow.WfAction. 
-
-Convenience classes
-
-For convenience you can subclass com.coremedia.workflow.common.actions.AbstractAction which already includes implementations of all needed getter and setter methods and which uses a condition as guard (isExecutable()). You need to implement the execute() method for your own functionality. This method will be called by the CoreMedia Workflow Server. In Section 5.4.6 you will find a complete example of a server-side action. 

@@ -1,4 +1,0 @@
-
-2#
-The above referred goBackAction should trigger the redirect to the entering page. Therefore we need a navigating action which does nothing but the navigation. Usually such actions are defined as follows:
-

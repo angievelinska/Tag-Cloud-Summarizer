@@ -1,3 +1,0 @@
-
-
-The high level Http Cache architecture is shown in the following figure.

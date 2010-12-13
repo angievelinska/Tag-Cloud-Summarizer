@@ -1,3 +1,0 @@
-
-
-You can use these fields to enter  properties used by the Starter Kit. The properties can have different types as shown in the next table. 

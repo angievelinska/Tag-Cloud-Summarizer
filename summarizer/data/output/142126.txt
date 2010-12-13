@@ -1,9 +1,0 @@
-
-
-The toolbar is divided into three parts:
-
-(1) This part contains the standard functionality for the found resources.
-
-(2) This part contains the functions for the query document.
-
-(3)This part contains the functions for the search conditions.

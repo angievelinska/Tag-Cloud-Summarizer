@@ -1,7 +1,0 @@
-
-
-When a user, no matter if built-in or LDAP user, logs on to the CoreMedia Server, he needs a named license for the desired service. The current named licenses in use are stored in a database. If a user logs on for the first time, the user name and the requested service are added to the database. If the maximum number of used named licenses for a service type is reached no further logins for users without named licenses are allowed. The authentication algorithm validates if the users listed in the license table still exist. If not, all used licenses for the non existing users are released and the user may log on. Otherwise the login fails.
-
-Example:
-
-Assume that you have two licenses for the editor service. When user A logs on to the CoreMedia Editor, he consumes the first license. When a second user B logs on to the CoreMedia Editor he consumes the second and last free named license. Now no other user than A and B can log on to the editor, even if A or B or both log out again. The two named licenses for the CoreMedia Editor are reserved for user A and B, until A or B is deleted. 

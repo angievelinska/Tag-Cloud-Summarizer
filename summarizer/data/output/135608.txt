@@ -1,4 +1,0 @@
-
-
- Property name Type Default value Description allowWideLinks boolean false In a multi-site enabled Content Management Server, set whether to allow all WebEditor users to create wide links (i.e. links between documents with different base folders). Members of administrator groups are always allowed to create wide links. Note that this flag does not affect the WAGE API, but only the WebEditor behavior. wideLinksHighlighting String "border: 1px solid red;" Set the CSS style used to visualize wide links in a RichText XML property. The style is applied (and again removed in submitted values) by the default PropertyConverter for RichText properties.
-

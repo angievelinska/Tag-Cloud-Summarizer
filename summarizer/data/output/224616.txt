@@ -1,5 +1,0 @@
-
-
-The In-Site Analytics tables contain aggregated views on the reporting data that are useful for very short term, low-latency reports. All tables integrate data using the shortest provided intervals.
-
-Rows in these tables may changes after being written, if additional data is imported that affects old intervals.

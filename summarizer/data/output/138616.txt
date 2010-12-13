@@ -1,4 +1,0 @@
-
-
-The method connect(), which is not an overloaded method of DefaultMutableTreeNode, combines all passed document types to a tree. Regrettably, the Web Service returns only a flat data structure without further information about the relations of the contained elements. The initializing class, not yet introduced, requests the data and processes each document type in two loops. The corresponding code looks as following:
-

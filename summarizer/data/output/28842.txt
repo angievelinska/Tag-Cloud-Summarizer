@@ -1,3 +1,0 @@
-
-
-We use different fonts and types in order to label different elements. The following table lists typographic conventions for this documentation:

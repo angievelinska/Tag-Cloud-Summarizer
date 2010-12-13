@@ -1,4 +1,0 @@
-
-
- Symbol Nr. Function (1) Saves the document. (2) Undo the check-out of the document. This undoes all changes to the current version.  (3) This button offers in dependency from the state of the document the next "most possible" function. If the document is checked-in for example, it will offer the Check-out functionality.
-

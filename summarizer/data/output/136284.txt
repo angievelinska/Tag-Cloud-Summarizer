@@ -1,4 +1,0 @@
-
-
-  Search in document Global-search-and-replace Query Full-text search Main usage  Search and replace in the current document Search and replace in many documents Detailed search for specific documents in the whole repository Fast search for specific keywords in the whole repository Speed Fast Slow Slow Very fast Search scope Current document Freely defined document set Whole repository Whole repository Versions Only newest version Only newest version All versions or newest version Only newest version Freely configurable  No No Yes No Search from  Current document Own workflow Query window Overview window, file chooser (CoreMedia Editor only) Search for Text Text Text, Metadata, Folders ... Text in indexed fields and in specific binary formats (Word documents ...)
-

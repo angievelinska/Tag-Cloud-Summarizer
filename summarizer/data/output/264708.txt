@@ -1,6 +1,0 @@
-
-
-The Spring application framework is the frame that holds the CoreMedia Content Application Engine together. Much of the application¿s architecture is described in a Spring XML application context definition. Application specific extensions are easily plugged into the CoreMedia Content Application Engine, profiting from Spring's dependency injection features. Furthermore, the CoreMedia Content Application Engine makes use of the Spring MVC framework for its web request processing.
-
-The Spring framework offers excellent documentation at http://www.springframework.org/documentation. To start off, you might take a quick look at http://static.springframework.org/spring/docs/2.0.x/reference/beans.html#beans-basics in order to get an understanding of the xml bean definitions.
-

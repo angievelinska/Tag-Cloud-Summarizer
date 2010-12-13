@@ -1,9 +1,0 @@
-
-
-ForAll
-
-
-Grammar: (Expression) 
-
-
-A ForAll expression checks its boolean subexpression for all members of the value of the "aggregate" AggregationVariable and evaluates to "true" if all instances of the subexpression evaluate to "true". The subexpression can (and should) contain a Get expression with the variable name that evaluates to the n-th value in the aggregate. The logical "and" is short-circuit in the sense that evaluation is done in the order of the aggregate's elements and stops as soon as the subexpression evaluates to "false". The optional index variable evaluates to an IntegerValue representing the index of the current element in the aggregate and can be used e.g. to access the member at the same index in another aggregate.

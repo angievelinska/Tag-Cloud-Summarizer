@@ -1,3 +1,0 @@
-
-
-If JavaScript is disabled in your browser, you will have to press the 'Reload' button on the right of the report header to update the report.

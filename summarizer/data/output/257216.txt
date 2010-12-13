@@ -1,3 +1,0 @@
-
-
-The CoreMedia Workflow Global Search and Replace is designed for searching and replacing text in more than one document. This workflow complements the local search and replace functionality as described in section. We recommend to read the workflow-related chapters first in order to familiarize with workflow functions and ideas.

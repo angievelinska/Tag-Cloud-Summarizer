@@ -1,9 +1,0 @@
-
-
-The Unified API supports one listener type that can be directly attached to the connection: the CapConnectionListener. A connection listener is notified about important events that affect the status of the connection.
-
-In particular, the listener is notified whenever the connection detects a problem in the communication with the server. In this case, the connectionUnavailable method is called. As soon as the server or the network recovers, a connectionAvailable is sent.
-
-When the run level of the server is changed, there may be an advance warning that the connection has to be closed. This is done through the method connectionWillBeUnavailable. In the case that a run level switch is aborted, the method connectionWillNotBeUnavailable is called to signal this condition.
-
-The method connectionDisrupted indicates the rare event that the connect has become permanently unavailable, so that no reconnect is attempted. Possibly the connection's user was deleted in the database or the connection was shutdown by an explicit invocation of cm killsession.

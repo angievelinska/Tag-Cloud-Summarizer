@@ -1,3 +1,0 @@
-
-
-Don't change the resource names using SQL. Otherwise, the changes will not be registered in the ChangeLog. This may cause severe trouble e.g. with the PADS.

@@ -1,5 +1,0 @@
-
-
-Error conditions
-
-A builder may throw an exception during the computation of a value. The computation aborts and the value is deleted, if it was already generated.  However if the value itself or a another value which reads this value can still be reached through links from one of the configured root values, the computation will be retried later. PADS doesn't notify uploaders until all values have been computed successfully.

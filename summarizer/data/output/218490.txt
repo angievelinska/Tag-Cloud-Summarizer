@@ -1,4 +1,0 @@
-
-
- Parameter Description -g Delays the runlevel switch for the specified number of seconds. This gives users the chance to save their changes and logout. During the grace period the runlevel switch can be aborted with the -a option. -w If used with -r, the utility will not exit before the target runlevel has been reached (exit code 0) or the specified number of seconds have passed (exit code 1). The utility will not fail, if a runlevel change has already been scheduled (it will not reschedule another change, but just wait for the specified runlevel to be reached). If the server is not available when the utility is run, it will not fail but keep trying to connect or time out after the specified number of seconds. If time out is met runlevel will exit with exitcode 1. -a Abort a pending runlevel switch triggered by a recent invokation of runlevel. -r Specify the new runlevel. The legal values are See section 8.1.1 for details.
-

@@ -1,4 +1,0 @@
-
-
- Interval type code Interval length Interval start hh 1 hour every hour dh 1 day every hour dd 1 day every day wd 1 week every day bd 2 weeks (biweek) every day md 1 month every day ww 1 week every week mm 1 month every month ym 1 year every month qq 3 months (quarter) every quarter ff 6 month (half year) every half year yy 1 year every year
-

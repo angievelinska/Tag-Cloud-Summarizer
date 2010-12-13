@@ -1,7 +1,0 @@
-
-
-Error conditions
-
-If the Search Engine Feeder or the Search Engine is unable to process a certain document, an error document is indexed instead. It serves as placeholder for the original document in the index of the Search Engine. An example for such an error is a document with binary data of an unsupported format. Error documents contain the value ERROR in the index field feederstate and are not returned as search result by the Content Server. You can search for error documents using the administration page of the Search Engine Feeder. An error document is replaced with the correct document when the document changes in the CoreMedia Content Server and the cause of the error has been removed.
-
-Communication problems between the CoreMedia Content Server and CoreMedia Search Engine lead to search errors in clients and after some retries to the stop of the Search Engine Feeder. With the default configuration the Search Engine Feeder restarts automatically after one minute. Search requests from clients succeed as soon as the communication problems have been resolved.

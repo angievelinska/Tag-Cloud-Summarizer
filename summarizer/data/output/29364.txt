@@ -1,3 +1,0 @@
-
-9#
-Enter the values for the editor configuration in the appropriate fields and click [Next].

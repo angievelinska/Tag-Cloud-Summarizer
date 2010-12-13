@@ -1,6 +1,0 @@
-
-
-<Spellchecker>
-
-Child elements: <MainDictionary>, <CustomDictionary>
-Parent elements: <Editor>

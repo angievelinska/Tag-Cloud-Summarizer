@@ -1,5 +1,0 @@
-
-
-EditorContentLinkFactory
-
-EditorContentLinkFactory is a subclass of StateContentLinkFactory calling the CoreMedia Editor (not the WebEditor) for display and editing of the current document. An URL is constructed that is a 'remote control' for a locally running CoreMedia Editor. The EditorContentLinkFactory has to be configured to use the same port as in <RemoteControl enabled="true" port="..."/> in the editor.xml (see the Editor Developer Manual). The CoreMedia Editor is 'remote controlled' to display the corresponding resource in the Explorer window. As the resulting HTML page, it just delivers a status indication. That's why getTarget() returns an identifier for a window to be reused.

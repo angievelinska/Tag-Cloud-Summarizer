@@ -1,3 +1,0 @@
-
-
-The SgmlUnparser#unparseNodes method outputs all transferred DOM nodes one after the other. In this case, these are the children of the document element ("div") delivered as the value of the property. Therefore, only the paragraphs, tables and lists contained in the DOM tree as child nodes of the div element appear in the output, but not the div tag itself (cf. lib/xml/coremedia-richtext-1.0.dtd).

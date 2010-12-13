@@ -1,5 +1,0 @@
-
-
-This demo is based on section "Security'' and it is recommended to read it before. When you are familiar with the authentication of users you can continue with the personalization of the New Menu Site. The owner of "Chez Andre'' wants a rating system allowing him to improve his menu card. These additional data are not part of the actual content model and it does not make sense to extend it. Though rating data relate to their content it is better to store it in a different place. A database is an ideal remedy for this task and with Spring it is very easy to get connected. The Data Access Objects (DAO) offer a general interface for different technologies. With SQL templates and special objects the framework allows a very object oriented approach. Do not worry about mappings or used resource, Spring will take care of it.
-
-Before you go ahead you need a data model for ratings. In this case, the user id and the content id are a unique primary key for a rating value. Thus, the table for the ratings needs three columns. You can find following code in the class DataSourcePopulator located in package com.coremedia.examples.cae.dao: 

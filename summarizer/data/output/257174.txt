@@ -1,7 +1,0 @@
-
-
-CoreMedia CMS can store several versions of a single document. Often you want to compare two versions to see what you have changed. The Differencing view  allows to display two versions with their differences side by side see in a web browser (see Kapitel).To open the browser from the document view, you can
-
-select File|Difference in the menu or
-click  in the toolbar 
-

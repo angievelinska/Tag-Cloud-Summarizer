@@ -1,3 +1,0 @@
-
-
-In a more advanced scenario, a whole website can be maintained in two or more languages even with a different structure in different languages (see figure and create localized navigation). In the figure, you can see that the navigation channel, too, has been duplicated to create a French variant of the American original. Just as for articles, the French navigation channel variant has the original linked as its master. In contrast to the last figure, the French article is now contained in the French navigation channel variant. On the website, this leads to the American and French pages being linked vice versa. Every article is shown with the page "surroundings" corresponding to its locale.

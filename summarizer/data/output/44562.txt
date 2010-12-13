@@ -1,5 +1,0 @@
-
-
-You have installed and configured CoreMedia SCI, but the most important part is still missing: the content. You can create your own documents with the CoreMedia editors, but CoreMedia SCI also offers the possibility to automatically import external content.
-
-CoreMedia SCI comes with a generic XML importer. It can be configured to import XML documents of any structure as well as any other non-XML format.

@@ -1,9 +1,0 @@
-
-
-You may also call the method PadsConfiguration#addRootSelector on the padsConfig object if you want to configure a root key in WEB-INF/config.bsh (see API documentation). 
-
-You can explicitly register a builder to generate values for keys of any scheme you like. However you should only use URI schemes that start with a custom prefix like your domain. Builders can be configured using a Builder element with attributes for scheme and builder class below the Pads element. A Builder element makes it also possible to pass configuration settings to your builder. You don't need a Builder element if your builder doesn't require any configuration and only generates values for keys with the builder's fully qualified class name. 
-
-The following example registers two builders of the same class with different configuration and different key schemes: 
-
- 

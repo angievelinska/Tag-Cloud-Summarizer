@@ -1,5 +1,0 @@
-
-
-The dataSource represents the connection to a database and is set up in the file menusite-rating.xml, the central configuration for all rating beans. Each time your application is reloaded this method is called. The exception clause is an easy solution to deal with failed table creations for existing tables.
-
-The next thing you need is a bean representing one rating. Its name is Rating and is very simple structured because it only contains three attributes: user id, content id and rating value. Another bean, a JDBC DAO, called RatingDao is responsible for the loading and saving of the values. For this task the DAO contains specialized database operation classes encapsulating the SQL commands. Following source code is a representative example for these kind of beans:

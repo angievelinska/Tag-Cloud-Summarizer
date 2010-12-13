@@ -1,3 +1,0 @@
-
-
-When the style sheet is applied to our XML example document, the following file results: 

@@ -1,3 +1,0 @@
-
-
-The template shown in the following demonstrates how to use the Document#getBlobProperty method for access to the contents of a BlobProperty.

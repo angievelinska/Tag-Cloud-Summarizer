@@ -1,7 +1,0 @@
-
-
-ContentService and contentservice.xml
-
-The portlets are retrieving their contents through a ContentService. This is a java based service for which several implementations exist. For instance, the default implementation (HttpContentService, see below) connects itself to the remote portal application using a http based infrastructure. 
-
-Before describing these implementations in detail, the base configuration mechanism should be mentioned here. The Spring XML Beans notation (which is part of the Spring Framework, http://www.springframework.org) is used as configuration scheme. The contentservice.xml file's content (included in the portlet archives) consists of a ContentService bean definition, like 

@@ -1,9 +1,0 @@
-
-
-As you can see, the Analytics Database and the Analytics Data Aggregator were placed on the delivery side of the firewall. This simplifies the operation of the Analytics Data Aggregator, because it can access all delivery CAEs directly without going through the firewall and because it can easily be associated with the Master Live Server in this way.
-
-Shared Deployment
-
-A reduced version of the previous deployment can be seen in the following figure. The Analytics Data Aggregator is reused as the Workflow Server in the Content Management Environment. The Object Analyzer is also deployed inside the Analytics Data Aggregator as a manager. This simplifies the operation of the system, because fewer JVMs are running.
-
-Note that in this case, the Analytics Data Aggregator must be located on the private side of the firewall, but this should be acceptable for small installations, because there will be very few delivery CAEs that would need a connection to the outside.

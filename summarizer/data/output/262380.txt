@@ -1,4 +1,0 @@
-
-
- Site Channel Content Viewtype specification + + + view[root,channel,content] + + - view[root,channel] + - + view[root,_,content] + - - view[root] - + + view[_,channel,content] - + - view[_,channel] - - + view[_,_,content] - - - view
-

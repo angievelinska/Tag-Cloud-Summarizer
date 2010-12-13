@@ -1,5 +1,0 @@
-
-
-Logging
-
-The Delivery server uses the standard servlet container's logging facility by default now. Previously made changes in the log.properties still work, however.

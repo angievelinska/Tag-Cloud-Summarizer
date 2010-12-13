@@ -1,4 +1,0 @@
-
-
-  Value Default Description sql.store.collector.initialDelay=<n> Int 600 Waits <n> seconds before starting the first collection. sql.store.collector.delay=<n> Int 86400 The delay between two collections in seconds. sql.store.collector.startTime=<n> Int -1 The time of the day, in seconds from 0:00h in the default time zone, when the collector should run every day. If set to -1, it does not run at a fixed time. The initial delay is always enforced as a minimal delay after server startup. sql.store.collector.optimizer.interval=<n> Int 72000 The delay between two optimizations in seconds. sql.store.collector.optimizer.minDelay=<n> Int 100 The minimum delay between two calculations of the hash value in seconds. sql.store.collector.optimizer.maxDelay=<n> Int 5000 The maximum delay between two calculations of the hash value in seconds.
-

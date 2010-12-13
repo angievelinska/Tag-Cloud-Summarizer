@@ -1,5 +1,0 @@
-
-
-This chapter will introduce the basic concepts of the Analytics Engine. Rather than elaborating on the technical details, an abstract view will be maintained.
-
-However, it is necessary to define some terms in order to be able to interpret the generated statistics in a meaningful way.

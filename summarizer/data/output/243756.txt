@@ -1,7 +1,0 @@
-
-
-Value
-
-Definition: Blob | Boolean | Content | ContentType | Date | Document | Folder | Group | Integer | String | Timer | User
-
-A Value represents one or many values of a variable. A Value element is used to initialize a variable or to be evaluated in expressions (see Code).

@@ -1,3 +1,0 @@
-
-
-Due to the XSLT default templates working through elements recursively and copying text, the stylesheet already produces correct CoreMedia XML in this version. However, we still want to transform the Inline Markup into <span> elements, and need a further template for that.

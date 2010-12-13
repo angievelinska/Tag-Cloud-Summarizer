@@ -1,3 +1,0 @@
-
-
-In this chapter you will find the XML workflow reference and unabridged code examples from the previous chapters.

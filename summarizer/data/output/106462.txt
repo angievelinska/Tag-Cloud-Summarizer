@@ -1,3 +1,0 @@
-
-
-Each document type needs a specification of all properties that the corresponding documents have. The properties, presented as fields to the editor, vary, e.g. simple strings (such as for the author), XML for the textual content or binary data for graphics. This is determined in the document definition type with appropriate property types. 

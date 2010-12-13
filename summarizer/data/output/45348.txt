@@ -1,3 +1,0 @@
-
-
-The document type Dish consists of several fields (price, calories etc.) and a Picture of the dish. With the following render() template for Dish (located in the ./templates/dish directory) these fields are simply displayed in the browser. The next code example shows the template.

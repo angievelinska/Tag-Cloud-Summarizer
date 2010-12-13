@@ -1,3 +1,0 @@
-
-
-For each watched component you need a <Component> element in the watchdog.xml file. The element has the following attributes:

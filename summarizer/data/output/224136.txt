@@ -1,5 +1,0 @@
-
-
-Content Trigger Framework
-
-Although potentially any data source may be integrated, the Proactive Engine¿s is especially suited for computations which are based on contents from the CoreMedia CMS repository. From a technical point of view this implies persistent cache keys whose values are computed from content objects. This special use case becomes manifest in the Content Trigger framework consisting of some interfaces and some base implementations.

@@ -1,6 +1,0 @@
-
-
-These groups are displayed in the following table with their users for different CM server types:
-
-
-Content and Live Servers:

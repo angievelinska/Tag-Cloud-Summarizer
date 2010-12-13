@@ -1,3 +1,0 @@
-
-
-For our example to work, the action and the form bean have also to be defined in struts-config.xml. The configuration has to be complemented by the common parts given in xxx. The complete struts-config.xml can be found in the downloaded examples.

@@ -1,9 +1,0 @@
-
-
-Element Feeder
-
-The element Feeder is the top-level element in the XML configuration file.
-
-Child elements:  Administrator, FastIndex
-
-Attributes:

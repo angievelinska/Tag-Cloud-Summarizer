@@ -1,3 +1,0 @@
-
-
-After installation you can use the default user admin with password admin to log on to the Content Servers. Please change the password of this user immediately for security reasons.

@@ -1,5 +1,0 @@
-
-
-This report shows the development of the percentage of entries for a given page. Entries are page views that are the first page view in a session. For the percentage, the number of entries is divided by the total number of page views of the given page during the same time span.
-
-A value of 100% indicates that the page is always viewed as the first page of a session and that visitors never navigate to this page from other pages of the site. A value of 0% indicates that the page is only viewed as a successor page and that sessions always start on other pages.

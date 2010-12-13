@@ -1,3 +1,0 @@
-
-
-The functionality is available in RichText documents too and works alike.

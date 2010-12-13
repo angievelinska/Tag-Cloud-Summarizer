@@ -1,3 +1,0 @@
-
-
-The next step is to integrate the rating service into the web application. As you might guess, this demo will use views to reveal the ratings to the templates. Each presented dish owns a rate form with three radio buttons for the respective grade and a submit button. The template rendering this view uses the view DishView to retrieve a possibly existing rating. There is nothing special or new about this view, hence it will not be further explained. The controller RateController receives the submitted data and stores the rating. In the following figure you can see a rated dish, which got the grade "good''.

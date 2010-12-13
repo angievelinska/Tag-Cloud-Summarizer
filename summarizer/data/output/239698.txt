@@ -1,5 +1,0 @@
-
-
-This chapter describes how to configure, enable and use the Database Message Service. The Database Message Service is a light weight alternative for using a JMS Service. In contrast to a JMS solution it has much less features. Thus it should be used in situations where only a simple messaging mechanism is needed.
-
-The  Database Message Service receives messages (key value pairs) from a ProActive Delivery Server (PADS) by a DatabaseMessageUploader and stores these messages in a database. The Database Message Service offers a HTTP-based service for receiving the messages. This service is provided by a servlet that runs in the context of the PADS web application. Clients can send requests to the servlet to subscribe to the service. Afterwards the client can contact the servlet to receive all messages that have been generated since the last login of the client. The detail description of the interface for accessing the servlet can be found in the Delivery Developer Manual. The Database Message Service also provides a Receiver as a client of the servlet.

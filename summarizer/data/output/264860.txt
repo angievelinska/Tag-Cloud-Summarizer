@@ -1,4 +1,0 @@
-
-
- Bean Property Description Expensive PageBean Title The page's title. No  Content The page content as a linked OverviewBean or ArticleBean. No  Navigation All PageBeans to be rendered as navigation.  Yes ContentBean Page The PageBean which embeds this bean.  Yes OverviewBean Teasers A list of ArticleBeans to be rendered as teasers.  No ArticleBean Headline The article's headline.  No  Text The article's text.  Yes  Abstract The article's abstract which is extracted from property 'Text' automatically . Yes*  Image An optional link to an image.  No ImageBean MimeType The image data's mime type. Yes  Data The binary data.  No
-

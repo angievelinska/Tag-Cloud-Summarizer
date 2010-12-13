@@ -1,3 +1,0 @@
-
-
-This manual is intended for all users who deal with CoreMedia CMS for the first time. It describes the principles of CoreMedia CMS, that lay the basis for fully understanding the system. 

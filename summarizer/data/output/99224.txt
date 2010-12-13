@@ -1,9 +1,0 @@
-
-
-Up to CoreMedia SCI 4.1.36 the RichText pane of the CoreMedia Editor produced XML for nested lists which was not valid according to the coremedia-richtext-1.0.dtd . In addition, attributes with empty values have been stored by the editor which was incorrect in case of the xml:lang attribute since the empty string is not a valid language identifier. Both problems have been solved now, but if you have started with CoreMedia SCI 4.1 lower than build 38 your content may contain such incorrect XML. By default, the CoreMedia server corrects invalid XML in the RichText pane automatically now. If you are sure, that no incorrect content is in your repository (e.g. when you have started with CoreMedia SCI 4.1.38) you can switch off the converter. Use the following property:
-
-
-sql.store.convert.correctRichText=false 
-
-
-By default, the converter is enabled ("true").

@@ -1,3 +1,0 @@
-
-
-The ContextMenuRenderer renders Preview-Based Editing tags as CSS context-menus. It renders the menu eager instead of the lazy rendering of the standard Preview-Based Editing renderer. "Eager", means that all context-menus are rendered inside the markup during rendering the whole page. The following picture visualizes a rendered context-menu:

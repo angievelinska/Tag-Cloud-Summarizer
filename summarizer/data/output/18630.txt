@@ -1,3 +1,0 @@
-
-
-If there is no Windows environment active (Unix: no DISPLAY variable set), a command line prompt appears which allows SQL commands to be entered.

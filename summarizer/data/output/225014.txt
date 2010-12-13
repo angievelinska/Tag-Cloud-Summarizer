@@ -1,5 +1,0 @@
-
-
-There are some types of intervals where a single point in time is contained in many intervals. For example, for the interval type dh  a one day interval starts every hour. Therefore an event that happened at 12:00 would be included in the interval starting at 13:00 of the previous day, in the interval starting at 14:00 of the previous day and so on, up to the interval that starts at 12:00 of the current day. A similar structure applies to wd, bd, md and ym.
-
-For the interval types dh  and md there is the additional difficulty that days are not always 24 hours long due to daylight saving time and that months have got a varying number of days. This raises the question whether there is a monthly interval starting at March 31 or one that ends just before May 31. The simple answer is that these intervals do not exist. For these two interval types, an interval is recorded in the database only if the hours (or months, respectively) that mark the included start and excluded end of the intervals are numerically identical and exist. That is, the interval starting at March 30 and ending at April 30 is followed by the interval starting at April 1 and ending at May 1.

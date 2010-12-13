@@ -1,5 +1,0 @@
-
-6#
-Enter the database properties and click Next to proceed with the installation.
-
-The CAE Feeder of the Content Management Environment needs also a database. The properties are the same as for the Content Management Server database.

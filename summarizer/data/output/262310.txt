@@ -1,3 +1,0 @@
-
-
-Figure shows the standard document types of the Starter Kit. The document types drawn in blue, belong to the base document types, shown in figure. They are used by the standard document types in order to use the functionality of the Starter Kit. CMMedia drawn in grey is a special case, because it belongs to the base document types but is extended by the standard document types with the copyright property.

@@ -1,3 +1,0 @@
-
-
-The following table lists all third-party software and open source software which is used in CoreMedia products. If required by the license you will find a reproduction of its license in this document.

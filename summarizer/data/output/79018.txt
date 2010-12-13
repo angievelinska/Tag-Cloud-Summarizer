@@ -1,3 +1,0 @@
-
-
-A document cut from the start folder, will not be deleted from this folder until you paste it into the target folder. Therefore, you don't have to revoke the cut operation if you change your mind concerning the moving of the document. But mention, that the document is still in the clipboard.

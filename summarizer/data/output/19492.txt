@@ -1,3 +1,0 @@
-
-
-This element is used to determine the class used for integrating a customized dictionary in the spellchecker. The entries of this dictionary will be used for spellchecking and for suggestions.

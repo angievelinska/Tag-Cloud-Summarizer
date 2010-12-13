@@ -1,5 +1,0 @@
-
-
-Each CoreMedia component has its own start file with the ending ".jpif", which is executed on startup. The name of this file corresponds to the name used for starting the component with the cm/cmw command (e.g. cm editor uses editor.jpif). You'll find these files in the <CoreMediaHome>/bin directory.
-
-JPIF files for components determine which Java class should be executed on starting the component. Further settings for the operation of the component can also be stored in this file. This file can be used to modify the Java Virtual Machine (JVM) where the component runs, while parameters can be passed to the JVM.

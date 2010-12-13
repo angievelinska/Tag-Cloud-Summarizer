@@ -1,3 +1,0 @@
-
-
-Web Services offer functionality via the Web. A client sends a request to an entry point at a given URL using the Simple Object Access Protocol (SOAP) over HTTP.  On server side the request is translated to a method call and the result of the execution is sent back to the client. The benefit of this approach is that you can use your existing network infrastructure. When you combine Web Services with CoreMedia CMS you get a scenario as depicted in figure.

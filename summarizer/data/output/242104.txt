@@ -1,9 +1,0 @@
-
-
-A rather complex state chart is shown in Figure. It depicts the various states with respect to publication. Being published, a content gains access to a number of attributes that are only available in this state. Its state space is fragmented into four sub spaces: 
-
-it might be moved 
-it might be renamed 
-it might be marked for being withdrawn 
-it might be marked for being deleted
-

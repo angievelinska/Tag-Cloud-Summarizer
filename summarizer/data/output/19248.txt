@@ -1,8 +1,0 @@
-
-
-<ColumnDefinition>
-
-
-Child elements: <DisplayMap>*, <Comparator>?, <Renderer>?, <NamedDocumentVersionComparator>?
-
-Parent elements: <TableDefinition>

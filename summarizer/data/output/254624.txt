@@ -1,6 +1,0 @@
-
-
-DB2 database
-
-If you use a DB2 database you need to create a function as shown in example. You can dowload the source from http://www7b.software.ibm.com/dmdd/library/samples/db2/0205udfs/index.html where the procedure is described in FnBitAnd.txt.
-

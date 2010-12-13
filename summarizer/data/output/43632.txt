@@ -1,3 +1,0 @@
-
-
-Configure the template finder appropriately, so that on access to a property URI the content of the corresponding BlobProperty is delivered. 

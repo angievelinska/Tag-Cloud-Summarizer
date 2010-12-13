@@ -1,5 +1,0 @@
-
-
-Resources that perform user authentication are login.jsp and the LoginController class. The former implements the form based approach of collecting a user's login data. The latter can be used to perform a login without user interaction triggered by another application that maintains a valid CAP session (e.g. the Java content editor).
-
-Editing Services for JSF provides LoginInterceptor and CasLoginInterceptor as implementations of the HandlerInterceptor interface for blocking unauthorized requests. Both implementations handle the case that no valid CAP session has been found. The LoginInterceptor class redirects requests as described above and the CasLoginInterceptor uses data provided by the Cas framework to establish a CAP session.

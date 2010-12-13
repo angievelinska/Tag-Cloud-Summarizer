@@ -1,6 +1,0 @@
-
-
-  Attribute  Optional  Description  driver  No  
-
-The driver class used to connect to the database, oracle.jdbc.driver.OracleDriver for Oracle. url  No  The URL used to connect to the database (e.g. jdbc:oracle:thin:@localhost:1521:oracle)  user  No  The user used to connect to the database.  password  No  The password used to connect to the database.  bundle  No  This attribute must be set to oracle8 for Oracle databases  scheme  Yes  The name of the database scheme is needed if the database user has access to database tables of other PADS instances. 
-

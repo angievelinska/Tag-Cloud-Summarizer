@@ -1,3 +1,0 @@
-
-
-In the first step of the example a special transformer is created that generates any missing <base> elements in the source documents. These elements are optional according to the DTD, but in the framework of this example are vital for further transformation. The following section of an example document illustrates the position at which the <base> elements are located:

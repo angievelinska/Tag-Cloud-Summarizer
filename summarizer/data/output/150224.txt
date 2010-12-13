@@ -1,5 +1,0 @@
-
-
-The first line of this method generates a new view name by calling getNewViewName(). It is defined in the super class PersonalizedView, which could also be found in the package com.coremedia.examples.cae.view, and simply appends "_p''. This renaming is necessary because you just want to add the user object and delegate the rendering to a real template, as you can see in the last line. Hence, you need a template with an equal but different name. The rest of the code retrieves the current authentication object and puts it into the scope of the template. Just use the EL, as usual, to gain the desired values:
-
-<div>You are logged in as <c:out value="${user.username}"/></div>

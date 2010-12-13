@@ -1,3 +1,0 @@
-
-
-This element is used to define a renderer class, which will be used instead of the predefined renderer of the column class (see example). You will find predefined renderer classes in Section 5.8.1.1.2.

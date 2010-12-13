@@ -1,3 +1,0 @@
-
-
-The context menu may contain up to four menu items, depending on the type of element the context menu was opened for:

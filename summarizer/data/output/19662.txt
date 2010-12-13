@@ -1,3 +1,0 @@
-
-
-This element is used to define with which editor a workflow variable should be shown in the workflow window.

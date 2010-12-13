@@ -1,7 +1,0 @@
-
-
-Click-through Link Overlays
-
-In click-through mode, an overlay for each link shows how many clicks on a certain link happened and how these clicks were distributed over time. Like in the page overlay, a change is computed that based on a linearized version of the displayed graph and an indicator icon is shown.
-
-Because link overlays tend to obscure the actual link, the link is duplicated at the bottom of the overlay. Click on "follow link" to advance to the linked page. Additionally, you can click on the remainder of the overlay to make it disappear when it obscures other overlays.

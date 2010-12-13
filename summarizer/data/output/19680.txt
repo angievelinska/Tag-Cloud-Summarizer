@@ -1,5 +1,0 @@
-
-
-<TableDefinition>
-
-See the description in "Configuring windows with table views".

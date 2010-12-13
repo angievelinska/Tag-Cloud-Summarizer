@@ -1,7 +1,0 @@
-
-
-Basically, this class contains a simple SQL template and a method mapping a result set to a rating object. In order to use this object the DAO just calls the method execute() with an array of two values, the user id and the content id. The result is a list of rating objects.
-
-You could use the DAO directly in your application but it is a better idea to offer a special service. In this demo the service class is RatingManager, which offers two methods for getting and setting the ratings.
-
-Now you have a lot of classes and the communication between the related objects is hard to comprehend at the beginning. As already mentioned, the rating service has only two methods. The following sequence diagram illustrates the program flow of a getter call: 

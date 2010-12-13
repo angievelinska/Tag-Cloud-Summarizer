@@ -1,9 +1,0 @@
-
-
-GreaterEqual
-
-Grammar: ( (Expression) , (Expression) ) 
-
-A GreaterEqual expression contains exactly two subexpressions, which are both evaluated during the evaluation of the GreaterEqual expression. The expression evaluates to "true" if and only if the computed value of the first sub-expression is greater than or equal to the value of the second sub-expression.
-
-Although a GreaterEqual expression may compare values of any type, this element makes sense only for integer, string, date and timer values.

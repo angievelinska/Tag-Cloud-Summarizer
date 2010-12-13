@@ -1,9 +1,0 @@
-
-5#
-Enter the appropriate values into the fields and click [Next].
-
-3* Now the Editor Extensions Engine will be installed to the installation directory. Then the last window opens up and asks you to finish the installation.
-6#
-Click [Finish] to finish the installation.
-
-In order to use the Editor Extensions you need to create a keystore file. See Section for details.

@@ -1,9 +1,0 @@
-
-
-The types of both Content and Version objects are defined by ContentType objects. ContentType inherits from CapType, but not all kinds of properties are supported. Only integer, string, date, blob, XML, and link list properties are provided.
-
-Documents and versions are using the types that are configured at the Content Server. For folders there is a special pseudo-type without property descriptors. Two other abstract pseudo-types are provided: one for documents of any type and one for content in general, including folders and documents.
-
-You can obtain a reference to a type by calling ContentRepository.getContentType(String) with the name of the type. The pseudo-types are provided by the methods getFolderContentType(), getDocumentContentType(), and getContentContentType(). The pseudo-types are properly integrated into the type hierarchy.
-
-Types also allow you the creation of new content objects. To this end, you have to call one of the create methods and pass parameters that will allow the server to determine at least a name and a folder for the content.

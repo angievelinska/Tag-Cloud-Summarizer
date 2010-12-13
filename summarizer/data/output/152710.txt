@@ -1,3 +1,0 @@
-
-
-The following tools are useful during the development of a portal web application. They retrieve pages and referenced binaries directly from a servlet of the portal application. The portalcontent command line tool can be used to validate pages and output them at the console. The portletemulation web application delivers portal content to a web browser but is also able to perform an XSL transformation before returning content to the client. Because of this it may be used to test a portal web application without a portal server.

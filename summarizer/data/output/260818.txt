@@ -1,5 +1,0 @@
-
-7#
-Enter the appropriate data into the fields and click [Next].
-
-If you have chosen to install the Http Cache Extension you will be asked for the configuration of the httpcache.properties file.

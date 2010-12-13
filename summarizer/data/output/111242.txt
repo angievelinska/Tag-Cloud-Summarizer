@@ -1,3 +1,0 @@
-
-
-Note, that you must not use the same URI scheme for builders and external resources.

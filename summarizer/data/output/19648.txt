@@ -1,3 +1,0 @@
-
-
-This element is used to define, how the workflow should be started. I.e. how the variables should be filled.

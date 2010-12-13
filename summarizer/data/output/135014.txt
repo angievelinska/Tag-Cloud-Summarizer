@@ -1,4 +1,0 @@
-
-
- Parameters Description -n Specify workflows by filename (e.g. two-step-publication.xml). This works only for the standard workflows which are delivered with the CoreMedia CMS. -f Specify the XML file wich contains the process definition. This option is available only if your CoreMedia CMS license includes the usage of custom workflows. -j Specify a jar file which contains all resources (esp. custom actions) your workflow needs. You need this option only in combination with the -f option for custom workflows. The standard workflows don't need additional resources.
-

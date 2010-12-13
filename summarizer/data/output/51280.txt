@@ -1,4 +1,0 @@
-
-
-The CoreMedia Active Delivery Server has been extended to automatically check user rights on resources. This chapter describes the details of login, user representation and rights for cached pages and page fragments.
-

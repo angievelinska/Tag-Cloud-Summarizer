@@ -1,8 +1,0 @@
-
-
-<Validator>
-
-
-Child elements: %varies;
-
-Parent elements: <PropertyType>

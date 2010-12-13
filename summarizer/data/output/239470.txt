@@ -1,8 +1,0 @@
-
-
-The URL of the Live Server is entered in the file publisher.properties with the parameter publisher.target.ior.url. The publication process of the Publication Server obtains the IOR address of the Master Live Server from this URL.
-21#
-In the field publisher.target.ior.url, enter the URL of the Master Live Server. In general it is necessary to replace the entry "localhost" with the correct computer name.
-Continue the configuration by clicking [Next].
-
-Now, you will be asked, if you want to configure the LDAP/Active Directory.

@@ -1,9 +1,0 @@
-
-
-Equal
-
-Grammar: ( (Expression) , (Expression) ) 
-
-An Equal expression contains exactly two subexpressions, which are both evaluated during the evaluation of the Equal expression. The expression evaluates to "true" if and only if the computed values of the sub-expressions are equal. 
-
-Although an Equal expression may compare values of any type, this element makes sense only for values like integer, string, date, resource and timer values as defined in the workflow. Note that document references are considered equals only if they refer to the same document, i.e., the document contents are not considered.

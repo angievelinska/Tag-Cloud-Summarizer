@@ -1,3 +1,0 @@
-
-
-In this chapter you will get a very high-level overview of the Unified API and a sketch of its possible applications.

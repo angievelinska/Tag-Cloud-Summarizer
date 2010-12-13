@@ -1,7 +1,0 @@
-
-
-In order to select several non-consecutive resources, proceed as follows:
-Click on the first resource you want to select.
-Press the <Ctrl> key. 
-Hold down the <Ctrl> key and click on the next resource you want to select.
-Continue until you have selected all resources.

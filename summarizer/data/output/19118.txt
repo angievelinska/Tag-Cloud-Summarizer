@@ -1,8 +1,0 @@
-
-
-<Documents>
-
-
-Child elements: <Document>*
-
-Parent elements: <Editor>

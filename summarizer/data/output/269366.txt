@@ -1,4 +1,0 @@
-
-
-The Web Service of the prior section prints out all available document types but it is hard to recognize the hierarchical relations. A graphical representation would be better because you could navigate through even more complex document models neglecting the currently not interesting parts. At server side not much work is needed. The server will be extended by a second method which returns all properties, even the inherited. With a little refactoring the source code looks like that:
-

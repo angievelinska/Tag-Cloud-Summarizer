@@ -1,7 +1,0 @@
-
-
-The property repository.url specifies the URL of the Content Server. The properties repository.user, repository.password and repository.domain define the account of the user used by the CAE Feeder to log in to the Content Server.
-
-Configure the Database
-
-The CAE Feeder template includes an internal Proactive Engine, which persists the feeding state in an database. Configure the connection to the database in the file caefeeder.properties. The property jdbc.driver specifies the class of the database driver. The property jdbc.url contains the URL of the database and the properties jdbc.user and jdbc.password specify the account of the database user. The property jdbc.dbname contains the name of the database. For example:

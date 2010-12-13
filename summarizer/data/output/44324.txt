@@ -1,6 +1,0 @@
-
-
-A template which branches to different cacheable variants, depending on the user-agent
-
-
-The template responsible for the content can now operate in a deterministic way, since the user-agent is available through a ResourceUri parameter.

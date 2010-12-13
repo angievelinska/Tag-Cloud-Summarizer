@@ -1,9 +1,0 @@
-
-3#
-Adapt the copied Channel document right below the new site folder to the new language:
-
-Set the Language property to the new locale, in the example that would be "French". All child navigations and documents put into their context inherit this locale if their own locale has not been set explicitly.
-Change the URL segment property to a unique name, "french_tutorial" would be consistent with the example naming.
-4#
-You have to adapt all copied documents you want to use to the new language. Start a query for all documents below the new Site folder that are of type CMLocalized and have  the property Language set to "en".
-

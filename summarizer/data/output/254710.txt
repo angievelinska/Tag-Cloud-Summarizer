@@ -1,3 +1,0 @@
-
-
-As described in chapter all events are written to the ChangeLog-table of the database. The table is never truncated by default in order to enable event replay right from the beginning. Nevertheless, you might want to reduce the size of the ever-growing table by your own.

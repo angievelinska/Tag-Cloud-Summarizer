@@ -1,5 +1,0 @@
-
-
-Respective elements of the workflow definition: <If>[<Condition>, <Then>, <Else>]
-
-Example:

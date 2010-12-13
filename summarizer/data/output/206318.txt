@@ -1,4 +1,0 @@
-
-
-  Menu item  Sub items  Functions  Cut    Copies the selected resource to the clipboard. The resource remains at the start position unless you paste it to the target position.  Copy    Copies the selected resource to the clipboard. A copy will be pasted to the target position.  Paste    Pastes the content of the clipboard to the current position. (It's not possible to paste documents in documents).  Select all    Selects all folders in the folder overview or all documents in the document overview, depending on the active part of the window. 
-

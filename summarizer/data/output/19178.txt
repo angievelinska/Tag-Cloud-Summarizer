@@ -1,3 +1,0 @@
-
-
-Within this element of the XML file, the dialog for selecting an internal link is configured. The element has no attributes.

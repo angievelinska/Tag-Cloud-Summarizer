@@ -1,5 +1,0 @@
-
-
-In order to return to the URL from which you started editing you need to set a custom NavigationHandler for all actions which are instances of CommandAction and which finishing the editing process.
-
-The following example shows the setting of the JsfRedirectingNavigationHandler at a RevertCommand:

@@ -1,6 +1,0 @@
-
-
-3* The next window asks you to complete the installation.
-10#
-Click [Finish] to complete the installation of the CoreMedia Editor.
-

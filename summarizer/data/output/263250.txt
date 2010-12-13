@@ -1,3 +1,0 @@
-
-
-In the following sections, the Starter Kit is described from an application developer's perspective. They mainly deal with the Starter Kit CAE, as this is the central component of the content application you are implementing. The sections are grouped by topics or features, not by the technical structure of the Starter Kit. For example, there is no section that documents all members of a certain class, but rather when a feature is explained, excerpts of all relevant APIs are given. For a technical reference, please consult appendix, the Java API documentation (javadoc), and the Spring Bean documentation (beandoc).

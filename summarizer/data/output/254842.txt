@@ -1,3 +1,0 @@
-
-
-If you select the Status link on the administration page you will get information concerning the status of the ProActive Delivery Server as shown in figure. 

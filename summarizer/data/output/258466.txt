@@ -1,9 +1,0 @@
-
-
-<property>
-
-Child elements: <bean>, <list>
-
-Parent elements: <bean>
-
-The <property> element defines the property of a bean, which should be configured. The 

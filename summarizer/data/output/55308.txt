@@ -1,7 +1,0 @@
-
-
-<wage:styleOption>
-
-Renders an entry for a <wage:selectStyle> drop down box. Extends the Struts OptionTag, so you can also use other attributes defined for that tag. Attributes:
-
-value (required): name of the style (i.e. "list-item") to be applied when this option is selected, i.e. "arial" for the "font-name" group.

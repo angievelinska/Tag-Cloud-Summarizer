@@ -1,3 +1,0 @@
-
-
-Changes at classes that are used in uploaded workflows should happen with great care and intensive testing. The classes must be compatible with the uploaded XML workflow definition. 

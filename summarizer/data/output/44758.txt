@@ -1,3 +1,0 @@
-
-
-If no transformers are entered in the configuration file, the sets of source documents delivered by next are imported directly. Of course, this only works if the documents are CoreMedia XML documents matching the document types of the CoreMedia SCI. Typically, however, a transformation of the documents is necessary to achieve the correct format. This is the subject of the next section.

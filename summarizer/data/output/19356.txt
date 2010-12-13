@@ -1,3 +1,0 @@
-
-
-Within this element is defined, how the folder view is sorted. The element has no attributes. If an <Explorer> element contains no <TreeSorter> element, the folders are sorted in alphabetic order. In order to activate an own comparator class, a <TreeSorter> element must occur.

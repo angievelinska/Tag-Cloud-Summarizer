@@ -1,3 +1,0 @@
-
-
-The watchdog actions return result codes. The following table lists all possible codes:

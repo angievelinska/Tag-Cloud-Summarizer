@@ -1,5 +1,0 @@
-
-
-SaveDocument
-
-Use this action to save a document that has to be opened in the Client GUI.

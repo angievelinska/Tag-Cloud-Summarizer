@@ -1,3 +1,0 @@
-
-
-The Analytics Engine keeps all data in a central database. Except for some auxiliary tables, the schema is public and can be read from arbitrary applications that require access to the statistics. After an explanation of some basic concepts, all tables are discussed individually.

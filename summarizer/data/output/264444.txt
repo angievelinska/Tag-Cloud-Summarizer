@@ -1,3 +1,0 @@
-
-
-To make use of your new data source, deploy your plug-in, create a document instance of CMNamedDynamicList in the repository (using the CoreMedia Editor or Web Editor), in the document set the plugin property to the name of your plug-in and perform your implementation specific configuration in contextSettings.

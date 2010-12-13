@@ -1,3 +1,0 @@
-
-
-Note that the methods of the ChangeCollector API mentioned so far are usually the only methods you should use. The API to add and remove changes to the ChangeCollector is used internally by the ClientResources and should not be used by the application programmer. They should only be used to resolve commit failures (see above).

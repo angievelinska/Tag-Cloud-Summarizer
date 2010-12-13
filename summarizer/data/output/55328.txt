@@ -1,5 +1,0 @@
-
-
-<wage:packWindow>
-
-Includes the wage/packWindow.js script in the output, which will resize the browser window on load to an appropriate size. No attributes.

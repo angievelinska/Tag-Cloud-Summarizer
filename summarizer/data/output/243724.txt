@@ -1,7 +1,0 @@
-
-
-If the expression evalutates to true then the successor is the task named True, otherwise it is the task named False.
-
-Programming the expression
-
-See Example 5.4.6a for the important lines of the code. Configuring the expression with variable names from the workflow is not shown in this example but it is similar to the method in the action example. The same is true for accessing the repository.

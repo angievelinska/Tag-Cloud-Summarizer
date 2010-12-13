@@ -1,7 +1,0 @@
-
-
-Now that we've seen how the the view can be rendered, we'll take a closer look at the action that is processed after submitting the form, as defined in the form's action attribute.
-
-Struts actions extend org.apache.struts.action.Action, and have to override the method public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response), which will be called when the action is executed.
-
-An implementation of this method that simply tries to commit the changes made so far (by committing the current ChangeCollector) could look like this:

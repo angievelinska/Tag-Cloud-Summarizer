@@ -1,6 +1,0 @@
-
-
-The number of documents will constantly increase during the editorial process. In order to keep track of the plethora of documents you can use the query of the WebEditor. You can create specific queries and store them in your profile. Alternatively, you can use pre-defined queries.
-
-
-Technically speaking, queries are documents which can be saved, edited and copied. They are stored in the user's home folder. By default, this folder already contains one Query document named MyQuery.

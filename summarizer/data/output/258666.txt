@@ -1,5 +1,0 @@
-
-
-After installation, the webapp editing holds all files necessary for Preview-based Editing.
-
-The files below /WEB-INF/spring/editing-jsf/dispatcher-servlet are the files you should use if you want to change the files below /framework/spring/editing-jsf/dispatcher-servlet located in the cap-editing-jsf-spring-config.jar. Do not change framework files directly, as framework files may change when you update to a new version of the CoreMedia system.

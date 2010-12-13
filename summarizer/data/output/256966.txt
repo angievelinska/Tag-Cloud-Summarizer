@@ -1,3 +1,0 @@
-
-
-We had mentioned a set of four plus one predefined workflows in the first paragraph of this chapter. The plus one workflow is called Global Search and Replace, a function for handling huge numbers of documents, retrieving and replacing search strings in automatic or interactive mode. Find a detailed description of this workflow in section.

@@ -1,3 +1,0 @@
-
-
-Refer to the hox.text API Documentation which is included in the CoreMedia Generator API documentation for further details.

@@ -1,3 +1,0 @@
-
-
-You may also call method PadsConfiguration#addRepositoryEventPredicate on the padsConfig object if you want to configure a repository event predicate in WEB-INF/config.bsh.

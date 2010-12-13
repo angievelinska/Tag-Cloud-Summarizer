@@ -1,3 +1,0 @@
-
-
-An API has methods for operations. UI frameworks often ¿objectify¿ these methods into command or action objects. Editing Services provides an abstraction for this typical UI framework pattern, and implementations for a subset of the methods provided by the Unified API. In the Editing Services framework the term action refers to the UI representation of a command with the command encapsulating the business logic to be executed. A command often wraps one method of a business object, but may contain arbitrary complex business logic. The base interface is com.coremedia.editing.Action having the following properties:

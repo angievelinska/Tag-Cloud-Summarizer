@@ -1,3 +1,0 @@
-
-
-If you delete events from the changelog, listeners which try to retrieve these events will fail. In particular, Replication that have not caught up with the Master Live Server will become unusable.

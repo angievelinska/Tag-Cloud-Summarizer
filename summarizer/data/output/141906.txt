@@ -1,5 +1,0 @@
-
-
-To run a newly created query click  in the tool bar. This will start the query. It is not possible to abort the running query.
-
-If the query finishes, an additional window opens and displays the search results.

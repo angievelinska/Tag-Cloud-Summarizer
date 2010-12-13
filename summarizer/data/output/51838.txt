@@ -1,6 +1,0 @@
-
-
-All computer users who access a CoreMedia system are users. Their user profiles are defined by individual settings and preferences as well as access regulations.
-These access regulations are set by rights, defined in rules, implemented via group memberships.
-Special workflow groups act in roles: roles are a predefined set of actions members of these groups are entiteled to perform.
-

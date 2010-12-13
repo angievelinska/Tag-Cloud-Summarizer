@@ -1,3 +1,0 @@
-
-
-As you can see, there are times when the actual data types are capable of storing a larger range of values as specified in the definition. In these cases, the additional values are considered technical artifacts and should not be used.

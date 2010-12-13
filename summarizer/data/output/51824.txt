@@ -1,3 +1,0 @@
-
-
-After you are finished with your view class, you can insert it into the attribute viewClass of the element Document of the editor.xml file.

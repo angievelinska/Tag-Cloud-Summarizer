@@ -1,9 +1,0 @@
-
-
-Each content bean in the CAE represents a content object from the CoreMedia Content Server. 
-
-In order to specify the indexed content beans, you have to define the set of source contents using a content selector. The content selector is part of the Content Trigger Framework of the Proactive Engine.
-
-The file caefeeder-triggers.xml, which is located in the directory <InstallRoot>/config/caefeeder/spring, contains the Spring Framework bean definition of the content selector. The default implementation PathAndTypeContentSelector selects contents by type and path, which can be configured in the file caefeeder.properties in the same directory. The property feeder.contentSelector.basePath specifies the base path of the contents and property feeder.contentSelector.contentTypes contains a comma-separated list of content types.
-
-The following example selects all contents of type Text and Download which are located below the path /SiteA/Core.com:

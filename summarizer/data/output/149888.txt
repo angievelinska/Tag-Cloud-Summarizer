@@ -1,5 +1,0 @@
-
-
-The easiest way to deploy a web application into the container is to move it to the auto-deployed webapps directory of your Tomcat installation. Tomcat will automatically deploy the web application. Alternatively, an deployment .xml descriptor or the admin console can be used.
-
-Please note, that the ADS must be deployed as an exploded application. If packaged as a .war-file, it will not run in a container that does not explode .war-files at deployment time, such as BEA Weblogic.

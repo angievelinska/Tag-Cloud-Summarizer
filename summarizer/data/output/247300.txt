@@ -1,5 +1,0 @@
-
-5# 
-In order to continue the installation routine you have to accept the license and usage agreement by clicking [Yes].  Please read the license and usage agreement carefully. If you do not agree, abort the installation by clicking  [No]. 
-
-3* Select the CoreMedia components available for installation in the following overview. 

@@ -1,6 +1,0 @@
-
-
-The name of this file is <Myname>.properties. You can integrate it using the Bundle element of the editor-startup.xml file. The file name must be entered without file extension. It must appear at the right position of the classpath.
-
-
-Example:

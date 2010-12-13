@@ -1,3 +1,0 @@
-
-
-The Content Applications Developer Manual, Section "CAE Feeder" describes how to set up a CAE Feeder for API use, which does not require a Proactive Engine and its database.

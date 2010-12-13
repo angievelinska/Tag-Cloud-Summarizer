@@ -1,7 +1,0 @@
-
-3#
-Select the document type.
-Enter the name of your new document in the name field.
-Check the Open document box, if you want the document to be opened immediately.
-Click [Create] to confirm the procedure.
-

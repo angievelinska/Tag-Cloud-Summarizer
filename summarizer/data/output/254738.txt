@@ -1,9 +1,0 @@
-
-
-The publisher is a sub process running in the Content Management Server. When the publisher publishes resources, it creates new sessions to the Content Mangement Server and the Master Live Server. You configure the publisher in the file publisher.properties of the Content Mangement Server installation.
-
-If you change username, domain and password for the publisher, you have to make these changes in the user administration of the appropriate server too. To change the settings of the Master Live Server, you need to connect to the Master Live Server with the CoreMedia Editor. Then you can use the user administration (see Section 5.1.6) for the changes.
-
-When defining publisher priorities as described subsequently, the idea is to prioritize sessions with a higher portion of user interaction. Higher numerical values indicate a publication that has to be processed first. By convention, publication priorities should be nonnegative integers. Usually, the default priorities ensure a smooth publisher operation. When applying a change, two unmodifiable values have to be taken into account: Expedited server publications of rights rules run at a priority of 100. All customized priorities must be strictly less than that value. Accelerated CoreMedia Editor publications run at a priority of 80. Automated publications should normally receive a lower priority.
-
-In the properties given below, some properties take a different form when using CoreMedia Multi-Site Management. In that case, an index number is used to indicate the publication target that is configured using this property value. The index numbers are consecutive integers starting with 1 and running up to the number of publication targets.

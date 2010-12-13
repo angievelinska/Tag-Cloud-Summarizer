@@ -1,3 +1,0 @@
-
-
-The implementation, which is just one line of code, can be found in the class DocumentImpl (package com.coremedia.examples.cae.beans). The last templates of this example you should know are responsible for the rendering of pictures. Pictures are rendered in different sizes, hence it makes sense to outsource this functionality to separate templates. If a large image is required then you should include a picture object with the view "large''. In this case, Picture.large.jsp is called to render it. The following figure illustrates all involved templates to render one dish. 

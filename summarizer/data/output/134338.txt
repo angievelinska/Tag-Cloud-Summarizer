@@ -1,3 +1,0 @@
-
-
-The dump utility prints out arbitrary objects of the CoreMedia CMS repository. You will probably use it mainly to dump resources, but you can also dump users, processes etc.

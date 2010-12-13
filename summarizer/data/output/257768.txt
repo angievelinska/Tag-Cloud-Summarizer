@@ -1,3 +1,0 @@
-
-
-Please notice, that the Active Delivery Server is deprecated in CMS 2008. It will receive support and maintenance over the support period of CMS 2008, but it will not be part of future versions of CoreMedia CMS any more. If you intend to create new content applications with CoreMedia CMS 2008, you should use the official successor of the ADS, the Content Application Engine (CAE). Among others, the CAE is based on the Unified API instead of the generator API and offers a much more sophisticated caching model. New CoreMedia components, such as CoreMedia Analytics, the Portal Integration or the Social Software Extension are only compatible with the CAE. Please read the Content Application Developer Manual for further details.

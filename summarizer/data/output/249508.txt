@@ -1,7 +1,0 @@
-
-
-Query Result Consolidators process data returned from queries. They reuse the data model's dimension constraints to merge results from more than one query, aggregate, filter and sort data and finally enrich them with displayable names, relative numbers (percentages), etc.
-
-As a rule of thumb, aggregation, filtering and sorting should be performed as much as possible by the database and as little as possible by the consolidator. Reports that are fed from the Analytics Database typically do not require additional aggregation of data, as the Analytics Database already provides pre-aggregation and pre-consolidation of data (see #ref#). In the pre-defined reports, sorting is done in the database via SQL 'ORDER BY¿ expressions; filtering is mainly achieved through database filtering and JDBC result set limiting. The consolidator remains in the query result processing chain but does very little.
-
-The consolidators' main capabilities come in handy a) when mapping and merging data from more than one query, b) post-processing and filtering data, or c) to enrich query results with metadata.

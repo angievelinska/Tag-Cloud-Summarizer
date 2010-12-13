@@ -1,3 +1,0 @@
-
-
-The program cm sql is used to access the databases of CoreMedia Servers manually. This program should only be used by those with precise knowledge of the SQL query language as well as of the table structure of the CoreMedia system. Table contents can be displayed or manipulated with it.

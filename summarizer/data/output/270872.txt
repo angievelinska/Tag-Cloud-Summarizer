@@ -1,9 +1,0 @@
-
-
-This chapter describes the administration and operation of Clip
-
-Deploying a Portlet Application describes the deployment of a portlet application into Clip.
-Configuring a Portlet Application describes how to configure the portlet application in the CoreMedia repository.
-Deployment Blueprint describes how to deploy the portlet application to the live environment.
-Roles and Permissions describes the roles and permissions required for the intergration of a portlet application into Clip.
-Operation and Monitoring describes the logging of Clip.

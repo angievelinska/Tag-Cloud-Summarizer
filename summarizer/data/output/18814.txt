@@ -1,3 +1,0 @@
-
-
-The Active Delivery Server logs configuration into var/logs/httpd.log. 

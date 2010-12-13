@@ -1,9 +1,0 @@
-
-
-Logging out
-
-In order to log out from the dashboard and to terminate your session, use the "logout" link in the upper right corner next the user's login name.
-
-Report descriptions
-
-In the next section the predefined reports which are bundled with the Analytics Engine installation will be described in detail.

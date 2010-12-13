@@ -1,3 +1,0 @@
-
-
-It is not very difficult to offer additional data by views but how about manipulation? A view has full access to the passed data, hence it is possible to change, extend or remove it. But take care and avoid so-called side effects. Thus it is recommended only to extend the data model. In this example, the logged in user shall see the dishes ordered by his/her actual rating. For example, if a dish got a good rating then it will appear in the section 'Dishes you prefer'. A bad rating will move the dish to the section 'Dishes you do not like'. In the next figure you can see a typical screen shot. The responsible code, which sorts the delivered data, can be found in the class CategoryView.

@@ -1,3 +1,0 @@
-
-
-Editing Services for JSF comes along with a JSF spring integration that allows to define scoped beans in Spring 1.2 and to reference Spring beans in JSF expression language. Further JSF enhancements include custom JSF components and the "pageFlow" scope.

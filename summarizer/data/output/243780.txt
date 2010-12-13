@@ -1,7 +1,0 @@
-
-
-Choice
-
-Grammar: ( (Variable | AggregationVariable)*, Successor+ ) 
-
-A Choice task branches the flow of tasks into two or more successors which must be UserTasks. So it is an implicit choice. One of these successor tasks can be accepted and executed by a user. As this happens the other Successor tasks are withdrawn from any offer list and reset as if they haven't been started at all. 

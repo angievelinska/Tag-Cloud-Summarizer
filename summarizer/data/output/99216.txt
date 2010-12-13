@@ -1,3 +1,0 @@
-
-
-Older clients cannot always deal with the corrected XML, so nested lists may get corrupted. Vice versa, the bug-fixed clients cannot deal with the invalid XML (the WebEditor shows parse errors, the CoreMedia Editor displays corrupted lists and the ADS complains about the empty xml:lang values). So, update the CAP server and all clients when updating to CoreMedia SCI 4.1.38.

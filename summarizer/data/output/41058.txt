@@ -1,3 +1,0 @@
-
-
-Start the CoreMedia Editor by doubleclicking the desktop icon or selecting the appropriate entry under [Start|Programs]. If Web Start is installed you can start the CoreMedia Editor via the Web Start Application Manager or browser. A login window opens.

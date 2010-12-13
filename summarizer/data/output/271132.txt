@@ -1,8 +1,0 @@
-
-
-This section describes the CoreMedia Lightweight Portal (CLiP) tag library and explains how to use it. The tag library enables you to embed portlets into a page within a CAE application.
-
-Tag Library Usage
-
-The following code fragment shows the basic structure of a page that uses the portal tag library. Before being usable, the tag library has to be defined in the page and associated with a namespace. In this example the taglib is associated with the prefix portal.
-The portal:portlet element and its children are used to render the markup of a portlet. The portlet tag defines a logical scope which enables access to the specified portlet given as CMPortletWindow and supports generating its output.

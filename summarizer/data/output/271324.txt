@@ -1,4 +1,0 @@
-
-
- Actions and Options Description prepare Action that manipulates war files of portlet applications to adapt them to our portal. register Action used to register prepared portlets in the content repository. all Action that performs both actions prepare and register in a single call. It is also feasible to omit the declaration of an action to have the same effect as using all. -i When used with action prepare and all this option is used to specify the war files that should be filtered. While using it with register it is assumed that the specified war file are already prepared for our portal. -o Specifies the output path under which the prepared portlets will be stored. -u Name of a content repository user. -p Password of a content repository user. -path Path declaration used for registering the portlets in the content repository. The default value (/System/Portlets) is used when this option is omitted.
-

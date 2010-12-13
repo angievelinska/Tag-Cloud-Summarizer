@@ -1,3 +1,0 @@
-
-
-If you want to use own commands in the menu bar or  tool bar of the explorer view you simply need to extend the ExplorerView class and add it to the editor using the attribute explorerViewClass of the FrameFactory element. Follow the steps described in the next table.  

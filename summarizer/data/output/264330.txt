@@ -1,3 +1,0 @@
-
-
-Do not confuse this term with the term view used in rendering: a data view is an object that extracts and aggregates source data in the cache. A view is a method of rendering an object. Of course, data views and views are related: in order to render a view efficiently, the displayed object should provide its data sufficiently fast; possibly using a data view from the cache.

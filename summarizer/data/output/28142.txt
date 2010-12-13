@@ -1,4 +1,0 @@
-
-
-You can enter a username and a password using the element <Editor>. The login window of the CoreMedia Editor is automatically filled with these data. If you set the attribute loginImmediate="true", these login infos will immediately accepted and the login will proceed. The settings for the Editor element must be located in editor-startup.xml.  
-

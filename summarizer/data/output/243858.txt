@@ -1,7 +1,0 @@
-
-
-Read
-
-Grammar: EMPTY 
-
-Read evaluates to the contents of the given property of a resource. 'property' can be the name of any implied or schema property of a resource. A blob property will be returned as an XML representation in a string value, a linklist property will be returned as an aggregation variable of documents and a SGML property will be returned as a string. All other property types will be returned as the appropriate workflow variable value. See Exists for an XML example.

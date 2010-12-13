@@ -1,3 +1,0 @@
-
-
-It is imperative to set the value of #generatorPort and #contextPath.

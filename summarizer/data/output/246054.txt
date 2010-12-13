@@ -1,3 +1,0 @@
-
-
-The generated code may not compile under some circumstances, e.g. due to naming conflicts. A content property named `content¿ will clash with the method #getContent inherited from ContentBean. In this case you should rename the generated getters in the interface and the *Base class.

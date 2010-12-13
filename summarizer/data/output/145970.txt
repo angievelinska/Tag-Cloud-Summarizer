@@ -1,3 +1,0 @@
-
-
-The RichText pane supports only a subset of CSS.

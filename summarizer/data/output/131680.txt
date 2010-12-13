@@ -1,5 +1,0 @@
-
-
-Three types of errors can occur: Error Description Error The XML-file is not correct against the DTD. Thus it is invalid but it can be parsed (i.e. it is well-formed). Fatal Error The XML-file is not wellformed. Parsing is impossible. Warning Can be ignored.
-
-The error messages are given with line and column number.

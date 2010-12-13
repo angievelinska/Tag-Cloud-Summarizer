@@ -1,9 +1,0 @@
-
-
-<wage:resourceType>
-
-Renders an icon and label for the type of a CoreMedia resource. The icon and label will be rendered for the current resource, unless the (Bean) name and property attributes are set. If the type is unknown, a question mark icon will be rendered. See XXX for an example. Attributes:
-
-name (optional): name of a bean available in the pageContext
-property (optional): bean property, which has to be a Resource
-

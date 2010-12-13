@@ -1,3 +1,0 @@
-
-
-The systeminfo tool prints out information about the CoreMedia CMS installation itself. This includes especially the version which you will need whenever you request support.

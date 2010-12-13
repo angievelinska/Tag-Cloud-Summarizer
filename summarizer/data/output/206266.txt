@@ -1,3 +1,0 @@
-
-
-The Document window contains three toolbars, which will be described in the following. The content of the third toolbar depends on the type of the selected field.

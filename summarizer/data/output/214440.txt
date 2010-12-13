@@ -1,9 +1,0 @@
-
-
-RichTextField
-
-Text component for editing text in only one line. The text must correspond to the coremedia-richtext-1.0.dtd. All the attributes from RichTextPane are valid.
-
-RichTextPane
-
-Text component for editing text which corresponds to the CoreMedia Rich Text DTD ( lib/xml/coremedia-richtext-1.0.dtd). You can configure the RichTextPane with the following attributes:

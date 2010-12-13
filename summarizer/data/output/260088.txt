@@ -1,3 +1,0 @@
-
-
-The basis for your documents in a CoreMedia CMS system is the XML-file config/contentserver/doctypes/sample-doctypes.xml. It contains the root element <DocumentTypeModel> which serves as a container for the <DocType>, <XmlGrammar>  and <XmlSchema> elements. It imports the grammar for CoreMedia rich text from the required-doctypes.xml file which is located in the cap-server-config.jar in the config/contentserver/framework directory. The required-doctypes.xml contains the definitions which are essential for the CoreMedia CMS system. The next example shows a simple document type definition.

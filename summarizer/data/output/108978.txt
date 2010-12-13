@@ -1,3 +1,0 @@
-
-
-You may also call the method PadsConfiguration#addBuilder on the padsConfig object if you want configure a builder in WEB-INF/config.bsh (see API documentation).  

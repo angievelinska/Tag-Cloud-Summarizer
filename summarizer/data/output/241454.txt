@@ -1,7 +1,0 @@
-
-
-As said in chapter-introduction, WAGE takes care of converting property values from the internal data type to a simplified external representation and vice versa. This external representation is usually a String, but also allows boolean values and JavaBeans. The JavaBeans should again only contain String or boolean properties or other JavaBeans satisfying this constraint.
-
-While the methods implementing the DynaBean interface (get()/set()) return and set a property in the external representation, the methods implementing the Document interface (getProperty()/setProperty() and the typed variants getXxxProperty()) and the methods getInternal()/setInternal() in the VariableAssignment interface return and set properties in the internal representation.
-
-In document-property-mapping, the default mapping from internal to external representations for property values of Documents is shown.

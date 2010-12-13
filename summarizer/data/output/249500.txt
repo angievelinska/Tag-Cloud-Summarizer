@@ -1,4 +1,0 @@
-
-
-In this chapter, the basic concepts required for understanding and extending the dashboard and its reports will be introduced. In the following #9.2# the architecture will be explained. In section #9.4# the internal structure will be presented and an example on how to create new reports or extend existing ones will be given.
-

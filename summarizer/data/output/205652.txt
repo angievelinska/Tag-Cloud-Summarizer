@@ -1,3 +1,0 @@
-
-
-A peculiarity of JSP pages and servlets should be noticed here: either the JspWriter, available via the out variable, or the ServletOutputStream, available via response.getOutputStream(), can be used, but not both. Therefore, if the binary output stream is being used, you need to ensure that there is no template text located outside the JSP tags, since otherwise this is output via the JspWriter and causes an IllegalStateException. There must also be no line end character (newline, ASCII 10, or carriage return, ASCII13) at the end of the file.

@@ -1,3 +1,0 @@
-
-
-The new document opens automatically in the document window. You can immediately enter content. The document appears only in the folder overview, when you save it or check it in. 

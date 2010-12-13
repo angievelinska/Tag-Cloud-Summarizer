@@ -1,3 +1,0 @@
-
-
-This renderer is used to render all available actions in a toolbar above content objects. The picture below visualizes the output of that renderer.

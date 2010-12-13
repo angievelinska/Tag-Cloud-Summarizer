@@ -1,3 +1,0 @@
-
-
-This element is used to group the elements, which define how the variables of a task are rendered and edited. 

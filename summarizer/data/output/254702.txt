@@ -1,9 +1,0 @@
-
-
-It is possible to perform an update of the CoreMedia system at the same time when the multi-site mode is enabled. For example, you may want to upgrade from CoreMedia SCI 4.2 to the current release of CoreMedia CMS at the same time as making the switch to Multi-Site Management. In this case, the new servers and clients to be installed are always using the new release, but they may have to be started in single-site mode once before making the switch.
-
-When installing the new Content Management Server, make sure to install a single-site server. This reflects the fact that the database is still in single-site format and will be changed during the actual migration process. Immediately after step 11 of section 5, you have to stop all Live Servers and start preinstalled instances of Live Servers using the new release. This way, another generator downtime can be avoided. After this point, always use the client and server start scripts of the newly installed servers. 
-
-Immediately after step 15 of section 5, you have to switch to the new installation of the Content Management Server for the rest of the procedure. That is, when the instructions require you to start a program, you have to start the newly installed program of the target release. The new Content Management Server must initially be configured for single-site mode. Depending on the source and target releases, additional procedures might be mandatory at this point. See section for additional information. 
-
-If you are doing an upgrade from CoreMedia SCI 4.2 or earlier to CoreMedia CMS 2005 or later, you have to take an additional action after step 15. You must start the new Content Management Server once and shut it down immediately after it has come up successfully. Only after a Content Management Server of CoreMedia CMS 2005 or later has run at least once, you may proceed with step 16. 

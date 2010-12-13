@@ -1,7 +1,0 @@
-
-
-XML is a generic format. However, the importer cannot guess the meaning of various tags, but requires a certain format - the CoreMedia XML format.
-
-To achieve a visual separation between XML elements and attributes, the elements are written in the following in pointed brackets: <element>. The attributes are written in italics: attribute.
-
-Files here are XML files or XML documents  while document means documents in the sense of CoreMedia SCI.

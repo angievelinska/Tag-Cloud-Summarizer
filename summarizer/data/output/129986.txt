@@ -1,3 +1,0 @@
-
-
-If only a few rows are returned, you may change the resource names manually. Otherwise, you might write a scripting client which replaces slashes by hyphens or perform another suitable character replacement. Having changed the resources, make sure to republish the names of already published resources. Afterwards, rerun the query on both servers to make sure that all slashes have been removed.

@@ -1,3 +1,0 @@
-
-
-The Spring Framework uses the Apache License which you will find in section. In addition, the following notice belongs to a Spring Framework distribution:

@@ -1,5 +1,0 @@
-
-
-Status bar
-3* The status bar at the bottom displays the sort criteria of the document overview (10) and active filters (11). 
-

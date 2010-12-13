@@ -1,7 +1,0 @@
-
-
-Else
-
-Grammar: EMPTY 
-
-Else defines the successor of the If task if the condition evaluates to false, see If for details and an XML example.  

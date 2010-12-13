@@ -1,8 +1,0 @@
-
-
-<Explorer>
-
-
-Child elements: <TreeSorter>?, <TreeFilter>?, <Filter>*, <TableDefinition>
-
-Parent elements: <Editor>

@@ -1,3 +1,0 @@
-
-
-In this chapter you will find a description of the main administrating and operating tasks of the CoreMedia Editor. If you miss the description of some properties or tasks, please have a look at chapter where you will find a description of all relevant properties.

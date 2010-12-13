@@ -1,5 +1,0 @@
-
-
-At this point you should create the log directories analyticslog/incomplete and analyticslog/complete in the jakarta-tomcat directory, if you have selected the Tracking Analytics Extension previously.
-
-If multiple web applications in the same web application container use the Tracking Analytics Extension, create different directories for each application and configure the application appropriately as described in section.

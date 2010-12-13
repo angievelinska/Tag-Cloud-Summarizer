@@ -1,3 +1,0 @@
-
-
-For a high level overview on the Proactive Engine and its environment, have a look at the following figure

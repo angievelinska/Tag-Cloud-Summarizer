@@ -1,3 +1,0 @@
-
-
-If the menu entry and the symbol for checking out a document are shown in grey, you cannot check out the document because another user has checked it out. All other functions for editing the document are also deactivated. The document window looks like this:

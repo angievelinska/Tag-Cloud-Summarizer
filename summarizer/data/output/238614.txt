@@ -1,3 +1,0 @@
-
-
-Now, you have reached a critical point. The PADS copy contains generated content, which depends on the new schema and content. That means that the migration of the productive system will have no impact on the content. But it is important that the dependencies are designed in a way, that the sheer "activation" of dependencies will not lead to the creation of a huge amount of content. You can check this by checking-in, checking-out and publishing of concerned configuration documents on the copied system. This will simulate the effects on the productive system after reconnection with the copied PADS-database. Everything is OK, when only a few generating operations occur.  

@@ -1,9 +1,0 @@
-
-
-The ViewDispatcher is a template finder that maps template-IDs to templates depending on the document type. Particular attention is paid to the fact that document types have inheritance relationships.
-
-
-To understand the way the ViewDispatcher functions, the idea of templates as views of documents is presented first here. It is explained how views depend on the document type and how they pass down through the document hierarchy. After that, the concrete configuration and use of the ViewDispatcher is discussed.
-
-
-

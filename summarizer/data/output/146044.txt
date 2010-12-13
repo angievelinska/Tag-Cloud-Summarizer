@@ -1,4 +1,0 @@
-
-
-When creating the database, take care to select unicode character encoding: 
-createdb -E UNICODE <my-databasename>

@@ -1,8 +1,0 @@
-
-
-Numbered and bulleted lists:
-
-(1) numbered list - applies the format of a numbered list (see illustration)
-
-(2) bulleted list -  applies bullets to a list (see illustration)
-

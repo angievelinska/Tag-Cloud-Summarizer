@@ -1,3 +1,0 @@
-
-
-How is determined which menu items are displayed in a context menu and which are enabled or disabled? These questions are answered by the commands behaviour methods. The next table provides information about these methods:

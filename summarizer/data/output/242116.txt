@@ -1,9 +1,0 @@
-
-
-User Tasks
-
-While the execution of an automated task only consists of server-side actions, a user task's execution is split into several steps. As soon as the guard condition is true, a user task is activated, and waits for a user to accept the task. When a user accepts, on the server, the task's preconditions are checked, and the task's entry actions are executed. When the entry actions are finished, the task becomes running, and responsibility for further actions passes to the user. When the user has completed his or her part, the server checks the task's post conditions and runs the task's exit actions.
-
-### is a combined state chart for automated and user tasks. Look out for [isUserTask()] conditions which annotate the differences between the task types.
-
-There are several transitions where customized server-side code is executed. In each of these cases, when something goes wrong, the task becomes escalated.  Another potential cause for escalation is a timer expiring, for example because the user does not complete a task in the expected period. The mechanism for retry, suspend/resume and abort is the same as described for automated tasks above.

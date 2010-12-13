@@ -1,5 +1,0 @@
-
-
-ErrorpagesContentService
-
-This is a pseudo ContentService which delegates its requests to an underlying ContentService. In case of error, it returns - depending on the concrete error - a special error page from the local filesystem. An error page may be defined for each errorcode by creating a file named  [errorcode].xml (e.g. CAP-PORTAL-000000.xml) or by creating a file named default.xml which is the default error page. Configure this ContentService by defining these properties:

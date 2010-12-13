@@ -1,6 +1,0 @@
-
-24#
-Enter the host name, port number and domain of the LDAP/AD server you want to use.
-Press the [Yes] button to proceed with the configuration of LDAP/AD.
-
-The next window pops up for more LDAP/AD configuration.

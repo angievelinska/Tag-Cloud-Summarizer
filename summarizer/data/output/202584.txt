@@ -1,3 +1,0 @@
-
-
-All settings described in the following table are rules of thumb from CoreMedia projects. They are intended as sensible starting values for own tests. Optimal settings depend on factors which are highly project specific.

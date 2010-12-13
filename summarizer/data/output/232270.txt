@@ -1,4 +1,0 @@
-
-
-The CoreMedia SCI offers the facility for browser-based content editing and publishing. 
-

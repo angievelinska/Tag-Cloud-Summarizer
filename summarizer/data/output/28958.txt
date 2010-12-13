@@ -1,3 +1,0 @@
-
-
-The ORBRedirector only works if the client uses the ORB from the Sun J2RE. It may not work if you are not using a Sun J2RE or an Active Delivery Server runs in a third-party web container that provides its own ORB.

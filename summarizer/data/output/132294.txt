@@ -1,3 +1,0 @@
-
-
-This manual is addressed to developers of CoreMedia projects who want to develop content applications using the Unified API that was introduced with CoreMedia CMS 2005. They'll find a description of ideas and concepts, building blocks, and detailed examples.

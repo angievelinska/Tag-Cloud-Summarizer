@@ -1,5 +1,0 @@
-
-
-Batches
-
-For better performance the Search Engine Feeder sends batches to the Search Engine. A batch contains changes of multiple documents. The Search Engine sends notifications back to the Search Engine Feeder when a batch is persisted. A sent batch which was not yet persisted is called an open batch. The Search Engine Feeder uses multiple open batches to improve the indexing throughput.

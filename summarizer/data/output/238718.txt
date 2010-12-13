@@ -1,4 +1,0 @@
-
-
-A DashboardReportView customizes an existing report definition for a given dashboard view. The report definition can be customized via these properties:
-

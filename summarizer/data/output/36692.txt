@@ -1,4 +1,0 @@
-
-
-In this chapter, you will find an example for the configuration of the workflow window as it is used for the three-step workflows.
-

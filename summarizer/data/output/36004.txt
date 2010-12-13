@@ -1,5 +1,0 @@
-
-
-StoreProperties
-
-Use this action to store property values in a document. The property name and value are defined using the subelement Property.

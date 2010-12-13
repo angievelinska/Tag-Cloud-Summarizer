@@ -1,4 +1,0 @@
-
-
- Command (id) Description copyAction Copy list element from list.  cutLinkAction Cut list element from list. loginAction Login to coremedia. User has to provide name, password and domain. logoutAction Logout. moveBottomAction Move list entry to bottom of list. moveDownAction Move list element down in list. moveTopAction Move list element to top of list. moveUpAction Move list entry up in list. openContainerAction  Open containter resource in editor openDocumentAction Open document in editor. openDocumentviewAction Open document in editor overview. openInfoAction Open info window in editor. pasteLinkAction Paste list element to list. removeLinkAction remove list entry from list. separator This is not an action, but a seperator line for the menu. Separator lines will be displayed between the menu items, but no two separators will follow each other.
-

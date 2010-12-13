@@ -1,6 +1,0 @@
-
-
-Since a servlet container is not able to process an unlimited number of queries, in some implementations the number of open connections must be limited by so called thread pools.
-
-
-

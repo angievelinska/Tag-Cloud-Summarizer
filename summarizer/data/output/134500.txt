@@ -1,4 +1,0 @@
-
-
- Parameter Description -b Rebuild the existing index. You need this only in exceptional cases. Normally you will create or enable the index. -c Create the index for the first time or after you dropped it. -r Drop the index. -e Enable the index after you temporarily disabled it. After major changes in the folder structure it might be faster to drop and create the index. -i Temporarily disable the index. You might want to do so for some fast changes in the folder structure.
-

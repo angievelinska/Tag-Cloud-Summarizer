@@ -1,4 +1,0 @@
-
-
-The related method of the Web Service looks very similar to the other method because only a single method call is required to get the desired data. As usual, the rest of code is concerned with conversion:
-

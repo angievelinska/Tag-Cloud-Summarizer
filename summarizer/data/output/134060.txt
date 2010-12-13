@@ -1,3 +1,0 @@
-
-
-The migration the Content Servers is a critical operation that must be scheduled and supervised most carefully.

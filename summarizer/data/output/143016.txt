@@ -1,7 +1,0 @@
-
-
-<Search>
-
-Child elements: <TableDefinition>
-
-Parent element: <Editor>

@@ -1,3 +1,0 @@
-
-
-Configure a CoreMedia Content Server to use a CoreMedia Search Engine if you want to search for documents in the CoreMedia Editor, CoreMedia WebEditor or custom applications. The CoreMedia Content Server connects to the CoreMedia Search Engine to handle search requests for its clients.

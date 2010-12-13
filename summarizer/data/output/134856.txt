@@ -1,3 +1,0 @@
-
-
-The download tool fetches a process definition and possibly an associated jar from the workflow server and writes them into files.

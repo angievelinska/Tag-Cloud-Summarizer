@@ -1,7 +1,0 @@
-
-
-Folder
-
-Grammar: EMPTY 
-
-The Folder element is used to specify a single constant folder within expressions or variable initializers. It is not useful to define a fixed folder ID in the workflow definition. Either value or path must be selected.

@@ -1,6 +1,0 @@
-
-3#
-select the name of the file in which the binary data should be saved
-save the binary data by clicking on [Save]
-
-A dialog box informs you about the success of the action.

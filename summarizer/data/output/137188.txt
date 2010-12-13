@@ -1,7 +1,0 @@
-
-
-The AccessControl service of the content repository is responsible for maintaining the set of rights rules and for evaluating the rules to determine whether a user is allowed to perform a certain operation on content objects or not.
-
-Overview Of Rights
-
-The following rights are defined for the Unified API:

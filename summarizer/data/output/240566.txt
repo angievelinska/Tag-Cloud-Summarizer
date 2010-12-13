@@ -1,9 +1,0 @@
-
-
-The unlockcontentserver tool recovers a database schema after a server aborted without cleaning up the database. In this case it can happen that a persistent lock remains in the database. This lock must be cleared explicitly, because the server would otherwise suspect that a second server is running on the same database.
-
-This utility has the following syntax:
-
-cm unlockcontentserver
-
-You have to run the tool in the server installation where it can access the sql.properties configuration file.

@@ -1,5 +1,0 @@
-
-
-The CoreMedia Lightweight Portal extends a CAE Web Application, such as the CoreMedia Starter Kit, so that portlet applications deployed on the same application server can be integrated into pages delivered by the CAE. The placement and configuration of portlets and portlet windows is content-based, i.e. directed by editorial staff, using familiar editing tools, and is stored in the CoreMedia content repository.
-
-The CoreMedia Lightweight Portal comes as a CAE plug-in, with an automated installer. For a Starter Kit based web site, you can start using portlets right away. The plug-in does not require changes to application logic. It only has minimal performance impact, because it works on the abstract page model, and does not require any redundant page rendering.

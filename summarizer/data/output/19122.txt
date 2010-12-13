@@ -1,3 +1,0 @@
-
-
-This element of the XML file designates the configuration of the document window.

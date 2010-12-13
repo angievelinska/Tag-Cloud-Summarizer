@@ -1,7 +1,0 @@
-
-
-Revoke
-
-Grammar: EMPTY 
-
-Revoke revokes the operations for users or groups like Grant grants them (only valid for the default ACL rights policy). See Grant for details. Revoke precedes Grants.

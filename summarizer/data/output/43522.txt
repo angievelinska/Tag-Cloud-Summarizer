@@ -1,3 +1,0 @@
-
-
-To insert the value of the property directly into the output of the JSP page, use the common JSP tag, <%= Java expression %>. In the case of an integer property, this appears for example as:

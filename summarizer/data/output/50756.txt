@@ -1,5 +1,0 @@
-
-
-Example
-
-The following example shows a language Resolver which returns locale_US as the language.

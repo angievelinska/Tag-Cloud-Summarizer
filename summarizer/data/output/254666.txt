@@ -1,5 +1,0 @@
-
-
-If you have invoked this command successfully, the CoreMedia component is registered. You can check this using the service list window which you can open with ControlPanel|Administrative Tools|Component Services|Services (Local). You can execute the install command as often as you want, but note that the old entry will not be deleted if the value of SERVICE_NAME in the jpif-file of the component was changed.
-
-Deregistration of CoreMedia components as Windows Services is described in chapter. You can also perform these tasks (and some more) with the help of sc.exe, a Microsoft command-line utility.

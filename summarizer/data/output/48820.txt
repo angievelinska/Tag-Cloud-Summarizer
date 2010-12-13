@@ -1,3 +1,0 @@
-
-
-Tooltip, image, etc. will then be rendered automatically according to the language and  toolbar settings. The icons have to be placed either in a *.jar in your webapp's WEB-INF/lib directory or as single files into WEB-INF/classes, always considering the package names.

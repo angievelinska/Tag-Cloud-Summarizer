@@ -1,6 +1,0 @@
-
-
-With access control enabled, a template always operates under an identity that is stored in the current context. ADS employs Java's javax.security.auth.Subject which basically is a set of java.security.Principals (identities) to store the current user. For purposes of access control, only the set of principals of class hox.corem.servlets.Group (which implements Principal) are considered by ADS. If you only include a hox.corem.servlets.User in the subject, ADS derives its groups automatically. Both groups and users can be obtained through the UserManager object available through the generator bean.
-
-While the subject can be constructed by authenticating against the Content Server, you can also employ your own authentication scheme to construct a subject, as long as it contains a set of Group objects. Alternatively, you can employ J2EE container authentication, in which case you have to provide a mapping from J2EE roles to SCI groups. Thus it is possible to only maintain a few groups in SCI for purposes of rights administration, but have user identities and login provided through other means.
-

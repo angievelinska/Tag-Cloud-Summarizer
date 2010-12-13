@@ -1,5 +1,0 @@
-
-
-Column classes define how content is rendered and sorted in table columns of the Client GUI. The classes are shown in table. The workflow column classes are defined in the editor.xml file.
-
-Alternatively, a renderer can be set for each column class. The renderer carries out the display itself. For this purpose, an attribute, renderer="Renderer class" has to be embedded in the ColumnDefinition element. The renderer must be a subclass of the class hox.corem.editor.toolkit.columnrenderer.LayoutColumnRenderer. See the API documentation for details.

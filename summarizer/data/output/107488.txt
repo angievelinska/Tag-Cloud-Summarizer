@@ -1,6 +1,0 @@
-
-
-We decided on the document type Text at the beginning. For simplicity reasons, we set the fixed path Test/Xmlnews as the target directory. We set the name and ID to the already extracted filename.
-
-
-We proceed down to <body> and generate a <version>.

@@ -1,7 +1,0 @@
-
-
-<Process>
-
-Child elements: <View>?, <Task>*, <WorkflowStartup>?
-
-Parent elements: <Processes>

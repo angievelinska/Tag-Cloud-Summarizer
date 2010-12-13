@@ -1,9 +1,0 @@
-
-
-Find Portlet Windows
-
-You need to provide a strategy which finds all portlet windows on a page. See section 5.3. Find Portlet Windows Plugin for details.
-
-Portlet Window template
-
-In order to display the portlet window's contents on the web page, you need to define a template for your portlet window content bean class. Your content bean directly represents the portlet window, as it implements the CMPortletWindow interface. You can use the portal tag library (see portal tag library) to access the current contents of the portlet window (its portlet window model). Assuming your content bean class is com.customer.MyPortletWindow, the simplest possible template would look as follows:

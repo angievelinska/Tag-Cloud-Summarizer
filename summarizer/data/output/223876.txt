@@ -1,7 +1,0 @@
-
-
-When processing events into concise reports, it is often useful to group those events that have happened in a coherent time interval. Time intervals are defined separately for In-Site Analytics reports and for Dashboard Analytics reports.
-
-All overlay reports use a very simple model where the day is split into intervals of equal length. The interval length here is configurable, but typically it ranges from one to five minutes. It should divide 60 minutes evenly. A new interval starts at 00:00 GMT, possibly assigning leap seconds to the previous interval. If coarser intervals are needed, post processing has to be done after reading the data from the database.
-
-Permanent reports use a more elaborate scheme. Reports for different granularities are precomputed and stored in different tables, using one table per granularity. The granularities are summarized in the following table:

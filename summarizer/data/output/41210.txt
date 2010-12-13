@@ -1,3 +1,0 @@
-
-
-To select a resource, click on it. Selected folders are highlighted blue in the folder overview. Documents in selected folders are displayed in the document overview:

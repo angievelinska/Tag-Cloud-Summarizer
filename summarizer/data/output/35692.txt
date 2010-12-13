@@ -1,5 +1,0 @@
-
-
-Implicit Choice
-
-If a choice is used (see above), the workflow engine decides where to continue the control flow based on an explicit expression. An implicit choice lets the workflow users decide where to continue, simply by offering two or more user tasks, from which only one may be accepted. As soon as this one task is accepted, the other task(s) is/are automatically withdrawn and may not be accepted anymore. The notation is to draw two or more outgoing control flow edges without a condition inscription. The decision node may be omitted, as in the example diagram.

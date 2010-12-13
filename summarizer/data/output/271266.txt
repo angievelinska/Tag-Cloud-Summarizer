@@ -1,9 +1,0 @@
-
-
-This manual describes the Clip.
-
-Section gives an overview about the supported use cases and the architecture
-Section describes how to install and configure Clip.
-Section describes the administration and operation of Clip.
-Section describes how a user can configure the portlet settings.
-Section describes how Clip can be used for own applications.

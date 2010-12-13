@@ -1,4 +1,0 @@
-
-
- Annotation Description @Public() Marks, that the functionality of the bean can be used in the sense of a service. @Configurable() Marks a bean or property, that can be modified using Customizers. @Overridable() Marks a bean, that can be replaced by another bean in the sense of an alternative strategy.
-

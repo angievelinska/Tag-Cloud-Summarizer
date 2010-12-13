@@ -1,3 +1,0 @@
-
-
-The database configuration specified during the installation is written into multiple configuration files. If you want to change (or fix) the database configuration in the installation you have to change it in the following files:

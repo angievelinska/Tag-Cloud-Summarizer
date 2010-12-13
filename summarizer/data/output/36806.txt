@@ -1,7 +1,0 @@
-
-
-Document
-
-Grammar: EMPTY 
-
-The Document element is used to specify a single constant document within expressions or variable initializers. It is not useful to define a fixed document ID in the workflow definition. Either path or value should be specified.

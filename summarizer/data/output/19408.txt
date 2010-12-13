@@ -1,3 +1,0 @@
-
-
-Initializer fill the fields of a newly created document with default values. With the element a class for initializing can be provided. Parameters can be handed to the class via attributes of the element (see the code example above). 

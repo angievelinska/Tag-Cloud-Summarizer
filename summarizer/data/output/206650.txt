@@ -1,5 +1,0 @@
-
-
-The result of matching the regular expression (serverdump|publisher|watchdog|workflow|webserver|importer) is negated for users requesting the editor service. This means that the built-in users with the names serverdump, publisher,  watchdog, workflow, webserver and importer are not allowed to use the editor. TrueLoginPredicate allows other users to start the editor and all users to use non-editor services.
-
-Evaluation of login predicates is logged on the CM Server in the debug log level. If you want to see login predicate results switch the log level from info (default value) to debug in the log configuration in the properties/corem/capserver.properties file and look for the word 'predicate' in the CM Server log after a user has tried to log on. You do not need to restart the CM Server when changing the log level.

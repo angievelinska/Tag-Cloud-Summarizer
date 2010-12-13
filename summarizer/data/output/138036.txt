@@ -1,5 +1,0 @@
-
-
-The SearchService provides full-text search capabilities and can be obtained from the Generator object with the method getSearchService. You can use its methods to quickly find documents based on their current property values and some of their implied properties (e.g. document creator).
-
-The interface hox.corem.servlets.SearchService and its use is nearly identical to the SearchService of the Unified API. The only differences are caused by different interfaces for resources and resource types. Because of that, please read the documentation in section "The Content Repository/Search Service" of the CoreMedia Unified API Developer Manual to learn how to perform searches in the CoreMedia Active Delivery Server. You can find the differences to the Unified API in the Javadoc API documentation.

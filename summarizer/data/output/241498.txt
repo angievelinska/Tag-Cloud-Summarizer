@@ -1,7 +1,0 @@
-
-
-This action simply gets the current ChangeCollector from the WageContext and tries to commit it by calling ChangeCollector.commit().
-
-If the ChangeCollector isn't empty after the commit, the commit failures are converted to Struts ActionErrors, using the CMRequestProcessor helper method getCommitFailuresAsActionErrors(). The ActionErrors are saved so that they can be retrieved by a <html:errors>-tag in the next view.
-
-At the end of the action's execute() method, an ActionForward has to be returned. Our action looks up the forward with the name "success" struts-config.xml if it was successful, or the forward with the name "failure" if an error occured. Actually, the former is a CoreMedia ResourceActionForward, while the latter is an ActionForward statically defined in struts-config.xml, but the action class need not care about that. See XXX on how these ActionForwards are configured.

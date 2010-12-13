@@ -1,3 +1,0 @@
-
-
-The following code example shows how you might implement the inital assignment of the process instance variables. 

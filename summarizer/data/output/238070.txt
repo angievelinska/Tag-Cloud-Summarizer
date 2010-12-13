@@ -1,3 +1,0 @@
-
-
-By default, a user has no rights on its home folder. You have to add the user to a group which has appropriate rights on this folder. See for example the predefined editor group.

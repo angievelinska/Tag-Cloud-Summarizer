@@ -1,5 +1,0 @@
-
-
-Access workflow variables from the action
-
-The example XML workflow definition shows how to configure the action bean to access the mail address of the receiver and how to access the document from the workflow instance. The success of the action will be returned to the successVariable. The necessary settings and the definition of the action are shown in the following:

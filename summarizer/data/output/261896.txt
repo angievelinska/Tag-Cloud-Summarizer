@@ -1,3 +1,0 @@
-
-
-The simplest way to add Analytics Report data to your live CAE is by re-using reports definitions from the Analytics Dashboard. Throughout this section, the `Top Viewed Pages¿ report will be used as the example. Steps:

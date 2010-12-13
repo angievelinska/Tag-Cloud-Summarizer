@@ -1,7 +1,0 @@
-
-6#
-If you want to set up the CoreMedia Content Server now, click [Yes]. If you want to configure later manually, click [No]. You have to do the basic configuration in the corresponding property files in the directory ./properties/corem later (for a detailed description of the properties see Chapter 5).
-
-If you decide to carry on with the set-up, dialog-boxes will ask you for the properties of the selected CoreMedia SCT components. In the subsequent dialog boxes all paths are given relative to the installation directory.
-
-Now, the dialog box for configuring contentserver.properties is shown.

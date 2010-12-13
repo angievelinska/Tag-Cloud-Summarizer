@@ -1,3 +1,0 @@
-
-
-For an approver with two available tasks, one offered and one accepted, this would look like that (rendered by the same template, renderWorklist.jsp):

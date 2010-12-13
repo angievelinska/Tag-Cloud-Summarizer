@@ -1,4 +1,0 @@
-
-
- Type Template Attributes Int Int.jsp (all) String String.jsp (all) Date Date.jsp (all) Xml Richtext.jsp Grammar="coremedia-richtext-1.0" Xml Xml.jsp all other values for Grammar Blob Blobimage.jsp MIMEType starting with image Blob Blobtext.jsp MIME type starting with text Blob Blob.jsp all other values for MIME types LinkList main template, no sub views 
-

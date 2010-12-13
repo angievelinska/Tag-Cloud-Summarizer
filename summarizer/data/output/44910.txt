@@ -1,3 +1,0 @@
-
-
-In this example, the href attribute of the <base> element becomes the ID of the document. Therefore, all generated <base> elements within an importer process must have different href values. The transformer should ensure this by means of a configurable prefix, extended with a consecutive number. The transformer processes all source documents at once. Here is the Java code of this transformer:

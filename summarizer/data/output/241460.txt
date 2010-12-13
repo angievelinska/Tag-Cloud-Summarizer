@@ -1,3 +1,0 @@
-
-
-You can control which ChangeCollector should be used by calling the static method WageContext.setCurrentChangeCollector(...). If no current ChangeCollector is set, the one with the default name (as determined by WageConfig.getDefaultChangeCollectorName()) is retrieved. This default name again defaults to WageSession.NEW_CHANGE_COLLECTOR, which will create a new ChangeCollector automatically (see API documentation for more details). If you want to use a specific ChangeCollector (such as "default") as default, you can configure the default ChangeCollector name in the wageConfig bean (see wage-config).

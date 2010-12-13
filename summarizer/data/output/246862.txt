@@ -1,5 +1,0 @@
-
-
-If you want to install a component on a Windows Vista system, use the cap-<rel.no.>.js script for installation. This script asks for administrator privileges before starting the installer. These privileges are required for installation into the Program Files folder. Simply drag the installation script file on cap-<rel.no.>.js or open a command line prompt as administrative user and enter:
-
-java -jar <Path>/cap-<rel.no.>.jar -p <Path>/<InstallScriptName>.script

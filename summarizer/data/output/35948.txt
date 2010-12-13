@@ -1,5 +1,0 @@
-
-
-PreferPerformer
-
-Use this action to set the performer of the current task as the preferred performer of another task. When the given task coincides with the current task, the preference will take effect when the task is reached the next time.

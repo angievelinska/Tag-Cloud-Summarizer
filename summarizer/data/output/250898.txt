@@ -1,5 +1,0 @@
-
-
-CoreMedia XML files essentially match the CoreMedia DTD but the importer does not support the full extent of the DTD. There are both limitations and expansions.
-
-The root element is <coremedia>. As child elements, multiple <document> elements can arise. Each <document> element describes a document. The <document> elements contain in turn one or more <version> elements. The <version> elements contain child elements which can be divided into two groups: field elements and action elements. They describe the content and status of the document. Section 5.1.2.4describes the field elements and Section 5.1.2.5 the action elements in detail.

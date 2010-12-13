@@ -1,4 +1,0 @@
-
-
- Property Type  Java Type  Conversion  IntProperty int simply the value from the underlying content object StringProperty string simply the value from the underlying content object DateProperty Calendar simply the value from the underlying content object XmlProperty Markup The markup is transformed. Every internal xlink to a document or blob is transformed into the corresponding content bean id or blob id. BlobProperty CapBlobRef this is the result of #getBlobRef of the underlying content object LinkListProperty List every content object in the link list is converted to a bean through the content bean factory
-

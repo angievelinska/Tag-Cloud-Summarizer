@@ -1,9 +1,0 @@
-
-
-The title bar of the browser holds the document name. In the tool bar you find the symbols for check-out, copy etc. of the document. 
-
-These symbols are always visible. On click into  
-
-a RichText field, they are supplemented with the RichText toolbar 
-a LinkList, they are extended by a link  list toolbar
-

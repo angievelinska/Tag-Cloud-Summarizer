@@ -1,9 +1,0 @@
-
-
-Line 1: The package to which the action belongs. Choose your own one. 
-
-Lines 3 - 5: The Java packages which are necessary for mail usage.
-
-Line 6 - 9: The packages for the workflow.
-
-Line 12: If you implement actions, it is necessary to import the interface com.coremedia.workflow.WfAction. The recommended solution is to extend AbstractResourceAction which implements WfAction.

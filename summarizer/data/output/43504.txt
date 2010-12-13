@@ -1,3 +1,0 @@
-
-
-The properties of a document defined in the schema can be called up in the following code and inserted onto the page. Access to and formatting of the types of properties supported by the CoreMedia system is described in the following subsections.

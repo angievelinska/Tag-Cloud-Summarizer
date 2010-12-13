@@ -1,3 +1,0 @@
-
-
-Uncomment the <Then successor="AllDocumentsDone"/> line and comment out the <Then successor="Finish"/> line in the If-Task. Uncomment the tasks following this If-Task. You can insert the publication workflow, that you want to start in the attribute subprocess of the ForkSubprocess task (see the Workflow Developer Manual for details).

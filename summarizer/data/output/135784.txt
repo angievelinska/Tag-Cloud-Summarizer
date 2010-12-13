@@ -1,3 +1,0 @@
-
-
-Note, that open batches are kept in main memory. You have to reserve (maxOpen+1)*maxBytes bytes for the batches.

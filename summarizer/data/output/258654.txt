@@ -1,7 +1,0 @@
-
-
-Several configuration files are used to tune Preview-based Editing. The central configuration file is /framework/spring/editing-jsf/dispatcher-servlet/pbe.xml in the cap-editing-jsf-config.jar. It contains a bean named pbeConfig which is responsible for configuration of enabling or disabling Preview-based Editing and target URIs for the editors. Don't change this file directly! 
-
-Use the /WEB-INF/spring/editing-jsf/dispatcher-servlet/pbe.properties for your configurations. The settings of this file are read by the pbe.xml. For the most basic context menu without any custom commands, it should be enough to configure the pbe.properties file and enrich some templates of your web application. In some situations it may be helpful to customize the pbeConfig bean. This can be done by adding spring customizers to the corresponding custmization pbe.xml in the directory /WEB-INF/spring/editing-jsf/dispatcher-servlet. The usage of customizers is described in Section. 
-
-As the default commands may open a CoreMedia WebEditor or CoreMedia Editor, you have to provide an URI for either one. The following table displays the properties to be edited:

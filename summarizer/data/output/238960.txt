@@ -1,4 +1,0 @@
-
-
- Source file Target ../oeminstaller/config/etc/* <InstallDir>/etc/. ../oeminstaller/config/lib/python/processors/* <InstallDir>/lib/python2.3/processors/.
-

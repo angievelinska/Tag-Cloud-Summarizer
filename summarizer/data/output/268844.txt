@@ -1,3 +1,0 @@
-
-
-The publishall tool is used to populate a new Master Live Server in case the orginal Master Live Server database has been corrupted and is not recoverable from a consistent backup. Before starting the publishall tool, you must create an empty database schema, configure it in the Master Live Server, restart the server and wait until it is completely initialized. You can then publish all content to the new server as follows:

@@ -1,3 +1,0 @@
-
-
-Every project has its own challenges that make it unique, but every project also has common tasks. To not reinvent the wheel over and over again, you need both, a flexible framework for the fiddly tasks and a solid basis for the standard work. The Starter Kit comes with best-practice solutions for navigation, multi-language support, multi-site support and many more. If you use the standard templates, you can set up a website in less than an hour and start entering your content and design. The Starter Kit is fully customizable and allows the usage of the complete CMS 2008 framework

@@ -1,5 +1,0 @@
-
-
-Setting custom the Base Table Names and Time Column Names
-
-While in general the base table Name 

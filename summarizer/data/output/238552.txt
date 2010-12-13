@@ -1,3 +1,0 @@
-
-
-With the bulkpublish tool you can publish all resources below a given folder. If necessary, you can automatically check-in resources and approve them. 

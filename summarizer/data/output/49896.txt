@@ -1,5 +1,0 @@
-
-
-Example:
-
-The next example shows a validator which simply returns the value to be validated. 

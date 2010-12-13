@@ -1,5 +1,0 @@
-
-
-Configure in:
-
-WEB-INF/properties/corem/log.properties

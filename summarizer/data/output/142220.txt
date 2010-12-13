@@ -1,4 +1,0 @@
-
-
- Parameter Description -t Only search for documents of the given content type and inherited types. -q The string to search for. -f Only search in the given folder and its subfolders. 
-

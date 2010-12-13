@@ -1,9 +1,0 @@
-
-2#
-Copy the license file fastsearch.lic you obtained for FAST into the oeminstaller directory (for FAST InStream 4.3) or into the fastinstaller directory (for FAST ESP 5.1.5) below the directory where you unpacked the CoreMedia Search Engine archive file.
-
-
-Start the graphical installer and select the search engine as described in chapter.
-
-
-

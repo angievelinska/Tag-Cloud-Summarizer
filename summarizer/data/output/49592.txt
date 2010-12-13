@@ -1,3 +1,0 @@
-
-
-In order to emulate CAP 4.0 server login behavior (with service groups) in SCI 4.1, supply the NameLoginPredicate with the following parameter:

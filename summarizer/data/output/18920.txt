@@ -1,8 +1,0 @@
-
-
-To connect the IIS with the Tomcat servlet container proceed as follows:
-
-Use the Tomcat IIS HowTo (http://jakarta.apache.org/tomcat/tomcat-4.1-doc/jk2/jk/iishowto.html)
-Apply the following changes to the <CoreMediaInstall>/jakarta-tomcat4/conf/server.xml file according to the configuration of the isapi_redirect.dll described in the Tomcat IIS HowTo:
-3* Activate the AJP connector e.g.: <Ajp12Connector port="8007" address="127.0.0.1"/>
-

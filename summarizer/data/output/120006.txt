@@ -1,3 +1,0 @@
-
-
-Now you have two ways to access properties of a ClientDocument: Using the Active Delivery Server API (hox.corem.servlets.Document interface) or the DynaBean interface mentioned above. For a ClientDocument variable named clientDocument and a string property named propertyName this would look like follows:

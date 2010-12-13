@@ -1,3 +1,0 @@
-
-
-Toolbar: The toolbar uses the LinkList editing commands from com.coremedia.cap.gui.resources.LinkListCommandNames for rendering command buttons. You should also use a WAGE FocusListener to enable/disable the command buttons according to the currently focused editor, as shown in XXX.

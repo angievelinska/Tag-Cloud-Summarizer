@@ -1,7 +1,0 @@
-
-
-If you perform a query and you find resources in the recycle bin it's easy to restore these resources:
-Mark the resources you want to restore.
-Select Restore in the context menu.
-
-The resources will be moved to their last position in the CoreMedia repository. Deleted folders which are necessary to restore this position will also be recreated in the repository. No other deleted resources contained in these folders will automatically be restored.

@@ -1,7 +1,0 @@
-
-
-Configuring In-Site Analytics Parameters
-
-In order to select the reports shown by In-Site Analytics, there is a configuration panel that can be displayed in two different ways: in a standalone window and in an overlay in the previewed page. The configuration overlay - also known as the satellite - is only available, if it has been previously integrated into the preview webapp.
-
-The following picture shows the basic structure of the configuration panel.

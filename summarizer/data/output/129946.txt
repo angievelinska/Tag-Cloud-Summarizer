@@ -1,3 +1,0 @@
-
-
-Note: The required JDBC drivers are not part of the CoreMedia SCI distribution; they must be obtained from the corresponding database manufacturer.

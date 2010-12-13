@@ -1,3 +1,0 @@
-
-
-Since there are typically many documents, only the pages based on navigation nodes are shown in the navigation menu and the sitemap. To enforce showing document pages in the menu, the Starter Kit allows setting documents as direct children of navigation nodes. Strictly speaking, this is a third way to create a page, since such a document need not have any context, but the parent navigation node takes over the role of its context. However, the Starter Kit Content Editor still requires every document to have at least one navigation context.

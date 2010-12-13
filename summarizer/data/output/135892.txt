@@ -1,5 +1,0 @@
-
-
-The CoreMedia Search Engine Feeder is configured in an XML file which is specified in the property cap.server.feeder in the file contentserver.properties. Default is properties/corem/feeder.xml.
-
-The top-level element in this file is Feeder.

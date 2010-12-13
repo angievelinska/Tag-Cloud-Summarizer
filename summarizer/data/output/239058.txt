@@ -1,3 +1,0 @@
-
-
-This section describes the concepts which are used for Editing Services web applications in portal environments. Some concepts are only described very brief, because they are described in other chapters in more detail, a reference will be given in that cases. 

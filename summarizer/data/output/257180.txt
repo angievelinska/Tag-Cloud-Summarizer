@@ -1,3 +1,0 @@
-
-
-In this case, an  information window can be opened up with the menu entry File|Properties which shows all information about the document in detail (see section).The user who is last in the version history has the document checked-out.

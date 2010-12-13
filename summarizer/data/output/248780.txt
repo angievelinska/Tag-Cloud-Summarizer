@@ -1,3 +1,0 @@
-
-
-The resource being displayed can be a document or a folder. Display of folders is the subject of Section 4.2.4. First, display of documents is dealt with in Section 4.2.4.

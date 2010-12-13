@@ -1,9 +1,0 @@
-
-
-Read CoreMedia resources
-
-The static method get of class com.coremedia.cap.generator.GeneratorInstance returns a hox.corem.servlets.Generator instance. You can use it inside a builder to get resources from the CoreMedia repository as known from the Active Delivery Server. It also provides access to the servlet context.
-
-When a CoreMedia resource is used during the computation of a value, PADS automatically creates a dependency for the computed value on the accessed resource.
-
-The following example shows a builder's compute method, which returns the value of a document's string field. We don't check for errors  here to keep the example simple:

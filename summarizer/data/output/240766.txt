@@ -1,3 +1,0 @@
-
-
-Note: As storage-implied properties technically belong to all bean types, enabling a feature for an implied property enables the feature in all bean entities. 

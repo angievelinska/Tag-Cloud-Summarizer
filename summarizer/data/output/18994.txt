@@ -1,3 +1,0 @@
-
-
-The administration pages support the administration of the CoreMedia SCI system. This is a web page from which more JSP pages related to the Active Delivery Server can be reached. 

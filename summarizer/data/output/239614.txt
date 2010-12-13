@@ -1,3 +1,0 @@
-
-
-The <Difference>-element is deprecated. Use <WebContext> for the configuration of Differencing.

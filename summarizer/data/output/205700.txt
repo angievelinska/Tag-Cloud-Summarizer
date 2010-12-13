@@ -1,5 +1,0 @@
-
-
-Reverse Polish Notation
-
-In this notation, the operator connecting the two arguments is entered after the expressions for the arguments. Therefore, an algebraic expression such as "1 + 2" would be constructed as "1 2 +". The advantage of this notation is that no brackets and no precedence rules are required: "2 * (3 + 4)" is generated as "2 3 4 + *", and "2 * 3 + 4" appears as "2 3 * 4 +".

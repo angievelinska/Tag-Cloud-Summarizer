@@ -1,5 +1,0 @@
-
-
-Prerequisities
-
-For register and all a running contentserver is mandatory.

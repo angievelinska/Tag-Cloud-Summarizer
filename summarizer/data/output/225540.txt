@@ -1,9 +1,0 @@
-
-
-In this chapter the necessary steps for adapting the Data Aggregator  are discussed.
-
-The Data Aggregator runs inside a Workflow Server. It consists of a singleton manager instance and a process that is executed by a Workflow Server.
-
-The manager provides access to the configuration in the workflowserver.properties, it provides access to the database connection and it helps in limiting the number of running aggregation processes to one. It is implemented as the class com.coremedia.analytics.wf.AggregatorManager. If you need connection pools to data sources that are not handled by the existing manager (for example when integrating a shop system), you should subclass the manager class and maintain the pools there. Similarly, you might want to provide access to own configuration parameters through a custom manager. In this case, you can simply change the manager class property in the file workflowserver.properties.
-
-However, it is more likely that you can reuse the manager unchanged, but that you must extend the aggregation process. Therefore, the chapter starts with a short introduction of the aggregation process. Afterwards, the most important predefined automated actions are dicussed, which can be helpful in defining an extension.

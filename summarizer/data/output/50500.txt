@@ -1,5 +1,0 @@
-
-
-Example:
-
-The next example shows a simple Initializer which checks whether the property to initialize is of type String or not. If it is, the property will get the name of the creator of the document as the initial setting.

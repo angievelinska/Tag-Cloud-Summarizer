@@ -1,7 +1,0 @@
-
-
-ADS cache consistency requires the timely processing of repository events, since these events carry information about changes to the content repository. Interruption of event processing over a longer period of time will thus lead to outdated cache contents. Under normal circumstances the event queue should always be empty or emptied quickly. 
-
-The event queue may become blocked as follows: an event for a content object that has just been read by a cacheable template can only proceed after that template has completed execution. The event and all following have to wait. If that template does not terminate or runs for a considerable amount of time, the event queue will stall. In such a case, the entry ¿invalidationStack¿ in the ADS status page can help identify the offending template. It displays the stack of recursive invalidations up the stalled one.
-
-ADS and Content Repository

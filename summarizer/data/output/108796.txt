@@ -1,7 +1,0 @@
-
-
-CoreMedia SCI is able to adopt users and groups from LDAP servers which prevents administrators from maintaining them in CoreMedia SCI. There is an out-of-the-box integration for Active Directory and a customizable support for any LDAP schema. Several LDAP servers can be integrated.
-
-CoreMedia SCI does not write on an LDAP server. You cannot change LDAP memberships with the CM User Manager and you cannot create memberships between groups and users from different LDAP servers. However rules, even for LDAP groups, remain in the CoreMedia SCI repository. As they refer to CoreMedia resources and resource types, they are repository specific.
-
-CoreMedia SCI clients don't communicate directly with an LDAP server, but get users and groups from the CM Server. The CM Server accesses users and groups from instances of the interface com.coremedia.ldap.UserProvider. The following subsection explains how UserProviders are configured.

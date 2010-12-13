@@ -1,3 +1,0 @@
-
-
-Since CoreMedia SCI 4.1, it has become possible to integrate LDAP directories. The access to LDAP directories is read-only, i.e. the CoreMedia system obtains user and group information from the LDAP server(s), but does not return modifications.

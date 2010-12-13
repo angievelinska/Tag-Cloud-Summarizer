@@ -1,5 +1,0 @@
-
-4#
-Enter the properties and click Next to continue.
-
-A window opens-up which allows you to configure the ports of the Content Management Environment.

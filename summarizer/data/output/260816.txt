@@ -1,5 +1,0 @@
-
-8#
-Enter the database values for the database of the Http Cache and click Next.
-
-If you have chosen to install In-Site Analytics you will be asked for the configuration of the overlay.properties file. 

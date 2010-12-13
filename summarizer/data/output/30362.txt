@@ -1,5 +1,0 @@
-
-
-Client side comparators for sorting rows
-
-For rows, there exists no default comparator. A row can be sorted according to the different columns which are shown. Own comparators must implement hox.corem.editor.toolkit.table.NamedDocumentVersionComparator. Client side comparators get objects of types hox.corem.editor.proxy.DocumentVersionHolder. The following table shows the predefined column comparators which can be used on the client side.

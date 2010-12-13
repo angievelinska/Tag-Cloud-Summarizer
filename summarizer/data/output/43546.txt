@@ -1,3 +1,0 @@
-
-
-You can access the string property as follows, for example:

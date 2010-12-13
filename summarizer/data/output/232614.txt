@@ -1,9 +1,0 @@
-
-
-Like in the CoreMedia Editor you can insert images - CoreMedia Picture documents - at the current cursor position. Nevertheless, it is not possible to insert images via drag'n drop.
-Open the document in the document window
-Move the cursor to the position
-Insert the image by clicking the symbol in the tool bar.
-
-3* The document chooser opens and displays all available documents: all documents with a filled BLOB property are shown with a preview:
-

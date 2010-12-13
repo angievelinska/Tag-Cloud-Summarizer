@@ -1,3 +1,0 @@
-
-
-With script-based installation, all existing files in the destination directory will be replaced by the newer version without further notice  and will be moved to the installation archive.

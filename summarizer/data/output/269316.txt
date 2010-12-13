@@ -1,5 +1,0 @@
-
-
-The CoreMedia system uses so-called "content types" to describe the internal structure of documents. Therefore, before you can work with content a "content type model" must be installed. Each document type, except the root type, inherits from a parent type, or in other words, a hierarchical type system organizes the content. For more information on document types please refer to the CoreMedia Administration Manual.
-
-The Web Service of this section will offer two methods allowing to access all type data. In addition to the already introduced ContentMetaData two other portable artifacts are needed: one describing the type generally and one for the property details. 

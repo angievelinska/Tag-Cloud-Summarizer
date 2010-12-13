@@ -1,7 +1,0 @@
-
-
-<wage:windowIcon>
-
-Renders a window icon (<link rel="SHORTCUT ICON" href=.../>) for the icon specified with the name attribute. The icon must be available in the hox.corem.editor.icons-windows package. Attributes:
-
-name (required): the name of the icon for which the link should be rendered

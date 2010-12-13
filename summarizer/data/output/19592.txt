@@ -1,4 +1,0 @@
-
-
-This element is used to group the elements which define the view of the workflow variables.
-

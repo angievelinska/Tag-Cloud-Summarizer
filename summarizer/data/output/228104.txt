@@ -1,3 +1,0 @@
-
-
-See the API documentation for a description of all properties of the classes BeanMappingFeedablePopulator, BeanFeedableMapping and BeanPropertyFeedableElementMapping in package com.coremedia.cap.feeder.bean.

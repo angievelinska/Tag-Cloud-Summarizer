@@ -1,5 +1,0 @@
-
-
-In this section, details of the connection object are discussed. It is shown how a connection can be created and which services it offers.
-
-While the connection also provides access to the three repositories, we do not view the repositories as integral parts of the connection. They will be discussed one by one in the following chapters.

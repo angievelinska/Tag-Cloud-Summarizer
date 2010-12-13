@@ -1,3 +1,0 @@
-
-
-You can add more information to a query by switching to the Comment tab in the query window and taking notes:

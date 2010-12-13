@@ -1,5 +1,0 @@
-
-
-Changing the DTD for a particular property can solve many problems in your project. However, apart from the fact that DTD design is not a simple issue and requires much experience in developing formal grammars this process also raises another important issue: 
-
-Custom Xml properties cannot be edited with the CoreMedia Editor or the WebEditor General rule: Use custom DTDs when importing from external systems that offer a DTD and use this DTD. A good example are eCommerce Systems that offer DTDs for product data. Use custom DTDs when you want to put structure into XML properties and the default DTD is not sufficient. Workarounds: many layout issues can be solved by using the SPAN element extensively. Establish conventions on how to markup your content using special CLASS attribute values.  

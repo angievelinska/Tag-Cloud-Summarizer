@@ -1,5 +1,0 @@
-
-
-Add a content type to the CMS content repository which represents a collection of content dynamically assembled, e.g. 'DynamicContentCollection'. Add a String property, e.g. 'Query' to the type, which stores the rule query expression.
-
-We recommend that you name your content type after the rule execution result (= the dynamic content collection) and not after the rule itself. The reason is that the type represents a content collection, while a content rule is only a technical means to fetch the content. This naming scheme has the advantage that on the delivery side, a ContentBean type 'DynamicContentCollection' gives a clue on its structure.

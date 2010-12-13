@@ -1,5 +1,0 @@
-
-
-Note, that the index of the CoreMedia Search Engine is updated asynchronously and therefore does not always represent the current state of the content repository. Note further, that the CoreMedia Search Engine searches for current documents only.
-
-If you need up-to-date results or want to search for folders or document versions, you should consider using the QueryService.

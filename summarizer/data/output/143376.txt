@@ -1,3 +1,0 @@
-
-
-CoreMedia SCI includes the ProActive Delivery Server which offers enhanced functionality for offline generation. If you do not need to stay with the offline functionalities of ADS for compatibility reasons, it is recommended to use this component.

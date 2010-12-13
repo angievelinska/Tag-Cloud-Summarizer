@@ -1,4 +1,0 @@
-
-
- Right Affected Operations READ read content WRITE write content DELETE move content to or from the recycle bin; destroy content; mark or unmark content for deletion or withdrawal  APPROVE approve places and versions PUBLISH publish content SUPERVISE assign rights rules to content
-

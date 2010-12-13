@@ -1,3 +1,0 @@
-
-
-Databases differ considerably in the names that are used for the basic datatypes. In the following description of the schema we will present a uniform view that does not elaborate on the individual databases. Instead we use abstract type names that are easily converted to the name used for the individual databases.

@@ -1,3 +1,0 @@
-
-
-The semantics must work in any still existing instances of older workflow definitions.

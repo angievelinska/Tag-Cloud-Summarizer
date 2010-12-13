@@ -1,3 +1,0 @@
-
-3#
-In CONFIG mode, the hello world portlet allows to reconfigure the welcome message. Type in a new message and submit.

@@ -1,7 +1,0 @@
-
-
-The Client GUI comes with a set of property editors to allow out-of-the-box editing of workflow variables. These predefined property editor classes may be configured and/or replaced by custom property editors.
-
-Predefined property editor classes
-
-These classes are editing components which will be used for workflow variables shown in the variable view within the element <Variable>. These editors are the defaults for the appropriate variables, e.g. a variable of type Boolean will be edited using the JCheckBoxBooleanEditor.

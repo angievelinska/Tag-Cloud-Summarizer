@@ -1,6 +1,0 @@
-
-
-The Unified API allows you to attach listeners to the repositories and certain services. The base interface of all listeners is CapListener. The base class of all events is CapEvent.
-
-In Figure you see the type hierarchy of the class CapListener. Normally, you will want to implement one of the repository listeners, but there are occasions when you need the events of a service listener or a connection listener.
-

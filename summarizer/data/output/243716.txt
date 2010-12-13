@@ -1,5 +1,0 @@
-
-
-The Framework
-
-In this chapter you will find the "framework" of your action, e.g. the packages to import or the class to inherit from. See Example 5.4.6a for the package declaration, imports and class declaration of the action code.

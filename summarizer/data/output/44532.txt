@@ -1,9 +1,0 @@
-
-
-In this way, documents offer the usual flexibility of the object-oriented world: according to the context, you can allow general or special document types in linklists or templates. 
-
-For good system performance, however, you should not inflate the inheritance tree with too many generic intermediate types, but limit this to types which will actually be required in the foreseeable future.
-
-The order of the type definitions is relevant to inheritance: a document type used as the parent type must be defined previously. In this way, cyclic construction of inheritance relationships is ruled out.
-
-A field which is defined in a (direct or indirect) parent type cannot be newly defined in the derived document type.

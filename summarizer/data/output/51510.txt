@@ -1,7 +1,0 @@
-
-
-Since permissions in SCI are granted on a group basis, all users with the same group combination have access to the same set of content. For this reason, a second caching option has been added. A "group cacheable" template (as opposed to "once-cacheable") allows page caching on the basis of group combinations. The template is declared so by embedding cacheable="byGroups" in the template header. Such pages are actually rendered and cached in multiple variations. During rendering, the template runs in a security context comprised of exactly those groups, corresponding to the group combination.
-
-Caching "by groups" only makes sense, if you have a small (<5) number of possible group combinations. Otherwise, the number of cached fragments will explode.
-
-At the moment, caching by groups works by adding a hidden parameter to the ResourceUri object to distinguish from other versions of the same page. This parameter is not visible to template programmers and cannot be influenced. You will therefore encounter multiple directories in the page cache with different values for the parameter 'cap.groups'.

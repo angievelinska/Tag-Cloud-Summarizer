@@ -1,7 +1,0 @@
-
-3#
-In the left pane, select the folder where the CMPortletWindow document should be created.
-Choose type CMPortletWindow
-Enter a name for the new CMPortletWindow into the Name field.
-
-Next, the CMPortletWindow document opens.

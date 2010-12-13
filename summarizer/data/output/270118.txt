@@ -1,9 +1,0 @@
-
-
-Many CoreMedia CMS projects have defined a property that contains a list of name-value-pairs, used for configuration purposes or as "dynamic properties". A reason for this is, that even you can add new content types and most properties to the existing document type model, this requires a server restart and automatic schema migration is not possible. In addition, you might not want to have a new content type or property for every feature needed "on the fly".
-
-A typical use case for dynamic properties that also applies to the Starter Kit is to set and store parameters for (newly created) views (JSPs) in a Document. The JSPs can be updated without even restarting the web application, so using them should also be possible without any restart.
-
-The Starter Kit introduces a new XML grammar coremedia-struct-2008 for such purposes.  You can declare XML properties of this grammar in your content types, edit them with a special Struct property editor (see section)  and access them as CapStruct objects in your CAE application code. So you will hardly get in touch with the actual XML representation of a Struct.  Nevertheless, the following example points out the features and gives you an idea of the capabilities:
-
- 

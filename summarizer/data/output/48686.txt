@@ -1,5 +1,0 @@
-
-
-As we have created the FocusManager without specifying a name (with wage_FocusManager.create()), the default name "wage_focusManager" has to be used in the <wage:toolBar> tag.
-
-For our new "wizard-command", some properties like tooltip and icons have to be defined, which is done in a *.properties file that has to be referenced in struts-config.xml. The properties can also be localized by providing language-specific *.properties files (i.e. your_de.properties).

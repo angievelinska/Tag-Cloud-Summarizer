@@ -1,5 +1,0 @@
-
-
-Find descriptions of some of the components defined in these packages here. For a complete reference of the available JavaScript components in WAGE, please refer to the JavaScript API Documentation.
-
-On the following pages, we'll give you an overview of the available WAGE property editors, JavaScript components that can be used for editing CoreMedia resource properties.

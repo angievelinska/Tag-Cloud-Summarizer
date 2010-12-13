@@ -1,3 +1,0 @@
-
-
-Configuration not mandatory: The default configuration includes all document types except Preferences.

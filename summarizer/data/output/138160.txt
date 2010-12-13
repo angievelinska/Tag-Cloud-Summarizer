@@ -1,9 +1,0 @@
-
-
-To learn more about the design of a document type system, see the corresponding chapter in the Administration and Operation Manual it will also provide you with additional information on rights and rights rules.
-
-The Javadoc of the Unified API is the recommended source for in-depth descriptions of individual classes and methods. If you want to skim the Javadoc at this point of time, you will get some hints now.
-
-The most common use cases involve the access and modification of content. For this, look at the package com.coremedia.cap.content, particularly at the interfaces ContentRepository and Content. Look at Version for getting an idea of how to handle the historic states of content. Afterwards, it will be interesting to inspect the content meta model, which is represented by the class ContentType.
-
-In the case of content, the following service objects are provided: PublicationService, AccessControl, PropertyService, QueryService, SearchService, and WorkflowContentService. Have a look at the individual services and their getters in ContentRepository, so you can refer back to them when the functionality is required. You may want to investigate the PublicationService in more detail right away, because the approval of content and its transfer to the Live Servers are important in many contexts.

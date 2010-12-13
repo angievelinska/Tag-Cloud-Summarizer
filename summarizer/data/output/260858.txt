@@ -1,5 +1,0 @@
-
-
-Configure an uploader for the DBMessageServiceReceiver
-
-You need to configure an uploader which is used by the DBMessageServiceReceiver. The configuration of the uploader is done via the appropriate uploader element inside the DBMessageServiceReceiver element. The configuration is similar to the configuration of the uploaders of PADS (see Section ). 

@@ -1,7 +1,0 @@
-
-
-The Editor Extensions are web applications, that can be used from both the CoreMedia Editor and the CoreMedia WebEditor. Three extensions can be used:
-
-CoreMedia Differencing
-Advanced Query Editor
-Bean Query Editor

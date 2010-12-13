@@ -1,3 +1,0 @@
-
-
-You can select the browser for the preview using the element Browser. Multiple browsers can be entered. You can choose the browser to use from the File|Preview menu of the overview window. If you do not define any browser, the preview cannot be executed.

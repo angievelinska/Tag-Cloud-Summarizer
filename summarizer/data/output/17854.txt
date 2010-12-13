@@ -1,3 +1,0 @@
-
-
-The rights of the groups of the current user for a certain resource can be seen in the Rights tab in the properties of the resource. Here you will see the merger of all rights provided by all groups the user belongs to, specified by the resource types.  

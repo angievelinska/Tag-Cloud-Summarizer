@@ -1,3 +1,0 @@
-
-
-The new RichText component as introduced in section is a major step towards WYSIWIG editing. Differences in handling, as compared to the standard component (see section) are described in the single chapters of this section.

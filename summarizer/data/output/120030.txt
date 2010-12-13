@@ -1,7 +1,0 @@
- Property Type Internal Type External Type String java.lang.String java.lang.String Int java.lang.Integer 
-
-java.lang.String Date java.util.Calendar 
-
-java.lang.String LinkList hox.corem.servlets.Document[] hox.corem.servlets.Document[] Xml org.w3c.dom.Element java.lang.String Xml<coremedia-query> org.w3c.dom.Element com.coremedia.cap.wage.QueryExpression Blob hox.corem.servlets.Blob com.coremedia.cap.wage.ClientBlob
-
- 

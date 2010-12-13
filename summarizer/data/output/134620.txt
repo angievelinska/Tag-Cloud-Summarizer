@@ -1,3 +1,0 @@
-
-
-This chapter describes some concepts and details of the CoreMedia Workflow Server which are important for your administrative work. If you want to get deeper insight into the CoreMedia system, you should read this chapter.

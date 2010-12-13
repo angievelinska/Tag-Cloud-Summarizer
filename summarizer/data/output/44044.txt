@@ -1,3 +1,0 @@
-
-
-When a URI is output in a template, this usually comes with a JSP fragment as follows:

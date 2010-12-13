@@ -1,9 +1,0 @@
-
-
-Actions are used to automate or semi-automate tasks. Two kinds of actions exist:
-
-Actions running only on server side.
-3* Server-side actions run completely inside the CoreMedia Workflow Server. They may use the CoreMedia Workflow Server's session to the CoreMedia Content Management Server to access resources.
-Client actions running partly on the server and on a client.
-3* ClientActions in a user task run remotely using the Client GUI's session to the CoreMedia Content Management Server to access resources. ClientActions in an automated task run in a server internal client environment using the CoreMedia Workflow Server's session to the CoreMedia Content Management Server to access resources.
-

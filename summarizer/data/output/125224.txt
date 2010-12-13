@@ -1,3 +1,0 @@
-
-
-The new resource bundle also has to be announced directly to the CoreMedia nameFactory and iconFactory defined in the config.bsh like this:

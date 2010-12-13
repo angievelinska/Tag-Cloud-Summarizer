@@ -1,5 +1,0 @@
-
-
-The page impressions per visit report shows the average number of page impressions that make up a single visit for a given site. Only those visits are taken into account that are limited to single site.
-
-The possible choices for variables and the offered actions for this report are identical to those of the performance report described in section, but only a single graph is shown, namely the average number of page impressions.

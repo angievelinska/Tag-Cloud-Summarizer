@@ -1,3 +1,0 @@
-
-
-Before starting a component using run, please make sure that no other process of this component is currently running. Especially don't use start and run at the same time. Due to the fact that those processes would access the same resources (e.g. files), this could lead to strange and unwanted behavior. 

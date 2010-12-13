@@ -1,9 +1,0 @@
-
-
-Another indirection is the PropertyChangeCollector (com.coremedia.cap.wage.PropertyChangeCollector). Whenever you try to set a property of a CoreMedia resource with the (DynaBean) set() method, this change is first stored in the PropertyChangeCollector. Only when commitToChangeCollector() is called on the PropertyChangeCollector, it tries to convert the stored object into the type of the CoreMedia resource property or workflow variable, using the PropertyConverterFactory described in property-conversion. If this is not possible, a PropertyParseException is thrown by the PropertyConverter, which is MultiPropertyParseException by the commitToChangeCollector() method, and the pending change will remain in the PropertyChangeCollector.
-
-In this way it is possible to also keep values that cannot be converted into the target data type. For example imagine a Web form which lets you enter a date value. As the value submitted is always of type String, it is possible that the submitted value cannot be parsed correctly into a Date object. In this case you do not want the user to enter the complete date again, but redisplay the String he entered together with an error message.
-
-Often you won't work directly with these objects, as WAGE hides much of its complexity from the developer (see strutsAndWage). Nevertheless it is important to get an idea how client-side changes are managed.
-
-The next chapters explain how the Struts Web application framework simplifies the development of multi-tier Web applications, and how WAGE extends this framework for the rapid development of CoreMedia Web applications.

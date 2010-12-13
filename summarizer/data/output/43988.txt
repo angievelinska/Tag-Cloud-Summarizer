@@ -1,4 +1,0 @@
-
-
-In this case it would not have been required to set properties because the default values are used.
-

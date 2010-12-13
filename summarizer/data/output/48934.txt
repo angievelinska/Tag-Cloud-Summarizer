@@ -1,9 +1,0 @@
-
-
-Like the Active Delivery Server, PADS provides administration pages. In this chapter you will find a description of the pages.
-
-
-In order to open the PADS administration page enter the following address into your browser:
-
-
-3* http://<host>:<port>/pads/admin

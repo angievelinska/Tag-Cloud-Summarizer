@@ -1,7 +1,0 @@
-
-
-The SearchService has the following methods:
-
-search methods to perform a search for non-archived documents using the Simple Query Language
-searchFAST to perform a generic search with the FAST Query Language.
-getFASTConnectionInfo to get information to contact the FAST server using FAST APIs.

@@ -1,5 +1,0 @@
-
-
-All the previous examples were read-only examples, i.e. they applied no changes to the content repository.  This example enhances the browser known from the content contentbrowser example with a toolbar which enables control of the content state like checkin, approve, publish.
-
-In the previous examples authentication was no issue.  The WebServices used one internal UAPI session to connect to the CMS repository, and the clients could use the services anonymously.  This is appropriate for read-only services (at least for examples without security issues), but it does not make sense for modifying access.  If the WebService fulfilled requests like approve and publish with its own internal session, the document history would become useless.  Therefore clients of this WebService must authenticate themselves with a username and a password to obtain a session id.  All other methods of the WebService require the session id and execute the requests with the particular session.  The WebService interface looks like this:

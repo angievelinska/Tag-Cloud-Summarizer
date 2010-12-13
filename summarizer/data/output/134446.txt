@@ -1,3 +1,0 @@
-
-
-The sessions utility shows all open sessions.

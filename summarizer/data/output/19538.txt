@@ -1,3 +1,0 @@
-
-
-Using these elements, the appearance of the  worklist in the workflow window can be configured.

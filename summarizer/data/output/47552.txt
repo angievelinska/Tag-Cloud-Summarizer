@@ -1,3 +1,0 @@
-
-
-Let's begin with the view: we want to render an HTML form with an input field for the String property "name" of our document type Dish. A JSP rendering such a form using the Struts tag libraries could look like this:

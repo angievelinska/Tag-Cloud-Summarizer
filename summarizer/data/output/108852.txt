@@ -1,3 +1,0 @@
-
-
-The first two properties specify the account to be used by the CM Server for log on to the Active Directory Server. The last two properties configure the LDAP host and port number. All properties which start with `java.naming¿ are evaluated by the JNDI framework. They are not robust concerning trailing whitespaces, so edit them carefully. The last two properties are mandatory.

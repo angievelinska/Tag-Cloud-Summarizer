@@ -1,3 +1,0 @@
-
-
-For <CoreMediaHome>, <host> and <port> you have to insert the appropriate values.

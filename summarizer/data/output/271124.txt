@@ -1,3 +1,0 @@
-
-
-In the Starter Kit plug-in, this would be in the file WEB-INF/spring/starterkit-portletcontainer.xml.

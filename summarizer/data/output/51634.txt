@@ -1,3 +1,0 @@
-
-
-The addResource view for a Document first checks if the current document is already part of the changeSet, and then renders an icon for the state of the document, the document name, and a checkbox, which is checked if the document is already part of the changeSet.

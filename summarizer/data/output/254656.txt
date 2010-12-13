@@ -1,9 +1,0 @@
-
-
-As said before, classic CoreMedia client components read its capclient.properties file to access the property cap.client.server.ior.url for the IOR URL of the server. Newer CAE/Spring/Unified API based clients read its Spring configuration file (repository.xml, CapConnectionFactory...) to access the server IOR. When CoreMedia Servers act as clients to access other CoreMedia Servers, they read the IOR URL from other configuration files:
-
-The Content Server must know the IOR of the Master Live Server during publication. 
-3* The IOR URL is stored in the property publisher.target.ior.url of the file publisher.properties (see Section 5.2.4). 
-The Slave Live Server (when installed) has to communicate with its Master Live Server. 
-3* The IOR URL is stored in the property replicator.publicationIorUrl of the file replicator.properties (see Section 5.2.6).
-

@@ -1,9 +1,0 @@
-
-
-Every CapObject and CapType is equipped with a stable string ID that can be persistently stored and converted back into an object reference as needed. To this end, CapObject has got a method getId() for retrieving the ID. Methods for converting IDs into object references are typically provided by the repository objects.
-
-It is recommended that you treat the IDs as opaque strings, because the exact format of the strings might change in future releases of CoreMedia CMS. Still, we provide detail information about the IDs for the purposes of debugging and for interfacing the Unified API with legacy clients which might insist on using numeric IDs.
-
-The class com.coremedia.cap.common.IdHelper is provided for formatting and parsing all sorts of ID strings. Note that all methods in that class may be redefined arbitrarily in the next CoreMedia CMS release.
-
-The following table summarizes the various ID formats for CapObjects.

@@ -1,8 +1,0 @@
-
-
-To combine the portal way of managing views with editing content you can use  EditingServices in a wizard like manner. Wizards are sole templates/views, viewed as html pages one after another, which can link to edit actions.
-
-In order to realize these wizards, the EditingServices needs to know the URI where it should redirect after finishing the editing. This is done by EditingServices by using the Referrer header of the request. This header is used in conjunction with a special NavigationHandler which redirects to the page where the editing process was started (see the configuration section below).
-
-A wizard menu is a template which shows a set of actions in menu like manner. The picture below visualizes this concept: 
-

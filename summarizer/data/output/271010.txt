@@ -1,3 +1,0 @@
-
-
-If you are using the CoreMedia Editor which does not provide a Navigation Explorer you can manually create a CMPortletWindow in the desired folder. You must add a link to the existing channel in the property contexts afterwards.

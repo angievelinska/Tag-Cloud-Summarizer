@@ -1,7 +1,0 @@
-
-
-After the cast the method startWorkflow(), which will be described next, does the workflow job and the resulting view gets the workflow data as central object. This allows the success view to present selected information.
-
-
-
-The mentioned method startWorkflow() consists of some Unified API calls building and starting a workflow: 

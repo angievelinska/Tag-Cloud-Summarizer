@@ -1,3 +1,0 @@
-
-
-In addition to scalability, the replication of content on several Slave Live Servers ensures system stability. A Live Server or Active Delivery Server, that fails to operate, can be replaced by a running component. The following scenarios describe various types of system failures in an example Live system.

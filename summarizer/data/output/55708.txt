@@ -1,6 +1,0 @@
-
-
-Opening documents in a link list quickly
-
-
-To open a document in a link list quickly, double-click on the document. The document will be opened in a new Document window for editing.

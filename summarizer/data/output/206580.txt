@@ -1,3 +1,0 @@
-
-
-The meaning of the first two predicate options for the LdapLoginModule is the same as in the CapLoginModule. The last three options are mandatory.

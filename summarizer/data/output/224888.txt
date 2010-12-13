@@ -1,9 +1,0 @@
-
-
-The CoreMedia Portal Integration allows to use Editing Services in portals. You may develop pure Editing Services Web applications, or preview-based editing Web applications. Both kinds of applications enables the content modification and entry inside portals. This section describes how to integrate these techniques into a portal application. You will find information about:
-
-the architecture,
-the concepts used within this context,
-the configuration possibilities, and 
-an Integration Example which shows how to adjust an EditingServices web application for using in a portal application.
-

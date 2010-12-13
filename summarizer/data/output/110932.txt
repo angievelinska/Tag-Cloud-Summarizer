@@ -1,3 +1,0 @@
-
-
-Please note that SCI's internal user management maintains users as well as group membership and hierarchies on the content server only! The 'live group' feature solely establishes stub groups without users and without hierarchy but assigned rights on the live side. Only if you map users to groups through a custom scheme in the web application AND you don't need hierarchical groups, this features is useful. If you want to make use of users and/or hierarchical groups on an Master/ Replication Live Server, you have to employ an LDAP repository or any other implementation of a custom user provider.

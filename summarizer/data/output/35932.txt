@@ -1,5 +1,0 @@
-
-
-ExcludePerformer
-
-Use this action to exclude the performer of the current task from performing another specified task. When the specified task coincides with the current task, the exclusion will take effect when the task is reached the next time.

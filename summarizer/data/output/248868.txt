@@ -1,3 +1,0 @@
-
-
-Custom builder classes that compute values can be plugged in easily. You can write a builder which generates Java objects with content from the CoreMedia repository, e.g. java.util.Map objects with the data of document fields. Read section to learn how to write and configure own builders.

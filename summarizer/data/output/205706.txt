@@ -1,9 +1,0 @@
-
-
-Use of the jsp:include tag with CoreMedia Resources 
-
-Since this formulation is rather inconvenient in the long run, the CoreMedia Geneator API offers a shortened form. A call of the include method of the hox.corem.servlets.Context class has the same effect as the jsp:include tag just shown. The method is offered in several variants. In the most common form, the current page context (pageContext) and the resource being inserted are expected. Optionally, the ID of the template which should be used for display and a parameter list can be given. The page context is used to actually include the fragment via javax.servlet.jsp.PageContext#include. 
-
-For include-only pages, i.e. fragments, it is a good practice to set the content type to text/x-coremedia-fragment;charset=utf-8. 
-
- 

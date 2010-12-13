@@ -1,3 +1,0 @@
-
-
-In CoreMedia SCI 4.1, a new XML RichText format (coremedia-richtext-1.0) was introduced as a successor of the SgmlText format. In SCI 4.1, it is possible to edit SgmlText as well as RichText in the CoreMedia Editor. In the SCI 4.1 WebEditor, editing RichText in a WYSIWYG-fashion is possible, while editing SgmlText is very cumbersome (mark-up editing with little support) and thus not recommended. In CoreMedia SCI 4.2, the SgmlText-Property-Editor in the CoreMedia Editor has been removed. Therefore it is necessary to migrate SgmlText properties to RichText properties. The following sections describe how to do this and which aspects have to be considered.

@@ -1,5 +1,0 @@
-
-
-Thus, the action has to check the right type of target to decide whether its command is ¿available¿. If the right type of target is set, it has to check the state of that target to decide whether it is ¿enabled¿. The execute() method is guaranteed to be called only when an action is available and enabled. An implementation of execute() should invoke the business logic, catch and handle errors. The abstract default implementation is com.coremedia.editing.action.CommandAction. The CommandAction defines the method executeCommand. Its execute()-method calls the executeCommand method and applies command post processors, navigation handlers and command exception handlers if necessary.
-
-Actions are intended to be configured using Spring. Since a command operates on a concrete target the corresponding action has to be defined singleton false usually. When an action has to be reused with multiple targets, action factories and toolbars can be used. An action factory wires actions and targets during a request's lifetime.

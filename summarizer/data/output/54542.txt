@@ -1,5 +1,0 @@
-
-
-CoreMedia SCI supports the development of templates with the development pages. You can call the pages with your browser:
-
-http://<host>:<port>/coremedia/develop

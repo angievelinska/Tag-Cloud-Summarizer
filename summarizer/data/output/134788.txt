@@ -1,3 +1,0 @@
-
-
-The CM Editor is a CoreMedia component for editing and creating documents on the CoreMedia Content Server. This component covers the complete editorial workflow process. Furthermore, user administration and a convenient query interface for searching for documents are integrated into the editor.

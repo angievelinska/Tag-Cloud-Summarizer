@@ -1,9 +1,0 @@
-
-
- Property Optional Description driverClassName No The driver class used to connect to the database, 
-oracle.jdbc.driver.OracleDriver for Oracle. url No 
-
-The URL used to connect to the database 
-
-(e.g. jdbc:oracle:thin:@localhost:1521:oracle)  username No The user used to connect to the database of the Database Message Service. password No The password used to connect to the database.
-

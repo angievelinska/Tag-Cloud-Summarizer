@@ -1,3 +1,0 @@
-
-
-The following table shows the regular expressions which can be used with the attribute validPattern.

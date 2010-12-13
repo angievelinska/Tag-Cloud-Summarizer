@@ -1,3 +1,0 @@
-
-
-Document view classes define the look of the document window of the CoreMedia Editor. You can write own document view classes, which must be a subclass of hox.corem.editor.toolkit.document.AbstractDocumentView or hox.corem.editor.generic.GenericDocumentView. The following classes are predefined:

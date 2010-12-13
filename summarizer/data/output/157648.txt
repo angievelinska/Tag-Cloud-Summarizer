@@ -1,8 +1,0 @@
-
-
-The administrator can use the Rule selection drop-down box to change the view: 
-
-for current user: Shows all rules attached to the groups of the current user which are valid for this resource.
-for any Content Server group: Shows all rules attached to Content Server groups which are valid for this resource.
-for any Live Server group: Shows all rules attached to Live Server groups which are valid for this resource.
-defined on this resource: Shows all rules directly defined for this resource.

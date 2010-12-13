@@ -1,7 +1,0 @@
-
-
-In order to make your workflow definitions available to the users you need to upload them. For this purpose, you can either use the upload utility (see Administration and Operation Manual for a detailed description) or the menu item File|Load in the workflow window of the CoreMedia Editor.
-
-If you upload a workflow definition with a name (the attribute name of the Process tag, not the file name) which has already been loaded, then a new instance of the workflow will be created and the old workflow instance will be disabled. So, running workflows will still use the old workflow definition, but you cannot create new workflows from the old definition. This may be a problem if you are using subworkflows. 
-
-To manually enable or disable workflow definition, you can use the enable utility (see Administration and Operation Manual for a detailed description).

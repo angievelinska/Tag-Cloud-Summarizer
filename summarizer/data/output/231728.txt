@@ -1,4 +1,0 @@
-
-
-  Menu item  Sub item  Functions  Copy    Copies the selected resource to the clipboard.  Select all    Selects all resources in the publication result. 
-

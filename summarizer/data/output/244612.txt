@@ -1,9 +1,0 @@
-
-
- Tag Description 
-
-<httpcache:include self="bean-object" [view="view-string"]/> 
-
-or
-<httpcache:include path="context-relative-path"/> Embeds a fragment into the current output. You can define the fragment with a bean/view-pair or directly as a path. <httpcache:param name="name-string" value="value-string"> Used inside a  <httpcache:include> tag. Passes the specified request parameter to the fragment to embed. <httpcache:copy-params [name="name-string"]> Used inside a  <httpcache:include> tag. Passes the named parameters as copies of the root request to the fragment to embed. If you define no name attribute, all parameters of the root request are copied. <httpcache:header name="name-string" value="value-string"> Used inside a  <httpcache:include> tag. Passes a request header to the fragment to embed. <httpcache:copy-headers [name="name-string"]> Used inside a  <httpcache:include> tag. Passes the named request headers as copies of the root request to the fragment to embed. If you define no name attribute, all headers of the root request are copied.
-

@@ -1,9 +1,0 @@
-
-
-In-Site Analytics provides a means to analyze individual pages of a site quickly and thoroughly. If In-Site Analytics is available in your web site preview, you can enable the display of overlays. By default, only small overlays are shown. If you move the mouse to an overlay, the overlay will enlarge to display more detailed data.
-
-There are three types of overlays, which we will discuss now. All data is computed for the current page and locale of the current page, providing a focused view.
-
-Page Overlays
-
-An overlay for the entire page visualizes the number of page views over time as a graph. Each dot aggregates the page views of the defined aggregation interval.

@@ -1,3 +1,0 @@
-
-
-The next chapter explains how WAGE extends the Struts features described above and therewith simplifies the development of Struts-based CoreMedia Web applications.

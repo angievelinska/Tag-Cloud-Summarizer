@@ -1,5 +1,0 @@
-
-
-Uploaders receive the generated top-level values when a consistent state has been reached. The CoreMedia release contains uploaders that write to the file system and to Java Message Service (JMS) queues and topics. Custom uploader classes that implement the interface com.coremedia.generator.pads.Uploader can be plugged in easily. Read section to learn how to write and configure uploaders.
-
-PADS uses a database to store its cache and state persistently. This way, it doesn't need to recompute generated values after restart. It recovers from crashes and error conditions when restarting.

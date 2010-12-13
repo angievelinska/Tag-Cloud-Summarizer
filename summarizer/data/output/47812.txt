@@ -1,3 +1,0 @@
-
-
-Now that we've shown some of the advantages of CoreMedia WAGE, we'll take a closer look on the architecture and the concepts WAGE is based upon.

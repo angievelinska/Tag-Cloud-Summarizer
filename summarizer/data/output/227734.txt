@@ -1,3 +1,0 @@
-
-
-When using the Editing Services in a portal environment you may have the portal application running in a servlet and most commonly the Editing Services running in another servlet. This leads to the situation where you need to forward a request from one servlet to another. In this situation some CAE specific information can be lost during these forwards. In order to prevent such situations use the interceptor: PortalSetBaseUriInterceptor.  An example on how to use this interceptor is provided below.

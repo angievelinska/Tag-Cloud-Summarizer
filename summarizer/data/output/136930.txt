@@ -1,3 +1,0 @@
-
-
-As the Web Editor is a web application that uses Struts (see the Wage Developer Manual) you can configure some features of the Web Editor using the file <TomcatHome>/webapps/editor/WEB-INF/struts-config.xml. In general don't change the attributes of the <controller> element.

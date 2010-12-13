@@ -1,5 +1,0 @@
-
-
-
-
-In the example above the user in group G has implicit READ right for an article in F1. This is equivalent to:

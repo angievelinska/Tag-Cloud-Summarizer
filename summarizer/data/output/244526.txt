@@ -1,5 +1,0 @@
-
-
-Invalidations and Dependencies
-
-Static fragments and its dependencies are stored independently in the cache and are not aggregated into its parent fragment. Therefore fragments are only stored once in the cache. It also means, that an invalidation of a fragment does not necessarily invalidates a page which includes this fragment.

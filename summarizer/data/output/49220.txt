@@ -1,3 +1,0 @@
-
-
-The ModelClass element allows to configure the class from which instances for property values are created. The class attribute is the classname of the property model class, which must have a public no-arg constructor, i.e. setting 'class' to 'xxx' corresponds to Class.forName("xxx") on which newInstance() is called to create new property models. An unqualified ModelClass class will be looked up in the package hox.corem.editor.proxy.  

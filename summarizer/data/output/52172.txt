@@ -1,3 +1,0 @@
-
-
-The CoreMedia Editor provides automatic content entry features for any content model, thus supporting all possible document types, and full functionality for complete content production, approval and publication processes. Content production tasks occur in sequences defined in flexible and customizable content production workflows. 

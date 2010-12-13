@@ -1,5 +1,0 @@
-
-
-PDF Export
-
-When exporting the report to PDF, a PDF in A4 format is generated with a header holding the report title, a subtitle holding the report sentence, the report chart as an image and a footer which prints the time the report was generated as well as the user's login name (see screenshot below).

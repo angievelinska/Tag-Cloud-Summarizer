@@ -1,7 +1,0 @@
-
-
-The ContextMenuRenderer is derived from ToolbarRenderer and therefore uses the rendering algorithm defined by that class. 
-
-Rendering of the Actions
-
-The actions are rendered with Icons and Text within a context menu. An execution triggered by an user, would submit a form to the ActionExecutionController which executes the selected action on the server.

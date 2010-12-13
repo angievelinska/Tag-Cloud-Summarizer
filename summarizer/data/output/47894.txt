@@ -1,5 +1,0 @@
-
-
-When developing your own CoreMedia Web application, you will be extending the CoreMedia Authoring Server Web application (which is based on the Struts Web application framework) by implementing own forms for editing resources, actions which are processed when a form is submitted, and so on. WAGE simplifies this development by providing the building blocks mentioned above.
-
-The next chapter describes how client-side changes are managed by the Authoring Server.

@@ -1,5 +1,0 @@
-
-
- Symbol No. Sub items Function (1)  Cut marked elements (text, tables, images ...) and move into the clipboard (2)  Copy marked elements into the clipboard (3)  Paste the content of the clipboard into the document (4)  Approve the document directly for publication (this function must be activated) (5)  Revoke the approval (this function must be activated) (6)  Open the differencing view for the document. (7)  Open the layout preview for the current document (8)  Publish the document directoy (the function must be activated) (9)  Publish the document (the function must be activated) (10)  Get information for the current resource
-
-Toolbar 2. row

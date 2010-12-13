@@ -1,5 +1,0 @@
-
-
-The CoreMedia Workflow Server is the component of a CoreMedia system that manages workflows. 
-
-This chapter gives a description of the concepts and configuration of the CoreMedia Workflow Server. In a third subchapter you will find a reference listing of all property files you can use for configuration of these servers. If you want to write your own workflows, please refer to the CoreMedia Workflow Developer Manual.

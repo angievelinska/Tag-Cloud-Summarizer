@@ -1,4 +1,0 @@
-
-
- Name Description Dish Represents one dish. The supported properties are description, ingredients, price, calories and pictures. Picture Contains the binary data for one picture. Page Stores central data like a title picture and the navigation. It also contains the recommendations of the chef. Category Comprehends all dishes of one type, e.g. fish or poultry.
-

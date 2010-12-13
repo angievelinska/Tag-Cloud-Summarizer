@@ -1,5 +1,0 @@
-
-
- Key Value heap.free Free Java heap in bytes. This value is a snapshot. The effective value after garbage collection might be higher. heap.total Java heap capacity in bytes.
-
-ADS Event Queue

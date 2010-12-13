@@ -1,5 +1,0 @@
-
-
-Example invocation of own editors
-
-In the workflow definition you have defined a variable as follows:

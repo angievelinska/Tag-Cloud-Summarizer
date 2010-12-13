@@ -1,7 +1,0 @@
-
-
-ExitAction
-
-Grammar: ( Condition?, Property? ) 
-
-ExitAction and EntryAction elements are identical to Action elements, see Action for details. 

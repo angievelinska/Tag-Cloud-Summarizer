@@ -1,3 +1,0 @@
-
-
-By clicking  [Unlock] you can manually unlock the file if the WebDAV application failed to do so automatically and the file is not yet available for other users. But this is troubleshooting!

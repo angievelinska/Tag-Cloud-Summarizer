@@ -1,3 +1,0 @@
-
-
-The Web Editor is a web application which runs in the servlet container as context 'editor'. It contains an Authoring Server which connects to the CoreMedia server. Configuration is automatically done on installation of CoreMediaSCI. Manual Web Editor configuration is done in the config.bsh file, similar to the Active Delivery Server. With this file, the behaviour of the Web Editor can be configured. Since the Web Editor is used in connection with a web browser, the browser settings below should be adjusted. 

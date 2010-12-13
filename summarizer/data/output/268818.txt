@@ -1,7 +1,0 @@
-
-
-When there are rights rules for live groups to be published, required groups of the built-in user management will be automatically created, but the subgroup relationships must be established separately. This is in line with the normal behaviour of the publisher.
-
-During operation of the cm publishall tool, no changes should be made on the Content Management Server.
-
-Even in a multi-site environment, the tool publishes all content to the Master Live Server. Afterwards, you may destroy unneeded parts of the repository with cm multisitecleanup as described in section.

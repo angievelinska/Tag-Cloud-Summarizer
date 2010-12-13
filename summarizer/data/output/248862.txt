@@ -1,6 +1,0 @@
-
-
-Offline generation requires that all generated pages fulfil the same requirements as cacheable pages, i.e. all templates do not refer to request or session scope information but exclusively to the contents of the CoreMedia repository. In fact, top-level pages (not fragments) are always generated as if their templates were cacheable.
-
-
-How does ADS determine the transitive closure, i.e. how does it follow links? Since ADS is agnostic of the output format, it cannot search the generated pages for hyperlinks. Therefore links are discovered during page generation. In detail, whenever an URI object created through the Resource#getUri family of methods is transformed into its string representation (see Section 4.3), an outgoing link is registered with ADS. This mostly occurs implicitly when a JSP expressionlet is evaluated:

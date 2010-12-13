@@ -1,6 +1,0 @@
-
-
-After the login you can see the name of the current user in the second screen shot below the last dish. In order to logout, the item "Login'' changed to "Logout''. All you need to implement this item is a simple controller invalidating the current session. The related source code is following:
-
-
-

@@ -1,3 +1,0 @@
-
-
-The predefined Robot Distribution Report displays all detected robots that visited the site in the selected time range. For better visualization robots with a percentage lower than 10% are merged, by default, to one pie segment when the report contains more than five robots.

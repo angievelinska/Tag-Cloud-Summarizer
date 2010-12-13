@@ -1,5 +1,0 @@
-
-
-Expressions are used to specify conditions in validators, guards, pre- or postconditions and to guard action execution.
-
-Simple expressions return constants, access variables, read properties of resources, or the like. More complex expressions can be build up from the simple ones by comparision operators, logical connectives, logical quantors, and so on. It is possible to specify custom expressions via WfExpression, if the predefined expressions are not sufficient.

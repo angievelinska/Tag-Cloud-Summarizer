@@ -1,4 +1,0 @@
-
-
-The document window is a second browser window with title bar (1). The menu bar (2) and the detail view title bar (3) are displayed here as well, and not at last the document with all its properties.
-

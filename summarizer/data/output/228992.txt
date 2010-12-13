@@ -1,5 +1,0 @@
-
-
-Configure Logging
-
-Logging uses Apache Log4j and is configured in the file log4j.properties. See the documentation of Log4j for details. By default, the application logs to the file var/logs/caefeeder.log.

@@ -1,9 +1,0 @@
-
-
-Return types
-
-The getLanguageResolver method returns a hox.gui.LanguageResolver.
-
-Integrate your PropertyLanguageResolverFactory into the CoreMedia Editor using editor.xml
-
-You can integrate your PropertyLanguageResolverFactory into the CoreMedia Editor using the PropertyLanguageResolverFactory element.

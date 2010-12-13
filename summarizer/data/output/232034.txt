@@ -1,3 +1,0 @@
-
-
-Note, that the key length is limited to 512 characters. 

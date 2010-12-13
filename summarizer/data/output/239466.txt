@@ -1,7 +1,0 @@
-
-
-The number of publication targets defines the number of Live Servers you want to use.
-19#
-Enter the number of publication targets you want to use.
-
-For each publication target, the following window opens up. Here you have to configure the target. 

@@ -1,3 +1,0 @@
-
-
-The list below shows all log levels. The levels define a hierarchy. A log level in the list contains the log levels that follow in the list, e.g. the log level debug includes all other levels. If you configure a log action to record a log with level debug all other messages are received also:

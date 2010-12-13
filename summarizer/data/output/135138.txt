@@ -1,8 +1,0 @@
-
-
-Configure in the following file:
-
-
-
-contentserver.properties
-

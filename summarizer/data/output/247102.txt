@@ -1,4 +1,0 @@
-
-
- Parameter Name in Report Template Description Type GENERATION_TIME The localized date and time of the report generation String AUS_USERNAME The current user's login name if available, or the empty String, if the user is not authenticated String INSTANCE_TITLE The localized report title. String INSTANCE_SENTENCE The localized report sentence. String
-

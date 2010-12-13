@@ -1,3 +1,0 @@
-
-
-The predicate for filtering is entered with the <Predicate> element. The provided filter classes are described in the Editor Developer Manual. In the workflow context, the element is used for filtering the workflows offered via File|New workflow... The default filter restricts the list of workflows to those workflows, from which the user is allowed to create a process instance.

@@ -1,3 +1,0 @@
-
-
-This will be the new default welcome message for all web site visitors.

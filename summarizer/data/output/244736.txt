@@ -1,5 +1,0 @@
-
-
-The CoreMedia Starter Kit is intended as a starting point for your own web application. It enables you to set up a website with navigation and multi-language support very fast. Nevertheless, you may want to extend the Starter Kit in order to perfectly match your needs. This chapter describes how you can use and extend the existing solution for your own customizations.  
-
-The cap-<rel.no.>-source.zip file of your CoreMedia SCI distribution contains parts of the Starter Kit source code.  It will help you to understand how the Starter Kit works and may be considered as best practice for your own applications. 

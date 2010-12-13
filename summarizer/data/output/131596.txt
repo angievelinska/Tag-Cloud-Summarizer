@@ -1,9 +1,0 @@
-
-
-As optional arguments, the IDs or the folder paths of CoreMedia resources can be entered.
-
-Example:
-
-cm serverexport -r -u admin -p admin -b /export 7531
-
-This call of serverexport will export all documents and subfolders (-r) of the folder with the ID 7531 into the /export directory. The program logs in at the server as the admin user, using the admin password (which should never be admin as in the example).

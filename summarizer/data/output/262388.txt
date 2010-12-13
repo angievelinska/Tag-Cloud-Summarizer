@@ -1,5 +1,0 @@
-
-
-In a Starter Kit based application CSS files are stored as ordinary content (document type CMCSS) and can be attached to any CMLinkable document. Since your whole site should appear in a consistent layout, you will usually attach CSS data only to channels, not to single documents like CMArticles. The CMChannel content bean features a fallback logic to the parent channel if no CSS is set explicitly. So in simple cases (like the sample content) it is sufficient to set the style sheets in the root channel, only.
-
-In order to be able to update YAML CSS later, you should not change the YAML stylesheets directly. Rather, write your own stylesheets (or import your existing CI-compliant set of stylesheets), and include or copy the YAML stylesheets as you need them. 

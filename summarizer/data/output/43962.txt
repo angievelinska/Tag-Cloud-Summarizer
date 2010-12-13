@@ -1,3 +1,0 @@
-
-
-ContentLinkFactory is a simple implementation of an AbstractIconLinkFactory for ContentLinks. The icon is always the same ContentLink icon, the target the current resource in the WebEditor. The tooltip text is composed of resource description(document type or folder), path and name. For subclasses the current resource (getResource()) and its ID (getResourceId()) are provided.

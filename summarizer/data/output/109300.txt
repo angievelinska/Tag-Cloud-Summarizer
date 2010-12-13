@@ -1,3 +1,0 @@
-
-
-Here, links from and to pages with a resource URI that contains /audio/ won't be followed (defined through the third and last predicate) with one exception: Links from pages with a resource URI that contains /shop/ to /audio/ pages will be followed (second predicate) if the source page's resource URI does not contain /shop/old/ (first predicate). All other links will be followed due to the default.

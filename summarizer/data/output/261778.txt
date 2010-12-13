@@ -1,5 +1,0 @@
-
-
-Clickable Drill-Down
-
-Click on an item in the bar chart to open a dashboard view for the selected page.

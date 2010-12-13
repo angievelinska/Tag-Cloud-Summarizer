@@ -1,5 +1,0 @@
-
-
-Prerequisite
-
-In order to use reports from the Analytics Engine as a data source, the Analytics Feedback plug-in must be installed. See section for details.

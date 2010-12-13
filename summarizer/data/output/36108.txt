@@ -1,3 +1,0 @@
-
-
-Uploaded workflow definitions are stored in the database as serialized objects. Every time, you have made incompatible changes to your extension classes, which are used in already uploaded workflows, you need to convert these workflows. Use the workflow converter utility for this (see Administration and Operation Manual for details). In case of an update of the CoreMedia Workflow Server, the workflows have to be converted, too. Otherwise, object deserialization errors can occur (see Suns JDK documentation for details). 

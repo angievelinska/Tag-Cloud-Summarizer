@@ -1,6 +1,0 @@
-
-
-Not mandatory: You only need to do this configuration if you want to use group or user specific configuration files or if you want to administrate the files centrally on the Content Server. Otherwise, the following files in the folder <CoreMediaInstall>/properties/corem are used by default:
-
-editor-startup.xml
-editor.xml

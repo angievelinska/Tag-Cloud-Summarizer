@@ -1,3 +1,0 @@
-
-
-We recommend that you separate the tracesession logging from the standard logging (which usually goes to capserver.log), because a mixture of both looks pretty cluttered and is hard to read. Just configure an additional log action in capserver.properties, e.g.

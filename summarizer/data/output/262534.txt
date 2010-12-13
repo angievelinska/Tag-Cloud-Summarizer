@@ -1,8 +1,0 @@
-
-
-The Starter Kit offers a lot of interesting features which are helpful in your project. This chapter gives a short overview of the things you can expect.
-
-Easy navigation
-
-The Starter Kit supports a hierarchical navigation structure based on the concept of ¿channels¿. Sitemaps and breadcrumb trails are also easy to create and embed into the site pages. 
-

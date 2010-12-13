@@ -1,3 +1,0 @@
-
-
-You can modify the position of the image by applying paragraph alignment (see section)

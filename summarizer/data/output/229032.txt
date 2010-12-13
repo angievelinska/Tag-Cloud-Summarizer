@@ -1,3 +1,0 @@
-
-
-The Differencing Service is a web application based on JavaServer Faces (JSF) technology from Sun Microsystems and the CoreMedia Editing Services. Special JSF components, renderer and models are defined to help rendering the result. To compute the differences of XML fragments a third party application named deltaXML is incorparated and accessible through an adapter interface.

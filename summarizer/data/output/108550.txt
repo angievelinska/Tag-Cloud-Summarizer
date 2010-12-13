@@ -1,9 +1,0 @@
-
-
-Operations:
-
-
-checkin or uncheckout document doc for a user different from the one who checked out the document
-
-
-Required right:

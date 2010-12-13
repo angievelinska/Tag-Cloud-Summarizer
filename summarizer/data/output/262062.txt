@@ -1,7 +1,0 @@
-
-
-The CoreMedia Analytics Engine extends an existing CoreMedia content management environment and content delivery environment with capabilities to analyze visitor activity on produced sites and to report on the management environment's status. It targets business, editorial and technical audience likewise: business reports provide CMS operating figures and help identifying trends, while technical reports help identifying bottlenecks in the management and delivery environments.
-
-Out-of-the-box, the Analytics Engine offers a set of customizable site activity reports on page impressions, link usage, visits, entries, exits, users, searches, referrals, and the content repository state.
-
-The Analytics Engine consists of the Analytics Dashboard for long-term, drillable compilations of site visitor activity and repository status overviews and In-Site Analytics for fine-grained and prompt compilations of current site visitor activity. The Analytics Dashboard is itself organized into two parts, one set of reports dealing with entire sites and one set of reports considering only a single page. These three distinct forms of statistics provide users with a broad overview of site activities. They will be described in the following sections.

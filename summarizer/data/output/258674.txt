@@ -1,4 +1,0 @@
-
-
- Location Description bin/ Files required for starting the application such as proactiveengine.jpif lib/ All required java libraries config/proactiveengine/spring/ Location of all configuration files.  var/logs/ Target of the logging output files.
-

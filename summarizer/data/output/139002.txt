@@ -1,3 +1,0 @@
-
-
-Configuration not mandatory: By default, there are no additional fields.

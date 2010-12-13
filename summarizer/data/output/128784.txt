@@ -1,6 +1,0 @@
-
-
-FileAction
-
- Argument Description file Name of the log file. filesize After reaching the file size (in KB) a new file is created. The new file is named as specified in file. The old file is saved with a name composed of file and the current date and time. writeOps Number of write operations after which the size of the file is checked. If the size exceeds the value of fileSize a new file is created.
-

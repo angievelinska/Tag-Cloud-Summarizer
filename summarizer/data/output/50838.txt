@@ -1,3 +1,0 @@
-
-
-The DB user must not be a dba or owner of the database otherwise all objects are created in the wrong (dba) schema. Roles db_datareader, db_datawriter and db_ddladmin are sufficient as the rights for the database user.

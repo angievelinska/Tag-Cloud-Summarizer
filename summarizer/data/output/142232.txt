@@ -1,4 +1,0 @@
-
-
-By default the approve and publication buttons are only enabled for users of the administrator(0) group. You can enable the feature for all users by setting some attributes of the <Editor> element, thereby supporting publications without workflows.
-

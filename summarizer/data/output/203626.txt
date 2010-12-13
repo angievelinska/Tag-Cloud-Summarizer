@@ -1,3 +1,0 @@
-
-
-Portal resources, e.g. images, may be added to this portal archive to any location outside of PORTAL-INF/. Example: An image which has been added as images/myimage.gif  can be addressed as a portal link portal-resource:///images/myimage.gif.

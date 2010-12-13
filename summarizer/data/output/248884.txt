@@ -1,6 +1,0 @@
-
-
-The JTree class of Swing uses this model to calculate its view. For convenience reasons Swing provides adapter classes reducing your programming effort, but in this case they are not suitable. A JTree makes no assumptions about the order of method calls, hence the internal structure must be created in advance. This leads to performance issues with many folders. FolderTreeNode in contrast contains the method updateChildren() that is called first by all respective methods before they return their result. All folders are read on demand and buffered until the list children is cleared. Due to many consecutive method calls made by JTree objects during drawing, it is necessary to cache the beans. Please keep in mind that you cannot receive any kind of events, hence you should invalidate your cache after a certain time.
-
-The table model for the class JTable is much simpler than the tree model because all entries have to be shown at once. Therefore it is not necessary to cache the beans. If you have many documents and your application becomes too slow you have to consider alternative mechanisms, getting the data in a separate thread for example. Following code is a shortened version of the file AbstractTableModel.java (the code for the sort operation was removed) to present a more legible example:
-

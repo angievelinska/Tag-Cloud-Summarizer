@@ -1,6 +1,0 @@
-
-
-You need to notify PADS about changes of these external resources. There are two possible ways to do so: 
-You can call method GeneratorCache#invalidate(String) with the key. For example you could write Java code that fires such invalidations and start an own thread for it in WEB-INF/config.bsh. Note, that it should wait some time until PADS is running before sending invalidations. Use method hox.corem.servlets.Generator#isRunning to check whether PADS is running. 
-You can use the develop pages to invalidate an external dependency. 
-

@@ -1,7 +1,0 @@
-
-
-Compile and execute the client with the following commands:
-Generate the required interfaces and compile all source files with:
-$ ant compile-client
-On successful compilation, you can start start the client. A window should appear allowing you to change document states.
-$ ant execute-client

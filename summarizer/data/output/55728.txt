@@ -1,8 +1,0 @@
-
-
-These are available for nested lists
-
-(3) indent - makes a list item subordinate to its predecssor (see illustration)
-
-(4) outdent - moves list items up one hierarchy level
-

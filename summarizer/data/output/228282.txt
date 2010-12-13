@@ -1,8 +1,0 @@
-
-
-The <Difference> element is used to configure a Differencing Service web application.
-
-<Difference>
-
-Child elements: <Browser>
-Parent elements: <Editor>

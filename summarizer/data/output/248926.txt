@@ -1,9 +1,0 @@
-
-The first line simply enables access control.
-The second line ensures that only those resources are included in the jsp for which you have access rights. It acts like a global tryInclude (see Section).
-The last line defines the group which automatically holds all users which are not logged in. So, each user who visits the Menu Site is automatically a member of the group anonymous.
-
-Create users and groups
-
-Now you need to create the three groups "anonymous", "PoultryFan" and a test user "Joe".
-Start the CoreMedia Editor as administrator, the user administration window opens.

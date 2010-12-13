@@ -1,3 +1,0 @@
-
-
-The starting point for our workflow example is the renderWorklist.jsp template in the wftemplates directory of the Web application.

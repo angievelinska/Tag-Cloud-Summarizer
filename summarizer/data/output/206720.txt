@@ -1,3 +1,0 @@
-
-
-Not mandatory: By default, the statistics log is disabled.

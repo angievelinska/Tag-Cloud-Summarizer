@@ -1,8 +1,0 @@
-
-
-
-
-A user in group G does not have READ rights on folder F2 because there is no READ right for the parent folder F1. To grant READ rights, the right must be explicitly set in the first row or the first row must be removed.
-
-
-The effective rights of a group on a resource for a resource type with the three exceptions above are displayed in the resource info window in the CM Editor in the rights tab.

@@ -1,6 +1,0 @@
-
-
-The easiest way to use a custom builder is to use its fully qualified class name as scheme of a key and configure PADS to compute a value for that key. PADS uses Java reflection to instantiate the builder. This means the builder needs a public no-argument constructor. Root values to compute are configured in WEB-INF/properties/corem/pads.xml with a Root element below the Pads element.
-
-
-Example:

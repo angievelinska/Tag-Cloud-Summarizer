@@ -1,3 +1,0 @@
-
-
-In this section, you will find tables with all properties and actions manageable via JMX. The entries below the JMImplementation key display information on the JMX implementation which will not be described here.

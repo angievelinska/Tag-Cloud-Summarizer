@@ -1,4 +1,0 @@
-
-
- Key Value pageobjectcache.size Number of deserialized pages. pageobjectcache.hits Number of accesses to already cached object pages during the interval. pageobjectcache.misses Number of accesses to object pages not in the cache during the interval. pageobjectcache.faults Number of newly entered object pages into the cache during the interval. pageobjectcache.removed Number of object pages removed from the cache during the interval.
-

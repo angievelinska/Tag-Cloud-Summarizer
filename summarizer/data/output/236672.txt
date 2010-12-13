@@ -1,8 +1,0 @@
-
-
-CM LDAP access (read-only)
-
- Product Certified Version Supported Version Microsoft Windows  
-
-2003 Server Active Directory 
-

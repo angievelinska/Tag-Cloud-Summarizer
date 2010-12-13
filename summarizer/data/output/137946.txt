@@ -1,3 +1,0 @@
-
-
-Note, that both the search and the searchFAST methods may return documents for which the user of the current session does not have read rights. You must handle rights yourself and filter out unreadable documents if needed.

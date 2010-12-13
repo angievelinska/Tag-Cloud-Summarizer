@@ -1,8 +1,0 @@
-
-
-Documents within the editing lifecycle can go through different states. In this, there is a difference between document states and document version states.
-
-The state of a document version is related to just this version of the document and its editorial state, whereas the document state labels the state of the document concerning its publication.
-
-The first paragraph names the states of document versions, the second paragraph surveys document states.
-

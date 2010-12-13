@@ -1,5 +1,0 @@
-
-
-DisapproveResource
-
-Use this action to disapprove one or more CoreMedia resources referenced by a variable. If the variable stores an explicit version, that version is disapproved. If no version information is present, the most recent version will be disapproved. 

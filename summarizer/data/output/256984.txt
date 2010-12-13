@@ -1,8 +1,0 @@
-
-
-See Abbildung for the Explorer window with the search field right above the document overview. You might enter the search term into the search field or select it from the combo box. The combo box contains the last used search terms. Click [Search] or press <Enter> to start the search in the current folder with all subfolder. The Explorer window switches to the search modus. I.e.
-
-the search field disappears at the right side,
-the document overview of the current folder will be replaced by the still empty result list and
-the folder view at the left side will be replaced by a search area.
-

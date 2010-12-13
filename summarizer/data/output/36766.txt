@@ -1,9 +1,0 @@
-
-
-boolean
-
-
-Definition: true | false 
-
-
-Definition of a boolean XML attribute type. 

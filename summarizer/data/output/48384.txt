@@ -1,5 +1,0 @@
-
-
-API Changes
-
-Some API enhancements have been made to the delivery server API. Since many classes have been refactored to be interfaces, check that your code still compiles and runs against the API (for example, the way to instantiate a new Context object outside the Active Delivery Server has changed).

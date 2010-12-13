@@ -1,6 +1,0 @@
-
-
-Respective elements and attributes of the workflow definition: successor-attribute of all task XML elements.
-
-Example:
-

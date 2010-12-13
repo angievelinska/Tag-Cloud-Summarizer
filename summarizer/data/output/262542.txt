@@ -1,3 +1,0 @@
-
-
-The CoreMedia Starter Kit handles navigation by means of linked documents. In this chapter, you can learn how to create the navigational structure of your website using the Navigation Explorer.

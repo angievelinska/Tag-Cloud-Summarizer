@@ -1,3 +1,0 @@
-
-
-The startup of workflows can be customized by using customized startup classes. If you implement a workflow startup class you will use the Workflow and Editor API. In general, the workflow startup class covers the assignment of variables. Mostly this means that selected resources from the explorer have have to be assigned to workflow variables. Then, you have to decide, whether a variable dialog should allow a user to modify the variables before the workflow has been started. Finally, a hook allows custom code to be executed before the process is started. The publication workflow startup classes use this to bring the workflow window to the front and select the process, that has just been started.

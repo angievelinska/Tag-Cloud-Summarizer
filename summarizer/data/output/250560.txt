@@ -1,9 +1,0 @@
-
-
-Localization of the attributes can be done as described in chapter. Simply add the language suffix after the <mybundle> part of the name.
-
-Example:
-
-The name of the french version would be:
-
-mybundle_fr.properties

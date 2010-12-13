@@ -1,3 +1,0 @@
-
-
-Given below is an example Bean type definition:

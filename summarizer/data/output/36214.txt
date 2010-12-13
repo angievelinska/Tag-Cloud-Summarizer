@@ -1,5 +1,0 @@
-
-
-Line 4 - 5: Here you define the setter and getter methods for the configuration of your action bean.
-
-Line 8: Here you get the workflow variable using the name configured with the setVariableToPass() method.

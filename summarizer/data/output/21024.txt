@@ -1,5 +1,0 @@
-
-
-In both cases all files will be deleted which haven't changed (manually or automatically) while and after installation of the CoreMedia system.
-
-On deinstallation of components of CoreMedia SCI the previous installation of these components will be restored, if available.

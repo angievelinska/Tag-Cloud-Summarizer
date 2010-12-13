@@ -1,3 +1,0 @@
-
-
-The predefined Day of Week Report (see Screenshot) displays the number of page impressions and visits for a given (sub-)site in the selected time interval aggregated by day of week.

@@ -1,7 +1,0 @@
-
-
-The CoreMedia CMS scope of supply contains the documentation of the CoreMedia CMS in HTML format. In order to use this documentation you need to unzip the cap-<VersionNr.>-html.zip file into the docs/manuals/html directory of the Content Management Server installation directory. Under Unix, copy the file in the directory and use the following commands:
-
-unzip cap-<Rel.No.>-htmlDocu.zip
-
-This will create subdirectories for all CoreMedia CMS manuals. Read section to see how to get the manuals delivered from the Content Management Server.

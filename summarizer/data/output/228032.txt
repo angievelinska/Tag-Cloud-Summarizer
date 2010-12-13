@@ -1,5 +1,0 @@
-
-
-A Feedable contains the identifier of the index document it creates or updates and a set of elements. Elements map to fields of the document by their name. For example: an element named title of a Feedable with the identifier doc1 maps to the field named title of the index document doc1 if such a field exists in the index profile.
-
-The following index profile fields are automatically set by the CAE Feeder:

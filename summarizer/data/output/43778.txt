@@ -1,3 +1,0 @@
-
-
-The value of a LinkListProperty is accessed via the Document#getLinkListProperty method. The method is defined as follows:

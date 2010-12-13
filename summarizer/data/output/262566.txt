@@ -1,7 +1,0 @@
-
-
-If you want to create a new Article document in an existing Channel, proceed as follows:
-Open the Navigation Explorer
-Select the parent channel for the new Article and click the toolbar button .
-
-A dialog box opens up where you can define the Article.

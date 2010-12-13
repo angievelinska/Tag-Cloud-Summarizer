@@ -1,3 +1,0 @@
-
-
-It is important to add an EditingContextInterceptor to your UrlHandlerMapping when developing a PBE application for the portal context. For details have look at section.

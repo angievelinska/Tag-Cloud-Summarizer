@@ -1,3 +1,0 @@
-
-
-The CoreMedia Workflow comes with four predefined workflows which cover the publication of resources and a fifth workflow for a global search and replace functionality. In this chapter you will find a description of the four publication workflows and a description of the publication semantics. The workflow facilities are not restricted to publications, but can be tailored to fit all types of business processes. As many business processes deal with publication issues, we deliver these example workflows.

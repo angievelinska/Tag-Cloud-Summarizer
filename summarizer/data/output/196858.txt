@@ -1,5 +1,0 @@
-
-
-SimpleFailOverContentService
-
-This is a pseudo ContentService which delegates all requests to one or more underlying ContentServices. In case that one of these ContentServices fails (e.g. a portal application is currently not available) it will switch to the next one using the "round robin" algorithm. Of course, all ContentServices are typically configured for delivering exactly the same content. You may configure it by this property:

@@ -1,5 +1,0 @@
-
-
-In the CoreMedia Workflow, a workflow is defined in a file using XML syntax comparable to the configuration of the CoreMedia Editor. A formal description of the syntax of this XML file can be found in the corresponding DTD in <InstallationDir>/lib/xml/coremedia-workflow.dtd. In principle, the workflow file must obey the DTD, but cannot be validated against the DTD in all cases. The reason is that CoreMedia Workflow XML can be customized by using your own extensions. It is not possible to capture all future extensions in a static DTD, so the DTD only describes the basis for CoreMedia Workflow XML.
-
-In the following sections the important syntactical concepts of the workflow description are explained. The elements of the workflow definition can be seen as elements of a programming language. The following table shows this correlation (not all XML elements are included):

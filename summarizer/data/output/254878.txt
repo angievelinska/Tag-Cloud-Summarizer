@@ -1,5 +1,0 @@
-
-
-CoreMedia Editor and WebEditor send HTTP requests to the Differencing Service. The CoreMedia Editor additionally sends an HTTPS request with every HTTP request to authenticate the user to avoid a relogin against the web application. The Differencing Service asks the Content Server for the two document versions, computes the differences and returns the result.
-
-To accept HTTPS requests, the web server must be HTTPS enabled. See Enable HTTPS on how to configure HTTPS in Tomcat. The CoreMedia Editor must know the host name and ports of the Differencing Service. See Enable Differencing on how to set up differencing in the CoreMedia Editor.

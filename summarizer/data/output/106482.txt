@@ -1,6 +1,0 @@
-
-
-In the example above, an example of the LinkFilter class delivered in the hox.corem.servlets.text package is used as filter, transforming the tags for internal links according to the coremedia-richtext-1.0.dtd created by the CoreMedia Editor into HTML links (<A HREF="...">). 
-
-
-The Sax events modified in this way are then output through an instance of the hox.text.sgml.SgmlUnparser class as Sgml text (in this case HTML). Configuration of the htmlUnparserPrototype with DTD and Entities ensures that empty tags (e.g. <BR>) and special characters are output as correct HTML 4.0. Alternatively, output as XHTML (e.g. <BR />) is possible using the hox.text.xml.XHtmlUnparser class, or output as ASCII text using hox.text.plain.PlainTextUnparser.

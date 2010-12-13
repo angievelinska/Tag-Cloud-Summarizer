@@ -1,3 +1,0 @@
-
-
-The following figure show the architecture of the Differencing Service:

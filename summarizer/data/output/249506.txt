@@ -1,5 +1,0 @@
-
-
-After finishing the analysis, you are ready to create your customized reports. Be reminded that in most cases, you will only have to copy and refine existing report definitions or perform little adaptations to the QueryTemplates and Aggregators (see Reporting Application Architecture section). 
-
-You should have experience with Spring Bean Configurations in order to create your own reports.

@@ -1,7 +1,0 @@
-
-
-Parameters
-
-Grammar: (Assign+)
-
-Parameters  is used to enclose the elements that define how to parametrize a subprocess. For an XML example see ForkSubprocess.

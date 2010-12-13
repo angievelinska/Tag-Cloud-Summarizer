@@ -1,8 +1,0 @@
-
-
-3* The URL where CM components can obtain the IOR of the CM server is entered in the parameter cap.client.server.ior.url. CORBA communication with the server takes place via the IOR (see also Section 4.2).
-6#
-
-
-Enter the location of the IOR of the Content Server and click [Next].
-

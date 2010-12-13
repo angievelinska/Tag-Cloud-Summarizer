@@ -1,4 +1,0 @@
-
-
- Attribute Value Default Description name user name none (required attribute) The user name to be used in the HTTP authentication of the administration page of the Search Engine Feeder. This is not a account from the user management of the Content Server. password password none (required attribute) The password to be used in the HTTP authentication of the administration page of the Search Engine Feeder.
-

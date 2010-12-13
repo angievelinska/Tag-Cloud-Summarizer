@@ -1,7 +1,0 @@
-
-
-Configure the BLOB and SgmlText Collector and BLOB Optimizer
-
-The Optimizer is a component which merges identical BLOBs from all documents and versions into one. To identify identical BLOBS, the Optimizer calculates a MD5 hash value for each BLOB.
-
-The Collector is a component which erases SgmlText and BLOBs from document versions which have been deleted.

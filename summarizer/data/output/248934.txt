@@ -1,3 +1,0 @@
-
-
-The View Dispatcher: In a standard installation of CoreMedia SCI the templates providing the view for a document are found by the View Dispatcher configured in the file config.bsh. In the simplest case, valid in this example, the standard template finder looks for the templates below the path <TomcatHome>/webapps/coremedia/templates. For document views there must be directories with the name of the document type containing the templates. Property views must be arranged below the directory proptypes in directories named like the property. A detailed description of the View Dispatcher can be found in Section 4.4.

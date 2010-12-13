@@ -1,3 +1,0 @@
-
-
-The following Unified Modeling Language (UML) activity diagram symbols may be translated in elements of CoreMedia Workflow definitions like this:

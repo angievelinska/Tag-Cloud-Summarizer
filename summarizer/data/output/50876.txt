@@ -1,3 +1,0 @@
-
-
-This reference chapter lists some of the WAGE components. For a complete reference of the available JavaScript components in WAGE, please refer to the JavaScript API Documentation

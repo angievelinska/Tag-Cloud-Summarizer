@@ -1,3 +1,0 @@
-
-
-In a Content Application Engine with enabled click tracking, the following configuration options can be set in the file WEB-INF/spring/analytics/tracking.properties:

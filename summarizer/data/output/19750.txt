@@ -1,4 +1,0 @@
-
-
-To configure the CoreMedia Editor for your specific needs the Editor API is available. You can use it to program your own editor, filter or validator classes. To keep the effort for the user as small as possible, the CoreMedia Editor is delivered with a series of classes which already enable configuration. These delivered classes are described in the following sections.
-

@@ -1,8 +1,0 @@
-
-6#  
-Configure Editing Services for JSF so that it produces the correct -portal conform- "DOCTYPE" definition. Add the following line to the file editing-jsf.properties located in the directory spring/editing-jsf/dispatcher-servlet/.
-
-editing-jsf.html.doctype=<!DOCTYPE html 
-           PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-

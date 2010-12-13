@@ -1,3 +1,0 @@
-
-
-So the three-step publication only effects approval and publication of resources (documents and folders), but not the creation of resources themselves. The CoreMedia Workflow allows to differentiate between content-related and structural changes. Both types of changes can be published separately. Custom workflows can be completely different from the workflows mentioned and described here.

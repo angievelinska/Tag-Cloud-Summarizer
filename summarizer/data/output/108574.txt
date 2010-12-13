@@ -1,9 +1,0 @@
-
-
-Operations:
-
-
-publish folder F2
-
-
-Required rights:

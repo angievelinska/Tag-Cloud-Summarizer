@@ -1,7 +1,0 @@
-
-
-AggregationVariable
-
-Grammar: ((Value)*) 
-
-In contrast to a variable, whose value is one value, an AggregationVariable may have a list of values as its value. See Variable for details.

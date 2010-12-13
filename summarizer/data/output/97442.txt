@@ -1,3 +1,0 @@
-
-
-This menu item closes the window.

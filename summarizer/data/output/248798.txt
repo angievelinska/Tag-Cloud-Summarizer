@@ -1,3 +1,0 @@
-
-
-As output, the template in Example 4.2.3.4k only creates the IMG tag and is therefore suitable for insertion into the output of other templates, using jsp:include or Context#include. Example 4.2.3.4l shows how this template can be used in other templates. 

@@ -1,7 +1,0 @@
-
-
-The tag <analytics:satellite/> displays an overlay window in which the user can configure the In-Site Analytics mode and the time for which data is displayed. This tag may be placed anywhere in the body of the page, but it is not recommended to nest it in other elements in order to avoid z-order problems during display. 
-
-The placement of this tag determines the initial location of the overlay window. The user can then drag the satellite to a more convenient place, if desired.
-
-By default, the satellite is visible when the user first opens the preview page, but that can be changed in the file WEB-INF/spring/analytics/overlay.properties. You can then configure PBE context menu actions to hide and show the satellite.

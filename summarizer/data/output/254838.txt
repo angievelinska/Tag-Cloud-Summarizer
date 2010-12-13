@@ -1,7 +1,0 @@
-
-
-Configure an uploader for the JmsReceiver 
-
-You need to configure an uploader which is used by the JmsReceiver. Configuration of the uploader is done via the appropriate uploader element inside the JmsReceiver element. The configuration is nearly equal to the configuration of the uploaders of PADS (see Section). Only the id and receiveInit attributes are not needed here and ignored if set. 
-
-The following example uses a JMS topic from a SwiftMQ router. Other JMS providers can be used likewise.

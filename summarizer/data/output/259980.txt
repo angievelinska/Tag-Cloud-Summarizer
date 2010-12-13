@@ -1,4 +1,0 @@
-
-
- Property Description Database Driver JAR The path and name of the jar-file of the database driver. The driver will be copied to the management/lib directory of the Content Management Server. Database Driver Class The class of the database driver. Database URL The URL of the database. Database Type The type of the database. Possible entries are "oracle", "db2", "mssql" and "postgresql". Database User The database user to use by the Content Management Server. Database Password The password of the database user.
-

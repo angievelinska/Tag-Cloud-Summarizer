@@ -1,3 +1,0 @@
-
-
-Now the main template for the Menu site has to be created. This template is called whatever Dish, Page or anything else is looked at. It displays a headline and a navigation bar with a search field and it includes the jsp for the login. As all documents inherit main() from the document type Resource, you just have to replace Resource/main.jsp with the following code.

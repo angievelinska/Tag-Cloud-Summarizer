@@ -1,5 +1,0 @@
-
-
-Documents are made up upon different fields of specified order and number. This is defined in the document type definition. In addition, the fields can also be edited in the group or user specific editor.xml file. Therefore, different editors might see ,for example, different fields in the same document. Except for system-required document types such as Query (for queries, see section), or Preferences, these can be modeled after project requirements.
-
-The following table lists field types:

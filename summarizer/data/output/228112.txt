@@ -1,3 +1,0 @@
-
-
-The CAE Feeder supports String, Number, Date, XML and binary element types. The following table describes the mapping from Java bean property value classes to element types:

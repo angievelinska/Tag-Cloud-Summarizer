@@ -1,3 +1,0 @@
-
-
-The web application has integrated Preview-based Editing. If you want to change the layout or content of the site, you can simply open the Navigation Editor which is an extension of the Web Editor. The Navigation Tree on the left side  reflects the hierarchical structure of the web site. 

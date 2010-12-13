@@ -1,4 +1,0 @@
-
-
- Menu item Sub items Function (1)  Open the selected document in a document window. (2)  Open the selected document in the overview window. (3)  Opens a dialog for creation of a new document which can be inserted at the current position. It's only possible to create documents of a type which is allowed for the link list. (4)  Opens an document chooser for browsing after the item (by default only matching document types are displayed). (5)  Remove a link from a link list (does not delete the document). (6)  Moves a link to the very top of a link list. (7)  Moves a link up one position. (8)  Moves a link down one position. (9)  Moves a link to the very last position in a link list.
-

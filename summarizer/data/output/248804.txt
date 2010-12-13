@@ -1,3 +1,0 @@
-
-
-The following example shows how to insert the images allocated to an article via a LinkListProperty ("images") into the HTML output. Further possibilities for output images are explained in Section 4.2.2.4.

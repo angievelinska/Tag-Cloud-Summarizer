@@ -1,5 +1,0 @@
-
-
-Reports can be exported to PDF, Excel and to XML. In order to export reports, first open a report in detail view and set the report parameters according to your needs. Next, click the respective export icon ('export to PDF', 'export to XLS' or 'export to XML') on top right to generate te respective report document. Now you may save the generated report to the file system, open it in a viewer or send them via email.
-
-Currently, only a single report can be exported per document.

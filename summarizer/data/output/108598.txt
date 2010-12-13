@@ -1,9 +1,0 @@
-
-
-Operations:
-
-
-move folder F2 to folder F3
-
-
-Required rights:

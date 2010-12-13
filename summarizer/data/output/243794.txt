@@ -1,9 +1,0 @@
-
-
-Expression
-
-
-Grammar: ( (Expression)*) 
-
-
-You can implement your own expressions (see Chapter). Custom expressions must implement the interface com.coremedia.workflow.WfExpression or com.coremedia.workflow.WfBooleanExpression.

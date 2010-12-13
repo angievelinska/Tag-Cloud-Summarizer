@@ -1,3 +1,0 @@
-
-
-This example bases upon the prior example and it is recommended to work it through. You will extend the service from folders to documents and build a visual browser at the client side. Additionaly to getSubfolders() the web service will provide a method returning all documents contained in a folder. In this case you can copy the folder method and rename the method name as well as the Unified API call. A closer look reveals that this step produces redundant code and can be refactored with the following result: 

@@ -1,3 +1,0 @@
-
-
-In this step, a stylesheet for the transformation of XMLNewsStory documents into CoreMedia XML documents with the document type Text is created. With the following example document we find out which information from the source format should be transferred to the target format, and then a stylesheet is created.

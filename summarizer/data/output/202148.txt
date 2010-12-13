@@ -1,3 +1,0 @@
-
-
-Using the Unified API, it is not possible to write the server-side parts of new client side actions. You still need the Workflow API for this. Note, however, that client-side actions can now be replaced by Unified API server-side actions in many cases, because the Unified API allows you to act on behalf of a particular user without having to open a separate connection.

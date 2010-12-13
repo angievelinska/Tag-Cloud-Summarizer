@@ -1,4 +1,0 @@
-
-
-  Parameter Description -a Equivalent to the combination of -ap and -av. -ap Approve the place of any content below the base folder that is not place approved yet. If the content is not marked for deletion or withdrawal, also approve the latest version. -av Approve all versions following an already approved version of any content below the base folder. Also approve the places of contents containing such versions. -b Publish all resources below the base folder that are approved but not published yet and that are not marked for deletion or withdrawal. -c Check-in all documents below the base folder which are checked-out. -f The path of a folder for which you want to start the operations (e.g. /articles/sport). If no path is entered, all resources below the root folder will be used. If you use a multi-site enabled system, it is mandatory to enter a path to a folder that belongs to a single base folder (see section).
-

@@ -1,3 +1,0 @@
-
-
-Some of the properties which exist implicitly in all documents can be addressed using the fieldnames in the Property attribute given in the following table:

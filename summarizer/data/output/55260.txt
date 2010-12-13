@@ -1,3 +1,0 @@
-
-
-Note: To avoid confusion, no more than one folder or document with the same name may exist within a folder. If this is the case, you'll be asked to rename the resource in an opening dialog window.

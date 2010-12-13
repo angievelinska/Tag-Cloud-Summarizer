@@ -1,3 +1,0 @@
-
-
-The new WebEditor can handle the new RichText component too. We'll survey the features throughtout section.

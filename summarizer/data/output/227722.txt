@@ -1,3 +1,0 @@
-
-
-If you free a document for other users with Revoke check out, all changes since the last check-out are lost, even when you have saved in between. Only Check in creates a new version of the document and stores the data permanently into the CoreMedia repository.

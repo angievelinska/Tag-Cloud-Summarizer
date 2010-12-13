@@ -1,3 +1,0 @@
-
-
-XML fields that conform to the now deprecated coremedia-sgmltext.dtd may link to documents with the elements <HOX.LINK> and <HOX.IMAGE> as shown in the  following example:

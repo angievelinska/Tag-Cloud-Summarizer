@@ -1,5 +1,0 @@
-
-2#
-Check the Analytics Dashboard box and click [Next].
-
-The window shown below opens up. You can decide whether the default servlet engine Tomcat should be installed or not.

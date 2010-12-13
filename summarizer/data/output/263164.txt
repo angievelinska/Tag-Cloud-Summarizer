@@ -1,5 +1,0 @@
-
-
-Report variables
-
-Report variables are defined in the report definition, state model (see file analytics-reportdefinition.xml).

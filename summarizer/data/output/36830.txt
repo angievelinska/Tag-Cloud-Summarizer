@@ -1,7 +1,0 @@
-
-
-String
-
-Grammar: EMPTY 
-
-The String element is used to specify a single constant string value within expressions or variable initializers.

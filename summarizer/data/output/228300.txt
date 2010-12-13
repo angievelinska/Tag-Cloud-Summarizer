@@ -1,6 +1,0 @@
-
-
-
-
- Attribute Description host The name of the host machine where the differencing web application is running. port The http port of the differencing web application. uriPath The name of the differencing web application. loginPort The SSL port of the differencing web application.
-

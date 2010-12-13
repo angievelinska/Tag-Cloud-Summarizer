@@ -1,7 +1,0 @@
-
-
-The restoreusers tool reads an XML file which has been written using the dumpusers tool. The structure of the XML file is defined by the lib/xml/coremedia-userrepository.xsd schema, or alternatively by the lib/xml/coremedia-userrepository.dtd. It contains a nested structure of group elements which contain rules defined for this group and elements representing the members of this group. To provide for membership in multiple groups a userref or groupref element can be used which refers back to a previously defined user or group.
-
-Members are identified by their capid attribute, if given. If no capid is given, the member is identified by name and domain. If no such member is found, a new member is created. Members can only be created in the built-in user repository!
-
-The identified member is updated to the corresponding values in the XML file, such as name, password, home folder and a group's isAdministrative flag. A new home folder is created if the given path does not exist yet.

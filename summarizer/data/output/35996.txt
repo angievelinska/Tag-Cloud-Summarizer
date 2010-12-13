@@ -1,9 +1,0 @@
-
-
-AssignVariable
-
-Use this action to assign a new value to a variable. It takes a list of expressions (that evaluate to a WfValue) via the Expression subelement or WfValues via the Boolean, Date, String etc. subelements.
-
-Example:
-
-This example will assign Integer values to the variable defined via the attribute resultVariable.

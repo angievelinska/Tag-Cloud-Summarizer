@@ -1,3 +1,0 @@
-
-
-The initial replication of a Replication Server is not fault-tolerant against connection losses. The first replication has to run without interruption in order to succeed. If this is not possible, the database of the Replication has to be build from a backup or the database of the Master Live Server as described in the following sections.

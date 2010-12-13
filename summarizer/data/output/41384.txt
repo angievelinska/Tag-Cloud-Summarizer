@@ -1,6 +1,0 @@
-
-
-Opening internal and external links quickly
-
-
-In order to find out a link target, mouse over the link and and read the target in the status line. To open a link target quickly, double-click it: internal links open in a new document window, external links open in a web browser

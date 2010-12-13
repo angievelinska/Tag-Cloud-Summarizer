@@ -1,6 +1,0 @@
-
-
-The User Manager window is the default window for the user admin, all other administrator group members can access the functionality by choosing Window | User manager window from the CoreMedia Editor's explorer window.
-
-
-The new interface holds users and groups on tabs.

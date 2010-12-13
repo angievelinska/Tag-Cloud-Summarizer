@@ -1,3 +1,0 @@
-
-
-In an Analytics Dashboard Web-Application, you can configure the following properties in the file WEB-INF/spring/analytics/analyticsdashboard.properties:

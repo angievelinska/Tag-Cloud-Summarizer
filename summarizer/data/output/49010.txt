@@ -1,4 +1,0 @@
-
-
-  Attributes  Optional  Description  from  Yes  A regular expression (e.g. ".*/sport/.*") which defines the resource URIs of the source pages of the links. If you omit this attribute, ".*" will be used.  to  Yes  A regular expression (e.g. ".*/sport/.*") which defines the resource URIs of the target pages of the links. If you omit this attribute, ".*" will be used.  follow  No  Defines whether the links should be followed ("true") or not ("false"). 
-

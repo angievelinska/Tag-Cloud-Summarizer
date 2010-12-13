@@ -1,8 +1,0 @@
-
-
- Property name Property description Mandatory name 
-
-The view's name. If the name property is not set, the Spring bean name will be used per default.
-
-Note that the view's display name is not determined by this property. Instead, it is computed from the view identifier as defined in the profile (see profile properties above). no requiredRoleCSV A comma-separated list of roles. Access to this view is granted only to users that assume one or more specified roles. If this property is left unspecified, no access control is performed. We highly recommend not leaving this property unset (see section below). Yes for security reasons reportViews Ordered list of DashboardReportViews. A report view is a report customized for a specific dashboard view. Each report view is defined by a DashboardReportView bean. yes
-

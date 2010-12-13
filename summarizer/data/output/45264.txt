@@ -1,5 +1,0 @@
-
-
-Now the first dish can be added to the menu. Lets add a fish dish. 
-Click the right mouse button in the folder view on the new directory Fish and select new|Dish. As can be seen, all other document types created in the last chapter can be selected here. 
-The new Dish needs an identifier to be distinguishable from other dishes in the database. Name it SpicyTrout and click [okay]. A new document window for the Dish opens up. 

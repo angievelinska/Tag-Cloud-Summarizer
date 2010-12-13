@@ -1,8 +1,0 @@
-
-
- Property Description class 
-
-Defines the Bean class, which should be modified. In the context of the blob storage, these are media store beans or condition bean, which should be configured. 
-
-
-

@@ -1,5 +1,0 @@
-
-
-Converting property values is performed by implementations of the interface com.coremedia.cap.wage.PropertyConverter. Implementations of the interface PropertyConverterFactory (same package) are responsible for creating an adequate PropertyConverter, given a type (DynaClass) and a property (String). The PropertyConverterFactory may also (indirectly) access information from the current request. The only information that should be used is the request's locale and client (browser).
-
-The default mappings shown in default-property-mappings for document properties and in default-workflow-mappings for workflow variables are established by the default implementation of PropertyConverterFactory called GenericPropertyConverterFactory (com.coremedia.cap.wage.util). In the WAGE API JavaDoc, you find detailed information about all default PropertyContverters. Here, it is explained how to implement and configure a custom PropertyConverter(Factory) utilizing the GenericPropertyConverterFactory.

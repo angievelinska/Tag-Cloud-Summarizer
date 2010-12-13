@@ -1,5 +1,0 @@
-
-
-The next section is concerned with XML text properties. The classes and methods used for output the IMG tag as well as the definition of the htmlUnparser are illustrated there. 
-
- 

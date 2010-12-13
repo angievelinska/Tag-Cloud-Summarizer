@@ -1,5 +1,0 @@
-
-
-Log
-
-Use this action to write output to the log. The log name can be defined using the facility attribute. You can write text to the output defined via the attribute message. Using the subelement Get you can output the content of variables. Define the log level using the attributes debug, error or info (see Section "Logging" of the Administrator Manual for details on the logging).

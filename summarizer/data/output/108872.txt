@@ -1,3 +1,0 @@
-
-
-You may specify two sorts of filters: OU filters and member filters. Using an OU filter allows fine grained configuration of the LDAP nodes to search in, but their usage is not recommended, since it prevents subtree-scope search and is thus not performing. The value of the property must follow the syntax described in RFC 2254. You may specify a member filter if needed. A member filter is a class which implements the com.coremedia.ldap.MemberFilter interface.

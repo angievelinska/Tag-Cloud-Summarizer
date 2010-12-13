@@ -1,7 +1,0 @@
-
-
-New folders are always created below an existing folder. At the very top of the folder hierarchy you find the root folder, marked blue in the folder overview. The root folder is the starting point for the creation of folders. 
-
-To create a new folder:
-Select the folder in which you want to create the new folder.
-

@@ -1,8 +1,0 @@
-
-
-Example:
-
-The following example shows a simple resource naming factory which allows only documents with the name "image" within the Test directory.
-
-
-

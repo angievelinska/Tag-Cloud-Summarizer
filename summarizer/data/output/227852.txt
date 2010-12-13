@@ -1,6 +1,0 @@
-
-
-When installing the CoreMedia Analytics Engine, a number of predefined business reports is provided. Depending of the dashboard configuration some or all of these reports may appear on your dashboard. Each of those reports will be described in the following section.
-
-For custom reports that are not described here, please refer to documentation provided by your company or organization.
-

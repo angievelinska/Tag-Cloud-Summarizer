@@ -1,7 +1,0 @@
-
-
-In the context of the workflow this element of the XML file is used for sorting:
-
-The entries in the menu File|New workflow when used in <Processes> (see the example).
-The worklist when used in <ColumnDefinition> of <TableDefinition>.
-

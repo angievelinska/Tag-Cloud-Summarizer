@@ -1,5 +1,0 @@
-
-
-The launch method has no impact on the operation of the application. For more details, please see the JWS-relevant pages at Sun Microsystems' website at http://java.sun.com/products/javawebstart/.  
-
-In order to WebStart your CoreMedia Editor, you have to prepare the CAP Server first, and then install JWS on your computer. The next pages outline server-side preparations and the setup procedure on your local computer.

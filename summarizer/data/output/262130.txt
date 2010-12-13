@@ -1,3 +1,0 @@
-
-
-The Starter Kit internationalization approach is backed with specific document types. All localized content types inherit from the content type CMLocalized, shown in figure.

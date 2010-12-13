@@ -1,3 +1,0 @@
-
-
-It is not possible to move documents between different base-folders.

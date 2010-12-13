@@ -1,7 +1,0 @@
-
-
-The utility program Validate validates a given XML-file. 
-
-The usage is:
-
-cm validate [+E] [file]

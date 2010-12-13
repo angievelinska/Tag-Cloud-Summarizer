@@ -1,3 +1,0 @@
-
-
-WAGE Taglib: To further facilitate and accelerate the development of Web applications with CoreMedia WAGE, some of the functionality of WAGE is also available via a JSP tag library. For a full reference of available WAGE tags, please refer to XXX and XXX.

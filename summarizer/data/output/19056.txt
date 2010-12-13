@@ -1,3 +1,0 @@
-
-
-In the following sections the meaning of elements and of the corresponding attributes is described. In addition, a short example for the syntax of each element is given.

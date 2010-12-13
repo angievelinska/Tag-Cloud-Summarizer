@@ -1,4 +1,0 @@
-
-
- Option Description -o Defines a specific output file for the installation settings. -p Defines a specific input file from which the installer reads the default values. text Starts an interactive text-mode installation. text-auto Starts a script installation without interaction.
-

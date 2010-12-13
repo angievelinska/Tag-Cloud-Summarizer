@@ -1,3 +1,0 @@
-
-
-Within this element of the XML file, the result table of the full-text search is configured. The element has no attributes.

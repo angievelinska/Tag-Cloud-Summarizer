@@ -1,3 +1,0 @@
-
-
-A dialog box opens up where you can define the new navigation channel.

@@ -1,3 +1,0 @@
-
-
-Double-clicking the info.html file on a Windows Vista system, opens it in the Internet Explorer with a special URL. Because of this URL, the buttons to remove locks and messages do not work. As a workaround, you can enter the correct URL (http://<host>:<port>/info.html for example) in the IE.

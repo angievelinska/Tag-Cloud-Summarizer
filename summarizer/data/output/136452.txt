@@ -1,4 +1,0 @@
-
-
- Tab Description Own publication On this tab, you will find information about the execution of your current publication. Queue On this tab you will find all publications in the queue. If you are using multi-site management, the publications to all publication targets will be shown.  All publications On this tab you will find Information about all executed publications.
-

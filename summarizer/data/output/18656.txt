@@ -1,7 +1,0 @@
-
-
-The utility program Transform transforms an XML-file by means of an XSL-file. The usage is:
-
-cm transform -xml [url] -xsl [url] -out [file] -mode [pretty | tidy | normal]
-
-The parameters have the following meaning:

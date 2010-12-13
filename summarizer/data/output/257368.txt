@@ -1,3 +1,0 @@
-
-
-The red framed part shows the name of the user who has checked-out the document. You can get additional information concerning the document choosing the menu item File|Properties (see section).

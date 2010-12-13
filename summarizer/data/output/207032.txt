@@ -1,5 +1,0 @@
-
-
- Key Value time Time of statistics gathering; milliseconds since 1/1/1970. interval Number of milliseconds since the last statistics gathering and counter reset. The interval corresponds to the API configuration generator.statisticsInterval (default: 5min).
-
-JVM

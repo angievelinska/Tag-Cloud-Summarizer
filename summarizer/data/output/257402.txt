@@ -1,3 +1,0 @@
-
-
-The RichText toolbar resembles the RichText toolbar in the CoreMedia Editor, the link list toolbar is explained in section.

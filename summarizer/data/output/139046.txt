@@ -1,6 +1,0 @@
-
-
- Attribute  Value  Default  Description  expression XPath expression none (required attribute) 
-
-The XPath expression used to select the indexed XML fragment.
-

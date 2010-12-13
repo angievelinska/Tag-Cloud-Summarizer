@@ -1,6 +1,0 @@
-
-
-The number format parameter allows you to choose between absolute numbers and relative numbers.
-
-Absolute numbers - the total numbers of content items per category are indicated in brackets right to the subcategory name.
-Percents - the relative number of content items of a category compared to all content items contained in the current category (including all subcategories) is indicated as a percentage value right to the category name.

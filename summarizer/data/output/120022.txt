@@ -1,3 +1,0 @@
-
-
-One main feature of the CoreMedia Authoring Server is the support for a large number of users editing CoreMedia resources and participating in workflows via Web front-end. With the CoreMedia Editor, every user had his own session to the CoreMedia Content Server, and probably another one to the CoreMedia Workflow Server. All changes made to a CoreMedia resource such as changing the value of a document property, or moving a folder, were visible to other users immediately, as events were propagated to every client.

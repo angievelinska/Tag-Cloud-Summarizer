@@ -1,3 +1,0 @@
-
-
-Documents can have link lists. Link lists are special fields that can hold one or more links to other documents. The WebEditor has a special tool bar for the editing of link lists:

@@ -1,3 +1,0 @@
-
-
-In order to login as a user who is allowed to see the poultry dishes a page must be created which enables to login. The next example shows the jsp template which will be included into the main.jsp described in section.

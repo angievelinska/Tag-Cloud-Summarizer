@@ -1,3 +1,0 @@
-
-
-A migration to CoreMedia SCI 4.2 is only possible from CoreMedia CAP 3.3 or higher. If you want to upgrade older versions, migrate your project to CoreMedia CAP 3.3 first. For appropriate detailed information see the CoreMedia CAP 3.3 Administrator Manual. 

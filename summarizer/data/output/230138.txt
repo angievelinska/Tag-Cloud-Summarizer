@@ -1,5 +1,0 @@
-
-
-New report templates must be placed as /reportTemplates/<reportTemplateName>.jrxml files relative to the classpath root.
-
-After having completed configuring the report view, you should now validate your report definition (verify that it consolidates and displays data correctly) and finally publish it on one or more dashboard views.

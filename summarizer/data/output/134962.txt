@@ -1,3 +1,0 @@
-
-
-With the start tool you can start new workflows.

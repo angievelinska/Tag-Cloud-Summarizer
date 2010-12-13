@@ -1,5 +1,0 @@
-
-
-<ResourceNamingFactory>
-
-Parent elements: <Editor>

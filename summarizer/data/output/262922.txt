@@ -1,7 +1,0 @@
-
-
-Run-time configuration via context settings
-
-You can enable/disable user feedback features provided by the plug-in (ratings and comments) per site, per channel, and or per article by setting the corresponding contextSettings property in the CMSite, CMChannel, or CMArticle documents.
-
-The default installation enables user feedback features for the ¿Socialize¿ channels of the German and English sites. This is achieved by adding a <StructProperty Name="userFeedback"> element containing a <Struct> with a <BooleanProperty Name="enabled"> to the contextSettings property of the corresponding CMChannel documents. The <BooleanProperty> value may be true or false to activate the user feedback plug-in or disable it, respectively.

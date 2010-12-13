@@ -1,3 +1,0 @@
-
-
-As opposed to versions up to CoreMedia CAP 4.0, the CORBA communication between the SCI Content/Live Servers and the client applications no longer requires the setup of two TCP connections, one for either direction. Instead, only one connection from client to server is required. Hostname/port settings of client machines are no longer relevant.

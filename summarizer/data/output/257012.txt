@@ -1,3 +1,0 @@
-
-
-The Overview window of the Editor is divided into four major sections: the folder overview (4), the bookmark overview (5), the document overview (6), and the detail view (8). Have a closer look at illustration: 

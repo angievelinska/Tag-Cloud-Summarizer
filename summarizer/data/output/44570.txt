@@ -1,7 +1,0 @@
-
-
-The Extensible Markup Language, XML, is a standard for platform- and software-independent description of structured files and data published by the World Wide Web Consortium (W3C). More and more content suppliers recognize XML as a simple yet powerful exchange format and deliver their content in XML format.
-
-CoreMedia naturally also supports XML and provides an importer for XML files of any format and map them to your CoreMedia document types.
-
-This chapter deals with conceptual aspects of the XML importer, in particular the configuration for any given XML format. How to put a new importer with such a configuration into operation is described in the Administration Manual.

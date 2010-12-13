@@ -1,8 +1,0 @@
-
-
-In addition, these symbols can mark single paragraphs:
-
- Pictograph Description   Tip: This denotes a best practice or a recommendation.   Warning: Please pay special attention to the text.   Danger: The violation of these rules causes severe damage.   Summary: This symbol indicates a summary of the above text.
-
-
-

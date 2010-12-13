@@ -1,9 +1,0 @@
-
-
-TrueLoginPredicate 
-
-This predicate always returns true. It has no options but you must be configure the predicate.<n>.args property with a space character; because JAAS complains if the space is missing.
-
-Example:
-
-A simplified jaas.conf file might use NameLoginPredicate and TrueLoginPredicate with CapLoginModule:

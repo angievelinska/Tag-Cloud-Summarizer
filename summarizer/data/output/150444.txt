@@ -1,4 +1,0 @@
-
-
- Parameter Description -a Use the parameter to start the service automatically on system start-up. Otherwise you have to start the service manually. -u The user of the service. If no user is entered, the default user "LocalService" will be used. It is not possible to use the "LocalService" user when the installation drive is a network drive, because "LocalService" has no permission to access remote resources. -p Password of the user. If not set, you will be asked for the password.
-

@@ -1,8 +1,0 @@
-
-
-<Workflow>
-
-
-Child elements: <TableDefinition>
-
-Parent elements: <Editor>

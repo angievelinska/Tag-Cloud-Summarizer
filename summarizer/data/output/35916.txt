@@ -1,5 +1,0 @@
-
-
-CreateFolder
-
-Use this action to create a new folder in a specified parent folder.

@@ -1,9 +1,0 @@
-
-
-If
-
-Grammar: ( (Variable | AggregationVariable)*, Condition, Then, Else ) 
-
-An If task determines the successor task based on the result of a Condition. A condition may be based on the state of workflow variables, the content of documents from a Content Management Server or the external state of third party products. 
-
-If the condition evaluates to true, the successor of the Then element is chosen, else the one of the Else element. See Else.

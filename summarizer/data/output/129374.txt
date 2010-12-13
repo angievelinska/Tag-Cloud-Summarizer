@@ -1,3 +1,0 @@
-
-
-Use this element to enable or disable the spellchecker. It's also the container element for the configuration of the spellchecker.

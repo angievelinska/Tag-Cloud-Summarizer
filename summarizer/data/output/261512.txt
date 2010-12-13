@@ -1,3 +1,0 @@
-
-Configure the assembly mode you want to use in the property httpcache.assembly.mode in the file WEB-INF/spring/httpcache/httpcache.properties. 
-Clear the complete cache after changing the assembly mode.

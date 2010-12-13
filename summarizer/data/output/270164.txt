@@ -1,9 +1,0 @@
-
-
-This action is a sibling of the AggregateIntervalsAction in that it also fills a set of tables for similar statistics at multiple time granularities. It also reaggreates data from the finer-grained tables to the coarser-grained table. The differences is that the initial integration into the most fine-grained table happens with Java assistance.
-
-A custom class implementing com.coremedia.analytics.wf.plugin.PreprocessingMapper is repeatedly called with the values of data columns read from a source table. The mapper also receives a callback object of type com.coremedia.analytics.wf.plugin.StatisticsCollector, on which calls can be made to increment counts and sums. For each call of the collector, an array of key values must be given, which correspond to the key columns of the target table. It is up to the mapper class how the keys are derived from the provided values and how often and with which keys a callback is made.
-
-Before statistics values and keys are written to the database, they are preaggregated in main memory for each processed interval. This means that the number of different keys in a single fine-grained interval should not normally exceed a few ten thousand. Before keys are written to the database, they are processed by an instance of the interface com.coremedia.analytics.wf.plugin.Transformer. There is one transformer per key column. The default implementation IdentityTransformer passes the value on unchanged. The implementation SingleKeyDimensionEncoder can be used to compress a single value (typically a string) into a numeric id using a dimension table, extending the table as needed.
-
-The file config/dataaggregator/spring/dataaggreator-actions-example.xml contains an example that shows how to configure a PreprocessingAggregateAction in Spring XML.

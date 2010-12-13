@@ -1,3 +1,0 @@
-
-
-The predefined Robot Traffic Report displays the amount of "non-seen traffic" caused by robot visits.

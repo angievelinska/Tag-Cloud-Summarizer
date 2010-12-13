@@ -1,5 +1,0 @@
-
-
-Global configuration options for WAGE are accessed through an application scope bean with the default name wageConfig that should be instantiated in the config.bsh of the Authoring Server.
-
-The wageConfig bean must be an instance of com.coremedia.cap.wage.WageConfig. The JavaDoc of that class contains information on what can be configured. In table-configs, you find an overview of all configuration options and a short description. All properties can be read and modified, but are usually only modified in the config.bsh.

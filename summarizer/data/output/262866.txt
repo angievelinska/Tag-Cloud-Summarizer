@@ -1,8 +1,0 @@
-
-
-You have to distinguish between the first server start after installation and all later starts.
-
-First CM Server start
-
-Before you start the CM Server for the first time, make sure that the document type definition file (<xyz>-doctypes.xml) can be found at the location configured with the parameter cap.server.documentTypes in the file capserver.properties. Normally this file is placed in the directory config/contentserver/doctypes. You may point this parameter to multiple comma separated paths, which may contain Ant-style wildcards. If you want to use separate table spaces for BLOB-data, you have to adapt the <DBname>.properties file of your database before the first start of the Content Server. See section for details.
-

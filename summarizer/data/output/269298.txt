@@ -1,6 +1,0 @@
-
-
-The site parameter determines the (sub-)site. The list of sites is automatically generated during report data aggregation.
-The category parameter determines a content category. The report displays the top viewed of this category and all of its subcategories. Please note that this parameter only exists in the 'Top Viewed Pages per Category' report.
-The time interval parameter allows a user to select the time interval. See the Performance report for time interval description and screenshots.
-

@@ -1,8 +1,0 @@
-
-
-It is good practice not to hardcode the variable names into the action bean, but to use configurable attributes to access the workflow variables. Thus it is easier to reuse the action in other workflow definitions. Here is how you do this:
-
-Configure your action bean from the workflow definition by adding an attribute to the <Action> element like in Example 5.4.5a.
-Define a setter method in your action for the configuration like in Example 5.4.5b.
-Directly access workflow variables using the WfInstance.getAtomicVariable() or WfInstance.getAggregationVariable() method.
-

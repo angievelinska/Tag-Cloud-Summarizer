@@ -1,7 +1,0 @@
-
-
-The WebEditor of the CoreMedia CMS is able to spell check documents. The language used for the check depends on your CoreMedia installation. Either a default language is used, or the spellchecker determines the language in dependency of properties of the document; The position of the document in the folder hierarchy for example. If a text contains parts, that are marked with the Language-attribute, then the spellchecker automatically checks these parts in the marked language.
-
-Start the spellchecking
-
-If the spellchecker is enabled on the server, spelling-errors of checked-in documents are automatically underlined with a gray, wavy line. 

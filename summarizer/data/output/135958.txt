@@ -1,6 +1,0 @@
-
-
-InterruptUserTask
-
-Use this action to interrupt an activated user task regardless of it's current state and switch the state to completing without running any actions. Be careful when using this action, as it may lead to logically inconsistent workflow states.
-

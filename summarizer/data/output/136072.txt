@@ -1,3 +1,0 @@
-
-
-If you forget to set the encoding of a form that uses <html:file> to "multipart/formdata", Struts presents you the somewhat cryptic message "argument type mismatch". So, if you see this error message, check the enctype attribute of your <html:form> tag!

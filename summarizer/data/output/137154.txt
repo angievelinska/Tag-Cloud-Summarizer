@@ -1,3 +1,0 @@
-
-
-The content repository is concerned with the handling of folders and documents. The Unified API presents folders and documents jointly through the interface Content, which is a sub interface of CapObject. In releases prior to CoreMedia CMS 2005 , the term resource was used to refer jointly to folders and documents. But that term was meant to indicate a very much reduced signature that allowed only for those methods that are common to folders and documents. The interface Content, however, provides all methods that are applicable to either documents or folders. Besides Content, there is the Version interface, which represents a historic version of a Content.

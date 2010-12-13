@@ -1,7 +1,0 @@
-
-
-For example, you can define
-
-"fully cached" for display, for a data view that contains a page's description, its content and its parent page "for linking"
-"for linking", a data view of a page that only contains its description
-

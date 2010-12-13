@@ -1,5 +1,0 @@
-
-
-Alternatively, you can log to an own log file by specifying an action class of FileAction: log.action.1.class=FileAction.
-
-A sensible configuration, for example, is:

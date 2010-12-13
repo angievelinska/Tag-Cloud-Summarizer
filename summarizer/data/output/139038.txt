@@ -1,4 +1,0 @@
-
-
- Attribute  Value  Default  Description  name field name none (required attribute) The name of the field which matches a field in the index profile of the CoreMedia Search Engine. defaultValue string value empty string A default value that is indexed if the selected fragment does not contain plain text.
-

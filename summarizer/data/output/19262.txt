@@ -1,3 +1,0 @@
-
-
-This element of the XML file is used for entering which field from which document type is displayed in a column of the document view.

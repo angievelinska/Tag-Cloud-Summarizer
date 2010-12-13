@@ -1,5 +1,0 @@
-
-
-The attribute href of the element /nitf/head/base contains the complete URL of the document. The fetchFilename function recursively cuts off one level of the path using the "/" sign, until only the filename is left.
-
-Now we begin top-down with the transformation templates. We use the root as the entry-point for generating the <coremedia> element:

@@ -1,4 +1,0 @@
-
-
- Attribute Description typeName The bean type name. Use `*¿ to match all bean types propertyNames A list of properties, separated by comma. Both bean properties and implied properties may be used. Use `*¿ to match all bean and storage-implied properties. features The list of features to apply to the given properties
-

@@ -1,9 +1,0 @@
-
-
-The workflow repository, like the content repository and the user repository, provides access to objects stored persistently on a CoreMedia Server, in this case, the CoreMedia Workflow Server. The objects to be accessed are modeled as subclasses of CapObject, and their structure is modeled by workflow-specific subclasses of CapType.
-
-Like all persistent objects in the CoreMedia CMS, workflow objects carry an ID that uniquely identifies the object within the system, across users and sessions. This ID can be used to retrieve an object encountered before. The workflow repository offers a number of getter methods taking an ID argument, which differs only in the expected type of the retrieved object.
-
-There are also methods to retrieve all objects of a certain kind (which, depending on the repository's size, can be quite expensive).  
-
-Many client applications will navigate the repository beginning from a process or task that is relevant for the current user. These tasks and processes can be determined using the work list service described in ###worklist. If you want to navigate from a given content object to the processes that affect it, use the WorkflowContentService as described in ###wfcontentservice.

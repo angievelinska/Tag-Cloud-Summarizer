@@ -1,5 +1,0 @@
-
-
-Configuration of multi-site publishing means configuration of the publication targets. For each target the Content Management Server needs a set of properties which have to be defined in the <CoreMediaHome>/properties/corem/publisher.properties file. You have to replace <n> with a consecutive number for each property set, starting with 1. 
-
-It is possible to change the publication target configuration after the first start of the server and even if the server is running. 

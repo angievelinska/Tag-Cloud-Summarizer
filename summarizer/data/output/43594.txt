@@ -1,3 +1,0 @@
-
-
-As usual in Java, the returned object can be transformed into a string representation with the help of the classes from java.text.

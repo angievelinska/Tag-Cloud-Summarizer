@@ -1,4 +1,0 @@
-
-
- Menu Item Sub Items Function User Manual (PDF)  Opens the PDF-version of the user documentation. With the WebEditor you can also call the HTML-version. About this program  Dislpays detail information about the release, the logged-in user, the computer, the server type, and CoreMedia Java VM  Displays detail information about the Java Virtual Machine Memory usage  displays free and memory in use as well as cached resources
-

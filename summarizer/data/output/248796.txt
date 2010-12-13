@@ -1,3 +1,0 @@
-
-
-If the images should appear on the website at the size of the BLOB entered, the BLOB contents must be investigated on creation of the HTML source text and the image size extracted. In principle, this is possible by means of the Java 2 platform, but CoreMedia offers a bean which has the following advantages over the Java standard classes in java.awt.image: firstly, this bean avoids temporary storage of the complete image contents in the main memory. Secondly, under UNIX, it does not rely on an accessible X server. A template which uses the bean to create a complete IMG tag is shown in Example 4.2.3.4k. Since the blob contents must be accessed on execution of the template, caching again is recommended. 

@@ -1,3 +1,0 @@
-
-
-The logging in the provider class is configured via log actions. The example shows a logging to standard out in log level info and to the file var/logs/ldap.log in log level debug. The logging values are optional.

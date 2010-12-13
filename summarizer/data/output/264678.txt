@@ -1,5 +1,0 @@
-
-
-Used Struct Properties
-
-Table shows the Struct properties that you can use in the contextSettings field of CMLinkable documents. These properties are mostly used by the Starter Kit "reference" website in combination with the default JSP-templates.

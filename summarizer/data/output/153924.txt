@@ -1,5 +1,0 @@
-
-
-The first three lines instruct CoreMedia SCI to use the Sun J2SE ORB instead of the BEA ORB. The last line enables an alternative page cache algorithm.
-
-Please note in section 3.1.2 in the Delivery Developer Manual the x-coremedia-dynamic content type.

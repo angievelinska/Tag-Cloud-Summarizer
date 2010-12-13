@@ -1,3 +1,0 @@
-
-
-The dumpusers tool writes all groups, users and rules currently managed in a Content Server into an XML file. You can use this file later on with the restoreusers tool to restore the user settings. The structure of the XML file is defined by the lib/xml/coremedia-userrepository.xsd schema, or alternatively by the lib/xml/coremedia-userrepository.dtd. It contains a nested structure of group elements which contain rules defined for this group and elements representing the members of this group. 

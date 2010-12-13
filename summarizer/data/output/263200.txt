@@ -1,9 +1,0 @@
-
-
-Every CMS project starts with a document type model that previously had to be build from scratch. The Starter Kit comes with a predefined document type model that should fit most basic needs.
-
-The document types are grouped into base and standard document types, where the base document types are needed for the core features of the Starter Kit, namely internationalized content (see i18n), website structure and navigation (websitestruct), and layout. They structure the document types into different use cases and concepts - most of them by means of abstract document types. The standard document types on the other hand define additional document types and properties that are mainly used by the Starter Kit tutorial content and the default templates. Still, the standard document types are probably very useful in your project, or at least serve as a template from which to start.
-
-All document type names start with the prefix "CM", which you should not use for your custom document types. The prefix is reserved for future Starter Kit extensions.
-
-The document type model is illustrated by the tutorial content that can be imported into the Starter Kit content server (see inmport-content, item 6).

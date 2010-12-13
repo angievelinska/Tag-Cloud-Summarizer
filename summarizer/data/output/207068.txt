@@ -1,9 +1,0 @@
-
-
-The ADS repository API does not cache access to BLOB data. Each invocation of Blob#writeOn is served from the Content Server's database. Caching must thus be provided by the accessing template. The number of streamed BLOBs should not be increasing with every page access; otherwise the database gets easily overloaded.
-
-The values "misses, faults, removed" of the resource caches are interdependent: a cache miss normally leads to a cache fault; in a full cache another element must be evicted to make space for the new one therefore the three values will converge.
-
-An indicator for the effectiveness of a cache is the ratio of hits to total accesses (hits / (hits+misses)) ("hit rate").
-
-Page Cache

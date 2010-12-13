@@ -1,3 +1,0 @@
-
-
-This element is used for setting validator classes which tests, when a document is checked in, whether certain conditions about the content of the document are fulfilled. It is possible to hand over parameters to the class via attributes of the element.

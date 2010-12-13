@@ -1,4 +1,0 @@
-
-
-Please note that in most cases, you will configure the consolidators via strategies. Consolidators provide a set of pluggable strategies which allow merging, mapping, filtering of query data. The following strategy types can be set in a consolidator:
-

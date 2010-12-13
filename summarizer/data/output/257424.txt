@@ -1,4 +1,0 @@
-
-
-The predefined Top Entry Pages Report displays a ranking of entry pages of the selected site for the given time interval.
-

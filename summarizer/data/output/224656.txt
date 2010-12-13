@@ -1,3 +1,0 @@
-
-
-The search report tables are used for long term tracking of internal and external search requests. Normally values that are written to these report tables will never be changed again.

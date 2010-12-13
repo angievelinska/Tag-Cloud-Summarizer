@@ -1,4 +1,0 @@
-
-
- Icon Description  Simple task  Escalated task  Task offered to users  Accept the task. Also status accepted task.  Reject the task.  Assign the task to someone else.  Assign task to another group.  Assign task to another user.  Delegate task.  Skip the task.  Retry the task.  Complete the task you are working on.  Abort the task you are working on.
-

@@ -1,9 +1,0 @@
-
-
-LessEqual
-
-Grammar: ( (Expression) , (Expression) ) 
-
-A LessEqual expression contains exactly two subexpressions, which are both evaluated during the evaluation of the LessEqual expression. The expression evaluates to "true" if and only if the computed value of the first sub-expression is less than or equal to the value of the second sub-expression.
-
-Although a LessEqual expression may compare values of any type, this element makes sense only for integer, string, date and timer values as defined in the workflow. See Less for an XML example.

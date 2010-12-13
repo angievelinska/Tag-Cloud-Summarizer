@@ -1,7 +1,0 @@
-
-
-Configure the user account in the file feeder.xml. Set the name and password of the user in the attributes user and password of the element Feeder. 
-
-For example:
-
-<Feeder user="feeder" password="feeder" ...

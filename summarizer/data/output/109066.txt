@@ -1,3 +1,0 @@
-
-
-Using this menu item, you can start the spellchecker.

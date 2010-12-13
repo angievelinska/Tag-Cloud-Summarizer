@@ -1,4 +1,0 @@
-
-
- Attribute Optional Description from  The name of the action from which the edge starts. to  The name of the action which follows. code  Result code (numerical entry or symbolic name). If this value equals the result code of the action named in the from attribute then the action named in the to attribute is executed. Edges may not start from the same action with the same error code to different target actions. To avoid defining an <Edge/> tag for all error codes, the edge with the error code "Error" or "12" serves as the default edge. If an error occurs for which no edge is defined, the watchdog process will follow the edge with result code "Error". delay x This attribute specifies the delay in seconds until the subsequent action is executed. The default value is 10 seconds.
-

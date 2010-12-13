@@ -1,3 +1,0 @@
-
-
-The meaning of the parameters of the Beangenerator is described in the next table.

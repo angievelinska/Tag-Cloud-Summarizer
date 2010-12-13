@@ -1,7 +1,0 @@
-
-
-Writing a Login Action
-
-One thing you'll need for all examples to run is a way of logging in users. As access (READ as well as WRITE access) is controlled by the WAGE generator, you won't be able to access or modify any content if not logged in (unless Generator Access Control is turned off, then you can read content without logging in).
-
-One way for logging on users is to write a simple LoginAction as shown here:

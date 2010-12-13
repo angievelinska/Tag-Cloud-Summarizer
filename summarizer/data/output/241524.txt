@@ -1,5 +1,0 @@
-
-
-Now when including the "addPicturesToLinkList" view for a folder, all Picture documents in this folder are displayed as thumbnails, and you can click on the thumbnails to add the Picture to the LinkList. For this to work the LinkList has to have the focus, otherwise nothing will happen if you click on a Picture.
-
-As the addResource() method of the LinkList property editor also submits the form, we don't submit action_=commit as hidden input field as in XXX, or else the changes would be committed whenever a Picture document is added to the LinkList. Instead we only submit action_=commit when the submit button is pressed, so we can commit the changes and leave the editing form when this parameter is submitted. When the parameter is missing, an appropriate ActionForward should forward us again to the "renderForm" view, displaying the (changed) LinkList and allowing further editing.

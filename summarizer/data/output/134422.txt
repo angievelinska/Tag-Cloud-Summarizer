@@ -1,3 +1,0 @@
-
-
-The rules utility prints out all rules declared for a resource or in the entire repository.

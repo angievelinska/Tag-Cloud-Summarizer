@@ -1,9 +1,0 @@
-
-
-Furthermore, every predefined action may contain a Condition element, which will be evaluated to determine whether the action should be executed at all.
-
-Actions can be divided into server actions which are running solely on server-side and client actions (based on the class AbstractClientAction) which are running on client and server-side.
-
-Client-side actions
-
-Client action classes that are used to modify resources on the GUI Client respond to the following attributes:

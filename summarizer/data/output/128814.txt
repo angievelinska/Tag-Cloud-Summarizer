@@ -1,4 +1,0 @@
-
-
- Attribute Optional Description name  The name of the action. It must be unique within the configuration file. interval x Interval (in seconds) at which the number of action calls is checked. Checking is switched off with "0" (Default). events x Maximum permissible number of calls of the action within "interval". If the maximum number is exceeded, the action is not executed and the error message "13" is delivered. "events" is only used if "interval" <> "0". timeout x Time (in seconds) to wait until a pending action is cancelled with the error message "11". The default value is 60 seconds.
-

@@ -1,6 +1,0 @@
-
-
-The Analytics Engine defines a number of automated workflow actions. The actions are used in the standard report aggregation process, but you can also use them in your own extensions. Please note that some configuration properties of the actions that are used in the standard process are not (yet) public API. When possible, please restrict your usages to the properties described here.
-
-All actions are defined in the package com.coremedia.analytics.wf.
-

@@ -1,7 +1,0 @@
-
-
-The CoreMedia Content Server contains the Search Engine Feeder, which sends content and metadata of documents to the CoreMedia Search Engine. The Search Engine extracts the textual data of the documents, indexes them and provides the possibility to search for these documents. For more information about the CoreMedia Search Engine, see Section "CoreMedia Search Engine".
-
-This section describes the integration of the Search Engine in the Content Server. This includes the Search Engine Feeder and the search functionality itself. For configuration and operation, see Section "Configure Search Engine Integration" and Section "Operation of the Search Engine Feeder".
-
-The CoreMedia Content Server hides the functionality of the CoreMedia Search Engine from its clients. It contacts the CoreMedia Search Engine to serve client search requests. The CoreMedia Editor, the CoreMedia WebEditing Server and custom clients that use the CoreMedia APIs get the search results directly from the CoreMedia Content Server. Only the CoreMedia Content Server connects to the CoreMedia Search Engine.

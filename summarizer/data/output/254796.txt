@@ -1,4 +1,0 @@
-
-
- Parameter Description -v Checks which workflows can not be deserialized and have to be converted. -c [processID]* If you use -c without a process ID parameter, all uploaded workflows will be converted if necessary. If you enter process IDs, only the workflows with the given process IDs will be converted. -X [processID]* Similar to -c the workflow converter converts the uploaded workflows if necessary. If the conversion fails, the workflow process and all corresponding workflow instances are removed from the workflow server. -r processID jar Replace a custom made jar file for a workflow with a new version (see section for the upload of a jar file).
-

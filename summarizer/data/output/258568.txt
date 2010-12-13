@@ -1,3 +1,0 @@
-
-
-Required knowledge: For a full understanding of the following sections, you should have knowledge of the aspects described in http://static.springframework.org/spring/docs/2.5.x/reference/beans.html.

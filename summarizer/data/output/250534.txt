@@ -1,3 +1,0 @@
-
-
-Using this element of the XML file, the filters in the explorer window are configured. You will find predefined filter predicates in Section 5.8.1.1.2.

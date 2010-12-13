@@ -1,3 +1,0 @@
-
-
-Due to the new rights concept introduced in CoreMedia SCI 4.1, users only see folders that they have the appropriate rights for. If you don't see a folder that is supposed to be already existing, check for your rights on this folder with your CoreMedia administrator. To learn more about the rights concept, consult section.

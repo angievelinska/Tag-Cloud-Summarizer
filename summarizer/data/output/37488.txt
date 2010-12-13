@@ -1,7 +1,0 @@
-
-
-The four predefined workflows for the approval and publication of resources are described in the following table. You will find the workflow definitions of these workflows in the file <InstallDir>/properties/corem/workflows.zip and you can use them as examples for your own definitions. 
-
-Publication workflows
-
-The following table compares the working steps which are covered by the predefined workflows.

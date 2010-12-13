@@ -1,9 +1,0 @@
-
-
-Deinstallation of CoreMedia Components running as Windows Services
-
-
-As CoreMedia components have to be registered manually, they have to be deregistered manually too. They are not deleted automatically when uninstalling a CoreMedia system. Deregister them BEFORE uninstalling the CoreMedia components. To deregister a CoreMedia component execute the command 
-
-
- cm <component> uninstall

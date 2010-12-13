@@ -1,3 +1,0 @@
-
-
-If you plan to integrate an LDAP server, be aware that WebDAV-enabled clients cannot use digest authentication anymore. Without LDAP, everything works as it did before. With LDAP, use either basic authentication or, if enabled and required, basic authentication plus SSL. (We're not discussing performance issues or SSL-in-Tomcat-issues here.)

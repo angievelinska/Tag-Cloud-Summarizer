@@ -1,3 +1,0 @@
-
-
-You can only prioritize a publication using the CoreMedia Editor. The WebEditor does not offer this feature.

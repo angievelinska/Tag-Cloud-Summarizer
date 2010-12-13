@@ -1,8 +1,0 @@
-
-
-The transform method first creates a log output. The fact that the log object and the name are available to the transformer is a feature of the GeneralTransformerFactoryImpl factory, which we will use for instantiation of this transformer. The actual transformation is transferred to the generateBase method. transform only catches any exceptions and transforms these, if necessary, into TransformerExceptions.
-
-Instead of transforming all documents at once, it would also be possible to administrate the consecutive numbers with a static variable and call the transformer individually for each document. This would make the loop over the source documents and the construction of the MultiResult unnecessary. However, this example is intended to show the use of the Importer-API.
-
-Next, a factory is required which instantiates and configures the transformer. GeneralTransformerFactoryImpl is not sufficient, because it does not support passing of the prefix to the transformer. The following extension puts this right:
-

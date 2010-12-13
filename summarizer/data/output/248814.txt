@@ -1,8 +1,0 @@
-
-
-To find documents in the database you can navigate via folders and LinkLists from current documents, as described in Section 4.2.3.6 and Section 4.2.4 Alternatively, it is also possible to place a global query on the database. 
-
-Such a query is described by a search expression characterizing the desired versions and documents. The search expression can relate to both project-specific and pre-defined properties. The components of the expression are connected with logical operators (and, or, not). Furthermore, the order of the search results can be controlled and it is possible to enter whether older versions of documents should be searched or not. 
-
-The expression consists of a series of calls in reverse Polish notation (also known as Postfix notation). 
-

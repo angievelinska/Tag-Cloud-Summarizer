@@ -1,9 +1,0 @@
-
-
-Operations:
-
-
-create new document doc in folder F2
-
-
-Required rights:

@@ -1,5 +1,0 @@
-
-
-Using the direct search you can search in structured text fields (String fields, XML fields) for specific words or phrases and replace them.
-
-In Section you will find a description of the direct search usage.

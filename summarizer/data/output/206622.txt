@@ -1,3 +1,0 @@
-
-
-CoreMedia SCI license management is based on named licenses. With named licenses only a fixed and determined number of users can log on to the CM Server for a certain service. The following table lists the services and the associated types of CoreMedia applications.

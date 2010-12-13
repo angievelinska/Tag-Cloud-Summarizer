@@ -1,7 +1,0 @@
-
-
-The example contains a complete data set, hence you do not have to provide any data. After the installation of the document type model and the import of the related data you can think about the delivery. In order to use the CAE you need a proper document to business object mapping, the so-called content beans, and templates for rendering. The objects can be created with the BeanGenerator, a small utility of the CAE framework. Please refer to section BEANGENERATOR for detailed information.
-
-Each content bean can be rendered by a template and passed optional view names allow the selection of certain templates. Thus, you have the opportunity to render the same object by different templates. Due to the object-oriented behaviour of the dispatcher, inherited content beans can be rendered by templates for super classes. The "New Menu Site'' will frequently use this feature to render different document types in a resembling "frame''.
-
-Before you deal with the details you need a rough sketch of how the website shall appear. The "New Menu Site'' needs a navigation containing the several categories and the rubric "Recommendation of the chef''. A title image at top of each page shows the name of the restaurant and the particular content --- either a selected dish, a category or the recommendation --- is rendered in the center. Following figure depicts this schema: 

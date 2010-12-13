@@ -1,6 +1,0 @@
-
-
-CoreMedia Portal Server Integration Product Certified Version Supported Version IBM WebSphere Portal Server 6.0  SAP Netweaver Portal 7 
-
-
-

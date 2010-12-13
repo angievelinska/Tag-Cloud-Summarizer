@@ -1,6 +1,0 @@
-
-10#
-If you want to change any of your settings you can return with the [Back] button. If you want to accept the installation settings you can start the installation itself by clicking [Next] here.
-
-A display informs you about the progress of the installation.
-

@@ -1,3 +1,0 @@
-
-
-You can shorten the login time if you pre-define the username, password and domain of the user. The login window of the CoreMedia Editor is automatically filled with these data. You can even skip this window completely, so that the user will login immediately. 

@@ -1,3 +1,0 @@
-
-
-The Document Model Browser is a tool for graphical display of document types, their inheritance relationships, their properties, and possibly their views. The document types are displayed as UML-class diagrams. See Image 3.5a for a screenshot of the Document Model Browser in action.

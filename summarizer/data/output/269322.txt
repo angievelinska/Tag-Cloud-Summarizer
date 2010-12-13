@@ -1,3 +1,0 @@
-
-
-Just like ContentMetaDataImpl which was explained in detail in Folders, the implementation ContentTypeImpl provides various constructors and setters, suitable for instantiation from request parameters, from a UAPI ContentType or from another ContentType object. All type information of documents is retrieved by the methods of the content repository. In this case, use the method getContentTypes(), which returns all available document types. The code of the Web Service method looks like as follows: 

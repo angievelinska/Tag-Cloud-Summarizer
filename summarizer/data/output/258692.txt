@@ -1,3 +1,0 @@
-
-
-In a Content Application Engine with enabled In-Site Analytics, you can configure the following properties in the file WEB-INF/spring/analytics/overlay.properties:

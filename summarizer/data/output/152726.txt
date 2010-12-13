@@ -1,3 +1,0 @@
-
-
-Don't merge the attributes in the coremedia-richtext-1.0.css file. For example don't write "border: solid 1px red" but "border-style:solid; border-width: 1px; border-color: red;". If you edit coremedia-richtext-1.0.css with tools like Microsoft Frontpage take care that the attributes are not merged on saving.

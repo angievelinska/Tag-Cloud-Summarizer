@@ -1,9 +1,0 @@
-
-
-
-
-ContentType
-
-Grammar: EMPTY 
-
-The ContentType element is used to specify a single constant content type within expressions or variable initializers.

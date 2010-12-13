@@ -1,3 +1,0 @@
-
-
-You can use this element to add your own ExplorerView, PublishView, QueryView or WorkflowView classes to the editor.

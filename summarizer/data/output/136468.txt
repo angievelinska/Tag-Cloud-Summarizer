@@ -1,5 +1,0 @@
-
-
-The CapConnection provides one service object: the ServerControl, which is reachable through the method getServerControl. It provides means for inspecting and controlling the login process on the Content Server. 
-
-In particular, it provides methods for inspecting the license information, for inspecting and tracking the set of currently opened sessions, for requesting trace level logging, for killing individual sessions and for changing the run level of the Content Server.

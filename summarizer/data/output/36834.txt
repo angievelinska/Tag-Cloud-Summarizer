@@ -1,7 +1,0 @@
-
-
-Timer
-
-Grammar: EMPTY 
-
-The Timer element is used to specify a single constant timer value within expressions or variable initializers.

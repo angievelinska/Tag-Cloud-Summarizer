@@ -1,5 +1,0 @@
-
-
-This section contains a description of the properties of the file webdav.properties. The file contains the configuration of the WebDAV Server such as authentication settings, exported document types and session timeout.
-
-Authentication

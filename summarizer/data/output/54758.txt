@@ -1,4 +1,0 @@
-
-
-A CoreMedia project - be it a Web site, be it an Intranet application - is made up of structured content. This content is held in a database, but organized and structured by means of resources.
-

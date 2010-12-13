@@ -1,7 +1,0 @@
-
-
-Users and Groups
-
-Starting with SCI 4.1, users created on the Master Live Server are not automatically replicated to the slaves.
-
-Up to CAP 4.0, the group that contains special users like webserver or replicator was named System. In SCI 4.1 this group is named system (all lowercase). For new servers, the new name is used automatically during initialization, but for existing servers you have to rename the group manually using the editor. Doing so avoids problems when replicating rights rules to new Live Servers.

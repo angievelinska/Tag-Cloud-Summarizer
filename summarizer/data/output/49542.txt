@@ -1,7 +1,0 @@
-
-
-The <html:errors> tag will show the error message saved in our LoginAction if an error has occured during the login, for example if a wrong password was submitted.
-
-The <html:text> and <html:password> Struts tags are used to render input fields for the username, domain and password parameters. <html:submit/> renders a submit button for submitting the form to the Action configured for the /login path, and <html:reset/> renders a reset button can be used to reset the input fields of the form.
-
-Now the Action and ActionForm have to be configured in struts-config.xml:

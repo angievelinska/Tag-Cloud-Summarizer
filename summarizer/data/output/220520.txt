@@ -1,9 +1,0 @@
-
-
-Merge tables
-
-If you have nested tables, you might merge an inner table with an outer table. 
-Place the cursor into a cell of the inner table.
-Select Flatten tables from the table menu.
-
-The cells of the inner table will be added to the cell of the outer table which contains the inner cell.

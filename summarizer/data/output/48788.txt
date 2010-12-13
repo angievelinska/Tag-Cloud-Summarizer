@@ -1,3 +1,0 @@
-
-
-All properties can also be internationalized by overwriting them in a language-specific *.properties file, for example your_de.properties. All *.properties files also have to be referenced in struts-config.xml as message-resources, so if you have a "your.properties" file (and maybe additional localized versions "your_de.properties" and "your_en.properties"), and the *.properties files are contained in the package "package", the message-resources definition in struts-config.xml should look like that:

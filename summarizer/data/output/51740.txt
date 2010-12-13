@@ -1,4 +1,0 @@
-
-
-After you have written your command, you need to register it at the CommandManager, at the ListenerManager and at the manager of the chosen GUI element. This will make the command usable and visible. Optionally, you may associate your command with an activation model. These models activate or deactivate the command depending on a specific condition. See the field summary in the JavaDoc of the DocumentView for the available activation models. To register your command proceed as follows:
-

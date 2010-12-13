@@ -1,4 +1,0 @@
-
-
-The search utility invokes the full-text search to find content in the repository. 
-

@@ -1,3 +1,0 @@
-
-
-You can find a list of supported binary formats in the FAST Product Overview Guide, chapter "Supported Document Formats".

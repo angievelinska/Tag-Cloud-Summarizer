@@ -1,3 +1,0 @@
-
-
-This manual is dedicated to the administrators of CoreMedia SCI installations. They will find descriptions of all tasks necessary for installation, configuration and operation of a CoreMedia system. The majority of customization tasks are mostly covered in the CoreMedia Developer Manual Series.  

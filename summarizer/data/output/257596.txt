@@ -1,8 +1,0 @@
-
-
-The analysis of your web site gives valuable data for your further planning. The more you know, the better you can calculate revenues, place your content, plan your hardware an the like. An important information is the number of unique visitors. To know, how much page impressions your website has is good, to know how much different users visited your website is better. CoreMedia Analytics with its 360° view of repository and website usage comes with five new reports which deal especially with unique visitors. Another five reports give you a deeper insight into the used content and the searches done on your site.
-
-Other valuable information comes from "IVW boxes" which count tracking images. CoreMedia Analytics analyzes log-files delivered from such a box. Once you have all data analyzed by the Analytics Engine you can use the data for further processing. CoreMedia Analytics integrates with your existing applications and exports the reports in PDF, XML or Excel format.
-
-CoreMedia Analytics is fully integrated with the Http Cache by means of tracking images. So, you can have fast delivery of cached pages with accurate analysis of the data.
-

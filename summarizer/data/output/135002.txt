@@ -1,3 +1,0 @@
-
-
-In the file proxy.properties the resource cache for accelerating the CoreMedia Editor is configured. A large resource cache reduces the network load, but at the same time increases the memory required by the CoreMedia Editor on the local computer.

@@ -1,3 +1,0 @@
-
-
-The file capclient.properties contains information about the location of the IOR of the CoreMedia Server, about the home and system folder as well as global information on the timezone and on special elements in XMLText Properties.

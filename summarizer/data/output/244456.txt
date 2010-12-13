@@ -1,3 +1,0 @@
-
-
-In order to better understand the Http Cache, it is worth to have a closer look at its inner components. All of the discussed components (except the Persistent Cache and the Meta Cache) are customizable, which means that its current behavior may be replaced by custom business logic.

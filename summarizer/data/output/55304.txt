@@ -1,8 +1,0 @@
-
-
-<wage:selectStyle>
-
-Renders a drop down box which lets you select a style attribute for the selection in a rich text editing component. Extends the Struts SelectTag, so you can also use other attributes defined for that tag. Attributes:
-
-styleGroup (required): name of the style group (i.e. "list-item")
-targetTag (optional): tag to which a selected style attribute should be applied (i.e. "<li>" for the "list-item" style group), defaults to "inline"

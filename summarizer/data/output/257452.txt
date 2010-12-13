@@ -1,5 +1,0 @@
-
-
-The visit duration report shows the average duration of a single visit for a given site in seconds. Only those visits are taken into account that are limited to single site. The duration of a visit is the time difference between the first and the last page impression of the visit. Time spend on the last page before the visit's session times out is not taken into account.
-
-The possible choices for variables and the offered actions for this report are identical to those of the performance report described in section, but only a single graph is shown, namely the visit duration.

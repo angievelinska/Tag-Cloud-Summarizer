@@ -1,9 +1,0 @@
-
-
-You are not allowed to use the following words for document type names:
-
-Names of SQL-commands.
-Names which are reserved for CoreMedia as database table names:
-BlobCodeTable, BlobData, Blobs, ChangeLog, CmGroups, CmRules, CmUserGroup, CmUsers, LinkLists, MaxIds, QueryIdTable, ReplicatorIdTable, Resources, SgmlData, SgmlText, System, Texts, Recherche
-Names corresponding to the name scheme <doctype><digit><digit>"i"<char>*, where <doctype> stands for an already defined document type name, <digit> for a number and i<char>* for a word which begins with the letter "i".
-

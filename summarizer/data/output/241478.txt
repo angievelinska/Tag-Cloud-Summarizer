@@ -1,5 +1,0 @@
-
-
-Converters: WAGE also provides you with converters for the common CoreMedia data types. The package com.coremedia.cap.wage.util e.g. contains the ResourceConverter which will convert a String or Integer to a CoreMedia resource. The WfInstanceConverter converts a String (process and task ID) to a CoreMedia WfInstance object. For a complete list of available converters, please refer to the API documentation. However, all conversions that may produce conversion errors caused by user input should use the WAGE property converter framework described in property-converters.
-
-I18n: WAGE also lets you use a CoreMedia TypedBundle (hox.configuration.TypedBundle) as a Struts MessageResources object by providing an appropriate adaptor. This enables you to use the Struts <bean:message> tag to write out localized messages from a CoreMedia TypedBundle. Struts MessageResources have to be configured in struts-config.xml. For CoreMedia resources you have to use the appropriate configuration and factory classes:

@@ -1,3 +1,0 @@
-
-
-The predefined Flop Pages Report (see screenshot) displays a ranking of the published pages which have been requested least often by visitors during the specified time interval. Additionally, CoreMedia provides a report which displays the flop pages for a given category and all of its subcategories. The later report is called 'Flop Pages Per Category'.

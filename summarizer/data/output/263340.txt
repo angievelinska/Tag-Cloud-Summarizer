@@ -1,7 +1,0 @@
-
-
-When you create custom commands you have to provide labels and icons, possibly for different locales. This chapter shows which and where you have to adapt or create resource bundles for these.
-
-For every action you add to /WEB-INF/spring/editing (e.g. editing-toolbars.xml) you have to provide a name property. This property is taken to lookup the resource bundle entries for the action. If you don't provide these entries the value of the name property is displayed instead.
-
-First you have to provide a label and an icon for the menu item representing the action. 

@@ -1,9 +1,0 @@
-
-
-Output from blob data as HTTP response 
-
-The template starts with the usual preamble: line 2 declares that the page is cacheable (see Section 4.5) and therefore, according to line 4 requires no session information. The contentType is not static, thus in line 3 application/x-coremedia-dynamic is defined. Then, in lines 6 to 8, the application scope generator bean and the request scope context bean are declared and in this way made available to the template. Line 9 requests the resource to be displayed, from which it can be seen that this is a document. 
-
-The ADS has been configured so that the template is only executed for property requests. The name of the requested property is determined in line 10 with the help of the Context#getDocumentPropertyName method. If no property is entered, the template reports an error (lines 12 and 13). Otherwise, the named BlobProperty is requested (lines 15 ). If the property is not a BlobProperty, the executed method outputs an exception. If the BlobProperty is not set, the template explicitly reports an error (lines 16 and 17). 
-
-The getBlobProperty method of the Document class is declared as follows: 

@@ -1,4 +1,0 @@
-
-
- Parameter Description -r Recursive export of files and subdirectories on entry of a directory for export. -b The directory in which the exported XML files are saved. A relative path is relative to the working directory. -enc The encoding of the server export. "ISO-8859-1" creates a server export in Iso-Latin-1. The default value is "UTF-8" which creates an export in Unicode. Used values for coding must be supported by Java. -u Name of the user. As default, the export is executed with the user "serverdump". -d The domain of the user. -p Password of the user. As default, the password is "serverdump". -cut The serverexport utility exports the files in a directory structure which reflects the folder structure of the CoreMedia repository. The resulting path length may exceed OS limits, so you can use the -cut option to limit the maximum path length. By default, no limit will be applied. The shortened path will not affect the re-import of the exported files.
-

@@ -1,7 +1,0 @@
-
-
-With the help of the CoreMedia Installer you can update an existing CoreMedia installation. This may only be done for installations of the same release in order to import updates (new builds) of this release. It can not be guaranteed that newly installed components will work together with old ones on system updates between major or minor different releases.
-
-If a file must be renewed during the update, the graphical installation asks whether this file should be overwritten or not. If the file is overwritten, it is saved in an internal ZIP archive of the Installer in the directory /Uninst and made available again on possible deinstallation. In this way, no files or settings of the previous installation are lost.
-
-As a rule, all CoreMedia files (e.g. coremedia.jar, coremedia-editor.jar, coremedia-spellchecker.jar and coremedia-workflow.jar) must always be renewed when updating a release build. On the other hand, properties and JPIF files, for example, can generally be retained, so as to keep the configuration of the previous CoreMedia installation.

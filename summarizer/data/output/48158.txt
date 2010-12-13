@@ -1,3 +1,0 @@
-
-
-At the same time it is possible to edit multiple CoreMedia resources within a single HTML form, therefore allowing to hide the (possibly complex) content model from the user.

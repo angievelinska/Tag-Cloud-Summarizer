@@ -1,5 +1,0 @@
-
-
-This element defines, which property editor should render and edit a workflow aggregation variable. If no element is defined for an aggregation variable and only resources are stored, the default aggregation editor is used. 
-
-Note, that there is only a default aggregation editor for aggregations of type resource. A property editor for aggregation variables must implement the AggregationEditor interface.

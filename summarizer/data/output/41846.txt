@@ -1,4 +1,0 @@
-
-
-Please take into consideration that every single document has to be checked out and checked in again for global search and replace. That can be very time-consuming. So the search and replace in very large amounts of documents may take a little longer.
-

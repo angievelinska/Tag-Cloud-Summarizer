@@ -1,8 +1,0 @@
-
-
-Although the Dashboard Analytics provides many useful out-of-the-box statistics, it is expected that customers will have at least some slightly different reporting requirements than those provided out-of-the-box. For these cases the Dashboard Analytics Application has been designed to be easily extendable.
-
-The Analytics Developer Manual provides full reference details of all the available components and the information necessary to subclass or implement them.  However, since an extension of reporting functionality can affect multiple components, the following "Cookbook" takes you through some common extension scenarios step by step. This guide should also provide a good jumping-off point for more advanced customizations.
-
-
-

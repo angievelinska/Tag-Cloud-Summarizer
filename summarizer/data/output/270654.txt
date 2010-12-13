@@ -1,3 +1,0 @@
-
-
-If you intend to deploy the Starter Kit web application to an application container other than Apache Tomcat, please follow the application container specific deployment instructions in Administration and Operation Manual.

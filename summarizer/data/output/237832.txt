@@ -1,3 +1,0 @@
-
-
-Only use read commands on the database when the CoreMedia Content Server is running. If you want to write data via cm sql, be sure that the CoreMedia Server is down. Otherwise data corruption can occur.

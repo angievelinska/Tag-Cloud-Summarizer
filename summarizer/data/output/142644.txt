@@ -1,4 +1,0 @@
-
-
- Field Description repository.url Enter the URL where to obtain the IOR of the Content Server. repository.domain Enter the domain of the user used to connect to the Content Server. repository.user Enter the user name used to connect to the Content Server. The CAE connects as the user webserver. repository.password Enter the password of the user used to connect to the Content Server. Default is webserver but you should change this password as soon as possible.
-

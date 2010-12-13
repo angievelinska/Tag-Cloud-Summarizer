@@ -1,9 +1,0 @@
-
-
-The first thing this Action does is to check if the current user is already logged in. If so, it just forwards to the "success" ActionForward.
-
-If the user isn't logged in yet, it gets the username, domain and password parameters out of the ActionForm that has been submitted. We're using a DynaActionForm here so we don't have to write an own ActionForm class. See below how to configure this DynaActionForm in struts-config.xml.
-
-The Action then tries to log in the current user by calling Context.getCurrentContext().login() with the supplied credentials. If no error has occurred, we also forward to the "success" ActionForward. Only if an exception was caught during login (for example because the password was incorrect), we save an error message which can later be displayed with the Struts <html:errors> tag, and return to the login form by returning the forward mapping.getInputForward().
-
-The login form can easily be built by using the Struts tag library:

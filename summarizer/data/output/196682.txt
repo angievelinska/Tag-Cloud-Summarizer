@@ -1,3 +1,0 @@
-
-
-Before you delete properties, make sure that the data is no longer needed.

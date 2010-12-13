@@ -1,7 +1,0 @@
-
-
-Resource
-
-Grammar: EMPTY 
-
-The Resource element is used to specify a single constant resource within expressions or variable initializers. It is not useful to define a fixed resource ID in the workflow. Either value or path must be selected.

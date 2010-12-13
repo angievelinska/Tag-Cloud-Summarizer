@@ -1,3 +1,0 @@
-
-
-Access the value of an integer property using the getIntProperty method of the Document class. The method is defined as follows:

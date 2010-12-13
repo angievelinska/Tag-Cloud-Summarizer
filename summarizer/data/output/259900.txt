@@ -1,8 +1,0 @@
-
-
-Here, you configure basic settings for the installation. 
-
-The properties have the following meaning:
-
- Property Description Destination Directory Where to install the Starter Kit. Path to CMS 5.2 Installer Where to find the CMS 2008 installer jar-file. Hostname The hostname of the computer where you install the Starter Kit the installer tries to detect the correct name. Windows Startmenu Folder The Windows start menu folder where the Starter Kit should be installed. This is only used if you install on a Windows system. Windows Service Name Prefix The Windows service name prefix for the Starter Kit components. This is only used if you install on a Windows system.
-

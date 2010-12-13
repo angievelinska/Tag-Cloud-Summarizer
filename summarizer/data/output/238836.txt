@@ -1,3 +1,0 @@
-
-
-CoreMedia Analytics does not support Oracle 9.

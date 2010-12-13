@@ -1,8 +1,0 @@
-
-
-To convert the workflows, use the cm workflowconverter utilitiy as follows:
-Stop the CoreMedia Workflow Server with cm workflowserver stop.
-Copy the changed classes (if any) into the appropriate directories.
-Start the workflowconverter utility. Note that the conversion only takes place, if the -c or -X flag is given.
-Finally start the workflow server again with cm workflowserver start.
-

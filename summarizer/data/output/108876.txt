@@ -1,6 +1,0 @@
-
-
-The following example shows a very simple uploader which just writes generated values with their keys to the console:
-
-
-

@@ -1,3 +1,0 @@
-
-
-This section heavily uses concepts of EditingServices, therefore it is recommend to read the section: ES-chapter first.

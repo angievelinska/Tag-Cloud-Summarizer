@@ -1,7 +1,0 @@
-
-
-Create a Collection
-
-Open the FAST administration pages to create a new collection. If the installation uses the default ports, the administration pages are available at http://<hostname>:16000/admin. Click the link Create Collection on the Collection Overview page to create a new collection.
-
-Enter the name of the new collection in the next dialog. In the pipeline configuration dialog, select the pipeline CoreMedia(webcluster) [The CoreMedia Pipeline].

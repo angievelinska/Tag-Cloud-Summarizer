@@ -1,5 +1,0 @@
-
-
-The staging tables are used to move the raw log data into the database as fast as possible. The staging tables do not use dimension tables for compressing the data. Thereby update operations can be limited to a single table and to simple insertions most of the time.
-
-Indices are maintained only if necessary for the import process. Analysis is not supported on the staging tables. Where possible, indices are disabled during import and recomputed after an entire set of logs is processed.

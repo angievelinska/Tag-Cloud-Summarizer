@@ -1,7 +1,0 @@
-
-
-3* The URL where CM components can obtain the IOR of the CM server is entered in the parameter cap.client.server.ior.url. CORBA communication with the server takes place via the IOR (see also Section 4.2).
-12#
-Enter the location of the IOR and click [Next].
-
-If you are installing a Slave Live Server, the window for replicator.properties will open.

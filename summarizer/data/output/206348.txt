@@ -1,4 +1,0 @@
-
-
- Symbol Nr. Function (1) Refresh the Document window. (2) Cut documents and text. (3) Copies selected text or documents to the clipboard. (4) Pastes text or documents from the clipboard to the document. (5) Direct approval of the document or revoke of the approval. This function must be enabled. (6) Calls the preview for the document. (7) Simulates the publication of the document and shows the result. (8) Direct publication (without workflow) of the document. (9) Opens the information window of the document
-

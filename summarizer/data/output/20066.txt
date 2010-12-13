@@ -1,9 +1,0 @@
-
-
-Under Windows the CoreMedia Editor can be started directly via the link in the menu setup during installation.
-
-If you don't use Java Web Start and multiple LAN connections are active under windows you can select the IP address of the LAN connection with which the CM Editor should communicate. For this, use the Java Virtual Machine Parameter ooc.boa.host=<ip-address> in the file editor.jpif.
-
-If the editor should start under Unix for administration purposes, the following must be entered in the bin directory of the CoreMedia installation:
-
-cm editor & 

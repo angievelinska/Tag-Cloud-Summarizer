@@ -1,4 +1,0 @@
-
-
- Section Version Description Section 5.2.374 Adapted the WebServices chapter to the new JAX-WS support. 
-

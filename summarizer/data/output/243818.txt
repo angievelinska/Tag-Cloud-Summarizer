@@ -1,7 +1,0 @@
-
-
-IsDocument
-
-Grammar: EMPTY 
-
-IsDocument queries whether a resource value contained in the variable, which is given as in Get, is a document with or without an explicit version. 

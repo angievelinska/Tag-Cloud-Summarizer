@@ -1,3 +1,0 @@
-
-
-This chapter describes how to configure, initialize and start the DBMessageReceiver. The DBMessageReceiver is a service that receives messages from a Database Message Service. It is a separate application that runs on the host where the generated messages are needed (It can also be used as an object in your own application. More details can be found in the Delivery Developer Manual). It regularly checks for new messages with the Database Message Service and receivees all new messages which will be buffered before sending them to an uploader. In order to supply the DBMessageReceiver with content, you need to configure a DBMessageUploader in the ProActive Delivery Server and enable a Database Message Service (including the DBMessageServiceServlet). 

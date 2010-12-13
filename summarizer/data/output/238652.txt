@@ -1,4 +1,0 @@
-
-
-Dashboard view profiles can be created to customize the dashboard appearance for user groups. A dashboard view profile represents the subspace of the report information space that is suitable for the given user group. It defines a number of dashboard views (visualized as tabs). A dashboard view is a composition of reports that are displayed together. Each contained report can be customized with respect to its appearance (e.g. title) and be restricted in the level of interactivity allowed (e.g. by fixing parameter values).
-

@@ -1,9 +1,0 @@
-
-
-This section describes administration and operation of the CoreMedia CAE Feeder. The CAE Feeder provides full-text search capabilities for custom content applications by sending the data of content beans to the CoreMedia Search Engine. Custom applications can use the Search Engine to find the content beans afterwards. For concepts and required customization see the CoreMedia Content Applications Developer Manual, Section "CAE Feeder". For more information about the CoreMedia Search Engine, see Section "CoreMedia Search Engine".
-
-Note, that the CoreMedia Content Server contains the Search Engine Feeder, which sends the data of CoreMedia documents to the Search Engine to provide search functionality for documents in the CoreMedia Editor, CoreMedia WebEditor and custom applications. Section "Search Engine Integration" describes the Search Engine Feeder.
-
-The release contains an extensible CAE Feeder template as starting point to develop applications that send content beans from the Content Application Engine to the Search Engine. The CAE Feeder template is a standalone application, which includes an internal Proactive Engine. 
-
-The installed CAE Feeder template consists of files in the following directories:

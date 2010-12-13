@@ -1,7 +1,0 @@
-
-
-Boolean
-
-Grammar: EMPTY 
-
-The Boolean element is used to specify a single constant boolean value within expressions or variable initializers.

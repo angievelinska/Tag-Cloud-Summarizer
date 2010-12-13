@@ -1,5 +1,0 @@
-
-
-Portlet Archive
-
-The portlet archive CoreMediaCmsPortal.war consists of this structure:

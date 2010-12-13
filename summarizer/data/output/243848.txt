@@ -1,7 +1,0 @@
-
-
-PostCondition
-
-Grammar: (Expression) 
-
-A PostCondition assert a condition that must hold after an (optional) exit action (user task) or action (automated task) has run. See Condition for details. 

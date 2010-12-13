@@ -1,3 +1,0 @@
-
-
-The file <TomcatHome>/webapps/editor/WEB-INF/config.bsh is the main configuration file of the Web Editor. The methods are mainly identical to the configuration of the Active Delivery Server in Section 5.7.1.4.

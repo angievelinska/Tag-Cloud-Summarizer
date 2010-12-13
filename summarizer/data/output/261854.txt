@@ -1,7 +1,0 @@
-
-
-CM Editor, CM WebDAV Support: Product Certified Version Supported Version Microsoft Windows 
-
-XP Professional Edition, SP 2
-Vista, with Java 6 Update 2+ only 
-

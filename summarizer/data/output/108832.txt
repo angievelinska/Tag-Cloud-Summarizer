@@ -1,3 +1,0 @@
-
-
-The class com.coremedia.ldap.LdapUserProvider is an abstract base class to fetch LDAP entries. It provides all general LDAP-related functionality, especially session handling, searching and caching. It is abstract concerning the membership relation which depends on the particular underlying LDAP schema. This class can not be configured as provider class in capserver.properties but can be subclassed by concrete provider classes. It reads property files like the following example:

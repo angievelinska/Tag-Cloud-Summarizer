@@ -1,8 +1,0 @@
-
-
- Property Value Default Description cap.client.server.ior.url 
-
-URL format
-
-http://<host>:<port>/coremedia/ior  This property describes for the CoreMedia Editor the location where it gets the IOR of the CoreMedia Content Server. Since the editor is usually installed on a different computer from the CoreMedia Content Server, the property is given as HTTP URL. The editor then receives the IOR from the server with an HTTP query. In general, work is only carried out on the Content Management Server. In exceptional cases the administrator can access the Master Live Server. On the Master Live Server, no resources should be changed with the editor, so that consistency of the Master Live Server with the Content Management Server is ensured.
-

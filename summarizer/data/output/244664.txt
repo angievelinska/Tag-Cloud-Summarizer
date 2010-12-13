@@ -1,5 +1,0 @@
-
-
-The CoreMedia Starter Kit is an additional component for CoreMedia CMS. Since it can be installed as an add-on, it is covered in full length in an separate manual.
-
-This manual is intended for all users of the CoreMedia Starter Kit, that is for editors, administrators and developers. 

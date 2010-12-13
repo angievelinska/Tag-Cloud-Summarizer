@@ -1,8 +1,0 @@
-
-
-<wage:menuSeparator>
-
-Separator for grouping WAGE menu items in a WAGE menu. Can only be used within a WAGE menu. Attributes:
-
-styleClass (optional): style class for the separator
-

@@ -1,7 +1,0 @@
-
-
-3* The URL where the CoreMedia Editor can obtain the IOR of the Content Server is entered in the parameter cap.client.server.ior.url. CORBA communication with the server takes place via the IOR (see also Section 4.2).
-3#
-Enter the location of the IOR and click [Next].
-
-Now, a dialog box appears to configure the path to the editor.properties file (see Section 5.8.1.1).

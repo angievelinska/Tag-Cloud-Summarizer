@@ -1,3 +1,0 @@
-
-
-It is possible to use either the CoreMedia Editor or the WebEditor for Preview-based Editing. The following picture shows a context menu displayed on a website:

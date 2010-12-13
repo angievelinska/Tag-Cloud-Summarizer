@@ -1,8 +1,0 @@
-
-
-JWS will not recognize already installed JREs during setups. It will reinstall, unless you configure JWS:
-Double-click the JWS desktop shortcut and start the JWS Application Manager.
-Select Edit|Preferences.
-Select the Java tab and open the Settings for Java applications.
-Create a new entry with the values from the next table. <host> and <port> must match the values of cap.server.http.host and cap.server.http.port in the <InstDir>/properties/corem/capserver.properties file of the Content Server. Insert the correct path to your JRE installation in the Command field. For Java 6, replace 1.5 with 1.6.
-

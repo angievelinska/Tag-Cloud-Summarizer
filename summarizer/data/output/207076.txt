@@ -1,3 +1,0 @@
-
-
-This cache accelerates the execution of the method hox.corem.servlets.Context#getObject by caching the deserialization operation of the file into a Java object. The same discussion as for the values of the pagecache.* keys applies, too: pageobjectcache.* is indicative only for the cache's working set, not for the invalidation rate.

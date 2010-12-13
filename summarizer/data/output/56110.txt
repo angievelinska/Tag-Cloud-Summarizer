@@ -1,6 +1,0 @@
-
-
-Lock:
-
-To avoid that more than one user edits a file at one time, documents have to be checked out for editing. This principle also applies to WebDAV files. A WebDAV application opening a CoreMedia file might lock this file for other users and might as well block this file for other WebDAV applications of the same user. This lock might occur automatically with file opening as in Word 2000 or be caused by the user (Dreamweaver). If the user had not checked out the file in CoreMedia before, this is done automatically by the WebDAV server when locking the file. When this lock is removed from the WebDAV application (either automatically or explicitly by the user), the document will be checked in again with all changes or the checkout revoked (changes not saved).
-

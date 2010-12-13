@@ -1,3 +1,0 @@
-
-
-You may also call method PadsConfiguration#addLinkPredicate on the padsConfig object if you want to configure a link predicate in WEB-INF/config.bsh.

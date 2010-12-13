@@ -1,3 +1,0 @@
-
-
-This report shows the development of the percentage of page impressions for a fixed page relative to all page impressions of the site.

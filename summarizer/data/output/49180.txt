@@ -1,6 +1,0 @@
-
-
-Use the Dump entries to file link on the administration page to get a file of cached values that can be used to initialize a new JmsReceiver. In the drop down list select the builder of which you want to get values. If you are using a custom builder as described in the Developer Manual, this field corresponds to the builder attribute of the uploader element. If you use the default setting (PageBuilder selected) all pages will be dumped. In the next field you can enter a regular expression describing a resource URI (for pages) or a scheme specific part (for custom builders) to restrict the saved values. This field corresponds to the uploader filter attribute.
-
-
-

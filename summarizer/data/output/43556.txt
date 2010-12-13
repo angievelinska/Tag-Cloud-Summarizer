@@ -1,3 +1,0 @@
-
-
-If the contents of the property should not be interpreted as HTML markup, or if the output should be produced independently from character set and encoding of the page (charset, encoding), the information-carrying characters must be filtered (escaped). An appropriate filter is prepared as follows:

@@ -1,4 +1,0 @@
-
-
-CoreMedia SCI web applications such as the Content Application Engine use a servlet container for operation. Default servlet container is Tomcat 6.0, but you might use one of the following ones except for the ProActive Delivery Server which needs the default Tomcat servlet container. Keep in mind, that the servlet containers have only been tested in CoreMedia compliant operating environments and therefore are only approved on these platforms. 
-

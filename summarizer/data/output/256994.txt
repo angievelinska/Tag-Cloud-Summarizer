@@ -1,5 +1,0 @@
-
-
-The Global-search-and-replace workflow is intended to change text in many documents. E.g. a company name has changed or a name was misspelled. It is not recommended to use it as a pure search tool. The workflow uses the direct search in a document in order to perform the changes interactively or automatic.
-
-In Section you will find how to use the Global-search-and-replace workflow.

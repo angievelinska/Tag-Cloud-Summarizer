@@ -1,6 +1,0 @@
-
-
-<Comparator>
-
-
-See the description in "Configuring document types" in this chapter.

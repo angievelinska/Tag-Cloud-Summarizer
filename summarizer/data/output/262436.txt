@@ -1,5 +1,0 @@
-
-
-The Starter Kit provides a solution for the website structure model that is a good compromise between flexibility and complexity. It features hierarchical pages described by segment-based URLs, as described above.
-
-Single documents can be reused in different contexts, inside the same site or shared between different sites. However, you can not reuse sub-structures of the site. Imagine for example you run a news site and publish an article about the new Formula 1 champion. Initially you want the article to appear in the "Sports" and in the "People" categories. Two weeks later you do not want to promote the article any longer, it should not be reachable via a link from the "Sports" page, but it should still be reachable as a search result and then be presented in the "Sports" context. As you can see even in this simple example, content and context should not be bundled too tightly if you want to keep editorial effort low.

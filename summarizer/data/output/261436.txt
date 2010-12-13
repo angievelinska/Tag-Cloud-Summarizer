@@ -1,4 +1,0 @@
-
-
- Attribute Value Default Description maxOpen number 5 The maximum number of open batches. maxProcessed number 1 The maximum number of batches that can be processed concurrently by FAST document processors. This should match the number of available document processors. The default matches a single-node installation of FAST with one document processor. Note that the value must be smaller than the value of the attribute maxOpen. maxBytes size in byte 5000000 The maximum batch size in byte. maxSize size in documents 500 The maximum number of documents in a batch.
-

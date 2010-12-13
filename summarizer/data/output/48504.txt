@@ -1,8 +1,0 @@
-
-
-As we want to develop a wizard-style Action, we need a way to send some command that tells the action what to do, e.g. to commit the current ChangeCollector, or to forward to the next step of our wizard. WAGE's ResourceListActionForm provides a parameter called resourceCommand that can be used for this purpose.
-
-So our Action has to process the following steps in its execute() method:
-
-Evaluate the resourceCommand parameter and process it, either by committing or by rolling back the current ChangeCollector.
-Forward to another view, depending on the resourceCommand parameter.

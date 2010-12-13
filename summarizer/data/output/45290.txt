@@ -1,8 +1,0 @@
-
-
-In the previous chapter the content of the website was created. Now the content should be displayed online. To accomplish this, templates have to be created which manage the displaying of the documents. Lets have a look at the document structure of the website. 
-Open a webbrowser and enter the address 
-
-3* http://localhost:8001/coremedia/develop/ 
-
-This is the address of the locally installed Coremedia Content Server, that should be running on your computer. Now select Browse Document Model and select expand all in the opening browser window. The following picture should appear:

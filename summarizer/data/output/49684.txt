@@ -1,7 +1,0 @@
-
-
-This template simply gets all Picture documents in the current folder, and includes the "addToLinkList" view for each Picture inside an HTML table.
-
-addToLinkList: The "addToLinkList" view of a Picture defines a JavaScript function "addToLinkList(id)", which gets the currently focused editor through the FocusManager, and calls the addResource() method with the resourceId of the current Picture on it if the focused editor is a LinkList editor.
-
-The picture is then rendered as small icon with an enclosing HTML anchor tag calling the addToLinkList() JavaScript method with the id of the current Picture document.

@@ -1,5 +1,0 @@
-
-
-In the CoreMedia system, some properties are available from the start for all documents, independent of document type and the project-specific document type definitions. The names of these pre-defined properties can be recognized by the underscore character at the end of the name. Pre-defined properties behave differently from project-specific ones: on the one hand, their value can also change when the document is not checked out. On the other hand, the values are usually not entered directly by the editorial staff, but are set as a side-effect of operations such as approving or publishing. 
-
-Depending on the type of the property, the value can be called up with the familiar methods (getStringProperty, getDateProperty, ...) or with the generic method getProperty: 

@@ -1,5 +1,0 @@
-
-
-Once you have assigned a folder to a publication target, it must not be reassigned to another target. Doing so would result in inconsistencies between Content Mangement Server and Master Live Server.
-
-When you configure base folders by name, a top-level folder of that name may not be renamed and no other top-level folder may be renamed to assume that name. This stops users from reassigning top-level folder accidentially. When you want to rename top-level folders that belong to a publication target, configure them using their numeric id in the file publisher.properties.

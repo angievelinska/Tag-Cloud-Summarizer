@@ -1,4 +1,0 @@
-
-
-With the CoreMedia Editor you can cut or copy individual text parts to paste them somewhere else. The marked text is saved in a clipboard so that it can be pasted again later. Additionally, you can move text per drag-and-drop inside and between RichText panes.
-

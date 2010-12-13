@@ -1,5 +1,0 @@
-
-
-Example:
-
-The example shows the configuration of a JmsUploader that publishes results to the JMS topic mytopic. This example uses a SwiftMQ router as JMS provider. Other JMS providers can be used likewise. Copy required libraries for the JMS provider to the WEB-INF/lib directory of the PADS web application.

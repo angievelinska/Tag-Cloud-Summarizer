@@ -1,7 +1,0 @@
-
-
-Restrictions
-
-The CoreMedia Search Engine provides a fast and efficient full-text search for the indexed documents. However, because of the asynchronous nature of the indexing process, search results do not always reflect the current state of the repository. A document appears in the search results some minutes after it was sent to the Search Engine. You have to use the more powerful but slower builtin query feature of the CoreMedia Content Server if you need up-to-date results.
-
-The CoreMedia Search Engine supports search in the content of the latest document version. If you want to search for older versions or for folders you have to use the query feature of the CoreMedia Content Server or use the CoreMedia CAE Feeder to index the required data as part of content beans.

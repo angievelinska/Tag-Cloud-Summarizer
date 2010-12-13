@@ -1,7 +1,0 @@
-
-
-The picture shows the publishing preview of an example web page. The first teaser is highlighted by a blue hovereffect, as the mouse cursor hovers over it. The user opened a pop-up menu with a right mouse click. It is now possible to open the rendered document in the CoreMedia Editor for editing, to show it in the explorer window, to edit the containing element (the current Page document),  or to get the document information for the Shakira article.
-
-Given a working web site that was built using the CAE framework, the next sections show how Preview-based Editing can be added to the web site. Preview-based Editing for the CAE additionally allows you to create new custom commands for the context menus, described here also.
-
-The CoreMedia Demo is a good example of how to extend Preview-based Editing with custom commands. You should install the demo and refer to the provided sources as best practices.

@@ -1,3 +1,0 @@
-
-
-The cap-<RelNo>-api.zip file of your CoreMedia CMS distribution contains the JavaDoc of the Editing Services for JSF public API as well as the TLDDocs of the es and diff tag libraries and the Bean Doc of the web application template's spring application context. The following subsections contain an overview of the previously mentioned tag libraries.  These are the most important API for Editing Services for JSF application developers.

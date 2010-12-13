@@ -1,3 +1,0 @@
-
-
-The file workflowserver.properties contains the mapping of LDAP groups to the workflow groups, the log configuration of the workflow server and parameters for the workflow server's internal web server. For more information about logging see Section 4.5.

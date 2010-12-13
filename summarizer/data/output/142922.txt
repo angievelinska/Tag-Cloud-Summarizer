@@ -1,5 +1,0 @@
-
-
-This manual is addressed to developers of CoreMedia projects who want to configure and customize the CoreMedia Editor.
-
-For an even more detailed documentation, this manual is augmented by the comprehensive CoreMedia Editor Javadoc pages.

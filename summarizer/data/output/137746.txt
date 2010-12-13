@@ -1,5 +1,0 @@
-
-
-PADS is configured with a list of root keys to specify what should be generated. A key is an identifier in the form of an URI (Uniform Resource Identifier). For each configured key a Java object value is computed by its responsible builder. A builder implements the interface com.coremedia.generator.Builder. During computation a builder can read fragment values and establish links to top-level values. Fragment values are cached separately and can be used in several other values. Links are used to trigger the computation of other top-level values. PADS computes all values which are reachable through links from the configured root keys. PADS tracks dependencies to CoreMedia resources and fragments which were accessed during value computation and invalidates dependent values on changes.
-
-The following figure shows five top-level values (blue boxes) and one fragment value (gray box) with their links and dependencies. The olive arrows show invalidations of dependent values which will occur if a read value or resource changes.

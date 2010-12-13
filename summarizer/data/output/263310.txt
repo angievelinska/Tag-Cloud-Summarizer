@@ -1,3 +1,0 @@
-
-
-The Content Bean API introduced in the previous section is mainly used by JSP templates that render HTML pages according to the website structure. This section shows some typical examples of this use case. For a general overview of templating with the Starter Kit, see section "JSP Templates".

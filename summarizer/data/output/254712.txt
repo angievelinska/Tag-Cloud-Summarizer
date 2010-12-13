@@ -1,3 +1,0 @@
-
-
-The two login predicate module options are optional. <n> is an integer value. If a login predicate is configured, both options must be set. It is not allowed to omit e.g. the second option in the table. Login predicates are described in ection LoginPredicates. The following table contains the module options for LdapLoginModule.

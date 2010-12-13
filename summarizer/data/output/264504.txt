@@ -1,7 +1,0 @@
-
-
-Add an integer property
-
-If you want to add an integer property to your struct field, proceed as follows:
-Check-out the document and click in the struct field.
-Enter the name of the property and the integer value, numberOfComments=25 for instance. 

@@ -1,4 +1,0 @@
-
-
- Menu item Impact Open Document Opens the document for Editing in an editor. Open in Explorer Same as "Open Document", but the document is opened in the explorer view of the editor. Open Container Opens the container document of the current document in the context of the preview, e.g. the currently displayed Page, holding an Article. Open Info Opens a popup with information about the document.
-

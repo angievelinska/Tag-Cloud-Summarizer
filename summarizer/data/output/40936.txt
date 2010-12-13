@@ -1,8 +1,0 @@
-
-
-After a user has created one or more document(s) these documents shall be proofread, approved and published in a workflow:
-The user (not necessarily the user who did the editing) starts a 'three-step publication' workflow and adds resources to be published to the change set. The task 'compose' is finished.
-The task 'approve' is automatically suggested to all appropriate users (members of the approver-role group). Somebody accepts the task and approves the resources.
-
-The user has the following options:
-

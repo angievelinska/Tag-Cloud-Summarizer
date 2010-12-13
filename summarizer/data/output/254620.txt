@@ -1,5 +1,0 @@
-
-
-CORBA Communication
-
-The CoreMedia SCI 4.1 incorporates a new CORBA ORB. The definition of callback ports has been eliminated, only one CORBA port as well as the IOR port are now necessary. If you have made any settings to surpass firewalls in the server and/or client configuration, consult chapter on how to change your settings.

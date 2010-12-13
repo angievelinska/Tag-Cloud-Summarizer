@@ -1,7 +1,0 @@
-
-
-Document Types
-
-The CoreMedia definition file for document types allows to explicitly declare XML properties with your own DTD now. If you are using your own DTDs for SGML Texts already or simply want to migrate to the new XML property, please consult section and read section 3.1 of the Developer Manual.  
-
-The server will, however, accept your old definition without changes.

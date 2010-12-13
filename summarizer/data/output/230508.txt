@@ -1,3 +1,0 @@
-
-
-It is common sense in web application development that authentication can be seperated from the core application being developed and there are several frameworks that support user authentication (i.e. CAS, or ACEGI). This implies that the login process should not be regarded as business logic.

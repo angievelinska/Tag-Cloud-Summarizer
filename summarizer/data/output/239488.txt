@@ -1,4 +1,0 @@
-
-14#
-Click [Finish] to finish the installation of the CoreMedia Live Server.
-

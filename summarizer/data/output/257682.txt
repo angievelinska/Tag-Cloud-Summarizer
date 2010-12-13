@@ -1,3 +1,0 @@
-
-
-This section shows the base (Figure) and standard (figure) document types of the CoreMedia Starter Kit as UML diagrams. Please, refer to section for a description of these document types.

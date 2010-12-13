@@ -1,3 +1,0 @@
-
-
-Editing Services are organized in a modular architecture tailored for producing reusable services, models, components and utilities. To support different technologies and use cases and to be extendable, all beans provided by Editing Services are designed to be loosely coupled. Spring is used to "glue" everything together; it is used as the overall factory.

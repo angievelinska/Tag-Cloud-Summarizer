@@ -1,7 +1,0 @@
-
-
-If you want to install the CoreMedia Content Application Engine with or without extensions, the Proactive Engine application template, the CAE Feeder template, Editing Services for JSF and/or the CoreMedia Web Services Engine proceed as follows:
-Select the CoreMedia Content Application Engine option and click [Next].
-
-The next window opens up and shows the components of the Content Application Engine which you can install. 
-

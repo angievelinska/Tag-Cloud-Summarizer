@@ -1,3 +1,0 @@
-
-
-Our editing process consists of three editing steps, and the preview step, where the user can decide if he wants to commit the changes made or to reset the resource properties. The design of the WizardAction allows the actual number of wizard steps and the corresponding views to be specified in the struts-config.xml without writing Java code (see xxx).

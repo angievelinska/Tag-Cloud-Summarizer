@@ -1,5 +1,0 @@
-
-
-The use of the CoreMedia SCI covers a range from sites maintained by a single editor to very large portals edited by many users in different roles. The more users are involved in editing, approving and publishing documents, the more difficult it becomes to coordinate tasks and schedules. IT support can greatly enhance productivity because the users do not have to deal with organizational issues.
-
-This goal can be achieved by introducing automated workflows. These workflows do not precisely prescribe how tasks have to be performed, but coordinate and support the timely execution of different tasks by different users with as much flexibility as possible and as necessary. The CoreMedia Workflow has a non-restrictive, supportive approach: users are given access to the right resources at the right time via tasks. In contrast to restrictively controlling users, the CoreMedia Workflow focuses on progress of the overall business processes.

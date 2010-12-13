@@ -1,5 +1,0 @@
-
-
-ApproveResource
-
-Use this action to approve one or more CoreMedia resources referenced by a variable. If the variable stores an explicit version, that version is approved and a place approval takes place. If no version information is present, only the place of the resource is approved.

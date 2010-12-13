@@ -1,3 +1,0 @@
-
-
-TemplateLinks and ContentLinks have been changed in CoreMedia SCI. The .jinc files of CoreMedia 3.2 have been replaced by several beans, the IconLinkFactories. Such a bean can be switched on and off (setEnabled()). A bean set enabled generates a HTML fragment displaying an icon for TemplateLink or ContentLink calling its toString method. This could be executed by JSPs too, but the advantage of a bean is that these usually small HTML fragments do not have to be included via jsp:include and so avoid overhead. In addition, the display of IconLinks will not change often, so precompiled beans have a further advantage to JSPs. The classes for all beans can be found in the package hox.corem.servlets.beans. The source code is accessible.

@@ -1,3 +1,0 @@
-
-
-The name can have a maximum length of 18 characters (DateProperty field names only 15 characters) and must not contain umlauts or other special characters ("§", "&", ...) . Two fields in a document type different only in upper or lower case are not allowed. Furthermore, a name's last character must not be an underscore, since these field names are reserved for CoreMedia. Don' use "resource", "collector" and "wfInstanceId" as property names, because they interfere with some Struts conventions used in WAGE. 

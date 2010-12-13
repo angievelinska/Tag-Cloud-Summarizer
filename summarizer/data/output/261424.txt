@@ -1,7 +1,0 @@
-
-
-Configure additional Fields
-
-The Search Engine Feeder supports the configuration of additional fields to be indexed along with the documents. You can search for content in these fields if you add them to the index profile of the CoreMedia Search Engine. The index profile specifies the structure of the indexed documents. Please refer to the FAST Configuration Guide for more information about index profiles.
-
-Consider using the CoreMedia CAE Feeder if you want to index content beans. See the CoreMedia Content Applications Developer Manual, Section "CAE Feeder".

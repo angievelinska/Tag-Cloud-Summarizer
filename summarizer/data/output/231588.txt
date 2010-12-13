@@ -1,3 +1,0 @@
-
-
-This menu is only available if you have a document containing binary data in the current task. Read section for a description of the menu items.

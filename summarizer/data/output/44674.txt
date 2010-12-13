@@ -1,8 +1,0 @@
-
-
-Having dealt with the CoreMedia XML format in the previous section, we'll describe here how to provide source documents for import.
-
-This section contains important points which must always be considered, followed by the description of the standard configuration. If the standard configuration is not suitable in your case, the last section tells you how to use the Importer API to meet your requirements.
-
-
-

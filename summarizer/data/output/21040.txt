@@ -1,9 +1,0 @@
-
-
-The following features have been added to the rights system:
-
-The new right "folder" can be attached to a folder. If you use the database of a previous CoreMedia CAP 3.3 installation, existing rules attached to a folder will be automatically extended by the "folder" right. 
-Rights can be granted to document types. If you use the database of a previous CoreMedia CAP 3.3 installation, existing rights will be automatically granted to all document types.
-License groups: These groups have to be attached to a user, who should be enabled to use licensed features of the CoreMedia System. E.g. a user, who should use the CoreMedia Editor, must be a member of the editor-service group. 
-Workflow groups: These groups have to be attached to a user, who should perform some tasks in the four-eye-workflow. E.g. a user who should be enabled to approve a resource, must be a member of the approver-rule group. 
-

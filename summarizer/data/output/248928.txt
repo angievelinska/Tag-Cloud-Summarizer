@@ -1,3 +1,0 @@
-
-
-The Page document is supposed to hold the content of the main webpage of the Menu website. In Section 8.3some dishes were inserted as links. The following template Page/render.jsp for Page displays the linked dishes by calling the renderTeaser.jsp for Dish created in the last chapter:

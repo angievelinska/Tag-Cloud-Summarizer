@@ -1,3 +1,0 @@
-
-
-This is also consistent with the recommended Java spelling for property names, and you can use property="name" regardless of the implementation of the getter and setter method.

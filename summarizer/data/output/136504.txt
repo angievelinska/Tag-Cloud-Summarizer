@@ -1,8 +1,0 @@
-
-
-The Unified API uses the Apache Commons Logging API when producing log output. On the Apache web pages (http://jakarta.apache.org/commons/logging) you will find documentation on how to configure this logging API. The commons logging classes are primarily concerned with detecting other loggers and forwarding requests to these loggers, so you will have to continue with your configuration after you are done with commons logging. 
-
-The great advantage of commons logging is that it allows the logging of the CoreMedia classes to be integrated with the logging of other components that you might want to use in your program. By default, commons logging uses the Java 1.4 logging, which in turn is configured to print log messages on the standard error stream. The class JdkLogConfigExample contains an example of how to configure the default logging in java.util.logging as shipped with the JDK. 
-
-In a similar vein, you could also use Log4J, but you would have to add the file log4j.jar to your classpath, if it is not already present, and configure it as described on the Log4J web pages (http://logging.apache.org/log4j/docs/).
-

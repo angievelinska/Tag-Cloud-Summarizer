@@ -1,5 +1,0 @@
-
-
-ES extends JSF in order to provide a more consistent programming model and to add missing features. The main focus is to integrate JSF and Spring much more tightly than Spring-JSF, one of the standard Spring modules, does.
-
-To extend and customize JSF, its built-in factories can be replaced or complemented by custom factory implementations. This section explains how ES customizes JSF factories and how standard JSF artifacts like components, renderers, and converters can now be configured much more conveniently and flexibly using Spring.

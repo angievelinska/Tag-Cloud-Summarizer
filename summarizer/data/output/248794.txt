@@ -1,3 +1,0 @@
-
-
-For reasons of clarity, some error checks have been left out. Image transformation occurs here using only the tools of the Java 2 platform. Using caching (see Section 4.5), the runtime remains within limits, but loss of quality can occur through scaling. The template also demonstrates an alternative possibility of accessing blob data: the data can be output by writeOn in an OutputStream, as in Example 4.2.3.4d, or the template can read the data from an InputStream, as in Example 4.2.3.4i. The InputStream is obtained from the getInputStream method of the Blob class:

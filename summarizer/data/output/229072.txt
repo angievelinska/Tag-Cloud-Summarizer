@@ -1,5 +1,0 @@
-
-4#
-Enter the ports of the Tomcat installation into the appropriate fields and click [Next].
-Afterwards, a configuration dialog for the analyticsdashboard.properties will appear.
-

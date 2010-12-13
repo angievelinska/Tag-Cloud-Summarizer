@@ -1,7 +1,0 @@
-
-
-Configure the BLOB stores in the file:
-
-blobstore<yourName>.xml in the config/contentserver/spring/blobstore directory.
-
-Replace "<yourName>" with a name of your choice; The Content Server loads all XML-files from the directory  and adds them to the default BLOB store definitions.

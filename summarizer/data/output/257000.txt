@@ -1,5 +1,0 @@
-
-
-Queries are intended for very detailed search in the metadata (and data) of documents. It's easy to find out which documents have been changed by editor A in time B and which are not published yet. It's also possible to search for specific text in structured text fields ( String fields, XML-fields) but it's not possible to search for binary data. 
-
-You perform the query in a specific window. See Section and Section for a desription of queries.

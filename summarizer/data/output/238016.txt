@@ -1,5 +1,0 @@
-
-2#
-Select the entry, you want to edit.
-Click the appropriate button to move, delete or rename the entry (see table).
-Click [OK] to close the window.

@@ -1,3 +1,0 @@
-
-
-It is possible to use identical templates for the Content Management Server (where preview-based editing should be available) and for the Live Servers (where editing should not be possible). Simply edit the config.bsh on the Live servers and set previewBasedEdit to "false" to make the generated pages non-editable. 

@@ -1,3 +1,0 @@
-
-
-You may also call method addUploader(Uploader) of interface com.coremedia.cap.generator.pads.PadsConfiguration on the padsConfig object if you want to configure an uploader in WEB-INF/config.bsh.

@@ -1,5 +1,0 @@
-
-
-The document types created before are arranged in the document tree. The four document types added to the system can be seen. The ancestor of all document types is Resource. Document_ and Folder inherit from Resource. The document type Document inherits from Document_. The new document types Dish, Picture and Page inherit from Document. Preferences, Dictionary and Query are system types, not necessary here. Similar to object orientation methods and attributes of the document types can be seen. The attributes are the property fields created to hold information (e.g. description, ingredients or price for document type Dish). 
-
-The "methods" of document types are so called views which are implemented as templates. If you have not extracted the templates from the download (see the previous chapter) there should be no templates shown in the document model browser, but for the document type Resource. In Image 8.4a you can already see the templates which have to be added in the next steps (all the render() templates). 

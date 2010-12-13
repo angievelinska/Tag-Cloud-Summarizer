@@ -1,9 +1,0 @@
-
-
-From a client's view, the Persistent Cache is accessed by using instances of a cache key. Such a key is a special object which may be understood as a function (including its parameters) for computing a value. In order to obtain a key¿s value, the client passes the key to the cache. If the value has been computed before and has not been invalidated yet, a stored instance of the value is returned. Otherwise, the cache (re-)computes the value by calling the key¿s computation function and puts this value into the store before returning it to the client.
-
-Besides the value computation, the key¿s function logic may define other objects the computed value depends on. During the computation of a key¿s value, these dependencies are internally tracked and stored. When the Persistent Cache receives a notification of an external object¿s modification this change is verified against all previously tracked dependencies. Any key¿s value whose dependencies are concerned will be handled as ¿invalid¿ and removed from the cache. In addition, an invalidation event will be passed to a client¿s invalidation listener for all affected keys. To make sure that no invalidation is missed by an invalidation listener, all invalidation notifications need to be acknowledged.
-
-The Persistent Cache  does not perform any evictions. Eviction is the automatic removal of items from the cache in case that a certain limit, such as the number of cached items, is reached. Instead an explicit removal of items from the cache may be initiated by the client.
-
-In order to identify a key internally and to store the key¿s computation results, a serialized variant of the key is used. Such a serialized variant consist of all the information which is necessary to reconstruct/deserialize the key later on. The logic for serializing and deserializing a key is provided by the client just like the key itself.

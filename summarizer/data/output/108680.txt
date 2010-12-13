@@ -1,9 +1,0 @@
-
-
-An uploader must implement the interface com.coremedia.generator.pads.Uploader. The abstract class com.coremedia.generator.pads.AbstractUploader provides methods for configuration and some default implementations. You should extend AbstractUploader if possible. Please read the Javadoc API documentation, too.
-
-
-The uploader receives notifications about updates and deletions of top-level values in PADS. It receives an update notification if a new value was computed or a value was changed. Update and delete notifications include the key to identify a value. Update notifications include the value itself. PADS calls the uploader's method commit() when a consistent state has been reached.
-
-
-Uploaders may only throw exceptions if a fatal error occured. An exception in an uploader will lead to the shutdown of PADS or the JmsReceiver. This is needed to prevent the loss of unprocessable events. When PADS or the JmsReceiver is restarted, the uploader receives again all events since the last call to commit(). If you don't want PADS to shutdown, you should consider decoupling the uploader's error source from PADS by buffering notifications persistently. One possibility is to use a pair of JmsUploader and JmsReceiver.

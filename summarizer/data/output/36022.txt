@@ -1,6 +1,0 @@
-
-
-Timer handler classes are invoked when a timer expires. 
-
-Example definition of timer handlers
-

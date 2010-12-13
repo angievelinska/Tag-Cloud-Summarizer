@@ -1,3 +1,0 @@
-
-
-This chapter describes how to configure, initialize and start the JmsReceiver. The JmsReceiver is a service that receives upload events from a JMS queue or topic which have been sent to that queue or topic by a JmsUploader. It is a separate application that runs on the host where the generated pages or values are needed. It buffers incoming events until it receives a commit message which marks a consistent state. Then it passes all received events to an attached uploader. In order to supply the JmsReceiver with content, you need to configure a JmsUploader in the ProActive Delivery Server. 

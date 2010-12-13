@@ -1,3 +1,0 @@
-
-
-Dataview configuration files are loaded from the WEB-INF/dataview directory. This implies that each XML-file in that directory requires the http://www.coremedia.com/2004/objectserver/dataviewfactory name space.

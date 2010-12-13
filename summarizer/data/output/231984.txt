@@ -1,4 +1,0 @@
-
-
- Menu item Sub items Function (1)  Open the binary data with the application predefined for the mime type of the document. (2)  Load binary data from disk into the CoreMedia repository. (3)  Loads an image which has been edited with an external editor back into the CoreMedia repository. (4)  Save binary data to disk. (5)  Remove binary data from the document. (6)  Select a section of an image for display.
-

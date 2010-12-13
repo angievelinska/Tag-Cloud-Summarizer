@@ -1,3 +1,0 @@
-
-
-Individual databases use the following types for implementing the abstract types.

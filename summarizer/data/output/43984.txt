@@ -1,6 +1,0 @@
-
-
-The beans for later use in templates are preferably generated and configured in config.bsh. A typical configuration of e.g. an EditorContentLinkFactory is:
-
-
-

@@ -1,3 +1,0 @@
-
-
-The first property configures a semicolon separated list of base distinguished names (DNs) under which groups and users must be located to be accessible by a CM Server. The second property configures a semicolon separated list of domain names, served by the LDAP server. The third value configures the interval in seconds after which a cached LDAP user in the CM Server is updated with modifications made in the LDAP server. Do not set a small value here, as this might lead to performance problems. The last two properties are mandatory and hold a single space separated list of attribute names that are added to and accessible from the LdapUser and LdapGroup Java objects.

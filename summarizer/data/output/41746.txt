@@ -1,3 +1,0 @@
-
-
-If a word is misspelled and you want to correct it, select the word underlined in red and open the context menu for suggestions and choose one. If there are none, the field is empty.

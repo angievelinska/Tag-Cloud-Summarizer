@@ -1,6 +1,0 @@
-
-
-varies
-
-Definition: Entity for tagging varying parts of the DTD. 
-

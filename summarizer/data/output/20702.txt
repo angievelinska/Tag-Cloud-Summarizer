@@ -1,9 +1,0 @@
-
-
-This chapter consists of: 
-
-a general part for all installable components (and for each component), and
-component-related parts that cover specific topics e.g. configuration options during setup.
-
-A Windows installation serves as an example here, an installation under UNIX is done in analogy.
-

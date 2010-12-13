@@ -1,6 +1,0 @@
-
-4#
-Enter the ports of the Tomcat installation into the appropriate fields and click [Next].
-
-Now you will be asked for the configuration of capclient.properties and workflowclient.properties.
-

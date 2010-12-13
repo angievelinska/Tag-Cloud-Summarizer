@@ -1,5 +1,0 @@
-
-
-You can look at the Page "Food of the day" by calling the URL:
-
-http://localhost:8011/coremedia/generator/MenuSite/FoodOfTheDay, templateId=render.html

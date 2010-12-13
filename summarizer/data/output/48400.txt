@@ -1,5 +1,0 @@
-
-
-API Changes
-
-If you have made any programmatic enhancements to your workflow, keep in mind that there have been some minor API changes in the workflow client API. Make sure your code still compiles and runs. 

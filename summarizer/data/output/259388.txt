@@ -1,6 +1,0 @@
-
-
-Rendering Hints
-
-You might send "rendering hints" to the portal server which causes the backend resources (e.g. a page or a binary) to rendered in a specific way. Rendering hints are represented as special response headers which can be set using HttpServletResponse#addHeader(<hint-name>,<hint-value>). 
-

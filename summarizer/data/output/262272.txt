@@ -1,3 +1,0 @@
-
-
-This report shows those external pages or websites that most frequently led to an entry on a given page. Additional, the percentage of entries relative to all entries on the given page is shown.

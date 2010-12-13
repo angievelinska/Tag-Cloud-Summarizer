@@ -1,3 +1,0 @@
-
-
-If you want to run the CoreMedia Editor via WebStart, you don't have to install the CoreMedia Editor. In this case, the webstart editor is installed with the Content Server. For more information on starting the CoreMedia Editor with Java Web Start see Section 3.2.3.

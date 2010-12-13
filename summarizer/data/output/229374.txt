@@ -1,3 +1,0 @@
-
-
-This section gives a short overview of the most important technologies used by ES, namely the CoreMedia Unified API, the Spring framework, and JavaServer Faces, and explains their role for building Web UIs.

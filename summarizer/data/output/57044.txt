@@ -1,6 +1,0 @@
-
-
-The following functions are available:
-
- Tool Nr. Description (1) Opens the document in a document window (2) Opens the selected document in a new explorer window (3) Inserts a link behind the currently selected link (4) Removes selected document from the link list (5) Moves the selected document to the very top of the list (6) Moves the selected document up one position (7) Moves the selected document up one position (8) Moves the selected document to the last postion in the list
-

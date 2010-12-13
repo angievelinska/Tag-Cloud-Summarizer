@@ -1,3 +1,0 @@
-
-
-The elements and corresponding attributes allowed in the XML configuration files are defined in the coremedia-editor.dtd file, in fact a (pseudo) DTD. The DTD is called "pseudo" because it contains positions at which it can be extended, depending on the classes used. These points are shown by the placeholder %varies; You find the DTD in the <CoreMedia Installation Directory>/lib/xml of your CoreMedia Content Server installation. 

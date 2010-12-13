@@ -1,5 +1,0 @@
-
-
-The CoreMedia ProActive Delivery Server (PADS) is a web application which creates output data from content stored in the CoreMedia repository as soon as it becomes available through a publication. This complements the more common use case of the CoreMedia Active Delivery Server (ADS), where rendering is triggered by HTTP requests for uncached pages. 
-
-Opposed to the ADS the PADS is not limited to page generation with templates. It may be used to generate arbitrary output data with efficient caching and automatic dependency management. This includes page generation with templates. Another use case is the integration of thirdparty applications by sending notifications about updated content.

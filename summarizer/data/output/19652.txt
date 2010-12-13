@@ -1,8 +1,0 @@
-
-
-<Variable>
-
-
-Child elements:
-
-Parent elements: <View>, <Task>

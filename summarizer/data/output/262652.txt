@@ -1,6 +1,0 @@
-
-
-The properties of the document have the following meaning:
-
- Property Description Language The language of the channel. Master object The master object of the channel in respect of the language. That is, the current channel is a localized variant of the master object. Associated JavaScripts Java Script files that are associated with the channel and that are used on the website. Associated CSS CSS files that are associated with the channel and that are used on the website. favorite icon The icon, shown in the address field of the browser. Keywords  Viewtype  contextSettings  URL segment A segment of the URL used for this channel. Linktext Text shown in links to this channel. Navigation Children All elements that are shown in the navigation of this channel. Hidden This channel is hidden in navigation and sitemap Hidden in sitemap This channel is hidden the sitemap Title The title of the channel, shown in the navigation and the channel page itself. Channel Picture  Contentlist The content of the channel, that is shown on the web page of this channel. Teaser List The teasers of the channel that are shown at the right side of the page. Header Objects Content that is shown in the header part of the page. Footer Objects Content that is shown in the footer part of the page.
-

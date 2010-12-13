@@ -1,7 +1,0 @@
-
-
-This method looks for an authentication object of type CAEUser, a class extending the standard Acegi user by a CMS session, and closes the actual session. Thereafter it invalidates the HTTP session to log out the current user. In contrast to the login command, this controller redirects to a predefined logout page.
-
-You might wonder how the templates can render additional data because the actual user is not part of your content model and thus, cannot be accessed by the variable self. There are two ways to integrate additional data with little effort. Either you implement a new tag library, which access the SecureContext object, or you use view classes. Due to the many documents on tag libraries, this example will concentrate on the latter solution.
-
-View classes allow you to implement the rendering of content by hand and are defined in a separate file menusite-views.xml. In this example the access to the current logged in user object is needed. Following code snippet is taken from DocumentView, placed in package com.coremedia.examples.cae.view, and shows the needed steps: 

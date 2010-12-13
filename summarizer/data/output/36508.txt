@@ -1,4 +1,0 @@
-
-
-The GUI of the CoreMedia Workflow is quite flexible. You can simply use the CoreMedia Editor configuration file (as default, this file is named editor.xml) to configure the GUI or even write your own startup classes or variable editors. Note that variable editors are described in detail in the Editor Developer Manual.
-

@@ -1,6 +1,0 @@
-
-
-The result of the call is then transformed into the expected Java type with a typecast. The getProperty method accepts the names of both project-specific and pre-defined properties.
-
-
-The following table shows the names and types of the pre-defined properties and briefly describes their meaning. Furthermore, the table shows which method of the hox.corem.servlets.Document class can be typically used for calling up the value of the property. Some of these pre-defined properties are valid for both documents and folders. In this case, the corresponding method is defined in the hox.corem.servlets.Resource class. Pre-defined properties are particularly useful for sorting and for queries, since they can be used like the user-defined properties with a PropertyComparator (see Section 4.2.3) or with a call of Query#field (Section 4.2.4).

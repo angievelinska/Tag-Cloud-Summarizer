@@ -1,3 +1,0 @@
-
-
-Configuration not mandatory: Normally you do not need to change the default settings.

@@ -1,9 +1,0 @@
-
-
-IsExpired
-
-
-Grammar: EMPTY 
-
-
-IsExpired queries whether the timer given by the defined variable has expired.

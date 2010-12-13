@@ -1,5 +1,0 @@
-
-
-For these ActionForwards to work, you have to configure the WAGE ActionMapping subclass to be used in your struts-config.xml like this:
-
-<action-mappings type="com.coremedia.cap.wage.action.WageActionMapping">

@@ -1,5 +1,0 @@
-
-
-Fortunately, Spring comes with some predefined controllers making the developer's life easier. In this case the SimpleFormController is the base class of choice because it does the hard work for you. All you have to provide is a new bean, which stores the entered data, and a HTML form containing special binding tags. When the user submits the data from the form the Spring framework processes this request and calls the method onSubmit() of your controller. It passes an already initialized bean and you can start with your business logic. Thanks to the Spring magic you do not have to deal with nasty form evaluations.
-
-The class WorkflowBean must have apparently six properties: subject, comment, approver, express, time and change set. Only the change set is defined by the calling page and cannot be changed. All other values are specified by the user and you will find them in the passed command object: 

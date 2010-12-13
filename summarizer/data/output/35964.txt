@@ -1,5 +1,0 @@
-
-
-UncheckOutDocument
-
-Use this action to revert the check out of one or more CoreMedia documents referenced by a variable.

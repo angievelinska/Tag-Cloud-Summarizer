@@ -1,4 +1,0 @@
-
-
-The CoreMedia Editor can be configured with the settings in the XML-files which are defined in the editor.properties file. Their default location is the directory <CoreMediaHome>/properties/corem and the default names are editor.xml and editor-startup.xml. In the following chapters, you will find the administrative tasks you can execute in the XML-files using the described XML-elements. These are by far not all XML-elements contained in the editor.xml file, but the ones which are necessary for administrative work. You will find a description of the elements necessary for editor development in the CoreMedia Editor Development Manual.
-

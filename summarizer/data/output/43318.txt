@@ -1,3 +1,0 @@
-
-
-In order to work with Java's XML transformation APIs, you need to pass input in the form of javax.xml.transform.Source. When working with custom XML produced through ADS, you should use a javax.xml.transform.stream.StreamSource wrapping the result of Generator#getInputStream(uri) where uri points to your generated source XML. It is not correct to build a StreamSource directly from the URI since this would lose the dependency from source to transformation result.

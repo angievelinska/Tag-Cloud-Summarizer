@@ -1,3 +1,0 @@
-
-
-In order to find a text in a document with the full-text search, the text must have been processed before on the search server. This takes some time, approx. 1-2 minutes. Only then you will find a document. You also have to wait, if you have moved a document from one folder to another and restrict your search to the target folder.

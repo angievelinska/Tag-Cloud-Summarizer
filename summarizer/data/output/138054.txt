@@ -1,3 +1,0 @@
-
-
-The user repository stores information about users and groups. It allows you to create, retrieve, read and update user and groups that are stored in the built-in user management of the Content Server. It also provides read access to additional users and groups that are managed in an LDAP server that may be associated with the Content Server.

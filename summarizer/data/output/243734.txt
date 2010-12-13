@@ -1,3 +1,0 @@
-
-
-This element is used to define, which property editor should render and edit a workflow variable. If no element is defined for a variable, the default editor for the variable type is used (see Section 4.4.3 for a listing of the editor classes). An editor for variables must implement the subinterface of the PropertyEditor interface, depending on his concrete type. 

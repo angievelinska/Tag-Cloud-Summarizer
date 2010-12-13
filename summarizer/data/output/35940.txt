@@ -1,5 +1,0 @@
-
-
-MoveResource
-
-Use this action to move a resource to another folder.

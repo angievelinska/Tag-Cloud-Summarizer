@@ -1,4 +1,0 @@
-
-
- Parameter Description -t The paths of the resources to be published
-

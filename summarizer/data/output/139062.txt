@@ -1,4 +1,0 @@
-
-
- Attribute  Value  Default  Description  doctype document type name or regular expression .* (all types) The name of the abstract or concrete document type of the property. name property name or regular expression .* (all names) The name of the property.
-

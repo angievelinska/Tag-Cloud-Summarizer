@@ -1,3 +1,0 @@
-
-
-Ask your CoreMedia Administrator for the supported browser versions and make sure that you have such a browser installed..De-activate all pop-up blockers in your web browser and enable cookies before starting the WebEditor. If you use Firefox, you have to activate cut, copy and paste functionality (see below).

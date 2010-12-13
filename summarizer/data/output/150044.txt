@@ -1,7 +1,0 @@
-
-
-The used URL is resolved to a Dish object which is passed to the view dispatcher. This part of the CAE looks for an adequate template, and due to no specified view it cannot use the template Dish.render.jsp. The next step is to look for a template of a super class of Dish, in this case Document. It is no surprise that Document.jsp matches and the rendering can begin. Somewhere inside this template you can find the following tag delegating the rendering of the dish to a template with the view "render'':
-
-<cm:include self="${self}" view="render"/>
-
-Thereafter, the result is sent back to the client and the user sees the offers of "Chez Andre''. Regrettably, the example omitted an awkward detail until now: How can the template Document.jsp render the navigation and the title picture? It has no access to these properties because they are not part of the Dish object. You could extend this document type but this is asking for troubles. A central place seems to be the better solution and this is were the already mentioned Page object comes into play to cope your problem. It contains the data about the navigation and the title picture. But how can you access it? Due to its central nature, only one instance is needed which could be stored at a defined place. The following code retrieves it from the folder MenuSite: 

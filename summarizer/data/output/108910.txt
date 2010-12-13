@@ -1,6 +1,0 @@
-
-
-PADS supports the development of builders and templates with the development pages. You can call the pages with your browser:
-
-
-http://<host>:<port>/pads/develop

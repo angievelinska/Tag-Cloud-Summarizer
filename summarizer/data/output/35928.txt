@@ -1,5 +1,0 @@
-
-
-EnableTimer
-
-Use this action to enable a timer. Note, that a timer has to be enabled before it may expire later.

@@ -1,3 +1,0 @@
-
-
-If you are writing an own form bean with a getter method for a blob property of a CoreMedia resource, you should always return the ClientBlob object acquired by the get() method instead of using the getBlobProperty() method. Otherwise you will get an NPE when using a <html:file property="propertyName.formFile"/> tag for uploading new blobs. See example-image for an example of creating a form using a <html:file> tag.

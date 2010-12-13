@@ -1,3 +1,0 @@
-
-
-Now you know enough to create your own beans and templates. Another important part of the CAE are controllers, which are used when you want to provide additional functionality. Each controller gets its own URL or a range of URLs, which are described by regular expressions. This example needs a controller that allows users to enter an URL without a content id. Until know, all calls must address a certain object, otherwise an error message will be returned. The following controller fetches the actual Page object and returns a redirect with the according URL. In contrast to the Helper class, it uses the ContentBeanFactory instead of the actual bean. 

@@ -1,4 +1,0 @@
-
-
-CoreMedia SCI is shipped with one out of four predefined workflows. 
-

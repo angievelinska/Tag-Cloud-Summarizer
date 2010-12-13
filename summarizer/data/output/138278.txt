@@ -1,5 +1,0 @@
-
-
-CoreMedia SCI comes with the RichText editing component which allows comfortable editing of text.
-
-This RichText requires a special document type. It can be utilized in both the CoreMedia Editor and the WebEditor or their customized implementations.

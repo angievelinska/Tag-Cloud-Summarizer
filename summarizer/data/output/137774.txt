@@ -1,7 +1,0 @@
-
-
- The CoreMedia ProActive Delivery Server (PADS) is a web application which creates output data like HTML pages each time new content becomes available through a publication. This complements the more common use-case of the CoreMedia Active Delivery Server (ADS), where rendering is triggered by requests for uncached pages. PADS is configured with a list of root keys to specify what needs to be generated. PADS generates a "value" as output data for each of these keys. In the simplest case, values are pages generated with templates as known from the ADS. However it is also possible to develop custom extensions to generate arbitrary output values as described in the CoreMedia Developer Manual.
-
-Generation of values can trigger more values to be generated, for example a page can trigger other pages it links to. Dependencies to CoreMedia resources and other values are automatically tracked during computation. Dependent values are invalidated and possibly recomputed if one of their sources changes. For this PADS maintains a connection to the CoreMedia Content Server which notifies it about changes in the repository.
-
-PADS sends generated output values like HTML pages to configured uploaders. The release contains uploaders which write the values to the file system (FileUploader), to Java Message Service queues or topics (JmsUploader) or a simple Database Message Service. You can develop own uploaders to process the generated values - see the Developer Manual for details.

@@ -1,3 +1,0 @@
-
-
-Note, that the Search Engine Feeder does not update already processed documents after changing the fields to index. A configuration change only affects newly processed documents. If you want to update all documents, restart the Search Engine Feeder with an empty collection.

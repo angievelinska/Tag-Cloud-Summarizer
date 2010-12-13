@@ -1,3 +1,0 @@
-
-
-If you are using a Microsoft SQL-Server things are easier. The CoreMedia server uses nvchar for string properties in the SQL-Server which can simply be used for Unicode strings. So, you only need to set the UTF8Weight attribute of the DocTypes element to 100. No triple size is needed, no UTF8Length attributes for string properties are required.

@@ -1,5 +1,0 @@
-
-26#
-Enter the user and the password for the connection to the LDAP server.
-Click [Next] to continue.
-

@@ -1,5 +1,0 @@
-
-
-Interaction of 'cacheable="true"' and 'cacheable="byGroups"'
-
-The two caching modes can be used in combination. Up to a certain granularity, content is frequently non-personalized. It can either be accessed by a user or not, but the presentations do not  vary. These quasi-atomic fragments should therefore be marked as 'cacheable="true"'. Templates that assemble and combine such fragments, on the other hand, should be marked as cacheable by groups or non-cacheable.

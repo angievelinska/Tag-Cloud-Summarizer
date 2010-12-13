@@ -1,4 +1,0 @@
-
-
- property value class element type com.coremedia.cap.common.Blob Binary java.util.Date and java.util.Calendar Date com.coremedia.xml.Markup XML java.lang.Number and primitive number types Number java.lang.String String
-

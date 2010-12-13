@@ -1,9 +1,0 @@
-
-
-In this section we will see how Workflow Server plug-ins are written using the Unified API. There are seven possible types of plug-ins: actions, long actions, expressions, rights policies, performer policies, client action handlers, and managers. While these plug-ins can still be written using the classic Workflow API introduced with CoreMedia CAP 4.0, it is generally simpler to use the Unified API.
-
-Of these plug-ins, the client action handlers live purely in Unified API clients, rights policies are needed both in the clients and on the Workflow Server, and the remaining three interfaces are instantiated on the server, only.
-
-When implementing plug-ins, the comments from the Workflow Developer Manual generally carry over directly to the Unified API. In particular, restrictions on the permitted operations for the various plug-in types are also applicable when using the Unified API.
-
-In the following, we will discuss actions in ###action, long actions in ###long action, expressions in ###expression, performers policies in ###performerspolicy, rights policies in ###rightspolicy, client action handlers in ###remoteclient and managers in ###manager.

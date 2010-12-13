@@ -1,3 +1,0 @@
-
-
-This feature is not intended to manage existing file structures, and does not support file access that bypasses the Content Server. Also, a file structure may be accessed by only one Content Server at a time.

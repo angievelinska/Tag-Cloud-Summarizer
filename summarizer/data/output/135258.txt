@@ -1,7 +1,0 @@
-
-
-Assume that a total of 100 licenses is available. The limit line states that at most 80 of these 100 licenses may be acquired by users from either domain1 or domain2. The pools for domain1 and domain2 allocate between 5 and 50 licenses. Unless 5 users from one of these domains are already logged in, there are still free licenses to allow another login. The pools for domain3 and domain4 do not specify minimum sizes.  It is therefore possible that, for example, no user from domain4 is able to log in to the system, because users from the three other domains are locking up all available licenses.
-
-Finally, the last lines indicate that some licenses should be put aside for the members of the administrator groups of any domain, to be used in emergency cases. For domain4 we add indirect members of the administrator group to the pool.
-
-Normally, a careful assignment of licenses to pools should suffice for most setups, with limits being used in exceptional cases. The number of pools and limits should be kept relatively low, preferably not exceeding 100 in total, lest the processing time gets significant. Note that groups cannot be indicated by regular expressions as this would lead to a significant reduction in performance.

@@ -1,3 +1,0 @@
-
-
-ClientBlob is useful only if a new BLOB should be uploaded by the Web user and stored as-is. If you want WAGE to store binary data, e.g. calculated from user input, convert it directly to a hox.corem.servlets.Blob, either by implementing the interface yourself or by using the new utility class com.coremedia.cap.wage.util.ChangeableBlobImpl. Set this Blob using ClientDocument.setProperty() (not ClientDocument.set(), which expects a ClientBlob!).

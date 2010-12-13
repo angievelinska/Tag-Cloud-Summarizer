@@ -1,7 +1,0 @@
-
-
-The CoreMedia CMS Portal Integration contains two portlets (aka "iViews") for use in SAP Enterprise Portal 6. The first portlet called content portlet may be used for displaying content (retrieved from a CAE portal application) inside the portal.
-
-The other portlet called navigation portlet is optional and may be used when the content portlet's navigation should be included into the global portal navigation (see above). From a technical point of view, the navigation portlet will be embedded into the portal navigation area and simply displays content consisting of navigation elements only. Clicks on navigation links then will be delegated to an associated content portlet.
-
-The portlet archive com.coremedia.cms.portal.par consists of this structure:

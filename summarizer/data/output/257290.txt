@@ -1,5 +1,0 @@
-
-
-In order to revoke the state "marked for deletion" (see section), proceed as described above, but choose the Revoke delete menu item resp. toolbar symbol instead. 
-
-How to track documents moved to  the recycle bin is described in section. 

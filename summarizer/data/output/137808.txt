@@ -1,9 +1,0 @@
-
-
-If you want to install a CoreMedia Live Server (Master or Replication) proceed as follows:
-
-
-Select the CoreMedia Content Server option and click [Next].
-
-A new window displays the Content Server type options.
-

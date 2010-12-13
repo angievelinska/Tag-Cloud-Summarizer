@@ -1,8 +1,0 @@
-
-
-Now you will be asked for the destination directory etc. as described in section. Afterwards, you will be prompted to configure the Content Application Engine and all installed components. 
-
-
-
-If you have chosen one of the Web application templates, Editing Services for JSF and/or the Web Services Engine, you will be asked for the configuration of the server.xml file of Tomcat.
-

@@ -1,3 +1,0 @@
-
-
-This chapter describes tasks necessary for the configuration and administration of the WebDAV support of the CoreMedia Web Editor Server. This chapter does not cover all possible tasks. If you miss some tasks, have a look at section.

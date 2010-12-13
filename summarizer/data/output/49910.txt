@@ -1,8 +1,0 @@
-
-
-Return types
-
-The method returns a value. The type depends on the property which has been validated.
-
-The properties have the following types:
-

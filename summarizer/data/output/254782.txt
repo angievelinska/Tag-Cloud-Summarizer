@@ -1,5 +1,0 @@
-
-
-This utility kills specified sessions on the content server. You can obtain the IDs of the open sessions with the sessions utility (see section x.1.6).
-
-Well-behaved clients terminate their sessions, and the content server automatically kills sessions which don't respond within a certain timeout. So this is an emergency tool which you will need in exceptional cases only.

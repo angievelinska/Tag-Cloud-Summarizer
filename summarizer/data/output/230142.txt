@@ -1,3 +1,0 @@
-
-
-This section will give an introduction to the Analytics Dashboard Application, an architecture overview and a description on how to define user profiles and how to customize existing reports. The last subsection will give a step-by-step description on how to create your own customized report types.

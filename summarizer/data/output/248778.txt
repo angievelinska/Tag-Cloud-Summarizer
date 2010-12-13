@@ -1,5 +1,0 @@
-
-
-When the CoreMedia Active Delivery Server (ADS) answers an HTTP request the requested URI is analysed first, as described in Section 4.3. This determines, amongst other things, the resource which should be displayed. Afterwards, the ADS selects a template, as described in Section 4.4. This template is executed in the context of the Active Delivery Server, in order to create the actual page contents. 
-
-As the general entry point to the CoreMedia Generator API, a template uses the application scope bean called "generator" created by the ADS. It is imported in a template as follows: 

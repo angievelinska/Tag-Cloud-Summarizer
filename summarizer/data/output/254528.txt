@@ -1,4 +1,0 @@
-
-
-CoreMedia SCI uses repositories for data storage, therefore it requires one or more external relational databases. A correctly installed and activated database is prerequisite for the operation of CoreMedia SCI. How to connect the CoreMedia system to databases is described in detail for the different databases in Configuration in capclient.properties.
-

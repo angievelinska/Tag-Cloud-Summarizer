@@ -1,9 +1,0 @@
-
-
-Like all CoreMedia clients, the importer is started with a Jpif script. The standard installation provides the template script cm-xmlimport.jpif in the bin directory. 
-
-For every importer to install a copy of cm-xmlimport.jpif must be made but with a different prefix. Each importer has a configuration file with the same base name and the extension properties in the directory properties/corem.
-
-Example: The configuration file properties/corem/my-xmlimport.properties belongs to the script bin/my-xmlimport.jpif.
-
-The standard installation directory properties/corem provides the file cm-xmlimport.properties, which serves as a template for these configuration files.

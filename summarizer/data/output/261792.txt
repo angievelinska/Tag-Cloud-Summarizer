@@ -1,5 +1,0 @@
-
-
-Clickable Drill-Down
-
-Click on an item in the pie chart to show detailed information of the selected item. Selectable items are marked with a ¿+¿-Sign. 

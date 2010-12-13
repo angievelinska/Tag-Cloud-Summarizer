@@ -1,8 +1,0 @@
-
-
-<PropertyModelFactory>
-
-
-Child elements: %varies;
-
-Parent elements: <Editor>

@@ -1,4 +1,0 @@
-
-
- Parameter Description -c Ids of resources to be approved. Ids have the following format: coremeda:///cap/content/1234. -t The paths of the resources to be approved -v Ids of document versions to be approved. Ids have the following format: coremeda:///cap/version/1234/56. Where 56 must be replaced by the version number you want to approve.
-

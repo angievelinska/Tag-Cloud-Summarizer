@@ -1,5 +1,0 @@
-
-
-<Predicate>
-
-See the description in the section "Configuring document types".

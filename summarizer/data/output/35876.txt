@@ -1,8 +1,0 @@
-
-
-The last task of the workflow is an automated task which is only needed because the previous If task may not be the final task of the workflow. Thus, this AutomatedTask contains no action to perform.
-
-
-
-Line 1: The automated task is named 'Finish'. Because the task should be the last element in the workflow, it must be marked as final. If the control flow of the workflow reaches a task with the attribute final="true" it quits the execution of the workflow. 
-

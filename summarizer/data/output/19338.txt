@@ -1,6 +1,0 @@
-
-
-<TreeFilter> 
-
-Child elements: <Predicate>
- Parent Elements: <Explorer> , <ResourceChooser>

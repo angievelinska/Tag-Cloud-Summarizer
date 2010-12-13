@@ -1,4 +1,0 @@
-
-
-Some document types allow to insert a list of links to other documents. So it is possible to add more images, further text documents and point at similar topics. Documents with a link list option have a Links menu in their menu bar:
-

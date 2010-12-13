@@ -1,6 +1,0 @@
-
-2#
-Select the components to install and click [Next].
-
-If you have selected the template or the development tool the following window will open. Select whether you want to install the default servlet engine Tomcat or not.
-

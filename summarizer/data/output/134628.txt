@@ -1,7 +1,0 @@
-
-
-# write all trace output to a log file
-log.action.2.class=FileAction
-log.action.2.selectors=trace:debug
-log.action.2.initArgs=\
-file=var/logs/capserver-trace.log,fileSize=4000,writeOps=1000

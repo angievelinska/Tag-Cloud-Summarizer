@@ -1,3 +1,0 @@
-
-
-Only use the JRE/JDK binaries listed in the table above or further approved versions mentioned in notes.xml. Don't use any other than the specified patch level of an JRE/JDK version! A different patch level is not supported and probably causes errors in service. There is only one exception to this rule: Some servlet containers require JDK/JRE 1.4 and do not support more recent Java versions. For these containers, you can run the required components (ADS, CAE and the WebEditing Server) with the JRE/JDK 1.4. Whenever possible, you should use the approved Java versions as these are more intensely tested.

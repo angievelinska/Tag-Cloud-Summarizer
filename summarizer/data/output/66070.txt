@@ -1,3 +1,0 @@
-
-
-If the resource selected for publication has been changed AND moved or renamed, two entries for this resource appear in the change set. A moved resource is marked in the column "change". this only applies to documents already published, because the folder (i.e. path information) has to be published too with the first publication of a resource.

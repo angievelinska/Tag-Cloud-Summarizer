@@ -1,3 +1,0 @@
-
-
-After creating the list of documents to be processed and finishing the task, you are assigned the options-task. This task is automatically accepted (see Abb.). Here you can set search and replace options.

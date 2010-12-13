@@ -1,3 +1,0 @@
-
-
-HTTPS is a variant of HTTP which enables encrypted data transmission between server and client. It is therefore recommended to create the servlet container-client (WebDAV, Web Editor) connection via HTTPS.

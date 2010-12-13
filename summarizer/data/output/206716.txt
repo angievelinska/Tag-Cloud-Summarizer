@@ -1,3 +1,0 @@
-
-
-The ADS offers the log facility generator.statistics which can be used to monitor a number of key figures from the ADS.

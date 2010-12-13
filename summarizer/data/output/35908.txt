@@ -1,5 +1,0 @@
-
-
-CopyResource
-
-Use this action to copy a resource to a specified folder.

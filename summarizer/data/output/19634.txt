@@ -1,3 +1,0 @@
-
-
-This element is used to group the elements which define the look of the variables of a task. I.e. with which editor the variables defined in the workflow XML-file for the task should be shown in the workflow window.

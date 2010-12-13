@@ -1,3 +1,0 @@
-
-
-In the following section, the configuration of the CoreMedia Editor via the file editor.xml is described.

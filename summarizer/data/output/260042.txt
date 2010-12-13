@@ -1,6 +1,0 @@
-
-11#
-Enter the properties and click Next to start with the installation.
-
-The next window starts the actual installation. Click Show details to view the output of the ant installer which is used internally. Open the Errors tab for error messages. The ant installer uses the CoreMedia CMS installer for installation. You find the log files of the CMS installer in the management/ and delivery/ directory, named coremediacms-installer-log*.
-

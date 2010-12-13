@@ -1,8 +1,0 @@
-
-
-The meaning of the properties of the sql.properties file are described in this section. Please read the other sections of this chapter for database specific configuration.
-
-Connect to the Database
-
-These properties are used to connect to the database.
-

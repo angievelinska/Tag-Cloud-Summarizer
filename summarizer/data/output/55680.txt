@@ -1,8 +1,0 @@
-
-
-In order to format lists in RichText documents, either
-
-type in the text and format the list via tool bar (see illustration) or context menu, or
-preselect the format and start typing.
-
-The following list formats are available under :

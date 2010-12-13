@@ -1,3 +1,0 @@
-
-
-Do not run a CAE Feeder with an Http Cache or a Proactive Engine on the same database schema.

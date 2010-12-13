@@ -1,6 +1,0 @@
-
-
-MailAction
-
- Argument Description to Recipient of the mail. from Sender of the mail (optional). smtp.host If no SMTP host is entered, the local computer is contacted (optional). cc Other recipients (optional).
-

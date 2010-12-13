@@ -1,9 +1,0 @@
-
-
-Operations:
-
-
-move document doc from folder F2 to trash 
-
-
-Required rights:

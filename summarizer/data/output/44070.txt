@@ -1,3 +1,0 @@
-
-
-Assume that short and meaningful URIs are desired. A possible URI format would then be to take the name of the resource (without path) and, to avoid ambiguity, attach the ID of the resource; the document "/Sports/abstract" with ID 20 would receive the URI "/abstract-20". A corresponding ResourceUriFormat class would appear as follows:

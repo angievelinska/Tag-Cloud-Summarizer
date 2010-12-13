@@ -1,6 +1,0 @@
-
-
-During the editorial workflow process, the number of documents will increase continuously. In order to have quick access to documents and information, the CoreMedia Editor provides the possibility of executing queries.
-
-
-Technically speaking, queries are documents and so can be saved, edited, or copied. They are stored in the user's Home folder. To view this folder, go to Home/<username> and look at the Query documents. By default, this folder already contains one Query document named MyQuery.

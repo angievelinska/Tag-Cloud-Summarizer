@@ -1,3 +1,0 @@
-
-
-This section describes the operation of the Search Engine Feeder, which is part of the CoreMedia Content Server. See Section "Search Engine Integration" for concepts and Section "Configure Search Engine Integration" for configuration of the Search Engine Feeder.

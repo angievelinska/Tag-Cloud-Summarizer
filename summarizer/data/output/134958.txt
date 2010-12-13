@@ -1,3 +1,0 @@
-
-
-Editors cannot start new workflows from disabled process definitions. Initially uploaded process definitions are enabled.

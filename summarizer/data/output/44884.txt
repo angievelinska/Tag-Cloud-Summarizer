@@ -1,7 +1,0 @@
-
-
-By using getTransformer the importer calls up an instance of the transformer from the factory. As name argument, the importer passes getTransformer the name entered in the configuration file for this transformer with the name property (in the example above, therefore, "My special transformer"). The factory can use this name, for example, for log outputs. However, the name is not intended for information that is semantically more important. For this purpose there are properties.
-
-The transformer itself is an object of the javax.xml.transform.Transformer class. The decisive abstract method of this class which you must implement within the framework of a derivation of Transformer in order to realize your transformation is transform. In addition to this, Transformer has a few other abstract methods whose function, however, is precisely specified by JAXP. To save you work, these methods are already implemented in the Importer API: if you derive your transformer from com.coremedia.publisher.importer.AbstractTransformer, rather than directly from javax.xml.transform.Transformer, you only need to implement the transform method.
-
-According to the getFeature information of the factory, the importer calls the transform method either individually for each source document in the form of a StreamSource or DOMSource, or once for all source documents in the form of a MultiSource. In both cases, the importer calls the getTransformer method of the factory only once and transforms all documents with the same instance of the transformer.

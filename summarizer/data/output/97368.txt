@@ -1,3 +1,0 @@
-
-
-The document type window has only one area (2) below the menu bar (1). In this area, you will find the document types defined in your CoreMedia system. Double click on a document type and you will get detailed information on the fields of this document type.

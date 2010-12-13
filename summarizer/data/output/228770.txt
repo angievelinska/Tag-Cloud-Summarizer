@@ -1,8 +1,0 @@
-
-
-3* The default Tomcat Servlet Engine is configured with the file ./conf/server.xml. In general, no configuration is necessary in this file. The default HTTP port of the Editor Extensions Engine is set to 8001. The default Shutdown port 8005 is used to shutdown Tomcat.
-4#
-Click the [Next] button.
-
-3* Now you will be asked for the configuration of the objectserver.properties file. Here you can enter the data necessary for connection with the Content Server. 
-

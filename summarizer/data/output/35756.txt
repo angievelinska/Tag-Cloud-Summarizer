@@ -1,5 +1,0 @@
-
-
-Validators are boolean expressions that ensure that the variables that may be modified via a client view satisfy certain constraints. E.g., they can ensure that values stay within a predefined range or that certain variable values have been entered at all. If a validator expression evaluates to "false", a message is presented to the user who performed the task, so that the error condition may be resolved by continuing work on the task.
-
-Validators can be specified to verify each "save" of variables. When definiting the validator, set validatedOnSave="true". In this case, you will get an error message if you try to save and the validator expression evaluates to "false".

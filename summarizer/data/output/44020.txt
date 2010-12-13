@@ -1,3 +1,0 @@
-
-
-By default, the URIs of CoreMedia pages start with /coremedia/generator, followed by the path of the document and further information. However, this is not essential. In fact, most aspects of the URI formatting can be reconfigured with the help of the hox.corem.servlets.ResourceUriFormat class. In this chapter, the possibilities offered by this class are described. 

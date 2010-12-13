@@ -1,3 +1,0 @@
-
-
-The Search Engine Feeder reads its configuration file again when restarted. Some fatal errors also require manual restarts. In the default configuration the Search Engine Feeder restarts automatically after errors regarding the CoreMedia Search Engine.

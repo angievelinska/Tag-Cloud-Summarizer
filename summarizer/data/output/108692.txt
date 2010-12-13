@@ -1,5 +1,0 @@
-
-
-
-
-The user in group G can edit the article in folder F2. There is an implicit navigate through right for folder F1. The example above is equivalent to:

@@ -1,7 +1,0 @@
-
-
-Writes
-
-Grammar: EMPTY 
-
-In a Client, a Writes element declares that a variable may be viewed and modified. See Reads for details.

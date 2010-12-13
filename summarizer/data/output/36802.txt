@@ -1,7 +1,0 @@
-
-
-Date
-
-Grammar: EMPTY 
-
-The Date element is used to specify a single constant date value within expressions or variable initializers.

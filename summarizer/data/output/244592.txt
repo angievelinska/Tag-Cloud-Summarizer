@@ -1,3 +1,0 @@
-
-
-An out-of-the-box solution for Active Directory servers that only needs configuration. The class com.coremedia.ldap.ad.ActiveDirectoryUserProvider subclasses com.coremedia.ldap.LdapUserProvider. The example properties file properties/corem/jndi-ad.properties must contain the mandatory properties listed above for the LdapUserProvider. All AD groups are considered to be content-server groups.

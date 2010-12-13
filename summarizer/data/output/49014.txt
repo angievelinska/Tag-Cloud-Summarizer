@@ -1,6 +1,0 @@
-
-
-If you specify more than one predicate, the first one whose from and to expressions match will be used. 
-
-
-Example:

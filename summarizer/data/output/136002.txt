@@ -1,4 +1,0 @@
-
-
- Attribute Value Default Description mimeType MIME-Type */* (all types) The MIME-Type of Blob values that should be indexed. maxSize size in byte -1 (unlimited) The maximum size of Blob values to index. Use -1 for no limitation.
-

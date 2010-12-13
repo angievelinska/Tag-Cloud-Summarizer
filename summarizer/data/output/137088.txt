@@ -1,7 +1,0 @@
-
-
-Blob
-
-Grammar: EMPTY 
-
-The Blob element is used to specify a single constant blob value within expressions or variable initializers.
