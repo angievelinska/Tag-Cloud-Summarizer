@@ -1,8 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 The style file: ieeetr.bst
 Database file #1: references.bib
+Warning--I didn't find a database entry for "hoppe:2010"
 Warning--empty booktitle in probabilistic77
 Warning--can't use both volume and number fields in probabilistic77
+Warning--empty booktitle in VSM_Salton89
 Warning--empty journal in Dumais2006
 Warning--empty booktitle in suffixTreeClustering99
-(There were 4 warnings)
+(There were 6 warnings)

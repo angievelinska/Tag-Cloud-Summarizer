@@ -1,32 +1,52 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Information Retrieval systems}{6}{section.1.2}
-\contentsline {section}{\numberline {1.3}Goal and scope of work}{7}{section.1.3}
-\contentsline {section}{\numberline {1.4}Outline}{8}{section.1.4}
-\contentsline {chapter}{\numberline {2}Latent Semantic Analysis}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Information Retrieval process}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Document representation}{9}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Vector Space Model}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Weight functions}{12}{subsection.2.2.2}
-\contentsline {subsubsection}{Term frequency - inverse document frequency}{12}{section*.6}
-\contentsline {subsubsection}{Log - entropy}{13}{section*.7}
-\contentsline {subsection}{\numberline {2.2.3}Similarity measures}{13}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Latent Semantic Analysis}{14}{section.2.3}
-\contentsline {section}{\numberline {2.4}Singular Value Decomposition}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}Querying the semantic space}{17}{section.2.5}
-\contentsline {section}{\numberline {2.6}Factors which influence LSA performance}{18}{section.2.6}
-\contentsline {chapter}{\numberline {3}Cluster labeling}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Clustering}{19}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Clustering classification}{19}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Clustering algorithm??}{21}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Cluster labeling}{21}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Formal framework for cluster labeling algorithms}{22}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Algorithms for cluster labeling}{22}{subsection.3.2.2}
-\contentsline {subsubsection}{Weighted Centroid Covering}{22}{section*.9}
-\contentsline {subsubsection}{Descriptive k-means}{22}{section*.10}
-\contentsline {subsubsection}{Lingo}{23}{section*.11}
-\contentsline {section}{\numberline {3.3}Cluster labeling using external knowledge}{23}{section.3.3}
-\contentsline {chapter}{Acronyms}{24}{section*.12}
-\contentsline {chapter}{\numberline {A}Ontology}{25}{appendix.A}
-\contentsline {chapter}{\numberline {B}Tag Cloud Summarizer}{27}{appendix.B}
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{6}{section.1.1}
+\contentsline {section}{\numberline {1.2}Information Retrieval systems}{8}{section.1.2}
+\contentsline {section}{\numberline {1.3}Goal and scope of work}{9}{section.1.3}
+\contentsline {section}{\numberline {1.4}Outline}{10}{section.1.4}
+\contentsline {chapter}{\numberline {2}Latent Semantic Analysis}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Information Retrieval process}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Document representation}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Vector Space Model}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Weight functions}{14}{subsection.2.2.2}
+\contentsline {subsubsection}{Term frequency - inverse document frequency}{14}{section*.7}
+\contentsline {subsubsection}{Log - entropy}{15}{section*.8}
+\contentsline {subsection}{\numberline {2.2.3}Similarity measures}{16}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Latent Semantic Analysis}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Singular Value Decomposition}{18}{section.2.4}
+\contentsline {section}{\numberline {2.5}Querying the semantic space}{19}{section.2.5}
+\contentsline {section}{\numberline {2.6}Factors which influence LSA performance}{20}{section.2.6}
+\contentsline {chapter}{\numberline {3}Cluster labeling}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Clustering}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Clustering algorithms}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Clustering algorithm??}{22}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Cluster labeling}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Formal framework for cluster labeling algorithms}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Algorithms for cluster labeling}{27}{subsection.3.2.2}
+\contentsline {subsubsection}{Weighted Centroid Covering}{27}{section*.10}
+\contentsline {subsubsection}{Descriptive k-means}{27}{section*.11}
+\contentsline {subsubsection}{Lingo}{27}{section*.12}
+\contentsline {section}{\numberline {3.3}Cluster labeling using external knowledge}{29}{section.3.3}
+\contentsline {chapter}{\numberline {4}Tag Clouds}{30}{chapter.4}
+\contentsline {section}{\numberline {4.1}existing implementations}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}use}{31}{section.4.2}
+\contentsline {section}{\numberline {4.3}1}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}Brainstorming}{33}{section.4.4}
+\contentsline {section}{\numberline {4.5}Tag clouds construction}{33}{section.4.5}
+\contentsline {chapter}{\numberline {5}Implementation and evaluation}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Measures for evaluation}{35}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Evaluation of LSA}{35}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Evaluation of algorithms for cluster labeling}{35}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}LSA implementation}{36}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Latest development in the field of LSA}{36}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}Tag Cloud implementation}{36}{section.5.3}
+\contentsline {section}{\numberline {5.4}Tools used}{36}{section.5.4}
+\contentsline {section}{\numberline {5.5}Advantages and drawbacks}{37}{section.5.5}
+\contentsline {section}{\numberline {5.6}Experimental evaluation}{37}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Document set}{37}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Cluster labeling evaluation}{39}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Results}{39}{subsection.5.6.3}
+\contentsline {section}{\numberline {5.7}LSA evaluation from IR book}{39}{section.5.7}
+\contentsline {chapter}{Acronyms}{41}{section*.15}
+\contentsline {chapter}{\numberline {A}Ontology}{42}{appendix.A}
+\contentsline {chapter}{\numberline {B}Tag Cloud Summarizer}{44}{appendix.B}

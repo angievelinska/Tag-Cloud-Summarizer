@@ -1,17 +1,17 @@
 \chapter{Cluster labeling}
-A major problem in text analysis is to determine the topics in a text collection and identify the most important or significant relationships between them. Clustering and visualizations (tag clouds) are key analysis methods in order to address this problem.  In this chapter, we discuss three novel algorithms for cluster labeling, and in Chapter~\ref{sec:tagclouds} we shall introduce tag clouds as a visualization mean in \gls{IR} systems. \\
+A major problem in text analysis is to determine the topics in a text collection and identify the most important or significant relationships between them. Clustering and visualizations (tag clouds) are key analysis methods in order to address this problem.  In this chapter, we discuss three algorithms for cluster labeling, which are relatively new, and in Chapter~\ref{sec:tagclouds} we will introduce tag clouds as a visualization mean in \gls{IR} systems. \\
 
 \section{Clustering}
 Clustering is an \gls{IR} method that groups objects (documents) together based on their similarities in so called clusters. Such methods are often applied in the post processing phase of \gls{IR}~(fig.~\ref{fig:text_analysis}) for visualization of retrieved results. For example, similar search results can be grouped together during presentation of results in search engines. This should help users gain a quick overview of the retrieved results. It is important to choose suitable labels of the categories defined in this way, so that they are usable to human users. The process of cluster labeling creates labels for these clustered groups of objects.  \\
 
-\subsection{Clustering classification}
+\subsection{Clustering algorithms}
 A large variety of clustering algorithms exists, and they are usually classified according to the characteristic of their output structure. Jain et al.~\cite{clusteringJain99} make a classification based on the following properties: \\
 
 \textbf{Flat vs. hierarchical clustering} \\
-Flat clustering creates a flat set of clusters without relations between clusters due to some structure. Hierarchical clustering creates a hierarchy of clusters, with parents and children, in a tree-like manner. \\
+\textit{Flat clustering} creates a flat set of clusters without relations between clusters due to some structure. \textit{Hierarchical clustering} on the other hand creates a hierarchy of clusters, with parents and children, in a tree-like manner. \\
 
 \textbf{Hard vs. soft clustering}\\
-Another important distinction can be made between hard and soft clustering algorithms. If each document is assigned to a single cluster only, we have hard clustering. Otherwise, clustering is soft, and it assigns a document as a distribution over all clusters. This means that each document has a fractional membership in several clusters. \gls{LSA}~(Chapter~\ref{sec:lsa}) is a good example for a soft clustering algorithm. K-means is a popular example for hard clustering. \\
+Another important distinction can be made between \textit{hard} and \textit{soft} (also called fuzzy) clustering algorithms. If each document is assigned to a single cluster only, we have hard clustering. Otherwise, clustering is soft, and it assigns a document as a distribution over all clusters. This means that each document can have a fractional membership in several clusters. \gls{LSA}~(Chapter~\ref{sec:lsa}) is a good example for a soft clustering algorithm. K-means, first introduced by Lloyd~\cite{kmeans_Lloyd82}, is a popular example for hard clustering. \\
 
 
 \textbf{Monothetic vs. polythetic clustering} \\
@@ -19,19 +19,8 @@ Based on how documents are assigned to different clusters, clustering can be div
 
 
 \textbf{Partial vs. complete clustering} \\
-Complete clustering assigns each document to a cluster. Partial clustering, on the other hand, doesn't assign all document to clusters. \\
+\textit{Complete clustering} assigns each document to a cluster. \textit{Partial clustering}, on the other hand, leaves some documents unassigned. \\
 
-
-Carpineto et al.~\cite{surveyWebClusteringEngines2009} claim that there is a difference between clustering of data sets, and clustering of search results, returned from search engines: "in search results clustering description comes first". Thus, in contrast to the classical categorization of clustering algorithms,  they propose a classification based on how well the clustering algorithms can generate sensible, comprehensive and compact cluster labels, and divide algorithms in the following three categories:  \\
-
-\textbf{Data-centric algorithms} \\
-Data-centric algorithms were the first ones to be implemented for cluster labeling. Here, clustering is done with some general clustering algorithm, and terms which are close to the cluster centroids are nominated as cluster labels. Cluster centroids are a collection of independent terms from all documents not related to each other. In order to define the terms from cluster centroid, one uses a frequency measure, such as $tf-idf$~(fig.~\ref{lsa:tf_idf}). We present \gls{WCC}~(see~\ref{clustering:WCC}) as an example for a data-centric clustering algorithm.  \\
-
-\textbf{Description-aware algorithms} \\
-Description-aware algorithms assign labels during clustering process. Using monothetic term selection, one nominates the labels which are interpretable to human users. Suffix Tree Clustering is an example of such an algorithm, introduced by Zamir and Etzioni~\cite{suffixTreeClustering99}. Clustering and labeling are closely related, and labeling influences the clustering process. Therefore, it is not possible to combine the labeling with any clustering algorithm. \\
-
-\textbf{Description-centric algorithms} \\
-These algorithms operate on the principle \textit{"description comes first"}, and in this sense are the opposite of the data-centric algorithms. The goal here is to find meaningful cluster labels. If there is not suitable label found, the cluster is useless for the users, and therefore is discarded. Description-centric algorithms are mainly applied for clustering of search results~(see~\cite{surveyWebClusteringEngines2009}). We will introduce next two examples of such algorithms - Descriptive k-means~(see Section~\ref{clustering:descriptive_k-means}) and LINGO~(see Section~\ref{clustering:lingo}). \\ 
 
 \subsection{Clustering algorithm??}
 \label{clustering:algos}
@@ -40,28 +29,160 @@ We implement in this work ? clustering algorithm, therefore what follows is an o
 
 
 \section{Cluster labeling}
-There is not a commonly accepted definition of cluster labeling in literature, as it is a relatively young field of research, as compared to clustering. \\
 
-Assume that a categorization of a document set is determined using an unsupervised approach. To present this categorization to a user, it is convenient to label the individual categories with characteristic terms. These terms, called \textit{category labels}, should characterize the content of the associated category with respect to the remaining categories. This property implies that cluster labeling should summarize a category's content and that it should discriminate a category from the other categories. This section states desired properties of category labels and reviews three algorithms which generate such labels. It further makes a  proposition for improvement of \gls{WCC}~(section~\ref{clustering:WCC}) topic identification method, and evaluates it using hierarchical clustering. \\
+There exists no commonly accepted definition of cluster labeling in literature, as it is a relatively  young field of research, as compared to clustering. Assume that a categorization of a document set is determined using an unsupervised approach (e.g. clustering). To present this categorization to a user, it is convenient to label the individual categories with characteristic terms. These terms, called \textit{category labels}, should characterize the content of the associated category with respect to the remaining categories. This implies that cluster labeling should \textit{summarize} a category's content and that it should \textit{discriminate} a category from the other categories. This section states desired properties of category labels and reviews three algorithms which generate such labels. It further makes a  proposition for improvement of \gls{WCC}~(section~\ref{clustering:WCC}) topic identification method, and evaluates it using hierarchical clustering. \\
 
 
 When performing classification by clustering, the cluster labels are usually manually created by humans. However, this is a  very expensive approach. It is sensible to find and algorithm for automatically identifying topic labels or cluster labels. Therefore, we have chosen to present three new algorithms for cluster labeling, which offer improvements in different aspects of the classical methods used until now. We further implement the Weighted Centroid Covering algorithm  by Stein and zu Eissen\cite{Stein04topicidentification}, and make an evaluation of its performance. We also propose to improve \gls{WCC} using external semantic knowledge. Therefore, we have developed a domain ontology for CoreMedia \gls{CMS} domain, which is the use case of this work. \\
 
-Some clustering algorithms attempt to find a set of labels first and then build
-(often overlapping) clusters around the labels, thereby avoiding the problem
-of labeling altogether (Zamir and Etzioni 1999, Käki 2005, Osi ´nski andWeiss
-2005). \\
+Some clustering algorithms attempt to find a set of labels first and then build (often overlapping) clusters around the labels, thereby avoiding the problem of labeling altogether (Zamir and Etzioni 1999, Käki 2005, Osi ´nski andWeiss 2005). \\
+
+Carpineto et al.~\cite{surveyWebClusteringEngines2009} claim that there is a difference between clustering of data sets, and clustering of search results, returned from search engines: "in search results clustering description comes first". Thus, in contrast to the classical categorization of clustering algorithms we previously outlined,  they propose a classification based on how well the clustering algorithms can generate sensible, comprehensive and compact cluster labels, and divide algorithms in the following three categories:  \\
+
+\textbf{Data-centric algorithms} \\
+Data-centric algorithms were the first ones to be implemented for cluster labeling. Here, clustering is done with some general clustering algorithm, and terms which are close to the cluster centroids are nominated as cluster labels. Cluster centroids are a collection of independent terms from all documents not related to each other. In order to define the terms from cluster centroid, one uses a frequency measure, such as $tf-idf$~(eq.~\ref{lsa:tf_idf}). We present \gls{WCC}~(see~\ref{clustering:WCC}) as an example for a data-centric clustering algorithm.  \\
+
+\textbf{Description-aware algorithms} \\
+While data-centric algorithms don't consider word order, and process documents as "a bag of words", description-aware algorithms process ordered sequence of words (phrases), instead of terms, as candidate labels, and assign labels during clustering process, not after it. Using monothetic term selection, one nominates frequent phrases containing a noun head as labels, which are interpretable to human users.  Clustering and labeling are closely related, and labeling influences the clustering process. Therefore, it is not possible to combine the labeling with any clustering algorithm. \gls{STC} is an example of a description-aware algorithm, introduced by Zamir and Etzioni~\cite{suffixTreeClustering99}. \gls{STC} builds a tree from the most frequent phrases in documents by using the data structure \textit{suffix tree}~\cite{suffixTreeClustering99}. It group documents that have common phrases under the same nodes of the tree. Thus, all documents below a given node contain the phrase at the node. \\
+
+\textbf{Description-centric algorithms} \\
+These algorithms operate on the principle \textit{"description comes first"}, and in this sense are the opposite of the data-centric algorithms. The goal here is to find meaningful cluster labels. If there is not suitable label found, the cluster is useless for the users, and therefore is discarded. Description-centric algorithms are mainly applied for clustering of search results~(see~\cite{surveyWebClusteringEngines2009}). We introduce in this chapter two examples of such algorithms - Descriptive k-means and LINGO~(both presented in Section~\ref{clustering:lingo}). \\ 
 
 \subsection{Formal framework for cluster labeling algorithms}
-No uniformly agreed upon formal framework exists still for cluster labeling algorithms.  Stein and Meyer Zu Eissen~\cite{Stein04topicidentification} have given their formal definitions for cluster labeling algorithms. We base our definition on this source. \\ 
+When we use an unsupervised approach to categorize a collection of documents, such as clustering, we also need to label the categories defined, in order to present them to users. The category labels should characterize the given categories - labels should summarize category content, and should discriminate a category from other categories~\cite{Stein04topicidentification}. Until now, no uniformly agreed upon formal framework exists that defines the requirements for cluster labeling algorithms. There are publications which name desired properties for cluster labels (\cite{formal_cluster_labels2003},~\cite{dweiss2006} ), but they all give informal descriptions. Stein and Meyer Zu Eissen~\cite{Stein04topicidentification} have given their definitions for desired properties of cluster labeling algorithms as a formal framework. We base our definition below on this source. \\ 
 
+If we have an unstructured collection of documents $D$, a clustering algorithm creates a categorization for this collection in the form $ C = \{ c_{1}, c_{2}, ..., c_{k} \} $, where the sets $c_{i}$ are subsets of $D$, and their union covers $D$: $\cup_{c_{i}\in C} c_{i} = D$. When applying a hierarchical clustering algorithm, this implies a cluster labeling hierarchy $H_{C}$ over $C$. Then, $H_{C}$ is a tree and its nodes are the categories in $C$, having one node as a root. Let $c_{i}, c_{j} \in C, c_{i} \ne c_{j}$ are two categories. If $c_{j}$ is a child cluster of $c_{i}$, then $c_{i}$ is closer to the root of the hierarchy $H_{C}$, and we write $c_{i} \succ c_{j}$. \\
+
+For an existing categorization $C$, we therefore need  a cluster labeling $ \L = \{ l_{1}, l_{2}, ..., l_{k} \} $. \\ 
+
+
+Let $T = \cup_{d \in D}T_{d} $ is the term set in the given document collection $D$. As defined by Stein and Meyer zu Eissen~\cite{Stein04topicidentification}, a cluster labeling function $ \tau : c \shortrightarrow  \L $ assigns a cluster label to each cluster $ c \in C $, where $\L_{c} \subset T$. \\
+
+
+Thus, the following properties are desired for a cluster labeling function: \\
+\begin{enumerate}
+\item \textbf{Unique} \\
+Cluster labels should be unique. The same terms should not be assigned as cluster labels to more than one cluster, or no two labels should include the same terms from two different clusters. \\
+\begin{equation}
+\forall_{
+\substack{ c_{i},c_{j} \in C, \\ c_{i}\neq c_{j}}
+} : \tau(C_{i}) \cap \tau(C_{j}) = 0 
+\end{equation}
+
+ 
+\item \textbf{Summarizing} \\
+If possible, the label of a cluster $c$ should contain at least one term $t$ from each document $ d\in c$. Terms occurring in all documents, which are part of the cluster, represent it better than terms that occur only in few documents.  \\
+\begin{equation}
+\forall_{ c \in C}, \forall_{ d \in c} : \tau{c} \cap T_{d} \neq 0
+\end{equation}
+where $T_{d}$ is the set of terms in document $d$.
+
+\item \textbf{Discriminating} \\
+Apart from summarizing, terms in labels should be discriminating. They should contribute to discriminate the cluster from other clusters, i.e. the same terms should be present in a considerably smaller set of documents in the other clusters. In cluster label $c$ exists a term $t$ whose frequency of occurrence is relatively higher in the documents of the cluster as compared to other clusters. \\
+\begin{equation}
+\forall_{
+\substack{ c_{i},c_{j} \in C \\ c_{i}\neq c_{j}}} 
+ \exists_{ t \in T{c_{i}}} : \frac{tf_{c_{i}}(t)}{\left| c_{i} \right|} \ll \frac{tf_{c_{i}}(t)}{\left| c_{j} \right|} 
+\end{equation}
+Here, $T_{c_{i}}$ is the term set in category $c_{i}$, and $tf_{c_{i}} (t)$ is the term frequency of term $t$ in category $c_{i}$, or the sum of $tf (t)$ in all documents in cluster $c_{i}$ : $tf_{c_{i}} (t) = \sum_{d \in c_{i}}{tf_{d} (t)} $. \\ 
+
+
+\item \textbf{Expressive} \\
+Terms forming a label of cluster $c$ should have highest frequency of occurrence in the documents from $c$:
+\begin{equation}
+\forall_{c \in C} \forall_{d \in c} \forall_{t \in T_{d}} : tf_{d}(t) \leq tf_{d}(t'), t' \in \tau(c) 
+\end{equation} 
+Here, $tf_{d}(t)$ is the term frequency of occurrence of term $t$ in document $d$.
+
+\item \textbf{Contiguous} \\
+This property holds for consecutive terms, for example belonging to a phrase. Such cluster labels, containing consecutive terms, are more understandable to human users.
+\begin{equation}
+\forall_{c \in C} \forall_{
+\substack{t, t' \in \tau(c), \\ c_{i} \ne c_{j}}
+} \forall_{d \in c} \exists_{t_{i}, t_{i+1} \in T_{d}} : t_{i} = t \wedge t_{i+1} = t' 
+\end{equation}
+
+\item \textbf{Hierarchically consistent}
+\begin{equation}
+\forall_{
+\substack {c_{i}, c_{j} \in C, \\ c_{i} \ne c_{j}}
+} : c_{i} \succ c_{j} \Rightarrow P(t_{i} | t_{j}) = 1 \wedge P(t_{j} | t_{i}) < 1,
+\end{equation}
+where $t_{i} \in \tau(c_{i})$ and $ t_{j} \in \tau(c_{j}) $. This property is required only when using a hierarchical clustering algorithm (e.g. \gls{STC}~\cite{suffixTreeClustering99}).
+
+\item \textbf{Irredundant} \\
+Irredundancy complements the property \textit{unique}. Terms which are synonyms should be avoided in cluster labels. \\
+\begin{equation}
+\forall_{ c \in C}, \forall_{
+\substack{t,t' \in \tau{c}, \\ t \ne t'}
+} : \mbox{ t and t' are not synonyms } 
+\end{equation}
+
+\end{enumerate}
+
+The properties stated above describe ideal conditions and can only be approximated in the real world. One needs external knowledge (e.g. an ontology), in order to fulfill properties \textit{hierarchical consistency} and \textit{irredundancy}. \\
 
 \subsection{Algorithms for cluster labeling}
-We shall present three novel algorithms for cluster labeling. 
+We will present algorithms for cluster labeling, which are relatively new. 
 
 \subsubsection{Weighted Centroid Covering}
 \label{clustering:WCC}
-Weighted Centroid Covering - 2004
+Weighted Centroid Covering was first introduced by Stein and Meyer zu Eissen~\cite{Stein04topicidentification}. It is a data-centric algorithm, in which labels are generated from sets of frequently occurring terms. \\
+
+The algorithms consists of three stages. Having a clustering as input to the algorithm: 
+\begin{enumerate}
+\item for all words in the input clusters, it saves all $k$ most frequent occurrences of each word with its term frequency, and the cluster in which it occurs, to a data structure (say a vector).
+\item it sorts the tuples ($k$, $tf$, word, cluster) in a descending order, based on the frequency $tf$;
+\item it assigns $l$ number of terms to each cluster as labels. Therefore, in the end each cluster has a label of $l$ terms, assigned to it in a Round-Robin-like manner. \\
+
+A pseudo code of the algorithm is given as algorithm~\ref{algorithm_wcc}. Additionally, the major steps can be seen graphically in fig.~\ref{}.\\
+
+
+
+\end{enumerate}
+%\floatname{algorithm}{Procedure}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\begin{algorithm}
+\caption{Weighted Centroid Covering for cluster labeling}
+\label{algorithm_wcc}
+\begin{algorithmic}
+\REQUIRE $C$ - clustering  \\
+         $l$ - number of terms per label \\
+         $k$ - maximum occurrence of the same term in different labels 
+\ENSURE $\tau$ - labeling function
+\STATE $\L = 0$
+\STATE \textbf{foreach} $c$ in $C$ \textbf{do}
+\STATE $\tau(c) = 0; $
+\STATE \textbf{end foreach}
+\STATE \textbf{foreach} $t$ in $T$ \textbf{do}
+\FOR{$i = 1$ to $k$}
+\STATE compute $c = k(t,i)$ from $C;$
+\STATE add tuple $ \langle t, tf_{c}(t)\rangle$ to $\L;$
+\ENDFOR
+\STATE \textbf{end foreach}
+\STATE \textbf{sort} $\L$ according to descending term frequencies;
+\FOR{$labelcount = 1$ to $l$}
+\STATE $assigned = 0;$
+\STATE $j = 1;$
+\WHILE{$assigned < \left|C\right|$ \AND $j \le \left|\L\right| $}
+\STATE let $t_{j} = \langle t, tf_{c} (t)\rangle$ be $j^{th}$ tuple of \L;
+\IF{$\left|\tau(c)\right| < labelcount$}
+\STATE $\tau(c) = \tau(c) \cup \{t\}$;
+\STATE delete $t_{j}$ from $\L;$
+\STATE $assigned = assiged + 1;$
+\ENDIF
+\STATE $j = j + 1;$
+\ENDWHILE
+\ENDFOR 
+\STATE \textbf{foreach} $c$ in $C$ \textbf{do}
+\STATE \textbf{do} sort $\tau(c)$
+\STATE \textbf{end foreach}
+\RETURN $\tau;$
+\end{algorithmic}
+\end{algorithm}
+
+
 
 \subsubsection{Descriptive k-means}
 \label{clustering:descriptive_k-means}
