@@ -1,6 +1,6 @@
 
 TODOS:
-- LSA parses < 15 docs
+- LSA parses 13 < 15 docs
 - IteratorFactory cannot find "C"
 - debug tagcloud
 - copy files after LSA has run to c:\tmp

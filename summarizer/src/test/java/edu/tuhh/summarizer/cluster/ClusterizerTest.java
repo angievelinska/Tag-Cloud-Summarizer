@@ -4,7 +4,6 @@ import edu.tuhh.summarizer.common.PropertiesLoader;
 import edu.ucla.sspace.clustering.Assignment;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Properties;
@@ -12,7 +11,7 @@ import java.util.Properties;
 /**
  * @author avelinsk
  */
-@Ignore
+
 public class ClusterizerTest {
   Clusterizer clusterizer;
   Properties props;
@@ -28,7 +27,7 @@ public class ClusterizerTest {
     Assignment[] assignments = clusterizer.kMeansClustering();
     for (int i = 0; i < assignments.length; i++) {
       int[] assign = assignments[i].assignments();
-      System.out.println("Assignments " + i);
+      System.out.println("Assignments ");
       for (int j = 0; j < assign.length; j++) {
 
         System.out.print(assign[j]);
@@ -43,7 +42,7 @@ public class ClusterizerTest {
     Assignment[] assignments = clusterizer.hierarchicalAgglomerativeClustering();
     for (int i = 0; i < assignments.length; i++) {
       int[] assign = assignments[i].assignments();
-      System.out.println("Assignments " + i);
+      System.out.println("Assignments " );
       for (int j = 0; j < assign.length; j++) {
 
         System.out.print(assign[j]);

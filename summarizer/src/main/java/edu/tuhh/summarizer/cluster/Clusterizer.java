@@ -31,7 +31,7 @@ public class Clusterizer {
   public Assignment[] hierarchicalAgglomerativeClustering() {
     HierarchicalAgglomerativeClustering hiearcluster = new HierarchicalAgglomerativeClustering();
     props.setProperty("CLUSTER_SIMILARITY_PROPERTY", "-1");
-    props.setProperty("SIMILARITY_FUNCTION_PROPERTY", "COSINE");
+    props.setProperty("edu.ucla.sspace.clustering.HierarchicalAgglomerativeClustering.simFunc", Similarity.SimType.COSINE.name());
     Assignment[] assignment = hiearcluster.cluster(matrix,20,props);
     return assignment;
 
