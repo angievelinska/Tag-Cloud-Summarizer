@@ -1,14 +1,18 @@
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Workflow in IR systems}}{8}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Workflow in IR systems}}{9}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Information Retrieval process}}{12}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The Vector Space Model}}{13}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagram of truncated SVD}}{18}{figure.caption.9}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Information Retrieval process}}{13}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The Vector Space Model}}{14}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagram of truncated SVD}}{19}{figure.caption.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Cluster labeling using WCC}}{30}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Cluster labeling using WCC with external knowledge}}{33}{figure.caption.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A tag cloud.}}{36}{figure.caption.13}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Tag clouds in collaborative information services}}{38}{figure.caption.14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Tag Cloud\relax }}{32}{figure.caption.13}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Upper level domain specific ontology}}{43}{figure.caption.17}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Upper level domain specific ontology}}{52}{figure.caption.21}
 \addvspace {10\p@ }

@@ -1,9 +1,9 @@
 \chapter{Implementation and evaluation}
 \label{sec:implementation}
 
-\begin{summary}
-This chapter reports the implemented solution for the given thesis problem, presents experimental results, and discusses its advantages and disadvantages.
-\end{summary}
+%\begin{summary}
+%This chapter reports the implemented solution for the given thesis problem, presents experimental %results, and discusses its advantages and disadvantages.
+%\end{summary}
 
 
 It is a challenge by itself to come up with a sensible evaluation set for an IR implementation. ... Define here precision, recall, measures , how to measure LSA performance with  diff. k, clusters, cluster labelling. \\
@@ -23,7 +23,7 @@ F-measure:\\
 \label{sec:implementation:lsa_impl}
 \gls{LSA} was applied to a collection of 11818 words in 4000 documents, all of which describe CoreMedia \gls{CMS} 5.2. The algorithm took  63552 ms for preprocessing and indexing of the whole document collection. \\
 
-For the implementation of LSA this work uses the open LSA library which is part of Semantic Spaces Project\cite{S-Space}. It is developed at the Natural Language Processing Group at the University of California at Berkley (UCLA)\footnote{\url{http://code.google.com/p/airhead-research/}}.\\
+For the implementation of LSA this work uses the open LSA library which is part of Semantic Spaces Project\cite{S-Space}. It is developed at the Natural Language Processing Group at the University of California at Berkley (UCLA)\footnote{\url{http://code.google.com/p/airhead-research/}, accessed December, 2010}.\\
 
 The real difficulty of LSA is to find out how many dimensions to remove - the problem of dimensionality.\\
 
@@ -37,13 +37,15 @@ at the end- improvements of lsa with the basics explained.\\
 
 \section{Tag Cloud implementation}
 \label{sec:implementation:tag_cloud}
-The implemented open source library used for tag cloud generation is called Opencloud\footnote{\url{http://opencloud.mcavallo.org/}}, and is provided by Marco Cavallo.\\
+The implemented open source library used for tag cloud generation is called Opencloud\footnote{\url{http://opencloud.mcavallo.org/}, accessed December, 2010}, and is provided by Marco Cavallo.\\
+
+Tag clouds can be generated automatically by using the most frequent words, by removing stop words, etc. preprosessing. They can also be custom made, by using important concepts retrieved after \gls{IR} task has been performed - e.g. on search results, on main concepts as in our case, based on concepts retrieved using \gls{LSA}. \\
 
 \section{Tools used}
 \label{sec:implementation:tools_used}
 Airhead Research\footnote{\url{http://code.google.com/p/airhead-research/}} project was used as a semantic spaces Package which provides a java-based implementation of \gls{LSA}.\\
 
-Apache Lucene\footnote{\url{http://lucene.apache.org/java/3_0_2/}} was used as an indexing and search library.
+Apache Lucene\footnote{\url{http://lucene.apache.org/java/3_0_2/}, accessed December, 2010} was used as an indexing and search library.
 
 \section{Advantages and drawbacks}
 \label{sec:lsa:adv_disadv}
@@ -87,10 +89,11 @@ Category Id & Category & Document \# \\
 The document set used for evaluation consists of 3 categories, and 15 documents - each category has 5 documents, and the documents have different length. Table~\ref{eval:data_set} gives an overview of the constructed data sets. The document preprocessing involves parsing and stop word removal according to standard stop word lists. \\
 
 % TODO: correct text wrapping - fix column width for document text
-\begin{landscape}
+%\begin{landscape}
 \begin{table} [!ht]
 \begin{center}
-\begin{tabular} { c c lp{10cm} }
+%\begin{tabular} { c c p{18cm} }
+\begin{tabular} { c c p{10cm} }
 \hline
 Doc. Id & Cat. Id & Document \\
 \hline
@@ -117,7 +120,7 @@ Doc. Id & Cat. Id & Document \\
 \label{eval:data_set}
 \end{center}
 \end{table}
-\end{landscape}
+%\end{landscape}
 
 
 \subsection{Cluster labeling evaluation}

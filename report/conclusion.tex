@@ -1,18 +1,28 @@
 \chapter{Conclusion and outlook}
 \label{sec:conclusion}
 
-\begin{summary}
-summarize me
-\end{summary}
+Search applications process huge amounts of information. Presenting this information to the users is an important part of these applications, and can improve their usability. We applied clustering as a method to organize search results into browsable groups of documents. In order to present these prepared groups of documents to the end users, informative and summarizing cluster labels are needed. Therefore, we evaluated the implementation of \gls{WCC} cluster labeling method, and outlined a proposal for its improvement. \\
 
-\section{1}
-\label{sec:conclusion:1}
+With respect to the problem of how to present many search results to users, we implemented a tag cloud, which summarizes the main concepts in search results, thus acting as a visualization mean. 
+
 
 \section{Future Work}
-\begin{enumerate}
-\item implement LSA based IR in full-text search results, or as recommendation.
-\item link tags from tag cloud to the documents where they occur (using lucene indexing ???)
-\item investigate also the case of updating the document collection - how to handle this case
-\item Improve TagCloudSummarizer to work also with German texts (company has a website that support German, Russian, French..)
-\item Make the process run in parallel.
-\end{enumerate}
+The goals set for this project and given in section~\ref{sec:goal_scope} were reached. The project can still be developed further. Below, we outline our proposals for future work. \\
+
+\subsection{Implementation}
+
+! Implement the prototype as a part of DocMachine\footnote{\url{https://documentation.coremedia.com/}} - the online documentation system at CoreMedia AG, Hamburg.
+
+\subsubsection{LSA}
+One of the major drawbacks in implementing \gls{LSA} is that computing \gls{SVD} for large matrices when applied to large document sets is computationally expensive. It has been stated that it is possible to compute \gls{SVD} in an incremental manner, and with reduced resources via neural-network like approach~\cite{brand06}. However, currently there is no Java-based implementation of this algorithm. As this project is developed using Java, it remains as future work to implement the fast incremental \gls{SVD} computation, proposed by Brand~\cite{brand06} in Java, in order to use it in this work. \\
+
+\subsubsection{Cluster labeling}
+Other clustering methods can be investigated, such as \gls{STC}, which preserves the word order in documents, by presenting them in the form of a tree. Cluster labeling using \gls{STC} involves also using phrases as candidate labels, instead of separate terms, which improves usability, as compared 
+to the investigates \gls{WCC} algorithm. \\
+
+\subsubsection{Cluster labeling using external knowledge}
+Due to time constraints, it remains for future work to evaluate and present experimental results on running \gls{WCC} algorithm for cluster labeling with external knowledge from an ontology. \\
+
+\subsection{Testing}
+A larger set of document can be used for evaluation and testing of our implementation. In this work we carried out tests on a document set consisting only of 15 documents in 3 categories. Research has shown, however, that \gls{LSA} perform better when applied to document collections above 3000 documents, each of which larger than $\approx 60$ words, testing our implementation on a larger document collection remains as future work. \\
+

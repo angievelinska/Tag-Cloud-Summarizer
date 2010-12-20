@@ -20,32 +20,39 @@
 \BOOKMARK [0][-]{chapter.3}{3 Cluster labeling}{}% 20
 \BOOKMARK [1][-]{section.3.1}{3.1 Clustering}{chapter.3}% 21
 \BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Clustering algorithms}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Clustering algorithm??}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 K-means clustering algorithm}{section.3.1}% 23
 \BOOKMARK [1][-]{section.3.2}{3.2 Cluster labeling}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Formal framework for cluster labeling algorithms}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Algorithms for cluster labeling}{section.3.2}% 26
-\BOOKMARK [1][-]{section.3.3}{3.3 Cluster labeling using external knowledge}{chapter.3}% 27
-\BOOKMARK [0][-]{chapter.4}{4 Tag Clouds}{}% 28
-\BOOKMARK [1][-]{section.4.1}{4.1 existing implementations}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.2}{4.2 use}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.3}{4.3 1}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.4}{4.4 Brainstorming}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.5}{4.5 Tag clouds construction}{chapter.4}% 33
-\BOOKMARK [0][-]{chapter.5}{5 Implementation and evaluation}{}% 34
-\BOOKMARK [1][-]{section.5.1}{5.1 Measures for evaluation}{chapter.5}% 35
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Evaluation of LSA}{section.5.1}% 36
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Evaluation of algorithms for cluster labeling}{section.5.1}% 37
-\BOOKMARK [1][-]{section.5.2}{5.2 LSA implementation}{chapter.5}% 38
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Latest development in the field of LSA}{section.5.2}% 39
-\BOOKMARK [1][-]{section.5.3}{5.3 Tag Cloud implementation}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.4}{5.4 Tools used}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.5}{5.5 Advantages and drawbacks}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.6}{5.6 Experimental evaluation}{chapter.5}% 43
-\BOOKMARK [2][-]{subsection.5.6.1}{5.6.1 Document set}{section.5.6}% 44
-\BOOKMARK [2][-]{subsection.5.6.2}{5.6.2 Cluster labeling evaluation}{section.5.6}% 45
-\BOOKMARK [2][-]{subsection.5.6.3}{5.6.3 Results}{section.5.6}% 46
-\BOOKMARK [1][-]{section.5.7}{5.7 LSA evaluation from IR book}{chapter.5}% 47
-\BOOKMARK [0][-]{section*.15}{Acronyms}{}% 48
-\BOOKMARK [0][-]{appendix.A}{A Ontology}{}% 49
-\BOOKMARK [0][-]{appendix.B}{B Tag Cloud Summarizer}{}% 50
-\BOOKMARK [0][-]{references.0}{Bibliography}{}% 51
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Clustering and labeling}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Formal framework for cluster labeling algorithms}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Weighted Centroid Covering}{section.3.2}% 27
+\BOOKMARK [1][-]{section.3.3}{3.3 TODO: Cluster labeling using external knowledge}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 TODO: Ontology as a source of external knowledge}{section.3.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 TODO: Weighted Centroid Covering augmented by an ontology}{section.3.3}% 30
+\BOOKMARK [0][-]{chapter.4}{4 Tag Clouds}{}% 31
+\BOOKMARK [1][-]{section.4.1}{4.1 Introduction}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.2}{4.2 Tag clouds generation}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Tag cloud layout}{section.4.2}% 34
+\BOOKMARK [1][-]{section.4.3}{4.3 Existing implementations}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{4.4 Conclusion}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{5 Implementation and evaluation}{}% 37
+\BOOKMARK [1][-]{section.5.1}{5.1 Measures for evaluation}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Evaluation of LSA}{section.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Evaluation of algorithms for cluster labeling}{section.5.1}% 40
+\BOOKMARK [1][-]{section.5.2}{5.2 LSA implementation}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Latest development in the field of LSA}{section.5.2}% 42
+\BOOKMARK [1][-]{section.5.3}{5.3 Tag Cloud implementation}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.4}{5.4 Tools used}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.5}{5.5 Advantages and drawbacks}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.6}{5.6 Experimental evaluation}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.6.1}{5.6.1 Document set}{section.5.6}% 47
+\BOOKMARK [2][-]{subsection.5.6.2}{5.6.2 Cluster labeling evaluation}{section.5.6}% 48
+\BOOKMARK [2][-]{subsection.5.6.3}{5.6.3 Results}{section.5.6}% 49
+\BOOKMARK [1][-]{section.5.7}{5.7 LSA evaluation from IR book}{chapter.5}% 50
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion and outlook}{}% 51
+\BOOKMARK [1][-]{section.6.1}{6.1 Future Work}{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Implementation}{section.6.1}% 53
+\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Testing}{section.6.1}% 54
+\BOOKMARK [0][-]{section*.19}{Acronyms}{}% 55
+\BOOKMARK [0][-]{appendix.A}{A Ontology}{}% 56
+\BOOKMARK [0][-]{appendix.B}{B Tag Cloud Summarizer}{}% 57
+\BOOKMARK [0][-]{references.0}{Bibliography}{}% 58

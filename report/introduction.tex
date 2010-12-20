@@ -23,7 +23,7 @@ The factors listed above have lead to the development of techniques that assist 
 
 \enlargethispage{+\baselineskip}
 
-After documents have been clustered into categories according to their topics, they have to be presented to the users. In particular, the categories have to be labeled with characteristic terms for browsing. Which words from the cluster to choose as labels is a difficult problem to solve. This work presents algorithms for cluster labeling. It evaluates an interesting new algorithm, called \gls{WCC}, proposed in \cite{Stein04topicidentification} and \cite{Stein07topicidentification}. Further, it proposes an improvement of \gls{WCC} by using external semantic knowledge for definition of the cluster labels, provided by a domain-specific ontology, which was developed as a part of this work.\\
+After documents have been clustered into categories according to their topics, they have to be presented to the users. In particular, the categories have to be labeled with characteristic terms for browsing. Which words from the cluster to choose as labels is a difficult problem to solve. This work presents a relatively new algorithm for cluster labeling, called \gls{WCC}~(Stein and Meyer zu Eissen~\cite{Stein04topicidentification}, \cite{Stein07topicidentification}). It evaluates it and proposes an improvement of \gls{WCC} by using external semantic knowledge for definition of the cluster labels. We also develop a domain-specific ontology as a source of external knowledge as a part of this work.\\
 
 
 \section{Information Retrieval systems}
@@ -48,17 +48,18 @@ The workflow in fig.~\ref{fig:text_analysis} doesn't show any iterations or cycl
 The focus of the current work is on transformation, analysis and post-processing phases of \gls{IR} workflow. 
 
 \section{Goal and scope of work}
+\label{sec:goal_scope}
 This works contributes with the following:
 \begin{enumerate}
-\item It offers an overview of the current cluster labeling algorithms, and makes an evaluation of \gls{WCC}, proposed for unsupervised topic labeling of clusters in \cite{Stein04topicidentification} and \cite{Stein07topicidentification}.
-\item It proposes an improvement in \gls{WCC} algorithm, performing topic identification based on external knowledge. A light-weight ontology has been developed for this purpose, in order to be used as a reference for external semantic knowledge during cluster labeling. 
+\item It  makes an evaluation of Weighted Centroid Covering algorithm, proposed for unsupervised topic labeling of clusters~(\cite{Stein04topicidentification} and \cite{Stein07topicidentification}.
+\item It proposes an improvement in \gls{WCC} algorithm, performing topic identification based on external knowledge. A light-weight domain-specific ontology has been developed for this purpose, in order to be used as a reference for external semantic knowledge during cluster labeling. 
 
 \enlargethispage{-\baselineskip}
 
-\item A software application for executing an IR process has been developed. It implements \gls{LSA} for information retrieval(analysis phase from fig.~\ref{fig:text_analysis}, and \gls{WCC} for visualization of the main concepts contained in a document set in the form of a tag cloud. \\
+\item A software application for executing an IR process has been developed. It implements \gls{LSA} for information retrieval~(analysis phase from fig.~\ref{fig:text_analysis}), and \gls{WCC} for visualization of the main concepts contained in a document set in the form of a tag cloud. \\
 \end{enumerate}
 
 
 \section{Outline}
-This chapter motivates the presented research work, and summarizes its contributions. It also offers a general overview to the phases of text analysis, common to most \gls{IR} systems. Chapter 2 gives theoretical foundations for preprocessing and transformation phases of text analysis, and reviews a specific technique for information retrieval, called Latent Semantic Analysis. Chapter 3 contains the contribution related to evaluation of \gls{WCC} algorithm, and a proposal for its improvement, by using a light-weight domain ontology. It is the analytical phase of the \gls{IR} process. Chapter 4 refers to the post-processing phase of text analysis, giving the visualization means for presenting the main concepts retrieved from a document set. The software contribution, developed as a part of this work, is described in Chapter 5. Finally, in Chapter 6 the thesis concludes with evaluation of results and outlook.\\
+This chapter motivates the presented work, and summarizes its contributions. It also offers a general overview to the phases of text analysis, common to most \gls{IR} systems. Chapter 2 gives theoretical foundations for preprocessing and transformation phases of text analysis, and reviews a specific technique for information retrieval, called Latent Semantic Analysis. In Chapter 3 we evaluate \gls{WCC} algorithm, and propose an improvement for it, by using a light-weight domain-specific ontology. Chapter 4 refers to the post-processing phase of text analysis, giving the visualization means to present the main concepts retrieved from a document set as a tag cloud. The software contribution, developed as a part of this work, is described in Chapter 5, where we also present test results, and make evaluation of the implementation. Finally, in Chapter 6 the thesis concludes with ideas for future work.\\
 

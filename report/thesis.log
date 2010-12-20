@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.15)  16 DEC 2010 00:55
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.15)  20 DEC 2010 13:29
 entering extended mode
 **thesis.tex
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.tex
@@ -572,20 +572,20 @@ Package glossaries Info: Writing glossary file thesis.glo on input line 32.
 Package glossaries Info: Writing glossary file thesis.acn on input line 32.
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
 \c@lstlisting=\count143
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
@@ -598,7 +598,7 @@ Package: ltcaption 2008/03/28 v1.2 longtable captions (AR)
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 61.
+Package hyperref Info: Link coloring OFF on input line 62.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -611,9 +611,9 @@ Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 )
 \c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 61.
-LaTeX Info: Redefining \pageref on input line 61.
-LaTeX Info: Redefining \nameref on input line 61.
+LaTeX Info: Redefining \ref on input line 62.
+LaTeX Info: Redefining \pageref on input line 62.
+LaTeX Info: Redefining \nameref on input line 62.
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.out)
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.out)
@@ -625,23 +625,23 @@ Dictionary: glossaries-dictionary, Language: English
 )
 File: img/STSlogo.eps Graphic file (type eps)
  <img/STSlogo.eps>
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+LaTeX Font Info:    Try loading font information for U+msa on input line 77.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 77.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 76.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 77.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
 File: img/CoremediaLogo.eps Graphic file (type eps)
 
 <img/CoremediaLogo.eps>
-Overfull \hbox (11.38736pt too wide) in paragraph at lines 79--80
+Overfull \hbox (11.38736pt too wide) in paragraph at lines 80--81
 [][][] 
  []
 
@@ -653,11 +653,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--15
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 ) [1] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.toc
+Overfull \hbox (59.4028pt too wide) in paragraph at lines 29--29
+ [][][] [] [][]  
+ []
+
 [2
 
 ])
@@ -667,11 +676,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--15
 
 [4
 
+] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lot)
+\tf@lot=\write11
+
+[5
+
 ] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.loa)
-\tf@loa=\write11
+\tf@loa=\write12
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\introduction.tex
-[5
+[6
 
 ]
 Chapter 1.
@@ -691,7 +705,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
- [6
+ [7
 
 ]
 Missing character: There is no ’ in font cmr12!
@@ -715,14 +729,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-[7]
+[8]
 File: img/text_analysis.eps Graphic file (type eps)
  <img/text_analysis.eps>
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-[8]
+[9]
 Overfull \hbox (8.8084pt too wide) in paragraph at lines 46--47
 \OT1/cmr/m/n/12 sis, how-ever, are com-mon, e.g. be-tween trans-for-ma-tion and
  post-processing
@@ -734,16 +748,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-[9]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex [10]
+[10]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex
+[11]
 Chapter 2.
 File: img/IR.eps Graphic file (type eps)
 <img/IR.eps>
@@ -756,7 +771,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[11
+[12
 
 ]
 File: img/vsm.eps Graphic file (type eps)
@@ -765,7 +780,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--38
 
  []
 
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
@@ -780,17 +795,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-[13]
+
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-[14]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
@@ -805,7 +820,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
@@ -820,7 +835,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
@@ -840,7 +855,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--158
 
  []
 
-[17]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 163--167
 
  []
@@ -851,7 +866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-[18]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
@@ -876,8 +891,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-[19]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\clustering.tex
-[20]
+[20]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\clustering.tex
+[21]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
@@ -890,35 +905,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-[21
+[22
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13--15
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
+ []
+
+[23]
+Overfull \hbox (0.28395pt too wide) in paragraph at lines 33--34
+\OT1/cmr/m/n/12 pared for ex-am-ple to [][][][][]
  []
 
 
@@ -926,30 +946,238 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
- []
-
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ´ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 48.
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--44
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+File: img/wcc.eps Graphic file (type eps)
+<img/wcc.eps> [29]
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+ []
+
+
+Overfull \hbox (6.0104pt too wide) in paragraph at lines 235--235
+[]\OT1/cmr/bx/n/14.4 TODO: On-tol-ogy as a source of ex-ter-nal knowl-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
+
+ []
+
+[30] [31]
+Overfull \hbox (15.47197pt too wide) in paragraph at lines 238--238
+[]\OT1/cmr/bx/n/14.4 TODO: Weighted Cen-troid Cov-er-ing aug-mented
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+
+ []
+
+File: img/wcc-onto.eps Graphic file (type eps)
+<img/wcc-onto.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+[32] [33])
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\tagclouds.tex
+Underfull \hbox (badness 10000) in paragraph at lines 277--1
+
+ []
+
+[34]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+[35
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+File: img/tagcloud.eps Graphic file (type eps)
+<img/tagcloud.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
@@ -963,13 +1191,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[24]
+
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
-
-
-LaTeX Warning: Command \L invalid in math mode on input line 56.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 56--57
@@ -977,186 +1202,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
  []
 
 
-LaTeX Warning: Command \L invalid in math mode on input line 59.
-
-
-LaTeX Warning: Command \L invalid in math mode on input line 59.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
+File: img/collaborativeTagging.eps Graphic file (type eps)
+<img/collaborativeTagging.eps>
+Overfull \hbox (19.77388pt too wide) in paragraph at lines 64--66
+ [][][] 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
-
+[37]
+Underfull \hbox (badness 2573) in paragraph at lines 70--70
+[][][][][][][][][]\OT1/cmr/m/n/10 , ac-cessed De-cem-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-
-LaTeX Warning: Reference `' on page 27 undefined on input line 138.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
- []
-
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 147.
-
-LaTeX Warning: Command \L invalid in math mode on input line 154.
-
-
-LaTeX Warning: Command \L invalid in math mode on input line 161.
-
-
-LaTeX Warning: Command \L invalid in math mode on input line 164.
-
-
-LaTeX Warning: Command \L invalid in math mode on input line 168.
-
-
-LaTeX Warning: Command \L invalid in math mode on input line 172.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-
- []
-
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\tagclouds.tex
-[27] [28] [29]
-Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
-
-Missing character: There is no – in font cmr12!
-
-Overfull \hbox (226.22098pt too wide) in paragraph at lines 8--10
-\OT1/cmr/m/n/12 Re-trieval". Jour-nal of New Mu-sic Re-search 37 (2): 101114. h
-ttp://www.informaworld.com/smpp/content db=all con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-[30
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-File: img/tagcloud.eps Graphic file (type eps)
-<img/tagcloud.eps> [31]
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
@@ -1165,54 +1227,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
-LaTeX Warning: Citation `hoppe:2010' on page 33 undefined on input line 83.
-
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ö in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no – in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no ö in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ä in font cmr12!
-Missing character: There is no ß in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ü in font cmr12!
-Missing character: There is no ä in font cmr12!
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\implementation.tex
-Overfull \hbox (18.66988pt too wide) in paragraph at lines 83--1
-\OT1/cmr/m/n/12 lab-o-ra-tiven Tag-ging an-notieren Nutzer selbst die entsprech
-en-den Ressourcen.
  []
 
-[33] [34]
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\implementation.tex
+[41]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -1244,7 +1320,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[35
+[42
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
@@ -1277,52 +1353,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
-[37]
-Overfull \hbox (247.17099pt too wide) in paragraph at lines 93--116
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
+Overfull \hbox (28.47427pt too wide) in paragraph at lines 96--119
  [][] 
  []
 
-[38
-
-]
+[44]
 Missing character: There is no ’ in font cmr12!
 
-Overfull \hbox (2.18819pt too wide) in paragraph at lines 128--129
+Overfull \hbox (2.18819pt too wide) in paragraph at lines 131--132
 [][]\OT1/cmr/m/n/12 To eval-u-ate the WCC al-go-rithm, we pre-pared a doc-u-men
 t set with author-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
@@ -1333,12 +1412,56 @@ Missing character: There is no ” in font cmr12!
 Missing character: There is no • in font cmr12!
 Missing character: There is no • in font cmr12!
 Missing character: There is no • in font cmr12!
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls)
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [39
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 142--1
+
+ []
+
+[45]
+
+LaTeX Warning: Text page 46 contains only floats.
+
+
+Overfull \vbox (7.1391pt too high) has occurred while \output is active []
+
+
+[46] [47]
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+[48
 
 ]
-[40]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex
-[41
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls)
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [49])
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex [50
 
 
 ]
@@ -1346,42 +1469,34 @@ Appendix A.
 File: img/ontology.eps Graphic file (type eps)
 <img/ontology.eps>)
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\sourceCode.tex
-[42
+[51
 
-]
-Overfull \vbox (39.33897pt too high) has occurred while \output is active []
-
-
-[43]
+] [52]
 Appendix B.
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl [44
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl [53
 
 ]
 Missing character: There is no – in font cmr12!
 
-[45
+[54
 
-] [46])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
- [47]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
+] [55])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
+ [56]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2F70BCC4E84A4E67D3B23D8010FB6DA7;3610.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 43C0D7D4956CC46DDDA78EBB23607028;4223.
  ) 
 Here is how much of TeX's memory you used:
- 11168 strings out of 494020
- 170739 string characters out of 3143904
- 277235 words of memory out of 3000000
- 14142 multiletter control sequences out of 15000+200000
- 17265 words of font info for 67 fonts, out of 3000000 for 9000
+ 11221 strings out of 494020
+ 171788 string characters out of 3143904
+ 281135 words of memory out of 3000000
+ 14187 multiletter control sequences out of 15000+200000
+ 17512 words of font info for 68 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 36i,17n,73p,1755b,795s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,17n,73p,1755b,793s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (48 pages, 246584 bytes).
+Output written on thesis.dvi (57 pages, 306168 bytes).

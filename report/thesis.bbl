@@ -73,15 +73,15 @@ P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
 \bibitem{clusteringJain99}
 A.~K. Jain, M.~N. Murty, and P.~J. Flynn, ``Data clustering: A review,'' 1999.
 
-\bibitem{kmeans_Lloyd82}
-S.~Lloyd, ``Least squares quantization in pcm,'' {\em Information Theory, IEEE
-  Transactions on}, vol.~28, no.~2, pp.~129--137, 1982.
-
 \bibitem{hierarchMonotheticClustering2004}
 K.~Kummamuru, R.~Lotlikar, S.~Roy, K.~Singal, and R.~Krishnapuram, ``A
   hierarchical monothetic document clustering algorithm for summarization and
   browsing search results,'' in {\em Proceedings of the 13th international
   conference on World Wide Web}, WWW '04, pp.~658--665, ACM, 2004.
+
+\bibitem{kmeans_Lloyd82}
+S.~Lloyd, ``Least squares quantization in pcm,'' {\em Information Theory, IEEE
+  Transactions on}, vol.~28, no.~2, pp.~129--137, 1982.
 
 \bibitem{surveyWebClusteringEngines2009}
 C.~Carpineto, S.~Osinski, G.~Romano, and D.~Weiss, ``A survey of web clustering
@@ -103,6 +103,26 @@ D.~Weiss, {\em {Descriptive Clustering as a Method for Exploring
 \newblock PhD thesis, Pozna{\'n} University of Technology, Pozna{\'n}, Poland,
   2006.
 
+\bibitem{cluster_labeling_wiki_2009}
+D.~Carmel, H.~Roitman, and N.~Zwerdling, ``Enhancing cluster labeling using
+  wikipedia,'' in {\em Proceedings of the 32nd international ACM SIGIR
+  conference on Research and development in information retrieval}, SIGIR '09,
+  pp.~139--146, ACM, 2009.
+
+\bibitem{folksonomiesWeb2.0_2009}
+I.~Peters and P.~Becker, {\em Folksonomies : indexing and retrieval in Web
+  2.0}.
+\newblock Berlin: De Gruyter/Saur, 2009.
+
+\bibitem{tagging2008}
+G.~Smith, {\em Tagging: People-powered Metadata for the Social Web}.
+\newblock Thousand Oaks, CA, USA: New Riders Publishing, 2008.
+
+\bibitem{tagcloud_spam2007}
+P.~Heymann, G.~Koutrika, and H.~Garcia-Molina, ``Fighting spam on social web
+  sites: A survey of approaches and future challenges,'' {\em IEEE Internet
+  Computing}, vol.~11, pp.~36--45, November 2007.
+
 \bibitem{S-Space}
 D.~Jurgens and K.~Stevens, ``The {S}-{S}pace package: an open source package
   for word space models,'' in {\em ACL '10: Proceedings of the {ACL} 2010
@@ -118,5 +138,10 @@ P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
 G.~Wilfried, J.~Andreas, and R.~Neumayer, {\em Spam filtering based on latent
   semantic indexing}, pp.~165--183.
 \newblock Springer, 2008.
+
+\bibitem{brand06}
+M.~Brand, ``Fast low-rank modifications of the thin singular value
+  decomposition,'' {\em Linear Algebra and Its Applications}, vol.~415, no.~1,
+  pp.~20--30, 2006.
 
 \end{thebibliography}
