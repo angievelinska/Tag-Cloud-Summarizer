@@ -6,7 +6,7 @@
 %\end{summary}
  
 \section{Information Retrieval process}
-\gls{IR} systems aim to satisfy user's information needs, by providing access to large collections of documents.  In a search application, the \gls{IR} process retrieves a set of documents which match a given query. There are three basic processes which an \gls{IR} system has to support: to represent the content of the documents, to represent the user's information need, and to compare the two representations, based on a chosen similarity measure~(fig.~\ref{lsa:fig:ir_process}).
+\gls{IR} systems aim to satisfy user's information needs, by providing access to large collections of documents.  In a search application, the \gls{IR} process retrieves a set of documents which matches a given query. There are three basic processes which an \gls{IR} system has to support: to represent the content of the documents, to represent the user's information need, and to compare the two representations, based on a chosen similarity measure~(fig.~\ref{lsa:fig:ir_process}).
 %
 % IR process
 %
@@ -14,7 +14,7 @@
 	\centering
 	\includegraphics[scale=0.7]{img/IR} 
 	\caption[Information Retrieval process]%
-           {Information retrieval process, adapted from \cite{IRmodels09}. The information need of the user is formulated as query, which is transformed in the chosen model of the \gls{IR} system. Documents from the collection are also represented according to the chosen model. Based on the implemented similarity measure, matching documents are identified. Finally, the retrieved results are presented to the user. If the user is not satisfied with the search results, the search query can be reformulated during feedback.}
+           {Information retrieval process, adapted from \cite{IRmodels09}. The information need of the user is formulated as a query, which is transformed in the chosen model of the \gls{IR} system. Documents from the collection are also represented according to the chosen model. Based on the implemented similarity measure, matching documents are identified. Finally, the retrieved results are presented to the user. If the user is not satisfied with the search results, the search query can be reformulated during feedback.}
 \label{lsa:fig:ir_process}
 \end{figure} 
 Therefore, the first stage of constructing an \gls{IR} system is to extract information about the documents content, and implement a similarity measure, based on which documents and queries can be compared. Representing the documents is usually called the \textit{indexing process}. The comparison of the query against the document representations based on a chosen measure is called the \textit{matching process}.\\
@@ -43,11 +43,9 @@ A distinction has to be made between words or terms, and tokens. A term is the c
 \textit{CoreMedia CMS is shipped with an installation program for interactive graphical installation and configuration of the software.}
 \end{quote}
 
-the term $ installation $ is represented by two tokens. \\
+the term $ installation $ is represented by two tokens. There is no universal way to parse a text, and the parsing decisions to address depend on the application in which the text collection will be used. \\
 
-There is no universal way to parse a text, and the parsing decisions to address depend on the application in which the text collection will be used. \\
-
-After tokenization, documents are represented as vectors, where each term from the document is an element in the vector. Thus, all document vectors and terms form a multi-dimensional vector space, where terms are the dimensions, and documents - the corresponding vectors. A representation of the vector space is given in fig.~\ref{fig_vsm}, where two document vectors $\vec{d_{1}}$ and $\vec{d_{2}}$, and a query vector $\vec{q}$ are represented in a two-dimensional space. \\
+After tokenization, documents are represented as vectors, where each term is a vector in the vector space, and the documents are the sum of the terms, from which they consist. Thus, all document vectors and terms form a multi-dimensional vector space, where terms are the dimensions, and documents - the corresponding sum vectors. A diagram of the vector space is given in fig.~\ref{fig_vsm}, where two document vectors $\vec{d_{1}}$ and $\vec{d_{2}}$, and a query vector $\vec{q}$ are represented in a two-dimensional space. \\
 
 \subsection{Weight functions}
 \label{lsa:weight_functions}
@@ -63,7 +61,7 @@ The simplest local weight is the term frequency $tf_{t,d}$. It assigns a weight 
 idf_{t}=1 + log\frac{N}{df_{t}}
 \end{equation}
 
-where $N$ is the total number of documents in the collection, and $t$ is a specific term we are weighting. Using $idf_{t}$ is a way to scale down the importance of commonly used words in text. When one combines both $tf$ and $idf$, a composite weight is produced for each term in each document. The \textit{tf-idf} weighting function assings to a term $t$ in a document $d$ a weight given by 
+where $N$ is the total number of documents in the collection, $df_{t}$ is the frequency of occurrence of term $t$ in the whole collection, and $t$ is a specific term we are weighting. Using $idf_{t}$ is a way to scale down the importance of commonly used words in text. When one combines both $tf$ and $idf$, a composite weight is produced for each term in each document. The \textit{tf-idf} weighting function assings to a term $t$ in a document $d$ a weight given by 
 \begin{equation}
 \label{lsa:tf_idf}
 (tf-idf)_{t,d}=tf_{t,d} \times idf_{t}
@@ -78,28 +76,27 @@ As defined by Manning et al.~\cite{IRbook2008}, the weight assigned to term $t$ 
 
 \subsubsection{Log - entropy}
 \label{lsa:log-entropy-section}
-Another popular pair of weight functions, frequently used in text analysis, is the \textit{log-entropy} pair. The local function \textit{log} takes the logarithm of the raw term frequency, thus normalizing the effect when large differences in term frequencies occur. In eq.~\ref{lsa:log} $L(t,d)$ denotes the local function that assigns a weight to term $t$ in document $d$. \\
+Another popular pair of weight functions, frequently used in text analysis, is the \textit{log-entropy} pair. The local function \textit{log} takes the logarithm of the raw term frequency, thus normalizing the effect when large differences in term frequencies occur. In eq.~\ref{lsa:log} $L(t,d)$ denotes the log of number of occurrence of a term $t$ in a document $d$. \\
 % log
 \begin{equation}
 L(t,d)=\log(tf(t,d)+1)
 \label{lsa:log}
 \end{equation}
 
-The global function \textit{entropy} $H(d,t)$ calculates the conditional distribution that term $t$ appeared in document $d$~(eq.~\ref{lsa:entropy}). \\
+The global function \textit{entropy} $H(t)$ reflects the local relative importance of a term $t$ in the whole document collection~(eq.~\ref{lsa:entropy}) \\
 
 % entropy
 \begin{equation}
-G(t) = H(d,t) = 1+\frac{{\Sigma_{j}p(t,d)}}{\log n}
+H(t) = 1+\frac{{\Sigma_{j}p(t,d)}}{\log n}
 \label{lsa:entropy}
 \end{equation}
-
-In eq.~\ref{lsa:entropy}, $p(t,d)$ is defined by:
+where $n$ is the number of documents in the whole collection. In eq.~\ref{lsa:entropy}, $p(t,d)$ is defined by:
 % entropy
 \begin{equation}
 p(t,d) = \frac{tf_{t,d}}{gf_{t}}
 \end{equation}
 
-where $gf_{t}$ is the total number of times that term $t$ occurred in the whole document collection (in all documents). The entropy measure takes into account the distribution of terms over documents. \\
+where $gf_{t}$ is the total number of times that term $t$ occurred in all documents. The entropy measures the distribution of terms over all documents. \\
 
 \subsection{Similarity measures}
 \label{lsa:similarity_measures}
@@ -118,7 +115,7 @@ where the numerator represents the \textit{dot product}\footnote{The dot product
 Once we represent a collection of $N$ documents as a collection of vectors, it is easy to obtain a natural view of the collection as a \textit{term-document matrix}: this is a $m \times n$ matrix whose rows represent the $m$ terms in the document collection, and each of whose $n$ columns corresponds to a document. And this specific matrix grouping all documents and terms from the collection is used in \textit{Latent Semantic Analysis}, a technique which we will discuss next.\\
 
 \section{Latent Semantic Analysis}
-\gls{LSA} was first introduced~(\cite{Dumais88usingLSA},~\cite{Deerw90_LSA}) as a technique for improving information retrieval. Vector Space Model matches the words from a user's query with the words in documents. Such \gls{IR} models that depend on lexical matching have to deal with two problems: \textit{synonymy} and \textit{polysemy}. Due to the many meanings which the same word can have, also called polysemy, irrelevant information is retrieved when searching. And as there are different ways to describe the same concept, or synonymy, important information can be missed. \gls{LSA} has been proposed to address these fundamental retrieval problems, having as a key idea dimension reduction technique, which maps documents and terms into a lower dimensional semantic space. \gls{LSA} models the relationships among documents based on their constituent words, and the relationships between words based on their occurrence in documents. By using fewer dimensions than there are unique words, \gls{LSA} induces similarities among words including ones that have never occurred together~\cite{Dumais2006}. The basic steps in using \gls{LSA} are: document representation (the same as in \gls{VSM}), \gls{SVD} with dimensionality reduction, and querying. Next, we give the theoretical basis for \gls{LSA}, as it has been implemented as a part of this work. \\
+\gls{LSA} was first introduced by Dumais et al.~\cite{Dumais88usingLSA} and Deerwester et al.~\cite{Deerw90_LSA} as a technique for improving information retrieval. It is based on the Vector Space Model, where as already discussed, words from users' queries are matched with the words in documents. Such \gls{IR} models that depend on lexical matching have to deal with two problems: \textit{synonymy} and \textit{polysemy}. Due to the many meanings which the same word can have, also called polysemy, irrelevant information is retrieved when searching. And as there are different ways to describe the same concept, or synonymy, important information can be missed. \gls{LSA} has been proposed to address these fundamental retrieval problems, having as a key idea dimension reduction technique, which maps documents and terms into a lower dimensional semantic space. \gls{LSA} models the relationships among documents based on their constituent words, and the relationships between words based on their occurrence in documents. By using fewer dimensions than there are unique words, \gls{LSA} induces similarities among words including ones that have never occurred together~\cite{Dumais2006}. The basic steps in using \gls{LSA} are: document representation (the same as in \gls{VSM}), \gls{SVD} with dimensionality reduction, and querying. Next, we give the theoretical basis for \gls{LSA}, as it has been implemented as a part of this work. \\
 
 
 We mentioned above that the first step of \gls{LSA} implementation is document representation. As it is similar to the one in \gls{VSM}, refer to section~\ref{sec:lsa:doc_repres}. After tokenizing all documents in the collection, and computing the corresponding term weights, one has to construct a term-document matrix~(eq.~\ref{lsa:sparse_matrix_A}). Having as rows the terms, and as columns the documents, its elements are the occurrences of each term in a particular document, where $ a_{ij} $ denotes the frequency with which term $ i $ occurs in document $ j $. The size of the matrix is \text{\bf{m x n}}, where {\bf m} is the number of terms, and {\bf n} is the number of documents in the text collection. Since every term doesn't appear in each document, the matrix is usually sparse. \\
@@ -145,7 +142,7 @@ Local and global weightings are applied to increase or decrease the importance o
 a_{ij}=L(i,j) \times G(i),
 \end{equation}
 
-where $L(i,j)$ is the local weighting of the term $i$ in document $j$, and $G(i)$ is the global weighting for term $i$. The choice of weight function impacts \gls{LSA} performance. In section~\ref{sec:lsa:factors_infl_lsa} we give reasons for the specific implementation decisions made in this work concerning \gls{LSA}. \\
+where $L(i,j)$ is the local weighting of the term $i$ in document $j$, and $G(i)$ is the global weighting for term $i$. As examples of local functions, we discussed the term frequency $tf$ and $log$, while $idf$ and entropy were the examples for global weightings. The choice of weight function impacts \gls{LSA} performance. In section~\ref{sec:lsa:factors_infl_lsa} we give reasons for the specific implementation decisions made in this work concerning \gls{LSA}. \\
 
 \section{Singular Value Decomposition}
 \label{sec:lsa:svd}

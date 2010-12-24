@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.15)  22 DEC 2010 20:08
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.15)  23 DEC 2010 11:53
 entering extended mode
 **thesis.tex
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.tex
@@ -791,37 +791,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
@@ -830,64 +830,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--158
+Underfull \hbox (badness 10000) in paragraph at lines 150--155
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 163--167
+Underfull \hbox (badness 10000) in paragraph at lines 160--164
 
  []
 
 File: img/svd.eps Graphic file (type eps)
 <img/svd.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
  []
 
 
-Overfull \hbox (20.2398pt too wide) in paragraph at lines 206--206
+Overfull \hbox (20.2398pt too wide) in paragraph at lines 203--203
 []\OT1/cmr/bx/n/17.28 Factors which in-flu-ence LSA per-for-mance 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
@@ -1502,4 +1497,4 @@ Here is how much of TeX's memory you used:
  714 hyphenation exceptions out of 8191
  36i,17n,73p,1755b,793s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (58 pages, 311132 bytes).
+Output written on thesis.dvi (58 pages, 311504 bytes).

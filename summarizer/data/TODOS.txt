@@ -1,7 +1,17 @@
+Project Report: comments from Sylvia
+
+- Kap. 1.2 IR sollte erst in einem spateren Kapitel erlautert werden (Grundlagen). Dabei darauf achten, dass Du nicht "we have implemented" schreibst. 
+Das ist doch Deine Arbeit, oder? Ich wurde vorschlagen, den ersten Satz zu streichen.
+- Kap. 1.4 Outline wiederholt den schon voherigen Text und konnte gestrichen werden
+- Du erwahnst in Kap. 1.3. Tag cloud nur. Ich vermisse, was man unter Tag cloud und unter Tag cloud control versteht. 
+Dies konntest Du z.B. an den Satz dranhangen. Tag cloud is ... and tag cloud control means ...
+Mir fehlt da noch die EInleitung zu term frequency $tf$ und inverse termn frequency $idf$.
+
 
 TODOS:
 - LSA parses 13 < 15 docs
 - IteratorFactory cannot find "C"
+- create a similarity matrix for the clusters and clustering (check Clusterizer)
 - debug tagcloud
 - copy files after LSA has run to c:\tmp
 
