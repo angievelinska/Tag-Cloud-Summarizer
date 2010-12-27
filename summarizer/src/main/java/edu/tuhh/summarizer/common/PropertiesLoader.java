@@ -16,7 +16,6 @@ public class PropertiesLoader {
 
   public Properties loadProperties() {
     if (props != null && !props.isEmpty()) {
-      log.info("Properties file was loaded before.");
       return props;
 
     } else {

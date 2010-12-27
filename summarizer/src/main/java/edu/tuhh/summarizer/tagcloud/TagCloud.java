@@ -140,7 +140,7 @@ public class TagCloud {
 */
 
   public Cloud getExampleCloud() {
-    File input = new File("summarizer/data/input/input.dat");
+    File input = new File("C:/tmp/input.dat");
     StringBuilder sb = new StringBuilder();
     Scanner scanner;
 

@@ -32,10 +32,9 @@ public class TagCloudServlet extends HttpServlet {
     List<String> links; // = summarizer.getSearchResults(searchQuery);
     List<Tag> tags = new ArrayList<Tag>(); // = summarizer.getTags(searchQuery, 20);
 
-
-    this.log("parameters command and text passed. command: " + command);
-
     Cloud cloud = new Cloud();
+
+    this.log("parameters command and text passed. command: " + command+" ; text: "+ searchQuery);
 
     //String content;
     //cloud.setMaxTagsToDisplay(30);
@@ -56,17 +55,17 @@ public class TagCloudServlet extends HttpServlet {
     if (command != null) {
       if (command.equals("CLEAR")) {
         cloud.clear();
+        //searchQuery = "";
       } else if (command.equals("SEARCH")) {
+        //cloud.clear();
         cloud.addTags(tags);
         searchQuery = "";
       }
     }
-    System.out.println("Classpath:"+System.getProperty ("java.class.path"));
     request.setAttribute("tagcloud", cloud);
     request.setAttribute("text", searchQuery);
     RequestDispatcher view = request.getRequestDispatcher("tagcloud.jsp");
     view.forward(request, response);
 
   }
-
-}
+ }

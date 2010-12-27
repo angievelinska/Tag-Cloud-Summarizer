@@ -46,9 +46,6 @@ Experiments
 2. i nees a set of queries
 3. i need a definition of precision/recall measure
 
-How to test the implementation of an algorithm!?
-
-
 Report
 -------------
 1. makecloud.com - generate tag cloud from search results
@@ -62,6 +59,3 @@ http://stackoverflow.com/questions/2192186/adding-a-tag-cloud-to-an-opencms-webs
 http://richardfriedman.blogspot.com/2007/06/creating-tag-cloud.html
 3. a lot about tag clouds
 http://www.joelamantia.com/tag-clouds/text-clouds-a-new-form-of-tag-cloud
-
-
-

@@ -1,20 +1,20 @@
 \chapter{Cluster labeling}
-A major problem in text analysis is to determine the topics in a text collection and identify the most important or significant relationships between them. Clustering and visualizations (tag clouds) are key analysis methods in order to address this problem. In this chapter, we discuss three algorithms for cluster labeling, which are relatively new, and in Chapter~\ref{sec:tagclouds} we introduce tag clouds as a visualization mean used in \gls{IR} systems. \\
+A major problem in text analysis is to determine the topics in a text collection and identify the most important or significant relationships between them. Clustering and visualization (e.g. in the form of tag clouds) are key analysis methods in order to address this problem. In this chapter, we discuss an algorithm for cluster labeling, which is relatively new, and in Chapter~\ref{sec:tagclouds} we introduce tag clouds as a visualization mean used in \gls{IR} systems. \\
 
 \section{Clustering}
-\textit{Clustering} is an \gls{IR} method that groups objects (documents) together based on their similarities in so called clusters. Such methods are often applied in the post processing phase of \gls{IR}~(fig.~\ref{fig:text_analysis}) for visualization of retrieved results. For example, similar search results can be grouped together during presentation of results in search engines. \\
+\textit{Clustering} is an \gls{IR} method that groups objects (documents) together based on their similarities in so called clusters. Such methods are often applied in the post processing phase of \gls{IR}~(fig.~\ref{fig:text_analysis}) for the visualization of retrieved results. For example, similar search results can be grouped together during presentation of results in search engines. \\
 
-Clustering can be used for categorization of resources (documents). \textit{Document categorization} is the process of assigning a document to one or more categories. A categorization $C = \{c_{1}, c_{2}, ..., c_{k}\}$ partitions a document collection $D$ into subsets $c \subseteq D$, so that $ \cup_{i=1}^{k} c_{k} =D $. $C$ is exclusive categorization if $c_{i} \cap c_{j \ne i} = 0, c_{i}, c_{j} \in C$, and non-exclusive categorization otherwise. Clustering is an \textit{unsupervised categorization method}, as it organizes documents into clusters without having prior knowledge about the clusters, or predefined cluster categories.\\
+Clustering can be used to categorize resources. \textit{Document categorization} is the process of assigning a document to one or more categories. A categorization $C = \{c_{1}, c_{2}, ..., c_{k}\}$ partitions a document collection $D$ into subsets $c \subseteq D$, so that $ \cup_{i=1}^{k} c_{k} =D $. $C$ is an exclusive categorization if $c_{i} \cap c_{j \ne i} = 0, c_{i}, c_{j} \in C$, and non-exclusive categorization otherwise. Clustering is an \textit{unsupervised categorization method}, as it organizes documents into clusters without having prior knowledge about the clusters, or predefined cluster categories.\\
  
 
-Presenting search results in groups, or categories, should help users gain a quick overview of the retrieved documents. An important part of clustering used for visualization of results, is choosing choose suitable labels of the categories defined, so that they are usable to human users. The process of \textit{cluster labeling} creates labels for clustered groups of objects. \\
+Presenting search results in groups, or categories, should help users gain a quick overview of the retrieved documents. An important part of clustering used for visualization of results, is to choose suitable labels of the categories defined, so that they are usable to human users. The process of \textit{cluster labeling} automatically creates labels for clustered groups of objects. \\
 
 \subsection{Clustering algorithms}
 \label{sec:clustering_algorithms}
 A large variety of clustering algorithms exists, and they are usually classified according to the characteristic of their output structure. Jain et al.~\cite{clusteringJain99} make a classification based on the following properties: \\
 
 \textbf{Flat vs. hierarchical clustering} \\
-\textit{Flat clustering} creates a flat set of clusters without relations between clusters due to some structure. K-means is a popular clustering algorithm, which creates as output a flat structure of document clusters. We present K-means clustering algorithm as an example for flat clustering in section~\ref{clustering:algo}. \textit{Hierarchical clustering} on the other hand creates a hierarchy of clusters, with parents and children, in a tree-like manner. ?citation needed for hac definition?\\
+\textit{Flat clustering} creates a flat set of clusters without relations between clusters due to some structure. K-means is a popular clustering algorithm, which creates as output a flat structure of document clusters. We present the k-means clustering algorithm as an example for flat clustering in section~\ref{clustering:algo}. \textit{Hierarchical clustering} on the other hand creates a hierarchy of clusters, with parents and children nodes, in a tree-like manner~(Johnson~\cite{hierarchical_clustering}). \\
 
 \textbf{Hard vs. soft clustering}\\
 Another important distinction can be made between \textit{hard} and \textit{soft} (also called fuzzy) clustering algorithms. If each document is assigned to a single cluster only, we have hard clustering. Otherwise, clustering is soft, and it assigns a document as a distribution over all clusters. This means that each document can have a fractional membership in several clusters. \gls{LSA}~(Chapter~\ref{sec:lsa}) is a good example for a soft clustering algorithm. K-means is a popular example for hard clustering~(section~\ref{clustering:algo}). \\
@@ -27,19 +27,19 @@ Based on how documents are assigned to different clusters, clustering can be div
 
 \subsection{K-means clustering algorithm}
 \label{clustering:algo}
-In this work we use K-means algorithm in order to cluster documents, which we need for the evaluation of cluster labeling algorithm~\gls{WCC}. Two factors influence this implementation decision:
+In this work we evaluate the cluster labeling algorithm Weighted Centroid Covering.  use the k-means algorithm in order to cluster documents, which we need for the evaluation of cluster labeling algorithm~\gls{WCC}. Two factors influence this implementation decision:
 \begin{itemize}
 \item As we use \gls{LSA} to process the term-document matrix, we can investigate which dimensionality reduction parameter $k$ is optimal for our case, so that we can obtain the optimal number of topics (or soft clusters) for our evaluation data set. Therefore, we should not suffer from one of k-means's weaknesses, namely having to define as initial parameter the number of clusters, since we use as a cluster number the dimensionality reduction parameter, previously defined in \gls{LSA}.
 \item Another reason to use k-means algorithm is its simplicity, as compared for example to \gls{HAC} - the complexity of k-means is linear, while the complexity of \gls{HAC} is exponential. \\
 \end{itemize}
 
-\textit{K-means} is an example for flat, hard and polythetic clustering algorithm, based on the classification mentioned previously. It was first introduced by Lloyd~\cite{kmeans_Lloyd82}. The algorithm outputs a flat unstructured set of clusters. It starts by dividing the document collection into $k$ clusters, where $k$ is an input parameter, and then computes the $k$ \textit{means} of these clusters. K-means defines a cluster in terms of a \textit{centroid}, usually the \textit{mean of a group of points}, and is applied to objects (documents) in n-dimensional space (such as vector space). After the initialization, the following two steps are iteratively repeated, until the clusters are not re-assigned any more: \\
+\textit{K-means} is an example for a flat, hard and polythetic clustering algorithm, based on the classification mentioned previously. It was first introduced by Lloyd~\cite{kmeans_Lloyd82}. The algorithm outputs a flat unstructured set of clusters. It starts by dividing the document collection into $k$ clusters, where $k$ is an input parameter, and then computes the $k$ \textit{means} of these clusters. K-means defines a cluster in terms of a \textit{centroid}, usually the \textit{mean of a group of points}, and is applied to objects (documents) in n-dimensional space (such as vector space). After the initialization, the following two steps are iteratively repeated, until the clusters are not re-assigned any more: \\
 \begin{enumerate}
 \item Each document in the collection is assigned to the cluster with the closest mean.
 \item For each cluster, new means are recomputed based on the documents it contains.
 \end{enumerate}
 
-In algorithm~\ref{algorithm_kmeans} we give as pseudo-code a detailed step-by-step description of k-means algorithm. \\
+In algorithm~\ref{algorithm_kmeans} we give as pseudo-code a detailed step-by-step description of the k-means algorithm. \\
 
 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
@@ -73,10 +73,10 @@ In algorithm~\ref{algorithm_kmeans} we give as pseudo-code a detailed step-by-st
 
 \section{Cluster labeling}
 \label{sec:cluster_labeling}
-Assume that a categorization over a document collection is determined using an unsupervised approach (e.g. clustering). To present this categorization to a user, it is convenient to label the individual categories with characteristic terms. These terms, called \textit{category labels}, should characterize the content of the associated category with respect to the remaining categories. This implies that cluster labeling should \textit{summarize} a category's content and that it should \textit{discriminate} a category from the other categories. This section states desired properties of category labels and presents an algorithm which generates such labels. It further makes a proposition for improvement of \gls{WCC}~(section~\ref{clustering:WCC}) algorithm, and in Chapter~\ref{sec:implementation} offers an evaluation of \gls{WCC}, using k-means clustering. \\
+Assume that a categorization over a document collection is determined using an unsupervised approach, such as clustering. To present this categorization to users, it is convenient to label the individual categories with characteristic terms. These terms, called \textit{category labels}, should characterize the content of the associated category with respect to the remaining categories. This implies that cluster labeling should \textit{summarize} a category's content and that it should \textit{discriminate} a category from the remaining categories. This section states desired properties for category labels and presents the Weighted Centroid Covering algorithm~(Stein and Meyer zu Eissen~\cite{Stein04topicidentification}) which generates such labels. It further makes a proposition for improvement of \gls{WCC}~(section~\ref{clustering:WCC}). Finally, in Chapter~\ref{sec:implementation} an evaluation of \gls{WCC} for labeling document clusters is offered, created using k-means algorithm. \\
 
 \subsection{Clustering and labeling}
-In their paper from 2009~\cite{surveyWebClusteringEngines2009}, Carpineto et al. claimed that there is a difference between clustering of data sets, and clustering of search results, returned from search engines:~\textit{"in search results clustering description comes first"}. Thus, in contrast to the classical categorization of clustering algorithms we previously outlined, they proposed a classification based on how well the clustering algorithms can generate sensible, comprehensive and compact cluster labels, and divided algorithms in the following three categories: \\
+In their paper from 2009~\cite{surveyWebClusteringEngines2009}, Carpineto et al. claimed that there is a difference between clustering of data sets, and clustering of search results, returned from search engines:~\textit{"in search results clustering description comes first"}. Thus, in contrast to the classical categorization of clustering algorithms we previously outlined, they proposed a classification based on how well the clustering algorithms can generate sensible, comprehensive and compact cluster labels, and divided the algorithms in the following three categories: \\
 
 \textbf{Data-centric algorithms} \\
 Data-centric algorithms were the first ones to be implemented for cluster labeling. Here, clustering is done with some general clustering algorithm, and terms which are close to the cluster centroids are nominated as cluster labels. Cluster centroids are a collection of independent terms from all documents not related to each other. In order to define the terms from cluster centroid, one uses a frequency measure, such as $tf-idf$~(eq.~\ref{lsa:tf_idf}). We present \gls{WCC}~(see~\ref{clustering:WCC}) as an example for a data-centric clustering algorithm. \\
@@ -95,7 +95,7 @@ If we have an unstructured collection of documents $D$, a clustering algorithm c
 For an existing categorization $C$, we therefore need a cluster labeling $ \text{\L} = \{ l_{1}, l_{2}, ..., l_{k} \} $. \\
 
 
-Let $T = \cup_{d \in D}T_{d} $ is the term set in the given document collection $D$. As defined by Stein and Meyer zu Eissen~\cite{Stein04topicidentification}, a cluster labeling function $ \tau : c \shortrightarrow \text{\L} $ assigns a cluster label to each cluster $ c \in C $, where $\text{\L}_{c} \subset T$. \\
+Let $T = \cup_{d \in D}T_{d} $ be the term set in the given document collection $D$. As defined by Stein and Meyer zu Eissen~\cite{Stein04topicidentification}, a cluster labeling function $ \tau : c \shortrightarrow \text{\L} $ assigns a cluster label to each cluster $ c \in C $, where $\text{\L}_{c} \subset T$. \\
 
 
 Thus, the following properties are desired for a cluster labeling function: \\

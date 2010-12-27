@@ -73,6 +73,10 @@ P.~Nakov, ``Getting better results with {L}atent {S}emantic {I}ndexing,'' in
 \bibitem{clusteringJain99}
 A.~K. Jain, M.~N. Murty, and P.~J. Flynn, ``Data clustering: A review,'' 1999.
 
+\bibitem{hierarchical_clustering}
+S.~C. Johnson, ``{Hierarchical clustering schemes},'' {\em Psychometrika},
+  vol.~32, no.~3, pp.~241--254, 1967.
+
 \bibitem{hierarchMonotheticClustering2004}
 K.~Kummamuru, R.~Lotlikar, S.~Roy, K.~Singal, and R.~Krishnapuram, ``A
   hierarchical monothetic document clustering algorithm for summarization and
