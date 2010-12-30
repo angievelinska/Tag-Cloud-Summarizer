@@ -5,20 +5,6 @@
 %This chapter reports the implemented solution for the given thesis problem, presents experimental %results, and discusses its advantages and disadvantages.
 %\end{summary}
 
-
-It is a challenge by itself to come up with a sensible evaluation set for an IR implementation. ... Define here precision, recall, measures , how to measure LSA performance with  diff. k, clusters, cluster labelling. \\
-
-
-The document collection consists of guides and manuals about CoreMedia \gls{CMS} 5.2.\\
-
-\section{Measures for evaluation}
-Evaluation in \gls{IR} is based on measures. We outline several measures used with commonly used in \gls{IR} systems to measure performance. \\
-\subsection{Evaluation of LSA}
-Presision: \\
-Recall: \\
-\subsection{Evaluation of algorithms for cluster labeling}
-F-measure:\\
-
 \section{LSA implementation}
 \label{sec:implementation:lsa_impl}
 \gls{LSA} was applied to a collection of 11818 words in 4000 documents, all of which describe CoreMedia \gls{CMS} 5.2. The algorithm took  63552 ms for preprocessing and indexing of the whole document collection. \\
@@ -29,11 +15,72 @@ The real difficulty of LSA is to find out how many dimensions to remove - the pr
 
 TODO:test if inluding only terms that occur in more than one document improved \gls{LSA} performance with respect to generating precise tag clouds.\\
 
-\subsection{Latest development in the field of LSA}
+\subsection{Data set}
+It is a challenge by itself to come up with a sensible evaluation set for an IR implementation. ... Define here precision, recall, measures , how to measure LSA performance with  diff. k, clusters, cluster labelling. \\
 
-LSAView is a tool for visual exploration of latent semantic modelling, developed at Sandia National Laboratories \cite{CrDuSh09}.\\
+The document collection consists of guides and manuals about CoreMedia \gls{CMS} 5.2.\\
 
-at the end- improvements of lsa with the basics explained.\\
+This work has been carried out using documents from the domain of CoreMedia \gls{CMS} 5.2 as an evaluation set, developed at CoreMedia AG, Hamburg. \\
+
+
+\subsection{Data preprocessing}
+\textbf{TODO:} give a link to Unified API manual online in DocMachine. \\
+
+Stop words and punctuation are removed. The data model used in DocMachine stores the documents as XML files, and CoreMedia \gls{CMS} Unified API\footnote{} is used to strip the markup, in order to access the plain text~(listing~\ref{strip_markup}). \\
+
+\section{Cluster labeling}
+
+The experiments in this study conducted several objective measures to validate the performance of the described algorithm \gls{WCC}. \\
+
+Evaluating the quality of cluster labeling is a non-trivial task and the most suitable evaluation is judged by user's experiences. \\
+
+The algorithm was implemented in Java on a a 64-bit Windows 7 Ultimate workstation with an Intel Core 2 Duo P8600 @ 2,40 GHz using 4.00 GB RAM. \\
+
+\subsection{Document set}
+In order to test a cluster labeling algorithm, we need a test data set containing predefined categories. \gls{WCC} is tested using the evaluation data set with three predefined categories selected from the whole collection used for evaluation of \gls{LSA} implementation. \\
+ 
+\begin{table}[]
+\centering
+\begin{tabular}{l l  c}
+\hline
+\multicolumn{3}{c}{Document set overview}\\
+\hline
+Category Id & Category & Document \# \\
+\hline
+1 & session, connection & 5 \\
+2 & server & 5 \\
+3 & publication, workflow & 5 \\
+\hline
+\end{tabular}
+\caption[Document set overview]{Overview of the constructed document set}
+\end{table}
+
+The document set used for evaluation consists of 3 categories, and 15 documents - each category has 5 documents, and the documents have different length. Table~\ref{eval:data_set} gives an overview of the constructed data sets. The document preprocessing involves parsing and stop word removal according to standard stop word lists. \\
+
+
+\textbf{Data preprocessing} \\
+The evaluation document set needs to be preprocessed before it can be used in the experiments. Analogous to the preprocessing used for the whole data set, punctuation and stop-words were removed. Terms in texts were not stemmed, as they are used as cluster labels, and stemming the terms would lead to worse user experience. \\
+
+\section{Measures for evaluation}
+Evaluation in \gls{IR} is based on measures. We outline several measures used with commonly used in \gls{IR} systems to measure performance. \\
+
+Evaluation of \gls{IR} systems: \\
+\begin{itemize}
+\item A document collection
+\item A test suite of information needs, or queries
+\item A set of relevance judgements, binary assessment: relevant or non-relevant for each query-document pair
+\end{itemize}
+
+In \gls{IR} systems relevance is assessed relative to an information need, not a query. A document is considered relevant if it addresses the stated information need, not only if it contains all the words given in the query~(Manning et al.~\cite{Mann08}). \\
+
+When short queries (composed of one word for example) are posted, it is difficult to define the information need of users. But nevertheless, the user has one, and the retrieved search results are evaluated based on his or her information need. 
+
+\subsection{Evaluation of LSA}
+Presision: \\
+Recall: \\
+\subsection{Evaluation of algorithms for cluster labeling}
+F-measure:\\
+
 
 \section{Clustering, labeling}
 For the ontology development, we used Protege Ontology Editor 4.1~\footnote{\url{http://protege.stanford.edu/}, accessed December, 2010} from Stanfornd University. The ontology is a light-weight domain-specific ontology developed in OWL for CoreMedia \gls{CMS} domain. \\
@@ -72,30 +119,12 @@ Example for presentation and evaluation of results, IR system:~\cite{SpamFilteri
 \item Feature reduction
 \end{itemize}
 
-\subsection{Document set}
 
-\begin{center}
-\begin{tabular}{l l  c}
-\hline
-\multicolumn{3}{c}{Document set}\\
-\hline
-Category Id & Category & Document \# \\
-\hline
-1 & session, connection & 5 \\
-2 & server & 5 \\
-3 & publication, workflow & 5 \\
-\hline
-%\caption[Document set]{Overview of the constructed document set}
-\end{tabular}
-\end{center}
-
-The document set used for evaluation consists of 3 categories, and 15 documents - each category has 5 documents, and the documents have different length. Table~\ref{eval:data_set} gives an overview of the constructed data sets. The document preprocessing involves parsing and stop word removal according to standard stop word lists. \\
 
 % TODO: correct text wrapping - fix column width for document text
 %\begin{landscape}
 \begin{table} [!ht]
-\begin{center}
-%\begin{tabular} { c c p{18cm} }
+\centering
 \begin{tabular} { c c p{10cm} }
 \hline
 Doc. Id & Cat. Id & Document \\
@@ -119,11 +148,9 @@ Doc. Id & Cat. Id & Document \\
 15 & 3 & The CoreMedia Workflow installation comes with four predefined workflows which cover the publication of resources. \\
 \hline
 \end{tabular}
-\caption[Document set]{Document set used for evaluation}
+\caption[Document collection used for WCC testing]{Document collection used for WCC testing}
 \label{eval:data_set}
-\end{center}
 \end{table}
-%\end{landscape}
 
 
 \subsection{Cluster labeling evaluation}

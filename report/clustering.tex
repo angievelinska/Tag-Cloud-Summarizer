@@ -1,5 +1,5 @@
 \chapter{Cluster labeling}
-A major problem in text analysis is to determine the topics in a text collection and identify the most important or significant relationships between them. Clustering and visualization (e.g. in the form of tag clouds) are key analysis methods in order to address this problem. In this chapter, we discuss an algorithm for cluster labeling, which is relatively new, and in Chapter~\ref{sec:tagclouds} we introduce tag clouds as a visualization mean used in \gls{IR} systems. \\
+A major problem in text analysis is to determine the topics in a text collection and identify the most important or significant relationships between them. Clustering and visualization (e.g. in the form of tag clouds) are key analysis methods in order to address this problem. In this chapter, an algorithm for cluster labeling, which is relatively new, is discussed, and in Chapter~\ref{sec:tagclouds} tag clouds are introduced as a visualization mean used in \gls{IR} systems. \\
 
 \section{Clustering}
 \textit{Clustering} is an \gls{IR} method that groups objects (documents) together based on their similarities in so called clusters. Such methods are often applied in the post processing phase of \gls{IR}~(fig.~\ref{fig:text_analysis}) for the visualization of retrieved results. For example, similar search results can be grouped together during presentation of results in search engines. \\
@@ -14,22 +14,22 @@ Presenting search results in groups, or categories, should help users gain a qui
 A large variety of clustering algorithms exists, and they are usually classified according to the characteristic of their output structure. Jain et al.~\cite{clusteringJain99} make a classification based on the following properties: \\
 
 \textbf{Flat vs. hierarchical clustering} \\
-\textit{Flat clustering} creates a flat set of clusters without relations between clusters due to some structure. K-means is a popular clustering algorithm, which creates as output a flat structure of document clusters. We present the k-means clustering algorithm as an example for flat clustering in section~\ref{clustering:algo}. \textit{Hierarchical clustering} on the other hand creates a hierarchy of clusters, with parents and children nodes, in a tree-like manner~(Johnson~\cite{hierarchical_clustering}). \\
+\textit{Flat clustering} creates a flat set of clusters without relations between clusters due to some structure. K-means is a popular clustering algorithm, which creates as output a flat structure of document clusters. The k-means clustering algorithm is presented as an example for flat clustering in section~\ref{clustering:algo}. \textit{Hierarchical clustering} on the other hand creates a hierarchy of clusters, with parents and children nodes, in a tree-like manner~(Johnson~\cite{hierarchical_clustering}). \\
 
 \textbf{Hard vs. soft clustering}\\
 Another important distinction can be made between \textit{hard} and \textit{soft} (also called fuzzy) clustering algorithms. If each document is assigned to a single cluster only, we have hard clustering. Otherwise, clustering is soft, and it assigns a document as a distribution over all clusters. This means that each document can have a fractional membership in several clusters. \gls{LSA}~(Chapter~\ref{sec:lsa}) is a good example for a soft clustering algorithm. K-means is a popular example for hard clustering~(section~\ref{clustering:algo}). \\
 
 
 \textbf{Monothetic vs. polythetic clustering} \\
-Based on how documents are assigned to different clusters, clustering can be divided into \textit{monothetic} and \textit{polythetic}~\cite{hierarchMonotheticClustering2004}. Monothetic algorithms assign a document to a cluster based on a single feature, while polythetic algorithms classify documents by overall degree of similarity/difference calculated over many properties. This makes monothetic clustering well suited for generating hierarchies and browsing search results, since a single feature, common to all documents in the cluster, describe each cluster. Users understand easily clusters generated in this way. K-means is an example of polythetic document clustering algorithm, where each cluster is described by several words of phrases. \\
+Based on how documents are assigned to different clusters, clustering can be divided into \textit{monothetic} and \textit{polythetic}~\cite{hierarchMonotheticClustering2004}. Monothetic algorithms assign a document to a cluster based on a single feature, while polythetic algorithms classify documents by overall degree of similarity/difference calculated over many properties. This makes monothetic clustering well suited for generating hierarchies and browsing search results, since a single feature, common to all documents in the cluster, describe each cluster. Users understand easily clusters generated in this way. K-means is an example of polythetic document clustering algorithm, where each cluster is described by several words of phases. \\
 
 
 
 \subsection{K-means clustering algorithm}
 \label{clustering:algo}
-In this work we evaluate the cluster labeling algorithm Weighted Centroid Covering.  use the k-means algorithm in order to cluster documents, which we need for the evaluation of cluster labeling algorithm~\gls{WCC}. Two factors influence this implementation decision:
+In this work the cluster labeling algorithm Weighted Centroid Covering is evaluated. As clustering precedes cluster labeling, the k-means algorithm is used for document clustering. Two factors influence this implementation decision:
 \begin{itemize}
-\item As we use \gls{LSA} to process the term-document matrix, we can investigate which dimensionality reduction parameter $k$ is optimal for our case, so that we can obtain the optimal number of topics (or soft clusters) for our evaluation data set. Therefore, we should not suffer from one of k-means's weaknesses, namely having to define as initial parameter the number of clusters, since we use as a cluster number the dimensionality reduction parameter, previously defined in \gls{LSA}.
+\item As \gls{LSA} is used to process the term-document matrix, it can be investigated which dimensionality reduction parameter $k$ is optimal for the specific implementation in this work, so that the optimal number of topics (or soft clusters) can be obtained for the evaluation data set. Therefore, the dimensionality reduction parameter, previously defined in \gls{LSA}, can be used as initial parameter for k-means, or the number of clusters inputed to the algorithm. Thus, one of k-means' weaknesses will not affect this work. 
 \item Another reason to use k-means algorithm is its simplicity, as compared for example to \gls{HAC} - the complexity of k-means is linear, while the complexity of \gls{HAC} is exponential. \\
 \end{itemize}
 
@@ -39,7 +39,7 @@ In this work we evaluate the cluster labeling algorithm Weighted Centroid Coveri
 \item For each cluster, new means are recomputed based on the documents it contains.
 \end{enumerate}
 
-In algorithm~\ref{algorithm_kmeans} we give as pseudo-code a detailed step-by-step description of the k-means algorithm. \\
+In algorithm~\ref{algorithm_kmeans}a detailed step-by-step description of the k-means algorithm is given as pseudo-code. \\
 
 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
@@ -76,10 +76,10 @@ In algorithm~\ref{algorithm_kmeans} we give as pseudo-code a detailed step-by-st
 Assume that a categorization over a document collection is determined using an unsupervised approach, such as clustering. To present this categorization to users, it is convenient to label the individual categories with characteristic terms. These terms, called \textit{category labels}, should characterize the content of the associated category with respect to the remaining categories. This implies that cluster labeling should \textit{summarize} a category's content and that it should \textit{discriminate} a category from the remaining categories. This section states desired properties for category labels and presents the Weighted Centroid Covering algorithm~(Stein and Meyer zu Eissen~\cite{Stein04topicidentification}) which generates such labels. It further makes a proposition for improvement of \gls{WCC}~(section~\ref{clustering:WCC}). Finally, in Chapter~\ref{sec:implementation} an evaluation of \gls{WCC} for labeling document clusters is offered, created using k-means algorithm. \\
 
 \subsection{Clustering and labeling}
-In their paper from 2009~\cite{surveyWebClusteringEngines2009}, Carpineto et al. claimed that there is a difference between clustering of data sets, and clustering of search results, returned from search engines:~\textit{"in search results clustering description comes first"}. Thus, in contrast to the classical categorization of clustering algorithms we previously outlined, they proposed a classification based on how well the clustering algorithms can generate sensible, comprehensive and compact cluster labels, and divided the algorithms in the following three categories: \\
+In their paper from 2009~\cite{surveyWebClusteringEngines2009}, Carpineto et al. claimed that there is a difference between clustering of data sets, and clustering of search results, returned from search engines:~\textit{"in search results clustering description comes first"}. Thus, in contrast to the classical categorization of clustering algorithms previously outlined, they proposed a classification based on how well the clustering algorithms can generate sensible, comprehensive and compact cluster labels, and divided the algorithms in the following three categories: \\
 
 \textbf{Data-centric algorithms} \\
-Data-centric algorithms were the first ones to be implemented for cluster labeling. Here, clustering is done with some general clustering algorithm, and terms which are close to the cluster centroids are nominated as cluster labels. Cluster centroids are a collection of independent terms from all documents not related to each other. In order to define the terms from cluster centroid, one uses a frequency measure, such as $tf-idf$~(eq.~\ref{lsa:tf_idf}). We present \gls{WCC}~(see~\ref{clustering:WCC}) as an example for a data-centric clustering algorithm. \\
+Data-centric algorithms were the first ones to be implemented for cluster labeling. Here, clustering is done with some general clustering algorithm, and terms which are close to the cluster centroids are nominated as cluster labels. Cluster centroids are a collection of independent terms from all documents not related to each other. In order to define the terms from cluster centroid, one uses a frequency measure, such as $tf-idf$~(eq.~\ref{lsa:tf_idf}). \gls{WCC}~(see~\ref{clustering:WCC}) is presented as an example for a data-centric clustering algorithm. \\
 
 \textbf{Description-aware algorithms} \\
 While data-centric algorithms don't consider word order, and process documents as "a bag of words", description-aware algorithms process ordered sequence of words (phrases), instead of terms, as candidate labels, and assign labels during clustering process, not after it. Using monothetic term selection, one nominates frequent phrases containing a noun head as labels, which are interpretable to human users. Clustering and labeling are closely related, and labeling influences the clustering process. Therefore, it is not possible to combine the labeling with any clustering algorithm. \gls{STC} is an example of a description-aware algorithm, introduced by Zamir and Etzioni~\cite{suffixTreeClustering99}. \gls{STC} builds a tree from the most frequent phrases in documents by using the data structure \textit{suffix tree}~\cite{suffixTreeClustering99}. It group documents that have common phrases under the same nodes of the tree. Thus, all documents below a given node contain the phrase at the node. \\
@@ -88,7 +88,7 @@ While data-centric algorithms don't consider word order, and process documents a
 These algorithms operate on the principle \textit{"description comes first"}, and in this sense are the opposite of the data-centric algorithms. The goal here is to find meaningful cluster labels. If there are no suitable labels found, the cluster has no value for the users (doesn't have a proper visualization), and is therefore discarded. Description-centric algorithms are mainly applied for clustering of search results~(more information can be found in~\cite{surveyWebClusteringEngines2009}). \\
 
 \subsection{Formal framework for cluster labeling algorithms}
-When we use an unsupervised approach to categorize a collection of documents, such as clustering, we also need to label the categories defined, in order to present them to users. The category labels should characterize the given categories - labels should summarize category content, and should discriminate a category from other categories~\cite{Stein04topicidentification}. Until now, no uniformly agreed upon formal framework exists that defines the requirements for cluster labeling algorithms. There are publications which name desired properties for cluster labels (\cite{formal_cluster_labels2003},~\cite{dweiss2006} ), but they all give informal descriptions. Stein and Meyer Zu Eissen~\cite{Stein04topicidentification} have given their definitions for desired properties of cluster labeling algorithms as a formal framework. We base our definition below on this source. \\
+When an unsupervised approach is used to categorize a collection of documents, such as clustering, it is also necessary to label the categories defined, in order to present them to users. The category labels should characterize the given categories - labels should summarize category content, and should discriminate a category from other categories~\cite{Stein04topicidentification}. Until now, no uniformly agreed upon formal framework exists that defines the requirements for cluster labeling algorithms. There are publications which name desired properties for cluster labels (\cite{formal_cluster_labels2003},~\cite{dweiss2006} ), but they all give informal descriptions. Stein and Meyer Zu Eissen~\cite{Stein04topicidentification} have given their definitions for desired properties of cluster labeling algorithms as a formal framework. The definition presented below is based on this source. \\
 
 If we have an unstructured collection of documents $D$, a clustering algorithm creates a categorization for this collection in the form $ C = \{ c_{1}, c_{2}, ..., c_{k} \} $, where the sets $c_{i}$ are subsets of $D$, and their union covers $D$: $\cup_{c_{i}\in C} c_{i} = D$. When applying a hierarchical clustering algorithm, this implies a cluster labeling hierarchy $H_{C}$ over $C$. Then, $H_{C}$ is a tree and its nodes are the categories in $C$, having one node as a root. Let $c_{i}, c_{j} \in C, c_{i} \ne c_{j}$ are two categories. If $c_{j}$ is a child cluster of $c_{i}$, then $c_{i}$ is closer to the root of the hierarchy $H_{C}$, and we write $c_{i} \succ c_{j}$. \\
 
@@ -177,7 +177,7 @@ let $\kappa : T \times \{c_{1}, c_{2}, ..., c_{\left| C \right|} \} \rightarrow 
 \label{fig_wcc}
 \end{figure}
 
-\gls{WCC} algorithm consists of three stages. As input to the algorithm, we input a clustering $C$:
+\gls{WCC} algorithm consists of three stages. As input to the algorithm, a clustering $C$ is given:
 \begin{enumerate}
 \item For all terms in the input clusters, it saves the $k$ most frequent occurrences of each word with its term frequency, and the cluster in which it occurs, to a data structure (say a vector \L).
 \item It sorts vector \text{\L} ~which stores tuples ($k$, $tf(term)$, term, cluster) in a descending order, based on the frequency of a term in a given cluster $tf_{c}(t)$;
@@ -231,12 +231,12 @@ The complexity of \gls{WCC} is $O(\left| T\right . log(\left|T \right|))$. A pse
 
 
 \section{Cluster labeling using external knowledge}
-We previously presented WCC as an algorithm for cluster labeling. It nominates cluster labels by selecting as candidate labels the terms with highest frequency of occurrence from the corresponding clusters. In order to improve labeling for users, we may consider using noun phrases for labels, as they are intuitively understood by humans, and are more descriptive than single terms. In order to improve labeling, we propose using an ontology as an external knowledge for the cluster labeling algorithm, and to nominate candidate labels from both ontology and most frequently occurring terms in clusters. Thus, if ontology fails to provide suitable labels, we can fall back to the label candidates proposed by WCC. \\
+\gls{WCC} was previously presented as an algorithm for cluster labeling. It nominates cluster labels by selecting as candidate labels the terms with highest frequency of occurrence from the corresponding clusters. In order to improve labeling for users, noun phrases may be considered to be used for labels, as they are intuitively understood by humans, and are more descriptive than single terms. In order to improve labeling, an ontology is used as an external knowledge for the cluster labeling algorithm, and candidate labels are nominated from both the ontology and the terms, which occur most frequently in clusters. Thus, if the ontology fails to provide suitable labels, the label candidates proposed by \gls{WCC} are used. \\
 
-In order to present our approach, first we give a short overview on ontologies. As it is not the topic of this work to investigate into semantic knowledge and ontologies, in order to gain more detailed insight, refer to the given reference literature. 
+In order to present the approach, first a short overview on ontologies is given. In order to gain more detailed insight, refer to the given reference literature, as it is not the topic of this work to investigate into semantic knowledge and ontologies. 
 
 \subsection{Ontology as a source of external knowledge}
-Formal models of the world can be used to provide formal semantics, or machine-interpretable meaning to information, stored as documents, web pages, databases. When models are intended to represent a shared conceptualization, such as classification, they are called ontologies~\cite{SemSearch_IRmodels09}. Or if we use a classical definition from Gruber~\cite{ontology2005}: ”Ontologies are specifications of the conceptualizations at a semantic level.” \\
+Formal models of the world can be used to provide formal semantics, or machine-interpretable meaning to information, stored as documents, web pages, databases. When models are intended to represent a shared conceptualization, such as classification, they are called ontologies~\cite{SemSearch_IRmodels09}. Or if the classical definition from Gruber~\cite{ontology2005} is used: ”Ontologies are specifications of the conceptualizations at a semantic level.” \\
 
 Formal ontologies are represented in logical formalism which allows for indexing, querying, and reference purposes over non-ontological datasets, such as documents, databases [23]. An example for a logical formalism is the ontology language \gls{OWL}\footnote{{http://www.w3.org/TR/owl-features/}, accessed December, 2010}. \\
 
@@ -259,8 +259,8 @@ reused with no additional computational cost. \\
 
 - candidate labels can come from a different source - a predefined ontology (to guarantee they are comprehensible). Thus, cluster label comprehensibility and cluster descriptions can be improved by using data extracted from a predefined ontology\\
 
-We propose using external knowledge during extraction of candidate la-
-bels phase (fig.~\ref{fig_wcc_onto}). \\
+It is proposed to use external knowledge during the phase extraction of candidate la-
+bels (fig.~\ref{fig_wcc_onto}). \\
 
 % wcc with ontology
 \begin{figure}

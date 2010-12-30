@@ -141,10 +141,10 @@ D.~Jurgens and K.~Stevens, ``The {S}-{S}pace package: an open source package
   {S}ystem {D}emonstrations}, (Morristown, NJ, USA), pp.~30--35, Association
   for Computational Linguistics, 2010.
 
-\bibitem{CrDuSh09}
-P.~Crossno, D.~Dunlavy, and T.~Shead, ``Lsaview: A tool for visual exploration
-  of {L}atent {S}emantic {M}odeling,'' in {\em IEEE Symposium on Visual
-  Analytics Science and Technology}, 2009.
+\bibitem{Mann08}
+C.~D. Manning, P.~Raghavan, and H.~Schtze, {\em Introduction to Information
+  Retrieval}.
+\newblock New York, NY, USA: Cambridge University Press, 2008.
 
 \bibitem{SpamFilteringLSI2008}
 G.~Wilfried, J.~Andreas, and R.~Neumayer, {\em Spam filtering based on latent
