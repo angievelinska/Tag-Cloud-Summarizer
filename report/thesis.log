@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.15)  30 DEC 2010 03:04
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.15)  31 DEC 2010 12:29
 entering extended mode
 **thesis.tex
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.tex
@@ -717,59 +717,67 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
- [8
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 11.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (109.39201pt too wide) in paragraph at lines 11--11
+[][][][][][][][][]\OT1/cmr/m/n/10 ,
+ []
+
+[8
 
 ]
 Missing character: There is no ’ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--19
+Underfull \hbox (badness 10000) in paragraph at lines 13--20
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 File: img/text_analysis.eps Graphic file (type eps)
 <img/text_analysis.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 [10]
-Overfull \hbox (8.8084pt too wide) in paragraph at lines 46--47
+Overfull \hbox (8.8084pt too wide) in paragraph at lines 47--48
 \OT1/cmr/m/n/12 sis, how-ever, are com-mon, e.g. be-tween trans-for-ma-tion and
  post-processing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[11]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex
-[12]
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\lsa.tex [12]
 Chapter 2.
 File: img/IR.eps Graphic file (type eps)
 <img/IR.eps>
@@ -896,12 +904,7 @@ Overfull \hbox (20.2398pt too wide) in paragraph at lines 203--203
 [21] [22]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
@@ -911,96 +914,96 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
 [23
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--18
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
 [24]
-Overfull \hbox (0.28395pt too wide) in paragraph at lines 33--34
+Overfull \hbox (0.28395pt too wide) in paragraph at lines 35--36
 \OT1/cmr/m/n/12 pared for ex-am-ple to [][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 48.
+put line 50.
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
@@ -1010,63 +1013,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 104--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
 
  []
 
 File: img/wcc.eps Graphic file (type eps)
 <img/wcc.eps> [30]
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
@@ -1074,73 +1082,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
 Missing character: There is no ” in font cmr12!
 Missing character: There is no ” in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 [33]
-Overfull \hbox (15.47197pt too wide) in paragraph at lines 252--252
+Overfull \hbox (15.47197pt too wide) in paragraph at lines 255--255
 []\OT1/cmr/bx/n/14.4 TODO: Weighted Cen-troid Cov-er-ing aug-mented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--259
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
  []
 
 File: img/wcc-onto.eps Graphic file (type eps)
 <img/wcc-onto.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
 [34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 
  []
 
 ) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\tagclouds.tex
 [36]
 Chapter 4.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 4.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -1284,79 +1289,124 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 [42] [43]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 [44
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-
- []
-
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\evaluation.tex
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+
+ []
+
+[46
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
@@ -1366,103 +1416,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-
- []
-
-
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 113--115
-
- []
-
-
-Overfull \hbox (28.47427pt too wide) in paragraph at lines 128--151
+Overfull \hbox (28.47427pt too wide) in paragraph at lines 100--123
  [][][] 
  []
 
 Missing character: There is no ’ in font cmr12!
 
-Overfull \hbox (2.18819pt too wide) in paragraph at lines 161--162
+Overfull \hbox (2.18819pt too wide) in paragraph at lines 133--134
 [][]\OT1/cmr/m/n/12 To eval-u-ate the WCC al-go-rithm, we pre-pared a doc-u-men
 t set with author-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-
- []
-
-[48]
-
-LaTeX Warning: Text page 49 contains only floats.
 
 [49]
-Missing character: There is no ’ in font cmr12!
+
+LaTeX Warning: Text page 50 contains only floats.
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
 Missing character: There is no • in font cmr12!
 Missing character: There is no “ in font cmr12!
 Missing character: There is no ” in font cmr12!
 Missing character: There is no • in font cmr12!
 Missing character: There is no • in font cmr12!
 Missing character: There is no • in font cmr12!
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\conclusion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 172--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--159
 
  []
 
-[50] [51]
-Chapter 6.
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\conclusion.tex
+[51]
+Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Overfull \hbox (109.39201pt too wide) in paragraph at lines 4--4
+[][][][][][][][][]\OT1/cmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
@@ -1476,36 +1505,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-
- []
-
 [52
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
 ) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls)
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [53])
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex [54
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [54])
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex [55
 
 
 ]
@@ -1513,9 +1547,9 @@ Appendix A.
 File: img/ontology.eps Graphic file (type eps)
 <img/ontology.eps>)
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\sourceCode.tex
-[55
+[56
 
-] [56]
+] [57]
 Appendix B.
 
 Overfull \hbox (6.0pt too wide) in paragraph at lines 3--3
@@ -1525,29 +1559,29 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 3--3
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/stripMarkup.java
 )) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl
-[57
+[58
 
 ]
 Missing character: There is no – in font cmr12!
- [58
+ [59
 
-] [59])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
- [60]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
+] [60])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+ [61]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: BB4FCC162E634D3A294CB3B25CFB282B;4400.
+(rerunfilecheck)             Checksum: D0A507B5443C9C66CA4773AD7E18FC54;4145.
  ) 
 Here is how much of TeX's memory you used:
- 11342 strings out of 494020
- 174056 string characters out of 3143904
+ 11345 strings out of 494020
+ 174218 string characters out of 3143904
  310878 words of memory out of 3000000
  14288 multiletter control sequences out of 15000+200000
  17868 words of font info for 69 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  36i,17n,73p,1765b,1018s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (61 pages, 326088 bytes).
+Output written on thesis.dvi (62 pages, 331088 bytes).
