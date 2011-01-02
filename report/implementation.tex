@@ -3,28 +3,37 @@
 
 This chapter describes the implementation part of the thesis work. After presenting in Chapter~\ref{sec:lsa} the theoretical basis behind \gls{LSA}, and in Chapter~\ref{chapter:cluster_labeling} cluster labeling, theoretical application and specific implementation decisions are discussed here. All software tools and libraries which were used are pointed out, and code snipplets are given. Then in Chapter~\ref{chapter:evaluation}, test results are shown, and evaluation of the implementation is made. \\
 
-\section{Clustering, labeling}
-For the ontology development, we used Protege Ontology Editor 4.1~\footnote{\url{http://protege.stanford.edu/}, accessed December, 2010} from Stanfornd University. The ontology is a light-weight domain-specific ontology developed in OWL for CoreMedia \gls{CMS} domain. \\
 
-\section{Tag Cloud implementation}
-\label{sec:implementation:tag_cloud}
-The implemented open source library used for tag cloud generation is called Opencloud\footnote{\url{http://opencloud.mcavallo.org/}, accessed December, 2010}, and is provided by Marco Cavallo.\\
-
+\section{LSA and concept visualization  as a tag cloud}
 Tag clouds can be generated automatically by using the most frequent words, by removing stop words, etc. preprosessing. They can also be custom made, by using important concepts retrieved after \gls{IR} task has been performed - e.g. on search results, on main concepts as in our case, based on concepts retrieved using \gls{LSA}. \\
 
-\section{Tools used}
+
+\section{Cluster labeling}
+For the ontology development, we used Protege Ontology Editor 4.1~\footnote{\url{http://protege.stanford.edu/}, accessed December, 2010} from Stanfornd University. The ontology is a light-weight domain-specific ontology developed in OWL for CoreMedia \gls{CMS} domain. \\
+
+
+\section{Tools and libraries used in this work}
 \label{sec:implementation:tools_used}
-Airhead Research\footnote{\url{http://code.google.com/p/airhead-research/}} project was used as a semantic spaces Package which provides a java-based implementation of \gls{LSA}.\\
 
-Apache Lucene\footnote{\url{http://lucene.apache.org/java/3_0_2/}, accessed December, 2010} was used as an indexing and search library.
+\subsubsection{Repository}
+This thesis work is available online hosted in a reporitory under GitHub. Prototype implementation\footnote{\url{https://github.com/angievelinska/Tag-Cloud-Summarizer}}, project report\footnote{\url{https://github.com/angievelinska/Tag-Cloud-Summarizer/raw/master/report/thesis.pdf}} and \LaTeX~template\footnote{\url{https://github.com/angievelinska/Tag-Cloud-Summarizer/tree/master/report}} can be downloaded freely. \\
 
-\section{Advantages and drawbacks}
-\label{sec:lsa:adv_disadv}
+\subsubsection{LSA and SVD}
+In this work the popular SVD C library\footnote{\url{http://tedlab.mit.edu/~dr/SVDLIBC/}, accessed December, 2010}  is used, created by Doug Rohde at the Massachusetts Institute of Technology. The implementation developed as a part of this project is Java-based, therefore for matrix computations the open source SVDLIBJ\footnote{\url{http://bender.unibe.ch/svn/codemap/Archive/svdlibj/}, accessed December, 2010} library is used, which is a Java-based port of SVD C, made available by Adrian Kuhn and David Erni at the University of Bern. \\
 
-why am i using lsa instead of lda for example?\\
+\subsubsection{k-means clustering algorithm}
+Cluto clustering library\footnote{\url{http://glaros.dtc.umn.edu/gkhome/cluto/cluto/overview}, accessed October, 2010} is used as an implementation of the k-means clustering algorithm.\\
 
-\begin{enumerate}
-\item PLSA - characteristics, advantages, disadvantages
-\item LDA - characteristics, advantages, disadvantages
-\end{enumerate}
+\subsubsection{Information retrieval}
+S-Space project created by  Jurgensd and Stevens~(\cite{S-Space}) was used for constructing a semantic space of the text collection used for evaluation. \\
+
+\subsubsection{Tag cloud}
+The tag cloud used in this work is based on Opencloud\footnote{\url{http://opencloud.mcavallo.org/}, accessed December, 2010} project, authored by Marco Cavallo.\\
+
+\subsubsection{Search and retrieval of search results}
+Lucene\footnote{\url{http://lucene.apache.org/java/3_0_2/}, accessed December, 2010} is an open source search engine library, distributed by the Apache Software Foundation. It is used for indexing, query parsing and retrieval of search results. \\
+
+\subsubsection{Building and deployment}
+Maven\footnote{\url{http://maven.apache.org/}} is a software management tool, provided by Apache Software Foundation, which is used for building and testing the implementation prototype, and for deploying the web application module.
+
 

@@ -13,12 +13,20 @@
 \usepackage{float}
 \usepackage[small,bf]{caption}
 \usepackage{url}
+% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\scriptsize\ttfamily}}}
+\makeatother
+% Now actually use the newly defined style.
+\urlstyle{leo}
 \usepackage[bookmarksnumbered,%
             pdffitwindow=true, %
             pdfstartview=Fit,%
             colorlinks=false,%
             pdfborder={0 0 0}]%
 				{hyperref}
+\usepackage{breakurl}
 \usepackage{amssymb,amsmath}
 \usepackage[nonumberlist,acronym,toc]{glossaries}
 \usepackage{paralist}
@@ -166,8 +174,6 @@ Hamburg\\
 
 \end{flushleft}
 
-%\vfill
-
 \begin{center}
 % Bottom of the page
 \bigskip
@@ -188,7 +194,7 @@ Hamburg\\
 \pdfbookmark[0]{Declaration}{declaration}
 \input{declaration}
 %\pdfbookmark[0]{Acknowledgements}{acknowledgements}
-%\input{acknowledgements}
+\input{acknowledgements}
 }
 
 

@@ -1,23 +1,24 @@
 \chapter{Evaluation}
 \label{chapter:evaluation}
 
-Various methods of evaluation are used in \gls{IR} systems. Two popular measures are \textit{precision} and \textit{recall}. \\
+Evaluation in \gls{IR} is based on measures. As this work implements techniques for information retrieval, several wide-spread measures are described next, used commonly in \gls{IR} systems to evaluate performance. Then, the implemented tests are presented, and finally are discussed the obtained test results. \\
+
 
 \section{Measures for evaluation}
-The two most frequent and basic measures for evaluation of \gls{IR} systems are precision and recall. For the simple case of a system which returns a result set of document to a query, they are defined like:  \\
-
-Evaluation in \gls{IR} is based on measures. We outline several measures used with commonly used in \gls{IR} systems to measure performance. \\
-
-Evaluation of \gls{IR} systems: \\
+If an evaluation of \gls{IR} systems is performed, one needs in the simplest case:
 \begin{itemize}
-\item A document collection
-\item A test suite of information needs, or queries
-\item A set of relevance judgements, binary assessment: relevant or non-relevant for each query-document pair
-\end{itemize}
+\item a document collection, 
+\item a test suite of information needs, or a set of queries,
+\item a set of relevance judgments to define for each query-document pair weather the document is relevant or not relevant for the query posed.
+\end{itemize} 
 
-In \gls{IR} systems relevance is assessed relative to an information need, not a query. A document is considered relevant if it addresses the stated information need, not only if it contains all the words given in the query~(Manning et al.~\cite{Mann08}). \\
+Relevance is assessed relative to an information need, not a query. A document is considered relevant if it addresses the users' information need, not only if it contains all the words given in the query~(Manning et al.~\cite{Mann08}). When short queries (composed of one word for example) are posted, it is difficult to define the information need of users. But nevertheless, the user has one, and the retrieved search results are evaluated based on his or her information need. \\
 
-When short queries (composed of one word for example) are posted, it is difficult to define the information need of users. But nevertheless, the user has one, and the retrieved search results are evaluated based on his or her information need. 
+The two most frequent and basic measures for evaluation of \gls{IR} systems are \textit{precision} and \textit{recall}. For the simple case of a system which returns a result set of document to a query, they are defined:  \\
+
+\subsubsection{Precision}
+\subsubsection{Recall}
+
 
 \subsection{Evaluation of LSA}
 Presision: \\
@@ -56,9 +57,7 @@ This work has been carried out using documents from the domain of CoreMedia \gls
 
 
 \subsubsection{Data preprocessing}
-\textbf{TODO:} give a link to Unified API manual online in DocMachine. \\
-
-Stop words and punctuation are removed. The data model used in DocMachine stores the documents as XML files, and CoreMedia \gls{CMS} Unified API\footnote{} is used to strip the markup, in order to access the plain text~(listing~\ref{strip_markup}). \\
+Stop words and punctuation are removed. The data model used in DocMachine stores the documents as XML files, and CoreMedia \gls{CMS} Unified API\footnote{\url{https://documentation.coremedia.com/servlet/content/241548?language=en&version=5.2&book=coremedia:///cap/content/241548}} is used to strip the markup, in order to access the plain text~(listing~\ref{strip_markup}). \\
 
 \section{Cluster labeling}
 
