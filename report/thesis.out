@@ -27,7 +27,7 @@
 \BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Weighted Centroid Covering}{section.3.2}% 27
 \BOOKMARK [1][-]{section.3.3}{3.3 Cluster labeling using external knowledge}{chapter.3}% 28
 \BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Ontology as a source of external knowledge}{section.3.3}% 29
-\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 TODO: Weighted Centroid Covering augmented by an ontology}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Weighted Centroid Covering augmented by an ontology}{section.3.3}% 30
 \BOOKMARK [0][-]{chapter.4}{4 Tag Clouds}{}% 31
 \BOOKMARK [1][-]{section.4.1}{4.1 Introduction}{chapter.4}% 32
 \BOOKMARK [1][-]{section.4.2}{4.2 Tag clouds generation}{chapter.4}% 33
@@ -40,18 +40,14 @@
 \BOOKMARK [1][-]{section.5.3}{5.3 Tools and libraries used in this work}{chapter.5}% 40
 \BOOKMARK [0][-]{chapter.6}{6 Evaluation}{}% 41
 \BOOKMARK [1][-]{section.6.1}{6.1 Measures for evaluation}{chapter.6}% 42
-\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Evaluation of LSA}{section.6.1}% 43
-\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Evaluation of algorithms for cluster labeling}{section.6.1}% 44
-\BOOKMARK [1][-]{section.6.2}{6.2 Experimental evaluation}{chapter.6}% 45
-\BOOKMARK [1][-]{section.6.3}{6.3 LSA implementation}{chapter.6}% 46
-\BOOKMARK [1][-]{section.6.4}{6.4 Cluster labeling}{chapter.6}% 47
-\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 Cluster labeling evaluation}{section.6.4}% 48
-\BOOKMARK [1][-]{section.6.5}{6.5 LSA evaluation from IR book}{chapter.6}% 49
-\BOOKMARK [0][-]{chapter.7}{7 Conclusion and outlook}{}% 50
-\BOOKMARK [1][-]{section.7.1}{7.1 Future Work}{chapter.7}% 51
-\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Implementation}{section.7.1}% 52
-\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Testing}{section.7.1}% 53
-\BOOKMARK [0][-]{section*.33}{Acronyms}{}% 54
-\BOOKMARK [0][-]{appendix.A}{A Ontology}{}% 55
-\BOOKMARK [0][-]{appendix.B}{B Tag Cloud Summarizer}{}% 56
-\BOOKMARK [0][-]{references.0}{Bibliography}{}% 57
+\BOOKMARK [1][-]{section.6.2}{6.2 Evaluation of LSA implementation}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.3}{6.3 Evaluation of cluster labeling algorithm WCC}{chapter.6}% 44
+\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Cluster labeling evaluation}{section.6.3}% 45
+\BOOKMARK [0][-]{chapter.7}{7 Conclusion and outlook}{}% 46
+\BOOKMARK [1][-]{section.7.1}{7.1 Future Work}{chapter.7}% 47
+\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Implementation}{section.7.1}% 48
+\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Testing}{section.7.1}% 49
+\BOOKMARK [0][-]{section*.35}{Acronyms}{}% 50
+\BOOKMARK [0][-]{appendix.A}{A Ontology}{}% 51
+\BOOKMARK [0][-]{appendix.B}{B Source code}{}% 52
+\BOOKMARK [0][-]{references.0}{Bibliography}{}% 53

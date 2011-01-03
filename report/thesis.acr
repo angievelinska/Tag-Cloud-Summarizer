@@ -2,56 +2,57 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{C}\relax \glsresetentrylist %
 \glossaryentryfield{CMS}{\glsnamefont{CMS}}{Content Management System}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{34}\delimN 
-		\setentrycounter{page}\glsnumberformat{44}\delimN 
-		\setentrycounter{page}\glsnumberformat{47\delimN 48}\delimN 
-		\setentrycounter{page}\glsnumberformat{57}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{35}\delimN 
+		\setentrycounter{page}\glsnumberformat{45}\delimN 
+		\setentrycounter{page}\glsnumberformat{49\delimN 50}\delimN 
+		\setentrycounter{page}\glsnumberformat{58}}}\glsgroupskip
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossaryentryfield{HAC}{\glsnamefont{HAC}}{Hierarchical Agglomerative Clustering}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{25}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{26}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
 \glossaryentryfield{IR}{\glsnamefont{IR}}{Information Retrieval}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{8\delimR 14}\delimN 
-		\setentrycounter{page}\glsnumberformat{17\delimN 18}\delimN 
-		\setentrycounter{page}\glsnumberformat{21}\delimN 
-		\setentrycounter{page}\glsnumberformat{23}\delimN 
-		\setentrycounter{page}\glsnumberformat{38\delimN 39}\delimN 
-		\setentrycounter{page}\glsnumberformat{42\delimR 44}\delimN 
-		\setentrycounter{page}\glsnumberformat{46}\delimN 
-		\setentrycounter{page}\glsnumberformat{51\delimN 52}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{9\delimR 15}\delimN 
+		\setentrycounter{page}\glsnumberformat{18\delimN 19}\delimN 
+		\setentrycounter{page}\glsnumberformat{22}\delimN 
+		\setentrycounter{page}\glsnumberformat{24}\delimN 
+		\setentrycounter{page}\glsnumberformat{38}\delimN 
+		\setentrycounter{page}\glsnumberformat{40}\delimN 
+		\setentrycounter{page}\glsnumberformat{43\delimR 45}\delimN 
+		\setentrycounter{page}\glsnumberformat{48}\delimN 
+		\setentrycounter{page}\glsnumberformat{54}}}\glsgroupskip
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossaryentryfield{LSA}{\glsnamefont{LSA}}{Latent Semantic Analysis}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{11}\delimN 
-		\setentrycounter{page}\glsnumberformat{18\delimN 19}\delimN 
-		\setentrycounter{page}\glsnumberformat{21\delimN 22}\delimN 
-		\setentrycounter{page}\glsnumberformat{24\delimN 25}\delimN 
-		\setentrycounter{page}\glsnumberformat{42}\delimN 
-		\setentrycounter{page}\glsnumberformat{44\delimN 45}\delimN 
-		\setentrycounter{page}\glsnumberformat{47\delimR 49}\delimN 
-		\setentrycounter{page}\glsnumberformat{51\delimR 54}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{12}\delimN 
+		\setentrycounter{page}\glsnumberformat{19\delimN 20}\delimN 
+		\setentrycounter{page}\glsnumberformat{22\delimN 23}\delimN 
+		\setentrycounter{page}\glsnumberformat{25\delimN 26}\delimN 
+		\setentrycounter{page}\glsnumberformat{43}\delimN 
+		\setentrycounter{page}\glsnumberformat{45}\delimN 
+		\setentrycounter{page}\glsnumberformat{49\delimR 51}\delimN 
+		\setentrycounter{page}\glsnumberformat{54\delimR 56}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
 \glossaryentryfield{OWL}{\glsnamefont{OWL}}{Web Ontology Language}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{33}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{35}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{STC}{\glsnamefont{STC}}{Suffix Tree Clustering}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{27}\delimN 
-		\setentrycounter{page}\glsnumberformat{29}\delimN 
-		\setentrycounter{page}\glsnumberformat{53}}}%
+		\setentrycounter{page}\glsnumberformat{28}\delimN 
+		\setentrycounter{page}\glsnumberformat{31}\delimN 
+		\setentrycounter{page}\glsnumberformat{55}}}%
 \glossaryentryfield{SVD}{\glsnamefont{SVD}}{Singular Value Decomposition}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{19\delimR 21}\delimN 
-		\setentrycounter{page}\glsnumberformat{53}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{20\delimR 22}\delimN 
+		\setentrycounter{page}\glsnumberformat{55}}}\glsgroupskip
 \glsgroupheading{V}\relax \glsresetentrylist %
 \glossaryentryfield{VSM}{\glsnamefont{VSM}}{Vector Space Model}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{13\delimN 14}\delimN 
-		\setentrycounter{page}\glsnumberformat{16}\delimN 
-		\setentrycounter{page}\glsnumberformat{19}}}\glsgroupskip
+		\setentrycounter{page}\glsnumberformat{14\delimN 15}\delimN 
+		\setentrycounter{page}\glsnumberformat{17}\delimN 
+		\setentrycounter{page}\glsnumberformat{20}}}\glsgroupskip
 \glsgroupheading{W}\relax \glsresetentrylist %
 \glossaryentryfield{WCC}{\glsnamefont{WCC}}{Weighted Centroid Covering}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter{page}\glsnumberformat{9\delimR 12}\delimN 
-		\setentrycounter{page}\glsnumberformat{26\delimN 27}\delimN 
-		\setentrycounter{page}\glsnumberformat{31}\delimN 
-		\setentrycounter{page}\glsnumberformat{33\delimN 34}\delimN 
-		\setentrycounter{page}\glsnumberformat{36}\delimN 
-		\setentrycounter{page}\glsnumberformat{48\delimN 49}\delimN 
-		\setentrycounter{page}\glsnumberformat{51\delimR 54}}}%
+		\setentrycounter{page}\glsnumberformat{10\delimR 13}\delimN 
+		\setentrycounter{page}\glsnumberformat{27\delimN 28}\delimN 
+		\setentrycounter{page}\glsnumberformat{32}\delimN 
+		\setentrycounter{page}\glsnumberformat{34}\delimN 
+		\setentrycounter{page}\glsnumberformat{37}\delimN 
+		\setentrycounter{page}\glsnumberformat{51}\delimN 
+		\setentrycounter{page}\glsnumberformat{53\delimR 56}}}%
 \end{theglossary}\glossarypostamble

@@ -1,11 +1,11 @@
 \chapter{Evaluation}
 \label{chapter:evaluation}
 
-Evaluation in \gls{IR} is based on measures. As this work implements techniques for information retrieval, several wide-spread measures are described next, used commonly in \gls{IR} systems to evaluate performance. Then, the implemented tests are presented, and finally are discussed the obtained test results. \\
+Evaluation in \gls{IR} is based on measures. As this work implements techniques for information retrieval, several wide-spread measures are described next, used commonly in \gls{IR} systems to evaluate performance. Then, the implemented tests are presented, and finally the obtained test results are discussed. \\
 
 
 \section{Measures for evaluation}
-If an evaluation of \gls{IR} systems is performed, one needs in the simplest case:
+In order to perform an evaluation of \gls{IR} systems, one needs in the simplest case:
 \begin{itemize}
 \item a document collection, 
 \item a test suite of information needs, or a set of queries,
@@ -17,29 +17,21 @@ Relevance is assessed relative to an information need, not a query. A document i
 The two most frequent and basic measures for evaluation of \gls{IR} systems are \textit{precision} and \textit{recall}. For the simple case of a system which returns a result set of document to a query, they are defined:  \\
 
 \subsubsection{Precision}
+\begin{equation}
+\mbox{\textbf{precision}} = \frac{\mbox{number of relevant documents retrieved}} {\mbox{total number of relevant documents}}
+\end{equation}
+
+
 \subsubsection{Recall}
+\begin{equation}
+\mbox{\textbf{recall}} = \frac{\mbox{number of relevant documents retrieved}} {\mbox{total number of retrieved documents}}
+\end{equation}
 
 
-\subsection{Evaluation of LSA}
-Presision: \\
-Recall: \\
+\section{Evaluation of LSA implementation}
 
-\subsection{Evaluation of algorithms for cluster labeling}
-User evaluation of cluster labeling algorithm \\
-? F-measure:\\
-
-\section{Experimental evaluation}
-Example for presentation and evaluation of results, IR system:~\cite{SpamFilteringLSI2008} \\
-\begin{itemize}
-\item Data set
-\item Experimental setup
-\item Analysis of data matrices
-\item True/false positive rates
-\item Feature reduction
-\end{itemize}
-
-\section{LSA implementation}
-\label{sec:implementation:lsa_impl}
+\subsubsection{Document set for evaluation}
+\label{sec:eval:doc_set_lsa}
 \gls{LSA} was applied to a collection of 11818 words in 4000 documents, all of which describe CoreMedia \gls{CMS} 5.2. The algorithm took 63552 ms for preprocessing and indexing of the whole document collection. \\
 
 For the implementation of LSA this work uses the open LSA library which is part of Semantic Spaces Project\cite{S-Space}. It is developed at the Natural Language Processing Group at the University of California at Berkley (UCLA)\footnote{\url{http://code.google.com/p/airhead-research/}, accessed December, 2010}.\\
@@ -56,10 +48,35 @@ The document collection consists of guides and manuals about CoreMedia \gls{CMS}
 This work has been carried out using documents from the domain of CoreMedia \gls{CMS} 5.2 as an evaluation set, developed at CoreMedia AG, Hamburg. \\
 
 
-\subsubsection{Data preprocessing}
+\subsubsection{Dimensionality reduction parameter in LSA}
+Certain factors influence the performance of LSA, as already discussed in section~\ref{sec:lsa:factors_infl_lsa}. 
+\begin{itemize}
+\item \textit{Preprocessing} - before constructing a semantic space using \gls{LSA}, stop words were removed from the evaluation document set. Stemming is not done, as terms from the semantic space are later used for the tag cloud generation.
 Stop words and punctuation are removed. The data model used in DocMachine stores the documents as XML files, and CoreMedia \gls{CMS} Unified API\footnote{\url{https://documentation.coremedia.com/servlet/content/241548?language=en&version=5.2&book=coremedia:///cap/content/241548}} is used to strip the markup, in order to access the plain text~(listing~\ref{strip_markup}). \\
 
-\section{Cluster labeling}
+\item \textit{Frequency matrix transformation} - log-entropy weight functions~(section~\ref{lsa:log-entropy-section}) were chosen, due to their better performance as compared to other measures (reported by Nakov et al.~\cite{Nakov_weightfunctions}).
+\item \textit{Dimensionality reduction parameter \textbf{k}} - it is defined based on the experiments carried out using the document set for evaluation from CoreMedia \gls{CMS} domain, described in section~\ref{sec:eval:doc_set_lsa}. 
+
+\end{itemize}
+
+
+\subsubsection{LSA evaluation results}
+• As we reduce k, recall tends to increase, as expected. \\
+• Most surprisingly, a value of k in the low hundreds can actually increase
+precision on some query benchmarks. This appears to suggest that for a
+suitable value of k, LSI addresses some of the challenges of synonymy. \\
+* The experiments also documented some modes where LSI failed to match
+the effectiveness of more traditional indexes and score computations. Most
+notably (and perhaps obviously), LSI shares two basic drawbacks of vector
+space retrieval: there is no good way of expressing negations (find documents
+that contain german but not shepherd), and noway of enforcing Boolean
+conditions. \\
+* LSI can be viewed as soft clustering by interpreting SOFT CLUSTERING each dimension of the
+reduced space as a cluster and the value that a document has on that dimension
+as its fractional membership in that cluster. \\
+
+
+\section{Evaluation of cluster labeling algorithm WCC}
 
 The experiments in this study conducted several objective measures to validate the performance of the described algorithm \gls{WCC}. \\
 
@@ -126,33 +143,11 @@ Doc. Id & Cat. Id & Document \\
 
 \subsection{Cluster labeling evaluation}
 
-To evaluate the quality of WCC, Popescul and Ungar’s method, and the standard
-keyword extraction algorithm RSP, we downloaded 150 documents from the digital library Citeseer, each of which containing author-defined keywords.
+To evaluate the quality of WCC, an evaluation document set of 15 texts in 3 categories was prepared. \\  
 
-To evaluate the WCC algorithm, we prepared a document set with author-defined keywords. The evaluation idea is to cluster the documents, label the resulting clustering, compute f1-f4, and measure to which extent the identified topic labels appear in the keyword list of at least one document of the associated cluster. To measure the extent, standard precision and recall values can be chosen. Note, however, that the precision value is more important in our scenario since usually only a few words (about one to five) are presented to a user. \\
-
-The clustering was done on the results from queries used for evaluation of \gls{LSA} (??).  \\
-The clustering was done on the prepared data set~\ref{eval:data_set}, used for evaluation of the \gls{IR} methods implemented in this work. \\
+To evaluate the WCC algorithm, we prepared a document set with author-defined keywords. The evaluation idea is to cluster the documents, label the resulting clustering, compute f1-f4, and measure to which extent the identified topic labels appear in the keyword list of at least one document of the associated cluster. ??? \\
+To measure the extent, standard precision and recall values can be chosen. Note, however, that the precision value is more important for the scenario tested in this work since we nominate only ????(\textbf{TODO}: test with different "l" ???) words per cluster label to be presented to users. \\
 
 Figure 3.15 shows precision and recall curves for \gls{WCC} depending on the number of extracted words per label. The values are averaged over 10 retries of the experiment, each time redrawing a new set of documents. The precision curve shows that one to five cluster labels can be identified at very high precision rates. (??check with my results?) \\
 
-
-\section{LSA evaluation from IR book}
-• The computational cost of the SVD is significant. This has been the biggest obstacle to the widespread adoption to LSI. One approach to this obstacle is to build the LSI representation on a
-randomly sampled subset of the documents in the collection, following which the remaining documents are “folded in” as detailed with Equation (18.21). \\
-• As we reduce k, recall tends to increase, as expected. \\
-• Most surprisingly, a value of k in the low hundreds can actually increase
-precision on some query benchmarks. This appears to suggest that for a
-suitable value of k, LSI addresses some of the challenges of synonymy. \\
-• LSIworks best in applicationswhere there is little overlap between queries
-and documents. \\
-The experiments also documented some modes where LSI failed to match
-the effectiveness of more traditional indexes and score computations. Most
-notably (and perhaps obviously), LSI shares two basic drawbacks of vector
-space retrieval: there is no good way of expressing negations (find documents
-that contain german but not shepherd), and noway of enforcing Boolean
-conditions. \\
-LSI can be viewed as soft clustering by interpreting SOFT CLUSTERING each dimension of the
-reduced space as a cluster and the value that a document has on that dimension
-as its fractional membership in that cluster. \\
 

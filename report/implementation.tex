@@ -4,12 +4,14 @@
 This chapter describes the implementation part of the thesis work. After presenting in Chapter~\ref{sec:lsa} the theoretical basis behind \gls{LSA}, and in Chapter~\ref{chapter:cluster_labeling} cluster labeling, theoretical application and specific implementation decisions are discussed here. All software tools and libraries which were used are pointed out, and code snipplets are given. Then in Chapter~\ref{chapter:evaluation}, test results are shown, and evaluation of the implementation is made. \\
 
 
-\section{LSA and concept visualization  as a tag cloud}
+\section{LSA and concept visualization as a tag cloud}
 Tag clouds can be generated automatically by using the most frequent words, by removing stop words, etc. preprosessing. They can also be custom made, by using important concepts retrieved after \gls{IR} task has been performed - e.g. on search results, on main concepts as in our case, based on concepts retrieved using \gls{LSA}. \\
 
 
 \section{Cluster labeling}
-For the ontology development, we used Protege Ontology Editor 4.1~\footnote{\url{http://protege.stanford.edu/}, accessed December, 2010} from Stanfornd University. The ontology is a light-weight domain-specific ontology developed in OWL for CoreMedia \gls{CMS} domain. \\
+The algorithm for cluster labeling Weighted Centroid Covering is implemented in Java, and can be seen in listing~\ref{topic_identification}.
+
+For the ontology development, we used Protege Ontology Editor 4.1\footnote{\url{http://protege.stanford.edu/}, accessed December, 2010} from Stanfornd University. The ontology is a light-weight domain ontology developed in OWL for CoreMedia \gls{CMS} domain. \\
 
 
 \section{Tools and libraries used in this work}

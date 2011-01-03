@@ -165,7 +165,7 @@ The properties stated above describe ideal conditions and can only be approximat
 
 \subsection{Weighted Centroid Covering}
 \label{clustering:WCC}
-Weighted Centroid Covering was introduced by Stein and Meyer zu Eissen~\cite{Stein04topicidentification}. It is a data-centric algorithm for cluster labeling, in which labels are generated from sets of frequently occurring terms. \\
+Weighted Centroid Covering (WCC) was introduced by Stein and Meyer zu Eissen~\cite{Stein04topicidentification}. It is a data-centric algorithm for cluster labeling, in which labels are generated from sets of frequently occurring terms. \\
 
 If $D$ are all documents in a collection, which contains a set of terms $T$, and $t \in T$ is a term from $T$, and $C = \{c_{1}, c_{2}, ..., c_{\left| C \right|} \}$ is a categorization over the set $D$, then we can define a function $\kappa$ as follows:
 let $\kappa : T \times \{c_{1}, c_{2}, ..., c_{\left| C \right|} \} \rightarrow C$ is a function with $\kappa(t,i) = c$ iff $c$ is the cluster with $i$th frequent occurrence of term $t$~\cite{Stein04topicidentification}. As an example, if $t$ occurs most frequently in a give cluster, we can write $\kappa(t,1)$, and if it occurs least frequently, we write $\kappa(t,\left|C\right|)$. \\
@@ -233,9 +233,11 @@ The complexity of \gls{WCC} is $O(\left| T\right . log(\left|T \right|))$. A pse
 
 
 \section{Cluster labeling using external knowledge}
-\gls{WCC} was previously presented as an algorithm for cluster labeling. It nominates cluster labels by selecting as candidate labels the terms with highest frequency of occurrence from the corresponding clusters. In order to improve labeling for users, noun phrases may be considered to be used for labels, as they are intuitively understood by humans, and are more descriptive than single terms. In order to improve labeling, an ontology is used as an external knowledge base for the cluster labeling algorithm, and candidate labels are nominated from both the ontology and the terms, which occur most frequently in clusters. Thus, if the ontology fails to provide suitable labels, the label candidates proposed by \gls{WCC} are used. \\
+\gls{WCC} was previously presented as an algorithm for cluster labeling. It nominates cluster labels by selecting as candidate labels the terms with highest frequency of occurrence from the corresponding clusters. However, the algorithm nominates labels based only on cluster content and term frequencies of words in the document collection. In order to improve labeling for users, noun phrases may be used as labels, as they are intuitively understood by humans, and are more descriptive than single terms~(Weiss~\cite{dweiss2006}). Another improvement of cluster labeling can be made by using external knowledge to generate more meaningful labels. Carmel et al.(\cite{cluster_labeling_wiki_2009}) reported promising results using Wikipedia\footnote{\url{http://www.wikipedia.org/}} as a source of an external knowledge. Ontologies can also be used as a knowledge source during cluster label generation. Stein and Meyer zu Eissen~(\cite{Stein07topicidentification}) propose using a hierarchical classifier, in order to assign clusters to ontology nodes, and thus nominate cluster labels from the ontology, however, their proposal includes a text classification problem. \\ 
 
-In order to present the approach, first a short overview on ontologies is given. In order to gain more detailed insight, refer to the given reference literature, as it is not the topic of this work to investigate into semantic knowledge and ontologies. 
+Based on the ideas by Stein and Meyer zu Eissen~(\cite{Stein07topicidentification}), and Mugo~(\cite{mugo2010}), a proposal for improving \gls{WCC} is made using ontologies as external knowledge, and adding semantic annotations to the document collection. Using the semantic annotations in a cluster of documents, candidate labels can be nominated from both the annotations and the terms, which occur most frequently in clusters. Thus, if the ontology fails to provide suitable labels, the label candidates proposed by \gls{WCC} can be used. \\
+
+In order to present the approach, first a short overview on ontologies is given. In order to gain more detailed insight, refer to the given reference literature, as it is not the main topic of this work to investigate into semantic knowledge and ontologies. 
 
 \subsection{Ontology as a source of external knowledge}
 Formal models of the world can be used to provide formal semantics, or machine-interpretable meaning to information, stored as documents, web pages, databases. When models are intended to represent a shared conceptualization, such as a classification, they are called ontologies~\cite{SemSearch_IRmodels09}. Or if the classical definition from Gruber~\cite{ontology2005} is used: ”Ontologies are explicit specifications of the conceptualizations at a semantic level.” \\
@@ -247,49 +249,29 @@ An ontology is characterized by the following tuple (ordered list): \\
 O = <C, R, I, A>
 \end{eqnarray}
 
-In the equation above $C$ is a set of classes which represent the concepts from a given domain. Examples for concepts can be databases, resources, repositories. $R$ is a set of relations, also called properties or predicates. These relations are valid between instances of the classes from $C$. As an example: Resource \textit{isStoredIn} Repository. $I$ is a set of instances, having as elements instances to one or more classes, which can also be linked to other instances or values. For example: \textit{manual2} isStoredIn \textit{onlineRepository1}. And finally, $A$ is a set of axioms, or rules, such as for example (TODO: give a meaningful example for an axiom). \\
+In the equation above $C$ is a set of classes which represent the concepts from a given domain. Examples for concepts can be databases, resources, repositories. $R$ is a set of relations, also called properties or predicates. These relations are valid between instances of the classes from $C$. As an example: Resource \textit{isStoredIn} Repository. $I$ is a set of instances, having as elements instances to one or more classes, which can also be linked to other instances or values. For example: \textit{manual2} isStoredIn \textit{onlineRepository1}. And finally, $A$ is a set of axioms, or rules in a logical form about the domain which the ontology describes. \\
 
-According to the formal language used for their creation, ontologies can be divided into \textit{lightweight} and \textit{heavyweight}. Heavyweight ontologies possess highly predictive and restrictive concept definitions; as compared to them, lightweight ontologies allow for more efficient and scalable reasoning [23]. Based on the conceptualization that they describe, the ontologies can be divided further into \textit{upper-level}, which model general knowledge and \textit{domain} ontologies, specific to a certain domain (e.g. the domain of CoreMedia \gls{CMS}).
+According to the formal language used for their creation, ontologies can be divided into \textit{lightweight} and \textit{heavyweight}. Heavyweight ontologies possess highly predictive and restrictive concept definitions; as compared to them, lightweight ontologies allow for more efficient and scalable reasoning [23]. Based on the conceptualization that they describe, the ontologies can be divided further into \textit{upper-level}, which model general knowledge and \textit{domain} ontologies, specific to a certain domain (e.g. the domain of CoreMedia \gls{CMS} in Appendix \ref{appendix:ontology}).\\
 
-\subsection{TODO: Weighted Centroid Covering augmented by an ontology}
-Stein and Meyer zu Eissen~\cite{Stein04topicidentification} point out that this \gls{WCC} could be extended to use existing ontologies and labels, but they provide no experimental results of any kind. \\
+The process of semantic annotation is to add meta data to documents using an ontology. After the annotation, the documents contain additional set of information which was not specified by the initial author of the document. This additional information based on an ontology allows for interpretation of the meaning in texts. Thus, if cluster labels are generated based on semantic annotations, they will better reflect the meaning in the cluster, than labels which only contain the. e most frequent terms. Mugo~\cite{mugo2010} provides detailed overview of the annotation process.\\ 
 
-Cluster labeling by using \gls{WCC} has certain limitations. It has been suggested~(\cite{Stein04topicidentification}) to use external knowledge during cluster labeling generation, such as an ontology. Other sources~(\cite{cluster_labeling_wiki_2009}) propose using Wikipedia in order to collect candidate labels for the clusters previously created.\\
-
-- a collection of cluster label candidates can be prepared a priori (an ontology) and
-reused with no additional computational cost. \\
-
-- candidate labels can come from a different source - a predefined ontology (to guarantee they are comprehensible). Thus, cluster label comprehensibility and cluster descriptions can be improved by using data extracted from a predefined ontology\\
-
-It is proposed to use external knowledge during the phase extraction of candidate la-
-bels (fig.~\ref{fig_wcc_onto}). \\
+\subsection{Weighted Centroid Covering augmented by an ontology}
 
 % wcc with ontology
 \begin{figure}
 \centering
-\includegraphics[scale=0.6]{img/wcc-onto}
+\includegraphics[scale=0.5]{img/wcc-onto}
 \caption[Cluster labeling using WCC with external knowledge]%
            {Cluster labeling using Weighted Centroid Covering algorithm, augmented by an ontology}
 \label{fig_wcc_onto}
 \end{figure}
 
 
+If a document collection is annotated using an ontology, the semantic annotations can be used as candidate labels for the documents in a cluster, as they reflect the "meaning" of the texts. Candidate labels can be nominated from both the semantic annotations in a cluster, and the most frequent terms (fig.~\ref{fig_wcc_onto}).  Thus, selected ontological annotations will "compete" with inner terms for serving as the cluster labels. For the case when the annotations fails to cover the cluster content, the most frequent terms should be used as labels. \\
 
-candidate labels are extracted from an ontology in addition to the important terms that are extracted directly from the cluster content. Thus, selected ontological categories "compete" with inner terms for serving as the cluster labels. In general, prepared ontological categories are a successful resource for labeling; however, inner terms should be considered for the cases when the ontology fails to cover the cluster content. \\
+The proposed solution has the advantage of simplicity as compared to the proposal of Stein and Meyer zu Eissen~(\cite{Stein07topicidentification})), because it doesn't add the complexity of a text classification problem to cluster labeling. However, a traditional drawback of semantic annotations is that so far, there is no fully automatic annotation tool, and manual work is required during the process of document annotation~(\cite{mugo2010}). \\
 
-%The best scenario is that cluster labels should present a conceptualization of the documents in text corpus. This is not achieved by the algorithm presented. Technically, a hierarchical clustering algorithm can construct from each Document set $D$ a category tree. However, the labeling based on this hierarchical clustering will be far from a semantical taxonomy. This weakness of the algorithm presented can be corrected by using an external classification knowledge, e.g. an upper-level ontology. \\
-
-%Unfortunately, domain ontologies usually have coverage limitations because not all the terms of the domain are included in the ontology.\\
-
-%Classical clustering methods are not able to deal with the semantics of the linguistic values of the objects (notions, texts). In this paper, a general methodology to incorporate this knowledge into the cluster labeling process has been presented. \\
-
-%We believe that the weaknesses of topic identification algorithms in categorizing search engines could be overcome if external classification knowledge were brought in. We now outline the ideas of such an approach where both topic descriptors and hierarchy information from an upper ontology are utilized. \\
-
-% Then, topic identification is based on the following paradigms:\\
-%1. Initially, no hierarchy (refines-relation) is presumed among the C 2 C. This is in accordance with the observations made in [Ert?z et al. 2001].\\
-%2. Each category C 2 C is associated to its most similar set O 2 O. If the association is unique, $ T o (O)$ is selected as category label for C.\\
-%3. Categories which cannot be associated uniquely within O are treated by a polythetic, equivalence-presuming labeling strategy in a standard way.
-%In essence, finding a labeling for a categorization C using an ontology O means to construct a hierarchical classifier, since one has to map the centroid vectors of the clusters C 2 C onto the best-matching O 2 O. Note that a variety of machine learning techniques has successfully been applied to this problem; they include Bayesian classifiers, SVMs, decision trees, neural networks, regression techniques, and nearest neighbor classifiers. \\
+\pagebreak
 
 Due to time constrains, no experimental results can be provided on running \gls{WCC} with external knowledge. This remains for further work. \\
 

@@ -10,8 +10,8 @@ B.~Stein and S.~M.~Z. Eissen, ``Topic identification: Framework and
   Management (I-KNOW)}, 2004.
 
 \bibitem{Stein07topicidentification}
-B.~Stein and S.~M. zu~Eissen, ``Topic identification,'' {\em KI}, vol.~21,
-  no.~3, pp.~16--22, 2007.
+B.~Stein and S.~M. zu~Eissen, ``Topic-identifikation. formalisierung, analyse
+  und neue verfahren,'' {\em KI}, vol.~21, no.~3, pp.~16--22, 2007.
 
 \bibitem{IRmodels09}
 D.~Hiemstra, ``Information retrieval models,'' in {\em Information Retrieval:
@@ -107,6 +107,17 @@ D.~Weiss, {\em {Descriptive Clustering as a Method for Exploring
 \newblock PhD thesis, Pozna{\'n} University of Technology, Pozna{\'n}, Poland,
   2006.
 
+\bibitem{cluster_labeling_wiki_2009}
+D.~Carmel, H.~Roitman, and N.~Zwerdling, ``Enhancing cluster labeling using
+  wikipedia,'' in {\em Proceedings of the 32nd international ACM SIGIR
+  conference on Research and development in information retrieval}, SIGIR '09,
+  pp.~139--146, ACM, 2009.
+
+\bibitem{mugo2010}
+D.~Mugo, ``{Connecting people using Latent Semantic Analysis for knowledge
+  sharing},'' Master's thesis, Hamburg University of Technology, Hamburg,
+  Germany, 2010.
+
 \bibitem{SemSearch_IRmodels09}
 J.~Davies, A.~Duke, and A.~Kiryakov, ``Semantic search,'' in {\em Information
   Retrieval: Searching in the 21st Century} (A.~G\"{o}ker and J.~Davies, eds.),
@@ -114,12 +125,6 @@ J.~Davies, A.~Duke, and A.~Kiryakov, ``Semantic search,'' in {\em Information
 
 \bibitem{ontology2005}
 T.~Gruber, ``Ontology of folksonomy,'' 2005.
-
-\bibitem{cluster_labeling_wiki_2009}
-D.~Carmel, H.~Roitman, and N.~Zwerdling, ``Enhancing cluster labeling using
-  wikipedia,'' in {\em Proceedings of the 32nd international ACM SIGIR
-  conference on Research and development in information retrieval}, SIGIR '09,
-  pp.~139--146, ACM, 2009.
 
 \bibitem{folksonomiesWeb2.0_2009}
 I.~Peters and P.~Becker, {\em Folksonomies : indexing and retrieval in Web
@@ -145,11 +150,6 @@ D.~Jurgens and K.~Stevens, ``The {S}-{S}pace package: an open source package
 C.~D. Manning, P.~Raghavan, and H.~Schtze, {\em Introduction to Information
   Retrieval}.
 \newblock New York, NY, USA: Cambridge University Press, 2008.
-
-\bibitem{SpamFilteringLSI2008}
-G.~Wilfried, J.~Andreas, and R.~Neumayer, {\em Spam filtering based on latent
-  semantic indexing}, pp.~165--183.
-\newblock Springer, 2008.
 
 \bibitem{brand06}
 M.~Brand, ``Fast low-rank modifications of the thin singular value

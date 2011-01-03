@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Weighted Centroid Covering}{31}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Cluster labeling using external knowledge}{34}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Ontology as a source of external knowledge}{34}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}TODO: Weighted Centroid Covering augmented by an ontology}{35}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Weighted Centroid Covering augmented by an ontology}{36}{subsection.3.3.2}
 \contentsline {chapter}{\numberline {4}Tag Clouds}{38}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}
 \contentsline {section}{\numberline {4.2}Tag clouds generation}{42}{section.4.2}
@@ -48,23 +48,21 @@
 \contentsline {section}{\numberline {6.1}Measures for evaluation}{48}{section.6.1}
 \contentsline {subsubsection}{Precision}{49}{section*.23}
 \contentsline {subsubsection}{Recall}{49}{section*.24}
-\contentsline {subsection}{\numberline {6.1.1}Evaluation of LSA}{49}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Evaluation of algorithms for cluster labeling}{49}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Experimental evaluation}{49}{section.6.2}
-\contentsline {section}{\numberline {6.3}LSA implementation}{49}{section.6.3}
-\contentsline {subsubsection}{Data set}{50}{section*.25}
-\contentsline {subsubsection}{Data preprocessing}{50}{section*.26}
-\contentsline {section}{\numberline {6.4}Cluster labeling}{50}{section.6.4}
-\contentsline {subsubsection}{Document set}{51}{section*.27}
-\contentsline {subsection}{\numberline {6.4.1}Cluster labeling evaluation}{51}{subsection.6.4.1}
-\contentsline {section}{\numberline {6.5}LSA evaluation from IR book}{53}{section.6.5}
+\contentsline {section}{\numberline {6.2}Evaluation of LSA implementation}{49}{section.6.2}
+\contentsline {subsubsection}{Document set for evaluation}{49}{section*.25}
+\contentsline {subsubsection}{Data set}{49}{section*.26}
+\contentsline {subsubsection}{Dimensionality reduction parameter in LSA}{50}{section*.27}
+\contentsline {subsubsection}{LSA evaluation results}{50}{section*.28}
+\contentsline {section}{\numberline {6.3}Evaluation of cluster labeling algorithm WCC}{51}{section.6.3}
+\contentsline {subsubsection}{Document set}{51}{section*.29}
+\contentsline {subsection}{\numberline {6.3.1}Cluster labeling evaluation}{53}{subsection.6.3.1}
 \contentsline {chapter}{\numberline {7}Conclusion and outlook}{54}{chapter.7}
 \contentsline {section}{\numberline {7.1}Future Work}{55}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Implementation}{55}{subsection.7.1.1}
-\contentsline {subsubsection}{LSA}{55}{section*.30}
-\contentsline {subsubsection}{Cluster labeling}{55}{section*.31}
-\contentsline {subsubsection}{Cluster labeling using external knowledge}{56}{section*.32}
+\contentsline {subsubsection}{LSA}{55}{section*.32}
+\contentsline {subsubsection}{Cluster labeling}{55}{section*.33}
+\contentsline {subsubsection}{Cluster labeling using external knowledge}{56}{section*.34}
 \contentsline {subsection}{\numberline {7.1.2}Testing}{56}{subsection.7.1.2}
-\contentsline {chapter}{Acronyms}{57}{section*.33}
+\contentsline {chapter}{Acronyms}{57}{section*.35}
 \contentsline {chapter}{\numberline {A}Ontology}{58}{appendix.A}
-\contentsline {chapter}{\numberline {B}Tag Cloud Summarizer}{60}{appendix.B}
+\contentsline {chapter}{\numberline {B}Source code}{59}{appendix.B}
