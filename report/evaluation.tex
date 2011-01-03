@@ -26,53 +26,33 @@ The two most frequent and basic measures for evaluation of \gls{IR} systems are 
 \end{equation}
 
 \section{Document set used for evaluation}
-In order to evaluate the retrieval and visualization of main concepts in a document corpus by the Tag cloud summarizer tool, and cluster labeling by \gls{WCC}, an evaluation document set was prepared, which contains documents in three categories (see Appendix~\ref{document_set_tables}). Due to time constraints, only a simple usability evaluation was made, using the queries from Appendix~\ref{document_set_tables}.
+In order to evaluate the retrieval and visualization of main concepts in a document corpus by the Tag cloud summarizer tool, and cluster labeling by \gls{WCC}, an evaluation document set was prepared, which contains documents in three categories (see Appendix~\ref{document_set_tables}) and includes 15 documents which have different lengths. Table~\ref{eval:data_set} gives an overview of the constructed data sets. Due to time constraints, only a simple usability evaluation was made, using the queries from Appendix~\ref{document_set_tables}.
 
 
 \section{Evaluation of the Tag cloud summarizer}
-
-\subsubsection{Dimensionality reduction parameter in LSA}
-Certain factors influence the performance of LSA, as already discussed in section~\ref{sec:lsa:factors_infl_lsa}. 
+The evaluation of Tag cloud summarizer tool was done by collecting user feedback. Due to time constraints only a limited number of feedback was collected. 3 users were interviewed. Based on the prepared document set for evaluation and the queries, they were asked for feedback about the usability of the tool: \\
 \begin{itemize}
-\item \textit{Preprocessing} - before constructing a semantic space using \gls{LSA}, stop words were removed from the evaluation document set. Stemming is not done, as terms from the semantic space are later used for the tag cloud generation.
-Stop words and punctuation are removed. The data model used in DocMachine stores the documents as XML files, and CoreMedia \gls{CMS} Unified API\footnote{\url{https://documentation.coremedia.com/servlet/content/241548?language=en&version=5.2&book=coremedia:///cap/content/241548}} is used to strip the markup, in order to access the plain text~(listing~\ref{doc_preprocessing}). \\
-
-\item \textit{Frequency matrix transformation} - log-entropy weight functions~(section~\ref{lsa:log-entropy-section}) were chosen, due to their better performance as compared to other measures (reported by Nakov et al.~\cite{Nakov_weightfunctions}).
-\item \textit{Dimensionality reduction parameter \textbf{k}} - it is defined based on the experiments carried out using the document set for evaluation from CoreMedia \gls{CMS} domain, described in section~\ref{sec:eval:doc_set_lsa}. 
+\item Is the tool intuitive to use?
+\item Does it visualize the main concepts in the text collection based on the query made?
+\item Does it bring value to a search application?
 
 \end{itemize}
 
+% query publication workflow - tag cloud
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/publication_workflow} 
+	\caption[Tag cloud generated]{Tag cloud generated using the evaluation document set from the results to a query "publication workflow"}
+\label{publication_workflow}
+\end{figure}
 
-\subsubsection{LSA evaluation results}
-LSI can be viewed as soft clustering by interpreting SOFT CLUSTERING each dimension of the
-reduced space as a cluster and the value that a document has on that dimension
-as its fractional membership in that cluster. \\
-
+All users found the tool intuitive to use. Concerning its usefulness, the main drawback pointed out was that in its current implementation, the Tag cloud summarizer produces a text cloud, that is a cloud of words, which do not link to the documents where they occur. It remains for future work to improve the prototype, and to implement hyperlinks from the tags in the cloud, which return the set of documents where the corresponding tag has the highest frequencies. Concerning the visualization of main concepts, which are closest to a query, 2 out of 3 users stated that not all displayed tags are connected to the query posted. However, if a larger document set for evaluation is used, the retrieved concepts should be closer to the queries, and the generated tag cloud therefore more precise. Testing with a large document set remains as well for future work. 
 
 \section{Evaluation of cluster labeling algorithm WCC}
+Evaluating the quality of cluster labeling is difficult as no standard benchmark collection is available for this purpose. To measure the quality of labels, one needs for a comparison a document clusterings that have been labeled by humans. Therefore, such evaluations are subjective and not easily reproducible. \\
 
-The experiments in this study conducted several objective measures to validate the performance of the described algorithm \gls{WCC}. \\
-
-Evaluating the quality of cluster labeling is a non-trivial task and the most suitable evaluation is judged by user's experiences. \\
-
-The algorithm was implemented in Java on a a 64-bit Windows 7 Ultimate workstation with an Intel Core 2 Duo P8600 @ 2,40 GHz using 4.00 GB RAM. \\
-
-\subsubsection{Document set}
-In order to test a cluster labeling algorithm, we need a test data set containing predefined categories. \gls{WCC} is tested using the evaluation data set with three predefined categories selected from the whole collection used for evaluation of \gls{LSA} implementation. \\
- 
-
-The document set used for evaluation consists of 3 categories, and 15 documents - each category has 5 documents, and the documents have different length. Table~\ref{eval:data_set} gives an overview of the constructed data sets. The document preprocessing involves parsing and stop word removal according to standard stop word lists. \\
+Using the document set for evaluation, three clusters were prepared from each category using k-means clustering. Then, the standard precision and recall were measured based on a varying number of terms per label (from 1 to 5). When evaluating cluster labeling, precision is more important than recall for users, as only a limited number of terms are nominated for labels. \\
 
 
-\textbf{Data preprocessing} \\
-The evaluation document set needs to be preprocessed before it can be used in the experiments. Analogous to the preprocessing used for the whole data set, punctuation and stop-words were removed. Terms in texts were not stemmed, as they are used as cluster labels, and stemming the terms would lead to worse user experience. \\
-
-\subsection{Cluster labeling evaluation}
-
-To evaluate the quality of WCC, an evaluation document set of 15 texts in 3 categories was prepared. \\  
-
-To evaluate the WCC algorithm, we prepared a document set with author-defined keywords. The evaluation idea is to cluster the documents, label the resulting clustering, compute f1-f4, and measure to which extent the identified topic labels appear in the keyword list of at least one document of the associated cluster. ??? \\
-To measure the extent, standard precision and recall values can be chosen. Note, however, that the precision value is more important for the scenario tested in this work since we nominate only ????(\textbf{TODO}: test with different "l" ???) words per cluster label to be presented to users. \\
-
-
+These results are not similar to the ones obtained by Meyer zu Eissen in~\cite{eissen_phd_2007}, who reports precision above 0.6 for 1 - 5 extracted terms per label. The worse results are presumably due to the very small document set used in this work for evaluation, as well as the different document collection used as compared to the one from~\cite{eissen_phd_2007}.  
 

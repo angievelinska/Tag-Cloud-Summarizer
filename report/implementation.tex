@@ -21,15 +21,12 @@ After the semantic space has been constructed, and dimensionality reduction has 
 In listing~\ref{querying} the source code for querying the semantic space is given.
 
 \subsubsection{Tag cloud generation}
-A tag cloud is generated using a collection of terms (or tags) with their corresponding weights. The weights are just the normalized term frequencies after a dimensionality reduction took place during \gls{LSA}. In listing~\ref{tag_cloud} is given the source code used for generating the tag cloud.
+A tag cloud is generated using a collection of terms (or tags) with their corresponding weights. The weights are just the normalized term frequencies after a dimensionality reduction took place during \gls{LSA}. In listing~\ref{tag_cloud} is given the source code used for generating the tag cloud. \\
 
-The Tag cloud summarizer is a tool that should aid users to obtain a quick overview of the main concepts contained in search results they receive. It should be used by users, and can be evaluated best by them. In Chapter~\ref.{chapter:evaluation} an simple evaluation based on user feedback is provided. 
+The Tag cloud summarizer is a tool that should aid the users of an \gls{IR} systems obtain a quick overview of the main concepts contained in search results they receive. As it will be used by users, its evaluation should in the best case be made by them. In Chapter~\ref{chapter:evaluation} an simple evaluation based on user feedback is provided. 
 
 \section{Cluster labeling}
-The algorithm for cluster labeling Weighted Centroid Covering is implemented in Java, and can be seen in listing~\ref{topic_identification}.
-
-For the ontology development, we used Protege Ontology Editor 4.1\footnote{\url{http://protege.stanford.edu/}, accessed December, 2010} from Stanfornd University. The ontology is a light-weight domain ontology developed in OWL for CoreMedia \gls{CMS} domain. \\
-
+The algorithm for cluster labeling Weighted Centroid Covering is implemented in Java. It receives as input predefined clusters, and nominates cluster labels for each cluster. A detailed overview of the algorithm can be found in section~\ref{clustering:WCC}. 
 
 \section{Tools and libraries used in this work}
 \label{sec:implementation:tools_used}
@@ -51,6 +48,10 @@ The tag cloud used in this work is based on Opencloud\footnote{\url{http://openc
 
 \subsubsection{Search and retrieval of search results}
 Lucene\footnote{\url{http://lucene.apache.org/java/3_0_2/}, accessed December, 2010} is an open source search engine library, distributed by the Apache Software Foundation. It is used for indexing, query parsing and retrieval of search results. \\
+
+\subsubsection{CoreMedia CMS domain ontology}
+For the ontology development, Protege Ontology Editor 4.1\footnote{\url{http://protege.stanford.edu/}, accessed December, 2010} was used, developed at Stanfornd University. The ontology is a light-weight domain ontology developed in OWL for CoreMedia \gls{CMS} domain (Appendix~\ref{appendix:onto} and listing~\ref{cm_ontology}). \\
+
 
 \subsubsection{Building and deployment}
 Maven\footnote{\url{http://maven.apache.org/}} is a software management tool, provided by Apache Software Foundation, which is used for building and testing the implementation prototype, and for deploying the web application module.
