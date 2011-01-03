@@ -28,14 +28,11 @@ public class TagsIdentification {
           topOccurrences.add(tuple);
       }
     }
-
     sortOccurences();
 
-    for(int labelcount = 1; labelcount < l; labelcount ++){
-      
+    for(int labelcount = 1; labelcount < l; labelcount ++){    
       int assigned = 0;
       int j = 1;
-
       Iterator iter = topOccurrences.iterator();
       while((assigned < docs.size()) && (j <= topOccurrences.size()) && iter.hasNext()){
         Tuple tj = (Tuple) iter.next();

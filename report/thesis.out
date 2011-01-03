@@ -35,19 +35,21 @@
 \BOOKMARK [1][-]{section.4.3}{4.3 Existing implementations}{chapter.4}% 35
 \BOOKMARK [1][-]{section.4.4}{4.4 Conclusion}{chapter.4}% 36
 \BOOKMARK [0][-]{chapter.5}{5 Implementation}{}% 37
-\BOOKMARK [1][-]{section.5.1}{5.1 LSA and concept visualization as a tag cloud}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.1}{5.1 Tag cloud summarizer}{chapter.5}% 38
 \BOOKMARK [1][-]{section.5.2}{5.2 Cluster labeling}{chapter.5}% 39
 \BOOKMARK [1][-]{section.5.3}{5.3 Tools and libraries used in this work}{chapter.5}% 40
 \BOOKMARK [0][-]{chapter.6}{6 Evaluation}{}% 41
 \BOOKMARK [1][-]{section.6.1}{6.1 Measures for evaluation}{chapter.6}% 42
-\BOOKMARK [1][-]{section.6.2}{6.2 Evaluation of LSA implementation}{chapter.6}% 43
-\BOOKMARK [1][-]{section.6.3}{6.3 Evaluation of cluster labeling algorithm WCC}{chapter.6}% 44
-\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Cluster labeling evaluation}{section.6.3}% 45
-\BOOKMARK [0][-]{chapter.7}{7 Conclusion and outlook}{}% 46
-\BOOKMARK [1][-]{section.7.1}{7.1 Future Work}{chapter.7}% 47
-\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Implementation}{section.7.1}% 48
-\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Testing}{section.7.1}% 49
-\BOOKMARK [0][-]{section*.35}{Acronyms}{}% 50
-\BOOKMARK [0][-]{appendix.A}{A Ontology}{}% 51
-\BOOKMARK [0][-]{appendix.B}{B Source code}{}% 52
-\BOOKMARK [0][-]{references.0}{Bibliography}{}% 53
+\BOOKMARK [1][-]{section.6.2}{6.2 Document set used for evaluation}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.3}{6.3 Evaluation of the Tag cloud summarizer}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.4}{6.4 Evaluation of cluster labeling algorithm WCC}{chapter.6}% 45
+\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 Cluster labeling evaluation}{section.6.4}% 46
+\BOOKMARK [0][-]{chapter.7}{7 Conclusion and outlook}{}% 47
+\BOOKMARK [1][-]{section.7.1}{7.1 Future Work}{chapter.7}% 48
+\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Implementation}{section.7.1}% 49
+\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Testing}{section.7.1}% 50
+\BOOKMARK [0][-]{section*.33}{Acronyms}{}% 51
+\BOOKMARK [0][-]{appendix.A}{A Ontology}{}% 52
+\BOOKMARK [0][-]{appendix.B}{B Source code}{}% 53
+\BOOKMARK [0][-]{appendix.C}{C Document set used for evaluation}{}% 54
+\BOOKMARK [0][-]{references.0}{Bibliography}{}% 55

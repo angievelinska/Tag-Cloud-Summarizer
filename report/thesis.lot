@@ -5,8 +5,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Document set overview}}{51}{table.caption.30}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Document collection used for WCC testing}}{52}{table.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces Document set overview}}{81}{table.caption.36}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Document set used for evaluation}}{82}{table.caption.37}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Queries used for evaluation}}{83}{table.caption.38}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.31)  3 JAN 2011 03:26
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.31)  3 JAN 2011 10:55
 entering extended mode
 **thesis.tex
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.tex
@@ -718,10 +718,14 @@ Overfull \hbox (16.48518pt too wide) in paragraph at lines 29--29
 
 [7
 
-] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lol)
-\tf@lol=\write13
+] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lol
+Overfull \hbox (94.1997pt too wide) in paragraph at lines 1--1
+ [][][] [] [][]  
+ []
 
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\introduction.tex
+)
+\tf@lol=\write13
+ (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\introduction.tex
 [8
 
 ]
@@ -1305,73 +1309,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
+]
  []
 
 [45
 
 ]
-Underfull \hbox (badness 6944) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+]
+ []
+
+
+LaTeX Warning: Reference `.' on page 46 undefined on input line 26.
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+Underfull \hbox (badness 6944) in paragraph at lines 41--41
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][]\OT1/cmr/m/n/10 , ac-cessed De-cem-ber,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 4899) in paragraph at lines 27--27
+Underfull \hbox (badness 4899) in paragraph at lines 44--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][]\OT1/cmr/m/n/10 , ac-cessed Oc-to-ber,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-
-Overfull \hbox (0.4424pt too wide) in paragraph at lines 36--37
-[]\OT1/cmr/m/n/12 Lucene[] is an open source search en-gine li-brary, dis-tribu
-ted by the Apache
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-[46]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\evaluation.tex
 [47]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\evaluation.tex
+[48]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
@@ -1388,134 +1406,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[48
+[49
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--56
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
 
-Overfull \hbox (4.78583pt too wide) in paragraph at lines 57--58
+Overfull \hbox (4.78583pt too wide) in paragraph at lines 40--41
 [][]\OT1/cmr/m/it/12 Frequency ma-trix trans-for-ma-tion \OT1/cmr/m/n/12 - log-
 entropy weight func-tions (sec-
  []
 
-Missing character: There is no • in font cmr12!
-Missing character: There is no • in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--77
+LaTeX Warning: Reference `sec:eval:doc_set_lsa' on page 50 undefined on input l
+ine 41.
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
 
  []
 
 
-Overfull \hbox (3.30193pt too wide) in paragraph at lines 79--79
+Overfull \hbox (3.30193pt too wide) in paragraph at lines 52--52
 []\OT1/cmr/bx/n/17.28 Evaluation of clus-ter la-bel-ing al-go-rithm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Overfull \hbox (28.47427pt too wide) in paragraph at lines 116--139
- [][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
 [51]
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
-LaTeX Warning: Text page 52 contains only floats.
+ []
 
-[52]
-Overfull \hbox (2.18819pt too wide) in paragraph at lines 148--150
+
+Overfull \hbox (2.18819pt too wide) in paragraph at lines 74--76
 [][]\OT1/cmr/m/n/12 To eval-u-ate the WCC al-go-rithm, we pre-pared a doc-u-men
 t set with author-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 ) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\conclusion.tex
-[53]
+[52]
 Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
@@ -1538,7 +1509,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[54
+[53
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -1565,14 +1536,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[55]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 ) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls)
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [56])
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex [57
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [55])
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex [56
 
 
 ]
@@ -1580,7 +1551,7 @@ Appendix A.
 File: img/CoreMediaOntology.eps Graphic file (type eps)
 <img/CoreMediaOntology.eps>)
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\sourceCode.tex
-[58
+[57
 
 ]
 Appendix B.
@@ -1590,46 +1561,87 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 3--3
  []
 
 
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/stripMarkup.java
-) [59
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/ProcessDocuments
+.java [58
 
-]
+]) [59]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 7--7
+[][][][][][][] 
+ []
+
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/LSA.java
+[60]) [61]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 11--11
+[][][][][][][] 
+ []
+
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/Query.java
+[62] [63]) [64]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 15--15
+[][][][][][][] 
+ []
+
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/TagCloud.java
+[65]) [66]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 19--19
 [][][][][][][] 
  []
 
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/TopicIdentificat
-ion.java [60] [61]) [62]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 11--11
+ion.java [67] [68]) [69]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 23--23
 [][][][][][][] 
  []
 
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/CoreMediaCMS.owl
-[63] [64] [65] [66] [67] [68] [69] [70] [71] [72]))
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl [73]
+[70] [71] [72] [73] [74] [75] [76] [77] [78] [79]))
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\evaluationSet.tex
+[80]
+Appendix C.
+[81
+
+]
+Overfull \hbox (28.47427pt too wide) in paragraph at lines 26--49
+ [][][] 
+ []
+
+) [82] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl
+[83]
 Missing character: There is no – in font cmr12!
+ [84
 
-[74
-
-] [75])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
- [76]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+] [85])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
+ [86]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E2B760DD67DDCDE66EC0690709D55F15;3801.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 239.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 8468738F16FD1D001DB02ED06ABB80BB;3939
+(rerunfilecheck)             After:  387BBA8916BCB95F4C66E7E46BF118EB;3939.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 11418 strings out of 494020
- 175888 string characters out of 3143904
+ 11438 strings out of 494020
+ 176617 string characters out of 3143904
  437975 words of memory out of 3000000
- 14345 multiletter control sequences out of 15000+200000
+ 14353 multiletter control sequences out of 15000+200000
  18443 words of font info for 71 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  37i,17n,73p,1765b,1773s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (77 pages, 548704 bytes).
+Output written on thesis.dvi (87 pages, 642220 bytes).

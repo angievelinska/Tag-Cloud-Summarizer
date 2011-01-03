@@ -34,35 +34,37 @@
 \contentsline {section}{\numberline {4.3}Existing implementations}{43}{section.4.3}
 \contentsline {section}{\numberline {4.4}Conclusion}{43}{section.4.4}
 \contentsline {chapter}{\numberline {5}Implementation}{45}{chapter.5}
-\contentsline {section}{\numberline {5.1}LSA and concept visualization as a tag cloud}{45}{section.5.1}
-\contentsline {section}{\numberline {5.2}Cluster labeling}{45}{section.5.2}
-\contentsline {section}{\numberline {5.3}Tools and libraries used in this work}{46}{section.5.3}
-\contentsline {subsubsection}{Repository}{46}{section*.16}
-\contentsline {subsubsection}{LSA and SVD}{46}{section*.17}
-\contentsline {subsubsection}{k-means clustering algorithm}{46}{section*.18}
-\contentsline {subsubsection}{Information retrieval}{46}{section*.19}
-\contentsline {subsubsection}{Tag cloud}{46}{section*.20}
-\contentsline {subsubsection}{Search and retrieval of search results}{47}{section*.21}
-\contentsline {subsubsection}{Building and deployment}{47}{section*.22}
-\contentsline {chapter}{\numberline {6}Evaluation}{48}{chapter.6}
-\contentsline {section}{\numberline {6.1}Measures for evaluation}{48}{section.6.1}
-\contentsline {subsubsection}{Precision}{49}{section*.23}
-\contentsline {subsubsection}{Recall}{49}{section*.24}
-\contentsline {section}{\numberline {6.2}Evaluation of LSA implementation}{49}{section.6.2}
-\contentsline {subsubsection}{Document set for evaluation}{49}{section*.25}
-\contentsline {subsubsection}{Data set}{49}{section*.26}
+\contentsline {section}{\numberline {5.1}Tag cloud summarizer}{45}{section.5.1}
+\contentsline {subsubsection}{Preprocessing}{46}{section*.16}
+\contentsline {subsubsection}{LSA}{46}{section*.17}
+\contentsline {subsubsection}{Querying the semantic space}{46}{section*.18}
+\contentsline {subsubsection}{Tag cloud generation}{46}{section*.19}
+\contentsline {section}{\numberline {5.2}Cluster labeling}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}Tools and libraries used in this work}{47}{section.5.3}
+\contentsline {subsubsection}{Repository}{47}{section*.20}
+\contentsline {subsubsection}{LSA and SVD}{47}{section*.21}
+\contentsline {subsubsection}{k-means clustering algorithm}{47}{section*.22}
+\contentsline {subsubsection}{Information retrieval}{48}{section*.23}
+\contentsline {subsubsection}{Tag cloud}{48}{section*.24}
+\contentsline {subsubsection}{Search and retrieval of search results}{48}{section*.25}
+\contentsline {subsubsection}{Building and deployment}{48}{section*.26}
+\contentsline {chapter}{\numberline {6}Evaluation}{49}{chapter.6}
+\contentsline {section}{\numberline {6.1}Measures for evaluation}{49}{section.6.1}
+\contentsline {section}{\numberline {6.2}Document set used for evaluation}{50}{section.6.2}
+\contentsline {section}{\numberline {6.3}Evaluation of the Tag cloud summarizer}{50}{section.6.3}
 \contentsline {subsubsection}{Dimensionality reduction parameter in LSA}{50}{section*.27}
-\contentsline {subsubsection}{LSA evaluation results}{50}{section*.28}
-\contentsline {section}{\numberline {6.3}Evaluation of cluster labeling algorithm WCC}{51}{section.6.3}
+\contentsline {subsubsection}{LSA evaluation results}{51}{section*.28}
+\contentsline {section}{\numberline {6.4}Evaluation of cluster labeling algorithm WCC}{51}{section.6.4}
 \contentsline {subsubsection}{Document set}{51}{section*.29}
-\contentsline {subsection}{\numberline {6.3.1}Cluster labeling evaluation}{53}{subsection.6.3.1}
-\contentsline {chapter}{\numberline {7}Conclusion and outlook}{54}{chapter.7}
-\contentsline {section}{\numberline {7.1}Future Work}{55}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Implementation}{55}{subsection.7.1.1}
-\contentsline {subsubsection}{LSA}{55}{section*.32}
-\contentsline {subsubsection}{Cluster labeling}{55}{section*.33}
-\contentsline {subsubsection}{Cluster labeling using external knowledge}{56}{section*.34}
-\contentsline {subsection}{\numberline {7.1.2}Testing}{56}{subsection.7.1.2}
-\contentsline {chapter}{Acronyms}{57}{section*.35}
-\contentsline {chapter}{\numberline {A}Ontology}{58}{appendix.A}
-\contentsline {chapter}{\numberline {B}Source code}{59}{appendix.B}
+\contentsline {subsection}{\numberline {6.4.1}Cluster labeling evaluation}{52}{subsection.6.4.1}
+\contentsline {chapter}{\numberline {7}Conclusion and outlook}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Future Work}{54}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Implementation}{54}{subsection.7.1.1}
+\contentsline {subsubsection}{LSA}{54}{section*.30}
+\contentsline {subsubsection}{Cluster labeling}{54}{section*.31}
+\contentsline {subsubsection}{Cluster labeling using external knowledge}{55}{section*.32}
+\contentsline {subsection}{\numberline {7.1.2}Testing}{55}{subsection.7.1.2}
+\contentsline {chapter}{Acronyms}{56}{section*.33}
+\contentsline {chapter}{\numberline {A}Ontology}{57}{appendix.A}
+\contentsline {chapter}{\numberline {B}Source code}{58}{appendix.B}
+\contentsline {chapter}{\numberline {C}Document set used for evaluation}{81}{appendix.C}

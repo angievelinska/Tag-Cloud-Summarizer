@@ -4,9 +4,26 @@
 This chapter describes the implementation part of the thesis work. After presenting in Chapter~\ref{sec:lsa} the theoretical basis behind \gls{LSA}, and in Chapter~\ref{chapter:cluster_labeling} cluster labeling, theoretical application and specific implementation decisions are discussed here. All software tools and libraries which were used are pointed out, and code snipplets are given. Then in Chapter~\ref{chapter:evaluation}, test results are shown, and evaluation of the implementation is made. \\
 
 
-\section{LSA and concept visualization as a tag cloud}
-Tag clouds can be generated automatically by using the most frequent words, by removing stop words, etc. preprosessing. They can also be custom made, by using important concepts retrieved after \gls{IR} task has been performed - e.g. on search results, on main concepts as in our case, based on concepts retrieved using \gls{LSA}. \\
+\section{Tag cloud summarizer}
 
+The prototype implementation is a web application, which outputs a tag cloud based on users' queries. Initially, a preprocessing of the document set is done, then a semantic space is constructed by running \gls{LSA} and performing dimensionality reduction during \gls{SVD}~(refer to Chapter~\ref{sec:lsa} for the terminology). The initial two stages are performed offline. Once the document set is indexed by a term-document  matrix, queries can be made by users. The terms in the documents closest to the queries in the semantic space, are input to the tag cloud. Querying and tag cloud generation are performed interactively online. \\
+
+The desicion to implement the prototype as a web application is due to two factors. Firstly, tag clouds widely spread in online systems, and thus mainly used online. And secondly, the prototype should be implemented in the online documentation system DocMachine\footnote{\url{https://documentation.coremedia.com/}} at CoreMedia AG, Hamburg, and should also be available online. \\
+
+\subsubsection{Preprocessing}
+The documents used for evaluation are a part of the online documentation at CoreMedia AG, Hamburg\footnote{\url{https://documentation.coremedia.com/}}. Documents are stored as XML files, and CoreMedia \gls{CMS} Unified API\footnote{\url{https://documentation.coremedia.com/servlet/content/241548?language=en&version=5.2&book=coremedia:///cap/content/241548}} is used to access the plain text, as shown in Listing~\ref{doc_preprocessing}. Before executing \gls{LSA} in order to construct a semantic space from a document collection, a preprocessing the text corpus is made. Stop words, puncutuation and numbers are removed. No stemming is done, as terms from the semantic space are later used to generate a tag cloud. 
+
+\subsubsection{LSA}
+The LSA implementation uses the opensource Java-based S-Space library (see section~\ref{sec:implementation:tools_used}). Partial code for \gls{LSA} is given in listing~\ref{code_lat_analysis}. The complete source code can be found in the online repository where this work in available online\footnote{\url{https://github.com/angievelinska/Tag-Cloud-Summarizer/tree/master/summarizer/src/main/java/edu/tuhh/summarizer/lsa}}).
+
+\subsubsection{Querying the semantic space}
+After the semantic space has been constructed, and dimensionality reduction has taken place, queries can be made to find the documents closest to a given query, or the terms respectively, by querying the documents or term space. As a reminder, the term space consists of the matrix product: $U * \Sigma$, and the document space of the product: $\Sigma * V^{t} $ (fig.~\ref{lsa:truncated_svd}). 
+In listing~\ref{querying} the source code for querying the semantic space is given.
+
+\subsubsection{Tag cloud generation}
+A tag cloud is generated using a collection of terms (or tags) with their corresponding weights. The weights are just the normalized term frequencies after a dimensionality reduction took place during \gls{LSA}. In listing~\ref{tag_cloud} is given the source code used for generating the tag cloud.
+
+The Tag cloud summarizer is a tool that should aid users to obtain a quick overview of the main concepts contained in search results they receive. It should be used by users, and can be evaluated best by them. In Chapter~\ref.{chapter:evaluation} an simple evaluation based on user feedback is provided. 
 
 \section{Cluster labeling}
 The algorithm for cluster labeling Weighted Centroid Covering is implemented in Java, and can be seen in listing~\ref{topic_identification}.
