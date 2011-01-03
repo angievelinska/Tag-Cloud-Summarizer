@@ -8,13 +8,13 @@ This chapter describes the implementation part of the thesis work. After present
 
 The prototype implementation is a web application, which outputs a tag cloud based on users' queries. Initially, a preprocessing of the document set is done, then a semantic space is constructed by running \gls{LSA} and performing dimensionality reduction during \gls{SVD}~(refer to Chapter~\ref{sec:lsa} for the terminology). The initial two stages are performed offline. Once the document set is indexed by a term-document  matrix, queries can be made by users. The terms in the documents closest to the queries in the semantic space, are input to the tag cloud. Querying and tag cloud generation are performed interactively online. \\
 
-The desicion to implement the prototype as a web application is due to two factors. Firstly, tag clouds widely spread in online systems, and thus mainly used online. And secondly, the prototype should be implemented in the online documentation system DocMachine\footnote{\url{https://documentation.coremedia.com/}} at CoreMedia AG, Hamburg, and should also be available online. \\
+The desicion to implement the prototype as a web application is due to two factors. Firstly, tag clouds are widely spread in online systems, and thus mainly used online. And secondly, the prototype should be implemented in the online documentation system DocMachine\footnote{\url{https://documentation.coremedia.com/}} at CoreMedia AG, Hamburg, and should also be available online. \\
 
 \subsubsection{Preprocessing}
-The documents used for evaluation are a part of the online documentation at CoreMedia AG, Hamburg\footnote{\url{https://documentation.coremedia.com/}}. Documents are stored as XML files, and CoreMedia \gls{CMS} Unified API\footnote{\url{https://documentation.coremedia.com/servlet/content/241548?language=en&version=5.2&book=coremedia:///cap/content/241548}} is used to access the plain text, as shown in Listing~\ref{doc_preprocessing}. Before executing \gls{LSA} in order to construct a semantic space from a document collection, a preprocessing the text corpus is made. Stop words, puncutuation and numbers are removed. No stemming is done, as terms from the semantic space are later used to generate a tag cloud. 
+The documents used for evaluation are a part of the online documentation at CoreMedia AG, Hamburg\footnote{\url{https://documentation.coremedia.com/}}. Documents are stored as XML files, and CoreMedia \gls{CMS} Unified API\footnote{\url{https://documentation.coremedia.com/servlet/content/241548?language=en&version=5.2&book=coremedia:///cap/content/241548}} is used to access the plain text, as shown in Listing~\ref{doc_preprocessing}. Before executing \gls{LSA}, a preprocessing the text corpus is made, in order to construct a semantic space from a document collection. Stop words, puncutuation and numbers are removed. No stemming is done, as terms from the semantic space are later used for a tag cloud generation. 
 
 \subsubsection{LSA}
-The LSA implementation uses the opensource Java-based S-Space library (see section~\ref{sec:implementation:tools_used}). Partial code for \gls{LSA} is given in listing~\ref{code_lat_analysis}. The complete source code can be found in the online repository where this work in available online\footnote{\url{https://github.com/angievelinska/Tag-Cloud-Summarizer/tree/master/summarizer/src/main/java/edu/tuhh/summarizer/lsa}}).
+The LSA implementation uses an opensource Java-based library, called S-Space (see section~\ref{sec:implementation:tools_used}). Partial code for \gls{LSA} is given in listing~\ref{code_lat_analysis}. The complete source code can be found in the online repository where this work in available online\footnote{\url{https://github.com/angievelinska/Tag-Cloud-Summarizer/tree/master/summarizer/src/main/java/edu/tuhh/summarizer/lsa}}).
 
 \subsubsection{Querying the semantic space}
 After the semantic space has been constructed, and dimensionality reduction has taken place, queries can be made to find the documents closest to a given query, or the terms respectively, by querying the documents or term space. As a reminder, the term space consists of the matrix product: $U * \Sigma$, and the document space of the product: $\Sigma * V^{t} $ (fig.~\ref{lsa:truncated_svd}). 
@@ -23,10 +23,10 @@ In listing~\ref{querying} the source code for querying the semantic space is giv
 \subsubsection{Tag cloud generation}
 A tag cloud is generated using a collection of terms (or tags) with their corresponding weights. The weights are just the normalized term frequencies after a dimensionality reduction took place during \gls{LSA}. In listing~\ref{tag_cloud} is given the source code used for generating the tag cloud. \\
 
-The Tag cloud summarizer is a tool that should aid the users of an \gls{IR} systems obtain a quick overview of the main concepts contained in search results they receive. As it will be used by users, its evaluation should in the best case be made by them. In Chapter~\ref{chapter:evaluation} an simple evaluation based on user feedback is provided. 
+The Tag cloud summarizer is a tool that should aid the users of an \gls{IR} systems obtain a quick overview of the main concepts contained in search results they receive. As it will be used by users, its evaluation should in the best case be made by them. In Chapter~\ref{chapter:evaluation} is provided a simple evaluation of the Tag cloud summarizer based on user feedback. 
 
 \section{Cluster labeling}
-The algorithm for cluster labeling Weighted Centroid Covering is implemented in Java. It receives as input predefined clusters, and nominates cluster labels for each cluster. A detailed overview of the algorithm can be found in section~\ref{clustering:WCC}. 
+The algorithm for cluster labeling Weighted Centroid Covering is implemented in Java. It receives as input predefined clusters, and nominates cluster labels for each cluster. A detailed overview of the algorithm can be found in section~\ref{clustering:WCC}. A part of the source code  of this algorithm can be found in listing~\ref{topic_identification}.
 
 \section{Tools and libraries used in this work}
 \label{sec:implementation:tools_used}
@@ -41,7 +41,7 @@ In this work the popular SVD C library\footnote{\url{http://tedlab.mit.edu/~dr/S
 Cluto clustering library\footnote{\url{http://glaros.dtc.umn.edu/gkhome/cluto/cluto/overview}, accessed October, 2010} is used as an implementation of the k-means clustering algorithm.\\
 
 \subsubsection{Information retrieval}
-S-Space project created by  Jurgensd and Stevens~(\cite{S-Space}) was used for constructing a semantic space of the text collection used for evaluation. \\
+S-Space project created by  Jurgens and Stevens~(\cite{S-Space}) was used for constructing a semantic space from the document set used for evaluation. \\
 
 \subsubsection{Tag cloud}
 The tag cloud used in this work is based on Opencloud\footnote{\url{http://opencloud.mcavallo.org/}, accessed December, 2010} project, authored by Marco Cavallo.\\

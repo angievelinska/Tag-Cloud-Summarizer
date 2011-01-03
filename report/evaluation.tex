@@ -30,7 +30,7 @@ In order to evaluate the retrieval and visualization of main concepts in a docum
 
 
 \section{Evaluation of the Tag cloud summarizer}
-The evaluation of Tag cloud summarizer tool was done by collecting user feedback. Due to time constraints only a limited number of feedback was collected. 3 users were interviewed. Based on the prepared document set for evaluation and the queries, they were asked for feedback about the usability of the tool: \\
+The evaluation of Tag cloud summarizer tool was done by collecting user feedback. Due to time constraints, only a small number of users were interviewed. Based on the prepared document set for evaluation and the queries, they were asked for feedback about the usability of the tool: \\
 \begin{itemize}
 \item Is the tool intuitive to use?
 \item Does it visualize the main concepts in the text collection based on the query made?
@@ -46,13 +46,30 @@ The evaluation of Tag cloud summarizer tool was done by collecting user feedback
 \label{publication_workflow}
 \end{figure}
 
-All users found the tool intuitive to use. Concerning its usefulness, the main drawback pointed out was that in its current implementation, the Tag cloud summarizer produces a text cloud, that is a cloud of words, which do not link to the documents where they occur. It remains for future work to improve the prototype, and to implement hyperlinks from the tags in the cloud, which return the set of documents where the corresponding tag has the highest frequencies. Concerning the visualization of main concepts, which are closest to a query, 2 out of 3 users stated that not all displayed tags are connected to the query posted. However, if a larger document set for evaluation is used, the retrieved concepts should be closer to the queries, and the generated tag cloud therefore more precise. Testing with a large document set remains as well for future work. 
+All users found the tool intuitive to use. Concerning its usefulness, the main drawback pointed out was that in its current implementation, the Tag cloud summarizer produces a text cloud, that is a cloud of words, which do not link to the documents where they occur. It remains for future work to improve the prototype, and to implement hyperlinks from the tags in the cloud, which return the set of documents where the corresponding tag has the highest frequencies. Concerning the visualization of main concepts, which are closest to a query, 2 out of 3 users stated that not all displayed tags are connected to the query posted. However, if a larger document set for evaluation is used, the retrieved concepts should be closer to the queries, and the generated tag cloud therefore more precise. Testing with a large document set remains for future work as well. 
 
 \section{Evaluation of cluster labeling algorithm WCC}
-Evaluating the quality of cluster labeling is difficult as no standard benchmark collection is available for this purpose. To measure the quality of labels, one needs for a comparison a document clusterings that have been labeled by humans. Therefore, such evaluations are subjective and not easily reproducible. \\
+Evaluating the quality of cluster labeling is difficult as no standard benchmark collection is available for this purpose. To measure the quality of labels, one needs for comparison a document clusterings that have been labeled by humans. Therefore, such evaluations are subjective and not easily reproducible. \\
 
-Using the document set for evaluation, three clusters were prepared from each category using k-means clustering. Then, the standard precision and recall were measured based on a varying number of terms per label (from 1 to 5). When evaluating cluster labeling, precision is more important than recall for users, as only a limited number of terms are nominated for labels. \\
+Using the document set for evaluation, three clusters were prepared from the set using k-means clustering. Then, the standard precision was measured based on a varying number of terms per label (from 1 to 5). Results for recall are not presented here, as they were too high, due to the small evaluation set, and small number of terms as candidate labels. Therefore, recall is not considered valid measure in this case. When evaluating cluster labeling, precision is more important than recall for users, as only a limited number of terms are nominated for labels. For a document collection of 15 texts in 3 categories, and for 1 - 5 terms per label, the following precision was calculated:\\
 
+\begin{table}[H]
+\centering
+\begin{tabular}{c l }
+\hline
+\multicolumn{2}{c}{Average precision by WCC for cluster labeling} \\
+\hline
+Terms per label & Precision \\
+\hline
+1 & 0,9  \\
+2 & 0,5  \\
+3 & 0,63 \\
+4 & 0,4  \\
+5 & 0,35  \\
+\hline
+\end{tabular}
+\caption[Precision by WCC for cluster labeling]{Evaluation of WCC for cluster labeling by measuring the average precision for varying number of terms per label, based on the query results in Appendix~\ref{document_set_tables}}
+\end{table}
 
-These results are not similar to the ones obtained by Meyer zu Eissen in~\cite{eissen_phd_2007}, who reports precision above 0.6 for 1 - 5 extracted terms per label. The worse results are presumably due to the very small document set used in this work for evaluation, as well as the different document collection used as compared to the one from~\cite{eissen_phd_2007}.  
+It can be seen that for a limited number of terms per label, precision starts very high, and then drops. These results are not similar to the ones obtained by Meyer zu Eissen in~\cite{eissen_phd_2007}, who reports precision not above 0.75 for 1 - 5 extracted terms per label, which gradually decreases. The differences are presumably due to the very small document set used in this work for evaluation, and the high frequencies of terms, nominated as candidate labels, which occur frequently in the small text corpus. Therefore, in a test environment with a larger document collection, it is very probable that an application of \gls{WCC} will result in different values for precision.
 

@@ -5,13 +5,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Precision by WCC for cluster labeling}}{52}{table.caption.29}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces Document set overview}}{80}{table.caption.36}
-\contentsline {table}{\numberline {C.2}{\ignorespaces Document set used for evaluation}}{81}{table.caption.37}
-\contentsline {table}{\numberline {C.3}{\ignorespaces Queries used for evaluation}}{82}{table.caption.38}
-\contentsline {table}{\numberline {C.4}{\ignorespaces Candidate labels from query results to "session connection"}}{82}{table.caption.39}
-\contentsline {table}{\numberline {C.5}{\ignorespaces Candidate labels from query results to "server"}}{82}{table.caption.40}
-\contentsline {table}{\numberline {C.6}{\ignorespaces Candidate labels from query results to "publication workflow"}}{82}{table.caption.41}
+\contentsline {table}{\numberline {C.1}{\ignorespaces Document set overview}}{81}{table.caption.37}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Document set used for evaluation}}{82}{table.caption.38}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Queries used for evaluation}}{83}{table.caption.39}
+\contentsline {table}{\numberline {C.4}{\ignorespaces Candidate labels from query results to "session connection"}}{83}{table.caption.40}
+\contentsline {table}{\numberline {C.5}{\ignorespaces Candidate labels from query results to "server"}}{83}{table.caption.41}
+\contentsline {table}{\numberline {C.6}{\ignorespaces Candidate labels from query results to "publication workflow"}}{83}{table.caption.42}

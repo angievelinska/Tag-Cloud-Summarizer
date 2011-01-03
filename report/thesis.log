@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.31)  3 JAN 2011 13:31
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2010.12.31)  3 JAN 2011 14:59
 entering extended mode
 **thesis.tex
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.tex
@@ -709,12 +709,12 @@ Overfull \hbox (16.48518pt too wide) in paragraph at lines 29--29
 [5
 
 ] (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.lot
-Overfull \hbox (0.17012pt too wide) in paragraph at lines 15--15
+Overfull \hbox (0.17012pt too wide) in paragraph at lines 16--16
  [][][] [] [][]  
  []
 
 
-Overfull \hbox (13.3561pt too wide) in paragraph at lines 17--17
+Overfull \hbox (13.3561pt too wide) in paragraph at lines 18--18
  [][][] [] [][]  
  []
 
@@ -1440,8 +1440,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\conclusion.tex
-[51]
+[51]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\conclusion.tex
+[52]
 Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
@@ -1459,7 +1459,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[52
+[53
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -1476,14 +1476,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls [53])
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [54])
-(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex [55
+) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.gls)
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.acr [55])
+(D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\ontology.tex [56
 
 
 ]
@@ -1491,7 +1491,7 @@ Appendix A.
 File: img/CoreMediaOntology.eps Graphic file (type eps)
 <img/CoreMediaOntology.eps>)
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\sourceCode.tex
-[56
+[57
 
 ]
 Appendix B.
@@ -1502,65 +1502,65 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 3--3
 
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/ProcessDocuments
-.java [57
+.java [58
 
-]) [58]
+]) [59]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 7--7
 [][][][][][][] 
  []
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/LSA.java
-[59]) [60]
+[60]) [61]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 11--11
 [][][][][][][] 
  []
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/Query.java
-[61] [62]) [63]
+[62] [63]) [64]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 15--15
 [][][][][][][] 
  []
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/TagCloud.java
-[64]) [65]
+[65]) [66]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 19--19
 [][][][][][][] 
  []
 
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/TopicIdentificat
-ion.java [66] [67]) [68]
+ion.java [67] [68]) [69]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 23--23
 [][][][][][][] 
  []
 
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\code/CoreMediaCMS.owl
-[69] [70] [71] [72] [73] [74] [75] [76] [77] [78]))
+[70] [71] [72] [73] [74] [75] [76] [77] [78] [79]))
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\evaluationSet.tex
-[79]
+[80]
 Appendix C.
-[80
+[81
 
 ]
 Overfull \hbox (28.47427pt too wide) in paragraph at lines 26--49
  [][][] 
  []
 
-[81]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl
-[82]
+[82]) (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.bbl
+[83]
 Missing character: There is no – in font cmr12!
- [83
+ [84
 
-] [84])
+] [85])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
- [85]
+ [86]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
 
 (D:\tuhh\ss10\thesis\projects\Tag-Cloud-Summarizer\report\thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 239.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8532753060316DB06FAF71950E8A57D2;3708.
+(rerunfilecheck)             Checksum: 76C76B0F065AF4DB16E32A7B7943CDA1;3708.
  ) 
 Here is how much of TeX's memory you used:
  11434 strings out of 494020
@@ -1571,4 +1571,4 @@ Here is how much of TeX's memory you used:
  714 hyphenation exceptions out of 8191
  37i,17n,73p,1862b,1777s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (86 pages, 633720 bytes).
+Output written on thesis.dvi (87 pages, 637172 bytes).

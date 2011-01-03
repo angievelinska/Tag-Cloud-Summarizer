@@ -54,13 +54,13 @@
 \contentsline {section}{\numberline {6.2}Document set used for evaluation}{50}{section.6.2}
 \contentsline {section}{\numberline {6.3}Evaluation of the Tag cloud summarizer}{50}{section.6.3}
 \contentsline {section}{\numberline {6.4}Evaluation of cluster labeling algorithm WCC}{51}{section.6.4}
-\contentsline {chapter}{\numberline {7}Conclusion and outlook}{52}{chapter.7}
-\contentsline {section}{\numberline {7.1}Future Work}{53}{section.7.1}
-\contentsline {subsubsection}{Tag cloud summarizer}{53}{section*.29}
-\contentsline {subsubsection}{Cluster labeling}{53}{section*.30}
-\contentsline {subsubsection}{Cluster labeling using external knowledge}{53}{section*.31}
-\contentsline {subsubsection}{Testing}{53}{section*.32}
-\contentsline {chapter}{Acronyms}{55}{section*.33}
-\contentsline {chapter}{\numberline {A}Ontology}{56}{appendix.A}
-\contentsline {chapter}{\numberline {B}Source code}{57}{appendix.B}
-\contentsline {chapter}{\numberline {C}Document set used for evaluation}{80}{appendix.C}
+\contentsline {chapter}{\numberline {7}Conclusion and outlook}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Future Work}{54}{section.7.1}
+\contentsline {subsubsection}{Tag cloud summarizer}{54}{section*.30}
+\contentsline {subsubsection}{Cluster labeling}{54}{section*.31}
+\contentsline {subsubsection}{Cluster labeling using external knowledge}{54}{section*.32}
+\contentsline {subsubsection}{Testing}{55}{section*.33}
+\contentsline {chapter}{Acronyms}{56}{section*.34}
+\contentsline {chapter}{\numberline {A}Ontology}{57}{appendix.A}
+\contentsline {chapter}{\numberline {B}Source code}{58}{appendix.B}
+\contentsline {chapter}{\numberline {C}Document set used for evaluation}{81}{appendix.C}
