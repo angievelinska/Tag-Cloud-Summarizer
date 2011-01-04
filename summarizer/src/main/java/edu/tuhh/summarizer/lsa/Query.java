@@ -62,9 +62,11 @@ public class Query {
             maxResult, Similarity.SimType.COSINE);
 
     List<SearchResult> results = new ArrayList<SearchResult>();
-    for (Map.Entry entry: similarityMap.entrySet()){
-      double score = (Double)entry.getKey();
-      if (score < 0.001D){
+    Iterator<Map.Entry<Double, String>> iter = similarityMap.entrySet().iterator();
+    while (iter.hasNext()) {
+      Map.Entry entry = iter.next();
+      double score = (Double) entry.getKey();
+      if (score < 0.001D) {
         continue;
       }
       results.add(new SearchResult(0, (String) entry.getValue(), score));
