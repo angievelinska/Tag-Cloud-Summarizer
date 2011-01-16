@@ -47,7 +47,7 @@ public class Search implements Searcher {
     IndexWriter writer = null;
 
     try {
-      StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_29, stopwords);
+      StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_30, stopwords);
       writer = new IndexWriter(directory, analyzer, IndexWriter.MaxFieldLength.UNLIMITED);
     } catch (IOException e) {
       e.printStackTrace();
@@ -63,8 +63,8 @@ public class Search implements Searcher {
 
     try {
       searcher = new IndexSearcher(directory);
-      QueryParser parser = new QueryParser(Version.LUCENE_29, "contents",
-              new StandardAnalyzer(Version.LUCENE_29, stopwords));
+      QueryParser parser = new QueryParser(Version.LUCENE_30, "contents",
+              new StandardAnalyzer(Version.LUCENE_30, stopwords));
       Query q = parser.parse(query);
       TopDocs hits = searcher.search(q, MAXRESULTS);
 

@@ -7,7 +7,6 @@ import edu.ucla.sspace.common.DocumentVectorBuilder;
 import edu.ucla.sspace.common.SemanticSpaceIO;
 import edu.ucla.sspace.common.Similarity;
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
-import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.vector.DenseVector;
 import edu.ucla.sspace.vector.DoubleVector;
 import org.junit.After;
@@ -20,7 +19,8 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.*;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author avelinsk
@@ -75,11 +75,6 @@ public class LatentSemanticAnalysisTest {
     } catch (IOException e) {
       e.printStackTrace();
     }
-
-    //TODO: test querying
-//    Map<Integer, DoubleVector> docs = lsa.getDocuments();
-//    for (Map.Entry<Integer, DoubleVector> entry : docs.entrySet()) {
-//    }
 
     assertTrue(sspace.exists());
     assertTrue(sspace.delete());

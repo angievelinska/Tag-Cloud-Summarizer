@@ -32,20 +32,14 @@
       <form name="cloudform" action="tagcloud.do" method="POST">
 
         <%
-          //String searchText = (String) request.getAttribute("searchText");
-          String searchText = (String) request.getAttribute("text");
           String text = "";
-          if (searchText != null || searchText!= ""){
-            text = searchText;
-          }
         %>
         <input type="hidden" name="command" value="">
 
         <table width="100%">
           <tr>
             <td align="center" valign="top" colspan="2">
-             <%-- <textarea name="searchText" rows="5" cols="50"><%= searchText %>--%>
-               <textarea name="searchText" rows="5" cols="50"><%= text %>
+              <textarea name="text" rows="5" cols="50"><%= text %>
               </textarea>
             </td>
           </tr>
@@ -55,7 +49,7 @@
                      onclick="document.cloudform.command.value='CLEAR'; document.cloudform.submit();"/>
             </td>
             <td align="right" valign="top">
-              <input type="button" value="Search"
+              <input type="button" value="Generate Cloud"
                      onclick="document.cloudform.command.value='SEARCH'; document.cloudform.submit();"/>
             </td>
           </tr>

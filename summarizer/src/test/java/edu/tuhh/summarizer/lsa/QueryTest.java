@@ -58,7 +58,9 @@ public class QueryTest {
   @Test
   public void testGetDocumentVector() {
 
-    DoubleVector testVector = query.getQueryAsVector("content management system");
+    DoubleVector testVector = query.getQueryAsVector("publication workflow");
+    //DoubleVector testVector = query.getQueryAsVector("server");
+    //DoubleVector testVector = query.getQueryAsVector("session connection");
     Assert.assertNotNull(testVector.length());
 
     System.out.println("vector length: " + testVector.length());

@@ -56,7 +56,7 @@ public class Indexer {
     }
     Directory dir = FSDirectory.open(indexDir);
     File stopwords = new File(props.getProperty("STOPWORDS"));
-    IndexWriter writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_29, stopwords),
+    IndexWriter writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_30, stopwords),
             true, IndexWriter.MaxFieldLength.UNLIMITED);
     writer.setUseCompoundFile(true);
 

@@ -12,7 +12,7 @@ import java.util.Properties;
 public class PropertiesLoader {
   private static Properties props;
   private final static Logger log = Logger.getLogger(PropertiesLoader.class);
-  private static final String PROP_FILE = "C:/tmp/summarizer.properties";
+  private static final String PROP_FILE = "C:\\tmp\\summarizer.properties";
 
   public Properties loadProperties() {
     if (props != null && !props.isEmpty()) {

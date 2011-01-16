@@ -43,7 +43,7 @@ public class LSASearchTest {
 
   @Test
   public void testDocsSearch() {
-    String q = "content management system";
+    String q = "Server";
     List<Query.SearchResult> results =
             query.searchDocSpace(q);
     printResults(q, results);
@@ -51,7 +51,9 @@ public class LSASearchTest {
 
   @Test
   public void testTermsSearch(){
-   String q = "content management system";
+   //String q = "publication workflow";
+    String q = "session connection";
+    //String q = "server";
     List<Query.SearchResult> results =
             query.searchTermSpace(q,20);
     printResults(q, results);

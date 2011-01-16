@@ -34,31 +34,20 @@ public class TagCloudServlet extends HttpServlet {
 
     Cloud cloud = new Cloud();
 
-    this.log("parameters command and text passed. command: " + command+" ; text: "+ searchQuery);
+    this.log("parameters command and text passed. command: " + command + " ; text: " + searchQuery);
 
-    //String content;
-    //cloud.setMaxTagsToDisplay(30);
 
-    // We want four different levels so set the maximum weight value to 4.0.
-    //cloud.setMaxWeight(4.0);
-
-    // Sets the default url to assign to tag.
-    // The format specifier %s will be substituted by the tag name
-    //cloud.setDefaultLink("https://documentation.coremedia.com/servlet/content/247402?language=en&include=false&version=5.2&book=%s");
-
-    if (searchQuery != null) {
-      links = summarizer.getSearchResults(searchQuery);
-      tags = summarizer.getTags(searchQuery, 20);
-    } else {
-      searchQuery = "";
-    }
     if (command != null) {
       if (command.equals("CLEAR")) {
         cloud.clear();
-        //searchQuery = "";
+
       } else if (command.equals("SEARCH")) {
-        //cloud.clear();
-        cloud.addTags(tags);
+        if (searchQuery != null) {
+          cloud = new Cloud();
+          links = summarizer.getSearchResults(searchQuery);
+          tags = summarizer.getTags(searchQuery, 20);
+          cloud.addTags(tags);
+        }
         searchQuery = "";
       }
     }
@@ -68,4 +57,4 @@ public class TagCloudServlet extends HttpServlet {
     view.forward(request, response);
 
   }
- }
+}

@@ -8,6 +8,7 @@ import edu.ucla.sspace.matrix.Matrices;
 import edu.ucla.sspace.matrix.Matrix;
 import edu.ucla.sspace.matrix.MatrixIO;
 import edu.ucla.sspace.text.Document;
+import edu.ucla.sspace.text.IteratorFactory;
 import edu.ucla.sspace.text.OneLinePerDocumentIterator;
 import edu.ucla.sspace.vector.DoubleVector;
 import edu.ucla.sspace.vector.Vectors;
@@ -18,7 +19,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * Creates an LSA semantic space.
+ * This class creates an LSA semantic space.
  *
  * @author avelinsk
  */
@@ -27,7 +28,7 @@ public class LSA {
 
   public void runLSA() {
       Properties props = new PropertiesLoader().loadProperties();
-//      IteratorFactory.setProperties(lsaprops);
+      IteratorFactory.setProperties(props);
       int noOfThreads = Runtime.getRuntime().availableProcessors();
 
       long start = System.currentTimeMillis();
@@ -37,9 +38,10 @@ public class LSA {
         sspace = new LatentSemanticAnalysis();
         Iterator<Document> iter = new OneLinePerDocumentIterator(props.getProperty("docFile"));
 
-        //SVD reduction
+        // dimensionality reduction and SVD
         processDocumentsAndSpace(sspace, iter, noOfThreads, props);
 
+        // save the constructed term space - after SVD these are U * Sigma matrices.
         File output = initOutputFile(props, "termSpace.sspace");
         SemanticSpaceIO.save(sspace, output, SemanticSpaceIO.SSpaceFormat.TEXT);
         log.info("Semantic space is saved after SVD reduction.");
@@ -124,14 +126,12 @@ public class LSA {
     for (int i = 0; i < numDocs; i++) {
       vectors[i] = Vectors.asDouble(sspace.getDocumentVector(i));
     }
-    //File sspaceFile = initOutputFile(props, "docSpace.sspace");
+
     File matrixFile = initOutputFile(props, "docSpace.txt");
     File matrixCluster = initOutputFile(props, "cluster.txt");
     Matrix docSpace = Matrices.asMatrix(Arrays.asList(vectors));
     try {
       MatrixIO.writeMatrix(docSpace, matrixFile, MatrixIO.Format.SVDLIBC_DENSE_TEXT);
-      MatrixIO.writeMatrix(docSpace, matrixCluster, MatrixIO.Format.CLUTO_DENSE);
-      //LSAUtils.saveDocumentSpace(docSpace, sspaceFile);
     } catch (IOException e) {
       e.printStackTrace();
     }
